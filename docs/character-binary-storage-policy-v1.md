@@ -73,15 +73,22 @@ Keep out of Git while preserving and backing up separately:
 - failed Boolean/remesh/rig branches;
 - render caches and other reproducible intermediates.
 
-## Current blocker
+## Current implementation
 
-`git-lfs` is not installed in the current environment, and no binary object
-storage backend has been selected. Therefore:
+Git LFS `3.7.1` is installed and configured locally. The repository routes
+native 3D sources, interchange files, raster evidence, audio, video, and
+packaged binary deliverables through LFS. The first production baseline and
+facial-proof revisions are committed locally.
 
-- local sources are preserved and hashed;
-- ordinary Git commits must not include the large Blender sources yet;
-- no production source should be pushed until the remote binary strategy,
-  account ownership, and monthly budget are explicitly accepted.
+This solves local version history; it does not yet prove remote durability:
+
+- no binary commit has been pushed from this workstation;
+- the GitHub account's LFS quota and billing ownership have not been accepted;
+- the separate Tier C archive backup has not been configured;
+- a clean-directory restore test has not been completed.
+
+Until those checks pass, Git is a local recoverable history—not the second
+independent copy required to freeze a production stage.
 
 ## Recommended next storage decision
 

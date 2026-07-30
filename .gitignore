@@ -17,6 +17,10 @@
 
 # Godot generated import/cache data
 .godot/
+game/**/*.png.import
+game/**/*.jpg.import
+game/**/*.jpeg.import
+game/**/*.webp.import
 
 # Local builds and exports
 build/

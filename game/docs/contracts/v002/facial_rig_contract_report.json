@@ -1,0 +1,104 @@
+{
+	"bones": {
+		"jaw": 1,
+		"root": 0,
+		"tongue": 2
+	},
+	"controller": {
+		"bones": {
+			"jaw": 1,
+			"root": 0,
+			"tongue": 2
+		},
+		"mesh_count": 9,
+		"mouth_mode": "HYBRID",
+		"shapes": {
+			"Blink_L": 1,
+			"Blink_R": 1,
+			"Chew_Compress": 3,
+			"HappyEyes": 2,
+			"Mouth_CloseCorrective": 3,
+			"Mouth_DelightedOpen": 3,
+			"Tongue_Chew": 1,
+			"Tongue_Retract": 1
+		},
+		"skeleton": "Skeleton3D"
+	},
+	"engine": {
+		"build": "official",
+		"hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+		"hex": 263936,
+		"major": 4,
+		"minor": 7,
+		"patch": 0,
+		"status": "stable",
+		"string": "4.7-stable (official)",
+		"timestamp": 0
+	},
+	"engine_version_note": "Validated with installed 4.7-stable; upgrade to locked 4.7.1 before production gate.",
+	"errors": [],
+	"locked_engine_target": "4.7.1",
+	"mesh_count": 9,
+	"meshes": {
+		"BENTOSAUR_R003_BODY_FACIAL_PROOF_STATIC": {
+			"aabb_position": "(-0.335132, 0.0, -0.438407)",
+			"aabb_size": "(0.670263, 0.999594, 0.880344)",
+			"blend_shape_count": 0
+		},
+		"FACE_BLUSH_L_STATIC_PROXY": {
+			"aabb_position": "(0.127, 0.515, 0.265589)",
+			"aabb_size": "(0.048, 0.02, 0.052854)",
+			"blend_shape_count": 0
+		},
+		"FACE_BLUSH_R_STATIC_PROXY": {
+			"aabb_position": "(-0.175, 0.515, 0.265589)",
+			"aabb_size": "(0.048, 0.02, 0.052854)",
+			"blend_shape_count": 0
+		},
+		"FACE_EYE_L_MOBILE_PROXY": {
+			"aabb_position": "(0.0654, 0.567, 0.290468)",
+			"aabb_size": "(0.06, 0.088, 0.050717)",
+			"blend_shape_count": 2
+		},
+		"FACE_EYE_R_MOBILE_PROXY": {
+			"aabb_position": "(-0.1254, 0.567, 0.290468)",
+			"aabb_size": "(0.06, 0.088, 0.050717)",
+			"blend_shape_count": 2
+		},
+		"FACE_LOWER_LIP_JAW_SKINNED_PROXY": {
+			"aabb_position": "(-0.072932, 0.4266, 0.243728)",
+			"aabb_size": "(0.145865, 0.0768, 0.161229)",
+			"blend_shape_count": 3
+		},
+		"FACE_MOUTH_APERTURE_MOBILE_PROXY": {
+			"aabb_position": "(-0.07285, 0.428, 0.283111)",
+			"aabb_size": "(0.145701, 0.07415, 0.121937)",
+			"blend_shape_count": 3
+		},
+		"FACE_TONGUE_MOBILE_PROXY": {
+			"aabb_position": "(-0.034, 0.2398, 0.237738)",
+			"aabb_size": "(0.068, 0.2362, 0.143)",
+			"blend_shape_count": 2
+		},
+		"FACE_UPPER_LIP_MOBILE_PROXY": {
+			"aabb_position": "(-0.072, 0.47958, 0.372265)",
+			"aabb_size": "(0.144, 0.023925, 0.035774)",
+			"blend_shape_count": 3
+		}
+	},
+	"model": "res://assets/characters/bentosaur_hero/v002/bentosaur_hero_facial_mobile_proof_v002.glb",
+	"passed": true,
+	"renderer": "mobile",
+	"shape_bindings": {
+		"Blink_L": 1,
+		"Blink_R": 1,
+		"Chew_Compress": 3,
+		"HappyEyes": 2,
+		"Mouth_CloseCorrective": 3,
+		"Mouth_DelightedOpen": 3,
+		"Tongue_Chew": 1,
+		"Tongue_Retract": 1
+	},
+	"skeleton_count": 1,
+	"triangles": 21336
+}
