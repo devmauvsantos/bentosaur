@@ -1,0 +1,16 @@
+{
+  "description": "Friendly juvenile triceratops bento-stall customer. Compact round chibi body with a large rounded muted forest-green frill, three short cream horns, tiny forearms, short sturdy legs, coral cheek blush, closed joyful crescent eyes, and an open delighted smile. Centered full-body silhouette with generous clear padding around every edge. No cast shadow, no scenery, no food, no props, no accessories, no border, no text, and no logo.",
+  "width": 64,
+  "height": 64,
+  "no_background": true,
+  "view": "low top-down",
+  "direction": "south",
+  "outline": "selective outline",
+  "shading": "basic shading",
+  "detail": "medium detail",
+  "text_guidance_scale": 10,
+  "color_image_base64": {
+    "$base64_file": "art/palettes/bentosaur-warm-v1.png"
+  },
+  "seed": 184722
+}

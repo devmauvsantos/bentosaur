@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "tripo-visual-gate-03-h31-detailed-neutral",
+  "created_at": "2026-07-29",
+  "status": "generation_complete_artifacts_downloaded_waiting_for_hd_geometry_evaluation",
+  "authorization": {
+    "authorized_by": "user",
+    "scope": "one H3.1 Detailed geometry-only neutral-mouth multiview generation",
+    "texture_allowed": false,
+    "rigging_allowed": false,
+    "animation_allowed": false
+  },
+  "account_preflight": {
+    "profile": "default",
+    "region": "ov",
+    "api_key_logged": false,
+    "balance_before": 4835,
+    "frozen_before": 0,
+    "verified_at": "2026-07-29"
+  },
+  "billing": {
+    "base_multiview_without_texture_credits": 20,
+    "detailed_geometry_surcharge_credits": 20,
+    "estimated_total_credits": 40,
+    "projected_balance_after_success": 4795,
+    "pricing_source": "https://platform.tripo3d.ai/docs/billing",
+    "actual_credits_consumed": 40,
+    "balance_after_verified": 4795,
+    "frozen_after_verified": 0
+  },
+  "inputs": {
+    "status": "frozen_qa_passed_submitted",
+    "required_order": [
+      "front",
+      "left",
+      "back",
+      "right"
+    ],
+    "front": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_front.png",
+    "left": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_left.png",
+    "back": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_back.png",
+    "right": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_right.png",
+    "sha256": {
+      "front": "014b8deb84120a0e1476d51a26f905cf94c2ea022e54ecfd24e6a757e27cd934",
+      "left": "04eb0da3b0c65cca04b2537d1db7d24c76ea8c0f8f84abe26283e1542182a108",
+      "back": "a6e3b39ffca300b25169262a28a0e7bb369305ff7dbf11ab8edf4829d06add46",
+      "right": "dbf943afed6e9318fd8bfbc2358101366ee81ceb481c31385ee3364c929a8da2"
+    },
+    "image_contract": {
+      "width": 1024,
+      "height": 1024,
+      "color_mode": "RGB",
+      "canonical_claws_per_hand": 3,
+      "eye_catchlights": false,
+      "mouth": "neutral_closed_or_barely_parted"
+    }
+  },
+  "request": {
+    "endpoint": "/v3/generation/multiview-to-model",
+    "model": "v3.1-20260211",
+    "parameters": {
+      "geometry_quality": "detailed",
+      "smart_low_poly": false,
+      "texture": false,
+      "pbr": false,
+      "export_uv": false,
+      "orientation": "align_image",
+      "model_seed": 29072026
+    },
+    "explicitly_omitted": [
+      "face_limit",
+      "quad",
+      "texture_quality",
+      "texture_seed",
+      "texture_alignment",
+      "generate_parts"
+    ]
+  },
+  "execution": {
+    "cli_version": "0.2.0",
+    "name": "bentosaur-vg03-h31-detailed-neutral",
+    "output_root": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out",
+    "task_id": "f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+    "task_status": "success",
+    "submitted_at": "2026-07-29T15:44:13.420267Z",
+    "completed_at": "2026-07-29T15:45:34.137326Z",
+    "artifact_directory": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out",
+    "artifacts": {
+      "model_glb": {
+        "path": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+        "bytes": 47399240,
+        "sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607"
+      },
+      "preview": {
+        "path": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/preview.png",
+        "bytes": 6942,
+        "actual_media_type": "image/webp",
+        "sha256": "cde042ea48e3a2c68891d19330b261db0944a75ac57be742e3e322ddfaaa4b43"
+      },
+      "rendered_image": {
+        "path": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/rendered_image.webp",
+        "bytes": 6942,
+        "sha256": "cde042ea48e3a2c68891d19330b261db0944a75ac57be742e3e322ddfaaa4b43"
+      },
+      "task_receipt": {
+        "path": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/task.json",
+        "bytes": 1420,
+        "sha256": "2395ec39f4a0659bba6d592a3837173040dcceda7748e3a7023fdaac2c70fad9"
+      }
+    },
+    "command_template": "tripo generate multiview-to-model <front> <left> <back> <right> --model tripo-v3.1 -p geometry_quality=detailed -p smart_low_poly=false -p texture=false -p pbr=false -p export_uv=false -p orientation=align_image -p model_seed=29072026 --name bentosaur-vg03-h31-detailed-neutral -o art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out --no-wait --json --yes --no-open"
+  },
+  "gate": {
+    "purpose": "Test whether H3.1 Detailed reconstructs clean hero-scale body, face, horns, frill knobs, and a neutral closed or barely-parted mouth from a consistent multiview source.",
+    "mouth_strategy": "Generate the neutral animation master. Build the production mouth cavity, tongue, lip loops, jaw motion, and delighted open-smile expression from this same master in Blender after the geometry gate.",
+    "this_is_not": [
+      "final topology",
+      "final materials",
+      "a rigged character",
+      "an animated character"
+    ],
+    "stop_after": [
+      "task completion",
+      "artifact download",
+      "raw task receipt",
+      "credit and balance verification"
+    ]
+  }
+}

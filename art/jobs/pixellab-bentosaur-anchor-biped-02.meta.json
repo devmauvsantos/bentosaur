@@ -1,0 +1,71 @@
+{
+  "job_id": "anchor.bentosaur.triceratops.pro.biped.02",
+  "status": "completed_candidate_review",
+  "provider_job_id": "c39149e0-f696-4c75-913c-7b2f49566580",
+  "provider": "pixellab",
+  "operation": "create_image_pro",
+  "style_version": "bentosaur-upright-biped-01",
+  "anatomy_contract": "art/character-anatomy.json",
+  "canvas": [
+    56,
+    56
+  ],
+  "final_cell": [
+    64,
+    64
+  ],
+  "references": [
+    "art/references/bentosaur-biped-anatomy-reference.png",
+    "art/references/bentosaur-front-face-reference.png",
+    "art/references/bentosaur-character-reference.png"
+  ],
+  "style_copy": [
+    "color_palette",
+    "outline",
+    "detail",
+    "shading"
+  ],
+  "seed": 184726,
+  "expected_candidates": 16,
+  "expected_cost": "20 PixelLab subscription generations",
+  "actual_candidates": 16,
+  "actual_cost": "20 PixelLab subscription generations",
+  "anatomy_gate": {
+    "passed": 16,
+    "failed": 0,
+    "result": "pass"
+  },
+  "technical_gate": {
+    "dimensions_56x56": "16/16 pass",
+    "binary_alpha": "16/16 pass",
+    "canonical_palette": "0/16 pass",
+    "visible_color_range": [
+      32,
+      38
+    ],
+    "padding_strategy": "Place the unscaled 56x56 candidate inside the final 64x64 cell; provider-level edge contact is acceptable at the internal-canvas stage."
+  },
+  "recommended_candidate": {
+    "id": "candidate-12",
+    "status": "awaiting_human_approval",
+    "reason": "Best balance of cozy expression, compact upright silhouette, clean pixel clusters, two readable hind feet, free forearms, long balancing tail, and restrained surface detail. It still needs the canonical cream frill-rim knobs and small hand/horn cleanup."
+  },
+  "independent_visual_review": {
+    "anatomy_pass": "16/16",
+    "ranked_candidates": [
+      "candidate-12",
+      "candidate-00",
+      "candidate-10"
+    ],
+    "batch_wide_identity_issue": "All candidates omit the signature cream scalloped knobs around the outer frill.",
+    "do_not_advance": {
+      "candidate-04": "Noisy cream frill mottling.",
+      "candidate-05": "Noisy cream frill mottling.",
+      "candidate-08": "Dorsal texture reads as stegosaur plates or an extra folded appendage.",
+      "candidate-09": "Hooked tail weakens the clean counterbalance silhouette.",
+      "candidate-14": "Near arm merges into the belly and the far hand is too stubby for a two-hand service read.",
+      "candidate-15": "Frill and far arm drift away from the canonical Triceratops identity."
+    }
+  },
+  "purpose": "Replace the rejected quadruped candidate set with an explicitly upright bipedal Bentosaur identity anchor while proving labelled multi-reference prompting."
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "tripo-live-test-01-p1-text",
+  "status": "complete_pipeline_pass_identity_fail",
+  "run_date": "2026-07-29",
+  "purpose": "Verify that one prop-free upright dinosaur can be generated, rigged, animated, imported into Blender, and rendered from multiple directions.",
+  "security": {
+    "api_key_stored_in_project": false,
+    "authentication": "Tripo browser authorization with local CLI profile mode 0600",
+    "rotate_key_pasted_in_chat": true,
+    "credentials_allowed_in_blender": false
+  },
+  "billing": {
+    "usage_unit": "Tripo API credits, not language-model tokens",
+    "credits_per_usd": 100,
+    "starting_api_balance": 5000,
+    "ending_api_balance": 4925,
+    "credits_consumed": 75,
+    "usd_consumed": 0.75,
+    "studio_and_api_wallets_are_separate": true
+  },
+  "generation": {
+    "task_id": "7b1cef58-e249-4c5e-b0b7-78091d942b36",
+    "history_name": "bentosaur-p1-text-test-01",
+    "model": "P1-20260311",
+    "model_seed": 28102026,
+    "face_limit": 5000,
+    "texture": false,
+    "pbr": false,
+    "export_uv": false,
+    "prompt": "A single cute stylized baby Triceratops character for a cozy mobile game, full body, upright anthropomorphic biped standing on exactly two short stout weight-bearing hind legs, elevated plump pear-shaped torso, two tiny free forearms clearly separated from the body and held outward in a neutral A-pose with empty hands, oversized round head, broad circular frill, three wide blunt horns, short rounded muzzle, broad flat feet, one thick tapering tail extending behind as counterbalance, smooth simple toy-like forms, symmetrical neutral closed-mouth expression, clean animation-ready silhouette, isolated character only, no clothing, no accessories, no held objects, no platform, no scenery",
+    "negative_prompt": "quadruped,on all fours,forelimb ground contact,four walking legs,horizontal dog body,realistic anatomy,scales,fur,human body,long limbs,fused arms,fused tail,open mouth,umbrella,tray,bento,bowl,apron,clothing,accessories,props,pedestal,scenery",
+    "negative_prompt_characters": 243,
+    "credits_consumed": 30,
+    "artifact_dir": "art/candidates/tripo/live-test-01-p1-text/tripo-out/bentosaur-p1-text-test-01-7b1cef58"
+  },
+  "geometry": {
+    "mesh_object_count": 1,
+    "vertices": 2434,
+    "polygons": 4826,
+    "triangles": 4826,
+    "materials": 0,
+    "armatures": 0,
+    "face_limit_pass": true,
+    "prop_free_pass": true,
+    "upright_biped_pass": true,
+    "canonical_identity_pass": false,
+    "inspection_metrics": "art/candidates/tripo/live-test-01-p1-text/blender-inspection/metrics.json",
+    "contact_sheet": "art/candidates/tripo/live-test-01-p1-text/blender-inspection/contact-sheet.png"
+  },
+  "rig_check": {
+    "task_id": "3a3596c6-9dd9-4b04-bb61-8b5b61419905",
+    "riggable": true,
+    "rig_type": "biped",
+    "credits_consumed": 0
+  },
+  "rig": {
+    "task_id": "84a223a7-8475-4e99-bd31-28afa3f140d8",
+    "history_name": "bentosaur-p1-text-test-01-rig",
+    "rig_type": "biped",
+    "spec": "tripo",
+    "format": "glb",
+    "credits_consumed": 25,
+    "armature_count": 1,
+    "bone_count": 32,
+    "vertex_group_count": 32,
+    "tail_bones": [
+      "tripo::Tail_0",
+      "tripo::Tail_1",
+      "tripo::Tail_2"
+    ],
+    "unbound_helper_meshes": [
+      "Icosphere"
+    ],
+    "artifact_dir": "art/candidates/tripo/live-test-01-p1-text/rig/tripo-out/bentosaur-p1-text-test-01-rig-84a223a7",
+    "inspection_metrics": "art/candidates/tripo/live-test-01-p1-text/rig/blender-inspection/metrics.json"
+  },
+  "animation": {
+    "task_id": "1e367033-ce87-42c6-9ea6-d43ea7b2da47",
+    "history_name": "bentosaur-p1-text-test-01-idle-walk",
+    "format": "glb",
+    "animate_in_place": true,
+    "credits_consumed": 20,
+    "actions": [
+      {
+        "name": "preset:idle",
+        "source_frame_range": [
+          1,
+          369
+        ],
+        "preview": "art/candidates/tripo/live-test-01-p1-text/animation/previews/idle-front/idle-front.gif"
+      },
+      {
+        "name": "preset:walk",
+        "source_frame_range": [
+          1,
+          57
+        ],
+        "preview": "art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/walk-left.gif"
+      }
+    ],
+    "shipping_status": "diagnostic_only",
+    "requires_blender_cleanup": [
+      "foot grounding",
+      "short-leg deformation",
+      "stride weight",
+      "hand posing",
+      "tail timing",
+      "Bentosaur-specific personality"
+    ],
+    "artifact_dir": "art/candidates/tripo/live-test-01-p1-text/animation/tripo-out/bentosaur-p1-text-test-01-idle-w-1e367033"
+  },
+  "asset_separation": {
+    "character_master_owns": [
+      "bare anatomical mesh",
+      "species-defining horns, frill knobs, cheeks, and tail",
+      "base palette material slots",
+      "armature and weights",
+      "replaceable face system",
+      "corrective shape keys",
+      "prop-free actions and interaction poses",
+      "attachment sockets"
+    ],
+    "character_master_excludes": [
+      "umbrella",
+      "tray",
+      "bento",
+      "bowl",
+      "cup",
+      "utensils",
+      "book",
+      "apron",
+      "hat",
+      "bag",
+      "glasses",
+      "scarf",
+      "counter",
+      "environment",
+      "weather",
+      "VFX"
+    ],
+    "required_sockets": [
+      "socket_hand_l",
+      "socket_hand_r",
+      "socket_tray",
+      "socket_mouth_bite",
+      "socket_head_hat",
+      "socket_back",
+      "socket_umbrella",
+      "socket_apron_chest",
+      "socket_apron_waist_l",
+      "socket_apron_waist_r"
+    ],
+    "runtime_assembly_fields": [
+      "character_master_id",
+      "palette_skin_id",
+      "accessory_ids",
+      "held_prop_id",
+      "action_id"
+    ]
+  },
+  "evaluation": {
+    "pipeline_pass": true,
+    "geometry_pass_as_plumbing_model": true,
+    "rig_structure_pass": true,
+    "generic_animation_import_pass": true,
+    "default_animation_shipping_pass": false,
+    "canonical_identity_pass": false,
+    "decision": "Use Tripo as a base-mesh and initial-rig accelerator. Use a four-view approved turnaround for the canonical model and give Blender authority over identity, materials, sockets, weights, face, and animation.",
+    "production_gate_change": "Historical rule, superseded July 29, 2026: this plumbing run continued past visual failure only to test the whole route. The active production rule requires the complete Visual Gate 02 final-materials, face, and mouth package plus explicit user approval before rigging. The former APPROVE <candidate_id> FOR RIGGING command is not active."
+  },
+  "next_test": {
+    "id": "tripo-blender-character-master-bakeoff-v1",
+    "requires_before_submit": [
+      "approved normalized side silhouette",
+      "1024px front orthographic turnaround",
+      "1024px left orthographic turnaround",
+      "1024px back orthographic turnaround",
+      "1024px right orthographic turnaround",
+      "neutral A-pose",
+      "empty hands",
+      "no props, clothing, base, or scenery"
+    ],
+    "compare": [
+      "P1 bare 5000-face multiview",
+      "H3.1 Smart Low Poly bare 5000-face multiview"
+    ]
+  }
+}

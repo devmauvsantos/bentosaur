@@ -1,0 +1,38 @@
+{
+  "description": "A single full-body Bentosaur Triceratops mascot in a clear three-quarter view facing screen right. UPRIGHT BIPED: the dinosaur stands on exactly two short sturdy weight-bearing hind legs, with an elevated torso and hips, two short forearms held freely at chest height and used as hands, and a long visible tail extending behind as counterbalance. The forearms never touch the ground and are not walking legs. Preserve the huge rounded sage-green frill, three short cream horns, coral cheek blush, joyful crescent eyes, compact expressive proportions, cozy hand-authored personality, dark selective outline, warm cream highlights, and simple readable pixel clusters from the references. Keep the body, hips, two feet, arms, and tail clearly readable beneath the large head. Neutral cheerful ready pose, not carrying anything. Centered isolated game sprite with at least two transparent source pixels around every edge. Not quadrupedal, not on all fours, no dog-like horizontal torso, no extra legs, no tray, food, umbrella, stall, counter, lantern, rain, background, speech bubble, UI, cast shadow, border, text, or logo.",
+  "width": 56,
+  "height": 56,
+  "no_background": true,
+  "reference_images": {
+    "$json_stringify": [
+      {
+        "base64": {
+          "$base64_file": "art/references/bentosaur-biped-anatomy-reference.png"
+        },
+        "usage": "Body plan only: copy the upright two-hind-leg service posture, free forearms used as hands, elevated torso, and long balancing tail. Do not copy the tray, food, pose motion, or rainy background."
+      },
+      {
+        "base64": {
+          "$base64_file": "art/references/bentosaur-front-face-reference.png"
+        },
+        "usage": "Character identity only: copy the front Triceratops frill and three-horn arrangement, joyful face, coral cheeks, and hand-like forearms. This is a portrait reference, not a full-body anatomy reference."
+      },
+      {
+        "base64": {
+          "$base64_file": "art/references/bentosaur-character-reference.png"
+        },
+        "usage": "Bentosaur house style only: copy the sage, cream, and coral identity, selective dark outline, cozy warm shading, and readable pixel clusters."
+      }
+    ]
+  },
+  "style_image_base64": {
+    "$base64_file": "art/references/bentosaur-character-reference.png"
+  },
+  "style_copy": [
+    "color_palette",
+    "outline",
+    "detail",
+    "shading"
+  ],
+  "seed": 184726
+}

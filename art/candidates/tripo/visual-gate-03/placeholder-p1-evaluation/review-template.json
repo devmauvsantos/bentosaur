@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "candidate_id": "bentosaur_vg03_placeholder_p1",
+  "reviewer": null,
+  "expected_mouth": "closed",
+  "score_guide": {
+    "0": "missing, fundamentally wrong, or unusable",
+    "1": "major visible defects; regeneration is preferable",
+    "2": "correct broad volume; repairable during production rebuild",
+    "3": "clean, intentional source form with only minor cleanup"
+  },
+  "scores": {
+    "overall_silhouette": null,
+    "eye_forms": null,
+    "muzzle_and_cheeks": null,
+    "neutral_closed_mouth_seam": null,
+    "primary_horns": null,
+    "frill_and_frill_knobs": null,
+    "hands_and_fingers": null,
+    "feet_and_toes": null,
+    "tail": null
+  },
+  "blockers": {
+    "doubled_or_ghost_eye_geometry": null,
+    "fused_or_malformed_primary_horns": null,
+    "lumpy_or_melted_frill_knobs": null,
+    "fused_or_missing_digits": null,
+    "broken_tail_silhouette": null,
+    "severe_left_right_asymmetry": null,
+    "unintended_detached_large_parts": null,
+    "malformed_or_collapsed_neutral_mouth_seam": null
+  },
+  "notes": {}
+}

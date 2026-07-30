@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "tripo-visual-gate-02-final-materials-face-mouth",
+  "created_at": "2026-07-29",
+  "status": "artifact_audit_complete_waiting_for_h31_detailed_test_authorization",
+  "source_candidate_id": "bentosaur_vg01_p1",
+  "notion": {
+    "page_id": "3acbcf1d-0403-810e-b0a7-e1b2de81917a",
+    "url": "https://app.notion.com/p/3acbcf1d0403810eb0a7e1b2de81917a"
+  },
+  "approval": {
+    "owner": "user",
+    "assistant_may_approve": false,
+    "final_appearance_approved": false,
+    "mouth_system_approved": false,
+    "rigging_allowed": false,
+    "animation_allowed": false,
+    "valid_approval_command": "APPROVE visual-gate-02-final-materials-face-and-mouth FOR RIGGING"
+  },
+  "references": {
+    "neutral_turnaround": "art/turnarounds/triceratops_master_v1/drafts/model-sheet-v1.png",
+    "mouth_expression_addendum": "art/turnarounds/triceratops_master_v1/drafts/mouth-expression-addendum-v1.png",
+    "gameplay_emotion": "art/references/bentosaur-gameplay-concept.png"
+  },
+  "material_targets": {
+    "sage": ["#728875", "#657A68", "#566A58"],
+    "cream": ["#E9D0A5", "#CFB78E"],
+    "coral": "#C98D66",
+    "ink": "#1B110C",
+    "mouth_interior": "#3A1720",
+    "metallic": 0.0,
+    "roughness_target": [0.72, 0.88],
+    "generated_normal_map_allowed": false
+  },
+  "mouth_contract": {
+    "neutral_rest": "closed_or_barely_parted",
+    "open_smile_is_separate_generation": false,
+    "real_mouth_cavity_required": true,
+    "separate_tongue_required": true,
+    "visible_teeth_required": false,
+    "jaw_ready_topology_required": true,
+    "pre_rig_shapes": [
+      "neutral",
+      "closed_smile",
+      "delighted_open",
+      "lip_seal",
+      "cheek_lift",
+      "chew_support"
+    ]
+  },
+  "evidence_produced": {
+    "lookdev_preview_0": {
+      "status": "provisional_not_final",
+      "directory": "art/candidates/tripo/visual-gate-02/lookdev-preview-0",
+      "six_view_board": "art/candidates/tripo/visual-gate-02/lookdev-preview-0/boards/lookdev_preview0_six_view_board.png",
+      "face_and_rainy_board": "art/candidates/tripo/visual-gate-02/lookdev-preview-0/boards/lookdev_preview0_face_and_rainy_board.png",
+      "native_scale_board": "art/candidates/tripo/visual-gate-02/lookdev-preview-0/boards/lookdev_preview0_native_scale_board.png",
+      "final_material_evidence": false
+    },
+    "mouth_prototype": {
+      "status": "geometry_proof_not_visual_approval",
+      "directory": "art/candidates/tripo/visual-gate-02/mouth-prototype",
+      "real_cavity": true,
+      "separate_tongue": true,
+      "production_topology": false,
+      "canonical_smile_match": false
+    }
+  },
+  "artifact_audit": {
+    "recorded_at": "2026-07-29",
+    "eye": {
+      "origin": "tripo_source_base_color_projection",
+      "separate_eye_geometry_present": false,
+      "production_acceptable": false
+    },
+    "mouth_prototype": {
+      "origin": "disposable_blender_boolean_and_insert",
+      "tripo_hd_evidence": false,
+      "production_acceptable": false
+    },
+    "frill_knobs_and_horns": {
+      "origin": "low_budget_tripo_geometry_compounded_by_baked_texture_shading",
+      "production_acceptable": false
+    },
+    "previous_comparison": {
+      "hero_quality_bakeoff": false,
+      "p1_face_limit": 5000,
+      "h31_face_limit": 5000,
+      "h31_geometry_quality": "standard",
+      "h31_smart_low_poly": true
+    },
+    "recommendation": "retain_p1_as_silhouette_reference_only_and_run_one_geometry_first_h31_detailed_gate_before_manual_retopology"
+  },
+  "proposed_next_test": {
+    "authorization_required": true,
+    "api_calls_made_during_audit": 0,
+    "credits_consumed_during_audit": 0,
+    "model": "v3.1",
+    "geometry_quality": "detailed",
+    "smart_low_poly": false,
+    "texture": false,
+    "pbr": false,
+    "artificial_5000_face_cap": false,
+    "estimated_credits_per_candidate": 40,
+    "judge_before_texture": true
+  },
+  "required_evidence": [
+    "neutral_closed_six_view",
+    "open_delight_front",
+    "open_delight_three_quarter",
+    "side_open_closed_hinge",
+    "mouth_interior_closeup",
+    "material_swatches",
+    "native_mobile_scale",
+    "rainy_stall_camera",
+    "geometry_material_metrics"
+  ]
+}

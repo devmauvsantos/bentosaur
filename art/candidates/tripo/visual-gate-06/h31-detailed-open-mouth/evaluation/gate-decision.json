@@ -1,0 +1,126 @@
+{
+  "candidate_id": "bentosaur_vg06_h31d_open_01",
+  "source_role": "candidate",
+  "machine": {
+    "passed": true,
+    "checks": [
+      {
+        "id": "mesh_object_count_min",
+        "value": 1,
+        "operator": ">=",
+        "threshold": 1,
+        "passed": true
+      },
+      {
+        "id": "evaluated_triangles_min",
+        "value": 1920464,
+        "operator": ">=",
+        "threshold": 20000,
+        "passed": true
+      },
+      {
+        "id": "evaluated_triangles_max",
+        "value": 1920464,
+        "operator": "<=",
+        "threshold": 2000000,
+        "passed": true
+      },
+      {
+        "id": "welded_boundary_edge_ratio_max",
+        "value": 0.0,
+        "operator": "<=",
+        "threshold": 0.005,
+        "passed": true
+      },
+      {
+        "id": "welded_non_manifold_edge_ratio_max",
+        "value": 0.0,
+        "operator": "<=",
+        "threshold": 0.005,
+        "passed": true
+      },
+      {
+        "id": "welded_boundary_edges_absolute_max",
+        "value": 0,
+        "operator": "<=",
+        "threshold": 1000,
+        "passed": true
+      },
+      {
+        "id": "welded_non_manifold_edges_absolute_max",
+        "value": 0,
+        "operator": "<=",
+        "threshold": 1000,
+        "passed": true
+      },
+      {
+        "id": "degenerate_face_ratio_max",
+        "value": 0.0,
+        "operator": "<=",
+        "threshold": 0.0005,
+        "passed": true
+      },
+      {
+        "id": "loose_edges_max",
+        "value": 0,
+        "operator": "<=",
+        "threshold": 0,
+        "passed": true
+      },
+      {
+        "id": "loose_vertices_max",
+        "value": 0,
+        "operator": "<=",
+        "threshold": 0,
+        "passed": true
+      },
+      {
+        "id": "connected_components_max",
+        "value": 1,
+        "operator": "<=",
+        "threshold": 64,
+        "passed": true
+      },
+      {
+        "id": "largest_component_vertex_share_min",
+        "value": 1.0,
+        "operator": ">=",
+        "threshold": 0.9,
+        "passed": true
+      },
+      {
+        "id": "smallest_to_largest_bound_ratio_min",
+        "value": 0.6686358696204265,
+        "operator": ">=",
+        "threshold": 0.12,
+        "passed": true
+      }
+    ]
+  },
+  "visual": {
+    "provided": false,
+    "complete": false,
+    "passed": false,
+    "reason": "No completed visual-review JSON supplied."
+  },
+  "decision": {
+    "state": "HOLD_FOR_CLAY_REVIEW",
+    "reason": "Machine checks passed; completed visual review is required.",
+    "automatic_continuation_allowed": false,
+    "failed_machine_checks": [],
+    "authorized_if_passed": [
+      "retopology",
+      "semantic_material_authoring",
+      "production_eye_construction",
+      "production_mouth_cavity_and_tongue_construction",
+      "facial_deformation_loop_construction"
+    ],
+    "still_blocked_even_if_passed": [
+      "final_appearance_approval",
+      "rigging",
+      "skinning",
+      "animation",
+      "game_integration"
+    ]
+  }
+}

@@ -1,0 +1,816 @@
+{
+  "$schema": "../../../../../_pipeline/v1/schemas/stage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "character_id": "bentosaur-hero",
+  "character_version": "char-v001",
+  "stage": {
+    "code": "S40",
+    "slug": "production-topology",
+    "revision": "r003",
+    "state": "wip",
+    "created_at": "2026-07-29T21:46:28.183Z",
+    "frozen_at": null
+  },
+  "lineage": {
+    "parent_manifests": [
+      {
+        "artifact_id": "s40-r002-manifest",
+        "role": "previous_stage_revision_manifest",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/manifest.json",
+        "format": "json",
+        "bytes": 13544,
+        "sha256": "9e727522baff85e4b74558342db0bd0efe2bf7137c81863bc3707a1710c8b873",
+        "immutable": true,
+        "derived_from": []
+      }
+    ],
+    "supersedes": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/manifest.json"
+  },
+  "coordinate_contract": {
+    "front_axis": "-Y",
+    "up_axis": "+Z",
+    "character_left_axis": "+X",
+    "unit_system": "METRIC",
+    "unit_scale": 1,
+    "origin": "midpoint between planted feet at Z = 0"
+  },
+  "inputs": [
+    {
+      "artifact_id": "s40-r002-symmetrized-bootstrap",
+      "role": "parent_body_topology_bootstrap",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/work/30_symmetrized_negative_y_bootstrap.blend",
+      "format": "blend",
+      "bytes": 42115485,
+      "sha256": "f690e66b6d4d744eb75bcab00af18ef73a1d692d72e8600916528cc7dd571894",
+      "immutable": true,
+      "derived_from": [
+        "s40-r002-manifest"
+      ]
+    },
+    {
+      "artifact_id": "face-system-research-v12",
+      "role": "mouth_and_expression_research_reference",
+      "path": "art/candidates/tripo/visual-gate-04/mouth-diagnostic-v12-hd-final-proxy/bentosaur_vg03_h31_mouth_diagnostic_v12_hd_final_proxy_static_master_user_approval_required.blend",
+      "format": "blend",
+      "bytes": 209766225,
+      "sha256": "9eb87828392c95d25572c07575ea5ece58224e9cfa80c23b85c2ce8d4ec0a571",
+      "immutable": true,
+      "derived_from": [
+        "s40-r002-manifest"
+      ]
+    },
+    {
+      "artifact_id": "mouth-expression-addendum-v1",
+      "role": "primary_neutral_open_expression_reference",
+      "path": "art/turnarounds/triceratops_master_v1/drafts/mouth-expression-addendum-v1.png",
+      "format": "png",
+      "bytes": 1780867,
+      "sha256": "0c2a701512165486ac7433b1cd3fd2634cceb45e678c21fe5f04204677290022",
+      "immutable": true,
+      "derived_from": [
+        "approved-gameplay-concept"
+      ]
+    },
+    {
+      "artifact_id": "mouth-expression-contract-v1",
+      "role": "machine_readable_expression_contract",
+      "path": "art/characters/bentosaur-hero/char-v001/design-contracts/mouth-expression-v1.json",
+      "format": "json",
+      "bytes": 3213,
+      "sha256": "e1133eca473207bc50743e562b92efb2126708b6d67640959e5a48a450afa4b4",
+      "immutable": true,
+      "derived_from": [
+        "mouth-expression-addendum-v1"
+      ]
+    }
+  ],
+  "editable_sources": [
+    {
+      "artifact_id": "s40-topology-assembly-r003",
+      "role": "canonical_blender_master",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+      "format": "blend",
+      "bytes": 326379825,
+      "sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9",
+      "immutable": false,
+      "derived_from": [
+        "s40-r002-manifest",
+        "center-seam-closed-all-quad-r003"
+      ]
+    }
+  ],
+  "toolchain": [
+    {
+      "name": "Blender",
+      "version": "5.1.2"
+    },
+    {
+      "name": "Blender QuadriFlow",
+      "version": "Blender 5.1.2 bundled operator"
+    },
+    {
+      "name": "Node.js",
+      "version": "25.9.0"
+    },
+    {
+      "name": "ImageMagick",
+      "version": "7.1.2-19"
+    }
+  ],
+  "recipes": [
+    {
+      "artifact_id": "axis-aligned-quadriflow-recipe",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/experiment_axis_aligned_symmetric_quadriflow.py",
+      "format": "py",
+      "bytes": 9370,
+      "sha256": "a3b87f114456ed295e2b3282c8a17b1bab8497124a8bb810105f397a1eac4e49",
+      "immutable": true,
+      "derived_from": [
+        "s40-r002-symmetrized-bootstrap"
+      ]
+    },
+    {
+      "artifact_id": "seam-stitch-recipe",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/stitch_axis_qf_seam.py",
+      "format": "py",
+      "bytes": 8492,
+      "sha256": "ddf9293586f5853a1ac4c4164e68640ed8699203224b12d6d4aac140dc1eb305",
+      "immutable": true,
+      "derived_from": [
+        "axis-aligned-symmetric-quadriflow-open"
+      ]
+    },
+    {
+      "artifact_id": "seam-quality-audit-recipe",
+      "role": "qa_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/audit_axis_stitched_quad_quality.py",
+      "format": "py",
+      "bytes": 5269,
+      "sha256": "e744c0ba80aa2f878c0f839a08384cdc3fa9459cc358b8901e2264443ba705ec",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "final-integrity-audit-recipe",
+      "role": "qa_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/audit_final_integrity.py",
+      "format": "py",
+      "bytes": 2775,
+      "sha256": "8516dcd40decca3d818a3d7a2ea7cc7f14083773ddc7054b6e458fbd365b38c0",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "seam-closeup-render-recipe",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/render_repair_closeups.py",
+      "format": "py",
+      "bytes": 4910,
+      "sha256": "2bc49fa5a490198819b26ddcb73241ee2f76e2ec41a7465ab33b78c6c23e14f7",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "stage-source-builder-r003",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/create_bentosaur_character_stage.py",
+      "format": "py",
+      "bytes": 20325,
+      "sha256": "d268344a82229c4dae62c57ebdc49646a16c515b85d23aacab2107189f8a251e",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "stage-source-builder-pre-origin-fix",
+      "role": "superseded_recipe_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/create_bentosaur_character_stage_pre_body_origin_fix.py",
+      "format": "py",
+      "bytes": 18963,
+      "sha256": "cc546e6cd61ba7420c94a4c9dcf7dc7788ae68d7c0fda318650c156c3e37dfba",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "stage-source-builder-pre-selector-fix",
+      "role": "superseded_recipe_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/create_bentosaur_character_stage_pre_scaffold_selector_fix.py",
+      "format": "py",
+      "bytes": 18534,
+      "sha256": "4adae2ef4be76702ed5c14982d344abf7cb3bd49aacc729a58d29826fa13d0b3",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "stage-preview-renderer-r003",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/render_character_stage_preview.py",
+      "format": "py",
+      "bytes": 4511,
+      "sha256": "1791d5bebfc5c7532aa165f79adf3ed655a27a90307949f72aa1f1edcc20dd2e",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "stage-preview-renderer-library-r003",
+      "role": "deterministic_blender_recipe_dependency",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/evaluate_tripo_visual_candidate.py",
+      "format": "py",
+      "bytes": 21025,
+      "sha256": "27d63c7ca3a34888fc4c30997cbd5c5f2022943eb3983f90bed646f02536ebbf",
+      "immutable": true,
+      "derived_from": [
+        "stage-preview-renderer-r003"
+      ]
+    },
+    {
+      "artifact_id": "notion-visual-attachment-builder-r003",
+      "role": "deterministic_documentation_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/build_notion_visual_attachment.mjs",
+      "format": "mjs",
+      "bytes": 2260,
+      "sha256": "e173b8417f17a42f854f0a6a328ab851a1ca77acbefcecd2135c1725378be901",
+      "immutable": true,
+      "derived_from": [
+        "s40-r003-visual-checkpoint"
+      ]
+    },
+    {
+      "artifact_id": "r003-deformation-probe-analyze-regions",
+      "role": "qa_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/deformation_probe_analyze_regions.py",
+      "format": "py",
+      "bytes": 1339,
+      "sha256": "94458d4ed7b17ecc804a561c450cd623ad664749b7bbcc948c649e090e11db58",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "r003-deformation-probe-inspect-source",
+      "role": "qa_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/deformation_probe_inspect_source.py",
+      "format": "py",
+      "bytes": 2092,
+      "sha256": "51d8630d990c4f02d6db8f29b1889f507e627dcf5d11b58fc844b4336c9124f9",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "r003-deformation-probe-resume-headlock",
+      "role": "qa_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/deformation_probe_resume_headlock.py",
+      "format": "py",
+      "bytes": 3987,
+      "sha256": "c95b9c731a84088a0eff3cf37d191d30911fc361b63d7c68a08c2e60cd7ba3f9",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "r003-deformation-probe-run-headlock",
+      "role": "qa_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/deformation_probe_run_headlock.py",
+      "format": "py",
+      "bytes": 22706,
+      "sha256": "f22922681ff4499edcef8fa037383cd7970f4643b8f0aeaf1ad6f7b131f83e72",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "r003-deformation-probe-run-v1",
+      "role": "qa_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/recipes/deformation_probe_run_v1.py",
+      "format": "py",
+      "bytes": 22471,
+      "sha256": "bf66a875e2d1ffee89f4a7c094d4f9606017d1a9f6f691957e723de34d7b5f8c",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    }
+  ],
+  "vendor_jobs": [],
+  "outputs": [
+    {
+      "artifact_id": "axis-qf-input-snapshot",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/00_input_symmetrized_bootstrap.blend",
+      "format": "blend",
+      "bytes": 12955908,
+      "sha256": "b781e96a6263e7cf686147f5c6579e96df500b8ee6762b007b418613f703ebe6",
+      "immutable": true,
+      "derived_from": [
+        "s40-r002-symmetrized-bootstrap"
+      ]
+    },
+    {
+      "artifact_id": "vendor-rotation-applied",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/05_vendor_rotation_applied.blend",
+      "format": "blend",
+      "bytes": 12956597,
+      "sha256": "38545a42a43183fe0045bfc41f6b0c477e68365cfba4818a54ade97750253950",
+      "immutable": true,
+      "derived_from": [
+        "axis-qf-input-snapshot"
+      ]
+    },
+    {
+      "artifact_id": "symmetry-plane-aligned-to-x",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/10_y_plane_aligned_to_x.blend",
+      "format": "blend",
+      "bytes": 12957551,
+      "sha256": "7c2d356a5d888188564fcfd36a9b94bcc76b875cdfae2e65b17d6baa89bc214c",
+      "immutable": true,
+      "derived_from": [
+        "vendor-rotation-applied"
+      ]
+    },
+    {
+      "artifact_id": "axis-aligned-symmetric-quadriflow-open",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/20_axis_aligned_symmetric_quadriflow_open.blend",
+      "format": "blend",
+      "bytes": 12878350,
+      "sha256": "632d5dd58cb84dffa1fb272bb0fe64e65f4815e8fdca44e87216daabd949a9c6",
+      "immutable": true,
+      "derived_from": [
+        "symmetry-plane-aligned-to-x"
+      ]
+    },
+    {
+      "artifact_id": "axis-qf-exact-cleanup-open",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/30_axis_aligned_exact_cleanup_open.blend",
+      "format": "blend",
+      "bytes": 12879415,
+      "sha256": "7acd52d55ae9b9952313b743b5f598700a189ec71369c319d7bdce279c6ce51d",
+      "immutable": true,
+      "derived_from": [
+        "axis-aligned-symmetric-quadriflow-open"
+      ]
+    },
+    {
+      "artifact_id": "vendor-space-open-all-quad",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/40_vendor_space_open_all_quad.blend",
+      "format": "blend",
+      "bytes": 12878069,
+      "sha256": "db5a018e3a62e59c6638e6beab5a9979251d6a433000d5ea5dc20175a0950957",
+      "immutable": true,
+      "derived_from": [
+        "axis-qf-exact-cleanup-open"
+      ]
+    },
+    {
+      "artifact_id": "symmetry-boundary-snapped",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/50_boundary_vertices_snapped_to_y0.blend",
+      "format": "blend",
+      "bytes": 24993037,
+      "sha256": "5abd5551f020e78452a84ef8c26cf88757ac0b0c8fb5460e214418f455f536af",
+      "immutable": true,
+      "derived_from": [
+        "vendor-space-open-all-quad"
+      ]
+    },
+    {
+      "artifact_id": "symmetry-boundary-welded",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/60_coincident_mirror_boundary_weld.blend",
+      "format": "blend",
+      "bytes": 24993381,
+      "sha256": "ad546ec2827bc432be8aea70b97fb9500115257bee00e84fecd0cf0e5ba0c9a5",
+      "immutable": true,
+      "derived_from": [
+        "symmetry-boundary-snapped"
+      ]
+    },
+    {
+      "artifact_id": "center-seam-closed-all-quad-r003",
+      "role": "accepted_technical_body_bootstrap_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/70_closed_all_quad_cleanup.blend",
+      "format": "blend",
+      "bytes": 24992578,
+      "sha256": "8c0d8e08ed05d14cb2407f52f791eb43c05eaaa0f373bad158d9b4de44076cd6",
+      "immutable": true,
+      "derived_from": [
+        "symmetry-boundary-welded"
+      ]
+    },
+    {
+      "artifact_id": "normalized-assembly-pre-origin-fix",
+      "role": "superseded_intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/work/75_normalized_assembly_pre_origin_contract_fix.blend",
+      "format": "blend",
+      "bytes": 326379557,
+      "sha256": "4f69988a3878ded069b0b9e03b5e427653f12640e33cd8f359bb509885f492e9",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "center-seam-wire-qa-board-r003",
+      "role": "visual_topology_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/center-seam-wire-qa-board.png",
+      "format": "png",
+      "bytes": 6852863,
+      "sha256": "2fdc9b0ec85b52f52c2a54f6b68d2aa70b32e7325daa6bc34ea193df628bf714",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "r003-clay-front-three-quarter",
+      "role": "visual_silhouette_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/r003-clay-front-three-quarter.png",
+      "format": "png",
+      "bytes": 1706258,
+      "sha256": "854bc0c5b6097349797165c3ae67cd0b79108f6bf2faed72cb26efaaf3f62835",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "s40-r003-visual-checkpoint",
+      "role": "visual_checkpoint_board",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/s40-r003-visual-checkpoint.png",
+      "format": "png",
+      "bytes": 7165912,
+      "sha256": "575fed32d584d4a1e3722e9e78bb5df4292ceede9543c389ec1c1bb5709d51e7",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003",
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "s40-r003-stage-notes",
+      "role": "production_decision_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/STAGE_NOTES.md",
+      "format": "md",
+      "bytes": 2491,
+      "sha256": "6aaf9a322e5a9a7491da6059bfcfd4b6cee23f956069a930a135ff8fd638272b",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "center-seam-experiment-readme",
+      "role": "reproduction_and_decision_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/center-seam-experiment-readme.md",
+      "format": "md",
+      "bytes": 3492,
+      "sha256": "615610dd045c3dfb3e52bdc7b899efadebbadf81c2f99c3a0e043209668b192e",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "center-seam-experiment-hash-manifest",
+      "role": "experiment_integrity_inventory",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/provenance/center-seam-experiment-hash-manifest.json",
+      "format": "json",
+      "bytes": 18749,
+      "sha256": "f5f4c06fdb728533a42cc547f7678f3ed8b08902ff81ac0bd3bfd1231a65d897",
+      "immutable": true,
+      "derived_from": [
+        "center-seam-closed-all-quad-r003"
+      ]
+    },
+    {
+      "artifact_id": "notion-visual-checkpoint-jpeg-r003",
+      "role": "notion_visual_attachment_source",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/notion-s40-r003-visual-checkpoint.jpg",
+      "format": "jpg",
+      "bytes": 47736,
+      "sha256": "9c66d719a574f220b27ffb3e90f22114168a6525c9afe26962ea07cbc8b0238f",
+      "immutable": true,
+      "derived_from": [
+        "s40-r003-visual-checkpoint"
+      ]
+    },
+    {
+      "artifact_id": "notion-visual-checkpoint-html-r003",
+      "role": "notion_rendered_visual_attachment",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/notion-s40-r003-visual-checkpoint.html",
+      "format": "html",
+      "bytes": 64690,
+      "sha256": "d649176c56aaab605617c2bb0518ddf83b04f2e319d4e188963f0e29d363e890",
+      "immutable": true,
+      "derived_from": [
+        "notion-visual-checkpoint-jpeg-r003"
+      ]
+    },
+    {
+      "artifact_id": "r003-deformation-failure-board",
+      "role": "deformation_pose_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/evidence/r003_headlock_pose_contact_sheet.png",
+      "format": "png",
+      "bytes": 2181934,
+      "sha256": "3e7a1d86cf5c8e371695f1f4b7ec581e49f2ee4af499db53f51e54974d487c77",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "r003-deformation-comparison-board",
+      "role": "deformation_comparison_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/evidence/fallback_vs_r003_failure_zones.png",
+      "format": "png",
+      "bytes": 3164122,
+      "sha256": "ebdf9247d7578dc13405fb90a0d513e70b576e2e57b48a6c76fd6bd47581340a",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "r003-coordinate-contract-board",
+      "role": "coordinate_contract_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/evidence/r003_coordinate_contract_views.png",
+      "format": "png",
+      "bytes": 1526335,
+      "sha256": "fdc0a5c70c0bb53c1ccb211438b5f4e9b594a7f9438ebfe55f9da04760a042ef",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "s40-r003-post-probe-status",
+      "role": "production_decision_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/STAGE_STATUS_2026-07-29.md",
+      "format": "md",
+      "bytes": 2352,
+      "sha256": "66418116dd6b33e70f4210c1a482b1079ca0784f4ca71634f8b9a45f74beced9",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r003"
+      ]
+    },
+    {
+      "artifact_id": "mouth-expression-contract-notion-jpeg-v1",
+      "role": "notion_visual_attachment_source",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/mouth-expression-contract-v1-notion.jpg",
+      "format": "jpg",
+      "bytes": 48125,
+      "sha256": "fceddfcd40b1c7b02610797a30c70e000e39178b29d772eb998c3cc137cbbc14",
+      "immutable": true,
+      "derived_from": [
+        "mouth-expression-addendum-v1"
+      ]
+    },
+    {
+      "artifact_id": "mouth-expression-contract-notion-html-v1",
+      "role": "notion_rendered_visual_attachment",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/mouth-expression-contract-v1-notion.html",
+      "format": "html",
+      "bytes": 65237,
+      "sha256": "1dcbc9b9fc770f325d3b233919c36afdd993d3a28d357dad890bdf66f4a9b691",
+      "immutable": true,
+      "derived_from": [
+        "mouth-expression-contract-notion-jpeg-v1"
+      ]
+    }
+  ],
+  "qa": {
+    "reports": [
+      {
+        "artifact_id": "axis-qf-report-r003",
+        "role": "topology_operation_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/axis-aligned-symmetric-quadriflow-report.json",
+        "format": "json",
+        "bytes": 7101,
+        "sha256": "3b863f37d69797187504a10f72f3a9ec81099b25e6c39a97b64512f43fd44c4f",
+        "immutable": true,
+        "derived_from": [
+          "axis-aligned-symmetric-quadriflow-open"
+        ]
+      },
+      {
+        "artifact_id": "center-seam-stitch-report-r003",
+        "role": "topology_operation_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/center-seam-stitch-report.json",
+        "format": "json",
+        "bytes": 5640,
+        "sha256": "bfd0835c9b36942be484c9def6ef268cef709f17666f0594c3f8aeb057a509de",
+        "immutable": true,
+        "derived_from": [
+          "center-seam-closed-all-quad-r003"
+        ]
+      },
+      {
+        "artifact_id": "center-seam-quality-report-r003",
+        "role": "quad_quality_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/center-seam-quad-quality-audit.json",
+        "format": "json",
+        "bytes": 22253,
+        "sha256": "4b0df77392ca4313b131ce8b7a32f37de66fd0ca397ae54503c07481f22f7e9d",
+        "immutable": true,
+        "derived_from": [
+          "center-seam-closed-all-quad-r003"
+        ]
+      },
+      {
+        "artifact_id": "final-integrity-report-r003",
+        "role": "mesh_integrity_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/final-integrity-audit.json",
+        "format": "json",
+        "bytes": 835,
+        "sha256": "c7c5d2ec85070189d02e510e1ba813f72e586853083e83d77f4acda28fed6de7",
+        "immutable": true,
+        "derived_from": [
+          "center-seam-closed-all-quad-r003"
+        ]
+      },
+      {
+        "artifact_id": "stage-preview-report-r003",
+        "role": "normalized_stage_preview_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/preview_report.json",
+        "format": "json",
+        "bytes": 3035,
+        "sha256": "49fc9496fbaff017a6c568428c9647f1c6553799e08ddd7df0fdf2c312f25277",
+        "immutable": true,
+        "derived_from": [
+          "s40-topology-assembly-r003"
+        ]
+      },
+      {
+        "artifact_id": "stage-preview-report-pre-origin-fix",
+        "role": "superseded_normalization_evidence",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview-pre-origin-fix/preview_report.json",
+        "format": "json",
+        "bytes": 3052,
+        "sha256": "b638719a00db4fdb34388f0b61243a3e90fe7f612e54fcb66be12b1ab7661635",
+        "immutable": true,
+        "derived_from": [
+          "normalized-assembly-pre-origin-fix"
+        ]
+      },
+      {
+        "artifact_id": "r003-deformation-probe-readme",
+        "role": "deformation_probe_handoff",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/README.md",
+        "format": "md",
+        "bytes": 5850,
+        "sha256": "1ff8b1f5f7b55e05d75a81f06077f792468e8f9e567a279c29f51039885b006d",
+        "immutable": true,
+        "derived_from": [
+          "s40-topology-assembly-r003"
+        ]
+      },
+      {
+        "artifact_id": "r003-deformation-probe-report",
+        "role": "deformation_probe_measurements",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/r003_confirmation_report_v2.json",
+        "format": "json",
+        "bytes": 35643,
+        "sha256": "98652241cdf27725a9bd755adc56f62a20b4cf735fb321a90feb71c4c5ceb6e3",
+        "immutable": true,
+        "derived_from": [
+          "s40-topology-assembly-r003"
+        ]
+      },
+      {
+        "artifact_id": "r003-deformation-probe-verdict",
+        "role": "deformation_probe_verdict",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/final_verdict.json",
+        "format": "json",
+        "bytes": 2747,
+        "sha256": "9cd17d61a04f3e22f8509a24c8dc59f24326656c9c0bed144981a034200770bb",
+        "immutable": true,
+        "derived_from": [
+          "s40-topology-assembly-r003"
+        ]
+      },
+      {
+        "artifact_id": "r003-deformation-probe-fallback-comparison",
+        "role": "deformation_probe_comparison",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/fallback_vs_r003_comparison.json",
+        "format": "json",
+        "bytes": 2231,
+        "sha256": "b07fbc2253eb66ae5cbb242b9880a89195de424696dcbf200329a0292ad6812b",
+        "immutable": true,
+        "derived_from": [
+          "s40-topology-assembly-r003"
+        ]
+      },
+      {
+        "artifact_id": "r003-deformation-probe-hash-manifest",
+        "role": "experiment_source_inventory",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/hash_manifest.json",
+        "format": "json",
+        "bytes": 11692,
+        "sha256": "03f5b015bde43fbc21baaf5ccb0ba0f7ac5c5b9be43618fb0834617d65b42d01",
+        "immutable": true,
+        "derived_from": [
+          "s40-topology-assembly-r003"
+        ]
+      },
+      {
+        "artifact_id": "r003-deformation-probe-region-bounds",
+        "role": "deformation_region_contract",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/qa/deformation-probe/region_bounds.json",
+        "format": "json",
+        "bytes": 2688,
+        "sha256": "44be2a8ec06f0da137e588259596378d7c5fcc0085cca7d6900d97e9a8a4ccd0",
+        "immutable": true,
+        "derived_from": [
+          "s40-topology-assembly-r003"
+        ]
+      }
+    ],
+    "requirements": {
+      "body_all_quads": true,
+      "body_single_closed_manifold_shell": true,
+      "body_zero_degenerate_or_loose_geometry": true,
+      "body_exact_bilateral_vertex_edge_face_symmetry": true,
+      "body_p95_surface_deviation_max_fraction_of_height": 0.0015,
+      "production_symmetry_plane_x": 0,
+      "production_floor_minimum_z": 0,
+      "g40_requires_authored_mouth_and_deformation_reel": true
+    },
+    "results": {
+      "body_bootstrap_technical_state": "pass",
+      "vertices": 10050,
+      "faces": 10048,
+      "quads": 10048,
+      "triangles": 0,
+      "ngons": 0,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "zero_length_edges": 0,
+      "loose_vertices": 0,
+      "loose_edges": 0,
+      "connected_shells": 1,
+      "euler_characteristic": 2,
+      "positive_signed_volume": true,
+      "exact_vertex_symmetry": true,
+      "exact_edge_symmetry": true,
+      "exact_face_symmetry": true,
+      "p95_surface_deviation_fraction_of_height": 0.0009598981702392004,
+      "normalized_bounds": {
+        "minimum_x": -0.33513161540031433,
+        "maximum_x": 0.33513161540031433,
+        "minimum_z": 0,
+        "maximum_z": 0.9995938539505005
+      },
+      "deformation_probe_input_sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9",
+      "deformation_coordinate_contract_confirmed": true,
+      "deformation_probe_state": "fail",
+      "deformation_pose_results": {
+        "neutral": "pass",
+        "reach_tray_hold": "fail_shoulder_armpit_transition",
+        "squat": "fail_hip_groin_and_local_knee_outliers",
+        "walk_extreme": "fail_shoulder_hip_and_knee",
+        "tail_bend": "pass"
+      },
+      "deformation_probe_scope": "bounded diagnostic rig and weights only; not a production rig",
+      "deformation_probe_source_checkpoints": 16,
+      "known_local_outliers": [
+        "two valence-2 vertices near the crotch/tail-base transition",
+        "several high-warpage or high-aspect quads near the same transition",
+        "shoulder and armpit transition collapses during reach",
+        "hip, groin, and knee transition failures during squat and walk"
+      ],
+      "g40_state": "blocked_by_authored_smile_and_local_joint_topology_repairs"
+    }
+  },
+  "approval": {
+    "gate_id": "G40_DEFORMATION_TOPOLOGY",
+    "decision_path": null,
+    "technical_state": "pending",
+    "human_state": "pending"
+  }
+}

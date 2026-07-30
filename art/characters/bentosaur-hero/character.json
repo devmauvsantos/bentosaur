@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "character_id": "bentosaur-hero",
+  "display_name": "Bentosaur",
+  "species": "upright baby triceratops",
+  "active_character_version": "char-v001",
+  "identity_contract": {
+    "anatomy": "art/character-anatomy.json",
+    "palette": "art/palettes/bentosaur-warm-v1.json",
+    "canonical_turnaround": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1",
+    "gameplay_reference": "art/references/bentosaur-gameplay-concept.png"
+  },
+  "ownership": {
+    "human_approval_owner": "Mau",
+    "blender_is_authoritative": true,
+    "runtime_exports_are_derivatives": true
+  }
+}

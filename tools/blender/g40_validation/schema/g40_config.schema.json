@@ -1,0 +1,788 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bentosaur.local/schemas/g40-deformation-config-1.0.0.json",
+  "title": "G40 bounded deformation-validation configuration",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "diagnostic_only",
+    "coordinate_contract",
+    "rig",
+    "weights",
+    "regions",
+    "poses",
+    "thresholds",
+    "render"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "diagnostic_only": {
+      "const": true
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coordinate_contract": {
+      "type": "object",
+      "required": [
+        "front",
+        "character_left",
+        "up",
+        "floor",
+        "mirror"
+      ],
+      "properties": {
+        "front": {
+          "$ref": "#/$defs/signedAxis"
+        },
+        "character_left": {
+          "$ref": "#/$defs/signedAxis"
+        },
+        "up": {
+          "$ref": "#/$defs/signedAxis"
+        },
+        "floor": {
+          "type": "object",
+          "required": [
+            "value",
+            "tolerance"
+          ],
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "tolerance": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "mirror": {
+          "type": "object",
+          "required": [
+            "axis",
+            "tolerance",
+            "p95_max",
+            "minimum_ratio"
+          ],
+          "properties": {
+            "axis": {
+              "$ref": "#/$defs/signedAxis"
+            },
+            "plane": {
+              "type": "number",
+              "default": 0
+            },
+            "tolerance": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "p95_max": {
+              "type": "number",
+              "minimum": 0
+            },
+            "minimum_ratio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "expected_bounds": {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "X",
+              "Y",
+              "Z",
+              "x",
+              "y",
+              "z"
+            ]
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "min": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "max": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "tolerance": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "orientation_probes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "selector",
+              "projection_axis",
+              "expected_mean"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "selector": {
+                "$ref": "#/$defs/selector"
+              },
+              "projection_axis": {
+                "$ref": "#/$defs/signedAxis"
+              },
+              "expected_mean": {
+                "$ref": "#/$defs/minMax"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rig": {
+      "type": "object",
+      "required": [
+        "bones"
+      ],
+      "properties": {
+        "scope": {
+          "type": "string"
+        },
+        "naming": {
+          "type": "object",
+          "properties": {
+            "left_suffix": {
+              "type": "string"
+            },
+            "right_suffix": {
+              "type": "string"
+            },
+            "tail_prefix": {
+              "type": "string"
+            }
+          }
+        },
+        "bones": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "$ref": "#/$defs/bone"
+          }
+        }
+      }
+    },
+    "weights": {
+      "type": "object",
+      "required": [
+        "max_influences"
+      ],
+      "properties": {
+        "mode": {
+          "const": "automatic_then_one_bounded_cleanup"
+        },
+        "max_influences": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "rigid_overrides": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "bone",
+              "selector"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "bone": {
+                "type": "string"
+              },
+              "selector": {
+                "$ref": "#/$defs/selector"
+              }
+            }
+          }
+        },
+        "cross_side_filter": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "axis": {
+              "$ref": "#/$defs/signedAxis"
+            },
+            "dead_zone": {
+              "type": "number",
+              "minimum": 0
+            },
+            "positive_side_suffix": {
+              "type": "string"
+            },
+            "negative_side_suffix": {
+              "type": "string"
+            }
+          }
+        },
+        "removal_rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "when"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "when": {
+                "$ref": "#/$defs/selector"
+              },
+              "bone_prefix": {
+                "type": "string"
+              },
+              "bone_suffix": {
+                "type": "string"
+              },
+              "bones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "fallback": {
+          "const": "nearest_deform_bone"
+        },
+        "polish_iterations": {
+          "const": 0
+        }
+      }
+    },
+    "regions": {
+      "type": "object",
+      "required": [
+        "ordered",
+        "fallback"
+      ],
+      "properties": {
+        "space": {
+          "enum": [
+            "world",
+            "normalized_bbox"
+          ]
+        },
+        "ordered": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "selector"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "selector": {
+                "$ref": "#/$defs/selector"
+              }
+            }
+          }
+        },
+        "fallback": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "poses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/pose"
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "required": [
+        "face_area_ratio",
+        "edge_length_ratio"
+      ],
+      "properties": {
+        "face_area_ratio": {
+          "$ref": "#/$defs/thresholdPair"
+        },
+        "edge_length_ratio": {
+          "$ref": "#/$defs/thresholdPair"
+        },
+        "allowed_count_per_flag": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "render": {
+      "type": "object",
+      "required": [
+        "resolution",
+        "comparison_view",
+        "views",
+        "world_color",
+        "body_color",
+        "floor_color"
+      ],
+      "properties": {
+        "resolution": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "integer",
+              "minimum": 64
+            },
+            {
+              "type": "integer",
+              "minimum": 64
+            }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "comparison_view": {
+          "type": "string"
+        },
+        "views": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "direction"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "direction": {
+                "$ref": "#/$defs/vector3"
+              }
+            }
+          }
+        },
+        "target": {
+          "$ref": "#/$defs/vector3"
+        },
+        "camera_distance_factor": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "ortho_scale_factor": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "world_color": {
+          "$ref": "#/$defs/color3"
+        },
+        "body_color": {
+          "$ref": "#/$defs/color4"
+        },
+        "floor_color": {
+          "$ref": "#/$defs/color4"
+        },
+        "wire_thickness_factor": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "bone_radius_factor": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "lights": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "offset",
+              "energy",
+              "size_factor"
+            ],
+            "properties": {
+              "offset": {
+                "$ref": "#/$defs/vector3"
+              },
+              "energy": {
+                "type": "number",
+                "minimum": 0
+              },
+              "size_factor": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "signedAxis": {
+      "enum": [
+        "+X",
+        "-X",
+        "+Y",
+        "-Y",
+        "+Z",
+        "-Z",
+        "X",
+        "Y",
+        "Z"
+      ]
+    },
+    "vector3": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "color3": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "color4": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "minMax": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "selector": {
+      "type": "object",
+      "properties": {
+        "space": {
+          "enum": [
+            "world",
+            "normalized_bbox"
+          ]
+        },
+        "axis": {
+          "$ref": "#/$defs/signedAxis"
+        },
+        "min": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "bounds": {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "x",
+              "y",
+              "z",
+              "X",
+              "Y",
+              "Z"
+            ]
+          },
+          "additionalProperties": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            ],
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "all": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/selector"
+          }
+        },
+        "any": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/selector"
+          }
+        },
+        "not": {
+          "$ref": "#/$defs/selector"
+        }
+      }
+    },
+    "bone": {
+      "type": "object",
+      "required": [
+        "head",
+        "tail"
+      ],
+      "properties": {
+        "head": {
+          "$ref": "#/$defs/vector3"
+        },
+        "tail": {
+          "$ref": "#/$defs/vector3"
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "connected": {
+          "type": "boolean"
+        },
+        "deform": {
+          "type": "boolean"
+        }
+      }
+    },
+    "pose": {
+      "type": "object",
+      "required": [
+        "name",
+        "checkpoint",
+        "actions"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checkpoint": {
+          "type": "integer",
+          "minimum": 40
+        },
+        "intent": {
+          "type": "string"
+        },
+        "is_neutral": {
+          "type": "boolean"
+        },
+        "declared_angles_degrees": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/translateBonesAction"
+              },
+              {
+                "$ref": "#/$defs/translateChainAction"
+              },
+              {
+                "$ref": "#/$defs/aimChainAction"
+              },
+              {
+                "$ref": "#/$defs/rotateLocalAction"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "translateBonesAction": {
+      "type": "object",
+      "required": [
+        "operation",
+        "bones",
+        "delta"
+      ],
+      "properties": {
+        "operation": {
+          "const": "translate_bones"
+        },
+        "bones": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "delta": {
+          "$ref": "#/$defs/vector3"
+        }
+      }
+    },
+    "translateChainAction": {
+      "type": "object",
+      "required": [
+        "operation",
+        "bones",
+        "delta"
+      ],
+      "properties": {
+        "operation": {
+          "const": "translate_chain"
+        },
+        "bones": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "delta": {
+          "$ref": "#/$defs/vector3"
+        }
+      }
+    },
+    "aimChainAction": {
+      "type": "object",
+      "required": [
+        "operation",
+        "bones",
+        "directions"
+      ],
+      "properties": {
+        "operation": {
+          "const": "aim_chain"
+        },
+        "bones": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "directions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/vector3"
+          }
+        },
+        "root_offset": {
+          "$ref": "#/$defs/vector3"
+        },
+        "declared_angles_degrees": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "rotateLocalAction": {
+      "type": "object",
+      "required": [
+        "operation",
+        "bone",
+        "euler_deg"
+      ],
+      "properties": {
+        "operation": {
+          "const": "rotate_local"
+        },
+        "bone": {
+          "type": "string"
+        },
+        "euler_deg": {
+          "$ref": "#/$defs/vector3"
+        }
+      }
+    },
+    "thresholdPair": {
+      "type": "object",
+      "required": [
+        "collapse_below",
+        "severe_stretch_above"
+      ],
+      "properties": {
+        "collapse_below": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "severe_stretch_above": {
+          "type": "number",
+          "exclusiveMinimum": 1
+        }
+      }
+    }
+  }
+}

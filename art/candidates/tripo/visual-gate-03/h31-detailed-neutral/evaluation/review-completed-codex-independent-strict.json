@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "candidate_id": "bentosaur_vg03_h31_detailed_neutral",
+  "reviewer": "Codex independent strict visual geometry review; not user final appearance approval",
+  "expected_mouth": "closed",
+  "scores": {
+    "overall_silhouette": 3,
+    "eye_forms": 2,
+    "muzzle_and_cheeks": 3,
+    "neutral_closed_mouth_seam": 2,
+    "primary_horns": 2,
+    "frill_and_frill_knobs": 2,
+    "hands_and_fingers": 2,
+    "feet_and_toes": 2,
+    "tail": 3
+  },
+  "blockers": {
+    "doubled_or_ghost_eye_geometry": false,
+    "fused_or_malformed_primary_horns": false,
+    "lumpy_or_melted_frill_knobs": false,
+    "fused_or_missing_digits": false,
+    "broken_tail_silhouette": false,
+    "severe_left_right_asymmetry": false,
+    "unintended_detached_large_parts": false,
+    "malformed_or_collapsed_neutral_mouth_seam": false
+  },
+  "notes": {
+    "strict_visual_result": "FAIL_AVERAGE_THRESHOLD",
+    "average_score": 2.3333333333333335,
+    "routing_assessment": "Usable as a high-density production-rebuild guide, but the visible semantic-detail quality does not honestly meet the written 2.5/3 visual-average threshold.",
+    "eyes": "One eye form per side with no ghost double. Both are shallow plaque-like pads, and the frontal pair differs in width and apparent depth.",
+    "muzzle_and_cheeks": "The broad muzzle and cheek volume tracks the canonical sheet well. Colored cheek marks were interpreted as raised plaques and should be replaced during the semantic rebuild.",
+    "mouth": "The closed V seam is continuous and not collapsed, but it is too deep and angular, with pinched dark endpoints. Do not preserve it as production lip topology.",
+    "horns": "All three primary horns are present and separated. The brow-horn pair differs visibly in length, lean, and base shape and should be rebuilt symmetrically.",
+    "frill": "Nine perimeter knobs are present and the frill silhouette is readable. Multiple knobs have annular or diagonal groove artifacts, uneven bulb shapes, and inconsistent junctions to the frill.",
+    "hands": "Three digits are visible on each hand in the frontal view. Their size and spacing are inconsistent, and some bases pinch or blend into one another.",
+    "feet": "Three toes are present on each foot. The viewer-left toes show longitudinal split or crease artifacts, and the bilateral toe volumes are noticeably unequal.",
+    "tail": "The tail has a clean continuous taper and upturned tip; its dorsal knob sequence remains readable.",
+    "macro_integrity": "No detached large parts, severe whole-body asymmetry, collapsed form, or melted major silhouette was observed.",
+    "machine_context": "The evaluator reports one watertight connected mesh at 1,974,918 triangles with no boundary, non-manifold, loose, or degenerate elements."
+  }
+}

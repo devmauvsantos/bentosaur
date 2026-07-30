@@ -1,0 +1,120 @@
+{
+  "$schema": "../../../../../../_pipeline/v1/schemas/stage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "character_id": "bentosaur-hero",
+  "character_version": "char-v001",
+  "stage": {
+    "code": "S10",
+    "slug": "reference-lock",
+    "revision": "r001",
+    "state": "frozen",
+    "created_at": "2026-07-29T17:11:49-04:00",
+    "frozen_at": "2026-07-29T17:11:49-04:00"
+  },
+  "lineage": {
+    "parent_manifests": [],
+    "supersedes": null
+  },
+  "coordinate_contract": {
+    "front_axis": "+X",
+    "up_axis": "+Z",
+    "character_left_axis": "+Y",
+    "unit_system": "METRIC",
+    "unit_scale": 1.0,
+    "origin": "Reference images are orthographic design inputs; the 3D source contract begins at S20."
+  },
+  "inputs": [
+    {
+      "artifact_id": "canonical-front-turnaround",
+      "role": "canonical_turnaround",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/source/bentosaur_front.png",
+      "format": "png",
+      "bytes": 653294,
+      "sha256": "014b8deb84120a0e1476d51a26f905cf94c2ea022e54ecfd24e6a757e27cd934",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "canonical-left-turnaround",
+      "role": "canonical_turnaround",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/source/bentosaur_left.png",
+      "format": "png",
+      "bytes": 578300,
+      "sha256": "04eb0da3b0c65cca04b2537d1db7d24c76ea8c0f8f84abe26283e1542182a108",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "canonical-back-turnaround",
+      "role": "canonical_turnaround",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/source/bentosaur_back.png",
+      "format": "png",
+      "bytes": 619474,
+      "sha256": "a6e3b39ffca300b25169262a28a0e7bb369305ff7dbf11ab8edf4829d06add46",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "canonical-right-turnaround",
+      "role": "canonical_turnaround",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/source/bentosaur_right.png",
+      "format": "png",
+      "bytes": 558661,
+      "sha256": "dbf943afed6e9318fd8bfbc2358101366ee81ceb481c31385ee3364c929a8da2",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "character-anatomy-contract",
+      "role": "anatomy_contract",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/source/character-anatomy.json",
+      "format": "json",
+      "bytes": 6148,
+      "sha256": "bad4d1b9201bec3016e7e50acd2e30fe8a3eab27567ca5b9fbbf6d64120d86fc",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "character-palette-contract",
+      "role": "palette_contract",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/source/palette.json",
+      "format": "json",
+      "bytes": 1080,
+      "sha256": "bc9eb43c9cb6a31279b856125bc38cf36ee4a6e464a075afd31fb05e1e34beda",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "approved-gameplay-concept",
+      "role": "identity_and_gameplay_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/evidence/gameplay-concept.png",
+      "format": "png",
+      "bytes": 2050880,
+      "sha256": "bf6eb81f5d4b60c56dd151f6135d8f59c0dae45b1cead6f2fdb33a32bd269bcf",
+      "immutable": true,
+      "derived_from": []
+    }
+  ],
+  "editable_sources": [],
+  "toolchain": [],
+  "recipes": [],
+  "vendor_jobs": [],
+  "outputs": [],
+  "qa": {
+    "reports": [],
+    "requirements": {
+      "four_orthographic_views": true,
+      "prop_free_character": true,
+      "upright_biped": true
+    },
+    "results": {
+      "identity_reference_locked": true
+    }
+  },
+  "approval": {
+    "gate_id": "G10_IDENTITY_LOCK",
+    "decision_path": null,
+    "technical_state": "pass",
+    "human_state": "approved"
+  }
+}

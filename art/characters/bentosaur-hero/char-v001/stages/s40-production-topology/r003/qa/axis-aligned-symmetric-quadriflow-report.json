@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0.0",
+  "method": "rotate_y_symmetry_plane_to_x_then_symmetric_quadriflow",
+  "source": {
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/work/30_symmetrized_negative_y_bootstrap.blend",
+    "sha256": "f690e66b6d4d744eb75bcab00af18ef73a1d692d72e8600916528cc7dd571894"
+  },
+  "steps": {
+    "00_input": {
+      "operation": "immutable input duplicate",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-aligned-symmetric-quadriflow/00_input_symmetrized_bootstrap.blend",
+      "sha256": "b781e96a6263e7cf686147f5c6579e96df500b8ee6762b007b418613f703ebe6",
+      "bytes": 12955908,
+      "topology": {
+        "vertices": 11884,
+        "edges": 23770,
+        "faces": 11888,
+        "triangles": 132,
+        "quads": 11636,
+        "ngons": 120,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "zero_area_faces": 0,
+        "height": 0.979953944683075,
+        "symmetry": {
+          "axis": "Y",
+          "plane": 0.0,
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "p95": 4.214684778958144e-08,
+          "maximum": 5.960464477539063e-08,
+          "edge_match_ratio": 1.0,
+          "face_match_ratio": 1.0
+        },
+        "deviation": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0,
+          "p95_fraction_of_input_height": 0.0
+        }
+      }
+    },
+    "05_apply_rotation": {
+      "operation": "apply source rotation to mesh data; world-space shape unchanged",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-aligned-symmetric-quadriflow/05_vendor_rotation_applied.blend",
+      "sha256": "38545a42a43183fe0045bfc41f6b0c477e68365cfba4818a54ade97750253950",
+      "bytes": 12956597,
+      "topology": {
+        "vertices": 11884,
+        "edges": 23770,
+        "faces": 11888,
+        "triangles": 132,
+        "quads": 11636,
+        "ngons": 120,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "zero_area_faces": 0,
+        "height": 0.979953944683075,
+        "symmetry": {
+          "axis": "Y",
+          "plane": 0.0,
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "p95": 0.0,
+          "maximum": 1.862645149230957e-09,
+          "edge_match_ratio": 1.0,
+          "face_match_ratio": 1.0
+        },
+        "deviation": {
+          "mean": 4.180522215296088e-09,
+          "p95": 1.4901161193847656e-08,
+          "maximum": 2.9802322387695312e-08,
+          "p95_fraction_of_input_height": 1.5205981132783553e-08
+        }
+      }
+    },
+    "10_axis_align": {
+      "operation": "rotate mesh data -90 degrees around Z so original Y=0 becomes X=0",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-aligned-symmetric-quadriflow/10_y_plane_aligned_to_x.blend",
+      "sha256": "7c2d356a5d888188564fcfd36a9b94bcc76b875cdfae2e65b17d6baa89bc214c",
+      "bytes": 12957551,
+      "topology": {
+        "vertices": 11884,
+        "edges": 23770,
+        "faces": 11888,
+        "triangles": 132,
+        "quads": 11636,
+        "ngons": 120,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "zero_area_faces": 0,
+        "height": 0.979953944683075,
+        "symmetry": {
+          "axis": "X",
+          "plane": 0.0,
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "p95": 0.0,
+          "maximum": 1.862645149230957e-09,
+          "edge_match_ratio": 1.0,
+          "face_match_ratio": 1.0
+        }
+      }
+    },
+    "20_quadriflow": {
+      "operation": "QuadriFlow with Blender X-axis mesh symmetry",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-aligned-symmetric-quadriflow/20_axis_aligned_symmetric_quadriflow.blend",
+      "sha256": "632d5dd58cb84dffa1fb272bb0fe64e65f4815e8fdca44e87216daabd949a9c6",
+      "bytes": 12878350,
+      "topology": {
+        "vertices": 10314,
+        "edges": 20366,
+        "faces": 10054,
+        "triangles": 0,
+        "quads": 10054,
+        "ngons": 0,
+        "boundary_edges": 516,
+        "non_manifold_edges": 516,
+        "zero_area_faces": 6,
+        "height": 0.9793120622634888,
+        "symmetry": {
+          "axis": "X",
+          "plane": 0.0,
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "p95": 0.0,
+          "maximum": 0.0,
+          "edge_match_ratio": 0.9975449278208779,
+          "face_match_ratio": 0.9950268549830913
+        }
+      }
+    },
+    "30_cleanup": {
+      "operation": "remove exact doubles and degenerate geometry; recalculate normals",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-aligned-symmetric-quadriflow/30_axis_aligned_exact_cleanup.blend",
+      "sha256": "7acd52d55ae9b9952313b743b5f598700a189ec71369c319d7bdce279c6ce51d",
+      "bytes": 12879415,
+      "topology": {
+        "vertices": 10244,
+        "edges": 20322,
+        "faces": 10048,
+        "triangles": 0,
+        "quads": 10048,
+        "ngons": 0,
+        "boundary_edges": 452,
+        "non_manifold_edges": 452,
+        "zero_area_faces": 0,
+        "height": 0.9793120622634888,
+        "symmetry": {
+          "axis": "X",
+          "plane": 0.0,
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "p95": 0.0,
+          "maximum": 9.672965006757295e-07,
+          "edge_match_ratio": 1.0,
+          "face_match_ratio": 1.0
+        }
+      }
+    },
+    "40_vendor_space": {
+      "operation": "inverse-rotate mesh data to original vendor coordinates",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-aligned-symmetric-quadriflow/40_vendor_space_all_quad_candidate.blend",
+      "sha256": "db5a018e3a62e59c6638e6beab5a9979251d6a433000d5ea5dc20175a0950957",
+      "bytes": 12878069,
+      "topology": {
+        "vertices": 10244,
+        "edges": 20322,
+        "faces": 10048,
+        "triangles": 0,
+        "quads": 10048,
+        "ngons": 0,
+        "boundary_edges": 452,
+        "non_manifold_edges": 452,
+        "zero_area_faces": 0,
+        "height": 0.9793120622634888,
+        "symmetry": {
+          "axis": "Y",
+          "plane": 0.0,
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "p95": 0.0,
+          "maximum": 9.672965006757295e-07,
+          "edge_match_ratio": 1.0,
+          "face_match_ratio": 1.0
+        },
+        "deviation": {
+          "mean": 0.0002341190189292154,
+          "p95": 0.000974324531853199,
+          "maximum": 0.007326819933950901,
+          "p95_fraction_of_input_height": 0.000994255431226723
+        }
+      }
+    }
+  },
+  "acceptance": {
+    "all_quads": true,
+    "closed_manifold": false,
+    "zero_area_free": true,
+    "exact_vertex_symmetry": true,
+    "exact_topology_symmetry": true,
+    "p95_deviation_within_0_15_percent_height": true
+  },
+  "verdict": {
+    "accepted": false,
+    "production_files_modified": false,
+    "promotion_requires_parent_review": true
+  }
+}

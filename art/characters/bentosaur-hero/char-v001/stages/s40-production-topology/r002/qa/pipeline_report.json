@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "reproducible hybrid retopology bootstrap evidence",
+  "production_approval": false,
+  "user_approval": false,
+  "blender_version": "5.1.2",
+  "source": {
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/subagent-cycle-audit/cycle_patch_candidate.blend",
+    "sha256": "41a48a1edecb9ace84cef6284e0d17c1355199cc3570af0f1fede78e87d37e7f",
+    "bytes": 42337735,
+    "topology": {
+      "vertices": 12059,
+      "edges": 25079,
+      "faces": 13020,
+      "quads": 11075,
+      "triangles": 1939,
+      "ngons": 6,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "bounds": {
+        "minimum": [
+          -0.43225541710853577,
+          -0.32878661155700684,
+          -0.48963361978530884
+        ],
+        "maximum": [
+          0.4343373775482178,
+          0.3288269340991974,
+          0.4900764226913452
+        ],
+        "height": 0.979710042476654,
+        "mirror_plane_y": 2.016127109527588e-05
+      },
+      "symmetry": {
+        "match_ratio_within_0_05_percent_height": 0.9735467285844598,
+        "mean_error": 5.147668474656481e-05,
+        "p95_error": 1.1920928955078125e-07,
+        "maximum_error": 0.011818645521998405
+      }
+    }
+  },
+  "settings": {
+    "quadriflow_target_faces": 12000,
+    "quadriflow_use_mesh_symmetry": false,
+    "quadriflow_use_preserve_sharp": true,
+    "quadriflow_use_preserve_boundary": false,
+    "quadriflow_preserve_attributes": false,
+    "quadriflow_seed": 0,
+    "remove_doubles_distance": 1e-06,
+    "dissolve_degenerate_distance": 1e-06,
+    "bmesh_symmetrize_direction": "-Y",
+    "bmesh_symmetrize_distance": 0.0001,
+    "post_symmetry_remove_doubles_distance": 1e-05
+  },
+  "steps": {
+    "00_input_snapshot": {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/retopo_execution/hybrid-bootstrap-v1/00_input_repaired_scaffold_snapshot.blend",
+      "sha256": "afd1d32430b8ab3918859db38858f50aacbcb26ff19b66fb96bcd9557878e0f2",
+      "bytes": 42332348,
+      "topology": {
+        "vertices": 12059,
+        "edges": 25079,
+        "faces": 13020,
+        "quads": 11075,
+        "triangles": 1939,
+        "ngons": 6,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "zero_area_faces": 0,
+        "bounds": {
+          "minimum": [
+            -0.43225541710853577,
+            -0.32878661155700684,
+            -0.48963361978530884
+          ],
+          "maximum": [
+            0.4343373775482178,
+            0.3288269340991974,
+            0.4900764226913452
+          ],
+          "height": 0.979710042476654,
+          "mirror_plane_y": 2.016127109527588e-05
+        },
+        "symmetry": {
+          "match_ratio_within_0_05_percent_height": 0.9735467285844598,
+          "mean_error": 5.147668474656481e-05,
+          "p95_error": 1.1920928955078125e-07,
+          "maximum_error": 0.011818645521998405
+        }
+      }
+    },
+    "10_quadriflow_unsym": {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/retopo_execution/hybrid-bootstrap-v1/10_quadriflow_unsym_12000.blend",
+      "sha256": "d9c698181f9003d65634d42d4febefc37e79928380cee82caa9cd2dc88f38d44",
+      "bytes": 42153826,
+      "topology": {
+        "vertices": 11428,
+        "edges": 22853,
+        "faces": 11425,
+        "quads": 11425,
+        "triangles": 0,
+        "ngons": 0,
+        "boundary_edges": 6,
+        "non_manifold_edges": 6,
+        "zero_area_faces": 2,
+        "bounds": {
+          "minimum": [
+            -0.4307916760444641,
+            -0.32878661155700684,
+            -0.4906151294708252
+          ],
+          "maximum": [
+            0.4335351586341858,
+            0.32873019576072693,
+            0.48933881521224976
+          ],
+          "height": 0.979953944683075,
+          "mirror_plane_y": -2.8207898139953613e-05
+        },
+        "symmetry": {
+          "match_ratio_within_0_05_percent_height": 0.004550227511375569,
+          "mean_error": 0.0047924821630164,
+          "p95_error": 0.008044164627790451,
+          "maximum_error": 0.01952839456498623
+        }
+      },
+      "surface_deviation": {
+        "samples": 11428,
+        "mean": 0.00024745006633419554,
+        "p95": 0.0008744146325625479,
+        "maximum": 0.007780889980494976,
+        "mean_fraction_of_character_height": 0.00025257479826240744,
+        "p95_fraction_of_character_height": 0.0008925239046770155,
+        "maximum_fraction_of_character_height": 0.007942033502918177
+      }
+    },
+    "20_exact_degenerate_cleanup": {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/retopo_execution/hybrid-bootstrap-v1/20_exact_degenerate_cleanup.blend",
+      "sha256": "201e2b3046bb6b885bd72c36413cbb7da111467e9bb8cb4f49a4cdf9e1558c5d",
+      "bytes": 42142187,
+      "topology": {
+        "vertices": 11425,
+        "edges": 22847,
+        "faces": 11423,
+        "quads": 11422,
+        "triangles": 1,
+        "ngons": 0,
+        "boundary_edges": 3,
+        "non_manifold_edges": 3,
+        "zero_area_faces": 0,
+        "bounds": {
+          "minimum": [
+            -0.4307916760444641,
+            -0.32878661155700684,
+            -0.4906151294708252
+          ],
+          "maximum": [
+            0.4335351586341858,
+            0.32873019576072693,
+            0.48933881521224976
+          ],
+          "height": 0.979953944683075,
+          "mirror_plane_y": -2.8207898139953613e-05
+        },
+        "symmetry": {
+          "match_ratio_within_0_05_percent_height": 0.004551422319474836,
+          "mean_error": 0.004792649281545923,
+          "p95_error": 0.008044164627790451,
+          "maximum_error": 0.01952839456498623
+        }
+      },
+      "surface_deviation": {
+        "samples": 11425,
+        "mean": 0.0002474098001839312,
+        "p95": 0.0008744146325625479,
+        "maximum": 0.007780889980494976,
+        "mean_fraction_of_character_height": 0.0002525336981934906,
+        "p95_fraction_of_character_height": 0.0008925239046770155,
+        "maximum_fraction_of_character_height": 0.007942033502918177
+      }
+    },
+    "30_symmetrized_negative_y": {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/retopo_execution/hybrid-bootstrap-v1/30_symmetrized_negative_y_candidate_not_approved.blend",
+      "sha256": "f690e66b6d4d744eb75bcab00af18ef73a1d692d72e8600916528cc7dd571894",
+      "bytes": 42115485,
+      "topology": {
+        "vertices": 11884,
+        "edges": 23770,
+        "faces": 11888,
+        "quads": 11636,
+        "triangles": 132,
+        "ngons": 120,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "zero_area_faces": 0,
+        "bounds": {
+          "minimum": [
+            -0.43033817410469055,
+            -0.32878661155700684,
+            -0.4906151294708252
+          ],
+          "maximum": [
+            0.4335351586341858,
+            0.32878661155700684,
+            0.48933881521224976
+          ],
+          "height": 0.979953944683075,
+          "mirror_plane_y": 0.0
+        },
+        "symmetry": {
+          "match_ratio_within_0_05_percent_height": 1.0,
+          "mean_error": 2.4104655946152798e-08,
+          "p95_error": 4.214684778958144e-08,
+          "maximum_error": 5.960464477539063e-08
+        }
+      },
+      "surface_deviation": {
+        "samples": 11884,
+        "mean": 0.0002480324216631082,
+        "p95": 0.0009052173118107021,
+        "maximum": 0.00963418185710907,
+        "mean_fraction_of_character_height": 0.00025316921426680046,
+        "p95_fraction_of_character_height": 0.0009239645125228702,
+        "maximum_fraction_of_character_height": 0.00983370736177653
+      }
+    }
+  },
+  "verdict": {
+    "role": "production_retopology_bootstrap_only",
+    "manual_center_strip_cleanup_required": true,
+    "manual_mouth_topology_required": true,
+    "manual_joint_loop_review_required": true,
+    "safe_to_rig": false
+  }
+}

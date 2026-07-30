@@ -1,0 +1,14 @@
+{
+  "job_id": "anchor.bentosaur.triceratops.retro.pro.01",
+  "status": "planned",
+  "provider": "retro-diffusion",
+  "operation": "create_inference",
+  "prompt_style": "rd_pro__default",
+  "style_version": "bentosaur-character-reference-01",
+  "canvas": [64, 64],
+  "reference_path": "art/references/bentosaur-character-reference.png",
+  "palette_path": "art/palettes/bentosaur-warm-v1.png",
+  "seed": 184723,
+  "expected_candidates": 1,
+  "cost_gate": "estimate before generation"
+}

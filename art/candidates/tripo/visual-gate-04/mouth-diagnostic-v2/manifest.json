@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "bentosaur_vg03_h31_mouth_diagnostic_v2",
+  "status": "static_appearance_package_awaiting_user_approval",
+  "source": {
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+    "sha256_before": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+    "sha256_after": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+    "unchanged": true,
+    "locked_collection": "00_SOURCE_LOCKED_DO_NOT_EDIT"
+  },
+  "profile": {
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/tools/blender/config/bentosaur_production_master_v1.json",
+    "sha256": "8210bf5be93e8fab92ea302ee2207c55e6e59b5bbe77d96ef5f4dfc6aefe959b",
+    "profile_id": "bentosaur-production-master-v1",
+    "landmarks_confirmed_for_candidate": true
+  },
+  "bounds": {
+    "source_copy_before_proxy": {
+      "minimum": [
+        -0.43349727988243103,
+        -0.3286252021789551,
+        -0.48963358998298645
+      ],
+      "maximum": [
+        0.4336620271205902,
+        0.3286655843257904,
+        0.49007636308670044
+      ],
+      "dimensions": [
+        0.8671593070030212,
+        0.6572908163070679,
+        0.9797099828720093
+      ]
+    },
+    "lookdev_proxy": {
+      "minimum": [
+        -0.4328043460845947,
+        -0.3283621668815613,
+        -0.48959898948669434
+      ],
+      "maximum": [
+        0.4331970810890198,
+        0.3283802568912506,
+        0.48989659547805786
+      ],
+      "dimensions": [
+        0.8660014271736145,
+        0.6567424535751343,
+        0.9794955849647522
+      ]
+    },
+    "source_height_outside_expected_range": false
+  },
+  "surface_proxy": {
+    "mode": "voxel_proxy",
+    "input_vertices": 987461,
+    "input_faces": 1974918,
+    "input_triangles": 1974918,
+    "weld": {
+      "vertices_before": 987461,
+      "vertices_after": 987461
+    },
+    "voxel_size": 0.0044532271948727695,
+    "voxel_divisions_per_height": 220,
+    "decimate_ratio": 0.4891330931146365,
+    "output_vertices": 60002,
+    "output_faces": 120000,
+    "output_triangles": 120000,
+    "deformation_ready": false,
+    "manual_joint_loop_retopology_required": true,
+    "object": "BENTOSAUR_LOOKDEV_SURFACE_PROXY_NOT_FINAL_RETOPOLOGY",
+    "topology": {
+      "vertices": 60002,
+      "edges": 180000,
+      "polygons": 120000,
+      "evaluated_triangles": 120000,
+      "triangle_faces": 120000,
+      "quad_faces": 0,
+      "ngons": 0,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "loose_edges": 0,
+      "loose_vertices": 0,
+      "shape_keys": [],
+      "material_slots": [
+        "MAT_BENTOSAUR_BODY_SAGE",
+        "MAT_BENTOSAUR_FEATURE_CREAM",
+        "MAT_BENTOSAUR_ACCENT_CORAL",
+        "MAT_BENTOSAUR_FACE_INK"
+      ],
+      "modifiers": [
+        {
+          "name": "NON_DESTRUCTIVE_MOUTH_APERTURE__BENTOSAUR_LOOKDEV_SURFACE_PROXY",
+          "type": "BOOLEAN",
+          "applied": false
+        }
+      ]
+    },
+    "semantic_material_slots_registered": true,
+    "body_sage_assigned": true,
+    "cream_feature_polygon_zones_complete": false,
+    "cream_zone_template": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/semantic-zones-template.json"
+  },
+  "face_system": {
+    "surface_ray_hits": {
+      "eye_left_center": true,
+      "eye_right_center": true,
+      "cheek_left_center": true,
+      "cheek_right_center": true
+    },
+    "eyes_separate_objects": true,
+    "eye_catchlights": false,
+    "cheeks_separate_objects": true,
+    "mouth_landmark_surface_ray_hit": true,
+    "mouth_surface_normal": [
+      0.8118942975997925,
+      -0.0006931200623512268,
+      -0.5838040709495544
+    ],
+    "mouth_object": "FACE_MOUTH_BAG_AND_LIP_LOOPS_SAME_MASTER",
+    "mouth_topology": {
+      "vertices": 321,
+      "edges": 640,
+      "polygons": 320,
+      "evaluated_triangles": 576,
+      "triangle_faces": 64,
+      "quad_faces": 256,
+      "ngons": 0,
+      "boundary_edges": 64,
+      "non_manifold_edges": 64,
+      "loose_edges": 0,
+      "loose_vertices": 0,
+      "shape_keys": [
+        "Basis",
+        "EXPR_DelightedOpen"
+      ],
+      "material_slots": [
+        "MAT_BENTOSAUR_BODY_SAGE",
+        "MAT_BENTOSAUR_FACE_INK"
+      ],
+      "modifiers": []
+    },
+    "tongue_object": "FACE_TONGUE_SEPARATE_SAME_MASTER",
+    "tongue_topology": {
+      "vertices": 762,
+      "edges": 1560,
+      "polygons": 800,
+      "evaluated_triangles": 1520,
+      "triangle_faces": 80,
+      "quad_faces": 720,
+      "ngons": 0,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "loose_edges": 0,
+      "loose_vertices": 0,
+      "shape_keys": [
+        "Basis",
+        "EXPR_DelightedOpen"
+      ],
+      "material_slots": [
+        "MAT_BENTOSAUR_ACCENT_CORAL"
+      ],
+      "modifiers": []
+    },
+    "cutter_object": "HELPER_NON_DESTRUCTIVE_MOUTH_APERTURE_CUTTER",
+    "cutter_topology": {
+      "vertices": 1106,
+      "edges": 2256,
+      "polygons": 1152,
+      "evaluated_triangles": 2208,
+      "triangle_faces": 96,
+      "quad_faces": 1056,
+      "ngons": 0,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "loose_edges": 0,
+      "loose_vertices": 0,
+      "shape_keys": [
+        "Basis",
+        "EXPR_DelightedOpen"
+      ],
+      "material_slots": [
+        "HELPER_NOT_RENDERED"
+      ],
+      "modifiers": []
+    },
+    "body_aperture_boolean": {
+      "modifier": "NON_DESTRUCTIVE_MOUTH_APERTURE__BENTOSAUR_LOOKDEV_SURFACE_PROXY",
+      "applied_to_mesh": false,
+      "solver": "EXACT"
+    },
+    "same_master_static_states": true,
+    "controller": "BENTOSAUR_PRODUCTION_MASTER_STATIC_CONTROLLER",
+    "controller_property": "expression_open",
+    "neutral_value": 0.0,
+    "delighted_open_value": 1.0,
+    "shape_key": "EXPR_DelightedOpen",
+    "lip_loop_count": 3,
+    "real_recessed_mouth_bag": true,
+    "separate_volumetric_tongue": true,
+    "teeth": false
+  },
+  "materials": {
+    "body_sage": {
+      "name": "MAT_BENTOSAUR_BODY_SAGE",
+      "hex_srgb": "#657A68",
+      "roughness": 0.82,
+      "metallic": 0.0
+    },
+    "feature_cream": {
+      "name": "MAT_BENTOSAUR_FEATURE_CREAM",
+      "hex_srgb": "#E9D0A5",
+      "roughness": 0.82,
+      "metallic": 0.0
+    },
+    "accent_coral": {
+      "name": "MAT_BENTOSAUR_ACCENT_CORAL",
+      "hex_srgb": "#C98D66",
+      "roughness": 0.82,
+      "metallic": 0.0
+    },
+    "face_ink": {
+      "name": "MAT_BENTOSAUR_FACE_INK",
+      "hex_srgb": "#1B110C",
+      "roughness": 0.82,
+      "metallic": 0.0
+    }
+  },
+  "approval_gate": {
+    "assistant_may_approve": false,
+    "visual_approval": false,
+    "user_approval_required": true,
+    "rigging_allowed": false,
+    "skinning_performed": false,
+    "armature_created": false,
+    "animation_performed": false,
+    "manual_retopology_required_before_rigging": true
+  },
+  "limitations": [
+    "The voxel/source-copy surface is a lookdev proxy, not deformation-ready joint-loop retopology.",
+    "Cream belly, horn, frill-knob, dorsal-knob, and claw polygon zones require candidate-specific manual fitting.",
+    "Landmark placement must be reviewed against the exact H3.1 candidate before this package can be shown as final appearance evidence.",
+    "The non-destructive mouth Boolean is retained for lookdev; the final retopology must integrate the aperture and lip loops cleanly.",
+    "No rig, skinning, weights, animation, or gameplay export was created."
+  ],
+  "outputs": {
+    "blend": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/bentosaur_vg03_h31_mouth_diagnostic_v2_static_master_user_approval_required.blend",
+    "manifest": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/manifest.json",
+    "readme": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/README.md",
+    "semantic_zone_template": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/semantic-zones-template.json",
+    "renders": {
+      "neutral": {
+        "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/neutral/front.png",
+        "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/neutral/left.png",
+        "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/neutral/back.png",
+        "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/neutral/right.png",
+        "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/neutral/three_quarter_left.png",
+        "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/neutral/three_quarter_right.png"
+      },
+      "delighted_open": {
+        "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/delighted_open/front.png",
+        "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/delighted_open/three_quarter_left.png",
+        "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/delighted_open/right.png"
+      },
+      "neutral_face_closeup": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/neutral/face_closeup.png",
+      "neutral_mouth_closeup": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/neutral/mouth_closeup.png",
+      "open_face_closeup": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/delighted_open/face_closeup.png",
+      "open_mouth_closeup": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/delighted_open/mouth_interior_three_quarter.png",
+      "native_scale": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/renders/native_scale/front_open_64px.png"
+    },
+    "boards": {
+      "neutral_six_view": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/boards/neutral_closed_six_view_board.png",
+      "face_and_mouth_states": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/boards/face_and_mouth_state_board.png",
+      "side_state_comparison": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/boards/side_closed_open_comparison.png",
+      "semantic_material_swatches": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/mouth-diagnostic-v2/boards/semantic_material_swatches.png"
+    }
+  },
+  "cost": {
+    "paid_api_calls_made_by_this_stage": 0,
+    "tripo_credits_consumed_by_this_stage": 0
+  }
+}

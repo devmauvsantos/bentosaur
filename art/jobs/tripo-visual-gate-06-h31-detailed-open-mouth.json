@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "tripo-visual-gate-06-h31-detailed-open-mouth",
+  "created_at": "2026-07-29",
+  "status": "geometry_complete_waiting_for_mau_clay_approval",
+  "authorization": {
+    "authorized_by": "user",
+    "scope": "one prop-free H3.1 Detailed multiview generation with the delighted mouth already open",
+    "new_geometry_allowed": true,
+    "texture_after_geometry_gate_allowed": true,
+    "retopology_allowed_before_user_visual_approval": false,
+    "rigging_allowed_before_user_visual_approval": false,
+    "animation_allowed_before_user_visual_approval": false,
+    "rerolls_allowed": false
+  },
+  "strategy": {
+    "reason": "Generate the mouth cavity as part of the source character instead of cutting a radial aperture into a closed-mouth reconstruction.",
+    "stage_1": "H3.1 Detailed geometry-only multiview generation",
+    "stage_2": "Only if the raw mouth geometry passes visual inspection, apply one Extreme texture task to the same geometry",
+    "stop_condition": "No topology, rigging, animation, or mouth-closing work before Mau approves the raw visual candidate."
+  },
+  "account_preflight": {
+    "profile": "default",
+    "region": "ov",
+    "api_key_logged": false,
+    "balance_before": 4735,
+    "frozen_before": 0,
+    "verified_at": "2026-07-29"
+  },
+  "billing": {
+    "geometry_estimate_credits": 40,
+    "conditional_extreme_texture_estimate_credits": 30,
+    "maximum_authorized_this_candidate_credits": 70,
+    "actual_geometry_credits": 40,
+    "actual_texture_credits": null,
+    "balance_after_geometry": 4695,
+    "balance_after_texture": null
+  },
+  "inputs": {
+    "source_sheet": "art/turnarounds/triceratops_master_v3/open-mouth-delighted/drafts/model-sheet-open-mouth-v1.png",
+    "prompt_record": "art/turnarounds/triceratops_master_v3/open-mouth-delighted/PROMPT.md",
+    "required_order": [
+      "front",
+      "left",
+      "back",
+      "right"
+    ],
+    "front": {
+      "path": "art/turnarounds/triceratops_master_v3/open-mouth-delighted/inputs-v1/bentosaur_front.png",
+      "sha256": "9a4ead6c368705ad5e73a64651ff52deec44d2f7e235d604bff7b19bcd320b3c"
+    },
+    "left": {
+      "path": "art/turnarounds/triceratops_master_v3/open-mouth-delighted/inputs-v1/bentosaur_left.png",
+      "sha256": "3917842758675ab953ad66afdcca3e7027869cdd2c93a332f7c9731b631c049e"
+    },
+    "back": {
+      "path": "art/turnarounds/triceratops_master_v3/open-mouth-delighted/inputs-v1/bentosaur_back.png",
+      "sha256": "643e45f593ce837fd4262f65374c0a9a702867bc1ea82e533f824d97ccddddd8"
+    },
+    "right": {
+      "path": "art/turnarounds/triceratops_master_v3/open-mouth-delighted/inputs-v1/bentosaur_right.png",
+      "sha256": "1d809f46d1b8565add8ab5118fc3ff4c16824ea700e316a952028c9a02791c5e"
+    },
+    "image_contract": {
+      "width": 1024,
+      "height": 1024,
+      "color_mode": "RGB",
+      "character": "unclothed upright baby Triceratops, no props",
+      "mouth": "wide lifted-corner delighted open smile with recessed cavity and tongue"
+    }
+  },
+  "request": {
+    "endpoint": "/v3/generation/multiview-to-model",
+    "model": "v3.1-20260211",
+    "parameters": {
+      "geometry_quality": "detailed",
+      "smart_low_poly": false,
+      "texture": false,
+      "pbr": false,
+      "export_uv": false,
+      "orientation": "align_image",
+      "model_seed": 30072026
+    }
+  },
+  "execution": {
+    "cli_version": "0.2.0",
+    "name": "bentosaur-vg06-h31-detailed-open-mouth",
+    "output_root": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out",
+    "task_id": "01804494-a277-4c4a-9699-97b3a39b3498",
+    "task_status": "success",
+    "submitted_at": "2026-07-29T22:46:56.809562Z",
+    "completed_at": "2026-07-29T22:48:14.814827Z",
+    "artifacts": {
+      "model_glb": {
+        "path": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out/model.glb",
+        "bytes": 46092344,
+        "sha256": "7c0d7e2e1e4ee8fb4db320880f6f4b5c82c470bce37437ce28d26efa171b01d4"
+      },
+      "task_receipt": {
+        "path": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out/task.json",
+        "bytes": 1420,
+        "sha256": "3ac55578f83282975665b98d33baa17c637e47bdd49c2dcac57b2fb66e708f1a"
+      },
+      "clay_six_view": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/evaluation/boards/vg03_hd_clay_six_view.png",
+      "clay_feature_closeups": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/evaluation/boards/vg03_hd_clay_feature_closeups.png",
+      "source_locked_blender_scene": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/evaluation/bentosaur_vg06_h31d_open_01_source_locked_evaluation.blend",
+      "topology_metrics": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/evaluation/topology-metrics.json"
+    }
+  },
+  "approval": {
+    "owner": "Mau",
+    "assistant_may_approve": false,
+    "raw_geometry_approved": false,
+    "final_appearance_approved": false,
+    "current_gate": "Mau reviews the clay six-view and mouth close-up before the optional 30-credit Extreme texture task."
+  }
+}

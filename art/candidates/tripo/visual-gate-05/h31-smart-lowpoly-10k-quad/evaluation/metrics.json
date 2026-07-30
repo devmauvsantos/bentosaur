@@ -1,0 +1,191 @@
+{
+  "candidate_id": "bentosaur_vg05_h31_smart_lowpoly_10k_quad",
+  "source": {
+    "provider": "tripo",
+    "format": "fbx",
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/model.fbx",
+    "sha256": "95ccd76f3792996d42f7ba0300eceea47ab47001c61f2a1dba5810d43b407148",
+    "bytes": 13284124
+  },
+  "blender_version": "5.1.2",
+  "visual_gate": {
+    "status": "awaiting_user_approval",
+    "assistant_may_approve": false,
+    "rigging_or_animation_performed": false
+  },
+  "bounds": {
+    "minimum": [
+      -0.43225541710853577,
+      -0.3287866413593292,
+      -0.48963361978530884
+    ],
+    "maximum": [
+      0.4343373775482178,
+      0.3288269639015198,
+      0.4900764226913452
+    ],
+    "dimensions": [
+      0.8665927648544312,
+      0.6576136350631714,
+      0.979710042476654
+    ]
+  },
+  "camera": {
+    "type": "orthographic",
+    "ortho_scale": 1.1196686029434204,
+    "facing_axis_after_import": "+X",
+    "views": [
+      "front",
+      "left",
+      "back",
+      "right",
+      "three_quarter_left",
+      "three_quarter_right"
+    ],
+    "high_resolution": 768,
+    "native_pixel_resolution": 64
+  },
+  "topology": {
+    "totals": {
+      "objects": 1,
+      "vertices": 12059,
+      "edges": 25079,
+      "polygons": 12996,
+      "evaluated_triangles": 24071,
+      "triangle_faces": 1921,
+      "quad_faces": 11075,
+      "ngons": 0,
+      "boundary_edges": 95,
+      "non_manifold_edges": 95,
+      "loose_edges": 0,
+      "loose_vertices": 0,
+      "uv_layers": 1,
+      "shape_keys": 0
+    },
+    "objects": [
+      {
+        "name": "EVAL_tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+        "vertices": 12059,
+        "edges": 25079,
+        "polygons": 12996,
+        "evaluated_triangles": 24071,
+        "triangle_faces": 1921,
+        "quad_faces": 11075,
+        "ngons": 0,
+        "boundary_edges": 95,
+        "non_manifold_edges": 95,
+        "loose_edges": 0,
+        "loose_vertices": 0,
+        "uv_layers": 1,
+        "shape_keys": 0,
+        "material_slots": [
+          "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_material.001"
+        ],
+        "vertex_groups": 0
+      }
+    ]
+  },
+  "materials": {
+    "material_count": 3,
+    "materials": [
+      {
+        "name": "Dots Stroke",
+        "images": [],
+        "blend_method": "DITHERED"
+      },
+      {
+        "name": "Material",
+        "images": [],
+        "blend_method": "DITHERED"
+      },
+      {
+        "name": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_material.001",
+        "images": [
+          "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_BaseColor.jpg",
+          "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Normal_Bake.jpg",
+          "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Roughness.jpg",
+          "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Metallic.jpg"
+        ],
+        "blend_method": "DITHERED"
+      }
+    ],
+    "images": [
+      {
+        "name": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_BaseColor.jpg",
+        "width": 8192,
+        "height": 8192,
+        "colorspace": "sRGB",
+        "packed": true,
+        "filepath": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/tripo_poly_b14be279-1330-4697-8f06-770de66bf358.fbm/tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_BaseColor.jpg"
+      },
+      {
+        "name": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Normal_Bake.jpg",
+        "width": 4096,
+        "height": 4096,
+        "colorspace": "Non-Color",
+        "packed": true,
+        "filepath": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/tripo_poly_b14be279-1330-4697-8f06-770de66bf358.fbm/tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Normal_Bake.jpg"
+      },
+      {
+        "name": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Roughness.jpg",
+        "width": 4096,
+        "height": 4096,
+        "colorspace": "Non-Color",
+        "packed": true,
+        "filepath": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/tripo_poly_b14be279-1330-4697-8f06-770de66bf358.fbm/tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Roughness.jpg"
+      },
+      {
+        "name": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Metallic.jpg",
+        "width": 4096,
+        "height": 4096,
+        "colorspace": "Non-Color",
+        "packed": true,
+        "filepath": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/tripo_poly_b14be279-1330-4697-8f06-770de66bf358.fbm/tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_Metallic.jpg"
+      }
+    ]
+  },
+  "source_armature_count": 0,
+  "source_action_count": 0,
+  "renders": {
+    "surfaced": {
+      "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/surfaced/front.png",
+      "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/surfaced/left.png",
+      "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/surfaced/back.png",
+      "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/surfaced/right.png",
+      "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/surfaced/three_quarter_left.png",
+      "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/surfaced/three_quarter_right.png"
+    },
+    "clay": {
+      "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/clay/front.png",
+      "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/clay/left.png",
+      "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/clay/back.png",
+      "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/clay/right.png",
+      "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/clay/three_quarter_left.png",
+      "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/clay/three_quarter_right.png"
+    },
+    "toon": {
+      "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/toon/front.png",
+      "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/toon/left.png",
+      "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/toon/back.png",
+      "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/toon/right.png",
+      "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/toon/three_quarter_left.png",
+      "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/toon/three_quarter_right.png"
+    },
+    "pixel64": {
+      "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/pixel64/front.png",
+      "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/pixel64/left.png",
+      "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/pixel64/back.png",
+      "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/pixel64/right.png",
+      "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/pixel64/three_quarter_left.png",
+      "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/pixel64/three_quarter_right.png"
+    },
+    "wireframe": {
+      "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/wireframe/front.png",
+      "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/wireframe/left.png",
+      "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/wireframe/back.png",
+      "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/wireframe/right.png",
+      "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/wireframe/three_quarter_left.png",
+      "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/renders/wireframe/three_quarter_right.png"
+    }
+  }
+}

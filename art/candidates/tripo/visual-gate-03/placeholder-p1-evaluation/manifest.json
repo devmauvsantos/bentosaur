@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "gate_id": "bentosaur_visual_gate_03_hd_geometry",
+  "policy_version": "1.0.0",
+  "candidate": {
+    "id": "bentosaur_vg03_placeholder_p1",
+    "source_role": "placeholder",
+    "expected_mouth": "closed",
+    "front_axis_after_import": "+X"
+  },
+  "source": {
+    "provider": "tripo",
+    "format": "glb",
+    "absolute_path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-01/p1/tripo-out/bentosaur-visual-gate-01-p1-4a069b80/model.glb",
+    "sha256": "4c7fabeef6f7efdf7abfe3b896cad837aea5d6267515c842a2c5aea60c8f99e8",
+    "bytes": 721668,
+    "locked_collection": "00_SOURCE_LOCKED_READ_ONLY",
+    "source_modified": false
+  },
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "resolution": [
+      768,
+      768
+    ],
+    "samples_requested": 32,
+    "material": "neutral clay override",
+    "six_views": {
+      "front": "renders/clay/six-view/front.png",
+      "left": "renders/clay/six-view/left.png",
+      "back": "renders/clay/six-view/back.png",
+      "right": "renders/clay/six-view/right.png",
+      "three_quarter_left": "renders/clay/six-view/three_quarter_left.png",
+      "three_quarter_right": "renders/clay/six-view/three_quarter_right.png"
+    },
+    "closeups": {
+      "eyes": "renders/clay/closeups/eyes.png",
+      "muzzle_and_neutral_mouth": "renders/clay/closeups/muzzle_and_neutral_mouth.png",
+      "neutral_mouth_three_quarter": "renders/clay/closeups/neutral_mouth_three_quarter.png",
+      "primary_horns": "renders/clay/closeups/primary_horns.png",
+      "frill_and_knobs": "renders/clay/closeups/frill_and_knobs.png",
+      "hands_and_fingers": "renders/clay/closeups/hands_and_fingers.png",
+      "feet_and_toes": "renders/clay/closeups/feet_and_toes.png",
+      "tail_side": "renders/clay/closeups/tail_side.png"
+    },
+    "boards": {
+      "six_view": "boards/vg03_hd_clay_six_view.png",
+      "feature_closeups": "boards/vg03_hd_clay_feature_closeups.png"
+    }
+  },
+  "artifacts": {
+    "topology_metrics": "topology-metrics.json",
+    "gate_policy": "gate-policy.json",
+    "gate_decision": "gate-decision.json",
+    "review_template": "review-template.json",
+    "supplied_review": null,
+    "readme": "README.md",
+    "blend": "bentosaur_vg03_placeholder_p1_source_locked_evaluation.blend"
+  },
+  "decision": {
+    "state": "PLACEHOLDER_ONLY_NO_CONTINUATION",
+    "reason": "Placeholder runs can validate tooling but never unlock work.",
+    "automatic_continuation_allowed": false,
+    "failed_machine_checks": [
+      "evaluated_triangles_min"
+    ],
+    "authorized_if_passed": [
+      "retopology",
+      "semantic_material_authoring",
+      "production_eye_construction",
+      "production_mouth_cavity_and_tongue_construction",
+      "facial_deformation_loop_construction"
+    ],
+    "still_blocked_even_if_passed": [
+      "final_appearance_approval",
+      "rigging",
+      "skinning",
+      "animation",
+      "game_integration"
+    ]
+  },
+  "blender_version": "5.1.2"
+}

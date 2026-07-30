@@ -1,0 +1,303 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bentosaur.local/schemas/character-stage-manifest-v1.json",
+  "title": "Bentosaur Character Stage Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "character_id",
+    "character_version",
+    "stage",
+    "lineage",
+    "coordinate_contract",
+    "inputs",
+    "editable_sources",
+    "toolchain",
+    "recipes",
+    "vendor_jobs",
+    "outputs",
+    "qa",
+    "approval"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "character_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "character_version": {
+      "type": "string",
+      "pattern": "^char-v[0-9]{3}$"
+    },
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "slug",
+        "revision",
+        "state",
+        "created_at",
+        "frozen_at"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^S[0-9]{2}$"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^r[0-9]{3}$"
+        },
+        "state": {
+          "enum": [
+            "wip",
+            "frozen",
+            "superseded"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "frozen_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parent_manifests",
+        "supersedes"
+      ],
+      "properties": {
+        "parent_manifests": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        },
+        "supersedes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "coordinate_contract": {
+      "$ref": "#/$defs/coordinate_contract"
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "editable_sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "toolchain": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "version"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "recipes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "vendor_jobs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "qa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reports",
+        "requirements",
+        "results"
+      ],
+      "properties": {
+        "reports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        },
+        "requirements": {
+          "type": "object"
+        },
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gate_id",
+        "decision_path",
+        "technical_state",
+        "human_state"
+      ],
+      "properties": {
+        "gate_id": {
+          "type": "string",
+          "pattern": "^G[0-9]{2}_[A-Z0-9_]+$"
+        },
+        "decision_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "technical_state": {
+          "enum": [
+            "pass",
+            "fail",
+            "pending",
+            "not_required"
+          ]
+        },
+        "human_state": {
+          "enum": [
+            "approved",
+            "rejected",
+            "pending",
+            "not_required"
+          ]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "repo_path": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/\\-]+$"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "role",
+        "path",
+        "format",
+        "bytes",
+        "sha256",
+        "immutable",
+        "derived_from"
+      ],
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "role": {
+          "type": "string"
+        },
+        "path": {
+          "$ref": "#/$defs/repo_path"
+        },
+        "format": {
+          "type": "string"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "immutable": {
+          "type": "boolean"
+        },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "coordinate_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "front_axis",
+        "up_axis",
+        "character_left_axis",
+        "unit_system",
+        "unit_scale",
+        "origin"
+      ],
+      "properties": {
+        "front_axis": {
+          "type": "string"
+        },
+        "up_axis": {
+          "type": "string"
+        },
+        "character_left_axis": {
+          "type": "string"
+        },
+        "unit_system": {
+          "const": "METRIC"
+        },
+        "unit_scale": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "origin": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

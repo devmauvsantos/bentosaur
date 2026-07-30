@@ -1,0 +1,16 @@
+{
+  "description": "A single front-facing juvenile triceratops customer based on the central green triceratops in the reference artwork. Preserve its huge rounded sage-green frill, three short cream horns, tiny forearms, round cheeks, coral blush, closed joyful crescent eyes, open delighted mouth, chunky cute proportions, cozy hand-authored personality, dark selective outline, warm cream highlights, and simple readable pixel clusters. Show the complete character centered as an isolated full-body game sprite. Clear transparent padding on all sides. No stall, no counter, no lantern, no rain, no background dinosaur, no food, no speech bubble, no UI, no cast shadow, no border, no text, and no logo.",
+  "width": 64,
+  "height": 64,
+  "no_background": true,
+  "style_image_base64": {
+    "$base64_file": "art/references/bentosaur-gameplay-concept.png"
+  },
+  "style_copy": [
+    "color_palette",
+    "outline",
+    "detail",
+    "shading"
+  ],
+  "seed": 184723
+}

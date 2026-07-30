@@ -1,0 +1,327 @@
+{
+  "candidate_geometry": {
+    "aggregate_representation_hash": "813487f3c796230f8292a1cdf3d36d82b4fd80414938d689e38e9619d1c8f572",
+    "aggregate_surface_hash": "7a406960b1dc13e73aadd312d279e96501c4e5c5399eff878f2b5bec86fc75e2",
+    "edges": 2985445,
+    "loops": 5924754,
+    "mesh_object_count": 1,
+    "meshes": [
+      {
+        "edges": 2985445,
+        "loops": 5924754,
+        "material_slots": 1,
+        "matrix_world_hash_float64": "ccc7977ae7987f37c2235e57c320a5142d6b58413825b6457a4a1c9fe469ac1c",
+        "object_name": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+        "ordered_corner_position_hash_local_float32": "2d62ac44d9679d835cad6939ab2d3c58a233fb11df426c9ab94d17dd4a32aac6",
+        "polygons": 1974918,
+        "position_hash_local_float32": "bd4e6ef1f9c9ee47ac0d259ce21b8b88045c510b364b531208a7a5f79b695c30",
+        "topology_hash": "fe5ff0569cc3db13586c8c59b6e1b93e02dc4519cc466ee26f5b44efe414bf71",
+        "triangles": 1974918,
+        "uv_layers": 1,
+        "vertices": 1010650,
+        "world_bounds": {
+          "dimensions": [
+            0.867159307,
+            0.657290816,
+            0.979709983
+          ],
+          "maximum": [
+            0.433662027,
+            0.328665584,
+            0.490076363
+          ],
+          "minimum": [
+            -0.43349728,
+            -0.328625202,
+            -0.48963359
+          ]
+        }
+      }
+    ],
+    "polygons": 1974918,
+    "source": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/model.glb",
+    "source_sha256": "40de6b43b0dc0313e084005b711cb549dfe6dfceeebe45c6275761c99b96dc79",
+    "triangles": 1974918,
+    "vertices": 1010650,
+    "world_bounds": {
+      "dimensions": [
+        0.867159307,
+        0.657290816,
+        0.979709983
+      ],
+      "maximum": [
+        0.433662027,
+        0.328665584,
+        0.490076363
+      ],
+      "minimum": [
+        -0.43349728,
+        -0.328625202,
+        -0.48963359
+      ]
+    }
+  },
+  "candidate_id": "bentosaur_vg04_h31_extreme_texture",
+  "evaluator": {
+    "blender_version": "5.1.2",
+    "id": "bentosaur_visual_gate_04_textured_hero",
+    "version": "1.0.0"
+  },
+  "geometry_comparison": {
+    "aggregate_representation_hash_match": false,
+    "aggregate_surface_hash_match": true,
+    "edge_count_delta": 23068,
+    "geometry_match": true,
+    "note": "The ordered polygon-corner surface hash is authoritative for shape equivalence. Raw vertex/edge counts and representation hashes may differ when a texture export splits vertices at UV seams. Material slots and UV-layer counts are recorded but deliberately excluded from the geometry-match verdict.",
+    "reference_supplied": true,
+    "representation_count_matches": {
+      "edges": false,
+      "loops": true,
+      "mesh_object_count": true,
+      "polygons": true,
+      "triangles": true,
+      "vertices": false
+    },
+    "surface_count_matches": {
+      "loops": true,
+      "mesh_object_count": true,
+      "polygons": true,
+      "triangles": true
+    },
+    "vertex_count_delta": 23189,
+    "world_dimension_absolute_deltas": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "world_dimensions_match_within_1e-7": true
+  },
+  "materials": {
+    "basecolor": {
+      "base_color_images": [
+        {
+          "colorspace": "sRGB",
+          "file_format": "JPEG",
+          "name": "tripo_base_color_26811821-3e6d-4b62-a695-679275c04f60",
+          "packed": true,
+          "size": [
+            8192,
+            8192
+          ],
+          "source_material": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_material"
+        }
+      ],
+      "colour_corrections_applied": false,
+      "geometry_edits_applied": false,
+      "materials": [
+        "VG04_BASECOLOR__tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_material"
+      ],
+      "normal_map_connected": false,
+      "orm_map_connected": false
+    },
+    "matte": {
+      "base_color_images": [
+        {
+          "colorspace": "sRGB",
+          "file_format": "JPEG",
+          "name": "tripo_base_color_26811821-3e6d-4b62-a695-679275c04f60",
+          "packed": true,
+          "size": [
+            8192,
+            8192
+          ],
+          "source_material": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_material"
+        }
+      ],
+      "colour_corrections_applied": false,
+      "geometry_edits_applied": false,
+      "materials": [
+        "VG04_MATTE__tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787_material"
+      ],
+      "normal_map_connected": false,
+      "orm_map_connected": false
+    }
+  },
+  "outputs": {
+    "basecolor": {
+      "boards": {
+        "feature_closeups": "boards/vg04_basecolor_feature_closeups.png",
+        "reference_comparison": "boards/vg04_basecolor_reference_comparison.png",
+        "six_view": "boards/vg04_basecolor_six_view.png"
+      },
+      "closeups": {
+        "eyes": "renders/basecolor/closeups/eyes.png",
+        "feet_and_toes": "renders/basecolor/closeups/feet_and_toes.png",
+        "frill_and_knobs": "renders/basecolor/closeups/frill_and_knobs.png",
+        "hands_and_fingers": "renders/basecolor/closeups/hands_and_fingers.png",
+        "muzzle_and_neutral_mouth": "renders/basecolor/closeups/muzzle_and_neutral_mouth.png",
+        "neutral_mouth_three_quarter": "renders/basecolor/closeups/neutral_mouth_three_quarter.png",
+        "primary_horns": "renders/basecolor/closeups/primary_horns.png",
+        "tail_side": "renders/basecolor/closeups/tail_side.png"
+      },
+      "six_views": {
+        "back": "renders/basecolor/six-view/back.png",
+        "front": "renders/basecolor/six-view/front.png",
+        "left": "renders/basecolor/six-view/left.png",
+        "right": "renders/basecolor/six-view/right.png",
+        "three_quarter_left": "renders/basecolor/six-view/three_quarter_left.png",
+        "three_quarter_right": "renders/basecolor/six-view/three_quarter_right.png"
+      }
+    },
+    "matte": {
+      "boards": {
+        "feature_closeups": "boards/vg04_matte_feature_closeups.png",
+        "reference_comparison": "boards/vg04_matte_reference_comparison.png",
+        "six_view": "boards/vg04_matte_six_view.png"
+      },
+      "closeups": {
+        "eyes": "renders/matte/closeups/eyes.png",
+        "feet_and_toes": "renders/matte/closeups/feet_and_toes.png",
+        "frill_and_knobs": "renders/matte/closeups/frill_and_knobs.png",
+        "hands_and_fingers": "renders/matte/closeups/hands_and_fingers.png",
+        "muzzle_and_neutral_mouth": "renders/matte/closeups/muzzle_and_neutral_mouth.png",
+        "neutral_mouth_three_quarter": "renders/matte/closeups/neutral_mouth_three_quarter.png",
+        "primary_horns": "renders/matte/closeups/primary_horns.png",
+        "tail_side": "renders/matte/closeups/tail_side.png"
+      },
+      "six_views": {
+        "back": "renders/matte/six-view/back.png",
+        "front": "renders/matte/six-view/front.png",
+        "left": "renders/matte/six-view/left.png",
+        "right": "renders/matte/six-view/right.png",
+        "three_quarter_left": "renders/matte/six-view/three_quarter_left.png",
+        "three_quarter_right": "renders/matte/six-view/three_quarter_right.png"
+      }
+    }
+  },
+  "readme": "README.md",
+  "reference_geometry": {
+    "aggregate_representation_hash": "e9f5fe9714713904c6e10a92a2e4e31358b32af4f3678b759d781346b11fb0f9",
+    "aggregate_surface_hash": "7a406960b1dc13e73aadd312d279e96501c4e5c5399eff878f2b5bec86fc75e2",
+    "edges": 2962377,
+    "loops": 5924754,
+    "mesh_object_count": 1,
+    "meshes": [
+      {
+        "edges": 2962377,
+        "loops": 5924754,
+        "material_slots": 0,
+        "matrix_world_hash_float64": "ccc7977ae7987f37c2235e57c320a5142d6b58413825b6457a4a1c9fe469ac1c",
+        "object_name": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+        "ordered_corner_position_hash_local_float32": "2d62ac44d9679d835cad6939ab2d3c58a233fb11df426c9ab94d17dd4a32aac6",
+        "polygons": 1974918,
+        "position_hash_local_float32": "c32750555d2666579ca858bc105f9be3be2941bb44a72456e7ea74d6dae413a3",
+        "topology_hash": "757f6f13ae65d75cc05a8fb8864eef4cb43bad9ee4b31be78f95444c8e522fa3",
+        "triangles": 1974918,
+        "uv_layers": 0,
+        "vertices": 987461,
+        "world_bounds": {
+          "dimensions": [
+            0.867159307,
+            0.657290816,
+            0.979709983
+          ],
+          "maximum": [
+            0.433662027,
+            0.328665584,
+            0.490076363
+          ],
+          "minimum": [
+            -0.43349728,
+            -0.328625202,
+            -0.48963359
+          ]
+        }
+      }
+    ],
+    "polygons": 1974918,
+    "source": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+    "source_sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+    "triangles": 1974918,
+    "vertices": 987461,
+    "world_bounds": {
+      "dimensions": [
+        0.867159307,
+        0.657290816,
+        0.979709983
+      ],
+      "maximum": [
+        0.433662027,
+        0.328665584,
+        0.490076363
+      ],
+      "minimum": [
+        -0.43349728,
+        -0.328625202,
+        -0.48963359
+      ]
+    }
+  },
+  "reference_images": {
+    "back": {
+      "colorspace": "sRGB",
+      "file_format": "PNG",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_back.png",
+      "sha256": "a6e3b39ffca300b25169262a28a0e7bb369305ff7dbf11ab8edf4829d06add46",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "front": {
+      "colorspace": "sRGB",
+      "file_format": "PNG",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_front.png",
+      "sha256": "014b8deb84120a0e1476d51a26f905cf94c2ea022e54ecfd24e6a757e27cd934",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "left": {
+      "colorspace": "sRGB",
+      "file_format": "PNG",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_left.png",
+      "sha256": "04eb0da3b0c65cca04b2537d1db7d24c76ea8c0f8f84abe26283e1542182a108",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "right": {
+      "colorspace": "sRGB",
+      "file_format": "PNG",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_right.png",
+      "sha256": "dbf943afed6e9318fd8bfbc2358101366ee81ceb481c31385ee3364c929a8da2",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  },
+  "render_contract": {
+    "blend_packed": false,
+    "blend_saved": false,
+    "colour_corrections_applied": false,
+    "face_or_mouth_edits_applied": false,
+    "front_axis": "+X",
+    "geometry_edits_applied": false,
+    "modes": [
+      "basecolor",
+      "matte"
+    ],
+    "normal_map_connected": false,
+    "orm_map_connected": false,
+    "render_uses_deep_mesh_duplicates": true,
+    "resolution": 512,
+    "samples": 32,
+    "source_locked": true
+  },
+  "task": {
+    "credits_consumed": 30,
+    "status": "success",
+    "task_id": "26811821-3e6d-4b62-a695-679275c04f60",
+    "task_json": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/task.json",
+    "type": "texture_model"
+  }
+}

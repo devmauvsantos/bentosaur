@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "diagnostic_only": true,
+  "input": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+  "input_sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9",
+  "exact_copy": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/stages/00_input_exact_copy.blend",
+  "exact_copy_sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9",
+  "body_object": "BENTOSAUR_BODY_RETOPO_WIP_R003",
+  "config_source": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/configs/bentosaur_r003.sample.json",
+  "config_frozen": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/run_inputs/config.json",
+  "config_sha256": "7eff6bbda70106695f4dc5b6b5559cf637ad15cf75eb21fbc86d47ceff2986c5",
+  "blender": "/Applications/Blender.app/Contents/MacOS/Blender",
+  "harness_recipes": [
+    {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/g40_validate.py",
+      "sha256": "1547ecbebe198b04389e6660757163c9dedd78db49e56fba4adb707bbf4fbac8"
+    },
+    {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/blender/g40_validate_in_blender.py",
+      "sha256": "6cb38aa5e6ce2470bc41efdfa033e6c8d5b8d1a10dc54b71be7a5fc8385a9a04"
+    },
+    {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/tools/g40_artifacts.py",
+      "sha256": "826d7ae6dc7d5c0209985dcc498b74cebf2e2abd62a30449ae970024c92467ee"
+    }
+  ],
+  "compare_to": null,
+  "non_approval_notice": "This is a bounded diagnostic rig and deformation stress harness. It does not replace production rigging, visual review, or user approval."
+}

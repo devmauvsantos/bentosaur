@@ -1,0 +1,151 @@
+{
+  "$schema": "../../../../../../_pipeline/v1/schemas/stage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "character_id": "bentosaur-hero",
+  "character_version": "char-v001",
+  "stage": {
+    "code": "S30",
+    "slug": "retopo-scaffold",
+    "revision": "r001",
+    "state": "frozen",
+    "created_at": "2026-07-29T17:11:49-04:00",
+    "frozen_at": "2026-07-29T17:11:49-04:00"
+  },
+  "lineage": {
+    "parent_manifests": [
+      {
+        "artifact_id": "s20-high-visual-manifest",
+        "role": "parent_stage_manifest",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/manifest.json",
+        "format": "json",
+        "bytes": 4429,
+        "sha256": "440ffe3aa6eb45ff9f4f87ba064773ab8970e42971e8b112f621904b962353a7",
+        "immutable": true,
+        "derived_from": []
+      }
+    ],
+    "supersedes": null
+  },
+  "coordinate_contract": {
+    "front_axis": "+X",
+    "up_axis": "+Z",
+    "character_left_axis": "+Y",
+    "unit_system": "METRIC",
+    "unit_scale": 1.0,
+    "origin": "Original Tripo source bounds centered near world origin."
+  },
+  "inputs": [
+    {
+      "artifact_id": "smart-lowpoly-raw-fbx",
+      "role": "vendor_retopology_raw_output",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/provenance/bentosaur_hero_smart_lowpoly_raw_r001.fbx",
+      "format": "fbx",
+      "bytes": 13284124,
+      "sha256": "95ccd76f3792996d42f7ba0300eceea47ab47001c61f2a1dba5810d43b407148",
+      "immutable": true,
+      "derived_from": [
+        "s20-high-visual-manifest"
+      ]
+    },
+    {
+      "artifact_id": "cycle-patch-legacy-input",
+      "role": "successful_geometry_repair_source",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/provenance/cycle_patch_candidate_legacy_input.blend",
+      "format": "blend",
+      "bytes": 42337735,
+      "sha256": "41a48a1edecb9ace84cef6284e0d17c1355199cc3570af0f1fede78e87d37e7f",
+      "immutable": true,
+      "derived_from": [
+        "smart-lowpoly-raw-fbx"
+      ]
+    }
+  ],
+  "editable_sources": [
+    {
+      "artifact_id": "s30-retopo-scaffold-blender-source",
+      "role": "canonical_blender_master",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/source/bentosaur_hero_s30_retopo_scaffold_r001.blend",
+      "format": "blend",
+      "bytes": 128711801,
+      "sha256": "fc10a5898aa38ad4050848d5b1913471c0e0662ec74981373e72e53d590ade2c",
+      "immutable": true,
+      "derived_from": [
+        "cycle-patch-legacy-input",
+        "s20-high-visual-manifest"
+      ]
+    }
+  ],
+  "toolchain": [
+    {
+      "name": "Blender",
+      "version": "5.1.2"
+    },
+    {
+      "name": "Tripo Smart LowPoly",
+      "version": "v3.1-20260211"
+    }
+  ],
+  "recipes": [
+    {
+      "artifact_id": "stage-source-builder",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/recipes/create_bentosaur_character_stage.py",
+      "format": "py",
+      "bytes": 18534,
+      "sha256": "4adae2ef4be76702ed5c14982d344abf7cb3bd49aacc729a58d29826fa13d0b3",
+      "immutable": true,
+      "derived_from": []
+    }
+  ],
+  "vendor_jobs": [
+    {
+      "artifact_id": "smart-lowpoly-task-receipt",
+      "role": "vendor_task_receipt",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/provenance/tripo_task.json",
+      "format": "json",
+      "bytes": 525,
+      "sha256": "bc0bab0bb170dd4d75c9f0f52cad9d96754df842edd53fc76d459bb86cd2736d",
+      "immutable": true,
+      "derived_from": []
+    }
+  ],
+  "outputs": [],
+  "qa": {
+    "reports": [
+      {
+        "artifact_id": "cycle-patch-report",
+        "role": "geometry_repair_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/provenance/cycle_patch_report.json",
+        "format": "json",
+        "bytes": 7019,
+        "sha256": "41680d8d77bc5e70c44faabbfe60a8adb6688b2667cf9fc6d33cbe8bc61d3ee9",
+        "immutable": true,
+        "derived_from": [
+          "cycle-patch-legacy-input"
+        ]
+      }
+    ],
+    "requirements": {
+      "one_connected_shell": true,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "role_is_scaffold_only": true
+    },
+    "results": {
+      "vertices": 12059,
+      "faces": 13020,
+      "evaluated_triangles": 24118,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "deformation_ready": false
+    }
+  },
+  "approval": {
+    "gate_id": "G30_SCAFFOLD_ACCEPTANCE",
+    "decision_path": "art/characters/bentosaur-hero/char-v001/gates/g30-scaffold-acceptance/r001.json",
+    "technical_state": "pass",
+    "human_state": "approved"
+  }
+}

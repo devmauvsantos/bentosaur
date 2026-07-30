@@ -1,0 +1,86 @@
+{
+  "gate_id": "bentosaur_visual_gate_03_hd_geometry",
+  "version": "1.0.0",
+  "purpose": "Decide whether an H3.1 Detailed clay source is strong enough to justify production retopology/material/mouth work.",
+  "machine_thresholds": {
+    "mesh_object_count_min": 1,
+    "evaluated_triangles_min": 20000,
+    "evaluated_triangles_max": 2000000,
+    "welded_boundary_edge_ratio_max": 0.005,
+    "welded_non_manifold_edge_ratio_max": 0.005,
+    "welded_boundary_edges_absolute_max": 1000,
+    "welded_non_manifold_edges_absolute_max": 1000,
+    "degenerate_face_ratio_max": 0.0005,
+    "loose_edges_max": 0,
+    "loose_vertices_max": 0,
+    "connected_components_max": 64,
+    "largest_component_vertex_share_min": 0.9,
+    "smallest_to_largest_bound_ratio_min": 0.12
+  },
+  "visual_thresholds": {
+    "score_min_each": 2,
+    "score_average_min": 2.5,
+    "score_max": 3,
+    "all_blockers_must_be_false": true
+  },
+  "production_expected_mouth": "closed",
+  "visual_features": [
+    "overall_silhouette",
+    "eye_forms",
+    "muzzle_and_cheeks",
+    "open_mouth_shape_and_volume",
+    "primary_horns",
+    "frill_and_frill_knobs",
+    "hands_and_fingers",
+    "feet_and_toes",
+    "tail"
+  ],
+  "visual_blockers": [
+    "doubled_or_ghost_eye_geometry",
+    "fused_or_malformed_primary_horns",
+    "lumpy_or_melted_frill_knobs",
+    "fused_or_missing_digits",
+    "broken_tail_silhouette",
+    "severe_left_right_asymmetry",
+    "unintended_detached_large_parts",
+    "collapsed_or_pinhole_open_mouth",
+    "open_mouth_without_real_cavity"
+  ],
+  "mouth_mode_contract": {
+    "closed": {
+      "features": [
+        "neutral_closed_mouth_seam"
+      ],
+      "blockers": [
+        "malformed_or_collapsed_neutral_mouth_seam"
+      ],
+      "does_not_require": [
+        "open_mouth_volume",
+        "mouth_cavity",
+        "tongue"
+      ]
+    },
+    "open": {
+      "features": [
+        "open_mouth_shape_and_volume"
+      ],
+      "blockers": [
+        "collapsed_or_pinhole_open_mouth",
+        "open_mouth_without_real_cavity"
+      ]
+    },
+    "unknown": {
+      "features": [
+        "mouth_geometry_matches_reference"
+      ],
+      "blockers": [
+        "mouth_geometry_fundamentally_malformed"
+      ]
+    }
+  },
+  "policy_notes": [
+    "Raw glTF seam splits are reported but gate decisions use a non-destructive seam-welded diagnostic at 1e-5 of character scale.",
+    "A high-density source is not expected to be deformation topology.",
+    "Passing this gate authorizes production rebuild work, not rigging."
+  ]
+}

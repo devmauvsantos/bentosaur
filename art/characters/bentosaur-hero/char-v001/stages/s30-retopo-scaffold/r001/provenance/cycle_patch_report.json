@@ -1,0 +1,294 @@
+{
+  "before": {
+    "vertices": 12059,
+    "edges": 25079,
+    "faces": 12996,
+    "triangles_evaluated": 24071,
+    "boundary_edges": 95,
+    "non_manifold_edges": 95,
+    "zero_area_faces_lt_1e_12": 0,
+    "boundary_graphs": [
+      {
+        "edge_count": 11,
+        "vertex_count": 10,
+        "degree_histogram": {
+          "2": 9,
+          "4": 1
+        },
+        "cycle_rank": 2,
+        "simple_loop": false
+      },
+      {
+        "edge_count": 11,
+        "vertex_count": 10,
+        "degree_histogram": {
+          "2": 9,
+          "4": 1
+        },
+        "cycle_rank": 2,
+        "simple_loop": false
+      },
+      {
+        "edge_count": 8,
+        "vertex_count": 8,
+        "degree_histogram": {
+          "2": 8
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 7,
+        "vertex_count": 7,
+        "degree_histogram": {
+          "2": 7
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 6,
+        "vertex_count": 5,
+        "degree_histogram": {
+          "2": 4,
+          "4": 1
+        },
+        "cycle_rank": 2,
+        "simple_loop": false
+      },
+      {
+        "edge_count": 6,
+        "vertex_count": 5,
+        "degree_histogram": {
+          "2": 4,
+          "4": 1
+        },
+        "cycle_rank": 2,
+        "simple_loop": false
+      },
+      {
+        "edge_count": 5,
+        "vertex_count": 5,
+        "degree_histogram": {
+          "2": 5
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 5,
+        "vertex_count": 5,
+        "degree_histogram": {
+          "2": 5
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      },
+      {
+        "edge_count": 3,
+        "vertex_count": 3,
+        "degree_histogram": {
+          "2": 3
+        },
+        "cycle_rank": 1,
+        "simple_loop": true
+      }
+    ]
+  },
+  "cycle_count": 24,
+  "unclosed_cycles": 0,
+  "projected_near_degenerate_cycle_count": 10,
+  "projected_near_degenerate_cycles": [
+    {
+      "area_before": 0.0,
+      "area_after": 9.463614033105333e-07,
+      "max_vertex_move": 0.0006731988447883744,
+      "mean_vertex_move": 0.0004601645803862233
+    },
+    {
+      "area_before": 0.0,
+      "area_after": 1.7021829535635132e-07,
+      "max_vertex_move": 0.00042317733900504295,
+      "mean_vertex_move": 0.0003614770192120227
+    },
+    {
+      "area_before": 1.432454155292362e-11,
+      "area_after": 9.785630941282006e-07,
+      "max_vertex_move": 0.0015830671389011352,
+      "mean_vertex_move": 0.0014292066675541957
+    },
+    {
+      "area_before": 1.432454155292362e-11,
+      "area_after": 1.9955285899317101e-07,
+      "max_vertex_move": 0.001132396405661754,
+      "mean_vertex_move": 0.0010541077165476954
+    },
+    {
+      "area_before": 0.0,
+      "area_after": 1.458613103436891e-07,
+      "max_vertex_move": 0.0006107636176850395,
+      "mean_vertex_move": 0.0003483145185364615
+    },
+    {
+      "area_before": 0.0,
+      "area_after": 1.2875386794565355e-06,
+      "max_vertex_move": 0.0006573595335242531,
+      "mean_vertex_move": 0.00040129217577487396
+    },
+    {
+      "area_before": 0.0,
+      "area_after": 1.9616316137630686e-07,
+      "max_vertex_move": 0.000678576893182192,
+      "mean_vertex_move": 0.00044647829777957453
+    },
+    {
+      "area_before": 0.0,
+      "area_after": 1.8014306247468122e-07,
+      "max_vertex_move": 0.0004247332154361448,
+      "mean_vertex_move": 0.0003716632615015933
+    },
+    {
+      "area_before": 0.0,
+      "area_after": 1.3193087368029865e-07,
+      "max_vertex_move": 0.00049553784911311,
+      "mean_vertex_move": 0.00030282459233821996
+    },
+    {
+      "area_before": 0.0,
+      "area_after": 2.225571750269772e-07,
+      "max_vertex_move": 0.0006375568081364264,
+      "mean_vertex_move": 0.00041920295349583673
+    }
+  ],
+  "created_faces": {
+    "count": 24,
+    "side_histogram": {
+      "3": 18,
+      "8": 3,
+      "7": 1,
+      "5": 2
+    },
+    "area_min": 1.319309461678131e-07,
+    "area_median": 5.513701580639463e-06,
+    "area_max": 0.0010476880706846714,
+    "zero_area_lt_1e_12": 0,
+    "zero_area_face_details": [],
+    "uv_loops": 95,
+    "uv_loops_at_origin": 0,
+    "uv_unique_rounded_6dp": 91
+  },
+  "attribute_fill_faces_failed": 0,
+  "signed_volume_after_recalculate_normals": 0.09408742038098157,
+  "after": {
+    "vertices": 12059,
+    "edges": 25079,
+    "faces": 13020,
+    "triangles_evaluated": 24118,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "zero_area_faces_lt_1e_12": 0,
+    "boundary_graphs": []
+  },
+  "source_low": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/model.fbx",
+  "source_high": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/model.glb",
+  "guardrail": "Geometric closure is not approval of UV quality, deformation topology, animation readiness, or production use."
+}

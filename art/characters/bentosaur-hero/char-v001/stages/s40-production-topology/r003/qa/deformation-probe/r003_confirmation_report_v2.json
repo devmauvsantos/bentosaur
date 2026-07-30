@@ -1,0 +1,1106 @@
+{
+  "schema_version": "2.0.0",
+  "diagnostic_only": true,
+  "candidate": "S40_r003_axis_qf_winner",
+  "fallback_result_applies_to_this_candidate": false,
+  "source": {
+    "canonical_blend": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+    "canonical_sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9",
+    "canonical_object": "BENTOSAUR_BODY_RETOPO_WIP_R003",
+    "topology": {
+      "vertices": 10050,
+      "edges": 20096,
+      "faces": 10048,
+      "faces_by_sides": {
+        "4": 10048
+      },
+      "boundary_edges": 0,
+      "non_manifold_edges": 0
+    }
+  },
+  "coordinate_audit": {
+    "contract": {
+      "front": "-Y",
+      "character_left": "+X",
+      "up": "+Z",
+      "floor": "Z=0"
+    },
+    "bounds_and_morphology": {
+      "minimum": [
+        -0.33513161540031433,
+        -0.44193756580352783,
+        0.0
+      ],
+      "maximum": [
+        0.33513161540031433,
+        0.4384065270423889,
+        0.9995938539505005
+      ],
+      "dimensions": [
+        0.6702632308006287,
+        0.8803440928459167,
+        0.9995938539505005
+      ],
+      "floor_absolute_error": 0.0,
+      "tail_region": {
+        "count": 882,
+        "mean_y": 0.2611787789955296,
+        "maximum_y": 0.4384065270423889
+      },
+      "front_head_region": {
+        "count": 2294,
+        "mean_y": -0.23033836716177053,
+        "minimum_y": -0.44193756580352783
+      }
+    },
+    "mirror": {
+      "plane": "X=0",
+      "within_1e_6_ratio": 0.9999004975124378,
+      "p95": 6.664001972467304e-08,
+      "maximum": 1.0116600606124848e-06
+    }
+  },
+  "input_checkpoint": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/stages/20_automatic_weights.blend",
+  "headlock_checkpoint": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/stages/31_minimal_confirmation_weights_headlock.blend",
+  "weights": {
+    "automatic": {
+      "operator_result": [
+        "FINISHED"
+      ],
+      "weight_stats": {
+        "vertex_groups": [
+          "chest",
+          "foot.L",
+          "foot.R",
+          "forearm.L",
+          "forearm.R",
+          "hand.L",
+          "hand.R",
+          "head",
+          "neck",
+          "pelvis",
+          "shin.L",
+          "shin.R",
+          "spine",
+          "tail_01",
+          "tail_02",
+          "tail_03",
+          "tail_04",
+          "tail_05",
+          "thigh.L",
+          "thigh.R",
+          "upper_arm.L",
+          "upper_arm.R"
+        ],
+        "unweighted_vertex_count": 0,
+        "unweighted_vertex_sample": [],
+        "influences": {
+          "minimum": 1,
+          "maximum": 14,
+          "mean": 3.9339303482587065,
+          "over_four_count": 2632
+        },
+        "weight_sum": {
+          "minimum": 0.8224251614883542,
+          "maximum": 0.9998809099197388,
+          "mean": 0.948254496899818
+        }
+      }
+    },
+    "single_bounded_cleanup": {
+      "operations": {
+        "head_core_locked": 4164,
+        "cross_side_removed": 910,
+        "tail_leak_removed": 115,
+        "fallback_nearest_bone": 0,
+        "capped_or_normalized": 5886
+      },
+      "stats": {
+        "vertex_groups": [
+          "chest",
+          "foot.L",
+          "foot.R",
+          "forearm.L",
+          "forearm.R",
+          "hand.L",
+          "hand.R",
+          "head",
+          "neck",
+          "pelvis",
+          "shin.L",
+          "shin.R",
+          "spine",
+          "tail_01",
+          "tail_02",
+          "tail_03",
+          "tail_04",
+          "tail_05",
+          "thigh.L",
+          "thigh.R",
+          "upper_arm.L",
+          "upper_arm.R"
+        ],
+        "unweighted_vertex_count": 0,
+        "unweighted_vertex_sample": [],
+        "influences": {
+          "minimum": 1,
+          "maximum": 4,
+          "mean": 2.2412935323383083,
+          "over_four_count": 0
+        },
+        "weight_sum": {
+          "minimum": 0.9999999552965164,
+          "maximum": 1.0000000447034836,
+          "mean": 0.999999999886385
+        }
+      }
+    },
+    "polish_iterations": 0,
+    "change_from_pass_one": "Head/frill rigid-mass lock lowered from Z>0.67 to Z>0.54 after direct visual evidence of frill-to-arm bone heat."
+  },
+  "poses": {
+    "neutral": {
+      "stage": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/stages/41_pose_neutral_headlock.blend",
+      "renders": {
+        "front_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_neutral/front_three_quarter.png",
+        "front": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_neutral/front.png",
+        "side": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_neutral/side.png"
+      },
+      "regions": {
+        "arm_L": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "arm_R": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "head_neck": {
+          "face_count": 2984,
+          "edge_count": 5965,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "leg_L": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "leg_R": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "tail": {
+          "face_count": 834,
+          "edge_count": 1672,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "torso": {
+          "face_count": 2656,
+          "edge_count": 5355,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        }
+      },
+      "threshold_flags": [],
+      "diagnostic_pass": true
+    },
+    "reach_tray_hold": {
+      "stage": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/stages/51_pose_reach_tray_hold_headlock.blend",
+      "renders": {
+        "front_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_reach_tray_hold/front_three_quarter.png",
+        "front": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_reach_tray_hold/front.png",
+        "side": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_reach_tray_hold/side.png"
+      },
+      "regions": {
+        "arm_L": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 0.09938714672746425,
+            "p05": 0.6856921439091148,
+            "median": 1.0,
+            "p95": 2.6663026746455554,
+            "maximum": 5.588987657694462,
+            "collapsed_below_0_10_count": 1,
+            "severe_stretch_above_3_count": 23
+          },
+          "edge_length_ratio": {
+            "minimum": 0.43800757332357887,
+            "p05": 0.8234193492849892,
+            "median": 1.0,
+            "p95": 1.4277188909729541,
+            "maximum": 7.499167805251647,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 30
+          }
+        },
+        "arm_R": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 0.09938710298208764,
+            "p05": 0.6856925433175289,
+            "median": 1.0,
+            "p95": 2.6663017141417695,
+            "maximum": 5.588988340164479,
+            "collapsed_below_0_10_count": 1,
+            "severe_stretch_above_3_count": 23
+          },
+          "edge_length_ratio": {
+            "minimum": 0.438006115581074,
+            "p05": 0.8234187870614226,
+            "median": 1.0,
+            "p95": 1.4277182820005607,
+            "maximum": 7.499167841260955,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 30
+          }
+        },
+        "head_neck": {
+          "face_count": 2984,
+          "edge_count": 5965,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "leg_L": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 0.6273421631720169,
+            "p05": 0.8713646663065225,
+            "median": 1.0,
+            "p95": 1.2129361797186626,
+            "maximum": 3.985708529849734,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 5
+          },
+          "edge_length_ratio": {
+            "minimum": 0.5625107529006904,
+            "p05": 0.9224475577254568,
+            "median": 1.0,
+            "p95": 1.1613794461006728,
+            "maximum": 4.78190965978091,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 13
+          }
+        },
+        "leg_R": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 0.6273418152747496,
+            "p05": 0.8713637132963727,
+            "median": 1.0,
+            "p95": 1.2129362344436556,
+            "maximum": 3.985708769246439,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 5
+          },
+          "edge_length_ratio": {
+            "minimum": 0.5625107529006904,
+            "p05": 0.9224472484914563,
+            "median": 1.0,
+            "p95": 1.161378883140352,
+            "maximum": 4.781910033475331,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 13
+          }
+        },
+        "tail": {
+          "face_count": 834,
+          "edge_count": 1672,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "torso": {
+          "face_count": 2656,
+          "edge_count": 5355,
+          "face_area_ratio": {
+            "minimum": 0.26294818712243256,
+            "p05": 0.5816124637624425,
+            "median": 1.0,
+            "p95": 1.8697156810762408,
+            "maximum": 7.310016765087929,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 80
+          },
+          "edge_length_ratio": {
+            "minimum": 0.3700404866104413,
+            "p05": 0.7351246251028363,
+            "median": 1.0,
+            "p95": 1.398122021016794,
+            "maximum": 9.411752592475612,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 152
+          }
+        }
+      },
+      "threshold_flags": [
+        {
+          "region": "arm_L",
+          "reasons": [
+            "1 faces below 10% area",
+            "23 faces above 3x area",
+            "30 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "arm_R",
+          "reasons": [
+            "1 faces below 10% area",
+            "23 faces above 3x area",
+            "30 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "leg_L",
+          "reasons": [
+            "5 faces above 3x area",
+            "13 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "leg_R",
+          "reasons": [
+            "5 faces above 3x area",
+            "13 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "torso",
+          "reasons": [
+            "80 faces above 3x area",
+            "152 edges above 2.5x length"
+          ]
+        }
+      ],
+      "diagnostic_pass": false
+    },
+    "squat": {
+      "stage": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/stages/61_pose_squat_headlock.blend",
+      "renders": {
+        "front_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_squat/front_three_quarter.png",
+        "front": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_squat/front.png",
+        "side": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_squat/side.png"
+      },
+      "regions": {
+        "arm_L": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 0.641651152080239,
+            "p05": 0.9696086007101772,
+            "median": 1.0,
+            "p95": 1.0039514610870919,
+            "maximum": 1.1374600458697277,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.7328308224594106,
+            "p05": 0.9790123131431839,
+            "median": 1.0,
+            "p95": 1.0148176189321412,
+            "maximum": 1.1610913624911021,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "arm_R": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 0.6416509007812947,
+            "p05": 0.9696093240882134,
+            "median": 1.0,
+            "p95": 1.0039514761991652,
+            "maximum": 1.1374600458697277,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.7328308224594106,
+            "p05": 0.9790145049927926,
+            "median": 1.0,
+            "p95": 1.014817614201789,
+            "maximum": 1.1610913624911021,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "head_neck": {
+          "face_count": 2984,
+          "edge_count": 5965,
+          "face_area_ratio": {
+            "minimum": 0.9999977802933037,
+            "p05": 0.9999993508075483,
+            "median": 1.0,
+            "p95": 1.0000007164651177,
+            "maximum": 1.000002146408903,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.9999976129187559,
+            "p05": 0.9999995086568503,
+            "median": 1.0,
+            "p95": 1.0000005393364142,
+            "maximum": 1.000002300654884,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "leg_L": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 0.538744168062565,
+            "p05": 0.7455487482882073,
+            "median": 1.0000010759582714,
+            "p95": 1.2104109940774834,
+            "maximum": 3.129864647635872,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 1
+          },
+          "edge_length_ratio": {
+            "minimum": 0.5305759408000693,
+            "p05": 0.8517638672784378,
+            "median": 1.000000272963253,
+            "p95": 1.1974556015801325,
+            "maximum": 3.4897153534958174,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 3
+          }
+        },
+        "leg_R": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 0.5387436845373753,
+            "p05": 0.7455490008045714,
+            "median": 1.0000010058000144,
+            "p95": 1.2104109687514693,
+            "maximum": 3.1298648197429184,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 1
+          },
+          "edge_length_ratio": {
+            "minimum": 0.530574790460078,
+            "p05": 0.851763814981859,
+            "median": 1.000000239633902,
+            "p95": 1.197455798852543,
+            "maximum": 3.4897151036994845,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 3
+          }
+        },
+        "tail": {
+          "face_count": 834,
+          "edge_count": 1672,
+          "face_area_ratio": {
+            "minimum": 0.9904644049309378,
+            "p05": 0.9999993436325257,
+            "median": 1.0,
+            "p95": 1.019858932162353,
+            "maximum": 1.0929729075978103,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.9333118795527946,
+            "p05": 0.995329654369266,
+            "median": 1.0,
+            "p95": 1.0099993634489262,
+            "maximum": 1.102302642879994,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "torso": {
+          "face_count": 2656,
+          "edge_count": 5355,
+          "face_area_ratio": {
+            "minimum": 0.07901289881439987,
+            "p05": 0.7736382084794823,
+            "median": 0.9999999438667454,
+            "p95": 1.041953891470259,
+            "maximum": 2.6648329716440395,
+            "collapsed_below_0_10_count": 1,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.15836738347077287,
+            "p05": 0.8791450832551886,
+            "median": 1.0,
+            "p95": 1.0476689112503599,
+            "maximum": 2.777243071647984,
+            "collapsed_below_0_35_count": 19,
+            "severe_stretch_above_2_5_count": 4
+          }
+        }
+      },
+      "threshold_flags": [
+        {
+          "region": "leg_L",
+          "reasons": [
+            "1 faces above 3x area",
+            "3 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "leg_R",
+          "reasons": [
+            "1 faces above 3x area",
+            "3 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "torso",
+          "reasons": [
+            "1 faces below 10% area",
+            "19 edges below 0.35x length",
+            "4 edges above 2.5x length"
+          ]
+        }
+      ],
+      "diagnostic_pass": false
+    },
+    "walk_extreme": {
+      "stage": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/stages/71_pose_walk_extreme_headlock.blend",
+      "renders": {
+        "front_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_walk_extreme/front_three_quarter.png",
+        "front": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_walk_extreme/front.png",
+        "side": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_walk_extreme/side.png"
+      },
+      "regions": {
+        "arm_L": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 0.32669143911717374,
+            "p05": 0.6387261525407406,
+            "median": 1.0,
+            "p95": 2.1396510947051244,
+            "maximum": 6.34017873237907,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 24
+          },
+          "edge_length_ratio": {
+            "minimum": 0.4290873541268684,
+            "p05": 0.8087898655695395,
+            "median": 1.0,
+            "p95": 1.2352223187984082,
+            "maximum": 7.300547845488232,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 30
+          }
+        },
+        "arm_R": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 0.20061725565821711,
+            "p05": 0.6133946780556765,
+            "median": 1.0,
+            "p95": 1.843582809551074,
+            "maximum": 3.506359820535896,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 8
+          },
+          "edge_length_ratio": {
+            "minimum": 0.20502001461962335,
+            "p05": 0.8270581967913612,
+            "median": 1.0,
+            "p95": 1.2900601686129296,
+            "maximum": 4.725137445038684,
+            "collapsed_below_0_35_count": 6,
+            "severe_stretch_above_2_5_count": 22
+          }
+        },
+        "head_neck": {
+          "face_count": 2984,
+          "edge_count": 5965,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "leg_L": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 0.45011333385192137,
+            "p05": 0.7442028323324845,
+            "median": 1.0000000398615727,
+            "p95": 1.221910157848584,
+            "maximum": 3.4481708319022473,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 2
+          },
+          "edge_length_ratio": {
+            "minimum": 0.5242424793159547,
+            "p05": 0.8083311522924537,
+            "median": 1.000000107828662,
+            "p95": 1.3183840962730518,
+            "maximum": 4.24059105783279,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 10
+          }
+        },
+        "leg_R": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 0.052804963003994794,
+            "p05": 0.6021118678792379,
+            "median": 0.9973812652066238,
+            "p95": 1.1940883482437075,
+            "maximum": 3.250269478392653,
+            "collapsed_below_0_10_count": 4,
+            "severe_stretch_above_3_count": 1
+          },
+          "edge_length_ratio": {
+            "minimum": 0.11478827500370968,
+            "p05": 0.7167479497134679,
+            "median": 0.9999997519039894,
+            "p95": 1.1449217480809963,
+            "maximum": 3.744105763282931,
+            "collapsed_below_0_35_count": 2,
+            "severe_stretch_above_2_5_count": 11
+          }
+        },
+        "tail": {
+          "face_count": 834,
+          "edge_count": 1672,
+          "face_area_ratio": {
+            "minimum": 0.8891090753022488,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0280429624165972,
+            "maximum": 1.1423406935920888,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.8366781469184509,
+            "p05": 0.994826203660071,
+            "median": 1.0,
+            "p95": 1.018989072491511,
+            "maximum": 1.2128890390277922,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "torso": {
+          "face_count": 2656,
+          "edge_count": 5355,
+          "face_area_ratio": {
+            "minimum": 0.07446702524083529,
+            "p05": 0.5415990667842765,
+            "median": 1.0,
+            "p95": 1.6244436627653016,
+            "maximum": 6.928922105883483,
+            "collapsed_below_0_10_count": 2,
+            "severe_stretch_above_3_count": 32
+          },
+          "edge_length_ratio": {
+            "minimum": 0.1710208946142726,
+            "p05": 0.7485013466844126,
+            "median": 1.0,
+            "p95": 1.4891168116379214,
+            "maximum": 7.47003304636211,
+            "collapsed_below_0_35_count": 12,
+            "severe_stretch_above_2_5_count": 101
+          }
+        }
+      },
+      "threshold_flags": [
+        {
+          "region": "arm_L",
+          "reasons": [
+            "24 faces above 3x area",
+            "30 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "arm_R",
+          "reasons": [
+            "8 faces above 3x area",
+            "6 edges below 0.35x length",
+            "22 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "leg_L",
+          "reasons": [
+            "2 faces above 3x area",
+            "10 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "leg_R",
+          "reasons": [
+            "4 faces below 10% area",
+            "1 faces above 3x area",
+            "2 edges below 0.35x length",
+            "11 edges above 2.5x length"
+          ]
+        },
+        {
+          "region": "torso",
+          "reasons": [
+            "2 faces below 10% area",
+            "32 faces above 3x area",
+            "12 edges below 0.35x length",
+            "101 edges above 2.5x length"
+          ]
+        }
+      ],
+      "diagnostic_pass": false
+    },
+    "tail_bend": {
+      "stage": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/stages/81_pose_tail_bend_headlock.blend",
+      "renders": {
+        "front_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_tail_bend/front_three_quarter.png",
+        "front": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_tail_bend/front.png",
+        "side": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/deformation_rig_probe/r003-confirmation/renders/headlock_tail_bend/side.png"
+      },
+      "regions": {
+        "arm_L": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "arm_R": {
+          "face_count": 555,
+          "edge_count": 1102,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "head_neck": {
+          "face_count": 2984,
+          "edge_count": 5965,
+          "face_area_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 1.0,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.0,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "leg_L": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 0.6154929231154491,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.654621092339503,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.7353959815574578,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.316178584120097,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "leg_R": {
+          "face_count": 1232,
+          "edge_count": 2450,
+          "face_area_ratio": {
+            "minimum": 0.8026550708336107,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 2.0425571934563598,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.9263937537406909,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 1.8644216992492533,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "tail": {
+          "face_count": 834,
+          "edge_count": 1672,
+          "face_area_ratio": {
+            "minimum": 0.5324083149269816,
+            "p05": 0.6887680917605497,
+            "median": 0.9484143566930883,
+            "p95": 1.2676398288706814,
+            "maximum": 1.7954810574991313,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.4707200319331772,
+            "p05": 0.7541353690255177,
+            "median": 0.9898662241963213,
+            "p95": 1.1873877830884871,
+            "maximum": 1.6792799766010635,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        },
+        "torso": {
+          "face_count": 2656,
+          "edge_count": 5355,
+          "face_area_ratio": {
+            "minimum": 0.5456242619931286,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 2.1563710743017626,
+            "collapsed_below_0_10_count": 0,
+            "severe_stretch_above_3_count": 0
+          },
+          "edge_length_ratio": {
+            "minimum": 0.4550889880029308,
+            "p05": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "maximum": 2.3122182243639506,
+            "collapsed_below_0_35_count": 0,
+            "severe_stretch_above_2_5_count": 0
+          }
+        }
+      },
+      "threshold_flags": [],
+      "diagnostic_pass": true
+    }
+  },
+  "verdict": {
+    "r003_confirmation_pass": false,
+    "failing_poses": [
+      "reach_tray_hold",
+      "squat",
+      "walk_extreme"
+    ],
+    "topology_approval": false,
+    "rig_approval": false,
+    "scope": "Canonical R003 confirmation after removing obvious lower-frill arm-weight contamination; no weight polish iterations."
+  }
+}

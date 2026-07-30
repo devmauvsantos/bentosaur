@@ -1,0 +1,571 @@
+{
+  "mesh_object": "EVAL_HD__tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+  "polygon_count": 1974918,
+  "source_bounds": {
+    "minimum": [
+      -0.43349727988243103,
+      -0.3286252021789551,
+      -0.48963358998298645
+    ],
+    "maximum": [
+      0.4336620271205902,
+      0.3286655843257904,
+      0.49007636308670044
+    ],
+    "dimensions": [
+      0.8671593070030212,
+      0.6572907865047455,
+      0.9797099530696869
+    ]
+  },
+  "selected_polygons_total": 511565,
+  "selected_polygon_ratio": 0.25903100786969385,
+  "regions": [
+    {
+      "group": "belly_patch",
+      "id": "belly_patch",
+      "selected_polygons": 115661,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.734899,
+          0.310293,
+          0.157161
+        ],
+        "maximum": [
+          0.912393,
+          0.689561,
+          0.453426
+        ]
+      }
+    },
+    {
+      "group": "primary_horns",
+      "id": "brow_horn_left",
+      "selected_polygons": 41122,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.719484,
+          0.585954,
+          0.654994
+        ],
+        "maximum": [
+          0.856573,
+          0.744334,
+          0.819676
+        ]
+      }
+    },
+    {
+      "group": "primary_horns",
+      "id": "brow_horn_right",
+      "selected_polygons": 40836,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.71935,
+          0.255324,
+          0.655009
+        ],
+        "maximum": [
+          0.856557,
+          0.41427,
+          0.819655
+        ]
+      }
+    },
+    {
+      "group": "primary_horns",
+      "id": "nose_horn",
+      "selected_polygons": 24582,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.897011,
+          0.440496,
+          0.519663
+        ],
+        "maximum": [
+          0.999992,
+          0.559261,
+          0.622938
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_top",
+      "selected_polygons": 18301,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.504079,
+          0.435219,
+          0.949916
+        ],
+        "maximum": [
+          0.609868,
+          0.564909,
+          0.999991
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_upper_left",
+      "selected_polygons": 18487,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.46826,
+          0.678155,
+          0.889827
+        ],
+        "maximum": [
+          0.573403,
+          0.794557,
+          0.946145
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_upper_right",
+      "selected_polygons": 18271,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.468348,
+          0.205465,
+          0.890135
+        ],
+        "maximum": [
+          0.573469,
+          0.322008,
+          0.946054
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_mid_upper_left",
+      "selected_polygons": 20412,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.4416,
+          0.819108,
+          0.782904
+        ],
+        "maximum": [
+          0.542419,
+          0.921555,
+          0.85743
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_mid_upper_right",
+      "selected_polygons": 20203,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.441617,
+          0.07839,
+          0.782985
+        ],
+        "maximum": [
+          0.54241,
+          0.181481,
+          0.857295
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_mid_lower_left",
+      "selected_polygons": 16922,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.437304,
+          0.912485,
+          0.674991
+        ],
+        "maximum": [
+          0.526044,
+          0.989824,
+          0.762054
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_mid_lower_right",
+      "selected_polygons": 17179,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.437202,
+          0.010072,
+          0.675396
+        ],
+        "maximum": [
+          0.525962,
+          0.088153,
+          0.761894
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_lower_left",
+      "selected_polygons": 17490,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.442594,
+          0.92748,
+          0.579229
+        ],
+        "maximum": [
+          0.524446,
+          0.999994,
+          0.671168
+        ]
+      }
+    },
+    {
+      "group": "frill_knobs",
+      "id": "frill_lower_right",
+      "selected_polygons": 17724,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.442632,
+          9e-06,
+          0.579185
+        ],
+        "maximum": [
+          0.524505,
+          0.072349,
+          0.671445
+        ]
+      }
+    },
+    {
+      "group": "dorsal_tail_knobs",
+      "id": "dorsal_knob_01",
+      "selected_polygons": 14152,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.351381,
+          0.451216,
+          0.257374
+        ],
+        "maximum": [
+          0.408769,
+          0.548366,
+          0.313094
+        ]
+      }
+    },
+    {
+      "group": "dorsal_tail_knobs",
+      "id": "dorsal_knob_02",
+      "selected_polygons": 14385,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.287256,
+          0.450814,
+          0.207833
+        ],
+        "maximum": [
+          0.351319,
+          0.549102,
+          0.257203
+        ]
+      }
+    },
+    {
+      "group": "dorsal_tail_knobs",
+      "id": "dorsal_knob_03",
+      "selected_polygons": 12625,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.206606,
+          0.453298,
+          0.167209
+        ],
+        "maximum": [
+          0.27316,
+          0.546666,
+          0.204507
+        ]
+      }
+    },
+    {
+      "group": "dorsal_tail_knobs",
+      "id": "dorsal_knob_04",
+      "selected_polygons": 9618,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.118694,
+          0.458428,
+          0.138067
+        ],
+        "maximum": [
+          0.180987,
+          0.541099,
+          0.165272
+        ]
+      }
+    },
+    {
+      "group": "dorsal_tail_knobs",
+      "id": "dorsal_knob_05",
+      "selected_polygons": 7945,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.038659,
+          0.463187,
+          0.119699
+        ],
+        "maximum": [
+          0.095312,
+          0.53623,
+          0.142445
+        ]
+      }
+    },
+    {
+      "group": "hand_claws",
+      "id": "hand_claw_left_inner",
+      "selected_polygons": 4010,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.715002,
+          0.83448,
+          0.225571
+        ],
+        "maximum": [
+          0.76894,
+          0.873207,
+          0.264579
+        ]
+      }
+    },
+    {
+      "group": "hand_claws",
+      "id": "hand_claw_left_middle",
+      "selected_polygons": 6242,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.724542,
+          0.884989,
+          0.220621
+        ],
+        "maximum": [
+          0.77022,
+          0.935931,
+          0.263778
+        ]
+      }
+    },
+    {
+      "group": "hand_claws",
+      "id": "hand_claw_left_outer",
+      "selected_polygons": 7425,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.707221,
+          0.935771,
+          0.227329
+        ],
+        "maximum": [
+          0.756714,
+          0.98275,
+          0.265679
+        ]
+      }
+    },
+    {
+      "group": "hand_claws",
+      "id": "hand_claw_right_inner",
+      "selected_polygons": 4012,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.715162,
+          0.126606,
+          0.226216
+        ],
+        "maximum": [
+          0.768481,
+          0.165235,
+          0.264572
+        ]
+      }
+    },
+    {
+      "group": "hand_claws",
+      "id": "hand_claw_right_middle",
+      "selected_polygons": 6472,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.724271,
+          0.064363,
+          0.220402
+        ],
+        "maximum": [
+          0.770691,
+          0.114982,
+          0.263801
+        ]
+      }
+    },
+    {
+      "group": "hand_claws",
+      "id": "hand_claw_right_outer",
+      "selected_polygons": 7488,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.707245,
+          0.017043,
+          0.227432
+        ],
+        "maximum": [
+          0.756744,
+          0.064094,
+          0.265908
+        ]
+      }
+    },
+    {
+      "group": "foot_claws",
+      "id": "foot_claw_left_inner",
+      "selected_polygons": 6697,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.69926,
+          0.596948,
+          0.002897
+        ],
+        "maximum": [
+          0.729686,
+          0.664909,
+          0.051085
+        ]
+      }
+    },
+    {
+      "group": "foot_claws",
+      "id": "foot_claw_left_middle",
+      "selected_polygons": 6611,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.694933,
+          0.678181,
+          0.001384
+        ],
+        "maximum": [
+          0.734348,
+          0.746466,
+          0.04888
+        ]
+      }
+    },
+    {
+      "group": "foot_claws",
+      "id": "foot_claw_left_outer",
+      "selected_polygons": 1785,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.672774,
+          0.767331,
+          0.00863
+        ],
+        "maximum": [
+          0.704157,
+          0.790466,
+          0.033386
+        ]
+      }
+    },
+    {
+      "group": "foot_claws",
+      "id": "foot_claw_right_inner",
+      "selected_polygons": 6689,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.699288,
+          0.335187,
+          0.002981
+        ],
+        "maximum": [
+          0.729548,
+          0.402936,
+          0.051016
+        ]
+      }
+    },
+    {
+      "group": "foot_claws",
+      "id": "foot_claw_right_middle",
+      "selected_polygons": 6482,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.694595,
+          0.253929,
+          0.001371
+        ],
+        "maximum": [
+          0.734404,
+          0.321591,
+          0.04899
+        ]
+      }
+    },
+    {
+      "group": "foot_claws",
+      "id": "foot_claw_right_outer",
+      "selected_polygons": 1740,
+      "selected_normalized_bounds": {
+        "minimum": [
+          0.672857,
+          0.209375,
+          0.00865
+        ],
+        "maximum": [
+          0.704074,
+          0.232604,
+          0.033042
+        ]
+      }
+    }
+  ],
+  "debug_materials": {
+    "belly_patch": {
+      "color": "#F3D38B",
+      "material_index": 1
+    },
+    "primary_horns": {
+      "color": "#FF9C62",
+      "material_index": 2
+    },
+    "frill_knobs": {
+      "color": "#FFE86E",
+      "material_index": 3
+    },
+    "dorsal_tail_knobs": {
+      "color": "#C7F36B",
+      "material_index": 4
+    },
+    "hand_claws": {
+      "color": "#FF8EC7",
+      "material_index": 5
+    },
+    "foot_claws": {
+      "color": "#77DDF5",
+      "material_index": 6
+    }
+  },
+  "renderable_classifier_geometry_created": false,
+  "profile": "/Users/mauvsantos/Workspace/games/Bentosaur/tools/blender/config/bentosaur_h31_detailed_neutral_semantic_zones_v1.json",
+  "renders": {
+    "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/semantic-zone-diagnostic-v1/renders/front.png",
+    "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/semantic-zone-diagnostic-v1/renders/left.png",
+    "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/semantic-zone-diagnostic-v1/renders/back.png",
+    "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/semantic-zone-diagnostic-v1/renders/right.png",
+    "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/semantic-zone-diagnostic-v1/renders/three_quarter_left.png",
+    "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/semantic-zone-diagnostic-v1/renders/three_quarter_right.png"
+  }
+}

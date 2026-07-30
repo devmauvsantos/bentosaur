@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "bentosaur-production-master-v1",
+  "status": "parameterized_scaffold_requires_candidate_landmark_fit",
+  "coordinate_contract": {
+    "front_axis": "+X",
+    "character_left_axis": "+Y",
+    "up_axis": "+Z",
+    "normalization": "source_bounds",
+    "expected_source_height_range": [
+      0.8,
+      1.2
+    ]
+  },
+  "rebuild": {
+    "default_mode": "voxel_proxy",
+    "voxel_divisions_per_character_height": 300,
+    "smooth_iterations": 2,
+    "smooth_factor": 0.18,
+    "decimate_target_triangles": 250000,
+    "weld_distance_fraction_of_height": 0.00001,
+    "warning": "This produces a deterministic look-development proxy, not joint-loop retopology for skinning."
+  },
+  "palette": {
+    "body_sage": "#657A68",
+    "feature_cream": "#E9D0A5",
+    "accent_coral": "#C98D66",
+    "face_ink": "#1B110C"
+  },
+  "materials": {
+    "roughness": 0.82,
+    "metallic": 0.0,
+    "specular_ior_level": 0.18
+  },
+  "landmarks_normalized_to_source_bounds": {
+    "mouth_center": [
+      0.95,
+      0.5,
+      0.505
+    ],
+    "eye_left_center": [
+      0.97,
+      0.64,
+      0.61
+    ],
+    "eye_right_center": [
+      0.97,
+      0.36,
+      0.61
+    ],
+    "cheek_left_center": [
+      0.965,
+      0.73,
+      0.52
+    ],
+    "cheek_right_center": [
+      0.965,
+      0.27,
+      0.52
+    ]
+  },
+  "eyes": {
+    "half_depth_fraction_of_height": 0.012,
+    "half_width_fraction_of_height": 0.038,
+    "half_height_fraction_of_height": 0.052,
+    "surface_offset_fraction_of_height": 0.003,
+    "segments": 40,
+    "rings": 24,
+    "catchlights": false
+  },
+  "cheeks": {
+    "half_depth_fraction_of_height": 0.006,
+    "half_width_fraction_of_height": 0.034,
+    "half_height_fraction_of_height": 0.018,
+    "surface_offset_fraction_of_height": 0.002,
+    "segments": 32,
+    "rings": 16
+  },
+  "mouth": {
+    "segments": 64,
+    "surface_offset_fraction_of_height": 0.001,
+    "neutral_half_width_fraction_of_height": 0.066,
+    "neutral_half_height_fraction_of_height": 0.006,
+    "open_half_width_fraction_of_height": 0.078,
+    "open_half_height_fraction_of_height": 0.045,
+    "open_corner_lift_fraction_of_height": 0.009,
+    "cavity_depth_fraction_of_height": 0.085,
+    "lip_width_fraction_of_height": 0.003,
+    "cutter_front_overlap_fraction_of_height": 0.018,
+    "muzzle_patch_half_depth_fraction_of_height": 0.006,
+    "muzzle_patch_half_width_fraction_of_height": 0.112,
+    "muzzle_patch_half_height_fraction_of_height": 0.043,
+    "tongue_half_depth_fraction_of_height": 0.018,
+    "tongue_half_width_fraction_of_height": 0.032,
+    "tongue_half_height_fraction_of_height": 0.01,
+    "teeth": false,
+    "shape_key": "EXPR_DelightedOpen"
+  },
+  "render": {
+    "world_color": "#26303A",
+    "world_strength": 0.32,
+    "ground_color": "#3A4145",
+    "orthographic_fill": 0.88,
+    "views": [
+      "front",
+      "left",
+      "back",
+      "right",
+      "three_quarter_left",
+      "three_quarter_right"
+    ]
+  },
+  "approval": {
+    "assistant_may_approve": false,
+    "visual_approval_required_before_rigging": true,
+    "rigging_allowed": false,
+    "animation_allowed": false
+  }
+}

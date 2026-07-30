@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "gate_id": "bentosaur_visual_gate_03_hd_geometry",
+  "policy_version": "1.0.0",
+  "candidate": {
+    "id": "bentosaur_vg03_h31_detailed_neutral",
+    "source_role": "candidate",
+    "expected_mouth": "closed",
+    "front_axis_after_import": "+X"
+  },
+  "source": {
+    "provider": "tripo",
+    "format": "glb",
+    "absolute_path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+    "sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+    "bytes": 47399240,
+    "locked_collection": "00_SOURCE_LOCKED_READ_ONLY",
+    "source_modified": false
+  },
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "samples_requested": 64,
+    "material": "neutral clay override",
+    "six_views": {
+      "front": "renders/clay/six-view/front.png",
+      "left": "renders/clay/six-view/left.png",
+      "back": "renders/clay/six-view/back.png",
+      "right": "renders/clay/six-view/right.png",
+      "three_quarter_left": "renders/clay/six-view/three_quarter_left.png",
+      "three_quarter_right": "renders/clay/six-view/three_quarter_right.png"
+    },
+    "closeups": {
+      "eyes": "renders/clay/closeups/eyes.png",
+      "muzzle_and_neutral_mouth": "renders/clay/closeups/muzzle_and_neutral_mouth.png",
+      "neutral_mouth_three_quarter": "renders/clay/closeups/neutral_mouth_three_quarter.png",
+      "primary_horns": "renders/clay/closeups/primary_horns.png",
+      "frill_and_knobs": "renders/clay/closeups/frill_and_knobs.png",
+      "hands_and_fingers": "renders/clay/closeups/hands_and_fingers.png",
+      "feet_and_toes": "renders/clay/closeups/feet_and_toes.png",
+      "tail_side": "renders/clay/closeups/tail_side.png"
+    },
+    "boards": {
+      "six_view": "boards/vg03_hd_clay_six_view.png",
+      "feature_closeups": "boards/vg03_hd_clay_feature_closeups.png"
+    }
+  },
+  "artifacts": {
+    "topology_metrics": "topology-metrics.json",
+    "gate_policy": "gate-policy.json",
+    "gate_decision": "gate-decision.json",
+    "review_template": "review-template.json",
+    "supplied_review": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-03/h31-detailed-neutral/evaluation/review-completed-codex-technical.json",
+    "readme": "README.md",
+    "blend": "bentosaur_vg03_h31_detailed_neutral_source_locked_evaluation.blend"
+  },
+  "decision": {
+    "state": "CONTINUE_TO_PRODUCTION_REBUILD",
+    "reason": "Machine and visual thresholds passed; retopology, semantic materials, and production mouth construction may begin.",
+    "automatic_continuation_allowed": true,
+    "failed_machine_checks": [],
+    "authorized_if_passed": [
+      "retopology",
+      "semantic_material_authoring",
+      "production_eye_construction",
+      "production_mouth_cavity_and_tongue_construction",
+      "facial_deformation_loop_construction"
+    ],
+    "still_blocked_even_if_passed": [
+      "final_appearance_approval",
+      "rigging",
+      "skinning",
+      "animation",
+      "game_integration"
+    ]
+  },
+  "blender_version": "5.1.2",
+  "review_snapshot": {
+    "schema_version": 1,
+    "candidate_id": "bentosaur_vg03_h31_detailed_neutral",
+    "reviewer": "Codex technical geometry routing review; not user final appearance approval",
+    "expected_mouth": "closed",
+    "scores": {
+      "overall_silhouette": 3,
+      "eye_forms": 2,
+      "muzzle_and_cheeks": 2,
+      "neutral_closed_mouth_seam": 2,
+      "primary_horns": 2,
+      "frill_and_frill_knobs": 3,
+      "hands_and_fingers": 3,
+      "feet_and_toes": 3,
+      "tail": 3
+    },
+    "blockers": {
+      "doubled_or_ghost_eye_geometry": false,
+      "fused_or_malformed_primary_horns": false,
+      "lumpy_or_melted_frill_knobs": false,
+      "fused_or_missing_digits": false,
+      "broken_tail_silhouette": false,
+      "severe_left_right_asymmetry": false,
+      "unintended_detached_large_parts": false,
+      "malformed_or_collapsed_neutral_mouth_seam": false
+    },
+    "notes": {
+      "routing_outcome": "Suitable as a high-density sculpt source for production rebuild.",
+      "eyes": "Clean semantic oval pads exist without ghost doubles, but authored eye geometry and controlled catchlights must replace them.",
+      "mouth": "The closed seam is readable and not collapsed, but it is angular. Rebuild the muzzle, lip loops, mouth bag, and tongue during retopology; do not preserve this seam as final topology.",
+      "horns": "Primary horn volumes are intact and separated. Mild left-right shape asymmetry should be corrected during retopology.",
+      "surface": "Broad forms are substantially cleaner than P1. Minor generated surface rippling should be smoothed during the production rebuild.",
+      "approval_scope": "This passes only the source-sculpt routing gate. Final materials, appearance, rigging, and animation remain unapproved."
+    }
+  }
+}

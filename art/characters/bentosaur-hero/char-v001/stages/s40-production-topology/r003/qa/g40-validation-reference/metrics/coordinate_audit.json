@@ -1,0 +1,106 @@
+{
+  "declared_contract": {
+    "front": "-Y",
+    "character_left": "+X",
+    "up": "+Z"
+  },
+  "bounds": {
+    "minimum": [
+      -0.33513161540031433,
+      -0.44193756580352783,
+      0.0
+    ],
+    "maximum": [
+      0.33513161540031433,
+      0.4384065270423889,
+      0.9995938539505005
+    ],
+    "dimensions": [
+      0.6702632308006287,
+      0.8803440928459167,
+      0.9995938539505005
+    ],
+    "center": [
+      0.0,
+      -0.001765519380569458,
+      0.49979692697525024
+    ]
+  },
+  "floor": {
+    "projection": 0.0,
+    "expected": 0.0,
+    "absolute_error": 0.0,
+    "pass": true
+  },
+  "mirror": {
+    "axis": "+X",
+    "plane": 0.0,
+    "tolerance": 1e-06,
+    "within_tolerance_ratio": 0.9999004975124378,
+    "p95": 6.664001972467304e-08,
+    "maximum": 1.0116600606124848e-06,
+    "pass": true
+  },
+  "bounds_checks": [
+    {
+      "axis": "X",
+      "actual_min": -0.33513161540031433,
+      "actual_max": 0.33513161540031433,
+      "expected": {
+        "min": -0.3351316154,
+        "max": 0.3351316154,
+        "tolerance": 2e-06
+      },
+      "pass": true
+    },
+    {
+      "axis": "Y",
+      "actual_min": -0.44193756580352783,
+      "actual_max": 0.4384065270423889,
+      "expected": {
+        "min": -0.4419375658,
+        "max": 0.438406527,
+        "tolerance": 2e-06
+      },
+      "pass": true
+    },
+    {
+      "axis": "Z",
+      "actual_min": 0.0,
+      "actual_max": 0.9995938539505005,
+      "expected": {
+        "min": 0.0,
+        "max": 0.999593854,
+        "tolerance": 2e-06
+      },
+      "pass": true
+    }
+  ],
+  "orientation_probes": [
+    {
+      "name": "tail_projects_toward_back_positive_y",
+      "count": 882,
+      "projection_axis": "+Y",
+      "minimum": 0.08107873797416687,
+      "mean": 0.2611787789955296,
+      "maximum": 0.4384065270423889,
+      "expected_mean": {
+        "min": 0.15
+      },
+      "pass": true
+    },
+    {
+      "name": "head_projects_toward_front_negative_y",
+      "count": 2294,
+      "projection_axis": "-Y",
+      "minimum": 0.08043478429317474,
+      "mean": 0.23033836716177053,
+      "maximum": 0.44193756580352783,
+      "expected_mean": {
+        "min": 0.15
+      },
+      "pass": true
+    }
+  ],
+  "contract_pass": true
+}

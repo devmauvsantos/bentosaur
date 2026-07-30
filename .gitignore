@@ -1,0 +1,30 @@
+# Local operating-system files
+.DS_Store
+
+# Secrets and local vendor state
+.env
+.env.*
+!.env.example
+.tripo/
+
+# Hashed working/experiment archive; preserve locally and back up separately
+.tmp/
+
+# Blender automatic backup files (numbered production checkpoints are *.blend)
+*.blend1
+*.blend2
+*.blend@
+
+# Godot generated import/cache data
+.godot/
+
+# Local builds and exports
+build/
+builds/
+dist/
+exports/
+
+# Common tool caches
+__pycache__/
+*.py[cod]
+node_modules/

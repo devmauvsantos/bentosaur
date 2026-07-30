@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0.0",
+  "id": "anatomy:dinosaur.upright_biped.v1",
+  "status": "canonical",
+  "scope": [
+    "hero",
+    "customer",
+    "street_pedestrian",
+    "grounded_pterosaur"
+  ],
+  "core_rule": "Bentosaur dinosaurs are cute upright bipeds. They stand, walk, carry, cook, gesture, and emote on two weight-bearing hind legs. Their forelimbs behave as free arms or hands and never become a second pair of walking legs.",
+  "full_body_contract": {
+    "posture": "upright or gently forward-leaning from the hips",
+    "weight_bearing_limbs": 2,
+    "weight_bearing_limb_type": "hind_legs",
+    "forelimb_role": "free_short_arms_or_hands",
+    "tail_role": "visible_counterbalance_and_species_silhouette",
+    "spine_read": "head_above_ribcage_above_pelvis",
+    "ground_contacts": [
+      "left_hind_foot",
+      "right_hind_foot"
+    ],
+    "required_reads": [
+      "two distinct hind legs or an unambiguous biped stride",
+      "both forearms held above the ground",
+      "pelvis and torso elevated above the feet",
+      "tail projecting behind or to one side as counterbalance",
+      "species-specific head silhouette"
+    ]
+  },
+  "proportion_guides": {
+    "tone": "cute and compact but not crawling, pet-like, or quadrupedal",
+    "head_and_frill_height_fraction": [
+      0.42,
+      0.58
+    ],
+    "hind_leg_height_fraction": [
+      0.18,
+      0.3
+    ],
+    "tail_visible_length_fraction_of_body": [
+      0.3,
+      0.65
+    ],
+    "forearms": "small but clearly articulated as arms; capable of holding a tray, umbrella, ingredient, cup, book, or cheek",
+    "feet": "broad enough to sell balance and readable at 64 source pixels"
+  },
+  "pose_classes": {
+    "neutral_full_body": "upright on two planted hind feet, arms relaxed or gesturing, tail balancing the silhouette",
+    "service_walk": "alternating hind-leg stride while both arms carry a bento or prop; no forelimb ground contact",
+    "counter_host": "upright body behind the counter; hands may support cheeks or interact with food",
+    "portrait_or_emote": "head, frill, shoulders, and hands may fill the crop; the legs can be omitted because this is not a locomotion asset"
+  },
+  "asset_separation_contract": {
+    "generation_rule": "Generate and maintain every character master as an isolated prop-free, clothing-free character. Permanent body colors and facial surfaces belong to the character. Accessories, scenery, and VFX are separate assets and are deferred for the first production proof.",
+    "current_scope": {
+      "character_is_unclothed": true,
+      "clothing_system": false,
+      "clothing_variants": false,
+      "clothing_sockets": false,
+      "accessories": "deferred"
+    },
+    "character_master_owns": [
+      "head",
+      "frill",
+      "species-defining frill rim knobs",
+      "horns",
+      "muzzle",
+      "cheeks",
+      "torso",
+      "arms",
+      "hands",
+      "legs",
+      "feet",
+      "tail",
+      "base palette material slots",
+      "armature and weights",
+      "replaceable face system",
+      "identity corrective shapes",
+      "prop-free animations and interaction poses",
+      "attachment sockets"
+    ],
+    "character_master_excludes": [
+      "umbrella",
+      "tray",
+      "bento",
+      "bowl",
+      "cup",
+      "utensils",
+      "book",
+      "clothing",
+      "accessories",
+      "counter",
+      "floor",
+      "background",
+      "shadow",
+      "weather",
+      "VFX"
+    ],
+    "required_sockets": [
+      "socket_hand_l",
+      "socket_hand_r",
+      "socket_tray",
+      "socket_mouth_bite",
+      "socket_head_hat",
+      "socket_back",
+      "socket_umbrella"
+    ],
+    "assembly": {
+      "fields": [
+        "character_master_id",
+        "palette_skin_id",
+        "accessory_ids",
+        "held_prop_id",
+        "action_id"
+      ],
+      "boundary_test": "If removing an element changes species identity or bare neutral anatomy, it belongs to the character master. If it can be swapped between compatible customers, it is a prop or accessory."
+    }
+  },
+  "forbidden": [
+    "quadruped stance",
+    "four weight-bearing legs",
+    "forefeet or knuckles touching the ground",
+    "horizontal dog-like or cat-like torso",
+    "crawling baby-animal posture",
+    "forelimbs rendered as a second pair of feet",
+    "tail omitted from a side or three-quarter full-body sprite",
+    "anatomy changing between animation frames"
+  ],
+  "references": [
+    {
+      "path": "art/references/bentosaur-biped-anatomy-reference.png",
+      "usage": "Upright biped body plan, two-leg service walk, free forearms, and tail counterbalance only; do not copy its background or tray."
+    },
+    {
+      "path": "art/references/bentosaur-front-face-reference.png",
+      "usage": "Front-facing Triceratops frill, horn placement, hands, and delighted expression only."
+    },
+    {
+      "path": "art/references/bentosaur-character-reference.png",
+      "usage": "Bentosaur sage, cream, and coral identity; outline, shading, and cozy pixel-art treatment."
+    }
+  ],
+  "prompt_lock": {
+    "positive": [
+      "upright bipedal dinosaur",
+      "standing on exactly two weight-bearing hind legs",
+      "two short free forearms used as hands",
+      "long visible tail used as counterbalance",
+      "elevated torso",
+      "anthropomorphic service posture",
+      "isolated prop-free character with empty hands"
+    ],
+    "negative": [
+      "not quadrupedal",
+      "not on all fours",
+      "no forelimb ground contact",
+      "no dog-like body",
+      "no four walking legs",
+      "no props, clothing, accessories, platform, or scenery"
+    ]
+  },
+  "semantic_qa": {
+    "automatic_reject_if": [
+      "more or fewer than two weight-bearing legs",
+      "a forelimb touches the ground",
+      "the back reads horizontal in a neutral or walk pose",
+      "the tail is missing in a side or three-quarter full-body view",
+      "the body plan cannot carry a tray with both arms while walking",
+      "an animation changes from biped to quadruped"
+    ],
+    "human_review_question": "Could this dinosaur walk into the stall carrying a bento with both hands without changing its anatomy?"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "state": "blender_complete",
+  "diagnostic_only": true,
+  "detail": {
+    "report": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/reports/validation_report.json",
+    "diagnostic_pass": false,
+    "failing_poses": [
+      "reach_tray_hold",
+      "squat",
+      "walk_extreme"
+    ]
+  }
+}

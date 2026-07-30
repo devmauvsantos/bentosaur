@@ -1,0 +1,97 @@
+{
+  "source_glb": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/rig/tripo-out/bentosaur-p1-text-test-01-rig-84a223a7/model.glb",
+  "mesh_object_count": 2,
+  "armature_count": 1,
+  "armatures": [
+    {
+      "name": "Armature",
+      "bone_count": 32,
+      "bones": [
+        "tripo::Root",
+        "tripo::Spine_0",
+        "tripo::Head_0",
+        "tripo::1_Right_Limb_0",
+        "tripo::1_Right_Limb_1",
+        "tripo::1_Right_Limb_2",
+        "tripo::1_Right_Limb_3",
+        "tripo::0_Left_Limb_0",
+        "tripo::0_Left_Limb_1",
+        "tripo::0_Left_Limb_2",
+        "tripo::0_Left_Limb_3",
+        "bone_11",
+        "tripo::Head_1",
+        "tripo::Head_2",
+        "bone_14",
+        "tripo::Head_3",
+        "tripo::Head_4",
+        "bone_17",
+        "bone_18",
+        "bone_19",
+        "tripo::1_Left_Limb_0",
+        "tripo::1_Left_Limb_1",
+        "tripo::1_Left_Limb_2",
+        "tripo::1_Left_Limb_3",
+        "tripo::0_Right_Limb_0",
+        "tripo::0_Right_Limb_1",
+        "tripo::0_Right_Limb_2",
+        "tripo::0_Right_Limb_3",
+        "bone_28",
+        "tripo::Tail_0",
+        "tripo::Tail_1",
+        "tripo::Tail_2"
+      ]
+    }
+  ],
+  "actions": [],
+  "totals": {
+    "vertices": 2482,
+    "polygons": 4906,
+    "triangles": 4906
+  },
+  "bounds": {
+    "minimum": [
+      -0.9510578513145447,
+      -0.9999999403953552,
+      -1.0
+    ],
+    "maximum": [
+      0.9510578513145447,
+      0.9999999403953552,
+      1.0
+    ],
+    "dimensions": [
+      1.9021157026290894,
+      1.9999998807907104,
+      2.0
+    ]
+  },
+  "objects": [
+    {
+      "name": "tripo_node_7b1cef58-e249-4c5e-b0b7-78091d942b36",
+      "vertices": 2440,
+      "polygons": 4826,
+      "triangles": 4826,
+      "materials": [],
+      "vertex_group_count": 32,
+      "armature_modifiers": [
+        "Armature"
+      ]
+    },
+    {
+      "name": "Icosphere",
+      "vertices": 42,
+      "polygons": 80,
+      "triangles": 80,
+      "materials": [],
+      "vertex_group_count": 0,
+      "armature_modifiers": []
+    }
+  ],
+  "renders": {
+    "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/rig/blender-inspection/front.png",
+    "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/rig/blender-inspection/left.png",
+    "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/rig/blender-inspection/back.png",
+    "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/rig/blender-inspection/right.png",
+    "three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/rig/blender-inspection/three_quarter.png"
+  }
+}

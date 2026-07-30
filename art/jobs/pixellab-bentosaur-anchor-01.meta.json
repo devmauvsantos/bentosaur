@@ -1,0 +1,34 @@
+{
+  "job_id": "anchor.bentosaur.triceratops.01",
+  "status": "planned",
+  "provider": "pixellab",
+  "operation": "create_image_pixflux",
+  "style_version": "bentosaur-warm-v1",
+  "canvas": [64, 64],
+  "palette_path": "art/palettes/bentosaur-warm-v1.png",
+  "concept_reference_path": "art/references/bentosaur-gameplay-concept.png",
+  "seed": 184722,
+  "expected_cost": "1 PixelLab generation",
+  "acceptance": {
+    "transparent_background": true,
+    "allowed_palette_colors": 24,
+    "binary_alpha": true,
+    "clear_silhouette_at_1x": true,
+    "required_anatomy": [
+      "one rounded triceratops frill",
+      "two brow horns",
+      "one nose horn",
+      "two arms",
+      "two visible legs"
+    ],
+    "forbidden": [
+      "background",
+      "cast shadow",
+      "text",
+      "logo",
+      "food",
+      "prop",
+      "accessory"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "bentosaur-hero-mouth-expression-v1",
+  "character_id": "bentosaur-hero",
+  "status": "active_production_target_user_reasserted_2026-07-29",
+  "visual_authority": [
+    {
+      "path": "art/turnarounds/triceratops_master_v1/drafts/mouth-expression-addendum-v1.png",
+      "role": "primary_neutral_open_front_three_quarter_profile_reference"
+    },
+    {
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/evidence/gameplay-concept.png",
+      "role": "gameplay_delight_expression_reference"
+    }
+  ],
+  "neutral": {
+    "read": "small relaxed curved smile integrated into the lower snout",
+    "corner_position": "slightly above the center of the smile",
+    "opening": "closed or nearly closed",
+    "approximate_width_fraction_of_face": {
+      "minimum": 0.22,
+      "maximum": 0.32
+    },
+    "visible_outer_lip_ring": false
+  },
+  "delighted_open": {
+    "read": "broad joyful smile, not an O phoneme",
+    "silhouette": "soft bean or rounded inverted triangle with lifted corners",
+    "width_greater_than_height": true,
+    "approximate_width_to_height_ratio": {
+      "minimum": 1.15,
+      "maximum": 1.45
+    },
+    "approximate_width_fraction_of_face": {
+      "minimum": 0.28,
+      "maximum": 0.38
+    },
+    "cavity": "dark and recessed",
+    "tongue": "small, separate, visible in the lower center",
+    "teeth": false,
+    "visible_outer_lip_ring": false
+  },
+  "profile": {
+    "mouth_must_remain_inset_into_snout": true,
+    "floating_ring": false,
+    "tube_or_pacifier_projection": false,
+    "floating_tongue": false
+  },
+  "geometry": {
+    "body_and_mouth": "one welded closed symmetric mesh",
+    "lip_support_loops": "three or four loops shaped around the smile silhouette",
+    "mouth_bag": "real recessed cavity",
+    "tongue": "separate closed mesh",
+    "eyes": "separate expressive meshes",
+    "teeth": "none"
+  },
+  "motion_ownership": {
+    "jaw_open": "jaw bone rotation supplies the primary opening arc",
+    "smile": "bilateral lip-corner lift and widening",
+    "corner_pull_left": "independent asymmetric control",
+    "corner_pull_right": "independent asymmetric control",
+    "jaw_open_corrective": "prevents lip, chin, and cheek collapse at large openings",
+    "cheek_raise": "supports the delighted expression",
+    "chew_closed": "compression control for eating",
+    "mouth_o": "separate explicit phoneme or reaction; never used as the delighted default"
+  },
+  "explicit_rejections": [
+    "circular or near-circular delighted opening",
+    "radial O mouth used as the default open smile",
+    "visible concentric outer lip ring",
+    "protruding tube, pacifier, or fish muzzle",
+    "single stretched radial shape key as the whole opening system",
+    "mouth geometry that reads correctly only from the front"
+  ],
+  "review_views": [
+    "neutral_front",
+    "neutral_three_quarter_left",
+    "neutral_profile",
+    "delighted_front",
+    "delighted_three_quarter_left",
+    "delighted_profile",
+    "gameplay_camera"
+  ],
+  "approval": {
+    "owner": "Mau",
+    "state": "pending_on_replacement_3d_candidate",
+    "technical_validation_does_not_grant_visual_approval": true
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "diagnostic_only": true,
+  "automatic": {
+    "operator_result": [
+      "FINISHED"
+    ],
+    "weight_stats": {
+      "vertex_groups": [
+        "chest",
+        "foot.L",
+        "foot.R",
+        "forearm.L",
+        "forearm.R",
+        "hand.L",
+        "hand.R",
+        "head",
+        "neck",
+        "pelvis",
+        "shin.L",
+        "shin.R",
+        "spine",
+        "tail_01",
+        "tail_02",
+        "tail_03",
+        "tail_04",
+        "tail_05",
+        "thigh.L",
+        "thigh.R",
+        "upper_arm.L",
+        "upper_arm.R"
+      ],
+      "unweighted_vertex_count": 0,
+      "unweighted_vertex_sample": [],
+      "influences": {
+        "minimum": 1,
+        "maximum": 14,
+        "mean": 3.9339303482587065,
+        "configured_maximum": 4,
+        "over_configured_maximum_count": 2632
+      },
+      "weight_sum": {
+        "minimum": 0.8224251614883542,
+        "maximum": 0.9998809099197388,
+        "mean": 0.948254496899818
+      }
+    }
+  },
+  "bounded_cleanup": {
+    "operations": {
+      "rigid_override_vertices": 4164,
+      "cross_side_vertices": 910,
+      "removal_rule_vertices": 115,
+      "fallback_nearest_bone_vertices": 0,
+      "capped_or_normalized_vertices": 5886
+    },
+    "rigid_override_rule_counts": {
+      "head_and_frill_rigid_mass": 4164
+    },
+    "removal_rule_counts": {
+      "remove_tail_weights_outside_tail_core": 115
+    },
+    "stats": {
+      "vertex_groups": [
+        "chest",
+        "foot.L",
+        "foot.R",
+        "forearm.L",
+        "forearm.R",
+        "hand.L",
+        "hand.R",
+        "head",
+        "neck",
+        "pelvis",
+        "shin.L",
+        "shin.R",
+        "spine",
+        "tail_01",
+        "tail_02",
+        "tail_03",
+        "tail_04",
+        "tail_05",
+        "thigh.L",
+        "thigh.R",
+        "upper_arm.L",
+        "upper_arm.R"
+      ],
+      "unweighted_vertex_count": 0,
+      "unweighted_vertex_sample": [],
+      "influences": {
+        "minimum": 1,
+        "maximum": 4,
+        "mean": 2.2412935323383083,
+        "configured_maximum": 4,
+        "over_configured_maximum_count": 0
+      },
+      "weight_sum": {
+        "minimum": 0.9999999552965164,
+        "maximum": 1.0000000447034836,
+        "mean": 0.999999999886385
+      }
+    },
+    "polish_iterations": 0
+  },
+  "checkpoints": {
+    "automatic": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/stages/20_automatic_weights.blend",
+    "bounded_cleanup": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/stages/30_bounded_diagnostic_weights.blend"
+  }
+}

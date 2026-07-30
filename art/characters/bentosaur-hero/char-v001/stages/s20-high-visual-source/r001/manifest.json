@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../../../../_pipeline/v1/schemas/stage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "character_id": "bentosaur-hero",
+  "character_version": "char-v001",
+  "stage": {
+    "code": "S20",
+    "slug": "high-visual-source",
+    "revision": "r001",
+    "state": "frozen",
+    "created_at": "2026-07-29T17:11:49-04:00",
+    "frozen_at": "2026-07-29T17:11:49-04:00"
+  },
+  "lineage": {
+    "parent_manifests": [
+      {
+        "artifact_id": "s10-reference-manifest",
+        "role": "parent_stage_manifest",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/manifest.json",
+        "format": "json",
+        "bytes": 3993,
+        "sha256": "4796a3a2f8f72737dd8bf86646544a15176a4114b824225ca8f89babdef27a89",
+        "immutable": true,
+        "derived_from": []
+      }
+    ],
+    "supersedes": null
+  },
+  "coordinate_contract": {
+    "front_axis": "+X",
+    "up_axis": "+Z",
+    "character_left_axis": "+Y",
+    "unit_system": "METRIC",
+    "unit_scale": 1.0,
+    "origin": "Original Tripo source bounds centered near world origin."
+  },
+  "inputs": [
+    {
+      "artifact_id": "h31-extreme-source-glb",
+      "role": "immutable_high_visual_source",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/source/bentosaur_hero_h31_extreme_visual_source_r001.glb",
+      "format": "glb",
+      "bytes": 85259072,
+      "sha256": "40de6b43b0dc0313e084005b711cb549dfe6dfceeebe45c6275761c99b96dc79",
+      "immutable": true,
+      "derived_from": [
+        "s10-reference-manifest"
+      ]
+    }
+  ],
+  "editable_sources": [
+    {
+      "artifact_id": "s20-high-visual-blender-source",
+      "role": "canonical_blender_master",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/source/bentosaur_hero_s20_high_visual_source_r001.blend",
+      "format": "blend",
+      "bytes": 115627236,
+      "sha256": "6f503a6affd0f7b500bdafc6dafe0c54abcb509b330ff7ddcabe28ea82fc41b4",
+      "immutable": true,
+      "derived_from": [
+        "h31-extreme-source-glb"
+      ]
+    }
+  ],
+  "toolchain": [
+    {
+      "name": "Blender",
+      "version": "5.1.2"
+    },
+    {
+      "name": "Tripo H3.1 Extreme Texture",
+      "version": "v3.1-20260211"
+    }
+  ],
+  "recipes": [
+    {
+      "artifact_id": "stage-source-builder",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/recipes/create_bentosaur_character_stage.py",
+      "format": "py",
+      "bytes": 18534,
+      "sha256": "4adae2ef4be76702ed5c14982d344abf7cb3bd49aacc729a58d29826fa13d0b3",
+      "immutable": true,
+      "derived_from": []
+    }
+  ],
+  "vendor_jobs": [
+    {
+      "artifact_id": "tripo-task-receipt",
+      "role": "vendor_task_receipt",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/provenance/tripo_task.json",
+      "format": "json",
+      "bytes": 1072,
+      "sha256": "b98ef70f88b05054359e8f463a49d2cb1c5f7ca6835509d0df65db5f21e184d5",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "tripo-job-record",
+      "role": "vendor_job_record",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/provenance/tripo_job.json",
+      "format": "json",
+      "bytes": 11836,
+      "sha256": "21dafb0a8d8993a4e181eb08104de7c58f69a08de682a8bcd7035432c15b1135",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "tripo-request-record",
+      "role": "vendor_request",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/provenance/tripo_request.json",
+      "format": "json",
+      "bytes": 595,
+      "sha256": "b7e051cb8c40f83fc2c97758ae6d5e73294ef3ca2f715680cc3e006e4317cfe7",
+      "immutable": true,
+      "derived_from": []
+    }
+  ],
+  "outputs": [],
+  "qa": {
+    "reports": [],
+    "requirements": {
+      "source_preserved": true,
+      "packed_or_embedded_resources": true,
+      "geometry_matches_approved_h31_source": true
+    },
+    "results": {
+      "vertices": 1010650,
+      "triangles": 1974918,
+      "basecolor_resolution": "8192x8192",
+      "source_sha256_verified": true
+    }
+  },
+  "approval": {
+    "gate_id": "G20_HIGH_VISUAL_SOURCE",
+    "decision_path": null,
+    "technical_state": "pass",
+    "human_state": "approved"
+  }
+}

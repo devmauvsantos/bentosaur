@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "tripo-visual-gate-04-h31-extreme-texture",
+  "created_at": "2026-07-29",
+  "status": "completed_awaiting_user_visual_decision",
+  "authorization": {
+    "authorized_by": "user",
+    "authorized_instruction": "do it and give me a checkpoint at each stage so I see where we are at",
+    "scope": "exactly one standalone Extreme four-view texture task on the frozen H3.1 source",
+    "credit_cap": 30,
+    "rerolls_allowed": false,
+    "new_geometry_allowed": false,
+    "rigging_allowed": false,
+    "animation_allowed": false
+  },
+  "source": {
+    "generation_task_id": "f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+    "model_version": "v3.1-20260211",
+    "geometry_quality": "detailed",
+    "model_seed": 29072026,
+    "glb_path": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+    "glb_sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+    "geometry_must_remain_unchanged": true
+  },
+  "account_preflight": {
+    "profile": "default",
+    "region": "ov",
+    "api_key_logged": false,
+    "balance_before": 4795,
+    "frozen_before": 0,
+    "verified_at": "2026-07-29"
+  },
+  "billing": {
+    "operation": "standalone texture extreme",
+    "estimated_credits": 30,
+    "credit_cap": 30,
+    "projected_balance_after_success": 4765,
+    "pricing_source": "https://developers.tripo3d.ai/en/pricing",
+    "actual_credits_consumed": 30,
+    "balance_after_verified": 4765,
+    "frozen_after_verified": 0
+  },
+  "texture_references": {
+    "required_order": [
+      "front",
+      "left",
+      "back",
+      "right"
+    ],
+    "decision": "reuse the exact frozen canonical no-catchlight inputs; do not generatively edit, de-light, or shift landmarks because Tripo strongly recommends re-supplying the source-task references",
+    "front": {
+      "path": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_front.png",
+      "sha256": "014b8deb84120a0e1476d51a26f905cf94c2ea022e54ecfd24e6a757e27cd934",
+      "file_token": "file_d5a435f8-2101-4a07-a8b1-e99398f13bd1"
+    },
+    "left": {
+      "path": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_left.png",
+      "sha256": "04eb0da3b0c65cca04b2537d1db7d24c76ea8c0f8f84abe26283e1542182a108",
+      "file_token": "file_b57591f5-66cb-48ec-a9e2-f7ac8cd70de0"
+    },
+    "back": {
+      "path": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_back.png",
+      "sha256": "a6e3b39ffca300b25169262a28a0e7bb369305ff7dbf11ab8edf4829d06add46",
+      "file_token": "file_a2aa6c57-d60a-44b3-9af9-cb370c115bec"
+    },
+    "right": {
+      "path": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1/bentosaur_right.png",
+      "sha256": "dbf943afed6e9318fd8bfbc2358101366ee81ceb481c31385ee3364c929a8da2",
+      "file_token": "file_c5d11e12-30c4-4e25-9721-095847965186"
+    },
+    "image_contract": {
+      "width": 1024,
+      "height": 1024,
+      "color_mode": "RGB",
+      "canonical_claws_per_hand": 3,
+      "eye_catchlights": false,
+      "mouth": "neutral_closed_or_barely_parted",
+      "props": false,
+      "clothing": false,
+      "lighting": "consistent soft neutral",
+      "background": "consistent neutral light gray"
+    },
+    "qa_board": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/texture-extreme-preflight/boards/canonical-four-view.png",
+    "independent_qa": {
+      "status": "passed_with_acknowledged_risk",
+      "hashes": "passed",
+      "order": "passed",
+      "dimensions_and_mode": "passed",
+      "character_consistency": "passed",
+      "acknowledged_risk": "soft directional illumination exists in the canonical renders; preserving the already-accepted source-task references is lower risk than introducing an untested local de-lighting transform"
+    }
+  },
+  "request": {
+    "endpoint": "POST https://openapi.tripo3d.ai/v3/models/texture",
+    "input": "f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+    "model": "v3.0-20250812",
+    "texture_prompt": {
+      "images_order": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "member_shape": "{ \"file_token\": \"file_...\" }",
+      "file_tokens_reused_from_source_task": true
+    },
+    "texture_quality": "extreme",
+    "texture_alignment": "original_image",
+    "pbr": true,
+    "bake": false,
+    "texture_seed": 29072026
+  },
+  "submission_preflight": {
+    "payload_path": "art/jobs/tripo-visual-gate-04-h31-extreme-texture-payload.json",
+    "payload_sha256": "b7e051cb8c40f83fc2c97758ae6d5e73294ef3ca2f715680cc3e006e4317cfe7",
+    "submission_wrapper": "tools/tripo/submit_single_texture_task.mjs",
+    "submission_wrapper_sha256": "74ae06e38d4e0ea5812feaf906f0baba13c31d9f9e9f352955e9d469abbe1dc6",
+    "local_validation": "passed",
+    "network_calls_during_validation": 0,
+    "paid_calls_during_validation": 0,
+    "submission_max_retries": 0,
+    "server_dry_run_available": false,
+    "balance_immediately_before_submission": 4795,
+    "frozen_immediately_before_submission": 0
+  },
+  "submission_receipt": {
+    "task_id": "26811821-3e6d-4b62-a695-679275c04f60",
+    "submitted_at": "2026-07-29T18:22:38.676514Z",
+    "submitted_once": true,
+    "automatic_retries": 0,
+    "initial_status": "running",
+    "initial_progress": 11,
+    "terminal_status": "success",
+    "terminal_progress": 100,
+    "completed_at": "2026-07-29T18:27:32.771060Z",
+    "balance_after_submission": 4765,
+    "frozen_after_submission": 30,
+    "credits_reported_by_task": 30,
+    "balance_after_completion": 4765,
+    "frozen_after_completion": 0
+  },
+  "artifacts": {
+    "output_directory": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out",
+    "model": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/model.glb",
+      "size_bytes": 85259072,
+      "sha256": "40de6b43b0dc0313e084005b711cb549dfe6dfceeebe45c6275761c99b96dc79"
+    },
+    "raw_preview": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/preview.png",
+      "encoded_format": "WEBP",
+      "dimensions": "512x512",
+      "sha256": "5c90c13c0af19ce745532b9ed44cc8d0cd1686402b76bebc9376c770c0cf6abe"
+    },
+    "task_receipt": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/task.json",
+      "sha256": "b98ef70f88b05054359e8f463a49d2cb1c5f7ca6835509d0df65db5f21e184d5"
+    }
+  },
+  "technical_inspection": {
+    "status": "passed",
+    "source_geometry_preserved": true,
+    "triangles": 1974918,
+    "indexed_corner_position_mismatches": 0,
+    "maximum_position_delta": 0.0,
+    "source_vertices": 987461,
+    "textured_vertices": 1010650,
+    "uv_seam_split_vertices": 23189,
+    "bounds_exactly_match": true,
+    "material_count": 1,
+    "base_color": "8192x8192 RGB JPEG sRGB",
+    "normal": "4096x4096 RGB JPEG Non-Color",
+    "metallic_roughness": "4096x4096 RGB PNG Non-Color",
+    "production_caveat": "visual master only; the 1.975M-triangle geometry and 8K/4K maps are not mobile-ready"
+  },
+  "visual_evidence": {
+    "evaluator": {
+      "path": "tools/blender/evaluate_textured_hero_candidate.py",
+      "sha256": "9931d1962ea5e58a9ae887fbf22882b8a921288f6fbb9b9720d23b816e9bcce5"
+    },
+    "metrics": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/metrics.json",
+      "sha256": "e08120fd11250c00cf9d78fcd8ea4842508bac9bd7ba34cf0a06dd84c9971581"
+    },
+    "basecolor_six_view": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/boards/vg04_basecolor_six_view.png",
+      "sha256": "eb2e006f122aacbba378aaae974ce780fe81e93e0217f685bc5442dd187c035a"
+    },
+    "basecolor_feature_closeups": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/boards/vg04_basecolor_feature_closeups.png",
+      "sha256": "9ac76d816955c708c41d85f0b0de9da1cf75e2cff789e85b35d93600cd066f88"
+    },
+    "basecolor_reference_comparison": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/boards/vg04_basecolor_reference_comparison.png",
+      "sha256": "7e8592c489282061998e2ac7032ea2a58a40f0bb073348b9fc425368c13c6d07"
+    },
+    "matte_six_view": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/boards/vg04_matte_six_view.png",
+      "sha256": "fe53096ac2e52a4e4dc36016be69fdb4b75ee099d0b0fec25d55eeba7ce87c52"
+    },
+    "matte_feature_closeups": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/boards/vg04_matte_feature_closeups.png",
+      "sha256": "ac5680d836d6c571454fd23312ed8642181eef2129b2f72a0f7ebf55e1ffefa8"
+    },
+    "matte_reference_comparison": {
+      "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/boards/vg04_matte_reference_comparison.png",
+      "sha256": "68c0956eb46757c4ed2170fa037b7c0692b4c89423a6ef1aacd176040e0885eb"
+    },
+    "visual_findings": {
+      "identity_and_region_mapping": "coherent across all six views",
+      "doubled_eye": false,
+      "major_color_bleed": false,
+      "observed_cleanup_items": [
+        "subtle sage albedo mottling",
+        "baked shadow/transition above the belly and under the chin",
+        "minor darker projection transitions near arms and belly",
+        "neutral mouth remains a thin closed seam; the production open-mouth cavity is not part of this gate"
+      ],
+      "recommended_route": "stop Tripo generation; use this output as the approved-or-rejected look target and rebuild clean semantic materials plus the production mouth in Blender only if Mau approves"
+    },
+    "notion_review_copies": {
+      "purpose": "JPEG review copies kept below the Notion free-workspace 5 MB upload limit; original PNG evidence remains canonical and untouched",
+      "basecolor_six_view": {
+        "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/notion-review/vg04_basecolor_six_view.jpg",
+        "size_bytes": 299799,
+        "sha256": "1ebb4f5c87404b2fa7471436576d880d40b87977ebfc24776fc0d56e7774d2a5"
+      },
+      "matte_six_view": {
+        "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/notion-review/vg04_matte_six_view.jpg",
+        "size_bytes": 353091,
+        "sha256": "5ba4c7d84f20cf356ba9893da79e9660f49003b1f8ed984cd961407aec37309b"
+      },
+      "basecolor_feature_closeups": {
+        "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/notion-review/vg04_basecolor_feature_closeups.jpg",
+        "size_bytes": 493529,
+        "sha256": "a37153a2738869530c9cd1493e1b82a2ca3953a11247dc7da7e944d940f289dc"
+      },
+      "basecolor_reference_comparison": {
+        "path": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/notion-review/vg04_basecolor_reference_comparison.jpg",
+        "size_bytes": 325064,
+        "sha256": "deedbf25d48fb67fb37e534747ae91de6f8eb54380c147c6a40a72e83f54f7e1"
+      }
+    },
+    "notion_approval_page": {
+      "url": "https://app.notion.com/p/3acbcf1d0403812db3c9fc7818401dbe",
+      "embedded_review_images": 4,
+      "verified_via_notion_fetch": true,
+      "verified_at": "2026-07-29T18:55:14.174Z"
+    },
+    "approval_owner": "Mau",
+    "user_decision": "pending"
+  },
+  "checkpoints": {
+    "01_reference_preflight": "completed",
+    "02_upload_and_payload_validation": "completed",
+    "03_single_submission": "completed",
+    "04_completion_download_and_billing": "completed",
+    "05_texture_inspection": "completed",
+    "06_user_approval_boards_and_documentation": "completed_awaiting_user_decision"
+  },
+  "hard_stop_after": [
+    "one task submission",
+    "successful artifact download or terminal task failure",
+    "actual credit and balance verification",
+    "unlit and target-matte approval evidence"
+  ]
+}

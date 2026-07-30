@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "preview_id": "bentosaur_p1_lookdev_preview_0",
+  "label": "LOOKDEV PREVIEW 0 \u2014 PROVISIONAL / NOT FINAL",
+  "status": "provisional_lookdev_preview_not_final",
+  "source": {
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-01/p1/tripo-out/bentosaur-visual-gate-01-p1-4a069b80/model.glb",
+    "sha256": "4c7fabeef6f7efdf7abfe3b896cad837aea5d6267515c842a2c5aea60c8f99e8",
+    "bytes": 721668,
+    "modified": false,
+    "source_mesh_objects": [
+      "tripo_node_4a069b80-c6d5-40b7-84c5-43fa26081d61"
+    ]
+  },
+  "truthful_scope": [
+    "accepted P1 geometry",
+    "existing packed Tripo base-colour image",
+    "controlled neutral matte Blender lighting",
+    "native 64 px and 96 px readability",
+    "rainy-stall-like fixed lighting and camera proxy"
+  ],
+  "not_approved_or_proven": [
+    "final authored materials",
+    "final palette calibration",
+    "clean deformation-ready topology",
+    "production eyes",
+    "production mouth or mouth interior",
+    "retopology",
+    "rigging",
+    "skinning",
+    "animation",
+    "final Godot shader"
+  ],
+  "material_preview": {
+    "source_base_colour_used": true,
+    "source_orm_used": false,
+    "source_normal_used": false,
+    "hue": 0.5,
+    "saturation": 1.06,
+    "value": 0.96,
+    "metallic": 0.0,
+    "roughness": 0.79,
+    "specular_ior_level": 0.24,
+    "materials": [
+      "PREVIEW0_MATTE_ALBEDO__tripo_material_4a069b80-c6d5-40b7-84c5-43fa26081d61"
+    ]
+  },
+  "blender": {
+    "version": "5.1.2",
+    "script": "/Users/mauvsantos/Workspace/games/Bentosaur/tools/blender/build_p1_lookdev_preview_zero.py",
+    "blend": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/bentosaur_p1_lookdev_preview0.blend",
+    "render_engine": "BLENDER_EEVEE",
+    "neutral_exposure": -0.35,
+    "normal_map_intentionally_disconnected": true
+  },
+  "topology_unchanged_from_preview_copy": {
+    "objects": 1,
+    "vertices": 5270,
+    "polygons": 5036,
+    "triangles": 5036,
+    "uv_layers": 1,
+    "shape_keys": 0
+  },
+  "tripo_usage": {
+    "api_calls": 0,
+    "credits_consumed": 0,
+    "usd_consumed": 0.0
+  },
+  "rigging_or_animation": {
+    "armature_created": false,
+    "shape_keys_created": false,
+    "animation_created": false
+  },
+  "renders": {
+    "neutral": {
+      "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/neutral/front.png",
+      "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/neutral/left.png",
+      "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/neutral/back.png",
+      "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/neutral/right.png",
+      "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/neutral/three_quarter_left.png",
+      "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/neutral/three_quarter_right.png"
+    },
+    "face_closeup": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/face/front_face_closeup.png",
+    "pixel64": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/pixel64/front_native_64px.png",
+    "pixel96": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/pixel96/front_native_96px.png",
+    "rainy_stall_like": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/renders/rainy_stall_like/rainy_stall_lighting_camera.png",
+    "boards": {
+      "six_view": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/boards/lookdev_preview0_six_view_board.png",
+      "face_and_rainy": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/boards/lookdev_preview0_face_and_rainy_board.png",
+      "native_scale": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/lookdev-preview-0/boards/lookdev_preview0_native_scale_board.png"
+    }
+  }
+}

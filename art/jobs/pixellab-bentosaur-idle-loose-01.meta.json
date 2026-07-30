@@ -1,0 +1,13 @@
+{
+  "job_id": "animation.bentosaur.triceratops.idle.loose.01",
+  "status": "planned",
+  "provider": "pixellab",
+  "operation": "animate_image",
+  "source_candidate": "art/candidates/pixellab/anchor-pro-crop-01/candidate-07.png",
+  "canvas": [64, 64],
+  "requested_generated_frames": 4,
+  "expected_returned_frames": 5,
+  "loop_contract": "The input image is frame zero and is also supplied as the final target. Remove the duplicated closing frame after inspection to compile an exact four-frame loop.",
+  "seed": 184725,
+  "expected_cost": "1 PixelLab subscription generation"
+}

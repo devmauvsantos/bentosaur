@@ -1,0 +1,497 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "bentosaur-sprite-factory-proof-v1",
+  "status": "blocked_waiting_for_user_approved_character_master",
+  "decision_date": "2026-07-29",
+  "purpose": "Validate one approved Bentosaur 3D master as a deterministic native-resolution 2D sprite source without committing the game to live 3D.",
+  "documentation": "docs/3d-to-2d-pixel-sprite-factory-research-v1.md",
+  "hard_prerequisite": {
+    "gate": "complete_visual_3d_approval",
+    "human_approval_required": true,
+    "approval_must_come_from": "user",
+    "assistant_may_approve": false,
+    "approved_candidate_id": null,
+    "approval_record": null,
+    "blocks": [
+      "production_rigging",
+      "production_animation",
+      "sprite_factory_motion_proof"
+    ]
+  },
+  "source_policy": {
+    "tutorial_url": "https://www.youtube.com/watch?v=PBIPJdEECWg",
+    "reference_gist_url": "https://gist.github.com/kit-agawa/94a18f982d5b1c016a119d4cbe25882f",
+    "reference_blend_url": "https://drive.google.com/file/d/1vo8Fjf3RvRez_HcGsdHQmQBmaqCighai/view?usp=sharing",
+    "reference_gist_sha256": "a63eb8c9501fc33215977b69d8d4eda46b8bc8fc2479272150fce4cc2c3b2ec8",
+    "reference_blend_sha256": "4237da1b3fc49cac380d17aeebdebbcb8d4569a69cf92c27d0b141e95d061e55",
+    "reference_blend_runtime_validation": {
+      "runtime": "Blender 5.1.2",
+      "autoexec_disabled": true,
+      "source_file_saved": false,
+      "default_render_unique_rgba_values": 24,
+      "standard_dither0_transparent_unique_rgba_values": 4,
+      "corrected_visible_colors": 3
+    },
+    "reference_files_have_verified_reuse_license": false,
+    "copy_or_redistribute_reference_files": false,
+    "implementation": "clean_room_behavioral_reimplementation"
+  },
+  "toolchain": {
+    "blender_version": "5.1.2",
+    "blender_authority": "approved versioned .blend character master",
+    "renderer": "versioned Blender Python invoked explicitly with embedded auto-execution disabled",
+    "invocation": {
+      "mode": "background",
+      "flags_before_blend_path": [
+        "--background",
+        "--factory-startup",
+        "--disable-autoexec"
+      ],
+      "reviewed_renderer_passed_with": "--python <absolute_reviewed_renderer_path>",
+      "job_passed_after_double_dash": true,
+      "controlled_empty_environment_paths": [
+        "BLENDER_USER_CONFIG",
+        "BLENDER_USER_SCRIPTS"
+      ],
+      "user_addons_allowed": false,
+      "startup_handlers_allowed": false
+    },
+    "driver_contract": {
+      "python_expression_drivers_allowed": false,
+      "constraints_keyframes_shape_keys_allowed": true,
+      "fail_on_muted_invalid_or_unresolved_driver": true
+    },
+    "dependency_contract": {
+      "packed_resources_preferred": true,
+      "external_dependency_manifest_required_when_not_packed": true,
+      "hash_every_external_dependency": true,
+      "reject_missing_unlisted_or_mutable_absolute_paths": true,
+      "dependency_manifest_hash_in_receipt": true
+    },
+    "cleanup": "Aseprite",
+    "runtime": "Godot 2D sprites",
+    "tripo_role": "upstream candidate generation only; no Tripo call occurs in this job"
+  },
+  "render_contract": {
+    "view_transform": "Standard",
+    "look": "None",
+    "exposure": 0,
+    "gamma": 1,
+    "dither": 0,
+    "image_format": "PNG",
+    "color_mode": "RGBA",
+    "color_depth": 8,
+    "film_transparent": true,
+    "pixel_filter_width": 0,
+    "animation_fps": 12,
+    "sampling_mappings": {
+      "image_texture_nodes": "Closest",
+      "compositor_transform_nodes": "Nearest",
+      "saved_composite_resampling": false,
+      "godot_import_filter": "Nearest"
+    },
+    "pass_engine_contracts": {
+      "color": {
+        "engine": "BLENDER_EEVEE",
+        "scene.eevee.taa_render_samples": 1,
+        "scene.eevee.taa_samples": 1,
+        "scene.eevee.use_taa_reprojection": false,
+        "scene.eevee.use_bokeh_jittered": false,
+        "scene.eevee.use_shadow_jitter_viewport": false,
+        "scene.eevee.use_shadows": false,
+        "scene.render.filter_size": 0,
+        "scene.render.use_motion_blur": false,
+        "all_render_cameras.data.dof.use_dof": false,
+        "material_contract": "unlit_or_emission_palette",
+        "saved_composite_forbidden_effects": [
+          "glare",
+          "blur",
+          "denoise",
+          "resample"
+        ]
+      },
+      "silhouette": {
+        "engine": "BLENDER_EEVEE",
+        "inherits_deterministic_color_engine_settings": true,
+        "override_material": "binary_unlit"
+      },
+      "material_id": {
+        "engine": "BLENDER_EEVEE",
+        "inherits_deterministic_color_engine_settings": true,
+        "override_materials": "fixed_unlit_identifier_colors"
+      },
+      "normal_camera": {
+        "engine": "BLENDER_WORKBENCH",
+        "scene.display.shading.light": "MATCAP",
+        "scene.display.shading.studio_light": "check_normal+y.exr",
+        "scene.display.shading.color_type": "SINGLE",
+        "scene.display.shading.single_color": [
+          1,
+          1,
+          1
+        ],
+        "scene.display.shading.studiolight_rotate_z": 0,
+        "scene.display.shading.studiolight_intensity": 1,
+        "scene.display.shading.show_shadows": false,
+        "scene.display.shading.show_cavity": false,
+        "scene.display.shading.show_specular_highlight": false,
+        "scene.display.shading.show_object_outline": false,
+        "scene.display.render_aa": "OFF",
+        "scene.display.viewport_aa": "OFF",
+        "palette_index": false
+      }
+    },
+    "palette_max_colors_target": 24,
+    "pixel_alignment": {
+      "space": "orthographic_camera",
+      "pixel_coordinate_origin": "top_left",
+      "pivot_coordinate_semantics": "pixel_center_index",
+      "world_units_per_pixel_y_formula": "camera_ortho_scale / render_height",
+      "camera_view_width_formula": "camera_ortho_scale * render_aspect",
+      "world_units_per_pixel_x_formula": "camera_view_width / render_width",
+      "account_for_pixel_aspect": true,
+      "account_for_odd_even_cell_dimensions": true,
+      "one_pixel_marker_validation_required": true
+    }
+  },
+  "render_assembly_contract": {
+    "required_assembly_root_name_pattern": "RENDER_ASSEMBLY_<character_id>",
+    "required_character_root_name_pattern": "ROOT_CHARACTER_<character_id>",
+    "all_rendered_objects_must_descend_from_assembly_root": true,
+    "all_armatures_rig_controllers_modifier_targets_constraint_targets_and_evaluated_dependencies_must_descend_from_assembly_root": true,
+    "world_fixed_dependency_allowlist": [],
+    "character_is_prop_free_by_default": true,
+    "props_are_separate_roots": true,
+    "prop_root_name_pattern": "ROOT_PROP_<prop_id>",
+    "rotate_arbitrary_active_mesh": false,
+    "rotate_character_without_assembly": false,
+    "directional_render_rotates": "declared_render_assembly",
+    "attachments": {
+      "records_required_for_every_visible_attachment": true,
+      "allowed_methods": [
+        "bone_parent",
+        "child_of_constraint",
+        "shared_armature"
+      ],
+      "required_fields": [
+        "asset_id",
+        "root_object",
+        "method",
+        "target_socket_or_bone",
+        "parent_space",
+        "child_space",
+        "bind_transform",
+        "visible_action_frame_ranges",
+        "mirror_policy"
+      ],
+      "first_static_character_only_proof": []
+    }
+  },
+  "profiles": [
+    {
+      "id": "stall_front_096",
+      "role": "foreground_counter",
+      "projection": "orthographic",
+      "native_cell_px": [
+        96,
+        96
+      ],
+      "camera_object": "CAM_stall_front_096",
+      "max_content_box_px": [
+        84,
+        84
+      ],
+      "pivot_px": [
+        48,
+        87
+      ],
+      "baseline_y": 87,
+      "directions": [
+        "front"
+      ],
+      "normal_pass": "optional_after_color_gate"
+    },
+    {
+      "id": "stall_front_064",
+      "role": "foreground_counter_stress_test",
+      "projection": "orthographic",
+      "native_cell_px": [
+        64,
+        64
+      ],
+      "camera_object": "CAM_stall_front_064",
+      "max_content_box_px": [
+        56,
+        56
+      ],
+      "pivot_px": [
+        32,
+        58
+      ],
+      "baseline_y": 58,
+      "directions": [
+        "front"
+      ],
+      "normal_pass": "optional_after_color_gate"
+    },
+    {
+      "id": "stall_3q_096",
+      "role": "foreground_counter_authored_three_quarter",
+      "projection": "orthographic",
+      "native_cell_px": [
+        96,
+        96
+      ],
+      "camera_object": "CAM_stall_3q_096",
+      "max_content_box_px": [
+        84,
+        84
+      ],
+      "pivot_px": [
+        48,
+        87
+      ],
+      "baseline_y": 87,
+      "directions": [
+        "three_quarter"
+      ],
+      "camera_is_authored_not_auto_rotated": true,
+      "normal_pass": false
+    },
+    {
+      "id": "stall_3q_064",
+      "role": "foreground_counter_authored_three_quarter_stress_test",
+      "projection": "orthographic",
+      "native_cell_px": [
+        64,
+        64
+      ],
+      "camera_object": "CAM_stall_3q_064",
+      "max_content_box_px": [
+        56,
+        56
+      ],
+      "pivot_px": [
+        32,
+        58
+      ],
+      "baseline_y": 58,
+      "directions": [
+        "three_quarter"
+      ],
+      "camera_is_authored_not_auto_rotated": true,
+      "normal_pass": false
+    },
+    {
+      "id": "street_side_048",
+      "role": "background_walker",
+      "projection": "orthographic",
+      "native_cell_px": [
+        48,
+        48
+      ],
+      "camera_object": "CAM_street_side_048",
+      "max_content_box_px": [
+        42,
+        42
+      ],
+      "pivot_px": [
+        24,
+        44
+      ],
+      "baseline_y": 44,
+      "directions": [
+        "east"
+      ],
+      "mirror_output_to": "west",
+      "dual_render_only_for_explicit_asymmetry": true,
+      "normal_pass": false,
+      "requires_silhouette_lod": true
+    },
+    {
+      "id": "street_side_032",
+      "role": "background_walker_stress_test",
+      "projection": "orthographic",
+      "native_cell_px": [
+        32,
+        32
+      ],
+      "camera_object": "CAM_street_side_032",
+      "max_content_box_px": [
+        28,
+        28
+      ],
+      "pivot_px": [
+        16,
+        29
+      ],
+      "baseline_y": 29,
+      "directions": [
+        "east"
+      ],
+      "mirror_output_to": "west",
+      "dual_render_only_for_explicit_asymmetry": true,
+      "normal_pass": false,
+      "requires_silhouette_lod": true
+    }
+  ],
+  "passes": [
+    {
+      "id": "color",
+      "required": true,
+      "palette_index_after_cleanup": true
+    },
+    {
+      "id": "silhouette",
+      "required": true,
+      "binary": true
+    },
+    {
+      "id": "material_id",
+      "required": true,
+      "palette_index_after_cleanup": false
+    },
+    {
+      "id": "normal_camera",
+      "required": false,
+      "allowed_profiles": [
+        "stall_front_096"
+      ],
+      "palette_index_after_cleanup": false,
+      "godot_four_direction_light_test_required": true
+    }
+  ],
+  "gate_1_static_identity": {
+    "runs_only_after_approved_character_master": true,
+    "blocking_primary_profiles": [
+      "stall_front_096",
+      "street_side_048"
+    ],
+    "nonblocking_diagnostic_profiles": [
+      "stall_front_064",
+      "stall_3q_096",
+      "stall_3q_064",
+      "street_side_032"
+    ],
+    "required_artifacts": [
+      "native one-to-one color stills",
+      "native one-to-one silhouette stills",
+      "material ID stills",
+      "four-times defect contact sheet",
+      "in-scene phone mockup",
+      "manifest",
+      "validation report"
+    ],
+    "human_user_must_pass_gate": true
+  },
+  "gate_2_motion_ab": {
+    "runs_only_after_gate_1_passes": true,
+    "control": "approved hand-authored 2D treatment",
+    "clips": [
+      {
+        "id": "receive_to_delight",
+        "view": "front",
+        "frame_target": "6_to_8",
+        "blocking_primary_profiles": [
+          "stall_front_096"
+        ],
+        "nonblocking_stress_profiles": [
+          "stall_front_064"
+        ]
+      },
+      {
+        "id": "walk",
+        "view": "side",
+        "frame_target": "6_to_8",
+        "blocking_primary_profiles": [
+          "street_side_048"
+        ],
+        "nonblocking_stress_profiles": [
+          "street_side_032"
+        ]
+      }
+    ],
+    "general_metrics": [
+      "eye hand and foot readability",
+      "held-pose pixel flicker",
+      "silhouette crawl",
+      "outline bridge count",
+      "orphan pixel count",
+      "loop seam",
+      "foot slide",
+      "plastic 3D perception",
+      "Aseprite cleanup minutes per frame",
+      "atlas bytes",
+      "Godot import correctness"
+    ],
+    "profile_specific_metrics": {
+      "counter": [
+        "three distinct horns and readable frill gaps"
+      ],
+      "walker": [
+        "recognizable Triceratops frill and horn mass",
+        "clean upright biped silhouette"
+      ]
+    },
+    "mirror_policy": {
+      "prop_free_canonical_direction": "east",
+      "runtime_mirror_direction": "west",
+      "dual_render_requires_explicit_asymmetric_asset_or_lighting_reason": true
+    },
+    "blind_test_people_min": 5
+  },
+  "gate_3_optional_normals": {
+    "runs_only_after_color_motion_passes": true,
+    "profile": "stall_front_096",
+    "scene": "warm_lantern_light",
+    "reject_if": [
+      "reads as plastic",
+      "smooth lighting fights palette clusters",
+      "normal orientation is incorrect",
+      "memory or authoring cost exceeds visible benefit"
+    ]
+  },
+  "renderer_requirements": [
+    "validate Blender version, source master revision, root, action, camera, frames, profile, pass and output",
+    "launch with isolated user config and scripts plus factory startup and disabled autoexec",
+    "reject Python-expression drivers and unresolved evaluated dependencies",
+    "validate the packed or hashed external dependency closure",
+    "refuse ambiguous or unsafe overwrite",
+    "restore all scene state in try/finally",
+    "render only named frames and views",
+    "keep camera-relative palette lighting consistent",
+    "emit deterministic action/direction/frame filenames",
+    "emit color, silhouette, material ID and optional normal passes",
+    "emit manifest with pivots, frame size, fps, camera, palette and source hashes",
+    "emit contact sheet and animation preview",
+    "never run embedded third-party blend scripts"
+  ],
+  "output_pattern": "exports/sprites/<character>/<master_revision>/<job_id>/<pass>/<profile>/<action>/<direction>/frame_<index>.png",
+  "decision_routes": {
+    "counter_and_walker_pass": "adopt_3d_master_as_sprite_factory",
+    "counter_passes_walker_fails": "use_foreground_master_and_hand_simplified_walker_lod",
+    "motion_passes_finish_fails": "use_blender_as_pose_and_light_reference_then_draw_over",
+    "identity_or_heart_fails": "return_to_directional_2d_kits"
+  },
+  "credits": {
+    "currency": "Tripo API credits",
+    "ledger_source": "art/jobs/tripo-visual-gate-01.json",
+    "original_wallet": 5000,
+    "cumulative_consumed_before_this_research": 165,
+    "balance_before_this_research_carried_forward": 4835,
+    "consumed_by_this_research_actual": 0,
+    "balance_after_this_research_expected": 4835,
+    "balance_after_this_research_freshly_queried": false,
+    "local_blender_sprite_bake": {
+      "status": "not_run",
+      "estimated_credits": 0,
+      "actual_credits": null
+    },
+    "excluded_upstream_costs": [
+      "Tripo candidate generation",
+      "Tripo rigging",
+      "Tripo animation"
+    ],
+    "note": "Local Blender rendering does not consume Tripo API credits. Any upstream paid Tripo work is recorded in its originating job."
+  }
+}

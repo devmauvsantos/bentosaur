@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "tripo-visual-gate-01",
+  "created_at": "2026-07-29",
+  "status": "target_design_approved_p1_form_provisional_final_appearance_pending",
+  "notion": {
+    "page_id": "3acbcf1d-0403-8120-8d5b-fefaac50da9d",
+    "url": "https://app.notion.com/p/3acbcf1d040381208d5bfefaac50da9d"
+  },
+  "approval": {
+    "owner": "user",
+    "assistant_may_approve": false,
+    "rigging_allowed": false,
+    "animation_allowed": false,
+    "decision_recorded_at": "2026-07-29",
+    "approved_candidate_id": null,
+    "provisional_geometry_candidate_id": "bentosaur_vg01_p1",
+    "target_design_approved": true,
+    "final_appearance_approved": false,
+    "mouth_system_approved": false,
+    "visual_identity_reference": "art/turnarounds/triceratops_master_v1/drafts/model-sheet-v1.png",
+    "selection_basis": "The user approved the canonical turnaround as the target design and accepted P1's 3D form as a viable option. P1 is only the provisional geometry/lookdev base because it has fewer triangles and fewer reported boundary/non-manifold edges. The washed-out automatic Tripo material is not final-appearance approval.",
+    "next_gate": "visual-gate-02-final-materials-face-and-mouth",
+    "superseded_approval_commands": [
+      "APPROVE bentosaur_vg01_p1 FOR RIGGING",
+      "APPROVE bentosaur_vg01_h31 FOR RIGGING"
+    ],
+    "next_valid_approval_command": "APPROVE visual-gate-02-final-materials-face-and-mouth FOR RIGGING"
+  },
+  "appearance_scope": {
+    "complete_surfaced_character_required": true,
+    "unclothed": true,
+    "clothing_system": false,
+    "outfit_variants": false,
+    "accessories": "deferred",
+    "held_props": false,
+    "environment": false,
+    "palette": [
+      "sage body",
+      "cream belly horns frill knobs and claws",
+      "coral cheeks",
+      "dark eyes and mouth"
+    ],
+    "turnaround_interpretation_approved": [
+      "cream dorsal and tail knobs"
+    ]
+  },
+  "turnaround": {
+    "generator": "OpenAI ImageGen",
+    "source_sheet": "art/turnarounds/triceratops_master_v1/drafts/model-sheet-v1.png",
+    "input_directory": "art/turnarounds/triceratops_master_v1/inputs-v1",
+    "files": {
+      "front": "bentosaur_front.png",
+      "left": "bentosaur_left.png",
+      "back": "bentosaur_back.png",
+      "right": "bentosaur_right.png"
+    },
+    "file_contract": {
+      "width": 1024,
+      "height": 1024,
+      "format": "PNG",
+      "opaque": true
+    },
+    "reference_roles": [
+      {
+        "path": "art/candidates/pixellab/anchor-biped-02/candidate-12.png",
+        "role": "SIDE SILHOUETTE AND PROPORTIONS ONLY"
+      },
+      {
+        "path": "art/references/bentosaur-front-face-reference.png",
+        "role": "FRONT SPECIES IDENTITY ONLY"
+      },
+      {
+        "path": "art/references/bentosaur-character-reference.png",
+        "role": "COLOR AND EMOTIONAL IDENTITY ONLY"
+      },
+      {
+        "path": "art/references/bentosaur-biped-anatomy-reference.png",
+        "role": "BIPED BODY LANGUAGE ONLY"
+      }
+    ],
+    "prompt_contract": {
+      "layout": "2x2 in exact order front, left, back, right; no labels",
+      "identity": "same unclothed upright baby Triceratops in every panel",
+      "anatomy": "exactly two hind legs, two free forearms, and three horns",
+      "color": "sage body; cream belly, horns, frill knobs, and claws; coral cheeks; dark eyes and mouth",
+      "exclusions": "no props, clothes, scenery, ground plane, cast shadow, or expression change",
+      "presentation": "neutral face, empty hands, orthographic views, uniform gray background, minimal shading"
+    }
+  },
+  "tripo": {
+    "starting_balance": 4925,
+    "ending_balance_verified": 4835,
+    "credits_consumed": 90,
+    "usd_consumed": 0.9,
+    "candidates": [
+      {
+        "candidate_id": "bentosaur_vg01_p1",
+        "model_alias": "tripo-p1",
+        "model_version": "P1-20260311",
+        "task_id": "4a069b80-c6d5-40b7-84c5-43fa26081d61",
+        "credits_consumed": 50,
+        "model_seed": 28102026,
+        "texture_seed": 29072026,
+        "pbr": true,
+        "texture": true,
+        "texture_quality": "standard",
+        "texture_alignment": "original_image",
+        "orientation": "align_image",
+        "export_uv": true,
+        "requested_face_limit": 5000,
+        "source_glb": "art/candidates/tripo/visual-gate-01/p1/tripo-out/bentosaur-visual-gate-01-p1-4a069b80/model.glb",
+        "evaluation": "art/candidates/tripo/visual-gate-01/p1/evaluation",
+        "sha256": "4c7fabeef6f7efdf7abfe3b896cad837aea5d6267515c842a2c5aea60c8f99e8"
+      },
+      {
+        "candidate_id": "bentosaur_vg01_h31",
+        "model_alias": "tripo-v3.1",
+        "model_version": "v3.1-20260211",
+        "task_id": "21b0ae8e-b5aa-4169-a3ee-c0c015f88bfe",
+        "credits_consumed": 40,
+        "model_seed": 28102026,
+        "texture_seed": 29072026,
+        "pbr": true,
+        "texture": true,
+        "texture_quality": "standard",
+        "texture_alignment": "original_image",
+        "orientation": "align_image",
+        "export_uv": true,
+        "smart_low_poly": true,
+        "geometry_quality": "standard",
+        "requested_face_limit": 5000,
+        "source_glb": "art/candidates/tripo/visual-gate-01/h31/tripo-out/bentosaur-visual-gate-01-h31-21b0ae8e/model.glb",
+        "evaluation": "art/candidates/tripo/visual-gate-01/h31/evaluation",
+        "sha256": "6b0db89131ee8c16b0b7b1cca77d1663df767ba15369d5c4ad0f433c516a2194"
+      }
+    ]
+  },
+  "blender_evaluation": {
+    "version": "5.1.2",
+    "script": "tools/blender/evaluate_tripo_visual_candidate.py",
+    "source_glbs_modified": false,
+    "camera_views": [
+      "front",
+      "left",
+      "back",
+      "right",
+      "three_quarter_left",
+      "three_quarter_right"
+    ],
+    "render_modes": [
+      "surfaced",
+      "clay",
+      "toon diagnostic",
+      "native pixel64 diagnostic",
+      "wireframe"
+    ],
+    "shared_findings": [
+      "complete coherent bipedal character",
+      "no clothing accessories props or scenery",
+      "packed 2048 PBR texture set",
+      "fully triangulated reconstruction topology",
+      "retopology or topology cleanup required before production rigging",
+      "controlled replaceable face layer required before expression animation"
+    ],
+    "comparison_artifacts": [
+      "art/candidates/tripo/visual-gate-01/comparison/surfaced_6view_p1_vs_h31.png",
+      "art/candidates/tripo/visual-gate-01/comparison/clay_6view_p1_vs_h31.png",
+      "art/candidates/tripo/visual-gate-01/comparison/pixel64_8x_6view_p1_vs_h31.png"
+    ]
+  }
+}

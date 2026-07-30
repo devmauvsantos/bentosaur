@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "diagnostic_only": true,
+  "boards": [
+    "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/evidence/pose_contact_sheet.png",
+    "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/evidence/neutral_vs_poses.png"
+  ],
+  "notice": "Evidence boards support inspection; they do not replace visual review or user approval."
+}

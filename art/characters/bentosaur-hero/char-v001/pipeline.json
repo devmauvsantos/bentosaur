@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "pipeline_id": "bentosaur-hero-char-v001",
+  "character_id": "bentosaur-hero",
+  "character_version": "char-v001",
+  "status": "production-topology-in-progress",
+  "active_stage": "S40",
+  "source_coordinate_contract": {
+    "front_axis": "+X",
+    "up_axis": "+Z",
+    "character_left_axis": "+Y",
+    "unit_system": "METRIC",
+    "unit_scale": 1,
+    "origin": "Tripo source bounds centered near world origin"
+  },
+  "production_coordinate_contract": {
+    "effective_from_stage": "S40",
+    "front_axis": "-Y",
+    "up_axis": "+Z",
+    "character_left_axis": "+X",
+    "symmetry_plane": "local X = 0",
+    "unit_system": "METRIC",
+    "unit_scale": 1,
+    "target_height_m": 1,
+    "origin": "midpoint between planted feet at Z = 0"
+  },
+  "decisions": {
+    "visual_source": "H3.1 Extreme is the immutable appearance and silhouette authority.",
+    "scaffold_role": "The repaired Smart LowPoly is approved only as a bounded retopology scaffold.",
+    "rigging_block": "No stage before an approved S40 production topology may be rigged as the hero.",
+    "face_requirement": "Production topology must contain separate expressive eyes, a real oral cavity, tongue, jaw-compatible lip loops, and chew/smile support."
+  },
+  "stages": [
+    {
+      "code": "S10",
+      "slug": "reference-lock",
+      "active_revision": "r001",
+      "manifest": "art/characters/bentosaur-hero/char-v001/stages/s10-reference-lock/r001/manifest.json",
+      "state": "frozen"
+    },
+    {
+      "code": "S20",
+      "slug": "high-visual-source",
+      "active_revision": "r001",
+      "manifest": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/manifest.json",
+      "state": "frozen"
+    },
+    {
+      "code": "S30",
+      "slug": "retopo-scaffold",
+      "active_revision": "r001",
+      "manifest": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/manifest.json",
+      "state": "frozen"
+    },
+    {
+      "code": "S40",
+      "slug": "production-topology",
+      "active_revision": "r003",
+      "manifest": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/manifest.json",
+      "state": "wip"
+    },
+    {
+      "code": "S50",
+      "slug": "uv-and-bake",
+      "active_revision": null,
+      "manifest": null,
+      "state": "pending"
+    },
+    {
+      "code": "S60",
+      "slug": "final-lookdev",
+      "active_revision": null,
+      "manifest": null,
+      "state": "pending"
+    },
+    {
+      "code": "S70",
+      "slug": "rig-and-skin",
+      "active_revision": null,
+      "manifest": null,
+      "state": "pending"
+    },
+    {
+      "code": "S80",
+      "slug": "animation-library",
+      "active_revision": null,
+      "manifest": null,
+      "state": "pending"
+    },
+    {
+      "code": "S90",
+      "slug": "godot-runtime",
+      "active_revision": null,
+      "manifest": null,
+      "state": "pending"
+    }
+  ],
+  "required_animation_set": [
+    "stall_idle-loop",
+    "street_walk-loop",
+    "wait-loop",
+    "request",
+    "receive",
+    "eat-loop",
+    "delight",
+    "disappointed",
+    "face_blink"
+  ],
+  "required_runtime_sockets": [
+    "socket_hand_l",
+    "socket_hand_r",
+    "socket_tray",
+    "socket_mouth_bite"
+  ],
+  "api_credit_ledger": {
+    "tripo_consumed": 305,
+    "tripo_remaining": 4695,
+    "additional_cost_for_pipeline_migration": 0
+  }
+}

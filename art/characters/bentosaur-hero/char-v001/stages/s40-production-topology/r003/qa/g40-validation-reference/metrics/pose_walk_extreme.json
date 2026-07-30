@@ -1,0 +1,467 @@
+{
+  "schema_version": "1.0.0",
+  "diagnostic_only": true,
+  "pose": "walk_extreme",
+  "intent": "Opposed exaggerated arm/leg stride at the intended mobile-game motion envelope.",
+  "is_neutral": false,
+  "declared_angles_degrees": {
+    "thigh.L": 26.2,
+    "shin.L": 24.7,
+    "upper_arm.L": 62.5,
+    "forearm.L": 67.4,
+    "thigh.R": 42.4,
+    "shin.R": 8.6,
+    "upper_arm.R": 37.2,
+    "forearm.R": 43.8
+  },
+  "applied_actions": [
+    {
+      "operation": "aim_chain",
+      "bones": [
+        "thigh.L",
+        "shin.L",
+        "foot.L"
+      ],
+      "directions": [
+        [
+          0.029999999329447746,
+          -0.6000000238418579,
+          -0.800000011920929
+        ],
+        [
+          0.0,
+          0.10000000149011612,
+          -1.0
+        ],
+        [
+          0.0,
+          -0.9900000095367432,
+          -0.07999999821186066
+        ]
+      ],
+      "computed_rest_angle_degrees": [
+        26.163881436549048,
+        24.65893292275407,
+        4.4703669226229845
+      ],
+      "declared_angles_degrees": [
+        26.2,
+        24.7,
+        4.5
+      ]
+    },
+    {
+      "operation": "aim_chain",
+      "bones": [
+        "upper_arm.L",
+        "forearm.L",
+        "hand.L"
+      ],
+      "directions": [
+        [
+          0.03999999910593033,
+          0.5600000023841858,
+          -0.8299999833106995
+        ],
+        [
+          -0.029999999329447746,
+          0.3499999940395355,
+          -0.9399999976158142
+        ],
+        [
+          -0.029999999329447746,
+          0.3499999940395355,
+          -0.9399999976158142
+        ]
+      ],
+      "computed_rest_angle_degrees": [
+        62.476792187238814,
+        67.4454337895321,
+        100.34803962537096
+      ],
+      "declared_angles_degrees": [
+        62.5,
+        67.4,
+        100.3
+      ]
+    },
+    {
+      "operation": "aim_chain",
+      "bones": [
+        "thigh.R",
+        "shin.R",
+        "foot.R"
+      ],
+      "directions": [
+        [
+          -0.029999999329447746,
+          0.47999998927116394,
+          -0.8799999952316284
+        ],
+        [
+          0.0,
+          -0.20000000298023224,
+          -0.9800000190734863
+        ],
+        [
+          0.0,
+          -0.9900000095367432,
+          -0.07999999821186066
+        ]
+      ],
+      "computed_rest_angle_degrees": [
+        42.41142444360137,
+        8.610393453585596,
+        4.4703669226229845
+      ],
+      "declared_angles_degrees": [
+        42.4,
+        8.6,
+        4.5
+      ]
+    },
+    {
+      "operation": "aim_chain",
+      "bones": [
+        "upper_arm.R",
+        "forearm.R",
+        "hand.R"
+      ],
+      "directions": [
+        [
+          -0.03999999910593033,
+          -0.6499999761581421,
+          -0.7599999904632568
+        ],
+        [
+          0.029999999329447746,
+          -0.41999998688697815,
+          -0.9100000262260437
+        ],
+        [
+          0.029999999329447746,
+          -0.41999998688697815,
+          -0.9100000262260437
+        ]
+      ],
+      "computed_rest_angle_degrees": [
+        37.190694219421246,
+        43.78430954224685,
+        61.80205828970077
+      ],
+      "declared_angles_degrees": [
+        37.2,
+        43.8,
+        61.8
+      ]
+    }
+  ],
+  "stage": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/stages/70_pose_walk_extreme.blend",
+  "renders": {
+    "front_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/walk_extreme/front_three_quarter.png",
+    "front": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/walk_extreme/front.png",
+    "side": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/walk_extreme/side.png"
+  },
+  "regions": {
+    "arm_L": {
+      "face_count": 555,
+      "edge_count": 1102,
+      "face_area_ratio": {
+        "minimum": 0.32669143911717374,
+        "p05": 0.6387261525407406,
+        "median": 1.0,
+        "p95": 2.1396510947051244,
+        "maximum": 6.34017873237907,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 24
+      },
+      "edge_length_ratio": {
+        "minimum": 0.4290873541268684,
+        "p05": 0.8087898655695395,
+        "median": 1.0,
+        "p95": 1.2352223187984082,
+        "maximum": 7.300547845488232,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 30
+      }
+    },
+    "arm_R": {
+      "face_count": 555,
+      "edge_count": 1102,
+      "face_area_ratio": {
+        "minimum": 0.20061725565821711,
+        "p05": 0.6133946780556765,
+        "median": 1.0,
+        "p95": 1.843582809551074,
+        "maximum": 3.506359820535896,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 8
+      },
+      "edge_length_ratio": {
+        "minimum": 0.20502001461962335,
+        "p05": 0.8270581967913612,
+        "median": 1.0,
+        "p95": 1.2900601686129296,
+        "maximum": 4.725137445038684,
+        "collapse_below": 0.35,
+        "collapsed_count": 6,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 22
+      }
+    },
+    "head_neck": {
+      "face_count": 2984,
+      "edge_count": 5965,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "leg_L": {
+      "face_count": 1232,
+      "edge_count": 2450,
+      "face_area_ratio": {
+        "minimum": 0.45011333385192137,
+        "p05": 0.7442028323324845,
+        "median": 1.0000000398615727,
+        "p95": 1.221910157848584,
+        "maximum": 3.4481708319022473,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 2
+      },
+      "edge_length_ratio": {
+        "minimum": 0.5242424793159547,
+        "p05": 0.8083311522924537,
+        "median": 1.000000107828662,
+        "p95": 1.3183840962730518,
+        "maximum": 4.24059105783279,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 10
+      }
+    },
+    "leg_R": {
+      "face_count": 1232,
+      "edge_count": 2450,
+      "face_area_ratio": {
+        "minimum": 0.052804963003994794,
+        "p05": 0.6021118678792379,
+        "median": 0.9973812652066238,
+        "p95": 1.1940883482437075,
+        "maximum": 3.250269478392653,
+        "collapse_below": 0.1,
+        "collapsed_count": 4,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 1
+      },
+      "edge_length_ratio": {
+        "minimum": 0.11478827500370968,
+        "p05": 0.7167479497134679,
+        "median": 0.9999997519039894,
+        "p95": 1.1449217480809963,
+        "maximum": 3.744105763282931,
+        "collapse_below": 0.35,
+        "collapsed_count": 2,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 11
+      }
+    },
+    "tail": {
+      "face_count": 834,
+      "edge_count": 1672,
+      "face_area_ratio": {
+        "minimum": 0.8891090753022488,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0280429624165972,
+        "maximum": 1.1423406935920888,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 0.8366781469184509,
+        "p05": 0.994826203660071,
+        "median": 1.0,
+        "p95": 1.018989072491511,
+        "maximum": 1.2128890390277922,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "torso": {
+      "face_count": 2656,
+      "edge_count": 5355,
+      "face_area_ratio": {
+        "minimum": 0.07446702524083529,
+        "p05": 0.5415990667842765,
+        "median": 1.0,
+        "p95": 1.6244436627653016,
+        "maximum": 6.928922105883483,
+        "collapse_below": 0.1,
+        "collapsed_count": 2,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 32
+      },
+      "edge_length_ratio": {
+        "minimum": 0.1710208946142726,
+        "p05": 0.7485013466844126,
+        "median": 1.0,
+        "p95": 1.4891168116379214,
+        "maximum": 7.47003304636211,
+        "collapse_below": 0.35,
+        "collapsed_count": 12,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 101
+      }
+    }
+  },
+  "threshold_flags": [
+    {
+      "region": "arm_L",
+      "reasons": [
+        {
+          "metric": "face_area_ratio",
+          "kind": "severe_stretch",
+          "count": 24,
+          "threshold": 3.0
+        },
+        {
+          "metric": "edge_length_ratio",
+          "kind": "severe_stretch",
+          "count": 30,
+          "threshold": 2.5
+        }
+      ]
+    },
+    {
+      "region": "arm_R",
+      "reasons": [
+        {
+          "metric": "face_area_ratio",
+          "kind": "severe_stretch",
+          "count": 8,
+          "threshold": 3.0
+        },
+        {
+          "metric": "edge_length_ratio",
+          "kind": "collapse",
+          "count": 6,
+          "threshold": 0.35
+        },
+        {
+          "metric": "edge_length_ratio",
+          "kind": "severe_stretch",
+          "count": 22,
+          "threshold": 2.5
+        }
+      ]
+    },
+    {
+      "region": "leg_L",
+      "reasons": [
+        {
+          "metric": "face_area_ratio",
+          "kind": "severe_stretch",
+          "count": 2,
+          "threshold": 3.0
+        },
+        {
+          "metric": "edge_length_ratio",
+          "kind": "severe_stretch",
+          "count": 10,
+          "threshold": 2.5
+        }
+      ]
+    },
+    {
+      "region": "leg_R",
+      "reasons": [
+        {
+          "metric": "face_area_ratio",
+          "kind": "collapse",
+          "count": 4,
+          "threshold": 0.1
+        },
+        {
+          "metric": "face_area_ratio",
+          "kind": "severe_stretch",
+          "count": 1,
+          "threshold": 3.0
+        },
+        {
+          "metric": "edge_length_ratio",
+          "kind": "collapse",
+          "count": 2,
+          "threshold": 0.35
+        },
+        {
+          "metric": "edge_length_ratio",
+          "kind": "severe_stretch",
+          "count": 11,
+          "threshold": 2.5
+        }
+      ]
+    },
+    {
+      "region": "torso",
+      "reasons": [
+        {
+          "metric": "face_area_ratio",
+          "kind": "collapse",
+          "count": 2,
+          "threshold": 0.1
+        },
+        {
+          "metric": "face_area_ratio",
+          "kind": "severe_stretch",
+          "count": 32,
+          "threshold": 3.0
+        },
+        {
+          "metric": "edge_length_ratio",
+          "kind": "collapse",
+          "count": 12,
+          "threshold": 0.35
+        },
+        {
+          "metric": "edge_length_ratio",
+          "kind": "severe_stretch",
+          "count": 101,
+          "threshold": 2.5
+        }
+      ]
+    }
+  ],
+  "diagnostic_pass": false
+}

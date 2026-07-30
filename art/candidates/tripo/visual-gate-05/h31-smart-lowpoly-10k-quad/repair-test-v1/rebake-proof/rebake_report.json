@@ -1,0 +1,57 @@
+{
+  "status": "experiment_only_manual_ngon_review_required",
+  "inputs": {
+    "low": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/model.fbx",
+    "high": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/model.glb"
+  },
+  "topology_before": {
+    "vertices": 12059,
+    "edges": 25079,
+    "faces": 12996,
+    "triangles": 24071,
+    "quad_faces": 11075,
+    "triangle_faces": 1921,
+    "ngons": 0,
+    "boundary_edges": 95,
+    "non_manifold_edges": 95,
+    "uv_layers": 1
+  },
+  "fill_operation": {
+    "boundary_edges_before": 95,
+    "holes_fill_faces": 22,
+    "boundary_edges_after_holes_fill": 12,
+    "contextual_fill_faces": 2
+  },
+  "topology_after_fill": {
+    "vertices": 12059,
+    "edges": 25079,
+    "faces": 13020,
+    "triangles": 24118,
+    "quad_faces": 11075,
+    "triangle_faces": 1939,
+    "ngons": 6,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "uv_layers": 1
+  },
+  "bake": {
+    "map": "base_color_only",
+    "resolution": 1024,
+    "uv_layer": "UV_REBAKE",
+    "seconds": 4.4287676671519876,
+    "cage_extrusion": 0.006,
+    "max_ray_distance": 0.025,
+    "margin_pixels": 12
+  },
+  "output": {
+    "glb": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/rebake-proof/repaired_rebaked.glb",
+    "glb_bytes": 1902712,
+    "glb_sha256": "b9d80ab6c2e1362a14aa4703c270f7fda2b0b33b5586148e7c4f884c8f99811a",
+    "base_color": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/rebake-proof/repaired_basecolor_1k.png"
+  },
+  "known_limitations": [
+    "Six generated n-gons still require manual retopology or controlled triangulation.",
+    "Only base colour was baked; normal, roughness, metallic, AO and final Painter work remain.",
+    "Smart UV Project is sufficient for this proof but is not the approved character UV layout."
+  ]
+}

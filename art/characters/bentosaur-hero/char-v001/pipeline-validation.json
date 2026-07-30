@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "pipeline": "art/characters/bentosaur-hero/char-v001/pipeline.json",
+  "checked_at": "2026-07-29T22:29:38.343Z",
+  "checked_stages": [
+    {
+      "code": "S10",
+      "revision": "r001",
+      "state": "frozen"
+    },
+    {
+      "code": "S20",
+      "revision": "r001",
+      "state": "frozen"
+    },
+    {
+      "code": "S30",
+      "revision": "r001",
+      "state": "frozen"
+    },
+    {
+      "code": "S40",
+      "revision": "r003",
+      "state": "wip"
+    }
+  ],
+  "valid": true,
+  "errors": []
+}

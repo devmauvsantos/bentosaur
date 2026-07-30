@@ -1,0 +1,784 @@
+{
+  "schema_version": "1.0.0",
+  "root": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/joint_deformation_repair",
+  "file_count": 129,
+  "total_bytes": 4104817196,
+  "current_candidate": "stages/40_paired_joint_support_loops_candidate.blend",
+  "current_candidate_status": "FAILED_DIAGNOSTIC_BRANCH_RETAINED_FOR_EVIDENCE",
+  "entries": [
+    {
+      "path": "README.md",
+      "bytes": 5519,
+      "sha256": "58f1bc5d5841d6f02565f1a2bd61e2d0030c8dae0fc7936227c60739932a6dee",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "deformation-reprobe/bounded_deformation_reprobe_report.json",
+      "bytes": 44751,
+      "sha256": "4333011c40cc65f9b1ffe9b54af7536138d78f96f2b8ad04e4f7f7b072712354",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/bounded_reprobe_pose_contact_sheet.png",
+      "bytes": 499539,
+      "sha256": "a75f1d84fcf07f9ad10c0cdc0fe40a61331d4152ce9b0e12c353f79d00b7c9f0",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/neutral/front.png",
+      "bytes": 388560,
+      "sha256": "f9af116ddff15abd681fce45d2bd1af88e2d644fe9b4720f7c611e4a80df36d5",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/neutral/front_three_quarter.png",
+      "bytes": 452185,
+      "sha256": "45aa41267c620aaf2587f5f0454fe09524fcac036c4657184f0a3edf5d9cad2d",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/neutral/side.png",
+      "bytes": 381811,
+      "sha256": "79c261922c02002bf1ced9b7afbff2ba1da55fc0d6fb0740776a53e2a2aff307",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/reach_tray_hold/front.png",
+      "bytes": 373515,
+      "sha256": "85a8ab98a07a82571602f44458f9020a03a082174126339b1427d52cf7d42059",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/reach_tray_hold/front_three_quarter.png",
+      "bytes": 450177,
+      "sha256": "fa0f1589973df8e3da7fa89a53e605d7f0ec1e4661f0bb48a7b8ddb8619230be",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/reach_tray_hold/side.png",
+      "bytes": 376935,
+      "sha256": "8159913cc76ca2e5ded15b879a8f5a72a50eeb73111dfa72ee8ea1a0ff389213",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/squat/front.png",
+      "bytes": 383198,
+      "sha256": "4c0590bc47a5a8f1f14714cfb8bf3ec31bce8cb3324acbccdf4708378954e498",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/squat/front_three_quarter.png",
+      "bytes": 446681,
+      "sha256": "0e71fccf914dac8994d333ec8f98b2087bdfd64ec346aef81bb53a0c163b8b73",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/squat/side.png",
+      "bytes": 377262,
+      "sha256": "4c24b938135543ddb0405ebb2516aa2e7a22e7c0618695b621b3ab29d3abbf41",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/tail_bend/front.png",
+      "bytes": 388233,
+      "sha256": "2431788ffebd12b0520824a2573ef4f10fcc3642281a797c40ede23eda0832e0",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/tail_bend/front_three_quarter.png",
+      "bytes": 452887,
+      "sha256": "6fd9df5699e983aac6e7b1b65b73507fb4dcb7d7bcb27b0771fa5f5750674be3",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/tail_bend/side.png",
+      "bytes": 375469,
+      "sha256": "68a900db78038d0f43f7adbe62d3f95fe3505584a3b1f7ed8c5d9bbb021d18f9",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/walk_extreme/front.png",
+      "bytes": 376932,
+      "sha256": "bd79e32e685625fe2cca10462ef0a3d12d4560f252e09662d5d9c2f48e3557b6",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/walk_extreme/front_three_quarter.png",
+      "bytes": 446775,
+      "sha256": "fffb28b7a7119329ea90bb6659e1dd0074ae8c5d0b53b262af29910d13a0708b",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/renders/walk_extreme/side.png",
+      "bytes": 379563,
+      "sha256": "9317782289e7d3eb6d066cc3e76a991086bdff6be8b7eba2751079989991082f",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/stages/60_reprobe_armature_no_weights.blend",
+      "bytes": 12927999,
+      "sha256": "56a41536877d4e6f332e69245487230b9ba7ffa9b9305d8b2f2e8eed2b11725a",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/stages/65_reprobe_automatic_weights.blend",
+      "bytes": 13191306,
+      "sha256": "0d51aab33cab920c591dfa6de485005dc3918d61404090d8fc43826fac3b7842",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/stages/70_reprobe_headlock_weights_neutral.blend",
+      "bytes": 13077218,
+      "sha256": "42e2a31d23b8473e3c9768b369b9a1ac6940ebd98f2440fcc5012a7f18a4b66d",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/stages/80_pose_neutral.blend",
+      "bytes": 13613328,
+      "sha256": "cd0e6dacbc4aa5af3d466401aad07abefce98958ef323f9e329e31750cfdf0e4",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/stages/81_pose_reach_tray_hold.blend",
+      "bytes": 13602421,
+      "sha256": "39bab50572d4fd9dd2ac3c6802c0ff1131249491ef7fda4d70fec6e12be15e54",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/stages/82_pose_squat.blend",
+      "bytes": 13605733,
+      "sha256": "35477571ae17af2ad628f56c3eab6ca601a7df82b0fb01bca2c00f5a35b1a2e0",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/stages/83_pose_walk_extreme.blend",
+      "bytes": 13609743,
+      "sha256": "b84f068dc288d18fe4817f70d73f64c574de40e24e5fc0a56df48ab355c6158c",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "deformation-reprobe/stages/84_pose_tail_bend.blend",
+      "bytes": 13594923,
+      "sha256": "3b29c1cf091096aef6eb02dd0a18811ced2d57f63375f9d72951d988d2f7540f",
+      "status": "bounded_reprobe_evidence"
+    },
+    {
+      "path": "evidence/after_front_three_quarter_wire.png",
+      "bytes": 421983,
+      "sha256": "fa398e6a0e20d278d0fe1060b5af8a76f1b3cb9f17c5636f9dabd9205680be3a",
+      "status": "current_visual_evidence"
+    },
+    {
+      "path": "evidence/after_front_wire.png",
+      "bytes": 413636,
+      "sha256": "6d3582e4436525d36a6e3733d4dcd1627af55af532a29a32b47e9df8a4a9a8aa",
+      "status": "current_visual_evidence"
+    },
+    {
+      "path": "evidence/after_side_wire.png",
+      "bytes": 374111,
+      "sha256": "684683b5ec722487c851cc343f67d2fa82064a42cc11ad35ea59b84957e616f1",
+      "status": "current_visual_evidence"
+    },
+    {
+      "path": "evidence/before_after_wire_board.png",
+      "bytes": 1172558,
+      "sha256": "01737241ce2eab636847043e15c6ef4fb38bb871fc5252000b9bdb6b77d71c77",
+      "status": "current_visual_evidence"
+    },
+    {
+      "path": "evidence/before_front_three_quarter_wire.png",
+      "bytes": 409935,
+      "sha256": "77bf7b53cdf6ddfa46d78dbf92c3601a01ed17fa1b8942badf31ad11f954bffb",
+      "status": "current_visual_evidence"
+    },
+    {
+      "path": "evidence/before_front_wire.png",
+      "bytes": 402095,
+      "sha256": "99d63dd3efa7554533ab10e55cba71062d087884fe2aeac91c52aeb9bd80252f",
+      "status": "current_visual_evidence"
+    },
+    {
+      "path": "evidence/before_side_wire.png",
+      "bytes": 365618,
+      "sha256": "b73f77a721a04b2800bdf42397eddfdf461ea09ff4fc0c59e3bc9119357fc62c",
+      "status": "current_visual_evidence"
+    },
+    {
+      "path": "failed-branches/branch_outcomes.json",
+      "bytes": 1896,
+      "sha256": "a6d5f2449baf432f214bdfa0f7d7173e8a0f0b832dddc285f7177dfd5bcce397",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run1/00_canonical_r003_full_exact_copy.blend",
+      "bytes": 170164924,
+      "sha256": "6da34d289ae731e483df97089f6da1be87b9810e46bec4feaf8909b58acb96fe",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run1/05_body_only_working_snapshot.blend",
+      "bytes": 82957933,
+      "sha256": "2c0666cecaf1ed171ba86d31fee5f3a8c47c4a442f125c7c9e4ff40712982f92",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run1/10_mirrored_shoulder_armpit_support_ring.blend",
+      "bytes": 82995463,
+      "sha256": "863ea2000ae512405c5d81fe369b479302760cce2bba33f4577e571208eddf1e",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run1/20_mirrored_hip_groin_support_ring.blend",
+      "bytes": 83001147,
+      "sha256": "6bfa8fc72ff715fd6ec492b9307af5e9cafd123f7e77d94687fc43d7343cb9c4",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run1/30_mirrored_knee_support_ring.blend",
+      "bytes": 83012443,
+      "sha256": "901e32ba20f99b5aaed17f0d45a9e7a773aed11aeaf188f94b4e1b02a2eb9acc",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run2-asymmetric/qa/localized_joint_support_loop_report.json",
+      "bytes": 33187,
+      "sha256": "b33a16404a458732ff21e2319688233f6ebdfa46679a429d6b10175509ca6cdc",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run2-asymmetric/qa/new_vertex_indices.json",
+      "bytes": 19423,
+      "sha256": "338cb29c8ce50609976fc4a06d9f4d7f26700e0b15f532d8599d5e1a59b9bb26",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run2-asymmetric/stages/00_canonical_r003_full_exact_copy.blend",
+      "bytes": 170164985,
+      "sha256": "04993c6e0f7f54730d4f3d2017e41ffc00c0474a172593c0c99e6c9f5177af04",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run2-asymmetric/stages/05_body_only_working_snapshot.blend",
+      "bytes": 82957994,
+      "sha256": "bd44b428cd64a3a6d0e3a8e8f2323c5f87d15787843f1addd893cb619d60bef8",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run2-asymmetric/stages/10_mirrored_shoulder_armpit_support_ring.blend",
+      "bytes": 82995524,
+      "sha256": "4b22f67b02b83dc4eaa57d06ff5a0ad861ce0e22f1950044c1a33bb209991c55",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run2-asymmetric/stages/20_mirrored_hip_groin_support_ring.blend",
+      "bytes": 83001208,
+      "sha256": "c07a84c16ea14d57bb1035c2eb8ad675a2dc8c8b08a94ecc3d98b6aa8b59e447",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run2-asymmetric/stages/30_mirrored_knee_support_ring.blend",
+      "bytes": 83012504,
+      "sha256": "8080bde7e563b3beaf2674d723e7d8c2b4950786e085ffcebb6c080c9d1325cf",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/inset-all-regions-run2-asymmetric/stages/40_localized_joint_support_loops_candidate.blend",
+      "bytes": 83008657,
+      "sha256": "dcd076ea670a1094ccdf2d8fe287416408024dce0d41d83b04483487048f17e3",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/local-inset-probe/00_body_only_input.blend",
+      "bytes": 82957343,
+      "sha256": "9e9e23c8051c3af8ff8de33792058943009f5e40dcd70e20e9e3e0f37c90d8b3",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/local-inset-probe/10_shoulders_inset_projected.blend",
+      "bytes": 82966799,
+      "sha256": "2c7076ca8b2146534bb60ddc7753a10b08cb6b5612bcf4dede41a59d20ba3f2b",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/local-inset-probe/report.json",
+      "bytes": 1585,
+      "sha256": "234412439a75e45142cb289e8e8902529d6ea727624af03c162cd5dee0416454",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/evidence/after_front_three_quarter_wire.png",
+      "bytes": 428008,
+      "sha256": "80480afecc87bb9af1743da985e7cb3e463580d135d6fe71f9fd1693097139c5",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/evidence/after_front_wire.png",
+      "bytes": 419081,
+      "sha256": "5e0514c061fc4f69aaa4f4b31000c4f11de4a7df83e43117efbf7143748a347d",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/evidence/after_side_wire.png",
+      "bytes": 381656,
+      "sha256": "c4894ff0635ed10da0c16894cdd47bf2c85d5fc4b1b07205356d789169df4f9c",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/evidence/before_after_wire_board.png",
+      "bytes": 1182096,
+      "sha256": "d6dc77d6cc75ef041afa62bd46f397b54631341042e2c33e72371d812e6305d4",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/evidence/before_front_three_quarter_wire.png",
+      "bytes": 409935,
+      "sha256": "17bacf92e1011b8251ee1cd5e0e0fc8a7c63f092a29545f063e1e319c9087ec3",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/evidence/before_front_wire.png",
+      "bytes": 402095,
+      "sha256": "231a825c1d5aa2fc2004f9fa7c46b1aaa406104e371a2729d8e2ad07c489a86d",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/evidence/before_side_wire.png",
+      "bytes": 365618,
+      "sha256": "c156859b19d524e495c7b8c4fde96cd56d0d74c0a785d7cd110b70254bc76b55",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/qa/paired_joint_support_loop_report.json",
+      "bytes": 38624,
+      "sha256": "15cd4f6fbe89111e3caf153346490235ff0eda3cfe310dfbd477603358461afc",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/qa/paired_new_vertex_indices.json",
+      "bytes": 20959,
+      "sha256": "d0c01994aa26c9f5cc68f3a14f7774563b28963f5b90dc6415d07011592dfd15",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/qa/partitioned_symmetry_audit.json",
+      "bytes": 574,
+      "sha256": "240add2e2ce23684e71c1e7fe6a9e00939c833b87a4ba1ffad2d6b277b2262e4",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/qa/wireframe_render_report.json",
+      "bytes": 2491,
+      "sha256": "9f5e8f53bd08d8fbec358467a9d4e4d0898e0f344c6f3698febd1e4a8f462b2d",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/stages/00_canonical_r003_full_exact_copy.blend",
+      "bytes": 170165025,
+      "sha256": "25fb02137ef950ef164f58bcccb57152516b7a4296423ac3e4cdfcb125701592",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/stages/05_body_only_working_snapshot.blend",
+      "bytes": 82958003,
+      "sha256": "879179bac2752fbfdaae3e2bb6b16329ab5e21c935bd308def78dc44ef3434b2",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/stages/10_paired_shoulder_armpit_support_ring.blend",
+      "bytes": 82965330,
+      "sha256": "bb12cd7b0774743bd25655779c5fbf4619cbae813f1d9a14eb508182c709e37f",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/stages/20_paired_hip_groin_support_ring.blend",
+      "bytes": 82975039,
+      "sha256": "dfb8b9aa233c8c26d1e11058929dfe8c9ef64f011b1febaa8c9a9712f33211e7",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/stages/30_paired_knee_support_ring.blend",
+      "bytes": 82988466,
+      "sha256": "7725d8c03f0940a28d6ee9955e033bde925de55f115b48e0dab44cdc34e9557f",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/stages/40_paired_joint_support_loops_candidate.blend",
+      "bytes": 82984202,
+      "sha256": "deafe7e6a37acf8050e593c43e8bbb379582ae7d357b7f6c66422f83a5f1c068",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run3-semantic-spill/stages/50_before_after_wireframe_qa_scene.blend",
+      "bytes": 95847204,
+      "sha256": "3e86107561191c4eacbe98e24329f859e53ee34329e42942d7001018732ce9e1",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/evidence/after_front_three_quarter_wire.png",
+      "bytes": 423033,
+      "sha256": "e592ce637c0f7d1a047c71bf90d49d420c6f2cc118d50f1bb5966188c3174166",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/evidence/after_front_wire.png",
+      "bytes": 413459,
+      "sha256": "55d17cc5a2d421b2646c180054287e8b54959234f58229bb2ff203cc20242db9",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/evidence/after_side_wire.png",
+      "bytes": 376826,
+      "sha256": "e226d6d021e295a89a76c537ad8b29979a71391c9186ae86c8a008aa7ce060e7",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/evidence/before_after_wire_board.png",
+      "bytes": 1173758,
+      "sha256": "6a7b6a58d91ee8e955924f790159172359c87d7d3312da89cd0333b5ce9b952a",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/evidence/before_front_three_quarter_wire.png",
+      "bytes": 409935,
+      "sha256": "87c16d963e4e492db6faf9a29ccf60598ffd36ec5ae860e706c512e7c934a1a3",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/evidence/before_front_wire.png",
+      "bytes": 402095,
+      "sha256": "4a287e0b838dc1ef1faded52b7f49f9ac3227b0879bd300bcbe9c48b43787517",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/evidence/before_side_wire.png",
+      "bytes": 365618,
+      "sha256": "a512a64bd44db92efad8a908c2cdd0e36e23a2a1f3d4ab18792e38c924e64a12",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/qa/paired_joint_support_loop_report.json",
+      "bytes": 32379,
+      "sha256": "3901ae35dd03a70d1b1be3b63d7896c84d72e64ebd23a63d396b9194bf9521b5",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/qa/paired_new_vertex_indices.json",
+      "bytes": 15295,
+      "sha256": "03c0f53fe0f49ff136345b62acc050c0105bf28620bfe7d5813c22299e4c1613",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/qa/partitioned_symmetry_audit.json",
+      "bytes": 574,
+      "sha256": "e509b5624bc6560a8412aa6eae020f1f4e2493b7cfb49bdefb72261f1e253098",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/qa/wireframe_render_report.json",
+      "bytes": 2491,
+      "sha256": "225f92b38f1147a45dd4329778b36a952c9168f3bf14ca927b01ef6743ce96e3",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/stages/00_canonical_r003_full_exact_copy.blend",
+      "bytes": 170165018,
+      "sha256": "e5b1144d497dff3cf6e0a9b507285e261eb2fe9640bd8b4b6247c6d0e35ede54",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/stages/05_body_only_working_snapshot.blend",
+      "bytes": 82957996,
+      "sha256": "c83802670f0e7c7f91cb81ddc237d23af54aee7261c9fec3ef7eeb60a7a0231e",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/stages/10_paired_shoulder_armpit_support_ring.blend",
+      "bytes": 82966517,
+      "sha256": "cbe66ec0a5ef06fe1afb6fc511b8407a359b7126122556e0856ccdede5c3ec11",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/stages/20_paired_hip_groin_support_ring.blend",
+      "bytes": 82970603,
+      "sha256": "252efb1a9f49662dc23b81eafef98fc36c9bc0e2c70920bff7d6bc57e06d1e89",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/stages/30_paired_knee_support_ring.blend",
+      "bytes": 82980203,
+      "sha256": "7e3348a7e257cbb1dc8f96bd37c24105d21d092147845d4557b188a7315b9d96",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/stages/40_paired_joint_support_loops_candidate.blend",
+      "bytes": 82975564,
+      "sha256": "1feaba6c1bb45e2b009e81c6533bd8fd97b6bd553ff4b2b555ca89fd93bfab5d",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run4-headneck-boundary-spill/stages/50_before_after_wireframe_qa_scene.blend",
+      "bytes": 95821314,
+      "sha256": "39486524658894731f24ae76adbcb73562154c9603fd3c1c3f14e0216ec33b17",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/evidence/after_front_three_quarter_wire.png",
+      "bytes": 423470,
+      "sha256": "e3241aa7d549c4b245dabd7bd1b73e1888d53e213f6f01dd0635b9cf931d12ff",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/evidence/after_front_wire.png",
+      "bytes": 413191,
+      "sha256": "1f9da7ebe44133debf3343976ee2736133a82bf856eadf9b2203437b6a00100a",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/evidence/after_side_wire.png",
+      "bytes": 378029,
+      "sha256": "55fc518b0084df28312a72790842e46ee0ede521a41d1cf47bc44169f7507043",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/evidence/before_front_three_quarter_wire.png",
+      "bytes": 409935,
+      "sha256": "70e6ae7e898c3bc638b1da74b059fe995de0dc45fea1355b4d76e2f6af9fb656",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/evidence/before_front_wire.png",
+      "bytes": 402095,
+      "sha256": "df1677c8ba5804b4b5d4f884b3651eae80fd3d696652e0b7a79f4996b17c5332",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/evidence/before_side_wire.png",
+      "bytes": 365618,
+      "sha256": "5135672a908b860babe9f7383fe470d7b7e049f291518b46f63e2130123bfdb6",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/qa/paired_joint_support_loop_report.json",
+      "bytes": 32222,
+      "sha256": "9a8a14cea3414e30c07c15f17b6626a28a35fe082ddf774123746ce11c6fdcb3",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/qa/paired_new_vertex_indices.json",
+      "bytes": 16255,
+      "sha256": "a9980477ccd4ac4d91add5d28141847eac053e9f4c2dd40b724473392cf6e97a",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/qa/wireframe_render_report.json",
+      "bytes": 2491,
+      "sha256": "a6bdb136736297ddb853353297bd2c8bf32bff9866d3737dd6d7083711db1c35",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/stages/00_canonical_r003_full_exact_copy.blend",
+      "bytes": 170165006,
+      "sha256": "cab28180810f64d3b6495a0fb1a6183f09634ea72f7adb40bdfe4fcfc133d069",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/stages/05_body_only_working_snapshot.blend",
+      "bytes": 82957984,
+      "sha256": "a2091283419cab78c40815c18aaf17d4f64b57b8e3b07b42ce60e0a25668e283",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/stages/10_paired_shoulder_armpit_support_ring.blend",
+      "bytes": 82965862,
+      "sha256": "6b060a9f6c9d7fe192189b61d71f15abfa5cbc9caf8e557020a2900d4f2338c4",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/stages/20_paired_hip_groin_support_ring.blend",
+      "bytes": 82971787,
+      "sha256": "3aeb578601e246cb3bba06d4461cd745ecbd38986d777d095f81bd7cf3fee234",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/stages/30_paired_knee_support_ring.blend",
+      "bytes": 82981288,
+      "sha256": "d36b8ec9b846d50e772b713e80a3327cb5fdce8c71a982d84bacfd93e12fd055",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/stages/40_paired_joint_support_loops_candidate.blend",
+      "bytes": 82976993,
+      "sha256": "a2f676a4c808dba8eca6946c4f8096f1885e3bd08e64c3a456e41761fedc58ef",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "failed-branches/paired-run5-bone-capsule-overlap/stages/50_before_after_wireframe_qa_scene.blend",
+      "bytes": 95827617,
+      "sha256": "c75f664f3c237d079c5ea3ebbeaa1ec4eb959edc88e69b8751382d4d9dd6f405",
+      "status": "retained_failed_branch"
+    },
+    {
+      "path": "qa/baseline_pose_summary.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "current_qa"
+    },
+    {
+      "path": "qa/joint_edge_ring_audit.json",
+      "bytes": 937212,
+      "sha256": "0f364dabd98b183e70dd745f59351170b5ccd85b8969c3cc62d95b2a2152bd4b",
+      "status": "current_qa"
+    },
+    {
+      "path": "qa/paired_joint_support_loop_report.json",
+      "bytes": 39274,
+      "sha256": "0e77bf70c6ad268c6edc8eeabea936abeb92b6179e6c0a6ad8e6d7c27c4a1f28",
+      "status": "current_qa"
+    },
+    {
+      "path": "qa/paired_new_vertex_indices.json",
+      "bytes": 13567,
+      "sha256": "e8798c397881fbf1f0c7fc9770ef725b0dd8fb3ab3b6bc7eb5a008f4cab1db82",
+      "status": "current_qa"
+    },
+    {
+      "path": "qa/partitioned_symmetry_audit.json",
+      "bytes": 574,
+      "sha256": "5e06de4e9bc311b226d6fe3b90f72e084d55a576516cd7ff61ad72f41a2d38ee",
+      "status": "current_qa"
+    },
+    {
+      "path": "qa/support_ring_geometry_audit.json",
+      "bytes": 5036,
+      "sha256": "9cd54f51e96fb08b17e783849e6230cda11ed5e983d842f19391d706a4f216b4",
+      "status": "current_qa"
+    },
+    {
+      "path": "qa/wireframe_render_report.json",
+      "bytes": 2491,
+      "sha256": "8405562c0b8e80a7f0e423a9359166f79017f476f42da4b6dce9b21c4b99b76b",
+      "status": "current_qa"
+    },
+    {
+      "path": "recipes/audit_joint_edge_rings.py",
+      "bytes": 6344,
+      "sha256": "c27978db48d5a8fe9597b0c918e64cf657be084fe0d4971fc040615c929a8f77",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/audit_partitioned_symmetry.py",
+      "bytes": 3141,
+      "sha256": "2df043bfbd338ec02b3b6f5c91cf1c2798df1ef6c533f7d62c2289b6de1430e7",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/audit_support_ring_geometry.py",
+      "bytes": 4095,
+      "sha256": "309a25b47dff4c16a22097cba0778ec9a99443941a9213a9375940c5db4fc7ca",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/build_inventory.py",
+      "bytes": 2096,
+      "sha256": "ae3edd45e7a7495286c55c54e064cd0aaec124a6fa5906b3db077f60f6823d8c",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/build_localized_joint_support_loops.py",
+      "bytes": 17055,
+      "sha256": "9970bec7ba62502d9d58a9fd0000c93c7ebf7ecb3d3f5aa4bebb5cc4a680ae2d",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/build_paired_joint_support_loops.py",
+      "bytes": 24335,
+      "sha256": "2280ac20b683f8e86f251cf25a8bddf62aed07ba1875297a29354ae583731020",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/build_reprobe_contact_sheet.py",
+      "bytes": 1917,
+      "sha256": "4ced84f327ce58e7ffe758ad6481c2f821b19220838cff520a3a48ed6171cc9f",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/build_wire_contact_sheet.py",
+      "bytes": 2223,
+      "sha256": "4399e1a7cd4e13a8b0c85421d75a4c48f1f10d0900a77f6b5820e15c584a4c63",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/finalize_deformation_verdict.py",
+      "bytes": 2826,
+      "sha256": "334976865010b201ecd1dcf1c4a8466eee81cd8f154c3d8b934c2cc483ae513e",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/finalize_paired_candidate_report.py",
+      "bytes": 1736,
+      "sha256": "104778e8d131b789ed7ab602cd15b14d32fd2dfb748b4a48495b709c644e6749",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/probe_local_inset_branch.py",
+      "bytes": 4644,
+      "sha256": "d1c469f728f69a19f294d5814301ad6f736b35c6e4a1f750931e5c7c58e76182",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/render_before_after_wire_qa.py",
+      "bytes": 8609,
+      "sha256": "6e68554a045f028189fd9a06593d0ce6fef81eae913fd7cb8a26a9f052b4a87e",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "recipes/run_bounded_deformation_reprobe.py",
+      "bytes": 6718,
+      "sha256": "ce20ab37c373b97e8fac69faf0473799e9a012d0768bd2e19c9b459f7f2249d6",
+      "status": "reproducible_recipe_or_metadata"
+    },
+    {
+      "path": "stages/00_canonical_r003_full_exact_copy.blend",
+      "bytes": 170165018,
+      "sha256": "e5b1144d497dff3cf6e0a9b507285e261eb2fe9640bd8b4b6247c6d0e35ede54",
+      "status": "current_diagnostic_candidate"
+    },
+    {
+      "path": "stages/05_body_only_working_snapshot.blend",
+      "bytes": 82957996,
+      "sha256": "c83802670f0e7c7f91cb81ddc237d23af54aee7261c9fec3ef7eeb60a7a0231e",
+      "status": "current_diagnostic_candidate"
+    },
+    {
+      "path": "stages/10_paired_shoulder_armpit_support_ring.blend",
+      "bytes": 82962396,
+      "sha256": "488088f9afc367e6623857976a708bd6eed94f2f1992199bacd881b6461b50e2",
+      "status": "current_diagnostic_candidate"
+    },
+    {
+      "path": "stages/20_paired_hip_groin_support_ring.blend",
+      "bytes": 82970341,
+      "sha256": "d2a1e252250023fc8b8fe9c0c4490cea9fb396a77fa444b8064e0d230c650cb1",
+      "status": "current_diagnostic_candidate"
+    },
+    {
+      "path": "stages/30_paired_knee_support_ring.blend",
+      "bytes": 82977231,
+      "sha256": "ce9c5d33da481d4a520ef8a125b61b9031401e86810648fd90a142e626687bfa",
+      "status": "current_diagnostic_candidate"
+    },
+    {
+      "path": "stages/40_paired_joint_support_loops_candidate.blend",
+      "bytes": 82972743,
+      "sha256": "cd655585f6eafbdda7a4239b677d43d7b88581d4a404403594c5e82acef4691d",
+      "status": "current_diagnostic_candidate"
+    },
+    {
+      "path": "stages/50_before_after_wireframe_qa_scene.blend",
+      "bytes": 95815037,
+      "sha256": "7df8f067791543436efbfdb11813ff7dc266ce0f07f014918ce538181353b0db",
+      "status": "current_diagnostic_candidate"
+    }
+  ]
+}

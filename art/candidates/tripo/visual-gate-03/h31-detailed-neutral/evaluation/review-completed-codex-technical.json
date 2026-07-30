@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "candidate_id": "bentosaur_vg03_h31_detailed_neutral",
+  "reviewer": "Codex technical geometry routing review; not user final appearance approval",
+  "expected_mouth": "closed",
+  "scores": {
+    "overall_silhouette": 3,
+    "eye_forms": 2,
+    "muzzle_and_cheeks": 2,
+    "neutral_closed_mouth_seam": 2,
+    "primary_horns": 2,
+    "frill_and_frill_knobs": 3,
+    "hands_and_fingers": 3,
+    "feet_and_toes": 3,
+    "tail": 3
+  },
+  "blockers": {
+    "doubled_or_ghost_eye_geometry": false,
+    "fused_or_malformed_primary_horns": false,
+    "lumpy_or_melted_frill_knobs": false,
+    "fused_or_missing_digits": false,
+    "broken_tail_silhouette": false,
+    "severe_left_right_asymmetry": false,
+    "unintended_detached_large_parts": false,
+    "malformed_or_collapsed_neutral_mouth_seam": false
+  },
+  "notes": {
+    "routing_outcome": "Suitable as a high-density sculpt source for production rebuild.",
+    "eyes": "Clean semantic oval pads exist without ghost doubles, but authored eye geometry and controlled catchlights must replace them.",
+    "mouth": "The closed seam is readable and not collapsed, but it is angular. Rebuild the muzzle, lip loops, mouth bag, and tongue during retopology; do not preserve this seam as final topology.",
+    "horns": "Primary horn volumes are intact and separated. Mild left-right shape asymmetry should be corrected during retopology.",
+    "surface": "Broad forms are substantially cleaner than P1. Minor generated surface rippling should be smoothed during the production rebuild.",
+    "approval_scope": "This passes only the source-sculpt routing gate. Final materials, appearance, rigging, and animation remain unapproved."
+  }
+}

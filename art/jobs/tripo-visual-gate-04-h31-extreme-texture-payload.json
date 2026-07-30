@@ -1,0 +1,25 @@
+{
+  "input": "f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+  "model": "v3.0-20250812",
+  "texture_prompt": {
+    "images": [
+      {
+        "file_token": "file_d5a435f8-2101-4a07-a8b1-e99398f13bd1"
+      },
+      {
+        "file_token": "file_b57591f5-66cb-48ec-a9e2-f7ac8cd70de0"
+      },
+      {
+        "file_token": "file_a2aa6c57-d60a-44b3-9af9-cb370c115bec"
+      },
+      {
+        "file_token": "file_c5d11e12-30c4-4e25-9721-095847965186"
+      }
+    ]
+  },
+  "texture_quality": "extreme",
+  "texture_alignment": "original_image",
+  "pbr": true,
+  "bake": false,
+  "texture_seed": 29072026
+}

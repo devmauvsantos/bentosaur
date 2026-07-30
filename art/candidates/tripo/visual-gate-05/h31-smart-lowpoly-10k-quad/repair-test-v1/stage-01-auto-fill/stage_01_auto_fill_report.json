@@ -1,0 +1,149 @@
+{
+  "source": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/model.fbx",
+  "operation": "conservative_bmesh_holes_fill",
+  "raw_source_modified": false,
+  "before": {
+    "vertices": 12059,
+    "edges": 25079,
+    "faces": 12996,
+    "triangles": 1921,
+    "quads": 11075,
+    "ngons": 0,
+    "boundary_edges": 95,
+    "non_manifold_edges": 95,
+    "loose_edges": 0,
+    "loose_vertices": 0
+  },
+  "repair": {
+    "boundary_edges_before": 95,
+    "operator_returned_faces": 22,
+    "new_faces": 22,
+    "new_triangles": 18,
+    "new_quads": 0,
+    "new_ngons": 4,
+    "new_face_vertex_counts": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      5,
+      8,
+      8,
+      8
+    ],
+    "boundary_edges_after": 12,
+    "non_manifold_edges_after": 12
+  },
+  "after": {
+    "vertices": 12059,
+    "edges": 25079,
+    "faces": 13018,
+    "triangles": 1939,
+    "quads": 11075,
+    "ngons": 4,
+    "boundary_edges": 12,
+    "non_manifold_edges": 12,
+    "loose_edges": 0,
+    "loose_vertices": 0
+  },
+  "remaining_boundary_components": [
+    {
+      "edge_count": 7,
+      "vertex_count": 7,
+      "closed_loop": true,
+      "degrees": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "centroid": [
+        0.19714733958244324,
+        0.1486063450574875,
+        -0.19958250224590302
+      ],
+      "minimum": [
+        0.17550988495349884,
+        0.1255994290113449,
+        -0.2173854261636734
+      ],
+      "maximum": [
+        0.21768918633460999,
+        0.16586151719093323,
+        -0.17520615458488464
+      ],
+      "dimensions": [
+        0.042179301381111145,
+        0.04026208817958832,
+        0.04217927157878876
+      ]
+    },
+    {
+      "edge_count": 5,
+      "vertex_count": 5,
+      "closed_loop": true,
+      "degrees": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "centroid": [
+        0.19353197515010834,
+        0.2716931998729706,
+        -0.25457990169525146
+      ],
+      "minimum": [
+        0.19084779918193817,
+        0.2693925201892853,
+        -0.2557302713394165
+      ],
+      "maximum": [
+        0.1965995579957962,
+        0.27514421939849854,
+        -0.2538129985332489
+      ],
+      "dimensions": [
+        0.005751758813858032,
+        0.005751699209213257,
+        0.0019172728061676025
+      ]
+    }
+  ],
+  "bounds_after": {
+    "minimum": [
+      -0.43225541710853577,
+      -0.3287866413593292,
+      -0.48963361978530884
+    ],
+    "maximum": [
+      0.4343373775482178,
+      0.3288269639015198,
+      0.4900764226913452
+    ],
+    "dimensions": [
+      0.8665927648544312,
+      0.6576136350631714,
+      0.979710042476654
+    ]
+  },
+  "interpretation_guardrail": "A closed mesh after automatic filling is not evidence of deformation-ready topology or valid UVs on the inserted faces."
+}

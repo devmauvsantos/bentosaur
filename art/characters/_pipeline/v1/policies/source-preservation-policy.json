@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "bentosaur-character-source-preservation-v1",
+  "rules": [
+    "Existing art/candidates artifacts are immutable evidence and are never moved or overwritten.",
+    "Every production stage from S20 through S90 owns at least one editable native source file.",
+    "Every meaningful topology, UV, material, rig, weight, corrective-shape, animation, or export-contract change creates a numbered native checkpoint before the next operation begins.",
+    "Rejected experimental branches remain in a hashed experiment inventory; only the reviewed successful chain is copied into a production revision.",
+    "A frozen stage is never edited; continuing work creates the next zero-padded revision.",
+    "Derived GLB, FBX, PNG, texture, preview, and runtime files never become lineage authority.",
+    "Every frozen input, editable source, recipe, report, and output records its repository-relative path, byte size, and SHA-256.",
+    "Every Blender source is packed at freeze time or enumerates every external dependency by hash.",
+    "Human visual, identity, expression, and animation approvals remain separate from automated technical validation.",
+    "No file may be named final, latest, new, or approved; pipeline.json is the only mutable active-revision pointer.",
+    "API credentials, access tokens, and private headers must never enter a source file, manifest, Blender text block, render, or repository."
+  ]
+}

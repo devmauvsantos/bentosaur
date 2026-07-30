@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "blender_version": "5.1.2",
+  "source_blend": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/source/bentosaur_hero_s40_production_topology_r002.blend",
+  "object": "BENTOSAUR_BODY_RETOPO_WIP_R002",
+  "bounds": {
+    "minimum": [
+      -0.33561646938323975,
+      -0.44251376390457153,
+      -0.0010018646717071533
+    ],
+    "maximum": [
+      0.3355752229690552,
+      0.4392505884170532,
+      0.999247133731842
+    ],
+    "dimensions": [
+      0.6711916923522949,
+      0.8817643523216248,
+      1.0002490282058716
+    ]
+  },
+  "topology": {
+    "vertices": 11884,
+    "edges": 23770,
+    "faces": 11888,
+    "triangles_evaluated": 23764,
+    "quad_faces": 11636,
+    "triangle_faces": 132,
+    "ngon_faces": 120
+  },
+  "renders": {
+    "clay": {
+      "front": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/clay/front.png",
+      "left": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/clay/left.png",
+      "back": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/clay/back.png",
+      "right": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/clay/right.png",
+      "three_quarter_left": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/clay/three_quarter_left.png",
+      "three_quarter_right": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/clay/three_quarter_right.png"
+    },
+    "wire": {
+      "front": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/wire/front.png",
+      "left": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/wire/left.png",
+      "back": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/wire/back.png",
+      "right": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/wire/right.png",
+      "three_quarter_left": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/wire/three_quarter_left.png",
+      "three_quarter_right": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/wire/three_quarter_right.png"
+    }
+  }
+}

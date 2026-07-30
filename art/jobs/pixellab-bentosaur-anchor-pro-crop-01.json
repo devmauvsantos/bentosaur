@@ -1,0 +1,16 @@
+{
+  "description": "A single front-facing juvenile triceratops customer matching the reference character. Preserve its huge rounded sage-green frill, three short cream horns, tiny forearms pressed beside round cheeks, coral blush, closed joyful crescent eyes, open delighted mouth, chunky cute proportions, cozy hand-authored personality, dark selective outline, warm cream highlights, and simple readable pixel clusters. Complete the character as a centered isolated full-body game sprite with two short sturdy legs and clear transparent padding on every side. No stall, counter, lantern, rain, background, food, speech bubble, UI, cast shadow, border, text, or logo.",
+  "width": 64,
+  "height": 64,
+  "no_background": true,
+  "style_image_base64": {
+    "$base64_file": "art/references/bentosaur-character-reference.png"
+  },
+  "style_copy": [
+    "color_palette",
+    "outline",
+    "detail",
+    "shading"
+  ],
+  "seed": 184724
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "blender_version": "5.1.2",
+  "source_blend": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+  "object": "BENTOSAUR_BODY_RETOPO_WIP_R003",
+  "bounds": {
+    "minimum": [
+      -0.33515220880508423,
+      -0.44193756580352783,
+      -0.00070151686668396
+    ],
+    "maximum": [
+      0.33511102199554443,
+      0.4384065270423889,
+      0.9988923072814941
+    ],
+    "dimensions": [
+      0.6702632308006287,
+      0.8803440928459167,
+      0.9995938539505005
+    ]
+  },
+  "topology": {
+    "vertices": 10050,
+    "edges": 20096,
+    "faces": 10048,
+    "triangles_evaluated": 20096,
+    "quad_faces": 10048,
+    "triangle_faces": 0,
+    "ngon_faces": 0
+  },
+  "renders": {
+    "clay": {
+      "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/clay/front.png",
+      "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/clay/left.png",
+      "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/clay/back.png",
+      "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/clay/right.png",
+      "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/clay/three_quarter_left.png",
+      "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/clay/three_quarter_right.png"
+    },
+    "wire": {
+      "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/wire/front.png",
+      "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/wire/left.png",
+      "back": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/wire/back.png",
+      "right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/wire/right.png",
+      "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/wire/three_quarter_left.png",
+      "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/stage-preview/wire/three_quarter_right.png"
+    }
+  }
+}

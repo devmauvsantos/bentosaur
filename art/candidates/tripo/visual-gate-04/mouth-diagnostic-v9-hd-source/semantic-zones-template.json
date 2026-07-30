@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "surface_object": "BENTOSAUR_LOOKDEV_SURFACE_PROXY_NOT_FINAL_RETOPOLOGY",
+  "status": "manual_polygon_zone_fit_required",
+  "default_material": "MAT_BENTOSAUR_BODY_SAGE",
+  "zones": {
+    "feature_cream": {
+      "material": "MAT_BENTOSAUR_FEATURE_CREAM",
+      "anatomical_regions": [
+        "belly",
+        "primary_horns",
+        "frill_knobs",
+        "dorsal_knobs",
+        "hand_claws",
+        "foot_claws"
+      ],
+      "polygon_indices": []
+    },
+    "accent_coral": {
+      "material": "MAT_BENTOSAUR_ACCENT_CORAL",
+      "anatomical_regions": [
+        "cheeks"
+      ],
+      "polygon_indices": [],
+      "implemented_as_separate_geometry": true
+    },
+    "face_ink": {
+      "material": "MAT_BENTOSAUR_FACE_INK",
+      "anatomical_regions": [
+        "eyes",
+        "mouth_cavity"
+      ],
+      "polygon_indices": [],
+      "implemented_as_separate_geometry": true
+    }
+  },
+  "warning": "Do not infer cream feature zones from world position alone. Fit these regions to the accepted HD anatomy after user review."
+}

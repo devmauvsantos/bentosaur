@@ -1,0 +1,132 @@
+{
+  "source_glb": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/tripo-out/bentosaur-p1-text-test-01-idle-w-1e367033/model.glb",
+  "action": "preset:walk",
+  "source_frame_range": [
+    1.0,
+    57.0
+  ],
+  "view": "left",
+  "sample_count": 24,
+  "frames": [
+    {
+      "sample": 0,
+      "source_frame": 1.0,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-000.png"
+    },
+    {
+      "sample": 1,
+      "source_frame": 3.3333333333333335,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-001.png"
+    },
+    {
+      "sample": 2,
+      "source_frame": 5.666666666666667,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-002.png"
+    },
+    {
+      "sample": 3,
+      "source_frame": 8.0,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-003.png"
+    },
+    {
+      "sample": 4,
+      "source_frame": 10.333333333333334,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-004.png"
+    },
+    {
+      "sample": 5,
+      "source_frame": 12.666666666666666,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-005.png"
+    },
+    {
+      "sample": 6,
+      "source_frame": 15.0,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-006.png"
+    },
+    {
+      "sample": 7,
+      "source_frame": 17.333333333333332,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-007.png"
+    },
+    {
+      "sample": 8,
+      "source_frame": 19.666666666666668,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-008.png"
+    },
+    {
+      "sample": 9,
+      "source_frame": 22.0,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-009.png"
+    },
+    {
+      "sample": 10,
+      "source_frame": 24.333333333333332,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-010.png"
+    },
+    {
+      "sample": 11,
+      "source_frame": 26.666666666666668,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-011.png"
+    },
+    {
+      "sample": 12,
+      "source_frame": 29.0,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-012.png"
+    },
+    {
+      "sample": 13,
+      "source_frame": 31.333333333333332,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-013.png"
+    },
+    {
+      "sample": 14,
+      "source_frame": 33.666666666666664,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-014.png"
+    },
+    {
+      "sample": 15,
+      "source_frame": 36.0,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-015.png"
+    },
+    {
+      "sample": 16,
+      "source_frame": 38.333333333333336,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-016.png"
+    },
+    {
+      "sample": 17,
+      "source_frame": 40.666666666666664,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-017.png"
+    },
+    {
+      "sample": 18,
+      "source_frame": 43.0,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-018.png"
+    },
+    {
+      "sample": 19,
+      "source_frame": 45.333333333333336,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-019.png"
+    },
+    {
+      "sample": 20,
+      "source_frame": 47.666666666666664,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-020.png"
+    },
+    {
+      "sample": 21,
+      "source_frame": 50.0,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-021.png"
+    },
+    {
+      "sample": 22,
+      "source_frame": 52.333333333333336,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-022.png"
+    },
+    {
+      "sample": 23,
+      "source_frame": 54.666666666666664,
+      "render": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/live-test-01-p1-text/animation/previews/walk-left/preset-walk-left-023.png"
+    }
+  ]
+}

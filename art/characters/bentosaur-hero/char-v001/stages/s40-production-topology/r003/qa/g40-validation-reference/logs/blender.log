@@ -1,0 +1,40 @@
+COMMAND=["/Applications/Blender.app/Contents/MacOS/Blender", "--background", "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend", "--python", "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/blender/g40_validate_in_blender.py", "--", "--input", "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend", "--body-object", "BENTOSAUR_BODY_RETOPO_WIP_R003", "--output", "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729", "--config", "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/run_inputs/config.json"]
+
+18:36:05 - tripo_addon - [task.py:21] - INFO - WebSocket server started on port 60600
+18:36:05 - tripo_addon - [ws_server.py:113] - INFO - WebSocket server running on ws://127.0.0.1:60600
+18:36:05 - tripo_addon - [ws_server.py:118] - INFO - Heartbeat monitoring started (timeout: 120s)
+00:00.692  blend            | Read blend: "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend"
+/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/blender/g40_validate_in_blender.py:1038: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  result.use_nodes = True
+00:05.242  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/neutral/front_three_quarter.png'
+00:05.711  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/neutral/front.png'
+00:06.154  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/neutral/side.png'
+00:07.095  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/reach_tray_hold/front_three_quarter.png'
+00:07.503  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/reach_tray_hold/front.png'
+00:08.140  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/reach_tray_hold/side.png'
+00:09.175  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/squat/front_three_quarter.png'
+00:09.639  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/squat/front.png'
+00:10.184  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/squat/side.png'
+00:11.106  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/walk_extreme/front_three_quarter.png'
+00:11.481  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/walk_extreme/front.png'
+00:11.920  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/walk_extreme/side.png'
+00:12.912  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/tail_bend/front_three_quarter.png'
+00:13.402  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/tail_bend/front.png'
+00:14.087  render           | Saved: '/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/tail_bend/side.png'
+[Tripo3D] Log file: /var/folders/_t/rns21y0n589f0w_cmkj3ycmh0000gn/T/tripo3d_blender_bridge.log
+Info: Saved as "05_body_isolated.blend"
+Info: Saved as "10_diagnostic_rig_neutral_no_weights.blend"
+Info: Saved as "20_automatic_weights.blend"
+Info: Saved as "30_bounded_diagnostic_weights.blend"
+Info: Saved as "40_pose_neutral.blend"
+Info: Saved as "50_pose_reach_tray_hold.blend"
+Info: Saved as "60_pose_squat.blend"
+Info: Saved as "70_pose_walk_extreme.blend"
+Info: Saved as "80_pose_tail_bend.blend"
+G40_BLENDER_REPORT={"animation_approval": false, "coordinate_contract_pass": true, "diagnostic_pass": false, "failing_poses": ["reach_tray_hold", "squat", "walk_extreme"], "rig_approval": false, "statement": "This run exercises a disposable bounded diagnostic rig. Passing metrics would not approve production topology, final weights, animation quality, art direction, or visual fidelity.", "topology_approval": false, "user_approval_required": true, "visual_approval": false}
+18:36:19 - tripo_addon - [ws_server.py:88] - INFO - Stopping WebSocket server...
+18:36:19 - tripo_addon - [task.py:27] - INFO - WebSocket server stop requested
+18:36:19 - tripo_addon - [ws_server.py:77] - INFO - Event loop closed
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

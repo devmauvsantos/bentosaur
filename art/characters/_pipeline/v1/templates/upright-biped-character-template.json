@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "bentosaur-upright-biped-character-v1",
+  "purpose": "Scaffold a source-preserved Bentosaur character production pipeline without copying character-specific geometry, weights, or approval.",
+  "required_identity_inputs": [
+    "stable_character_id",
+    "character_version",
+    "front_left_back_right_turnaround",
+    "neutral_and_delighted_expression_sheet",
+    "character_anatomy_contract",
+    "palette_contract",
+    "gameplay_camera_identity_reference"
+  ],
+  "production_coordinate_contract": {
+    "front_axis": "-Y",
+    "up_axis": "+Z",
+    "character_left_axis": "+X",
+    "symmetry_plane": "local X = 0",
+    "unit_system": "METRIC",
+    "unit_scale": 1,
+    "target_height_m": 1,
+    "origin": "midpoint between planted feet at Z = 0"
+  },
+  "stages": [
+    {
+      "code": "S10",
+      "slug": "reference-lock",
+      "gate": "G10_IDENTITY_LOCK",
+      "required_checkpoints": [
+        "turnaround_and_expression_sources",
+        "anatomy_and_palette_contracts",
+        "identity_approval_evidence"
+      ]
+    },
+    {
+      "code": "S20",
+      "slug": "high-visual-source",
+      "gate": "G20_HIGH_VISUAL_SOURCE",
+      "required_checkpoints": [
+        "00_raw_vendor_or_artist_import.blend",
+        "10_orientation_and_material_repair.blend",
+        "20_high_visual_source_master.blend"
+      ]
+    },
+    {
+      "code": "S30",
+      "slug": "retopo-scaffold",
+      "gate": "G30_SCAFFOLD_ACCEPTANCE",
+      "required_checkpoints": [
+        "00_high_source_snapshot.blend",
+        "10_generated_or_blocked_scaffold.blend",
+        "20_manifold_repair.blend",
+        "30_scaffold_master.blend"
+      ]
+    },
+    {
+      "code": "S40",
+      "slug": "production-topology",
+      "gate": "G40_DEFORMATION_TOPOLOGY",
+      "required_checkpoint_groups": [
+        "00_parent_snapshot",
+        "body_bootstrap",
+        "each_joint_flow_repair",
+        "mouth_aperture_and_support_loops",
+        "mouth_bag_tongue_and_eyes",
+        "each_facial_control_pass",
+        "deformation_candidate"
+      ]
+    },
+    {
+      "code": "S50",
+      "slug": "uv-and-bake",
+      "gate": "G50_BAKE_INTEGRITY",
+      "required_checkpoint_groups": [
+        "00_approved_s40_snapshot",
+        "seam_pass",
+        "unwrap_pass",
+        "bake_cage",
+        "each_accepted_bake",
+        "uv_bake_master"
+      ]
+    },
+    {
+      "code": "S60",
+      "slug": "final-lookdev",
+      "gate": "G60_FINAL_APPEARANCE",
+      "required_checkpoint_groups": [
+        "00_s50_snapshot",
+        "material_authoring",
+        "each_lighting_review",
+        "final_lookdev_master",
+        "painter_milestones_when_used"
+      ]
+    },
+    {
+      "code": "S70",
+      "slug": "rig-and-skin",
+      "gate": "G70_RIG_DEFORMATION",
+      "required_checkpoint_groups": [
+        "00_s60_snapshot",
+        "skeleton",
+        "control_rig",
+        "each_weight_region",
+        "each_corrective_shape_group",
+        "sockets",
+        "deformation_candidate"
+      ]
+    },
+    {
+      "code": "S80",
+      "slug": "animation-library",
+      "gate": "G80_ANIMATION_PERFORMANCE",
+      "required_checkpoint_groups": [
+        "00_approved_rig_snapshot",
+        "blocking_and_polish_per_clip",
+        "animation_library_master"
+      ]
+    },
+    {
+      "code": "S90",
+      "slug": "godot-runtime",
+      "gate": "G90_MOBILE_RUNTIME",
+      "required_checkpoint_groups": [
+        "00_approved_animation_snapshot",
+        "export_prep_master",
+        "deterministic_glb",
+        "godot_wrapper_scene",
+        "validation_and_device_evidence"
+      ]
+    }
+  ],
+  "standard_export_skeleton_family": "bentosaur-upright-biped-small-v1",
+  "standard_runtime_sockets": [
+    "socket_hand_l",
+    "socket_hand_r",
+    "socket_tray",
+    "socket_mouth_bite"
+  ],
+  "standard_animation_set": [
+    "stall_idle-loop",
+    "street_walk-loop",
+    "wait-loop",
+    "request",
+    "receive",
+    "eat-loop",
+    "delight",
+    "disappointed",
+    "face_blink"
+  ],
+  "never_copy_without_new_validation": [
+    "character_specific_topology",
+    "skin_weights",
+    "facial_shape_values",
+    "corrective_shapes",
+    "visual_approval",
+    "animation_polish"
+  ],
+  "source_rules": {
+    "numbered_native_checkpoint_per_meaningful_operation": true,
+    "frozen_revision_overwrite_allowed": false,
+    "derivative_can_replace_native_source": false,
+    "human_approval_separate_from_technical_qa": true,
+    "canonical_stage_requires_two_verified_copies_before_freeze": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "job_id": "anchor.bentosaur.triceratops.pro.crop.01",
+  "status": "planned",
+  "provider": "pixellab",
+  "operation": "create_image_pro",
+  "style_version": "bentosaur-character-crop-01",
+  "canvas": [64, 64],
+  "reference_path": "art/references/bentosaur-character-reference.png",
+  "style_copy": [
+    "color_palette",
+    "outline",
+    "detail",
+    "shading"
+  ],
+  "seed": 184724,
+  "expected_candidates": 16,
+  "expected_cost": "20 PixelLab subscription generations",
+  "purpose": "Test whether a tightly cropped character/style reference corrects the red global-palette drift produced by the full gameplay composition."
+}

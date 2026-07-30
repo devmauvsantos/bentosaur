@@ -1,0 +1,12 @@
+{
+  "first_frame_base64": {
+    "$base64_file": "art/candidates/pixellab/anchor-pro-crop-01/candidate-07.png"
+  },
+  "action": "A subtle joyful idle loop: a tiny breathing bob, forearms gently squeeze the cheeks, the eyes blink once, and the small tail sways slightly. Feet stay planted, the root position does not translate, the silhouette and anatomy remain stable, and the character returns exactly to the starting pose.",
+  "frame_count": 4,
+  "last_frame_base64": {
+    "$base64_file": "art/candidates/pixellab/anchor-pro-crop-01/candidate-07.png"
+  },
+  "no_background": true,
+  "seed": 184725
+}

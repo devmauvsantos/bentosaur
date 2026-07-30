@@ -1,0 +1,3 @@
+{
+  "question": "Can a non-humanoid 64x64 chibi triceratops be stored as a one-direction object from a supplied reference and animated with animate_object for exactly one south-facing 4-frame idle loop? If yes, what operation and settings preserve the supplied identity best?"
+}

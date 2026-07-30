@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "diagnostic_only": true,
+  "candidate": "S40_r003_axis_qf_winner",
+  "result": "FAIL_DEFORMATION_CONFIRMATION_WITH_MATERIAL_IMPROVEMENT",
+  "fallback_result_applies_to_r003": false,
+  "source": {
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+    "object": "BENTOSAUR_BODY_RETOPO_WIP_R003",
+    "sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9",
+    "vertices": 10050,
+    "faces": 10048,
+    "quads": 10048,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "coordinate_contract": {
+    "front": "-Y",
+    "character_left": "+X",
+    "up": "+Z",
+    "floor_z": 0.0,
+    "confirmed": true,
+    "x_mirror_p95_error": 6.664001972467304e-8,
+    "x_mirror_maximum_error": 1.0116600606124848e-6
+  },
+  "pose_results": {
+    "neutral": "pass",
+    "reach_tray_hold": "fail_shoulder_armpit_transition",
+    "squat": "fail_hip_groin_with_local_leg_outliers",
+    "walk_extreme": "fail_shoulder_and_hip_knee_transition",
+    "tail_bend": "pass"
+  },
+  "comparison_to_rejected_fallback": {
+    "overall": "materially_better",
+    "tail_failure_reproduced": false,
+    "shoulder_failure_reproduced": true,
+    "hip_groin_failure_reproduced": true,
+    "knee_leg_failure_reproduced": true,
+    "failure_severity": "localized_in_r003_instead_of_global",
+    "recommendation": "continue_from_r003_do_not_restore_fallback"
+  },
+  "weights": {
+    "automatic_maximum_influences": 14,
+    "automatic_vertices_over_four": 2632,
+    "selected_maximum_influences": 4,
+    "selected_unweighted_vertices": 0,
+    "polish_iterations": 0,
+    "bounded_cleanup": [
+      "head_frill_rigid_mass_lock",
+      "opposite_side_leak_removal",
+      "impossible_tail_leak_removal",
+      "normalize_and_cap_four"
+    ]
+  },
+  "next_required_work": [
+    "manual_shoulder_armpit_topology_and_weight_inspection",
+    "manual_pelvis_groin_and_knee_topology_and_weight_inspection",
+    "rerun_reach_squat_walk",
+    "retain_current_tail_unless_future_animation_fails"
+  ],
+  "approvals": {
+    "topology": false,
+    "rig": false,
+    "animation": false
+  },
+  "selected_weights": {
+    "path": "stages/31_minimal_confirmation_weights_headlock.blend",
+    "sha256": "a328889a540b143c567c5e83a5251f6ead4d926ce7012589797de77e1fd365ff"
+  },
+  "selected_report": {
+    "path": "r003_confirmation_report_v2.json",
+    "sha256": "98652241cdf27725a9bd755adc56f62a20b4cf735fb321a90feb71c4c5ceb6e3"
+  },
+  "selected_evidence": {
+    "path": "evidence/r003_headlock_pose_contact_sheet.png",
+    "sha256": "3e7a1d86cf5c8e371695f1f4b7ec581e49f2ee4af499db53f51e54974d487c77"
+  }
+}

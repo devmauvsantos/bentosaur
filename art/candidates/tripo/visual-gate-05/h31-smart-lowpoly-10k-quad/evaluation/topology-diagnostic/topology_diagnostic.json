@@ -1,0 +1,604 @@
+{
+  "source_low": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/tripo-out/model.fbx",
+  "source_high": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/model.glb",
+  "boundary_edge_count": 95,
+  "boundary_component_count": 20,
+  "boundary_components": [
+    {
+      "edge_count": 11,
+      "vertex_count": 10,
+      "closed_loop": false,
+      "centroid": [
+        0.22401610016822815,
+        -0.12076598405838013,
+        -0.20473165810108185
+      ],
+      "minimum": [
+        0.21768918633460999,
+        -0.12747634947299957,
+        -0.22313715517520905
+      ],
+      "maximum": [
+        0.23877887427806854,
+        -0.10063495486974716,
+        -0.17137165367603302
+      ],
+      "dimensions": [
+        0.021089687943458557,
+        0.02684139460325241,
+        0.051765501499176025
+      ],
+      "perimeter": 0.1686745767040376
+    },
+    {
+      "edge_count": 11,
+      "vertex_count": 10,
+      "closed_loop": false,
+      "centroid": [
+        0.22401610016822815,
+        0.12080635875463486,
+        -0.20473165810108185
+      ],
+      "minimum": [
+        0.21768918633460999,
+        0.10067535191774368,
+        -0.22313715517520905
+      ],
+      "maximum": [
+        0.23877887427806854,
+        0.12751667201519012,
+        -0.17137165367603302
+      ],
+      "dimensions": [
+        0.021089687943458557,
+        0.02684132009744644,
+        0.051765501499176025
+      ],
+      "perimeter": 0.16867449316240155
+    },
+    {
+      "edge_count": 8,
+      "vertex_count": 8,
+      "closed_loop": true,
+      "centroid": [
+        0.13189268112182617,
+        -0.17205217480659485,
+        -0.19030439853668213
+      ],
+      "minimum": [
+        0.10840646922588348,
+        -0.17540736496448517,
+        -0.20204748213291168
+      ],
+      "maximum": [
+        0.14291679859161377,
+        -0.1677383929491043,
+        -0.17520615458488464
+      ],
+      "dimensions": [
+        0.034510329365730286,
+        0.007668972015380859,
+        0.02684132754802704
+      ],
+      "perimeter": 0.10148787579562532
+    },
+    {
+      "edge_count": 7,
+      "vertex_count": 7,
+      "closed_loop": true,
+      "centroid": [
+        0.19714733958244324,
+        0.1486063450574875,
+        -0.19958250224590302
+      ],
+      "minimum": [
+        0.17550988495349884,
+        0.1255994290113449,
+        -0.2173854261636734
+      ],
+      "maximum": [
+        0.21768918633460999,
+        0.16586151719093323,
+        -0.17520615458488464
+      ],
+      "dimensions": [
+        0.042179301381111145,
+        0.04026208817958832,
+        0.04217927157878876
+      ],
+      "perimeter": 0.19431654861422606
+    },
+    {
+      "edge_count": 6,
+      "vertex_count": 5,
+      "closed_loop": false,
+      "centroid": [
+        0.24107955396175385,
+        -0.09641703218221664,
+        -0.23195646703243256
+      ],
+      "minimum": [
+        0.2311098873615265,
+        -0.11213841289281845,
+        -0.24422681331634521
+      ],
+      "maximum": [
+        0.25028228759765625,
+        -0.07954529672861099,
+        -0.2173854261636734
+      ],
+      "dimensions": [
+        0.01917240023612976,
+        0.03259311616420746,
+        0.026841387152671814
+      ],
+      "perimeter": 0.09339887657379173
+    },
+    {
+      "edge_count": 6,
+      "vertex_count": 5,
+      "closed_loop": false,
+      "centroid": [
+        0.24107952415943146,
+        0.09645738452672958,
+        -0.23195646703243256
+      ],
+      "minimum": [
+        0.2311098873615265,
+        0.07958566397428513,
+        -0.24422681331634521
+      ],
+      "maximum": [
+        0.25028228759765625,
+        0.1121787503361702,
+        -0.2173854261636734
+      ],
+      "dimensions": [
+        0.01917240023612976,
+        0.03259308636188507,
+        0.026841387152671814
+      ],
+      "perimeter": 0.09339883543114694
+    },
+    {
+      "edge_count": 5,
+      "vertex_count": 5,
+      "closed_loop": true,
+      "centroid": [
+        0.1237444058060646,
+        0.17391391098499298,
+        -0.19706270098686218
+      ],
+      "minimum": [
+        0.10840646922588348,
+        0.17161321640014648,
+        -0.20204751193523407
+      ],
+      "maximum": [
+        0.14291679859161377,
+        0.17544768750667572,
+        -0.19054408371448517
+      ],
+      "dimensions": [
+        0.034510329365730286,
+        0.003834471106529236,
+        0.011503428220748901
+      ],
+      "perimeter": 0.08944670597909085
+    },
+    {
+      "edge_count": 5,
+      "vertex_count": 5,
+      "closed_loop": true,
+      "centroid": [
+        0.19353197515010834,
+        0.2716931998729706,
+        -0.25457990169525146
+      ],
+      "minimum": [
+        0.19084779918193817,
+        0.2693925201892853,
+        -0.2557302713394165
+      ],
+      "maximum": [
+        0.1965995579957962,
+        0.27514421939849854,
+        -0.2538129985332489
+      ],
+      "dimensions": [
+        0.005751758813858032,
+        0.005751699209213257,
+        0.0019172728061676025
+      ],
+      "perimeter": 0.0183082283824776
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.18637427687644958,
+        0.09684085100889206,
+        -0.06336709856987
+      ],
+      "minimum": [
+        0.1831788718700409,
+        0.09300636500120163,
+        -0.06400617212057114
+      ],
+      "maximum": [
+        0.18893057107925415,
+        0.10067535936832428,
+        -0.06208893656730652
+      ],
+      "dimensions": [
+        0.005751699209213257,
+        0.00766899436712265,
+        0.001917235553264618
+      ],
+      "perimeter": 0.019814863531439138
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        -0.3057175278663635,
+        0.0028960262425243855,
+        -0.3285853862762451
+      ],
+      "minimum": [
+        -0.30763477087020874,
+        0.002896026009693742,
+        -0.3285853862762451
+      ],
+      "maximum": [
+        -0.3038003146648407,
+        0.002896026009693742,
+        -0.3285853862762451
+      ],
+      "dimensions": [
+        0.003834456205368042,
+        0.0,
+        0.0
+      ],
+      "perimeter": 0.007668912406682354
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.2924616038799286,
+        -0.1428142488002777,
+        0.3136902451515198
+      ],
+      "minimum": [
+        0.2905443608760834,
+        -0.1428142488002777,
+        0.3136902451515198
+      ],
+      "maximum": [
+        0.2943788170814514,
+        -0.1428142488002777,
+        0.3136902451515198
+      ],
+      "dimensions": [
+        0.003834456205368042,
+        0.0,
+        0.0
+      ],
+      "perimeter": 0.007668912406682354
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.1684800386428833,
+        0.29048216342926025,
+        -0.2557302713394165
+      ],
+      "minimum": [
+        0.16400647163391113,
+        0.29048216342926025,
+        -0.2557302713394165
+      ],
+      "maximum": [
+        0.1716754138469696,
+        0.29048216342926025,
+        -0.2557302713394165
+      ],
+      "dimensions": [
+        0.007668942213058472,
+        0.0,
+        0.0
+      ],
+      "perimeter": 0.015337884407451397
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.2924616038799286,
+        0.14285463094711304,
+        0.3136902451515198
+      ],
+      "minimum": [
+        0.2905443608760834,
+        0.14285463094711304,
+        0.3136902451515198
+      ],
+      "maximum": [
+        0.2943788170814514,
+        0.14285463094711304,
+        0.3136902451515198
+      ],
+      "dimensions": [
+        0.003834456205368042,
+        0.0,
+        0.0
+      ],
+      "perimeter": 0.007668912406682354
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        -0.3057175278663635,
+        -0.0028556748293340206,
+        -0.3285853862762451
+      ],
+      "minimum": [
+        -0.30763477087020874,
+        -0.002855674596503377,
+        -0.3285853862762451
+      ],
+      "maximum": [
+        -0.3038003146648407,
+        -0.002855674596503377,
+        -0.3285853862762451
+      ],
+      "dimensions": [
+        0.003834456205368042,
+        0.0,
+        0.0
+      ],
+      "perimeter": 0.007668912406682354
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.21577195823192596,
+        -0.2674349248409271,
+        -0.24422681331634521
+      ],
+      "minimum": [
+        0.21385473012924194,
+        -0.2674349248409271,
+        -0.24614404141902924
+      ],
+      "maximum": [
+        0.21768918633460999,
+        -0.2674349248409271,
+        -0.2423095703125
+      ],
+      "dimensions": [
+        0.003834456205368042,
+        0.0,
+        0.003834471106529236
+      ],
+      "perimeter": 0.01084550098300713
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.21577195823192596,
+        0.2674752473831177,
+        -0.2442268431186676
+      ],
+      "minimum": [
+        0.21385473012924194,
+        0.2674752473831177,
+        -0.24614407122135162
+      ],
+      "maximum": [
+        0.21768918633460999,
+        0.2674752473831177,
+        -0.2423096001148224
+      ],
+      "dimensions": [
+        0.003834456205368042,
+        0.0,
+        0.003834471106529236
+      ],
+      "perimeter": 0.01084550098300713
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.1684800386428833,
+        -0.2904418110847473,
+        -0.2557302713394165
+      ],
+      "minimum": [
+        0.16400647163391113,
+        -0.2904418110847473,
+        -0.2557302713394165
+      ],
+      "maximum": [
+        0.1716754138469696,
+        -0.2904418110847473,
+        -0.2557302713394165
+      ],
+      "dimensions": [
+        0.007668942213058472,
+        0.0,
+        0.0
+      ],
+      "perimeter": 0.015337884407451397
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.18637427687644958,
+        -0.09680046886205673,
+        -0.0633670836687088
+      ],
+      "minimum": [
+        0.1831788718700409,
+        -0.10063494741916656,
+        -0.06400615721940994
+      ],
+      "maximum": [
+        0.18893057107925415,
+        -0.0929659828543663,
+        -0.06208892911672592
+      ],
+      "dimensions": [
+        0.005751699209213257,
+        0.0076689645648002625,
+        0.001917228102684021
+      ],
+      "perimeter": 0.01981482298740534
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.30013057589530945,
+        -0.1408970057964325,
+        0.31177300214767456
+      ],
+      "minimum": [
+        0.30013057589530945,
+        -0.1428142488002777,
+        0.31177300214767456
+      ],
+      "maximum": [
+        0.30013057589530945,
+        -0.1389797478914261,
+        0.31177300214767456
+      ],
+      "dimensions": [
+        0.0,
+        0.0038345009088516235,
+        0.0
+      ],
+      "perimeter": 0.0076690017673530005
+    },
+    {
+      "edge_count": 3,
+      "vertex_count": 3,
+      "closed_loop": true,
+      "centroid": [
+        0.30013057589530945,
+        0.14093738794326782,
+        0.31177300214767456
+      ],
+      "minimum": [
+        0.30013057589530945,
+        0.1390201598405838,
+        0.31177300214767456
+      ],
+      "maximum": [
+        0.30013057589530945,
+        0.14285463094711304,
+        0.31177300214767456
+      ],
+      "dimensions": [
+        0.0,
+        0.003834471106529236,
+        0.0
+      ],
+      "perimeter": 0.0076689422333548855
+    }
+  ],
+  "merge_by_distance_tests": [
+    {
+      "distance": 1e-07,
+      "vertices_before": 12059,
+      "vertices_after": 12059,
+      "vertices_merged": 0,
+      "boundary_edges_after": 95,
+      "non_manifold_edges_after": 95
+    },
+    {
+      "distance": 1e-06,
+      "vertices_before": 12059,
+      "vertices_after": 12059,
+      "vertices_merged": 0,
+      "boundary_edges_after": 95,
+      "non_manifold_edges_after": 95
+    },
+    {
+      "distance": 1e-05,
+      "vertices_before": 12059,
+      "vertices_after": 12059,
+      "vertices_merged": 0,
+      "boundary_edges_after": 95,
+      "non_manifold_edges_after": 95
+    },
+    {
+      "distance": 0.0001,
+      "vertices_before": 12059,
+      "vertices_after": 12059,
+      "vertices_merged": 0,
+      "boundary_edges_after": 95,
+      "non_manifold_edges_after": 95
+    },
+    {
+      "distance": 0.0005,
+      "vertices_before": 12059,
+      "vertices_after": 12059,
+      "vertices_merged": 0,
+      "boundary_edges_after": 95,
+      "non_manifold_edges_after": 95
+    },
+    {
+      "distance": 0.001,
+      "vertices_before": 12059,
+      "vertices_after": 12059,
+      "vertices_merged": 0,
+      "boundary_edges_after": 95,
+      "non_manifold_edges_after": 95
+    },
+    {
+      "distance": 0.005,
+      "vertices_before": 12059,
+      "vertices_after": 8509,
+      "vertices_merged": 3550,
+      "boundary_edges_after": 68,
+      "non_manifold_edges_after": 97
+    }
+  ],
+  "low_vertex_to_high_surface_distance": {
+    "samples": 12059,
+    "mean": 0.0007286113278985763,
+    "median": 0.0006154010188765824,
+    "p95": 0.001779641374014318,
+    "p99": 0.0024170223623514175,
+    "maximum": 0.004283646587282419
+  },
+  "normalization_reference": {
+    "character_height": 0.979710042476654,
+    "distance_values_are_in_normalized_model_units": true
+  },
+  "renders": {
+    "front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/topology-diagnostic/renders/boundary_front.png",
+    "three_quarter_left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/topology-diagnostic/renders/boundary_three_quarter_left.png",
+    "left": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/topology-diagnostic/renders/boundary_left.png",
+    "three_quarter_right": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/topology-diagnostic/renders/boundary_three_quarter_right.png"
+  }
+}

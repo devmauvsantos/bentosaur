@@ -1,0 +1,30 @@
+{
+  "id": "bentosaur-warm-v1",
+  "maximum_colors": 24,
+  "colors": [
+    {"id": "ink", "hex": "#120E18"},
+    {"id": "night", "hex": "#0D1430"},
+    {"id": "plum", "hex": "#2F1A25"},
+    {"id": "wood_dark", "hex": "#53221D"},
+    {"id": "wood_mid", "hex": "#6E312A"},
+    {"id": "brick", "hex": "#91332B"},
+    {"id": "terracotta", "hex": "#B36144"},
+    {"id": "coral", "hex": "#DA625A"},
+    {"id": "fern_deep", "hex": "#242B1F"},
+    {"id": "fern_dark", "hex": "#344A22"},
+    {"id": "fern_mid", "hex": "#585B26"},
+    {"id": "fern_light", "hex": "#A8B96F"},
+    {"id": "rain_deep", "hex": "#18224F"},
+    {"id": "rain_mid", "hex": "#3D5990"},
+    {"id": "rain_light", "hex": "#6E91C5"},
+    {"id": "berry_dark", "hex": "#8F2F59"},
+    {"id": "berry_mid", "hex": "#D64F7D"},
+    {"id": "berry_light", "hex": "#F28AAD"},
+    {"id": "amber_dark", "hex": "#9E532C"},
+    {"id": "amber_mid", "hex": "#CEA557"},
+    {"id": "amber_glow", "hex": "#F2B84B"},
+    {"id": "metal_dark", "hex": "#3F434E"},
+    {"id": "cream", "hex": "#EFD6A9"},
+    {"id": "rice", "hex": "#FAE7C7"}
+  ]
+}

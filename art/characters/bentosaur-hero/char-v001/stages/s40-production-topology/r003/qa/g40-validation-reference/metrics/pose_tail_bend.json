@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0.0",
+  "diagnostic_only": true,
+  "pose": "tail_bend",
+  "intent": "Five-bone lateral tail curl with mild lift.",
+  "is_neutral": false,
+  "declared_angles_degrees": {
+    "tail_01": 34.0,
+    "tail_02": 42.7,
+    "tail_03": 56.6,
+    "tail_04": 69.7,
+    "tail_05": 83.0
+  },
+  "applied_actions": [
+    {
+      "operation": "aim_chain",
+      "bones": [
+        "tail_01",
+        "tail_02",
+        "tail_03",
+        "tail_04",
+        "tail_05"
+      ],
+      "directions": [
+        [
+          0.20000000298023224,
+          0.9599999785423279,
+          0.019999999552965164
+        ],
+        [
+          0.5600000023841858,
+          0.8199999928474426,
+          0.05000000074505806
+        ],
+        [
+          0.7799999713897705,
+          0.6000000238418579,
+          0.07999999821186066
+        ],
+        [
+          0.9200000166893005,
+          0.36000001430511475,
+          0.07999999821186066
+        ],
+        [
+          0.9900000095367432,
+          0.11999999731779099,
+          0.019999999552965164
+        ]
+      ],
+      "computed_rest_angle_degrees": [
+        34.02402727490658,
+        42.65481823467477,
+        56.57140380065662,
+        69.71354836759657,
+        82.99437992563364
+      ],
+      "declared_angles_degrees": [
+        34.0,
+        42.7,
+        56.6,
+        69.7,
+        83.0
+      ]
+    }
+  ],
+  "stage": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/stages/80_pose_tail_bend.blend",
+  "renders": {
+    "front_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/tail_bend/front_three_quarter.png",
+    "front": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/tail_bend/front.png",
+    "side": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/tail_bend/side.png"
+  },
+  "regions": {
+    "arm_L": {
+      "face_count": 555,
+      "edge_count": 1102,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "arm_R": {
+      "face_count": 555,
+      "edge_count": 1102,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "head_neck": {
+      "face_count": 2984,
+      "edge_count": 5965,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "leg_L": {
+      "face_count": 1232,
+      "edge_count": 2450,
+      "face_area_ratio": {
+        "minimum": 0.6154929231154491,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.654621092339503,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 0.7353959815574578,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.316178584120097,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "leg_R": {
+      "face_count": 1232,
+      "edge_count": 2450,
+      "face_area_ratio": {
+        "minimum": 0.8026550708336107,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 2.0425571934563598,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 0.9263937537406909,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.8644216992492533,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "tail": {
+      "face_count": 834,
+      "edge_count": 1672,
+      "face_area_ratio": {
+        "minimum": 0.5324083149269816,
+        "p05": 0.6887680917605497,
+        "median": 0.9484143566930883,
+        "p95": 1.2676398288706814,
+        "maximum": 1.7954810574991313,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 0.4707200319331772,
+        "p05": 0.7541353690255177,
+        "median": 0.9898662241963213,
+        "p95": 1.1873877830884871,
+        "maximum": 1.6792799766010635,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "torso": {
+      "face_count": 2656,
+      "edge_count": 5355,
+      "face_area_ratio": {
+        "minimum": 0.5456242619931286,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 2.1563710743017626,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 0.4550889880029308,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 2.3122182243639506,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    }
+  },
+  "threshold_flags": [],
+  "diagnostic_pass": true
+}

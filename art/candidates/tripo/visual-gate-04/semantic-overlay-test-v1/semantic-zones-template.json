@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "surface_object": "BENTOSAUR_LOOKDEV_SURFACE_PROXY_NOT_FINAL_RETOPOLOGY",
+  "status": "fitted_static_lookdev_overlays_created;manual_final_retopology_zones_required",
+  "default_material": "MAT_BENTOSAUR_BODY_SAGE",
+  "zones": {
+    "feature_cream": {
+      "material": "MAT_BENTOSAUR_FEATURE_CREAM",
+      "anatomical_regions": [
+        "belly",
+        "primary_horns",
+        "frill_knobs",
+        "dorsal_knobs",
+        "hand_claws",
+        "foot_claws"
+      ],
+      "polygon_indices": [],
+      "implemented_for_static_visual_gate_as": "source_surface_fitted_non_destructive_overlays",
+      "overlay_objects": [
+        "SEMANTIC_CREAM_BELLY_FITTED_OVERLAY",
+        "SEMANTIC_CREAM_HORNS_FITTED_OVERLAY",
+        "SEMANTIC_CREAM_FRILL_KNOBS_FITTED_OVERLAY",
+        "SEMANTIC_CREAM_CLAWS_FITTED_OVERLAY"
+      ],
+      "final_retopology_assignment_complete": false
+    },
+    "accent_coral": {
+      "material": "MAT_BENTOSAUR_ACCENT_CORAL",
+      "anatomical_regions": [
+        "cheeks"
+      ],
+      "polygon_indices": [],
+      "implemented_as_separate_geometry": true
+    },
+    "face_ink": {
+      "material": "MAT_BENTOSAUR_FACE_INK",
+      "anatomical_regions": [
+        "eyes",
+        "mouth_cavity"
+      ],
+      "polygon_indices": [],
+      "implemented_as_separate_geometry": true
+    }
+  },
+  "warning": "The fitted overlays are visual-gate scaffolding, not deformation topology. A character artist must transfer the approved region boundaries to the final retopologized production surface."
+}

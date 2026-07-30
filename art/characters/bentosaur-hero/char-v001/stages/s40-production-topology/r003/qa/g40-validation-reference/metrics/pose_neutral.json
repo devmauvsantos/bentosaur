@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0.0",
+  "diagnostic_only": true,
+  "pose": "neutral",
+  "intent": "Rest-pose baseline and render-control checkpoint.",
+  "is_neutral": true,
+  "declared_angles_degrees": {},
+  "applied_actions": [],
+  "stage": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/stages/40_pose_neutral.blend",
+  "renders": {
+    "front_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/neutral/front_three_quarter.png",
+    "front": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/neutral/front.png",
+    "side": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/g40_validation_harness/runs/bentosaur_r003_reference_final_20260729/renders/neutral/side.png"
+  },
+  "regions": {
+    "arm_L": {
+      "face_count": 555,
+      "edge_count": 1102,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "arm_R": {
+      "face_count": 555,
+      "edge_count": 1102,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "head_neck": {
+      "face_count": 2984,
+      "edge_count": 5965,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "leg_L": {
+      "face_count": 1232,
+      "edge_count": 2450,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "leg_R": {
+      "face_count": 1232,
+      "edge_count": 2450,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "tail": {
+      "face_count": 834,
+      "edge_count": 1672,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    },
+    "torso": {
+      "face_count": 2656,
+      "edge_count": 5355,
+      "face_area_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.1,
+        "collapsed_count": 0,
+        "severe_stretch_above": 3.0,
+        "severe_stretch_count": 0
+      },
+      "edge_length_ratio": {
+        "minimum": 1.0,
+        "p05": 1.0,
+        "median": 1.0,
+        "p95": 1.0,
+        "maximum": 1.0,
+        "collapse_below": 0.35,
+        "collapsed_count": 0,
+        "severe_stretch_above": 2.5,
+        "severe_stretch_count": 0
+      }
+    }
+  },
+  "threshold_flags": [],
+  "diagnostic_pass": true
+}

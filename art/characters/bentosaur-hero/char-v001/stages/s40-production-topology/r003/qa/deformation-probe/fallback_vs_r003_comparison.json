@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "comparison_scope": "diagnostic_only",
+  "rejected_fallback": {
+    "source": "../center_seam_quad_repair/targeted-retile/40_all_quad_targeted_retile.blend",
+    "coordinate_contract_valid": false,
+    "pose_results": {
+      "neutral": "pass",
+      "reach_tray_hold": "fail",
+      "squat": "fail",
+      "walk_extreme": "fail",
+      "tail_bend": "fail"
+    }
+  },
+  "promoted_r003": {
+    "source": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+    "object": "BENTOSAUR_BODY_RETOPO_WIP_R003",
+    "sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9",
+    "coordinate_contract_valid": true,
+    "pose_results": {
+      "neutral": "pass",
+      "reach_tray_hold": "fail",
+      "squat": "fail",
+      "walk_extreme": "fail",
+      "tail_bend": "pass"
+    }
+  },
+  "selected_metric_comparison": {
+    "squat_leg_L": {
+      "fallback": {
+        "face_area_p95": 1.6094031674156648,
+        "edge_length_p95": 1.4764928938140287
+      },
+      "r003": {
+        "face_area_p95": 1.2104109940774834,
+        "edge_length_p95": 1.1974556015801325
+      }
+    },
+    "walk_leg_L": {
+      "fallback": {
+        "face_area_p95": 3.486826263376634,
+        "edge_length_p95": 3.695871494052347
+      },
+      "r003": {
+        "face_area_p95": 1.221910157848584,
+        "edge_length_p95": 1.3183840962730518
+      }
+    },
+    "tail": {
+      "fallback": {
+        "result": "fail",
+        "face_area_p95": 1.3360812919813045,
+        "edge_length_p95": 1.1842575047565984,
+        "collapsed_edges_below_0_35": 1
+      },
+      "r003": {
+        "result": "pass",
+        "face_area_p95": 1.2676398288706814,
+        "edge_length_p95": 1.1873877830884871,
+        "collapsed_edges_below_0_35": 0
+      }
+    }
+  },
+  "interpretation": {
+    "same_failures_reproduced": [
+      "shoulder_armpit",
+      "hip_groin",
+      "localized_knee_leg"
+    ],
+    "failure_not_reproduced": [
+      "tail_bend"
+    ],
+    "overall": "r003_materially_better_but_not_deformation_ready",
+    "production_direction": "continue_from_r003_not_fallback"
+  }
+}

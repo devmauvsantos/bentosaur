@@ -1,0 +1,366 @@
+{
+  "$schema": "../../../../../../_pipeline/v1/schemas/stage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "character_id": "bentosaur-hero",
+  "character_version": "char-v001",
+  "stage": {
+    "code": "S40",
+    "slug": "production-topology",
+    "revision": "r002",
+    "state": "superseded",
+    "created_at": "2026-07-29T17:13:36-04:00",
+    "frozen_at": "2026-07-29T21:46:28.183Z"
+  },
+  "lineage": {
+    "parent_manifests": [
+      {
+        "artifact_id": "s30-scaffold-manifest",
+        "role": "parent_stage_manifest",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/manifest.json",
+        "format": "json",
+        "bytes": 4800,
+        "sha256": "286b877db5624c922ac0655feb4109caeab2c17af9e20958f64a2be4b8af544c",
+        "immutable": true,
+        "derived_from": []
+      },
+      {
+        "artifact_id": "s40-r001-manifest",
+        "role": "previous_stage_revision_manifest",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r001/manifest.json",
+        "format": "json",
+        "bytes": 4711,
+        "sha256": "9ac925a877a1c4371cbd63448f78b665c03961ec36a86f3e7e4ae166a095c0ca",
+        "immutable": true,
+        "derived_from": []
+      }
+    ],
+    "supersedes": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r001/manifest.json"
+  },
+  "coordinate_contract": {
+    "front_axis": "-Y",
+    "up_axis": "+Z",
+    "character_left_axis": "+X",
+    "unit_system": "METRIC",
+    "unit_scale": 1,
+    "origin": "Character centered on local X, feet placed at Z = 0, approximately one meter tall."
+  },
+  "inputs": [
+    {
+      "artifact_id": "face-system-research-v12",
+      "role": "mouth_and_expression_research_reference",
+      "path": "art/candidates/tripo/visual-gate-04/mouth-diagnostic-v12-hd-final-proxy/bentosaur_vg03_h31_mouth_diagnostic_v12_hd_final_proxy_static_master_user_approval_required.blend",
+      "format": "blend",
+      "bytes": 209766225,
+      "sha256": "9eb87828392c95d25572c07575ea5ece58224e9cfa80c23b85c2ce8d4ec0a571",
+      "immutable": true,
+      "derived_from": [
+        "s30-scaffold-manifest"
+      ]
+    }
+  ],
+  "editable_sources": [
+    {
+      "artifact_id": "s40-topology-assembly-r002",
+      "role": "canonical_blender_master",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/source/bentosaur_hero_s40_production_topology_r002.blend",
+      "format": "blend",
+      "bytes": 210924128,
+      "sha256": "d3a0b5b72a51c58b1f1b661351f645dc921c08d0eb73af98b2cc0327e3db821c",
+      "immutable": true,
+      "derived_from": [
+        "s30-scaffold-manifest",
+        "s40-r001-manifest",
+        "quadriflow-symmetrized-bootstrap",
+        "face-system-research-v12"
+      ]
+    }
+  ],
+  "toolchain": [
+    {
+      "name": "Blender",
+      "version": "5.1.2"
+    },
+    {
+      "name": "Blender QuadriFlow",
+      "version": "Blender 5.1.2 bundled operator"
+    }
+  ],
+  "recipes": [
+    {
+      "artifact_id": "stage-source-builder",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/recipes/create_bentosaur_character_stage.py",
+      "format": "py",
+      "bytes": 18534,
+      "sha256": "4adae2ef4be76702ed5c14982d344abf7cb3bd49aacc729a58d29826fa13d0b3",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "hybrid-bootstrap-generator",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/recipes/build_hybrid_bootstrap_probe.py",
+      "format": "py",
+      "bytes": 10013,
+      "sha256": "2dde4148310270482e64370aa036a07436536aea3bd632c5ce1dc16cb8d12a37",
+      "immutable": true,
+      "derived_from": [
+        "s30-scaffold-manifest"
+      ]
+    },
+    {
+      "artifact_id": "hybrid-bootstrap-reproduction-record",
+      "role": "exact_reproduction_instructions",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/recipes/REPRODUCE.md",
+      "format": "md",
+      "bytes": 2333,
+      "sha256": "a55f2683d305f7f3d6a46919492241054cbb9bd0245d259e20331aa2b3b1cb3f",
+      "immutable": true,
+      "derived_from": [
+        "hybrid-bootstrap-generator"
+      ]
+    },
+    {
+      "artifact_id": "stage-preview-renderer",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/recipes/render_character_stage_preview.py",
+      "format": "py",
+      "bytes": 4511,
+      "sha256": "1791d5bebfc5c7532aa165f79adf3ed655a27a90307949f72aa1f1edcc20dd2e",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r002"
+      ]
+    },
+    {
+      "artifact_id": "stage-preview-renderer-library",
+      "role": "deterministic_blender_recipe_dependency",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/recipes/evaluate_tripo_visual_candidate.py",
+      "format": "py",
+      "bytes": 21025,
+      "sha256": "27d63c7ca3a34888fc4c30997cbd5c5f2022943eb3983f90bed646f02536ebbf",
+      "immutable": true,
+      "derived_from": []
+    }
+  ],
+  "vendor_jobs": [],
+  "outputs": [
+    {
+      "artifact_id": "bootstrap-input-snapshot",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/work/00_input_repaired_scaffold_snapshot.blend",
+      "format": "blend",
+      "bytes": 42332348,
+      "sha256": "afd1d32430b8ab3918859db38858f50aacbcb26ff19b66fb96bcd9557878e0f2",
+      "immutable": true,
+      "derived_from": [
+        "s30-scaffold-manifest"
+      ]
+    },
+    {
+      "artifact_id": "quadriflow-unsym-12000",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/work/10_quadriflow_unsym_12000.blend",
+      "format": "blend",
+      "bytes": 42153826,
+      "sha256": "d9c698181f9003d65634d42d4febefc37e79928380cee82caa9cd2dc88f38d44",
+      "immutable": true,
+      "derived_from": [
+        "bootstrap-input-snapshot"
+      ]
+    },
+    {
+      "artifact_id": "quadriflow-degenerate-cleanup",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/work/20_exact_degenerate_cleanup.blend",
+      "format": "blend",
+      "bytes": 42142187,
+      "sha256": "201e2b3046bb6b885bd72c36413cbb7da111467e9bb8cb4f49a4cdf9e1558c5d",
+      "immutable": true,
+      "derived_from": [
+        "quadriflow-unsym-12000"
+      ]
+    },
+    {
+      "artifact_id": "quadriflow-symmetrized-bootstrap",
+      "role": "intermediate_blender_checkpoint",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/work/30_symmetrized_negative_y_bootstrap.blend",
+      "format": "blend",
+      "bytes": 42115485,
+      "sha256": "f690e66b6d4d744eb75bcab00af18ef73a1d692d72e8600916528cc7dd571894",
+      "immutable": true,
+      "derived_from": [
+        "quadriflow-degenerate-cleanup"
+      ]
+    },
+    {
+      "artifact_id": "production-retopology-recommendation",
+      "role": "production_decision_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/production_retopology_v1_recommendation.md",
+      "format": "md",
+      "bytes": 13930,
+      "sha256": "fcb06fd2effd95b9d560ab1a6c862bee64014feeec15c8c147e94a25e664c7f8",
+      "immutable": true,
+      "derived_from": [
+        "quadriflow-symmetrized-bootstrap"
+      ]
+    },
+    {
+      "artifact_id": "s30-vs-s40-joint-topology-board",
+      "role": "visual_topology_comparison",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/s30_vs_s40_r002_joint_topology.png",
+      "format": "png",
+      "bytes": 9589936,
+      "sha256": "0978ebb23dc017788b608a0a1f5599be2b1be8e978c98f0a1cf5878cc716faed",
+      "immutable": true,
+      "derived_from": [
+        "s30-scaffold-manifest",
+        "quadriflow-symmetrized-bootstrap"
+      ]
+    },
+    {
+      "artifact_id": "s40-r002-clay-three-view-board",
+      "role": "visual_silhouette_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/s40_r002_clay_three_view.png",
+      "format": "png",
+      "bytes": 848891,
+      "sha256": "ea417cf4f21cae9f1e21618ce5af64fbafe0f668eeb89494611098573938aa87",
+      "immutable": true,
+      "derived_from": [
+        "s40-topology-assembly-r002"
+      ]
+    },
+    {
+      "artifact_id": "deformation-render-hips-knees",
+      "role": "visual_topology_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/qa/deformation-audit/renders/hips_knees_front.png",
+      "format": "png",
+      "bytes": 718148,
+      "sha256": "64c0b64d39f660d7f096591b86fcc23ab4061860ba9431e5e8c47c8a594599ec",
+      "immutable": true,
+      "derived_from": [
+        "quadriflow-symmetrized-bootstrap"
+      ]
+    },
+    {
+      "artifact_id": "deformation-render-mouth-front",
+      "role": "visual_topology_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/qa/deformation-audit/renders/mouth_front.png",
+      "format": "png",
+      "bytes": 683746,
+      "sha256": "db7636cd6f7275665e42d7261efab9a721febb4f6ecfc423f442a09b42f50b9d",
+      "immutable": true,
+      "derived_from": [
+        "quadriflow-symmetrized-bootstrap"
+      ]
+    },
+    {
+      "artifact_id": "deformation-render-mouth-three-quarter",
+      "role": "visual_topology_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/qa/deformation-audit/renders/mouth_three_quarter.png",
+      "format": "png",
+      "bytes": 611808,
+      "sha256": "d1f3fd7c0e649337e7d3ae597ef6b5cdc1a79613a47cb0f5ba4a61e49466422f",
+      "immutable": true,
+      "derived_from": [
+        "quadriflow-symmetrized-bootstrap"
+      ]
+    },
+    {
+      "artifact_id": "deformation-render-shoulders",
+      "role": "visual_topology_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/qa/deformation-audit/renders/shoulders_front.png",
+      "format": "png",
+      "bytes": 677055,
+      "sha256": "75cc58e27e825eb91480eea278b9e7c59c1f4b7a81ced510f85430d1f4563af5",
+      "immutable": true,
+      "derived_from": [
+        "quadriflow-symmetrized-bootstrap"
+      ]
+    },
+    {
+      "artifact_id": "deformation-render-tail",
+      "role": "visual_topology_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/qa/deformation-audit/renders/tail_side.png",
+      "format": "png",
+      "bytes": 609521,
+      "sha256": "7defb48abd360f9ff0c6b4a6de7469bbda740d90fae37848ff77f1af76968a10",
+      "immutable": true,
+      "derived_from": [
+        "quadriflow-symmetrized-bootstrap"
+      ]
+    }
+  ],
+  "qa": {
+    "reports": [
+      {
+        "artifact_id": "hybrid-bootstrap-pipeline-report",
+        "role": "topology_pipeline_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/qa/pipeline_report.json",
+        "format": "json",
+        "bytes": 7993,
+        "sha256": "e25dc5f162b43bf83c937c6155b6237a346484ef6f2bdd062f3eeb36477c3e79",
+        "immutable": true,
+        "derived_from": [
+          "quadriflow-symmetrized-bootstrap"
+        ]
+      },
+      {
+        "artifact_id": "hybrid-bootstrap-deformation-audit",
+        "role": "topology_qa_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/qa/deformation-audit/deformation_topology_audit.json",
+        "format": "json",
+        "bytes": 15726,
+        "sha256": "2241d4c236c14683e632e5438306b5f0b9fe81b123d1bbc004c6dab86e90b9b2",
+        "immutable": true,
+        "derived_from": [
+          "quadriflow-symmetrized-bootstrap"
+        ]
+      },
+      {
+        "artifact_id": "s40-r002-stage-preview-report",
+        "role": "visual_preview_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/evidence/stage-preview/preview_report.json",
+        "format": "json",
+        "bytes": 2528,
+        "sha256": "398523aee0c84a4e07fe057807572515318429e9bd09d73cf3acbb3eddcb88b0",
+        "immutable": true,
+        "derived_from": [
+          "s40-topology-assembly-r002"
+        ]
+      }
+    ],
+    "requirements": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "exact_bilateral_symmetry": true,
+      "center_strip_all_quads": true,
+      "real_oral_cavity": true,
+      "authored_joint_loop_routing": true
+    },
+    "results": {
+      "vertices": 11884,
+      "faces": 11888,
+      "quads": 11636,
+      "triangles": 132,
+      "ngons": 120,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "symmetry_match_ratio": 1,
+      "mean_surface_deviation_fraction_of_height": 0.0002531692,
+      "p95_surface_deviation_fraction_of_height": 0.0009239645,
+      "maximum_surface_deviation_fraction_of_height": 0.0098337074,
+      "center_strip_all_quads": false,
+      "real_oral_cavity": false,
+      "safe_to_rig": false
+    }
+  },
+  "approval": {
+    "gate_id": "G40_DEFORMATION_TOPOLOGY",
+    "decision_path": null,
+    "technical_state": "pending",
+    "human_state": "pending"
+  }
+}

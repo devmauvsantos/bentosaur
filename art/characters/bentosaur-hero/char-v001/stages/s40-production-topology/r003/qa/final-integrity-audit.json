@@ -1,0 +1,28 @@
+{
+  "candidate": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-qf-seam-stitch/30_axis_qf_closed_cleanup.blend",
+  "sha256": "8c0d8e08ed05d14cb2407f52f791eb43c05eaaa0f373bad158d9b4de44076cd6",
+  "vertices": 10050,
+  "edges": 20096,
+  "faces": 10048,
+  "euler_characteristic": 2,
+  "connected_face_components": 1,
+  "component_face_counts": [
+    10048
+  ],
+  "loose_vertices": 0,
+  "loose_edges": 0,
+  "boundary_edges": 0,
+  "non_manifold_edges": 0,
+  "zero_length_edges": 0,
+  "zero_area_faces": 0,
+  "signed_volume": 0.09344286638694214,
+  "absolute_volume": 0.09344286638694214,
+  "acceptance": {
+    "single_shell": true,
+    "sphere_euler_characteristic": true,
+    "no_loose_geometry": true,
+    "closed_manifold": true,
+    "nondegenerate": true,
+    "positive_orientation": true
+  }
+}

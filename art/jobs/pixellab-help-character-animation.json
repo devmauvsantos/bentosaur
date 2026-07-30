@@ -1,0 +1,3 @@
+{
+  "question": "For a 64x64 front-facing chibi triceratops sprite supplied as a reference, which create_character mode/body_type/template and animate_character settings best preserve dinosaur identity while producing exactly one south-facing 4-frame closed idle loop? The sprite is non-humanoid and no dinosaur quadruped template exists."
+}

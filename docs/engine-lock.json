@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": "Bentosaur",
+  "decision": {
+    "status": "locked",
+    "locked_on": "2026-07-29",
+    "engine": "Godot",
+    "engine_version": "4.7.1",
+    "edition": "Standard",
+    "game_language": "typed GDScript",
+    "renderer": "Mobile",
+    "runtime": "live 3D chibi diorama",
+    "asset_authority": "Blender",
+    "engine_asset_boundary": "deterministic GLB",
+    "animation_authority": "Blender action library",
+    "ui_architecture": "full-3D world with screen-space 2D/2.5D HUD and hybrid 3D book",
+    "low_end_renderer_investigation": "Compatibility",
+    "mobile_forward_plus": false
+  },
+  "pipeline": [
+    "AI or authored candidate",
+    "founder visual approval",
+    "Blender cleanup, surfacing, rigging and animation",
+    "deterministic GLB export",
+    "Godot runtime composition"
+  ],
+  "contingencies": {
+    "baked_runtime": "Render the same Blender masters into 2D sprite atlases",
+    "alternate_engine": "Unity 6 LTS with URP Forward"
+  },
+  "reopen_only_if": [
+    "A reproducible Godot-specific blocker survives the defined focused repair cycle",
+    "The approved physical-device slice cannot meet its visual, frame-time, memory or thermal gates",
+    "Required version-one live-service integrations materially exceed the maintained Godot ecosystem",
+    "Hiring, outsourcing or a new platform target makes the locked stack commercially untenable"
+  ],
+  "instruction_for_agents": "Do not reopen the engine comparison during normal implementation. Build and measure the locked Godot production slice. Treat Unity and baked 2D as escape paths only."
+}

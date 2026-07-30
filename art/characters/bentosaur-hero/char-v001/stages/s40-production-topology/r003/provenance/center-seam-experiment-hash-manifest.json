@@ -1,0 +1,506 @@
+{
+  "root": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair",
+  "file_count": 100,
+  "files": [
+    {
+      "path": "00_nonquad_adjacency_audit.json",
+      "bytes": 293554,
+      "sha256": "0d0df6acd821d4d9bb18866e8c6916f6f3636d41abb5e38308be0c3834753e69"
+    },
+    {
+      "path": "01_edge_rotation_probe.json",
+      "bytes": 3442,
+      "sha256": "9cc9a1ded9019ceb975d0557d25ca16c7056a6c9668b3d3a36a3d366142c219d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3492,
+      "sha256": "615610dd045c3dfb3e52bdc7b899efadebbadf81c2f99c3a0e043209668b192e"
+    },
+    {
+      "path": "audit_axis_stitched_quad_quality.py",
+      "bytes": 5269,
+      "sha256": "e744c0ba80aa2f878c0f839a08384cdc3fa9459cc358b8901e2264443ba705ec"
+    },
+    {
+      "path": "audit_boundary_loops.py",
+      "bytes": 2493,
+      "sha256": "21f2d690caac008bbe2bf0d81e35db092f49f443da5a271f39d39358f5289f10"
+    },
+    {
+      "path": "audit_edited_quad_quality.py",
+      "bytes": 7222,
+      "sha256": "3a84616f82174e511cc0687c0b24ad2ba2c10906820876fd78dd16698ad8e375"
+    },
+    {
+      "path": "audit_final_integrity.py",
+      "bytes": 2775,
+      "sha256": "8516dcd40decca3d818a3d7a2ea7cc7f14083773ddc7054b6e458fbd365b38c0"
+    },
+    {
+      "path": "audit_nonquads.py",
+      "bytes": 5232,
+      "sha256": "66af2d3c9579e002f9d0fe47c091718be1fc2206302cb6751eef348db68e19af"
+    },
+    {
+      "path": "audit_topology_symmetry.py",
+      "bytes": 2709,
+      "sha256": "c4e4844c62d55760f6ad99e9aadff719fe252803eec1b0afc8d4ddf540c9e045"
+    },
+    {
+      "path": "axis-aligned-symmetric-quadriflow/00_input_symmetrized_bootstrap.blend",
+      "bytes": 12955908,
+      "sha256": "b781e96a6263e7cf686147f5c6579e96df500b8ee6762b007b418613f703ebe6"
+    },
+    {
+      "path": "axis-aligned-symmetric-quadriflow/05_vendor_rotation_applied.blend",
+      "bytes": 12956597,
+      "sha256": "38545a42a43183fe0045bfc41f6b0c477e68365cfba4818a54ade97750253950"
+    },
+    {
+      "path": "axis-aligned-symmetric-quadriflow/10_y_plane_aligned_to_x.blend",
+      "bytes": 12957551,
+      "sha256": "7c2d356a5d888188564fcfd36a9b94bcc76b875cdfae2e65b17d6baa89bc214c"
+    },
+    {
+      "path": "axis-aligned-symmetric-quadriflow/20_axis_aligned_symmetric_quadriflow.blend",
+      "bytes": 12878350,
+      "sha256": "632d5dd58cb84dffa1fb272bb0fe64e65f4815e8fdca44e87216daabd949a9c6"
+    },
+    {
+      "path": "axis-aligned-symmetric-quadriflow/30_axis_aligned_exact_cleanup.blend",
+      "bytes": 12879415,
+      "sha256": "7acd52d55ae9b9952313b743b5f598700a189ec71369c319d7bdce279c6ce51d"
+    },
+    {
+      "path": "axis-aligned-symmetric-quadriflow/40_vendor_space_all_quad_candidate.blend",
+      "bytes": 12878069,
+      "sha256": "db5a018e3a62e59c6638e6beab5a9979251d6a433000d5ea5dc20175a0950957"
+    },
+    {
+      "path": "axis-aligned-symmetric-quadriflow/report.json",
+      "bytes": 7101,
+      "sha256": "3b863f37d69797187504a10f72f3a9ec81099b25e6c39a97b64512f43fd44c4f"
+    },
+    {
+      "path": "axis-qf-seam-stitch/00_input_axis_qf_open_all_quad.blend",
+      "bytes": 24992303,
+      "sha256": "7f252ff7242c21dd8ef379bc34735b46571d6ce9351d90407819a55aa6c48a82"
+    },
+    {
+      "path": "axis-qf-seam-stitch/10_boundary_vertices_snapped_to_y0.blend",
+      "bytes": 24993037,
+      "sha256": "5abd5551f020e78452a84ef8c26cf88757ac0b0c8fb5460e214418f455f536af"
+    },
+    {
+      "path": "axis-qf-seam-stitch/20_coincident_mirror_boundary_weld.blend",
+      "bytes": 24993381,
+      "sha256": "ad546ec2827bc432be8aea70b97fb9500115257bee00e84fecd0cf0e5ba0c9a5"
+    },
+    {
+      "path": "axis-qf-seam-stitch/30_axis_qf_closed_cleanup.blend",
+      "bytes": 24992578,
+      "sha256": "8c0d8e08ed05d14cb2407f52f791eb43c05eaaa0f373bad158d9b4de44076cd6"
+    },
+    {
+      "path": "axis-qf-seam-stitch/final_integrity_audit.json",
+      "bytes": 835,
+      "sha256": "c7c5d2ec85070189d02e510e1ba813f72e586853083e83d77f4acda28fed6de7"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/clay/back.png",
+      "bytes": 421097,
+      "sha256": "57ccdb5204aa15e244e4b5cb23a34a59bac52701e28a9806a19af4936cd665f7"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/clay/front.png",
+      "bytes": 422835,
+      "sha256": "9ecff4e81cee3984bc2dad17486bbaf123b26c4dcb394a76636e81e768a57d04"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/clay/left.png",
+      "bytes": 424763,
+      "sha256": "b5f22f6aa6476c058d70ade22cc37e9d52496d47f96da07ef9ff5b8ddded730a"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/clay/right.png",
+      "bytes": 419050,
+      "sha256": "671015413f901d1dd26526c667b54d005354359e38458f5fde2ae4ea97cd1dac"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/clay/three_quarter_left.png",
+      "bytes": 428556,
+      "sha256": "82239b6d16314183642d4b1357ed0a0e0b8921fd2ecc918abd30b15fa575d07f"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/clay/three_quarter_right.png",
+      "bytes": 426251,
+      "sha256": "0b9c79a7e955d6300f374fd3842a95b5ad332d0f3655f01e87bbcd0d0a794862"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/preview_report.json",
+      "bytes": 2708,
+      "sha256": "280ddcbfaad9bdc9aa2106a2e969d1169fa8a56103bf376668a49581b27c42ef"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/wire/back.png",
+      "bytes": 441008,
+      "sha256": "dc13ae4434c7958c3096efb3bcec35e718747e9a346c106f881898f5e34c67c9"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/wire/front.png",
+      "bytes": 440976,
+      "sha256": "3e90b35c8673737fedc427730ad67654a66d6463c4fc699a656892ef791ee6d9"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/wire/left.png",
+      "bytes": 450539,
+      "sha256": "c9d421e3274c3882df02301e83014671812f0e7fa76ac4a5fb7b41d362294ba2"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/wire/right.png",
+      "bytes": 447483,
+      "sha256": "dbebfc7377a0791c9d65745db96ad00ac6fc56645dc92b74a2b4b1e0471da3aa"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/wire/three_quarter_left.png",
+      "bytes": 445351,
+      "sha256": "497440cf3ad74808d9128e45871c8e0a23332f8afc163e70e015318a3d1186ba"
+    },
+    {
+      "path": "axis-qf-seam-stitch/full-preview/wire/three_quarter_right.png",
+      "bytes": 448396,
+      "sha256": "d6ecda97b57151af02ac20e14f69ae2e478c4ad0777a240d5cc8fe2874144d96"
+    },
+    {
+      "path": "axis-qf-seam-stitch/quad_quality_audit.json",
+      "bytes": 22253,
+      "sha256": "4b0df77392ca4313b131ce8b7a32f37de66fd0ca397ae54503c07481f22f7e9d"
+    },
+    {
+      "path": "axis-qf-seam-stitch/report.json",
+      "bytes": 5640,
+      "sha256": "bfd0835c9b36942be484c9def6ef268cef709f17666f0594c3f8aeb057a509de"
+    },
+    {
+      "path": "axis-qf-seam-stitch/seam-wire-closeups/01_true_front_full.png",
+      "bytes": 882504,
+      "sha256": "e03a3a9d94a8d431527f63aeeee929a677324a0c81dd8f52e2454280eab17b12"
+    },
+    {
+      "path": "axis-qf-seam-stitch/seam-wire-closeups/02_true_back_full.png",
+      "bytes": 879099,
+      "sha256": "53747b00fe56bf82e352a7ee47e901edb41288581dc9105841bfbb35f477731c"
+    },
+    {
+      "path": "axis-qf-seam-stitch/seam-wire-closeups/03_profile_full.png",
+      "bytes": 865736,
+      "sha256": "bc93ee6122db8b0e8e510efbc9d6c78a55d0939be76b574d7b3c8f3be1c5926c"
+    },
+    {
+      "path": "axis-qf-seam-stitch/seam-wire-closeups/04_mouth_front_close.png",
+      "bytes": 899191,
+      "sha256": "dde1be2f2e8218ff72af17672765e5fd4ecddf417b43527a46b056b411798fff"
+    },
+    {
+      "path": "axis-qf-seam-stitch/seam-wire-closeups/05_feet_front_close.png",
+      "bytes": 875306,
+      "sha256": "1b812437ba4e09fdb6bc8a2ff33026dc57a97a59268631473a810acb4ecfdf1f"
+    },
+    {
+      "path": "axis-qf-seam-stitch/seam-wire-closeups/06_tail_profile_close.png",
+      "bytes": 820649,
+      "sha256": "6446690ca5d8893f09f17dec25b1d71240884a8cc03312febfa16876e4c1cb80"
+    },
+    {
+      "path": "axis-qf-seam-stitch/seam-wire-closeups/render_report.json",
+      "bytes": 1372,
+      "sha256": "e6b3e413deb687967fd2de0dfcaf90ef57dead6a2687a67e03babbf7485260dd"
+    },
+    {
+      "path": "axis-qf-seam-stitch/seam_wire_qa_board.png",
+      "bytes": 6852863,
+      "sha256": "2fdc9b0ec85b52f52c2a54f6b68d2aa70b32e7325daa6bc34ea193df628bf714"
+    },
+    {
+      "path": "boundary_audit_20_global_quadriflow_exact_cleanup.json",
+      "bytes": 9471,
+      "sha256": "c71139950034f4162a4c61f606d5d6e4ee99532cc7e00b8dc1ff1cef0ba2ef6e"
+    },
+    {
+      "path": "boundary_audit_40_vendor_space_all_quad_candidate.json",
+      "bytes": 7148,
+      "sha256": "f4543f01fbb4899c550deab52f61a00e44cd8d5dd05950a84d0764bc6467dd6d"
+    },
+    {
+      "path": "build_hash_manifest.py",
+      "bytes": 954,
+      "sha256": "c15182ece41da2a665a237bdcdfbbfd5dfec17c5455af63404e8b6b5f29ca811"
+    },
+    {
+      "path": "experiment_axis_aligned_symmetric_quadriflow.py",
+      "bytes": 9370,
+      "sha256": "a3b87f114456ed295e2b3282c8a17b1bab8497124a8bb810105f397a1eac4e49"
+    },
+    {
+      "path": "experiment_global_quadriflow.py",
+      "bytes": 6383,
+      "sha256": "fdf8919b1e7699e2c8a4ea434df65818283358331016a790f943d603d18a71c6"
+    },
+    {
+      "path": "global-quadriflow/00_input_symmetrized_bootstrap.blend",
+      "bytes": 12956791,
+      "sha256": "da1f08d777d061c1b35a338c8ceed472cac451e59ffcde8b586d8f9051730682"
+    },
+    {
+      "path": "global-quadriflow/10_global_quadriflow_symmetry.blend",
+      "bytes": 12943042,
+      "sha256": "2b17cc0c8d98ffb63fc1382f91b095959baba0b90b59574d8b4c501bfd0f6635"
+    },
+    {
+      "path": "global-quadriflow/20_global_quadriflow_exact_cleanup.blend",
+      "bytes": 12932211,
+      "sha256": "2aa43ee2666a2a010f4891c5f5086b1e9566075093478ddd216af32e44b4e8ea"
+    },
+    {
+      "path": "global-quadriflow/report.json",
+      "bytes": 3967,
+      "sha256": "0073b05782774809a1eba97995e9f980333f4f0d8ef90e82c713b3af0ca02d99"
+    },
+    {
+      "path": "mirrored-final-pair/00_input_stage30_exact_symmetric_two_triangles.blend",
+      "bytes": 12955858,
+      "sha256": "7ee08ea7154edc2d386cedbffe1a666e245a6e3b7298233c9595aa39e4839d85"
+    },
+    {
+      "path": "mirrored-final-pair/10_positive_triangle_routed_to_seam.blend",
+      "bytes": 12955473,
+      "sha256": "2c76202805bd015296e57a3d5bb8f67b5c9237689b379b7be5f6503455603307"
+    },
+    {
+      "path": "mirrored-final-pair/20_negative_mirror_triangle_routed_to_seam.blend",
+      "bytes": 12956125,
+      "sha256": "542046e74a07c8872c7d56b5a29aa1485bb86d4cf144d3404cd1c872f87f2e82"
+    },
+    {
+      "path": "mirrored-final-pair/30_all_quad_exact_symmetric_candidate.blend",
+      "bytes": 12955998,
+      "sha256": "ffc7f21ce8135711f645e70bf62d2836655a4234b23153aa1e24bca28994426f"
+    },
+    {
+      "path": "mirrored-final-pair/edited_quad_quality_audit.json",
+      "bytes": 28583,
+      "sha256": "0c2b6dbea4bb2ac30ce7d1506e72e48133fa34e7ab25382d8692f1c84fa8b836"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/clay/back.png",
+      "bytes": 421658,
+      "sha256": "cd3e694c82959295a34060f944253b6acbfd7e696aaca578e881a21d15010f06"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/clay/front.png",
+      "bytes": 423646,
+      "sha256": "443e2778f3f8ef6b3b6b99be1feb8d5031b005209e8584678c1be180c74c8d34"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/clay/left.png",
+      "bytes": 426272,
+      "sha256": "52bbdcba828287a32e3361a02b68766307f6011de8a5b16d304f3c309a11accf"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/clay/right.png",
+      "bytes": 420413,
+      "sha256": "4da7b238d67d694b9ebe41ff75ffac3875b77fac7401287943cf32322a0cbee2"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/clay/three_quarter_left.png",
+      "bytes": 428958,
+      "sha256": "c2cd5a22d8a3791b8b78076edb120e67727b198766b068a8691538fd490a15cb"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/clay/three_quarter_right.png",
+      "bytes": 427686,
+      "sha256": "5677ae0a0481bce451cabf653abb15fed1ccbe6d241627dbe514d12ab5b389e9"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/preview_report.json",
+      "bytes": 2720,
+      "sha256": "da6e510dcd8a39ed2740399344e161bd3b98b419ff98db0b28ec7cd35881914a"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/wire/back.png",
+      "bytes": 443791,
+      "sha256": "40444864828986696fbb50364a5dd783c38c9cc920b682eab7537f2c4c846368"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/wire/front.png",
+      "bytes": 443767,
+      "sha256": "8d075eeb971735a7ff19bae9b5e0034e68727d4f7eb04c75742cf1ce75d4cc79"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/wire/left.png",
+      "bytes": 455127,
+      "sha256": "75e505e195c4e48fcacd777b01c6775de4ac0d8122243587525ae12343874717"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/wire/right.png",
+      "bytes": 456280,
+      "sha256": "8d4c36ded973cc92078ccb5a03f5b72c040d84de7addf754190699186b530100"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/wire/three_quarter_left.png",
+      "bytes": 450638,
+      "sha256": "576e5a9e52308c4e95def87e43ec88a9e8e5e178c8f713c757a8a9ad51ed9d02"
+    },
+    {
+      "path": "mirrored-final-pair/full-preview/wire/three_quarter_right.png",
+      "bytes": 455852,
+      "sha256": "939e9efe842269fe88ea288ed17153cff5ccc5f6087542d999ae1588bccda198"
+    },
+    {
+      "path": "mirrored-final-pair/repair-wire-closeups/01_true_front_full.png",
+      "bytes": 893360,
+      "sha256": "b78b6994823ed728ab6ca12c3c106ff0f7970a9f0927efcb6e6f28590e0bb1a5"
+    },
+    {
+      "path": "mirrored-final-pair/repair-wire-closeups/02_true_back_full.png",
+      "bytes": 890818,
+      "sha256": "e782e9537870557eed0630343a26360f7418365b352150b8f687ef9b8d53fb1e"
+    },
+    {
+      "path": "mirrored-final-pair/repair-wire-closeups/03_profile_full.png",
+      "bytes": 873419,
+      "sha256": "0eac06219db4445c8718159551b9580d5901a5c795c1a4e26882a672117926d5"
+    },
+    {
+      "path": "mirrored-final-pair/repair-wire-closeups/04_mouth_front_close.png",
+      "bytes": 909117,
+      "sha256": "b2871dfdf22dc87a1d3bf20d652181033e8e637c9f2c77c35a67c1518716758e"
+    },
+    {
+      "path": "mirrored-final-pair/repair-wire-closeups/05_feet_front_close.png",
+      "bytes": 879831,
+      "sha256": "6e39f3ce621b753c65030aedd7359884458924fb985fa6af819be5c64743a757"
+    },
+    {
+      "path": "mirrored-final-pair/repair-wire-closeups/06_tail_profile_close.png",
+      "bytes": 829133,
+      "sha256": "a1d965b51bd324dc2125db5b8009f2de656376b8f3bb9f33a68667ddbd9e5512"
+    },
+    {
+      "path": "mirrored-final-pair/repair-wire-closeups/render_report.json",
+      "bytes": 1408,
+      "sha256": "bcea0ea6a8ed4c7f7c0d4c2870a14e7cb2b5a306f7ab468f11692d28d2c6e5ab"
+    },
+    {
+      "path": "mirrored-final-pair/report.json",
+      "bytes": 6570,
+      "sha256": "6d348fcf0016123d7f343642d971041fe6a95883edb8ab1f31ee388a436f982d"
+    },
+    {
+      "path": "pair-probe/10_triangle_pentagon_to_two_quads.blend",
+      "bytes": 12956802,
+      "sha256": "f0af2b391d2a4230ae4f68d18974b71d9f72ba6c009cc71c101da3964089ca16"
+    },
+    {
+      "path": "pair-probe/probe.json",
+      "bytes": 435,
+      "sha256": "99cba7d7feae7ecbe65c16ea4709f2b2af2d240b54632eaf31c183d778dd1787"
+    },
+    {
+      "path": "probe_edge_ops.py",
+      "bytes": 2172,
+      "sha256": "4774703e2e63539ceecebfaa021c62da05301b8f67ff81b0fbbebd194f96b948"
+    },
+    {
+      "path": "probe_pair_retile.py",
+      "bytes": 2360,
+      "sha256": "b36136c8dcaaaf701dcee50b582584fae31a7ec2c945fa1c2aaddaa61f017490"
+    },
+    {
+      "path": "render_repair_closeups.py",
+      "bytes": 4910,
+      "sha256": "2bc49fa5a490198819b26ddcb73241ee2f76e2ec41a7465ab33b78c6c23e14f7"
+    },
+    {
+      "path": "repair_center_seam_to_quads.py",
+      "bytes": 21380,
+      "sha256": "b204e58835a37f3d76dd530f591a3d708b4f829741aa1c8ea127fc3c885c31cd"
+    },
+    {
+      "path": "repair_final_mirrored_triangle_pair.py",
+      "bytes": 16343,
+      "sha256": "4ba356a5fda7ed8a9c4fbc637151ea9ee1c660ac5c783ebf9660cfae5cb94f74"
+    },
+    {
+      "path": "stitch_axis_qf_seam.py",
+      "bytes": 8492,
+      "sha256": "ddf9293586f5853a1ac4c4164e68640ed8699203224b12d6d4aac140dc1eb305"
+    },
+    {
+      "path": "targeted-retile/00_input_symmetrized_bootstrap.blend",
+      "bytes": 12956055,
+      "sha256": "5aea0fd54d4fc7d7c585e091192dca576376430e71f4f57ada4f0ac22f8d0e46"
+    },
+    {
+      "path": "targeted-retile/10_direct_triangle_pentagon_retile.blend",
+      "bytes": 12956136,
+      "sha256": "5e1b6ed199bac8872d388c8d836b3abc6dc03e1e340c07902a9483de8d97824f"
+    },
+    {
+      "path": "targeted-retile/20_routed_remaining_pentagons.blend",
+      "bytes": 12956138,
+      "sha256": "12b4d7d8afac5a1fa9bdc4fa9cc7595f4028cd4d11be854446b01920f7d04eef"
+    },
+    {
+      "path": "targeted-retile/30_direct_triangle_pair_joins.blend",
+      "bytes": 12955985,
+      "sha256": "4bddd66204f5f8fe07317adaa183b0a35fe251b1297c8dcf82ffd4df5256db65"
+    },
+    {
+      "path": "targeted-retile/40_all_quad_targeted_retile.blend",
+      "bytes": 12955260,
+      "sha256": "e1ee10f1e58fac7928ccca5ce91b015a0f1c62b04575761803dc6fe439176200"
+    },
+    {
+      "path": "targeted-retile/operation_log.json",
+      "bytes": 23709,
+      "sha256": "144cae2b20feef3d74363b01e7e48e4c3610ce10eeac90e7f2672a383fac2497"
+    },
+    {
+      "path": "targeted-retile/report.json",
+      "bytes": 32392,
+      "sha256": "aa5bf18005bfa63fa88871c9768043cefab4bc1ae02bdd4a6ae489082878979d"
+    },
+    {
+      "path": "topology_symmetry_audit_40_all_quad_targeted_retile.json",
+      "bytes": 38272,
+      "sha256": "50cf2da6ee28ece69a9bbcd00e9b16567b42fa645c6f39ab3275e048be9b6f8d"
+    },
+    {
+      "path": "vendor-y-symmetric-quadriflow/00_input_symmetrized_bootstrap.blend",
+      "bytes": 12956790,
+      "sha256": "c5b59b5223f769f6ab804f54ca8016376e9e961b19af5ef2c53b3a6181be9f18"
+    },
+    {
+      "path": "vendor-y-symmetric-quadriflow/05_vendor_y_mesh_symmetry_flags.blend",
+      "bytes": 12956785,
+      "sha256": "69b0a3eadc2f4bfbd498cdf95776e5629141bce738037ab44fc81cad48948d2d"
+    },
+    {
+      "path": "vendor-y-symmetric-quadriflow/10_global_quadriflow_symmetry.blend",
+      "bytes": 12896597,
+      "sha256": "42e7e769038a77780830c1a590cb13eb497ae139e0dafc705dea22e089f7b195"
+    },
+    {
+      "path": "vendor-y-symmetric-quadriflow/20_global_quadriflow_exact_cleanup.blend",
+      "bytes": 12897983,
+      "sha256": "e4caae1f39d79de6a6f8861260622bb437da3409bfdd4b326a1b6292ef68d455"
+    },
+    {
+      "path": "vendor-y-symmetric-quadriflow/report.json",
+      "bytes": 4960,
+      "sha256": "6ea0666951ff2ccc60778ce513d0c1f2ef7e7fa793a8b046cc966c684a2478ca"
+    }
+  ]
+}

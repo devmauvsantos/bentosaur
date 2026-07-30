@@ -1,0 +1,40 @@
+{
+  "$schema": "../../../../_pipeline/v1/schemas/gate-decision.schema.json",
+  "schema_version": "1.0.0",
+  "gate_id": "G30_SCAFFOLD_ACCEPTANCE",
+  "character_id": "bentosaur-hero",
+  "evaluates": {
+    "stage_manifest": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/manifest.json",
+    "stage_manifest_sha256": "286b877db5624c922ac0655feb4109caeab2c17af9e20958f64a2be4b8af544c"
+  },
+  "scope": "Approved only as a bounded H3.1 silhouette and retopology scaffold. This decision does not approve its materials, deformation topology, rigging, animation, or runtime use.",
+  "technical": {
+    "state": "pass",
+    "evidence": [
+      "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/provenance/cycle_patch_report.json",
+      "art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/evaluation/deformation-audit/deformation_topology_board.png",
+      "docs/tripo-smart-lowpoly-repair-test-v1.md"
+    ]
+  },
+  "human": {
+    "required": true,
+    "owner": "Mau",
+    "state": "approved",
+    "decided_at": "2026-07-29T17:11:49-04:00",
+    "notes": [
+      "Proceed with the repeatable production-character pipeline.",
+      "Preserve a source file for every stage and meaningful operation.",
+      "The end goal is a flawless, cute, animated, reusable game character."
+    ]
+  },
+  "authorizes": [
+    "S40_PRODUCTION_TOPOLOGY"
+  ],
+  "does_not_authorize": [
+    "S50_UV_AND_BAKE",
+    "S60_FINAL_LOOKDEV",
+    "S70_RIG_AND_SKIN",
+    "S80_ANIMATION_LIBRARY",
+    "S90_GODOT_RUNTIME"
+  ]
+}

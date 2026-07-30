@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "tripo-blender-character-master-bakeoff-v1",
+  "status": "visual_gate_01_complete_visual_gate_02_in_progress_rigging_blocked",
+  "decision_date": "2026-07-29",
+  "purpose": "Compare P1 and H3.1 as base-mesh sources for one canonical upright Bentosaur Triceratops, then validate one winning rig in Blender and Godot.",
+  "prerequisite_live_test": {
+    "run_id": "tripo-live-test-01-p1-text",
+    "record": "art/jobs/tripo-live-test-01-p1-text.json",
+    "pipeline_pass": true,
+    "canonical_identity_pass": false,
+    "credits_consumed": 75,
+    "lesson": "Text-only P1 proves generation, biped rigging, tail bones, named actions, Blender import, and multi-camera rendering. The canonical model still requires four approved orthographic views."
+  },
+  "secrets_policy": {
+    "store_api_keys_here": false,
+    "authentication": "Use Tripo browser login or TRIPO_API_KEY outside the repository.",
+    "canonical_upload_requires_paid_status": true
+  },
+  "input_contract": {
+    "resolution_px": 1024,
+    "views": [
+      "front",
+      "left",
+      "back",
+      "right"
+    ],
+    "projection": "orthographic",
+    "pose": "neutral A-pose",
+    "lighting": "flat diffuse",
+    "background": "plain light grey",
+    "required_anatomy": [
+      "upright biped",
+      "exactly two weight-bearing hind legs",
+      "two short free forearms used as hands",
+      "oversized round head",
+      "broad circular Triceratops frill",
+      "three wide blunt horns",
+      "short rounded muzzle",
+      "plump pear-shaped torso",
+      "broad flat feet",
+      "one thick tapering tail"
+    ],
+    "forbidden": [
+      "quadruped",
+      "realistic dinosaur",
+      "human anatomy",
+      "fused arms",
+      "tail fused to legs",
+      "dramatic lighting",
+      "perspective",
+      "props",
+      "clothing",
+      "ground plane",
+      "cast shadow"
+    ],
+    "files": {
+      "front": "art/turnarounds/triceratops_master_v1/front.png",
+      "left": "art/turnarounds/triceratops_master_v1/left.png",
+      "back": "art/turnarounds/triceratops_master_v1/back.png",
+      "right": "art/turnarounds/triceratops_master_v1/right.png"
+    }
+  },
+  "generation": {
+    "endpoint": "/v3/generation/multiview-to-model",
+    "shared_inputs": [
+      {
+        "front": "<front_file_token>"
+      },
+      {
+        "left": "<left_file_token>"
+      },
+      {
+        "back": "<back_file_token>"
+      },
+      {
+        "right": "<right_file_token>"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "p1_bare_5k",
+        "estimated_credits": 40,
+        "payload": {
+          "model": "P1-20260311",
+          "model_seed": 28102026,
+          "face_limit": 5000,
+          "texture": false,
+          "pbr": false,
+          "export_uv": false
+        }
+      },
+      {
+        "id": "h31_bare_smart_low_poly_5k",
+        "estimated_credits": 30,
+        "payload": {
+          "model": "v3.1-20260211",
+          "model_seed": 28102026,
+          "face_limit": 5000,
+          "smart_low_poly": true,
+          "texture": false,
+          "pbr": false,
+          "export_uv": false
+        }
+      }
+    ],
+    "stop_after_generation_for_human_review": true
+  },
+  "visual_generation_gate": {
+    "gate_id": "gate_0_visual_3d_approval",
+    "hard_stop": true,
+    "human_approval_required": true,
+    "approval_must_come_from": "user",
+    "assistant_may_approve": false,
+    "target_design_approved": true,
+    "provisional_geometry_candidate_id": "bentosaur_vg01_p1",
+    "final_appearance_approved": false,
+    "mouth_system_approved": false,
+    "rigging_allowed": false,
+    "animation_allowed": false,
+    "superseded_approval_text_example": "APPROVE <candidate_id> FOR RIGGING",
+    "next_gate": "tripo-visual-gate-02-final-materials-face-mouth",
+    "next_valid_approval_command": "APPROVE visual-gate-02-final-materials-face-and-mouth FOR RIGGING",
+    "candidate_must_be_fully_surfaced": true,
+    "blocks_until_approved": [
+      "rig_check",
+      "rig",
+      "retarget",
+      "custom_animation"
+    ],
+    "required_artifacts_per_candidate": [
+      "raw GLB",
+      "generation task receipt",
+      "surfaced GLB",
+      "texture and material artifacts",
+      "surface task receipt",
+      "clay front orthographic render",
+      "clay left orthographic render",
+      "clay back orthographic render",
+      "clay right orthographic render",
+      "clay three-quarter render",
+      "surfaced front orthographic render",
+      "surfaced left orthographic render",
+      "surfaced back orthographic render",
+      "surfaced right orthographic render",
+      "surfaced three-quarter render",
+      "front 64px silhouette",
+      "side 64px silhouette",
+      "front 64px or 96px surfaced game-look render",
+      "side 64px or 96px surfaced game-look render",
+      "wireframe or topology render",
+      "mesh metrics",
+      "material and texture metrics",
+      "API credits consumed by stage",
+      "API credits consumed cumulatively",
+      "API credits remaining"
+    ],
+    "review_questions": [
+      "Is the approved Bentosaur identity unmistakable from every required view?",
+      "Are muzzle, cheeks, frill, rounded rim knobs, horns, hands, feet, belly, and tail correct?",
+      "Is the character isolated, prop-free, clothing-free, symmetrical, and neutral?",
+      "Do the permanent sage, cream, coral, eye, and mouth surfaces match the approved identity?",
+      "Does the surfaced character feel like Bentosaur at 64px or 96px under the intended toon/pixel presentation?",
+      "Is this complete visual candidate worth cleanup, rigging, and animation time?"
+    ],
+    "reject_even_if_riggable_when_visual_identity_fails": true,
+    "select_exactly_one_candidate": true
+  },
+  "appearance_scope": {
+    "character_is_unclothed": true,
+    "clothing_system_in_scope": false,
+    "clothing_meshes_in_scope": false,
+    "clothing_sockets_in_scope": false,
+    "accessories_in_scope": false,
+    "accessories_deferred": true,
+    "permanent_character_surface": [
+      "sage body",
+      "cream belly",
+      "cream horns",
+      "cream rounded frill knobs",
+      "coral cheeks",
+      "eyes",
+      "mouth"
+    ]
+  },
+  "geometry_review": {
+    "views": [
+      "turntable",
+      "wireframe",
+      "front_orthographic",
+      "side_orthographic",
+      "64px_front_silhouette",
+      "64px_side_silhouette"
+    ],
+    "required": [
+      "approved identity from front and side",
+      "real geometry for horns, frill, cheeks, hands, feet, and tail",
+      "no fused arms, legs, horns, or tail",
+      "approximately 5000 faces or fewer",
+      "clean enough for a two-hour maximum first cleanup"
+    ],
+    "select_exactly_one_winner": true
+  },
+  "rig": {
+    "run_rig_check_first": true,
+    "estimated_credits": 25,
+    "payload": {
+      "input": "<winning_generation_task_id>",
+      "model": "v2.5-20260210",
+      "rig_type": "biped",
+      "spec": "tripo",
+      "out_format": "glb"
+    },
+    "required_extensions_if_missing": [
+      "tail chain",
+      "frill support bones",
+      "left and right hand sockets",
+      "tray socket",
+      "mouth socket",
+      "umbrella socket"
+    ]
+  },
+  "diagnostic_animations": {
+    "estimated_credits": 30,
+    "payload": {
+      "input": "<rig_task_id>",
+      "animations": [
+        "preset:idle",
+        "preset:walk",
+        "preset:turn"
+      ],
+      "out_format": "glb",
+      "bake_animation": true,
+      "animate_in_place": true
+    },
+    "shipping_status": "diagnostic_only"
+  },
+  "blender": {
+    "authority": "Blender .blend files",
+    "mcp": "Official Blender Lab MCP 1.0.0",
+    "security": {
+      "host": "localhost",
+      "port": 9876,
+      "remote_exposure": false,
+      "transport": "stdio_only",
+      "http_transport": false,
+      "addon_auto_start": false,
+      "one_controlling_agent_max": 1,
+      "api_keys_in_blender_environment": false,
+      "dedicated_environment_recommended": true,
+      "reviewed_scripts_preferred": true
+    },
+    "stages": [
+      "00_import",
+      "10_geometry_clean",
+      "20_character_master",
+      "30_animation_test"
+    ],
+    "required_outputs": [
+      "geometry validation report",
+      "rig and weight report",
+      "front and side 64px stills",
+      "front and side turntable previews",
+      "cleaned master blend",
+      "Godot GLB",
+      "baked sprite test sheets"
+    ]
+  },
+  "shipping_actions": [
+    "walk",
+    "stall_idle",
+    "order",
+    "receive",
+    "delight",
+    "chomp"
+  ],
+  "face_states": [
+    "neutral",
+    "blink",
+    "order",
+    "wait",
+    "delight",
+    "disappointment",
+    "chomp"
+  ],
+  "runtime_comparison": [
+    "pure_2d_control",
+    "baked_3d_master",
+    "live_3d_in_godot_subviewport"
+  ],
+  "cost": {
+    "currency": "USD",
+    "credits_per_usd": 100,
+    "estimated_total_credits": 125,
+    "estimated_total_usd": 1.25,
+    "studio_and_api_billing_are_separate": true
+  },
+  "provenance": {
+    "save_inputs": true,
+    "save_full_payloads": true,
+    "save_model_snapshots": true,
+    "save_seeds": true,
+    "save_task_json": true,
+    "save_credit_receipt": true,
+    "save_raw_models": true,
+    "save_cleaned_blend": true,
+    "save_exported_glb": true,
+    "save_terms_snapshot_or_link": true
+  },
+  "final_gate": {
+    "identity_score_min_out_of_5": 4,
+    "cleanup_hours_max": 2,
+    "target_faces": 5000,
+    "pixel_render_size": 64,
+    "live_character_gpu_ms_average_max": 2,
+    "live_character_gpu_ms_p95_max": 3,
+    "reject_if_reads_as_plastic_3d": true,
+    "reject_if_pixel_shimmer_is_distracting": true
+  }
+}

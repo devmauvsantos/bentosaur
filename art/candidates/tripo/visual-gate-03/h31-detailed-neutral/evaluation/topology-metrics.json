@@ -1,0 +1,105 @@
+{
+  "candidate_id": "bentosaur_vg03_h31_detailed_neutral",
+  "source_sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+  "bounds": {
+    "minimum": [
+      -0.43349727988243103,
+      -0.3286252021789551,
+      -0.48963358998298645
+    ],
+    "maximum": [
+      0.4336620271205902,
+      0.3286655843257904,
+      0.49007636308670044
+    ],
+    "dimensions": [
+      0.8671593070030212,
+      0.6572908163070679,
+      0.9797099828720093
+    ]
+  },
+  "topology": {
+    "totals": {
+      "mesh_objects": 1,
+      "vertices": 987461,
+      "edges": 2962377,
+      "polygons": 1974918,
+      "evaluated_triangles": 1974918,
+      "triangle_faces": 1974918,
+      "quad_faces": 0,
+      "ngons": 0,
+      "uv_layers": 0,
+      "material_slots": 1,
+      "shape_keys": 0,
+      "raw_boundary_edges": 0,
+      "raw_non_manifold_edges": 0,
+      "welded_vertices": 987461,
+      "welded_edges": 2962377,
+      "welded_faces": 1974918,
+      "welded_boundary_edges": 0,
+      "welded_non_manifold_edges": 0,
+      "welded_loose_edges": 0,
+      "welded_loose_vertices": 0,
+      "welded_connected_components": 1,
+      "welded_degenerate_faces": 0,
+      "welded_boundary_edge_ratio": 0.0,
+      "welded_non_manifold_edge_ratio": 0.0,
+      "welded_degenerate_face_ratio": 0.0,
+      "largest_component_vertex_share": 1.0,
+      "component_vertex_counts_desc": [
+        987461
+      ],
+      "weld_distance_world_units": 9.797099828720094e-06,
+      "raw_to_welded_vertex_reduction_ratio": 0.0
+    },
+    "objects": [
+      {
+        "name": "EVAL_HD__tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+        "vertices": 987461,
+        "edges": 2962377,
+        "polygons": 1974918,
+        "evaluated_triangles": 1974918,
+        "triangle_faces": 1974918,
+        "quad_faces": 0,
+        "ngons": 0,
+        "uv_layers": 0,
+        "material_slots": 1,
+        "vertex_groups": 0,
+        "shape_keys": 0,
+        "analysis": {
+          "raw": {
+            "vertices": 987461,
+            "edges": 2962377,
+            "faces": 1974918,
+            "boundary_edges": 0,
+            "non_manifold_edges": 0,
+            "loose_edges": 0,
+            "loose_vertices": 0,
+            "connected_components": 1,
+            "largest_component_vertices": 987461
+          },
+          "welded": {
+            "vertices": 987461,
+            "edges": 2962377,
+            "faces": 1974918,
+            "boundary_edges": 0,
+            "non_manifold_edges": 0,
+            "loose_edges": 0,
+            "loose_vertices": 0,
+            "connected_components": 1,
+            "component_vertex_counts_desc": [
+              987461
+            ],
+            "largest_component_vertices": 987461,
+            "degenerate_faces": 0
+          }
+        }
+      }
+    ]
+  },
+  "source_scene": {
+    "mesh_objects": 1,
+    "armatures": 0,
+    "actions": 0
+  }
+}

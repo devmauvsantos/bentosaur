@@ -1,0 +1,550 @@
+{
+  "source": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/subagent-cycle-audit/cycle_patch_candidate.blend",
+  "source_is_modified": false,
+  "coordinate_convention": {
+    "front": "+X",
+    "left_right": "+/-Y",
+    "up": "+Z"
+  },
+  "bounds": {
+    "minimum": [
+      -0.43225541710853577,
+      -0.3287866413593292,
+      -0.48963361978530884
+    ],
+    "maximum": [
+      0.4343373775482178,
+      0.3288269639015198,
+      0.4900764226913452
+    ],
+    "dimensions": [
+      0.8665927648544312,
+      0.6576136350631714,
+      0.979710042476654
+    ]
+  },
+  "semantic_zone_definitions_are_heuristic": true,
+  "zones": {
+    "face": {
+      "faces": 1384,
+      "triangles": 146,
+      "quads": 1238,
+      "quad_ratio": 0.8945086705202312,
+      "vertices": 1356,
+      "edges": 2739,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 430,
+      "triangle_touch_edge_ratio": 0.1569916027747353,
+      "triangle_touch_vertices": 357,
+      "triangle_touch_vertex_ratio": 0.26327433628318586,
+      "regular_all_quad_valence4_vertices": 955,
+      "regular_all_quad_valence4_ratio": 0.7042772861356932,
+      "valence_distribution": {
+        "3": 31,
+        "4": 1152,
+        "5": 168,
+        "6": 4,
+        "7": 1
+      },
+      "face_aspect_ratio": {
+        "count": 1384,
+        "mean": 2.2016170237590442,
+        "median": 1.744814340498091,
+        "p95": 4.672556197333114,
+        "maximum": 9.9499124617425
+      },
+      "faces_aspect_ratio_over_3": 233,
+      "faces_aspect_ratio_over_5": 51
+    },
+    "mouth": {
+      "faces": 126,
+      "triangles": 26,
+      "quads": 100,
+      "quad_ratio": 0.7936507936507936,
+      "vertices": 141,
+      "edges": 266,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 79,
+      "triangle_touch_edge_ratio": 0.29699248120300753,
+      "triangle_touch_vertices": 59,
+      "triangle_touch_vertex_ratio": 0.41843971631205673,
+      "regular_all_quad_valence4_vertices": 74,
+      "regular_all_quad_valence4_ratio": 0.524822695035461,
+      "valence_distribution": {
+        "3": 4,
+        "4": 104,
+        "5": 30,
+        "6": 3
+      },
+      "face_aspect_ratio": {
+        "count": 126,
+        "mean": 3.4418351796685145,
+        "median": 3.1847917461526767,
+        "p95": 5.849999550093019,
+        "maximum": 6.642650585946544
+      },
+      "faces_aspect_ratio_over_3": 73,
+      "faces_aspect_ratio_over_5": 17
+    },
+    "left_eye": {
+      "faces": 134,
+      "triangles": 14,
+      "quads": 120,
+      "quad_ratio": 0.8955223880597015,
+      "vertices": 157,
+      "edges": 290,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 43,
+      "triangle_touch_edge_ratio": 0.1482758620689655,
+      "triangle_touch_vertices": 33,
+      "triangle_touch_vertex_ratio": 0.21019108280254778,
+      "regular_all_quad_valence4_vertices": 115,
+      "regular_all_quad_valence4_ratio": 0.732484076433121,
+      "valence_distribution": {
+        "3": 3,
+        "4": 135,
+        "5": 19
+      },
+      "face_aspect_ratio": {
+        "count": 134,
+        "mean": 2.175705045548715,
+        "median": 1.6473053177657475,
+        "p95": 4.636865449868086,
+        "maximum": 7.1414770123441
+      },
+      "faces_aspect_ratio_over_3": 27,
+      "faces_aspect_ratio_over_5": 3
+    },
+    "right_eye": {
+      "faces": 134,
+      "triangles": 14,
+      "quads": 120,
+      "quad_ratio": 0.8955223880597015,
+      "vertices": 157,
+      "edges": 290,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 43,
+      "triangle_touch_edge_ratio": 0.1482758620689655,
+      "triangle_touch_vertices": 33,
+      "triangle_touch_vertex_ratio": 0.21019108280254778,
+      "regular_all_quad_valence4_vertices": 115,
+      "regular_all_quad_valence4_ratio": 0.732484076433121,
+      "valence_distribution": {
+        "3": 3,
+        "4": 135,
+        "5": 19
+      },
+      "face_aspect_ratio": {
+        "count": 134,
+        "mean": 2.175703640728597,
+        "median": 1.647304149965243,
+        "p95": 4.636857018676318,
+        "maximum": 7.1414770123441
+      },
+      "faces_aspect_ratio_over_3": 28,
+      "faces_aspect_ratio_over_5": 3
+    },
+    "left_shoulder": {
+      "faces": 272,
+      "triangles": 50,
+      "quads": 222,
+      "quad_ratio": 0.8161764705882353,
+      "vertices": 311,
+      "edges": 582,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 154,
+      "triangle_touch_edge_ratio": 0.2646048109965636,
+      "triangle_touch_vertices": 115,
+      "triangle_touch_vertex_ratio": 0.36977491961414793,
+      "regular_all_quad_valence4_vertices": 158,
+      "regular_all_quad_valence4_ratio": 0.5080385852090032,
+      "valence_distribution": {
+        "3": 12,
+        "4": 225,
+        "5": 59,
+        "6": 14,
+        "7": 1
+      },
+      "face_aspect_ratio": {
+        "count": 272,
+        "mean": 2.7703617369082694,
+        "median": 2.2221649435195143,
+        "p95": 6.245017187031526,
+        "maximum": 14.24791135596222
+      },
+      "faces_aspect_ratio_over_3": 85,
+      "faces_aspect_ratio_over_5": 25
+    },
+    "right_shoulder": {
+      "faces": 271,
+      "triangles": 50,
+      "quads": 221,
+      "quad_ratio": 0.8154981549815498,
+      "vertices": 311,
+      "edges": 581,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 152,
+      "triangle_touch_edge_ratio": 0.26161790017211706,
+      "triangle_touch_vertices": 111,
+      "triangle_touch_vertex_ratio": 0.35691318327974275,
+      "regular_all_quad_valence4_vertices": 160,
+      "regular_all_quad_valence4_ratio": 0.5144694533762058,
+      "valence_distribution": {
+        "3": 10,
+        "4": 227,
+        "5": 61,
+        "6": 12,
+        "7": 1
+      },
+      "face_aspect_ratio": {
+        "count": 271,
+        "mean": 2.759058958017291,
+        "median": 2.2124062984271,
+        "p95": 6.244968610343052,
+        "maximum": 14.247898157747272
+      },
+      "faces_aspect_ratio_over_3": 84,
+      "faces_aspect_ratio_over_5": 24
+    },
+    "left_elbow": {
+      "faces": 1216,
+      "triangles": 242,
+      "quads": 973,
+      "quad_ratio": 0.8001644736842105,
+      "vertices": 1140,
+      "edges": 2358,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 715,
+      "triangle_touch_edge_ratio": 0.30322307039864294,
+      "triangle_touch_vertices": 586,
+      "triangle_touch_vertex_ratio": 0.5140350877192983,
+      "regular_all_quad_valence4_vertices": 455,
+      "regular_all_quad_valence4_ratio": 0.3991228070175439,
+      "valence_distribution": {
+        "2": 1,
+        "3": 61,
+        "4": 793,
+        "5": 256,
+        "6": 24,
+        "7": 3,
+        "8": 1,
+        "9": 1
+      },
+      "face_aspect_ratio": {
+        "count": 1216,
+        "mean": 1.9186173182479143,
+        "median": 1.732057548393591,
+        "p95": 3.292741863594896,
+        "maximum": 6.531706246248539
+      },
+      "faces_aspect_ratio_over_3": 96,
+      "faces_aspect_ratio_over_5": 4
+    },
+    "right_elbow": {
+      "faces": 1216,
+      "triangles": 245,
+      "quads": 971,
+      "quad_ratio": 0.7985197368421053,
+      "vertices": 1138,
+      "edges": 2356,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 722,
+      "triangle_touch_edge_ratio": 0.3064516129032258,
+      "triangle_touch_vertices": 591,
+      "triangle_touch_vertex_ratio": 0.5193321616871704,
+      "regular_all_quad_valence4_vertices": 453,
+      "regular_all_quad_valence4_ratio": 0.39806678383128297,
+      "valence_distribution": {
+        "3": 56,
+        "4": 797,
+        "5": 256,
+        "6": 26,
+        "7": 2,
+        "9": 1
+      },
+      "face_aspect_ratio": {
+        "count": 1216,
+        "mean": 1.9205172096899792,
+        "median": 1.7320552984439574,
+        "p95": 3.299842228397485,
+        "maximum": 6.942176809017854
+      },
+      "faces_aspect_ratio_over_3": 98,
+      "faces_aspect_ratio_over_5": 6
+    },
+    "left_hip": {
+      "faces": 224,
+      "triangles": 45,
+      "quads": 176,
+      "quad_ratio": 0.7857142857142857,
+      "vertices": 261,
+      "edges": 484,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 140,
+      "triangle_touch_edge_ratio": 0.2892561983471074,
+      "triangle_touch_vertices": 90,
+      "triangle_touch_vertex_ratio": 0.3448275862068966,
+      "regular_all_quad_valence4_vertices": 128,
+      "regular_all_quad_valence4_ratio": 0.4904214559386973,
+      "valence_distribution": {
+        "2": 2,
+        "3": 11,
+        "4": 194,
+        "5": 43,
+        "6": 10,
+        "8": 1
+      },
+      "face_aspect_ratio": {
+        "count": 224,
+        "mean": 3.3797095102781802,
+        "median": 2.395214700418098,
+        "p95": 11.51086832383487,
+        "maximum": 21.95395256956533
+      },
+      "faces_aspect_ratio_over_3": 80,
+      "faces_aspect_ratio_over_5": 22
+    },
+    "right_hip": {
+      "faces": 221,
+      "triangles": 41,
+      "quads": 178,
+      "quad_ratio": 0.8054298642533937,
+      "vertices": 261,
+      "edges": 481,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 130,
+      "triangle_touch_edge_ratio": 0.2702702702702703,
+      "triangle_touch_vertices": 88,
+      "triangle_touch_vertex_ratio": 0.3371647509578544,
+      "regular_all_quad_valence4_vertices": 130,
+      "regular_all_quad_valence4_ratio": 0.49808429118773945,
+      "valence_distribution": {
+        "3": 11,
+        "4": 201,
+        "5": 41,
+        "6": 8
+      },
+      "face_aspect_ratio": {
+        "count": 221,
+        "mean": 3.389781268300286,
+        "median": 2.392515063690002,
+        "p95": 11.510804424800513,
+        "maximum": 21.953966273533087
+      },
+      "faces_aspect_ratio_over_3": 79,
+      "faces_aspect_ratio_over_5": 23
+    },
+    "left_knee": {
+      "faces": 310,
+      "triangles": 49,
+      "quads": 261,
+      "quad_ratio": 0.8419354838709677,
+      "vertices": 341,
+      "edges": 648,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 154,
+      "triangle_touch_edge_ratio": 0.23765432098765432,
+      "triangle_touch_vertices": 116,
+      "triangle_touch_vertex_ratio": 0.34017595307917886,
+      "regular_all_quad_valence4_vertices": 177,
+      "regular_all_quad_valence4_ratio": 0.5190615835777126,
+      "valence_distribution": {
+        "3": 16,
+        "4": 251,
+        "5": 70,
+        "6": 4
+      },
+      "face_aspect_ratio": {
+        "count": 310,
+        "mean": 2.5389322936158965,
+        "median": 2.2041670550047083,
+        "p95": 4.654770453911228,
+        "maximum": 19.823739361405355
+      },
+      "faces_aspect_ratio_over_3": 67,
+      "faces_aspect_ratio_over_5": 12
+    },
+    "right_knee": {
+      "faces": 310,
+      "triangles": 49,
+      "quads": 261,
+      "quad_ratio": 0.8419354838709677,
+      "vertices": 341,
+      "edges": 648,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 154,
+      "triangle_touch_edge_ratio": 0.23765432098765432,
+      "triangle_touch_vertices": 116,
+      "triangle_touch_vertex_ratio": 0.34017595307917886,
+      "regular_all_quad_valence4_vertices": 177,
+      "regular_all_quad_valence4_ratio": 0.5190615835777126,
+      "valence_distribution": {
+        "3": 16,
+        "4": 251,
+        "5": 70,
+        "6": 4
+      },
+      "face_aspect_ratio": {
+        "count": 310,
+        "mean": 2.5389321860018956,
+        "median": 2.2041664269993992,
+        "p95": 4.654770453911228,
+        "maximum": 19.823739361405355
+      },
+      "faces_aspect_ratio_over_3": 68,
+      "faces_aspect_ratio_over_5": 12
+    },
+    "tail_base": {
+      "faces": 715,
+      "triangles": 104,
+      "quads": 611,
+      "quad_ratio": 0.8545454545454545,
+      "vertices": 715,
+      "edges": 1429,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 310,
+      "triangle_touch_edge_ratio": 0.21693491952414276,
+      "triangle_touch_vertices": 248,
+      "triangle_touch_vertex_ratio": 0.34685314685314683,
+      "regular_all_quad_valence4_vertices": 445,
+      "regular_all_quad_valence4_ratio": 0.6223776223776224,
+      "valence_distribution": {
+        "3": 18,
+        "4": 589,
+        "5": 90,
+        "6": 17,
+        "8": 1
+      },
+      "face_aspect_ratio": {
+        "count": 715,
+        "mean": 2.5539701405328685,
+        "median": 2.0303809357357196,
+        "p95": 5.916175428534281,
+        "maximum": 8.306644832838808
+      },
+      "faces_aspect_ratio_over_3": 170,
+      "faces_aspect_ratio_over_5": 69
+    },
+    "tail_mid_tip": {
+      "faces": 1482,
+      "triangles": 251,
+      "quads": 1231,
+      "quad_ratio": 0.8306342780026991,
+      "vertices": 1412,
+      "edges": 2893,
+      "boundary_edges": 0,
+      "triangle_touch_edges": 752,
+      "triangle_touch_edge_ratio": 0.25993778085032837,
+      "triangle_touch_vertices": 632,
+      "triangle_touch_vertex_ratio": 0.4475920679886686,
+      "regular_all_quad_valence4_vertices": 636,
+      "regular_all_quad_valence4_ratio": 0.45042492917847027,
+      "valence_distribution": {
+        "3": 82,
+        "4": 1027,
+        "5": 268,
+        "6": 33,
+        "7": 2
+      },
+      "face_aspect_ratio": {
+        "count": 1482,
+        "mean": 2.348688776467754,
+        "median": 2.0554740290879367,
+        "p95": 5.099013357070132,
+        "maximum": 11.70468607255801
+      },
+      "faces_aspect_ratio_over_3": 302,
+      "faces_aspect_ratio_over_5": 84
+    }
+  },
+  "connected_shells": {
+    "count": 1,
+    "largest_shell_face_ratio": 1.0,
+    "shells_with_open_boundaries": 0,
+    "components": [
+      {
+        "vertices": 12059,
+        "edges": 25079,
+        "faces": 13020,
+        "triangles": 1939,
+        "boundary_edges": 0,
+        "centroid": [
+          0.06909546256065369,
+          6.763069541193545e-05,
+          -0.11635955423116684
+        ],
+        "minimum": [
+          -0.43225541710853577,
+          -0.32878661155700684,
+          -0.48963361978530884
+        ],
+        "maximum": [
+          0.4343373775482178,
+          0.3288269340991974,
+          0.4900764226913452
+        ],
+        "dimensions": [
+          0.8665927648544312,
+          0.6576135158538818,
+          0.979710042476654
+        ]
+      }
+    ]
+  },
+  "symmetry": {
+    "mirror_plane_y": 2.016127109527588e-05,
+    "distance": {
+      "count": 12059,
+      "mean": 5.147668474656481e-05,
+      "median": 4.214684778958144e-08,
+      "p95": 1.1920928955078125e-07,
+      "maximum": 0.011818645521998405
+    },
+    "normalized_to_height": {
+      "mean": 5.25427754281609e-05,
+      "median": 4.3019715999885524e-08,
+      "p95": 1.2167813371538644e-07,
+      "maximum": 0.012063411631590004
+    },
+    "match_tolerance": 0.000489855021238327,
+    "vertices_matching_within_0_05_percent_height": 11740,
+    "match_ratio_within_0_05_percent_height": 0.9735467285844598,
+    "matched_topology_at_that_tolerance": {
+      "same_valence_ratio": 0.9764906303236798,
+      "same_triangle_incidence_ratio": 0.9638841567291312,
+      "same_boundary_state_ratio": 1.0
+    },
+    "threshold_counts": {
+      "within_0_01_percent_height": 11728,
+      "within_0_05_percent_height": 11740,
+      "within_0_10_percent_height": 11744,
+      "within_0_20_percent_height": 12057
+    }
+  },
+  "mouth_geometry_depth": {
+    "sample_vertices": 115,
+    "x_depth_distribution": {
+      "count": 115,
+      "mean": 0.3753030621487161,
+      "median": 0.37298569083213806,
+      "p95": 0.4132477641105652,
+      "maximum": 0.4247512221336365
+    },
+    "front_20_percent_mean_x": 0.40756977521456206,
+    "recessed_20_percent_mean_x": 0.34614433024240576,
+    "front_to_recessed_depth": 0.061425444972156296,
+    "note": "This measures geometric depth only; it does not prove production-ready oral anatomy or animation loops."
+  },
+  "legend": {
+    "dark_lines": "edges belonging only to quads in the selected region",
+    "orange_lines": "edges touching at least one triangle; quad-loop interruption risk",
+    "magenta_lines": "open boundary edges; mesh defect"
+  },
+  "renders": {
+    "mouth_front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/deformation-audit-native/renders/mouth_front.png",
+    "mouth_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/deformation-audit-native/renders/mouth_three_quarter.png",
+    "shoulders_front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/deformation-audit-native/renders/shoulders_front.png",
+    "hips_knees_front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/deformation-audit-native/renders/hips_knees_front.png",
+    "tail_side": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-05/h31-smart-lowpoly-10k-quad/repair-test-v1/deformation-audit-native/renders/tail_side.png"
+  }
+}

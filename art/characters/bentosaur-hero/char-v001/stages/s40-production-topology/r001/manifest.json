@@ -1,0 +1,143 @@
+{
+  "$schema": "../../../../../../_pipeline/v1/schemas/stage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "character_id": "bentosaur-hero",
+  "character_version": "char-v001",
+  "stage": {
+    "code": "S40",
+    "slug": "production-topology",
+    "revision": "r001",
+    "state": "superseded",
+    "created_at": "2026-07-29T17:11:49-04:00",
+    "frozen_at": "2026-07-29T17:13:36-04:00"
+  },
+  "lineage": {
+    "parent_manifests": [
+      {
+        "artifact_id": "s30-scaffold-manifest",
+        "role": "parent_stage_manifest",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s30-retopo-scaffold/r001/manifest.json",
+        "format": "json",
+        "bytes": 4800,
+        "sha256": "286b877db5624c922ac0655feb4109caeab2c17af9e20958f64a2be4b8af544c",
+        "immutable": true,
+        "derived_from": []
+      }
+    ],
+    "supersedes": null
+  },
+  "coordinate_contract": {
+    "front_axis": "-Y",
+    "up_axis": "+Z",
+    "character_left_axis": "+X",
+    "unit_system": "METRIC",
+    "unit_scale": 1.0,
+    "origin": "Character centered on local X, feet placed at Z = 0, approximately one meter tall."
+  },
+  "inputs": [
+    {
+      "artifact_id": "face-system-research-v12",
+      "role": "mouth_and_expression_research_reference",
+      "path": "art/candidates/tripo/visual-gate-04/mouth-diagnostic-v12-hd-final-proxy/bentosaur_vg03_h31_mouth_diagnostic_v12_hd_final_proxy_static_master_user_approval_required.blend",
+      "format": "blend",
+      "bytes": 209766225,
+      "sha256": "9eb87828392c95d25572c07575ea5ece58224e9cfa80c23b85c2ce8d4ec0a571",
+      "immutable": true,
+      "derived_from": [
+        "s30-scaffold-manifest"
+      ]
+    }
+  ],
+  "editable_sources": [
+    {
+      "artifact_id": "s40-topology-assembly-r001",
+      "role": "canonical_blender_master",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r001/source/bentosaur_hero_s40_production_topology_r001.blend",
+      "format": "blend",
+      "bytes": 199169936,
+      "sha256": "df546ee2b5682e5bcd7dda1274ac54864e5df1936bcc141e1e289763a547d8f5",
+      "immutable": true,
+      "derived_from": [
+        "s30-scaffold-manifest",
+        "face-system-research-v12"
+      ]
+    }
+  ],
+  "toolchain": [
+    {
+      "name": "Blender",
+      "version": "5.1.2"
+    }
+  ],
+  "recipes": [
+    {
+      "artifact_id": "stage-source-builder",
+      "role": "deterministic_blender_recipe",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r001/recipes/create_bentosaur_character_stage.py",
+      "format": "py",
+      "bytes": 18534,
+      "sha256": "4adae2ef4be76702ed5c14982d344abf7cb3bd49aacc729a58d29826fa13d0b3",
+      "immutable": true,
+      "derived_from": []
+    },
+    {
+      "artifact_id": "face-research-profile",
+      "role": "face_system_parameter_reference",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r001/recipes/face_research_profile.json",
+      "format": "json",
+      "bytes": 3155,
+      "sha256": "f89fef3b74182958b4e789c56e46f117cacae41e4a7503867e325db128063d23",
+      "immutable": true,
+      "derived_from": []
+    }
+  ],
+  "vendor_jobs": [],
+  "outputs": [
+    {
+      "artifact_id": "scaffold-deformation-board",
+      "role": "visual_topology_evidence",
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r001/evidence/deformation_topology_board.png",
+      "format": "png",
+      "bytes": 7361544,
+      "sha256": "053801dad64fdb431990a337f7e7951a074680a8b1cf354e3bb60f92dd4a85a0",
+      "immutable": true,
+      "derived_from": [
+        "s30-scaffold-manifest"
+      ]
+    }
+  ],
+  "qa": {
+    "reports": [
+      {
+        "artifact_id": "scaffold-deformation-audit",
+        "role": "topology_qa_report",
+        "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r001/qa/scaffold_deformation_audit.json",
+        "format": "json",
+        "bytes": 16893,
+        "sha256": "964bc60d5eef082511393197557e2f17f146a0c7c92fa73eccafc08b3e5685b9",
+        "immutable": true,
+        "derived_from": [
+          "s30-scaffold-manifest"
+        ]
+      }
+    ],
+    "requirements": {
+      "normalized_production_coordinates": true,
+      "high_source_locked": true,
+      "scaffold_locked": true,
+      "face_research_preserved": true,
+      "authored_deformation_topology": false
+    },
+    "results": {
+      "work_mesh": "duplicate of repaired Smart LowPoly scaffold",
+      "face_reference_objects": 8,
+      "rigging_allowed": false
+    }
+  },
+  "approval": {
+    "gate_id": "G40_DEFORMATION_TOPOLOGY",
+    "decision_path": null,
+    "technical_state": "pending",
+    "human_state": "pending"
+  }
+}

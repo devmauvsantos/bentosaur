@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "Visual Gate 04 — H3.1 Extreme Texture",
+  "task_id": "26811821-3e6d-4b62-a695-679275c04f60",
+  "approval_owner": "Mau",
+  "status": "awaiting_user_decision",
+  "automatic_approval": false,
+  "technical_gate": {
+    "passed": true,
+    "geometry_surface_exactly_preserved": true,
+    "texture_maps_decode": true,
+    "pbr_connections_valid": true
+  },
+  "observations": {
+    "identity_consistent_across_views": true,
+    "palette_regions_coherent": true,
+    "doubled_eye": false,
+    "major_color_bleed": false,
+    "cleanup_items": [
+      "subtle sage albedo mottling",
+      "baked dark transition above the belly and under the chin",
+      "minor projection transitions near the arms and belly",
+      "production mouth cavity and delighted open smile are not built yet"
+    ]
+  },
+  "recommended_route_if_approved": "stop Tripo generation; rebuild clean semantic materials and the production mouth in Blender using this as the visual target",
+  "user_decision": null,
+  "user_notes": null
+}

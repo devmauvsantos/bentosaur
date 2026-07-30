@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "method": "snap_symmetric_quadriflow_boundaries_to_y0_and_weld",
+  "lineage": {
+    "input": {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-aligned-symmetric-quadriflow/40_vendor_space_all_quad_candidate.blend",
+      "sha256": "db5a018e3a62e59c6638e6beab5a9979251d6a433000d5ea5dc20175a0950957"
+    },
+    "preserved_s40": {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r002/work/30_symmetrized_negative_y_bootstrap.blend",
+      "sha256": "f690e66b6d4d744eb75bcab00af18ef73a1d692d72e8600916528cc7dd571894"
+    }
+  },
+  "steps": {
+    "00_input": {
+      "operation": "immutable axis-aligned symmetric QuadriFlow duplicate",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-qf-seam-stitch/00_input_axis_qf_open_all_quad.blend",
+      "sha256": "7f252ff7242c21dd8ef379bc34735b46571d6ce9351d90407819a55aa6c48a82",
+      "bytes": 24992303,
+      "topology": {
+        "vertices": 10244,
+        "edges": 20322,
+        "faces": 10048,
+        "triangles": 0,
+        "quads": 10048,
+        "ngons": 0,
+        "boundary_edges": 452,
+        "non_manifold_edges": 452,
+        "zero_area_faces": 0,
+        "symmetry": {
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "vertex_p95": 0.0,
+          "vertex_maximum": 9.672965006757295e-07,
+          "edge_match_ratio": 1.0,
+          "face_match_ratio": 1.0
+        },
+        "deviation_from_preserved_s40": {
+          "mean": 0.00023411896667897567,
+          "p95": 0.000974324531853199,
+          "maximum": 0.007326819933950901,
+          "p95_fraction_of_height": 0.000994255431226723
+        }
+      }
+    },
+    "10_snap": {
+      "operation": "snap all open symmetric-boundary vertices to Y=0",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-qf-seam-stitch/10_boundary_vertices_snapped_to_y0.blend",
+      "sha256": "5abd5551f020e78452a84ef8c26cf88757ac0b0c8fb5460e214418f455f536af",
+      "bytes": 24993037,
+      "topology": {
+        "vertices": 10244,
+        "edges": 20322,
+        "faces": 10048,
+        "triangles": 0,
+        "quads": 10048,
+        "ngons": 0,
+        "boundary_edges": 452,
+        "non_manifold_edges": 452,
+        "zero_area_faces": 0,
+        "symmetry": {
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "vertex_p95": 0.0,
+          "vertex_maximum": 9.413061548002588e-07,
+          "edge_match_ratio": 0.9842043105993504,
+          "face_match_ratio": 0.9712380573248408
+        },
+        "deviation_from_preserved_s40": {
+          "mean": 0.00023505154516488612,
+          "p95": 0.000974324531853199,
+          "maximum": 0.007603682577610016,
+          "p95_fraction_of_height": 0.000994255431226723
+        }
+      }
+    },
+    "20_weld": {
+      "operation": "weld coincident mirror-boundary vertices at 1e-7",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-qf-seam-stitch/20_coincident_mirror_boundary_weld.blend",
+      "sha256": "ad546ec2827bc432be8aea70b97fb9500115257bee00e84fecd0cf0e5ba0c9a5",
+      "bytes": 24993381,
+      "topology": {
+        "vertices": 10050,
+        "edges": 20096,
+        "faces": 10048,
+        "triangles": 0,
+        "quads": 10048,
+        "ngons": 0,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "zero_area_faces": 0,
+        "symmetry": {
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "vertex_p95": 0.0,
+          "vertex_maximum": 9.413061548002588e-07,
+          "edge_match_ratio": 1.0,
+          "face_match_ratio": 1.0
+        },
+        "deviation_from_preserved_s40": {
+          "mean": 0.0002283622097543529,
+          "p95": 0.0009406559984199703,
+          "maximum": 0.007603682577610016,
+          "p95_fraction_of_height": 0.0009598981702392004
+        }
+      }
+    },
+    "30_cleanup": {
+      "operation": "dissolve exact degenerates and recalculate normals",
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/center_seam_quad_repair/axis-qf-seam-stitch/30_axis_qf_closed_cleanup.blend",
+      "sha256": "8c0d8e08ed05d14cb2407f52f791eb43c05eaaa0f373bad158d9b4de44076cd6",
+      "bytes": 24992578,
+      "topology": {
+        "vertices": 10050,
+        "edges": 20096,
+        "faces": 10048,
+        "triangles": 0,
+        "quads": 10048,
+        "ngons": 0,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "zero_area_faces": 0,
+        "symmetry": {
+          "vertex_match_ratio_within_1e_6": 1.0,
+          "vertex_p95": 0.0,
+          "vertex_maximum": 9.413061548002588e-07,
+          "edge_match_ratio": 1.0,
+          "face_match_ratio": 1.0
+        },
+        "deviation_from_preserved_s40": {
+          "mean": 0.0002283622097543529,
+          "p95": 0.0009406559984199703,
+          "maximum": 0.007603682577610016,
+          "p95_fraction_of_height": 0.0009598981702392004
+        }
+      }
+    }
+  },
+  "boundary_snap": {
+    "edge_count": 452,
+    "vertex_count": 432,
+    "abs_y_before": {
+      "mean": 0.00014020987688328628,
+      "p95": 0.000543565780390054,
+      "maximum": 0.006633630488067865
+    }
+  },
+  "acceptance": {
+    "all_quads": true,
+    "closed_manifold": true,
+    "zero_area_free": true,
+    "exact_vertex_symmetry": true,
+    "exact_topology_symmetry": true,
+    "p95_deviation_within_0_15_percent_height": true
+  },
+  "verdict": {
+    "accepted": true,
+    "production_files_modified": false
+  }
+}

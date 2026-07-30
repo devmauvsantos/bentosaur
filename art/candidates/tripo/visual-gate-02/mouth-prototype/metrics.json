@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "status": "geometry_prototype_not_production_retopology",
+  "source": {
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-01/p1/tripo-out/bentosaur-visual-gate-01-p1-4a069b80/model.glb",
+    "sha256_before": "4c7fabeef6f7efdf7abfe3b896cad837aea5d6267515c842a2c5aea60c8f99e8",
+    "sha256_after": "4c7fabeef6f7efdf7abfe3b896cad837aea5d6267515c842a2c5aea60c8f99e8",
+    "unchanged": true
+  },
+  "construction": {
+    "source_locked": true,
+    "uses_tripo_generation": false,
+    "full_body_rig_created": false,
+    "mouth_is_flat_card_or_decal": false,
+    "boolean_cavity": {
+      "before_vertices": 2515,
+      "after_vertices": 3332,
+      "before_faces": 5036,
+      "after_faces": 5685,
+      "cavity_material_faces": 168,
+      "boolean_changed_mesh": true
+    },
+    "weld_on_duplicate_only": {
+      "before_vertices": 5270,
+      "after_weld_vertices": 2515,
+      "before_faces": 5036,
+      "after_weld_faces": 5036
+    },
+    "tongue": {
+      "separate_object": "P1_PROTOTYPE_TONGUE_SEPARATE_MESH",
+      "vertices": 914,
+      "faces": 960
+    },
+    "lip_rim": {
+      "separate_object": "P1_PROTOTYPE_MOUTH_INSERT_REQUIRES_RETOPOLOGY",
+      "vertices": 257,
+      "faces": 256
+    },
+    "prototype_mesh_components": 1
+  },
+  "bounds": {
+    "neutral_reference": {
+      "minimum": [
+        -0.431662380695343,
+        -0.35321351885795593,
+        -0.4990234375
+      ],
+      "maximum": [
+        0.431662380695343,
+        0.35321351885795593,
+        0.4990234375
+      ]
+    },
+    "mouth_prototype_visible_objects": {
+      "minimum": [
+        -0.431662380695343,
+        -0.35321351885795593,
+        -0.4990234375
+      ],
+      "maximum": [
+        0.431662380695343,
+        0.35321351885795593,
+        0.4990234375
+      ]
+    }
+  },
+  "limitations": [
+    "This validates a real cavity, separate tongue, and toothless open-smile volume.",
+    "The Boolean edge and separate lip rim are diagnostic construction, not production topology.",
+    "The close-up may expose thin fitting seams where the smooth insert meets P1's irregular triangulated muzzle; those seams are a known retopology blocker, not an approved facial finish.",
+    "Production requires a clean retopology pass with concentric lip loops, a connected mouth bag, deformation weights, and expression tests.",
+    "No full-body rig or animation was created in this prototype.",
+    "The neutral reference is an untouched deep copy of the source mesh with diagnostic matte shading."
+  ],
+  "outputs": {
+    "blend": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/mouth-prototype/p1_mouth_construction_prototype.blend",
+    "neutral_front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/mouth-prototype/renders/neutral/front_closed_reference.png",
+    "open_front": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/mouth-prototype/renders/open/front_open_smile_prototype.png",
+    "open_three_quarter": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/mouth-prototype/renders/open/three_quarter_open_smile_prototype.png",
+    "open_side": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/mouth-prototype/renders/open/side_open_smile_prototype.png",
+    "mouth_closeup": "/Users/mauvsantos/Workspace/games/Bentosaur/art/candidates/tripo/visual-gate-02/mouth-prototype/renders/open/mouth_closeup_geometry_prototype.png"
+  }
+}
