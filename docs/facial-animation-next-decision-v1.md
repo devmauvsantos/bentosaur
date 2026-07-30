@@ -56,6 +56,29 @@ Create a new immutable revision from the S40 r003 body and:
 8. stop after one implementation and at most one manual projection/loop
    correction.
 
+## r004 source-transfer checkpoint
+
+r004 verified the immutable VG06 hash, applied the exact shared production
+transform, preserved the unchanged S40 body, and extracted an inspection-only
+83,622-vertex Tripo mouth region. No production topology was edited.
+
+The absolute-depth mask was rejected because it selected the lower muzzle. The
+one permitted correction used the preserved neutral/open depth delta inside
+the measured mouth envelope. It isolated one connected recessed-cavity
+component, but its lower edge is the visible tongue occlusion—not a complete
+lip contour. Automatically converting it to an edge loop would invent the
+hidden lower lip.
+
+The automated transfer therefore stopped at checkpoint 20. This does not
+invalidate the Tripo mouth as the correct target. It establishes that the next
+step is a deliberate manual Blender retopology session using the aligned VG06
+surface, with the occluded lower loop treated as an explicit artist decision.
+No further automatic mouth approximation is authorized.
+
+Durable checkpoint:
+
+`art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r004/work/20_source_mouth_region_extraction.blend`
+
 Acceptance requires:
 
 - no visible body-to-mouth seam;

@@ -1,0 +1,15 @@
+{
+  "sampled_body_vertices": 687,
+  "minimum": 8.263849622380803e-07,
+  "maximum": 0.028217550367116928,
+  "mean": 0.00450081675329982,
+  "p50": 0.0026903634425252676,
+  "p95": 0.015964185819029808,
+  "material_bins": [
+    0.0025,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "interpretation": "Nearest-surface distance between the unchanged S40 closed-source production body and the independently generated open source inside the broad mouth working region. This is alignment diagnostic evidence, not a candidate-retopology error map."
+}

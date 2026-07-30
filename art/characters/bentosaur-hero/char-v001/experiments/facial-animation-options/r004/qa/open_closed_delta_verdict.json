@@ -1,0 +1,77 @@
+{
+  "diagnostic": "single_permitted_open_minus_neutral_depth_correction",
+  "inputs": {
+    "closed_depth": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r001/qa/source-probe/closed_front_depth.npz",
+    "open_depth": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r001/qa/source-probe/open_front_depth.npz",
+    "closed_sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+    "open_sha256": "7c0d7e2e1e4ee8fb4db320880f6f4b5c82c470bce37437ce28d26efa171b01d4"
+  },
+  "source_to_production": {
+    "scale": 1.0207102117712663,
+    "z_offset": 0.499774008028646
+  },
+  "measured_envelope": {
+    "canonical_x_min": -0.1,
+    "canonical_x_max": 0.1,
+    "canonical_z_min": 0.4328,
+    "canonical_z_max": 0.5143
+  },
+  "recessed_threshold_normalized_front_depth": 0.025,
+  "envelope_samples": 2400,
+  "recessed_samples": 1010,
+  "component_count": 3,
+  "components": [
+    {
+      "pixels": 1008,
+      "canonical_bounds_xz": {
+        "minimum": [
+          -0.08290174015654402,
+          0.4578764500157503
+        ],
+        "maximum": [
+          0.08271210477662808,
+          0.5111766451542833
+        ]
+      }
+    },
+    {
+      "pixels": 1,
+      "canonical_bounds_xz": {
+        "minimum": [
+          -0.09757638464429345,
+          0.43592931084106024
+        ],
+        "maximum": [
+          -0.09757638464429345,
+          0.43592931084106024
+        ]
+      }
+    },
+    {
+      "pixels": 1,
+      "canonical_bounds_xz": {
+        "minimum": [
+          0.09738674926437747,
+          0.43592931084106024
+        ],
+        "maximum": [
+          0.09738674926437747,
+          0.43592931084106024
+        ]
+      }
+    }
+  ],
+  "dominant_component_is_connected": true,
+  "dominant_component_is_full_aperture_boundary": false,
+  "semantic_limitation": "The dominant component is the visible recessed cavity change. Its lower image-space edge is produced by tongue/lower-front occlusion, not by an observable complete lip boundary. A welded aperture loop derived from this edge would encode the tongue silhouette and invent the hidden lower lip contour.",
+  "verdict": {
+    "localized_welded_quad_retopology_programmatically_defensible": false,
+    "stop_checkpoint": "20_source_mouth_region_extraction",
+    "reason": "No complete semantic lip/aperture contour is recoverable from the authorized source delta without manual artistic loop placement or another extraction method.",
+    "no_geometry_approximation_performed": true
+  },
+  "artifacts": {
+    "delta_component_overlay": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r004/qa/open_closed_delta_component_overlay.png",
+    "dominant_mask": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r004/qa/open_closed_delta_dominant_mask.png"
+  }
+}

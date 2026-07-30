@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "tripo-mouth-transfer-candidate",
+  "status": "stopped_at_locked_alignment_extraction_checkpoint_20",
+  "retopology_authored": false,
+  "production_body_modified": false,
+  "paid_api_usage": {
+    "tripo_credits_spent": 0,
+    "recorded_balance": 4695
+  },
+  "artifact_count": 28,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 4671,
+      "sha256": "6eb7269b2d1fe2a64907c71ec3db3b326e8f67e90382d778e225ccceac7d9953"
+    },
+    {
+      "path": "evidence/renders/01_front_alignment_overlay.png",
+      "bytes": 434237,
+      "sha256": "cc36d51c7bbdc3b5e71f9129b41585cf5d7f7c3186b0d18a70decc52800315df"
+    },
+    {
+      "path": "evidence/renders/02_three_quarter_alignment_overlay.png",
+      "bytes": 418464,
+      "sha256": "21fa74043998987854e0fd2e3f0e3c15823dd11a5a701574cdee7f5be6e2ea6f"
+    },
+    {
+      "path": "evidence/renders/03_profile_alignment_overlay.png",
+      "bytes": 406942,
+      "sha256": "ae13b66404c6c7dd630e87440a1f80b3ff586413801923b23bba7b579dc769ce"
+    },
+    {
+      "path": "evidence/renders/04_gameplay_alignment_overlay.png",
+      "bytes": 393193,
+      "sha256": "021c20a166c6e1dae24c31623e3f28f2b453cb160d4e89a195aba845465e5ac2"
+    },
+    {
+      "path": "evidence/renders/05_source_region_wire_closeup.png",
+      "bytes": 668659,
+      "sha256": "6a4b20e339fc5bcef288386348523cec8445a4b56de2067ed5a96c4f4eca5a9e"
+    },
+    {
+      "path": "evidence/renders/06_open_vs_production_deviation_closeup.png",
+      "bytes": 590253,
+      "sha256": "ad6f7010b7019d03d4733df062ff177bb965ee40e784ff79f8c132cabcb679f5"
+    },
+    {
+      "path": "evidence/tripo_transfer_stop_evidence_board.png",
+      "bytes": 5988928,
+      "sha256": "2e5920328a0ed6c665e486d02c5f8f6dd24b8559df4da3049b88c4f9cb1e302c"
+    },
+    {
+      "path": "qa/alignment_extraction_report.json",
+      "bytes": 180089,
+      "sha256": "f7b9f07883618a566fcf3ee39c9a9777cf99dd8c97af56eb7192aac065c4294d"
+    },
+    {
+      "path": "qa/open_closed_delta_component_overlay.png",
+      "bytes": 46480,
+      "sha256": "30e835b2dbce3b3bcadc368b1f5b17045f2c0cc409253f0b4c789fb4ecd677ef"
+    },
+    {
+      "path": "qa/open_closed_delta_dominant_mask.png",
+      "bytes": 1223,
+      "sha256": "8d7bbb7f3286be585950c210471a6bba2353caddb44e1061e5ef04623678a56a"
+    },
+    {
+      "path": "qa/open_closed_delta_verdict.json",
+      "bytes": 2861,
+      "sha256": "c0e2aa68effd71277a53f121dcc5cd375a8cb2690746128dc3a268ba5c1c5e6d"
+    },
+    {
+      "path": "qa/open_source_production_body_deviation.json",
+      "bytes": 532,
+      "sha256": "f173250f750ecd8d7706755829c308453c052ab43cae8d208332cca4b4a73ef7"
+    },
+    {
+      "path": "qa/source_depth_boundary_overlay.png",
+      "bytes": 15640,
+      "sha256": "f4d6f4759d1028cdfda3620c97e4e251211f2156db249e634349d115d8e226f5"
+    },
+    {
+      "path": "qa/source_depth_boundary_overlay.ppm",
+      "bytes": 217638,
+      "sha256": "6e8a569534bce2a1f40e7fafb1a36ec5f58ffae998ea3951c802e26a270c8d31"
+    },
+    {
+      "path": "qa/source_depth_component_mask.pgm",
+      "bytes": 72556,
+      "sha256": "2a67233b013418b45f53b32117a20964af8c93cab2f2862c369a3453f6676fc5"
+    },
+    {
+      "path": "qa/source_depth_component_mask.png",
+      "bytes": 638,
+      "sha256": "aa6206e80f35dc508c4da8a67c35a2a2af769040101ea37c7ead0c32be7888b4"
+    },
+    {
+      "path": "qa/source_front_depth.npy",
+      "bytes": 290292,
+      "sha256": "c22cf8e7f6615f608ad501a55da34b0b21b6f5dbbc954f45a5bf738c4d069591"
+    },
+    {
+      "path": "qa/source_front_depth.pgm",
+      "bytes": 72556,
+      "sha256": "e762cfd87578408a783a1c94f5c7058c29414abc3bc23fb17d42d28a51343a62"
+    },
+    {
+      "path": "qa/source_front_depth.png",
+      "bytes": 11901,
+      "sha256": "bed9cc08c4032669eba9f623ee301d35e3ad9be0876bb80e931a60d4aff55248"
+    },
+    {
+      "path": "recipes/build_artifact_manifest.mjs",
+      "bytes": 1409,
+      "sha256": "bfb5c1627dd48a50abb4445bb4876b9bb5e72afc7ee4c81f4f46666f0c178a1d"
+    },
+    {
+      "path": "recipes/build_locked_alignment_extraction.py",
+      "bytes": 18708,
+      "sha256": "4c46a2e45f5944071fab2a1e07a929c68823c3ca86dcbc0fd7d6106f63c40eb9"
+    },
+    {
+      "path": "recipes/derive_open_closed_delta_verdict.py",
+      "bytes": 8875,
+      "sha256": "ee96aa99b6d535fa512a999fb67907f0f16194f29c42f041019e760e3da0c0e2"
+    },
+    {
+      "path": "recipes/render_alignment_extraction_evidence.py",
+      "bytes": 9490,
+      "sha256": "8a33a29ae72fd253bcebbad416fc61dcfc8d405a05ee1f22cfc2c5a5738e65ba"
+    },
+    {
+      "path": "source/tripo_mouth_transfer_alignment_extraction.blend",
+      "bytes": 85245106,
+      "sha256": "9f9ca58f34dc46037e7c3bcadd2e8c399ba7e12f62a9551322c1a2c4dde3951f"
+    },
+    {
+      "path": "work/00_locked_inputs.blend",
+      "bytes": 81041560,
+      "sha256": "1b29d0f22e796c61cd4a2bd348c46601ed143d8067029761cc1601caac5852d1"
+    },
+    {
+      "path": "work/10_exact_matrix_aligned_overlay.blend",
+      "bytes": 81041560,
+      "sha256": "1b29d0f22e796c61cd4a2bd348c46601ed143d8067029761cc1601caac5852d1"
+    },
+    {
+      "path": "work/20_source_mouth_region_extraction.blend",
+      "bytes": 85245106,
+      "sha256": "9f9ca58f34dc46037e7c3bcadd2e8c399ba7e12f62a9551322c1a2c4dde3951f"
+    }
+  ]
+}
