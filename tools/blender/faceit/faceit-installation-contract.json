@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "verified_on": "2026-07-30",
+  "status": "installed_and_smoke_tested",
+  "blender": {
+    "version": "5.1.2"
+  },
+  "faceit": {
+    "version": "2.3.71",
+    "extension_module": "bl_ext.user_default.faceit",
+    "manifest_minimum_blender_version": "4.2.0",
+    "license_metadata": "GPL-3.0-or-later"
+  },
+  "background_automation": {
+    "requires_ephemeral_addon_enable": true,
+    "saves_user_preferences": false,
+    "saves_blend_file": false,
+    "registered_faceit_operator_count_in_live_session": 174,
+    "registration_operator": "faceit.add_facial_part",
+    "registration_smoke_test": "passed",
+    "landmark_workflow": "interactive_modal_3d_view",
+    "required_operator_contract": {
+      "faceit.add_facial_part": true,
+      "faceit.assign_main": true,
+      "faceit.facial_landmarks": true,
+      "faceit.generate_rig": true,
+      "faceit.smart_bind": true,
+      "faceit.generate_shapekeys": true,
+      "faceit.import_a2f_mocap": true
+    }
+  },
+  "production_authorization": {
+    "r005_allowed": false,
+    "blocked_until": "F0 canonical topology visual and technical approval"
+  }
+}

@@ -87,6 +87,24 @@ Faceit clone is not part of the game scope.
 
 See [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md).
 
+### Local Faceit installation
+
+Faceit `2.3.71` is installed for Blender `5.1.2`. A disposable background
+smoke test successfully enabled the extension for that process, registered a
+generated mesh through `faceit.add_facial_part`, and confirmed the required
+setup, landmarks, rig, bind, shape-key, and Audio2Face operators.
+
+The automation session did not save Blender preferences or a `.blend`. The
+repeatable smoke test is:
+
+`tools/blender/faceit/faceit_smoke_test.py`
+
+The live extension exposes 174 Faceit operators. Landmark fitting remains a
+visible, modal 3D-view workflow and therefore requires an interactive
+checkpoint rather than unattended headless execution.
+
+Installation readiness does not authorize using the rejected r005 mesh.
+
 ## Immediate gates
 
 ### F0 — canonical face
@@ -132,7 +150,8 @@ Approve:
 
 ## Costs and external actions
 
-- No Faceit license has been purchased.
+- Faceit `2.3.71` is installed locally; no license credential or transaction
+  record is stored in the repository.
 - No paid API was called during r004 or r005.
 - Tripo credits spent by r004/r005: `0`.
 - Recorded Tripo balance: `4,695`.

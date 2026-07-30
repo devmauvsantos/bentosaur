@@ -93,7 +93,18 @@ The current official Faceit listing offers:
 Faceit 2.3 is the relevant option. The listing currently covers Blender
 3.0–5.2, which includes the Bentosaur Blender 5.1 authoring environment.
 
-No purchase is authorized by this document. Mau must approve it.
+Faceit `2.3.71` is now installed locally for Blender `5.1.2`. The repository
+does not store license credentials or purchase records.
+
+A disposable background smoke test passed object registration and confirmed
+the operator surface needed for setup, landmarks, rig generation, binding,
+shape-key baking, and Audio2Face import. Background automation must explicitly
+enable `bl_ext.user_default.faceit` for each disposable process; the test does
+not save user preferences.
+
+Automation contract:
+
+`tools/blender/faceit/README.md`
 
 A complete clone would require general-purpose landmark fitting, automatic
 binding, non-destructive stage reconstruction, dozens of expression presets,
@@ -224,6 +235,13 @@ operate around it through Blender/Python automation:
 Faceit's internal operator API is not promised as a stable public integration.
 Automation must be pinned to the purchased version and protected by a smoke
 test. UI-driving is a fallback, not the production contract.
+
+The installed Faceit build exposes 174 Blender operators, but landmark
+placement is a modal 3D-view workflow that depends on visible editor and mouse
+context. This is the deliberate interactive boundary: AI can propose and
+validate landmark positions, while Mau reviews the visible landmark fit before
+rig generation. Headless scripts own repeatable preflight, evidence, baking,
+export, and QA—not invisible landmark guessing.
 
 ## Bounded pilot
 

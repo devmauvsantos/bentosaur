@@ -39,7 +39,8 @@ recorded in this repository before work is treated as durable.
 
 - [ ] Approve one canonical neutral production face before rigging.
 - [ ] Approve the maximum delighted-open expression on the same topology.
-- [ ] Run one bounded Faceit 2.3 pilot; do not purchase without Mau's approval.
+- [x] Install and smoke-test Faceit 2.3.71 in Blender 5.1.2.
+- [ ] Run one bounded Faceit pilot after F0 topology approval.
 - [ ] Validate blink, happy eyes, delight, and chew as combined controls.
 - [ ] Bake the approved controls to morph targets and deform bones.
 - [ ] Validate the GLB in the Godot mobile facial lab.

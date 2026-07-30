@@ -23,7 +23,8 @@ The project is in S40 Production Topology for
 - S40 r003: active all-quad body bootstrap
 - r005: frozen rejected static Tripo-mouth transfer research
 - current blocker: one canonical neutral/deformable face
-- facial direction: bounded Faceit 2.3 authoring pilot after topology approval
+- Faceit 2.3.71: installed and smoke-tested in Blender 5.1.2
+- facial direction: bounded Faceit authoring pilot after topology approval
 - Godot mobile facial-control lab: functional proof, not final art
 - UVs, final materials, production rig, animation, and Godot runtime: blocked
   until G40 passes and Mau approves it
