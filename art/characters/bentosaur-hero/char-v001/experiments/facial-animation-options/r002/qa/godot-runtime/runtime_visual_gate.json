@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "bentosaur-hero-facial-animation-options-r002",
+  "date": "2026-07-29",
+  "model": {
+    "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/exports/bentosaur_facial_mobile_proof_v002.glb",
+    "sha256": "f9411460244c680efd6a142119847e27915b7f4d9e0daa9c5cd654edec668a20"
+  },
+  "engine": {
+    "validated_version": "4.7-stable",
+    "locked_production_target": "4.7.1",
+    "renderer": "mobile"
+  },
+  "automated_contract": {
+    "passed": true,
+    "mesh_count": 9,
+    "triangles": 21336,
+    "required_morphs_found": true,
+    "required_bones_found": true
+  },
+  "visual_gate": {
+    "passed": false,
+    "production_approved": false,
+    "approval_owner": "Mau",
+    "observations": [
+      "The r001 nose-position tongue failure is no longer present.",
+      "Morph-only and hybrid opening show only a small tongue edge below the mouth instead of a readable tongue inside a recessed cavity.",
+      "Bone-only opening leaves the mouth essentially closed; with consistent tongue drivers, the tongue remains occluded behind the uncut muzzle.",
+      "Morph-only and hybrid are visually almost identical because this layered proxy has no authored jaw volume or production lip topology.",
+      "Mouth silhouette morphs, independent blinks, happy eyes, controller binding, and the Mobile renderer path operate successfully."
+    ]
+  },
+  "attempt_policy": {
+    "engine_visual_attempts_completed": 2,
+    "third_blind_transform_attempt_allowed": false,
+    "next_attempt_requires_authored_topology_plan": true
+  },
+  "next_deliberate_step": [
+    "Author a real mouth aperture and recessed cavity.",
+    "Author a separate neutral in-mouth tongue with clean transforms.",
+    "Validate jaw and tongue alone in Godot before adding expression correctives.",
+    "Then add the delighted-open corrective, blink, happy-eye, and chew controls."
+  ],
+  "paid_api_usage": {
+    "tripo_credits_spent": 0,
+    "recorded_tripo_balance": 4695
+  }
+}

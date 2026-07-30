@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.0.0",
+  "status": "disposable_mobile_facial_control_proof",
+  "production_approved": false,
+  "paid_api_usage": {
+    "used": false,
+    "credits_spent": 0
+  },
+  "source": {
+    "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+    "sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9",
+    "unchanged_after_run": true,
+    "body_object": "BENTOSAUR_BODY_RETOPO_WIP_R003",
+    "body_geometry_modified": false
+  },
+  "contract": {
+    "axes": {
+      "front": "-Y",
+      "character_left": "+X",
+      "up": "+Z"
+    },
+    "morph_targets": [
+      "Mouth_DelightedOpen",
+      "Mouth_CloseCorrective",
+      "Chew_Compress",
+      "Blink_L",
+      "Blink_R",
+      "HappyEyes",
+      "Tongue_Retract",
+      "Tongue_Chew"
+    ],
+    "bones": [
+      "root",
+      "jaw",
+      "tongue"
+    ],
+    "jaw_open_degrees": 10.0,
+    "states_rendered": [
+      "neutral",
+      "partial",
+      "open",
+      "blink",
+      "happy",
+      "chew"
+    ]
+  },
+  "mobile_budget": {
+    "mesh_count": 9,
+    "triangles_total_estimate": 21336,
+    "topology": {
+      "BENTOSAUR_R003_BODY_FACIAL_PROOF_STATIC": {
+        "vertices": 10050,
+        "edges": 20096,
+        "faces": 10048,
+        "triangles_after_export": 20096,
+        "shape_keys": 0
+      },
+      "FACE_MOUTH_APERTURE_MOBILE_PROXY": {
+        "vertices": 193,
+        "edges": 384,
+        "faces": 192,
+        "triangles_after_export": 320,
+        "shape_keys": 3
+      },
+      "FACE_UPPER_LIP_MOBILE_PROXY": {
+        "vertices": 50,
+        "edges": 73,
+        "faces": 24,
+        "triangles_after_export": 48,
+        "shape_keys": 3
+      },
+      "FACE_LOWER_LIP_JAW_SKINNED_PROXY": {
+        "vertices": 50,
+        "edges": 73,
+        "faces": 24,
+        "triangles_after_export": 48,
+        "shape_keys": 3
+      },
+      "FACE_EYE_L_MOBILE_PROXY": {
+        "vertices": 97,
+        "edges": 192,
+        "faces": 96,
+        "triangles_after_export": 160,
+        "shape_keys": 2
+      },
+      "FACE_EYE_R_MOBILE_PROXY": {
+        "vertices": 97,
+        "edges": 192,
+        "faces": 96,
+        "triangles_after_export": 160,
+        "shape_keys": 2
+      },
+      "FACE_BLUSH_L_STATIC_PROXY": {
+        "vertices": 49,
+        "edges": 96,
+        "faces": 48,
+        "triangles_after_export": 72,
+        "shape_keys": 0
+      },
+      "FACE_BLUSH_R_STATIC_PROXY": {
+        "vertices": 49,
+        "edges": 96,
+        "faces": 48,
+        "triangles_after_export": 72,
+        "shape_keys": 0
+      },
+      "FACE_TONGUE_MOBILE_PROXY": {
+        "vertices": 182,
+        "edges": 380,
+        "faces": 200,
+        "triangles_after_export": 360,
+        "shape_keys": 2
+      }
+    },
+    "note": "Morph targets live only on tiny face parts; the full body is not duplicated per expression."
+  },
+  "checkpoints": {
+    "00_r003_body_snapshot": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/work/00_r003_body_snapshot.blend",
+      "bytes": 432804,
+      "sha256": "c0130eee0489bde4945fbf6e67c8fc47e2f665b79b9c88ea4e5d1564d9f4ce19"
+    },
+    "10_face_modules": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/work/10_small_face_modules.blend",
+      "bytes": 468513,
+      "sha256": "a146e371eab9c0fb0d59707772ee6c8a230b8e895251166125da22daa9156d17"
+    },
+    "20_named_morph_targets": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/work/20_named_morph_targets.blend",
+      "bytes": 468513,
+      "sha256": "a146e371eab9c0fb0d59707772ee6c8a230b8e895251166125da22daa9156d17"
+    },
+    "30_jaw_tongue_skeleton": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/work/30_jaw_tongue_skeleton.blend",
+      "bytes": 470472,
+      "sha256": "66b7d9e5cf9f12ee0fb4cb3db0c796cdbd044070059a944dad5b30b2fe127ebe"
+    },
+    "40_render_ready": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/work/40_render_ready.blend",
+      "bytes": 473991,
+      "sha256": "a8e75ee4d425f6ff22ecf7cb049e2bed9e715937edceb7b0a183fa4b6a47c300"
+    },
+    "50_export_ready": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/work/50_export_ready_neutral.blend",
+      "bytes": 474208,
+      "sha256": "938178537d96f1196e686fbd56a8f0bebc93e8877f83be7d6b7f5e14415d5bea"
+    }
+  },
+  "renders": {
+    "neutral": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/evidence/renders/01_neutral_face.png",
+      "bytes": 481067,
+      "sha256": "8e6b0c83450e6ab73abd0a449d64189d6b63ecc896f94fb9be3c257ff32e3211"
+    },
+    "partial": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/evidence/renders/02_partial_face.png",
+      "bytes": 479800,
+      "sha256": "601b120f280b13546b1918bbf49109b3f3f9841cafecfdc27dc30837f92dd455"
+    },
+    "open": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/evidence/renders/03_open_face.png",
+      "bytes": 482848,
+      "sha256": "85589dd693504f1457cb43bef9b66741e429b6c8b01bf63f102c806c4c9fe5c4"
+    },
+    "blink": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/evidence/renders/04_blink_face.png",
+      "bytes": 477715,
+      "sha256": "453e42a4e0145c55d29ee92dc2706579b11d6234b6eafa8ee54f95806b95ecd6"
+    },
+    "happy": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/evidence/renders/05_happy_face.png",
+      "bytes": 481420,
+      "sha256": "9ef465368e0b42f6bec77869c34c38c4baeea1f4f59f3363196352c9779b64f1"
+    },
+    "chew": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/evidence/renders/06_chew_face.png",
+      "bytes": 479550,
+      "sha256": "720978e4fddc029e257559ee3fc9012b4dea1e1a6c7d317f2047a3e580ed3363"
+    },
+    "neutral_full": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/evidence/renders/07_neutral_three_quarter_full.png",
+      "bytes": 476963,
+      "sha256": "bd36b84e39fd541ea8320ceebc6da1bc73f4c697e53a61b808aa152f516a5a59"
+    },
+    "happy_full": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/evidence/renders/08_happy_three_quarter_full.png",
+      "bytes": 476472,
+      "sha256": "081ca63528585abaadef4230f68daf9f811c3526a678f8cd4bff6dd18bbd8bc8"
+    }
+  },
+  "glb": {
+    "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/exports/bentosaur_facial_mobile_proof_v002.glb",
+    "bytes": 438400,
+    "sha256": "f9411460244c680efd6a142119847e27915b7f4d9e0daa9c5cd654edec668a20"
+  },
+  "round_trip": {
+    "meshes": {
+      "BENTOSAUR_R003_BODY_FACIAL_PROOF_STATIC": {
+        "vertices": 10050,
+        "shape_keys": [],
+        "armature_modifiers": []
+      },
+      "FACE_BLUSH_L_STATIC_PROXY": {
+        "vertices": 49,
+        "shape_keys": [],
+        "armature_modifiers": []
+      },
+      "FACE_BLUSH_R_STATIC_PROXY": {
+        "vertices": 49,
+        "shape_keys": [],
+        "armature_modifiers": []
+      },
+      "FACE_EYE_L_MOBILE_PROXY": {
+        "vertices": 97,
+        "shape_keys": [
+          "Basis",
+          "Blink_L",
+          "HappyEyes"
+        ],
+        "armature_modifiers": []
+      },
+      "FACE_EYE_R_MOBILE_PROXY": {
+        "vertices": 97,
+        "shape_keys": [
+          "Basis",
+          "Blink_R",
+          "HappyEyes"
+        ],
+        "armature_modifiers": []
+      },
+      "FACE_LOWER_LIP_JAW_SKINNED_PROXY": {
+        "vertices": 96,
+        "shape_keys": [
+          "Basis",
+          "Mouth_DelightedOpen",
+          "Mouth_CloseCorrective",
+          "Chew_Compress"
+        ],
+        "armature_modifiers": [
+          "BENTOSAUR_FACE_RIG_MOBILE_PROOF"
+        ]
+      },
+      "FACE_MOUTH_APERTURE_MOBILE_PROXY": {
+        "vertices": 193,
+        "shape_keys": [
+          "Basis",
+          "Mouth_DelightedOpen",
+          "Mouth_CloseCorrective",
+          "Chew_Compress"
+        ],
+        "armature_modifiers": []
+      },
+      "FACE_TONGUE_MOBILE_PROXY": {
+        "vertices": 229,
+        "shape_keys": [
+          "Basis",
+          "Tongue_Retract",
+          "Tongue_Chew"
+        ],
+        "armature_modifiers": [
+          "BENTOSAUR_FACE_RIG_MOBILE_PROOF"
+        ]
+      },
+      "FACE_UPPER_LIP_MOBILE_PROXY": {
+        "vertices": 96,
+        "shape_keys": [
+          "Basis",
+          "Mouth_DelightedOpen",
+          "Mouth_CloseCorrective",
+          "Chew_Compress"
+        ],
+        "armature_modifiers": []
+      },
+      "Icosphere": {
+        "vertices": 42,
+        "shape_keys": [],
+        "armature_modifiers": []
+      }
+    },
+    "armatures": {
+      "BENTOSAUR_FACE_RIG_MOBILE_PROOF": [
+        "root",
+        "jaw",
+        "tongue"
+      ]
+    },
+    "required_morphs_found": {
+      "Mouth_DelightedOpen": true,
+      "Mouth_CloseCorrective": true,
+      "Chew_Compress": true,
+      "Blink_L": true,
+      "Blink_R": true,
+      "HappyEyes": true
+    },
+    "required_bones_found": {
+      "root": true,
+      "jaw": true,
+      "tongue": true
+    },
+    "qa_blend": {
+      "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/qa/60_glb_roundtrip_import.blend",
+      "bytes": 809865,
+      "sha256": "596e7da07e3b72e02e01e7b01325641fd16c0e05aa2a7035d5198163ad8aa260"
+    }
+  },
+  "limitations": [
+    "This is a layered visual/control proxy, not welded production facial topology.",
+    "The mouth is a conforming dark aperture patch over the unchanged r003 muzzle, not a cut mouth bag.",
+    "The tongue and a beauty-hidden lower-lip helper prove bone skinning, but final lip art, deformation weights, and jaw volume require authored production retopology.",
+    "The eye patches prove independent blink and happy-eye states; final art may use an atlas swap or refined curved patches.",
+    "No UV unwrap, final textures, LODs, collision, or production animation clips are claimed."
+  ]
+}
