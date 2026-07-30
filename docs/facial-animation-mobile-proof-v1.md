@@ -1,7 +1,9 @@
 # Bentosaur Mobile Facial Animation Proof V1
 
-**Decision status:** control architecture selected; current proxy failed the
-production visual gate.
+**Decision status:** control architecture selected; r003 proved the cavity
+direction but failed its welded-surface visual gate. The procedural mouth
+branch is frozen. The original Tripo open-mouth mesh is now the required
+geometry authority for a localized facial retopology.
 
 ## Outcome
 
@@ -40,15 +42,40 @@ layered proxy already looks finished.
 - `r002`: transforms were applied before binding; structural contract passed;
   tongue moved away from the nose but remains below/behind the mouth, while
   bone-only does not create a visible aperture.
-- No blind `r003` tweak is authorized by this result.
+- `r003/a01`: a real cut window, recessed cavity, and contained tongue removed
+  the old cyan lower loop and produced the closest open-mouth result so far.
+  The separate skin transition still showed a visible seam at three-quarter
+  view.
+- `r003/a02`: the one permitted localized correction narrowed the transition
+  and transferred normals. It made the seam worse by creating a striped ring.
+- The r003 stop rule was honored. There was no third offset/window/normal
+  variation and no Godot, morph, or skinning work was built on the failed
+  static gate.
 
-After two failed visual passes, the next attempt must change the authoring
+After two failed visual passes, the next revision must change the authoring
 approach, not guess another transform:
 
-1. create real lip loops, an aperture, and a recessed mouth cavity;
-2. create the tongue in its neutral in-mouth pose;
-3. validate only jaw + tongue in Godot;
-4. add the smile corrective and eye shapes after that small gate passes.
+1. lock and transform the original Tripo open-mouth source into production
+   space;
+2. retopologize a broader facial region directly against that surface,
+   preserving its aperture silhouette, muzzle transition, cavity depth, and
+   visible tongue shape;
+3. weld that authored quad region to the production body and rebuild the
+   tongue as a separate closed mesh;
+4. validate only the static open mouth in Blender, front, three-quarter,
+   profile, wireframe, and gameplay-camera overlays;
+5. validate the static result at the gameplay camera in Godot with 4x MSAA;
+6. add the jaw, tongue, smile corrective, and eye shapes only after those two
+   static gates pass.
+
+The immutable geometry authority is:
+
+`art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out/model.glb`
+
+It cannot be pasted directly into the runtime mesh because it is a single
+fused 960,234-vertex shell with unrelated topology to the neutral source. Its
+shape can and must be transferred through localized retopology; no new Bézier,
+circle, or procedural bean aperture is authorized.
 
 This makes the next run cheaper in time and easier to diagnose.
 
@@ -64,6 +91,10 @@ The next visual checkpoint must also match the soft reference-art finish:
 
 - Blender source/checkpoints:
   `art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/`
+- Frozen static mouth-window attempts:
+  `art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r003/`
+- Best r003 comparison:
+  `art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r003/evidence/reference_vs_a01_front.png`
 - Godot lab:
   `game/scenes/labs/facial_animation_options_lab.tscn`
 - Engine contract:

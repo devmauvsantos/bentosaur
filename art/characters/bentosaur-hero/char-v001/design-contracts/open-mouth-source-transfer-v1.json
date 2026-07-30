@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "bentosaur-hero-open-mouth-source-transfer-v1",
+  "status": "locked_for_static_retopology_gate",
+  "visual_approval_owner": "Mau",
+  "decision": {
+    "geometry_authority": "original_tripo_vg06_open_mouth",
+    "procedural_aperture_generation_allowed": false,
+    "raw_source_runtime_use_allowed": false,
+    "direct_open_to_neutral_shape_key_allowed": false,
+    "localized_source_guided_retopology_required": true
+  },
+  "sources": {
+    "open_visual_authority": {
+      "path": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out/model.glb",
+      "sha256": "7c0d7e2e1e4ee8fb4db320880f6f4b5c82c470bce37437ce28d26efa171b01d4",
+      "vertices": 960234,
+      "triangles": 1920464,
+      "connected_components": 1,
+      "topology_note": "One fused watertight shell containing body, lips, cavity, visible tongue, eyes, and appendages."
+    },
+    "neutral_visual_reference": {
+      "path": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+      "sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+      "vertices": 987461,
+      "triangles": 1974918,
+      "connected_components": 1,
+      "topology_note": "Independently generated fused shell; visual neutral target only."
+    },
+    "production_body_parent": {
+      "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+      "sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9"
+    }
+  },
+  "coordinate_mapping": {
+    "derive_from": "neutral_visual_reference",
+    "source_axes": {
+      "front": "+X",
+      "character_left": "+Y",
+      "up": "+Z"
+    },
+    "production_axes": {
+      "front": "-Y",
+      "character_left": "+X",
+      "up": "+Z"
+    },
+    "uniform_scale": 1.02071025905855,
+    "rotation_degrees_z": -90.0,
+    "translation": [
+      -0.0000206092357788,
+      0.0,
+      0.499774028475302
+    ],
+    "matrix_row_major": [
+      [
+        0.0,
+        1.02071025905855,
+        0.0,
+        -0.0000206092357788
+      ],
+      [
+        -1.02071025905855,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.02071025905855,
+        0.499774028475302
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "additional_global_registration_allowed": false
+  },
+  "measured_production_space_target": {
+    "aperture_recession_x": [
+      -0.097597,
+      0.097366
+    ],
+    "aperture_recession_z": [
+      0.432794,
+      0.514312
+    ],
+    "visible_cavity_y": [
+      -0.35929,
+      -0.303151
+    ]
+  },
+  "required_authored_topology": {
+    "facial_region": "Localized quads welded to an existing production-body loop outside the measured mouth envelope.",
+    "lip_support_loops_minimum": 3,
+    "lip_support_loops_preferred": 4,
+    "cavity": "Low-poly recessed mouth bag snapped to the Tripo surface target.",
+    "tongue": "Separate closed low-poly mesh reconstructed against the fused visible source tongue.",
+    "open_state": "Authored and visually approved first.",
+    "closed_state": "Duplicate identical topology and sculpt against the neutral visual reference only after the open static gate passes."
+  },
+  "forbidden_shortcuts": [
+    "hard-coded Bezier aperture",
+    "circle, ellipse, oval, or procedural bean aperture",
+    "floating skin-colored transition ring",
+    "raw cropped high-poly patch welded to production quads",
+    "independent normalization of the open source",
+    "full-body open-to-neutral vertex transfer",
+    "new Tripo generation before this local transfer gate"
+  ],
+  "static_gate": {
+    "checkpoint": "30_TRIPO_OPEN_MOUTH_TRANSFER_STATIC",
+    "required_evidence": [
+      "front clay render",
+      "three-quarter clay render",
+      "profile clay render",
+      "gameplay-camera render",
+      "source overlay",
+      "wireframe welded-boundary view",
+      "surface-deviation report"
+    ],
+    "pass_criteria": [
+      "aperture silhouette matches the Tripo source",
+      "muzzle-to-mouth transition reads as one continuous soft surface",
+      "cavity depth matches in three-quarter and profile views",
+      "tongue reveal matches while remaining a separate closed mesh",
+      "no visible weld seam",
+      "no cyan leak, central notch, striped ring, or floating sticker",
+      "nose, cheeks, muzzle, and body silhouette remain undamaged"
+    ],
+    "attempt_limit": {
+      "initial_implementation": 1,
+      "manual_projection_or_loop_correction": 1,
+      "automatic_variation_loop_allowed": false
+    },
+    "blocked_until_pass": [
+      "shape keys",
+      "jaw rig",
+      "tongue rig",
+      "skin weights",
+      "Godot facial runtime integration"
+    ]
+  },
+  "paid_api_usage": {
+    "tripo_credits_spent_for_transfer": 0,
+    "recorded_tripo_balance": 4695
+  }
+}
