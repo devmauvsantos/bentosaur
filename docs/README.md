@@ -36,6 +36,10 @@ recorded in this repository before work is treated as durable.
 6. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
 7. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
 
+Active visual contingency research:
+
+- [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
+
 ## Active work queue
 
 - [ ] Approve one canonical neutral production face before rigging.
@@ -52,6 +56,8 @@ recorded in this repository before work is treated as durable.
 - [ ] Complete S70 body/facial rig and skin.
 - [ ] Complete the S80 animation library.
 - [ ] Build the S90 mobile runtime slice and measure it on physical devices.
+- [ ] Run one bounded flat-cel front/side character-rig proof before generating
+      any additional 2D screens or reconsidering the engine lock.
 
 ## Decision register
 
@@ -65,6 +71,7 @@ recorded in this repository before work is treated as durable.
 | Full 52-shape ARKit face | Not required for the game | [Faceit/AI strategy](facial-animation-faceit-ai-pipeline-v1.md) |
 | Full custom Faceit clone | Rejected before the pilot | [Faceit/AI strategy](facial-animation-faceit-ai-pipeline-v1.md) |
 | Notion as canonical documentation | Retired | This page |
+| Flat-cel 2D contingency | Research; one rig proof authorized | [2D feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md) |
 
 ## Document states
 

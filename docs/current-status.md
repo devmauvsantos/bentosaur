@@ -25,6 +25,22 @@ surfaced, or animation-ready.
 - Live 3D chibi diorama at runtime.
 - Screen-space 2D/2.5D HUD with a hybrid 3D book.
 
+## Bounded 2D contingency research
+
+Mau identified the flat-cel gameplay study as more production-plausible than
+the dense painted-2D studies. One bounded front/side character-rig proof is
+authorized to test that route:
+
+`art/concepts/2d-chibi/v1/01_generated-exploration/bentosaur-gameplay-2d-flat-cel-v2.png`
+
+This is not a production asset or an engine-decision change. No matching
+flat-cel hub, book, cast, or season set should be generated until one layered
+front rig and one layered side rig successfully idle, blink, delight, chew,
+walk, mirror, and use a separate prop socket in Godot.
+
+See
+[2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md).
+
 ## Character lineage
 
 | Stage | State | Authority |

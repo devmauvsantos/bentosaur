@@ -1,0 +1,91 @@
+{
+  "id": "bentosaur-2d-chibi-exploration-v1",
+  "date": "2026-07-30",
+  "status": "research",
+  "productionApproved": false,
+  "engineDecisionChanged": false,
+  "founderSignal": "The flat-cel gameplay candidate feels more possible.",
+  "selectedProofCandidate": "01_generated-exploration/bentosaur-gameplay-2d-flat-cel-v2.png",
+  "generationTool": "built-in ImageGen",
+  "tripoCreditsUsed": 0,
+  "referenceScreens": [
+    {
+      "destination": "00_reference-screens/ref-01-gameplay-pixel-original.png",
+      "source": "art/references/bentosaur-gameplay-concept.png"
+    },
+    {
+      "destination": "00_reference-screens/ref-02-gameplay-3d-diorama-exploration-v1.png",
+      "source": "art/concepts/3d-diorama/bentosaur-gameplay-3d-diorama-exploration-v1.png"
+    },
+    {
+      "destination": "00_reference-screens/ref-03-gameplay-3d-diorama-engine-target-v2.png",
+      "source": "art/concepts/3d-diorama/bentosaur-gameplay-3d-diorama-engine-target-v2.png"
+    },
+    {
+      "destination": "00_reference-screens/ref-04-gameplay-3d-hybrid-ui-v1.png",
+      "source": "art/concepts/ui-3d-hybrid/bentosaur-gameplay-hybrid-ui-v1.png"
+    },
+    {
+      "destination": "00_reference-screens/ref-05-home-stall-hub-3d-hybrid-ui-v1.png",
+      "source": "art/concepts/ui-3d-hybrid/bentosaur-stall-hub-ui-v1.png"
+    },
+    {
+      "destination": "00_reference-screens/ref-06-album-page-turn-3d-hybrid-ui-v1.png",
+      "source": "art/concepts/ui-3d-hybrid/bentosaur-album-page-turn-ui-v1.png"
+    }
+  ],
+  "generatedOutputs": [
+    {
+      "id": "gameplay-painted-chibi-v1",
+      "path": "01_generated-exploration/bentosaur-gameplay-2d-painted-chibi-v1.png",
+      "role": "mood study",
+      "sha256": "1c19f5ea078cc0a94acb1c29fdfeca485f6aaaa815ad33d778489c5beecc7042",
+      "bytes": 2388533,
+      "dimensions": "941x1672"
+    },
+    {
+      "id": "stall-hub-painted-chibi-v1",
+      "path": "01_generated-exploration/bentosaur-stall-hub-2d-painted-chibi-v1.png",
+      "role": "mood study",
+      "sha256": "dbb060a5b1807a65fa3e578638e902fc9ab3bd8383f06cd669a9b07169de49ad",
+      "bytes": 2347286,
+      "dimensions": "941x1672"
+    },
+    {
+      "id": "album-painted-chibi-v1",
+      "path": "01_generated-exploration/bentosaur-album-page-turn-2d-painted-chibi-v1.png",
+      "role": "mood study",
+      "sha256": "a077cb7b44d96680a3b9dec1052bbaf292969a2834f964908b6b0e1a37311a10",
+      "bytes": 2227239,
+      "dimensions": "941x1672"
+    },
+    {
+      "id": "gameplay-flat-cel-v2",
+      "path": "01_generated-exploration/bentosaur-gameplay-2d-flat-cel-v2.png",
+      "role": "selected production-feasibility candidate",
+      "sha256": "3166148673551994fc0a7bf699aaa24a271c0b5acac68533679815a94b823793",
+      "bytes": 2319031,
+      "dimensions": "941x1672"
+    },
+    {
+      "id": "gameplay-comparison-board-v1",
+      "path": "02_boards/bentosaur-gameplay-3d-vs-2d-comparison-v1.png",
+      "role": "human decision evidence",
+      "sha256": "358a4e8f696659f4ed72f2ea3db109cf4b8a5dc446b75e5019fb8d9323daa0a2",
+      "bytes": 6741058,
+      "dimensions": "1530x1010"
+    }
+  ],
+  "nextGate": {
+    "name": "one-character flat-cel rig proof",
+    "required": [
+      "standalone front layered master",
+      "standalone side layered master",
+      "front idle and randomized blink",
+      "front delight and chew",
+      "side walk with east/west mirroring",
+      "separate prop socket",
+      "Godot phone-scale visual and performance evidence"
+    ]
+  }
+}
