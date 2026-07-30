@@ -1,0 +1,307 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "read_only_open_closed_facial_source_probe",
+  "coordinate_contract": {
+    "front": "+X",
+    "character_left": "+Y",
+    "up": "+Z",
+    "normalized_space": "(world_position - source_bounds_minimum) / source_bounds_dimensions"
+  },
+  "closed": {
+    "label": "closed",
+    "source": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+    "sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+    "bytes": 47399240,
+    "bounds": {
+      "minimum": [
+        -0.43349727988243103,
+        -0.3286252021789551,
+        -0.48963358998298645
+      ],
+      "maximum": [
+        0.4336620271205902,
+        0.3286655843257904,
+        0.49007636308670044
+      ],
+      "dimensions": [
+        0.8671593070030212,
+        0.6572908163070679,
+        0.9797099828720093
+      ],
+      "center": [
+        8.237361907958984e-05,
+        2.0191073417663574e-05,
+        0.00022138655185699463
+      ]
+    },
+    "topology": {
+      "mesh_objects": 1,
+      "totals": {
+        "vertices": 987461,
+        "edges": 2962377,
+        "polygons": 1974918,
+        "triangles": 1974918,
+        "uv_layers": 0,
+        "material_slots": 0,
+        "shape_keys": 0,
+        "vertex_groups": 0
+      },
+      "objects": [
+        {
+          "name": "tripo_node_f23a7b24-a3d5-433c-a404-3d9d2d8c0787",
+          "matrix_world": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_euler_radians": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 987461,
+          "edges": 2962377,
+          "polygons": 1974918,
+          "triangles": 1974918,
+          "uv_layers": 0,
+          "material_slots": 0,
+          "shape_keys": 0,
+          "vertex_groups": 0
+        }
+      ]
+    },
+    "normalized_landmark_windows": {
+      "mouth": {
+        "minimum": [
+          0.74,
+          0.3,
+          0.42
+        ],
+        "maximum": [
+          1.01,
+          0.7,
+          0.59
+        ]
+      },
+      "eye_character_left": {
+        "minimum": [
+          0.84,
+          0.52,
+          0.55
+        ],
+        "maximum": [
+          1.01,
+          0.77,
+          0.7
+        ]
+      },
+      "eye_character_right": {
+        "minimum": [
+          0.84,
+          0.23,
+          0.55
+        ],
+        "maximum": [
+          1.01,
+          0.48,
+          0.7
+        ]
+      },
+      "full_face": {
+        "minimum": [
+          0.7,
+          0.16,
+          0.38
+        ],
+        "maximum": [
+          1.01,
+          0.84,
+          0.76
+        ]
+      }
+    }
+  },
+  "open": {
+    "label": "open",
+    "source": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out/model.glb",
+    "sha256": "7c0d7e2e1e4ee8fb4db320880f6f4b5c82c470bce37437ce28d26efa171b01d4",
+    "bytes": 46092344,
+    "bounds": {
+      "minimum": [
+        -0.43248316645622253,
+        -0.3276807367801666,
+        -0.48951423168182373
+      ],
+      "maximum": [
+        0.4325222373008728,
+        0.32749491930007935,
+        0.4903549551963806
+      ],
+      "dimensions": [
+        0.865005373954773,
+        0.6551756858825684,
+        0.9798691868782043
+      ],
+      "center": [
+        1.9535422325134277e-05,
+        -9.290874004364014e-05,
+        0.0004203617572784424
+      ]
+    },
+    "topology": {
+      "mesh_objects": 1,
+      "totals": {
+        "vertices": 960234,
+        "edges": 2880696,
+        "polygons": 1920464,
+        "triangles": 1920464,
+        "uv_layers": 0,
+        "material_slots": 0,
+        "shape_keys": 0,
+        "vertex_groups": 0
+      },
+      "objects": [
+        {
+          "name": "tripo_node_01804494-a277-4c4a-9699-97b3a39b3498",
+          "matrix_world": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_euler_radians": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 960234,
+          "edges": 2880696,
+          "polygons": 1920464,
+          "triangles": 1920464,
+          "uv_layers": 0,
+          "material_slots": 0,
+          "shape_keys": 0,
+          "vertex_groups": 0
+        }
+      ]
+    },
+    "normalized_landmark_windows": {
+      "mouth": {
+        "minimum": [
+          0.74,
+          0.3,
+          0.42
+        ],
+        "maximum": [
+          1.01,
+          0.7,
+          0.59
+        ]
+      },
+      "eye_character_left": {
+        "minimum": [
+          0.84,
+          0.52,
+          0.55
+        ],
+        "maximum": [
+          1.01,
+          0.77,
+          0.7
+        ]
+      },
+      "eye_character_right": {
+        "minimum": [
+          0.84,
+          0.23,
+          0.55
+        ],
+        "maximum": [
+          1.01,
+          0.48,
+          0.7
+        ]
+      },
+      "full_face": {
+        "minimum": [
+          0.7,
+          0.16,
+          0.38
+        ],
+        "maximum": [
+          1.01,
+          0.84,
+          0.76
+        ]
+      }
+    }
+  },
+  "depth_map": {
+    "projection": "orthographic rays from +X toward -X",
+    "width": 320,
+    "height": 320,
+    "stored_value": "normalized X of first surface hit",
+    "missing_value": "NaN"
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "bentosaur-hero-facial-animation-options-r001",
+  "status": "verified_method_proof_not_production_approved",
+  "parent": {
+    "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/source/bentosaur_hero_s40_production_topology_r003.blend",
+    "sha256": "181d93014f1667d9044d12e24fa297f4b391c9eb8d1164ddc5f45f3971f7caf9"
+  },
+  "visual_references": [
+    {
+      "state": "closed",
+      "path": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+      "sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607"
+    },
+    {
+      "state": "delighted_open",
+      "path": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out/model.glb",
+      "sha256": "7c0d7e2e1e4ee8fb4db320880f6f4b5c82c470bce37437ce28d26efa171b01d4"
+    }
+  ],
+  "decision": {
+    "recommended_method": "hybrid_jaw_bone_plus_mouth_corrective",
+    "eye_method": "small_independent_blend_shape_meshes",
+    "tongue_method": "separate_skinned_mesh_and_bone",
+    "visual_approval_owner": "Mau",
+    "production_approved": false
+  },
+  "paid_api_usage": {
+    "tripo_credits_spent": 0,
+    "recorded_tripo_balance": 4695
+  },
+  "artifacts": [
+    {
+      "path": "evidence/facial_states_contact_sheet.png",
+      "bytes": 832038,
+      "sha256": "2d20d056b6839a057e4459dfc7156acbe27cdfb5678bc14203cebb53039f1186"
+    },
+    {
+      "path": "evidence/renders/01_neutral_face.png",
+      "bytes": 481067,
+      "sha256": "11779fa80ce3f2f813b9a1b116ad630486e1b42666a3f2d2d9acfaa298051468"
+    },
+    {
+      "path": "evidence/renders/02_partial_face.png",
+      "bytes": 479800,
+      "sha256": "20f421be1cdc3051494cbedcacfce7b3dc4a8824f039226ffa20579ccf514f75"
+    },
+    {
+      "path": "evidence/renders/03_open_face.png",
+      "bytes": 482848,
+      "sha256": "2d6a4faca796d7a7dc8d3c29e1a52531b85579f3cb3131acf47bd050a710d81f"
+    },
+    {
+      "path": "evidence/renders/04_blink_face.png",
+      "bytes": 477715,
+      "sha256": "1d083879e5abc10bedd6a7e536b9795fd6aff05c0f6130c1a25a0856ba2e5a44"
+    },
+    {
+      "path": "evidence/renders/05_happy_face.png",
+      "bytes": 481420,
+      "sha256": "dac8e6c2ff2a4cb2ea87c5df4b69acf0e761b794c82a02a9bd90e803b74e6995"
+    },
+    {
+      "path": "evidence/renders/06_chew_face.png",
+      "bytes": 481314,
+      "sha256": "2dc5837898872230e398368ab2f8d1cdfa29eaa9eca3f5fb3c3b556118fe9014"
+    },
+    {
+      "path": "evidence/renders/07_neutral_three_quarter_full.png",
+      "bytes": 476963,
+      "sha256": "efec601bc8a3527200873556e9d80004e4b826ab375dfda971767c3b9b11c4f9"
+    },
+    {
+      "path": "evidence/renders/08_happy_three_quarter_full.png",
+      "bytes": 476472,
+      "sha256": "ad6c61860777e70983c793b3798b8e65551a4806f19708c3c527fa29c49c5db7"
+    },
+    {
+      "path": "exports/bentosaur_facial_mobile_proof_v001.glb",
+      "bytes": 438428,
+      "sha256": "49fe5dcf9ce1370e77f42f751e1294eb29d1f7fb436e051f975f82269331732e"
+    },
+    {
+      "path": "qa/60_glb_roundtrip_import.blend",
+      "bytes": 809142,
+      "sha256": "79dee946849dc0fd430f054ed7ceded2a8759098fd3440a3a36b312a69d6a4e5"
+    },
+    {
+      "path": "qa/facial_mobile_proof_report.json",
+      "bytes": 10283,
+      "sha256": "92b1e6fc990d3054fc797d5e63398eba3a3a9265069318b385b7f0c13b004122"
+    },
+    {
+      "path": "qa/source-probe/analyze_depth.py",
+      "bytes": 9969,
+      "sha256": "4a5f8140a3721a385ec4cb7db64050a6fae6294406f8db13fbc26f6b906d9fdb"
+    },
+    {
+      "path": "qa/source-probe/closed_front_depth.npz",
+      "bytes": 237651,
+      "sha256": "454aacf94e9f07228ade36a379d7d51aa18becce087d5dc37f9cb18f2025b993"
+    },
+    {
+      "path": "qa/source-probe/facial_probe_report.json",
+      "bytes": 6371,
+      "sha256": "133c0fc515a422faa981eeda614ddbecec1f4ef406ecaf58a487bbc200ddd5c4"
+    },
+    {
+      "path": "qa/source-probe/inspect_sources.py",
+      "bytes": 10292,
+      "sha256": "6eb4738aaaa9cad70f645a2e47a8e1aa2dcde960588a2e9ad4dd65130a0f2857"
+    },
+    {
+      "path": "qa/source-probe/inventory.json",
+      "bytes": 2109,
+      "sha256": "3eb712b818a57de499a286870883c78a290e2f9d32c90684594af2517d8558fc"
+    },
+    {
+      "path": "qa/source-probe/open_closed_front_depth_comparison.png",
+      "bytes": 129678,
+      "sha256": "abc0cee198e382f7f8b53fd25d6b36cf5af7dd45d8c6c861a0945724ad147df8"
+    },
+    {
+      "path": "qa/source-probe/open_closed_source_locked_overlay.blend",
+      "bytes": 137993807,
+      "sha256": "62e78f0be12633014398fb45cf6a9f56b80a60bb10d06358669899545f7b20d5"
+    },
+    {
+      "path": "qa/source-probe/open_front_depth.npz",
+      "bytes": 237293,
+      "sha256": "3f2ecb32fbe697eab2adfce5b2ce1b1d87be4e002042e4240b5dc829fec946b0"
+    },
+    {
+      "path": "qa/source-probe/README.md",
+      "bytes": 6161,
+      "sha256": "0b174508da1d0816ea12e399f1f2b0129ecb86e392e06e9a2257ba082d080308"
+    },
+    {
+      "path": "qa/source-probe/source_probe_raw.json",
+      "bytes": 6275,
+      "sha256": "78087ed5524b522277ed9328e4dd38408d28cb7bc241f6dcf734fec51dc44e59"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2907,
+      "sha256": "fefdb851341c8a855a8e0289b4f1385e53f9451b1036e10106eb814e8dddd4be"
+    },
+    {
+      "path": "recipes/build_facial_rig_proof.py",
+      "bytes": 36491,
+      "sha256": "2a28b48476ff5645610894e385fe19d9cafe8ec03f3f21eae1bc320345cff392"
+    },
+    {
+      "path": "recipes/build_manifest.mjs",
+      "bytes": 2481,
+      "sha256": "8182dcf9b1eb1871e63123cad221442447b58abf64b7415f4585ad6d5eb996fe"
+    },
+    {
+      "path": "recipes/make_contact_sheet.py",
+      "bytes": 2095,
+      "sha256": "6cde945d5de31a13d5123e77663a0419ef8d6ec30ee56cd523cd7a672cf059cf"
+    },
+    {
+      "path": "source/bentosaur_hero_facial_animation_options_r001.blend",
+      "bytes": 474173,
+      "sha256": "2aadf7e4af262dea34d09adae35b948024d1288e4b650925ade0e5174c9c671f"
+    },
+    {
+      "path": "work/00_r003_body_snapshot.blend",
+      "bytes": 432833,
+      "sha256": "1001c11b0091bd79452849c2ea85963804c532a2e5488331434cb5259bd2dc63"
+    },
+    {
+      "path": "work/10_small_face_modules.blend",
+      "bytes": 468638,
+      "sha256": "c55406cc490666fc42e5037633ce97038b0ed7a27543f605783cfaa9ebe2735b"
+    },
+    {
+      "path": "work/20_named_morph_targets.blend",
+      "bytes": 468638,
+      "sha256": "c55406cc490666fc42e5037633ce97038b0ed7a27543f605783cfaa9ebe2735b"
+    },
+    {
+      "path": "work/30_jaw_tongue_skeleton.blend",
+      "bytes": 470587,
+      "sha256": "b8052b856b695ef5ebd980cb389654dd7d5d88d8c0a68b410db88e20b34664b5"
+    },
+    {
+      "path": "work/40_render_ready.blend",
+      "bytes": 474025,
+      "sha256": "b614e260328f4d1cf13bc3b62459aaa97eb9a354205d80b31a6c61ed8ee883e5"
+    },
+    {
+      "path": "work/50_export_ready_neutral.blend",
+      "bytes": 474173,
+      "sha256": "2aadf7e4af262dea34d09adae35b948024d1288e4b650925ade0e5174c9c671f"
+    }
+  ]
+}

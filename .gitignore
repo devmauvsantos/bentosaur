@@ -24,6 +24,10 @@ builds/
 dist/
 exports/
 
+# Versioned character-pipeline exports are reproducible engine-boundary assets.
+!art/**/exports/
+!art/**/exports/**
+
 # Common tool caches
 __pycache__/
 *.py[cod]

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "scope": "facial_mesh_probe_complete_diagnostic_inventory",
+  "inputs": [
+    {
+      "path": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+      "sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+      "bytes": 47399240,
+      "role": "immutable_closed_reference"
+    },
+    {
+      "path": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out/model.glb",
+      "sha256": "7c0d7e2e1e4ee8fb4db320880f6f4b5c82c470bce37437ce28d26efa171b01d4",
+      "bytes": 46092344,
+      "role": "immutable_open_reference"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "0b174508da1d0816ea12e399f1f2b0129ecb86e392e06e9a2257ba082d080308",
+      "bytes": 6161
+    },
+    {
+      "path": "analyze_depth.py",
+      "sha256": "4a5f8140a3721a385ec4cb7db64050a6fae6294406f8db13fbc26f6b906d9fdb",
+      "bytes": 9969
+    },
+    {
+      "path": "closed_front_depth.npz",
+      "sha256": "454aacf94e9f07228ade36a379d7d51aa18becce087d5dc37f9cb18f2025b993",
+      "bytes": 237651
+    },
+    {
+      "path": "facial_probe_report.json",
+      "sha256": "133c0fc515a422faa981eeda614ddbecec1f4ef406ecaf58a487bbc200ddd5c4",
+      "bytes": 6371
+    },
+    {
+      "path": "inspect_sources.py",
+      "sha256": "6eb4738aaaa9cad70f645a2e47a8e1aa2dcde960588a2e9ad4dd65130a0f2857",
+      "bytes": 10292
+    },
+    {
+      "path": "open_closed_front_depth_comparison.png",
+      "sha256": "abc0cee198e382f7f8b53fd25d6b36cf5af7dd45d8c6c861a0945724ad147df8",
+      "bytes": 129678
+    },
+    {
+      "path": "open_closed_source_locked_overlay.blend",
+      "sha256": "62e78f0be12633014398fb45cf6a9f56b80a60bb10d06358669899545f7b20d5",
+      "bytes": 137993807
+    },
+    {
+      "path": "open_front_depth.npz",
+      "sha256": "3f2ecb32fbe697eab2adfce5b2ce1b1d87be4e002042e4240b5dc829fec946b0",
+      "bytes": 237293
+    },
+    {
+      "path": "source_probe_raw.json",
+      "sha256": "78087ed5524b522277ed9328e4dd38408d28cb7bc241f6dcf734fec51dc44e59",
+      "bytes": 6275
+    }
+  ],
+  "paid_api_usage": 0
+}

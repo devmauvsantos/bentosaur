@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0.0",
+  "inputs": {
+    "closed_sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+    "open_sha256": "7c0d7e2e1e4ee8fb4db320880f6f4b5c82c470bce37437ce28d26efa171b01d4"
+  },
+  "alignment": {
+    "object_transforms_are_identity": true,
+    "axes_match": true,
+    "dimension_ratio_open_over_closed": [
+      0.9975161045601961,
+      0.9967820478058963,
+      1.0001625011574633
+    ],
+    "center_delta_open_minus_closed": [
+      -6.283819675445557e-05,
+      -0.00011309981346130371,
+      0.00019897520542144775
+    ],
+    "interpretation": "The sources share orientation, origin, and nearly identical overall scale, but are independently generated surfaces."
+  },
+  "topology_compatibility": {
+    "closed_vertices": 987461,
+    "open_vertices": 960234,
+    "vertex_count_delta_open_minus_closed": -27227,
+    "same_vertex_count": false,
+    "shape_key_compatible": false,
+    "reason": "Blend shapes require identical topology and vertex order; these independently generated one-shell triangle meshes have different vertex and face counts."
+  },
+  "region_metrics": {
+    "mouth": {
+      "sample_count": 7040,
+      "signed_closed_minus_open_normalized_x": {
+        "p01": -0.08634257316589355,
+        "p05": -0.0219722930341959,
+        "p25": -0.006928086280822754,
+        "p50": 0.0007541477680206299,
+        "p75": 0.008689314126968384,
+        "p90": 0.038534365594387054,
+        "p95": 0.0612233430147171,
+        "p99": 0.07442062348127365
+      },
+      "absolute_normalized_x": {
+        "p01": 0.00016263604629784822,
+        "p05": 0.0006758600356988609,
+        "p25": 0.0032444745302200317,
+        "p50": 0.007528394460678101,
+        "p75": 0.01799413561820984,
+        "p90": 0.04959029704332352,
+        "p95": 0.06596332788467407,
+        "p99": 0.08634257316589355
+      }
+    },
+    "eye_character_left": {
+      "sample_count": 3840,
+      "signed_closed_minus_open_normalized_x": {
+        "p01": -0.0238787904381752,
+        "p05": -0.014787664636969566,
+        "p25": -0.0074716657400131226,
+        "p50": -0.003213167190551758,
+        "p75": -0.0013118088245391846,
+        "p90": -3.649592326837592e-05,
+        "p95": 0.0014212935930117965,
+        "p99": 0.0035408574622124434
+      },
+      "absolute_normalized_x": {
+        "p01": 0.00011988818732788786,
+        "p05": 0.00040879548760131,
+        "p25": 0.0016168653964996338,
+        "p50": 0.00326499342918396,
+        "p75": 0.007488712668418884,
+        "p90": 0.012052965350449085,
+        "p95": 0.014795673079788685,
+        "p99": 0.0238787904381752
+      }
+    },
+    "eye_character_right": {
+      "sample_count": 3840,
+      "signed_closed_minus_open_normalized_x": {
+        "p01": -0.023049723356962204,
+        "p05": -0.014436667785048485,
+        "p25": -0.007237464189529419,
+        "p50": -0.003308713436126709,
+        "p75": -0.0014264732599258423,
+        "p90": -0.0001698792038951069,
+        "p95": 0.0011395334731787443,
+        "p99": 0.0035816954914480448
+      },
+      "absolute_normalized_x": {
+        "p01": 0.00011689007078530267,
+        "p05": 0.0005350708961486816,
+        "p25": 0.0016849488019943237,
+        "p50": 0.003357827663421631,
+        "p75": 0.007252976298332214,
+        "p90": 0.011719763278961182,
+        "p95": 0.014482110738754272,
+        "p99": 0.02311122603714466
+      }
+    },
+    "full_face": {
+      "sample_count": 24683,
+      "signed_closed_minus_open_normalized_x": {
+        "p01": -0.03809089958667755,
+        "p05": -0.013176614418625832,
+        "p25": -0.0053863525390625,
+        "p50": -0.0032458901405334473,
+        "p75": -0.0008781254291534424,
+        "p90": 0.0047872066497802734,
+        "p95": 0.019225358963012695,
+        "p99": 0.069266676902771
+      },
+      "absolute_normalized_x": {
+        "p01": 0.00016795039118733257,
+        "p05": 0.0006842076545581222,
+        "p25": 0.0024548768997192383,
+        "p50": 0.003917574882507324,
+        "p75": 0.007727622985839844,
+        "p90": 0.014184522442519665,
+        "p95": 0.030122900381684303,
+        "p99": 0.07473838329315186
+      }
+    },
+    "body_below_face": {
+      "sample_count": 26811,
+      "signed_closed_minus_open_normalized_x": {
+        "p01": -0.009413426741957664,
+        "p05": -0.006346613168716431,
+        "p25": -0.004175305366516113,
+        "p50": -0.0030664801597595215,
+        "p75": -0.0011965036392211914,
+        "p90": 1.0967254638671875e-05,
+        "p95": 0.001012176275253296,
+        "p99": 0.007972002029418945
+      },
+      "absolute_normalized_x": {
+        "p01": 4.156231807428412e-05,
+        "p05": 0.00024080276489257812,
+        "p25": 0.0015496313571929932,
+        "p50": 0.0032148361206054688,
+        "p75": 0.004247456789016724,
+        "p90": 0.005589812994003296,
+        "p95": 0.0067740678787231445,
+        "p99": 0.010951939038932323
+      }
+    }
+  },
+  "visible_mouth_opening_change": {
+    "threshold_normalized_x": 0.025,
+    "recessed_sample_count": 1021,
+    "recessed_normalized_yz_bounds": {
+      "minimum_yz": [
+        0.35423197492163006,
+        0.432601880877743
+      ],
+      "maximum_yz": [
+        0.6457680250783698,
+        0.5141065830721003
+      ]
+    },
+    "recessed_open_world_yz_bounds": {
+      "minimum_yz": [
+        -0.0955965596493509,
+        -0.06562097842416792
+      ],
+      "maximum_yz": [
+        0.09541077197158593,
+        0.014242967841767262
+      ]
+    },
+    "forward_sample_count": 294,
+    "forward_normalized_yz_bounds": {
+      "minimum_yz": [
+        0.30094043887147337,
+        0.4231974921630094
+      ],
+      "maximum_yz": [
+        0.6990595611285266,
+        0.5893416927899686
+      ]
+    },
+    "note": "The recessed region is the useful visual mouth-aperture envelope. Forward changes include tongue/lower-lip volume plus stochastic cheek and muzzle differences and should not be interpreted as a clean tongue segmentation."
+  },
+  "structural_read": {
+    "mesh_objects_each": 1,
+    "connected_components_each": 1,
+    "mouth_cavity_separate": false,
+    "tongue_separate": false,
+    "eyes_separate": false,
+    "interpretation": "Head, eyelid/eye arcs, lips, cavity floor/tongue, horns, claws, and body are fused into one watertight shell. They cannot be independently animated without authored production topology or replacement face components."
+  }
+}
