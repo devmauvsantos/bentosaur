@@ -21,17 +21,20 @@ The project is in S40 Production Topology for
 - H3.1 Extreme: frozen visual/high source
 - repaired Smart LowPoly: frozen scaffold only
 - S40 r003: active all-quad body bootstrap
-- tail deformation: passes the bounded probe
-- shoulder/armpit and hip/groin/knee flow: repair in progress
-- first oval mouth experiment: rejected
-- target neutral/delighted smile: replacement in progress
+- r005: frozen rejected static Tripo-mouth transfer research
+- current blocker: one canonical neutral/deformable face
+- facial direction: bounded Faceit 2.3 authoring pilot after topology approval
+- Godot mobile facial-control lab: functional proof, not final art
 - UVs, final materials, production rig, animation, and Godot runtime: blocked
   until G40 passes and Mau approves it
 
-## Character pipeline
+## Documentation and character pipeline
 
 Start here:
 
+- `docs/README.md`
+- `docs/current-status.md`
+- `docs/facial-animation-faceit-ai-pipeline-v1.md`
 - `docs/character-production-pipeline-v1.md`
 - `docs/character-binary-storage-policy-v1.md`
 - `art/characters/bentosaur-hero/char-v001/pipeline.json`
@@ -63,9 +66,10 @@ animation, or export-contract operation gets a numbered native checkpoint.
 Frozen revisions are never overwritten. Human visual approval is distinct
 from automated QA.
 
-Large DCC binaries are currently preserved and hashed locally. Do not add or
-push them through ordinary Git until the remote binary-storage strategy is
-configured; multiple Blender sources exceed GitHub's ordinary file limit.
+Large DCC binaries are preserved and hashed locally and routed through Git
+LFS. Do not push new binary checkpoints until remote LFS quota, billing, and
+restore behavior have been explicitly accepted; multiple Blender sources
+exceed GitHub's ordinary file limit.
 
 ## Secrets
 

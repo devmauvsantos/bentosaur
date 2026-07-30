@@ -1,0 +1,151 @@
+{
+  "probes": [
+    {
+      "scale": 0.86,
+      "faces": 62,
+      "components": [
+        62
+      ],
+      "primary_faces": 62,
+      "boundary_edges": 36,
+      "boundary_vertices": 36,
+      "degree_histogram": {
+        "2": 36
+      },
+      "boundary_x_range": [
+        -0.07620600610971451,
+        0.07620594650506973
+      ],
+      "boundary_z_range": [
+        0.4387832283973694,
+        0.5130342245101929
+      ]
+    },
+    {
+      "scale": 0.9,
+      "faces": 66,
+      "components": [
+        66
+      ],
+      "primary_faces": 66,
+      "boundary_edges": 40,
+      "boundary_vertices": 40,
+      "degree_histogram": {
+        "2": 40
+      },
+      "boundary_x_range": [
+        -0.08542458713054657,
+        0.0854245275259018
+      ],
+      "boundary_z_range": [
+        0.4387832283973694,
+        0.5130342245101929
+      ]
+    },
+    {
+      "scale": 0.94,
+      "faces": 80,
+      "components": [
+        80
+      ],
+      "primary_faces": 80,
+      "boundary_edges": 42,
+      "boundary_vertices": 42,
+      "degree_histogram": {
+        "2": 42
+      },
+      "boundary_x_range": [
+        -0.08794473856687546,
+        0.08794467896223068
+      ],
+      "boundary_z_range": [
+        0.4348597824573517,
+        0.5192302465438843
+      ]
+    },
+    {
+      "scale": 0.98,
+      "faces": 84,
+      "components": [
+        84
+      ],
+      "primary_faces": 84,
+      "boundary_edges": 42,
+      "boundary_vertices": 42,
+      "degree_histogram": {
+        "2": 42
+      },
+      "boundary_x_range": [
+        -0.08948403596878052,
+        0.08948397636413574
+      ],
+      "boundary_z_range": [
+        0.4348597824573517,
+        0.5192302465438843
+      ]
+    },
+    {
+      "scale": 1.0,
+      "faces": 94,
+      "components": [
+        94
+      ],
+      "primary_faces": 94,
+      "boundary_edges": 44,
+      "boundary_vertices": 44,
+      "degree_histogram": {
+        "2": 44
+      },
+      "boundary_x_range": [
+        -0.09041030704975128,
+        0.0904102474451065
+      ],
+      "boundary_z_range": [
+        0.4322798252105713,
+        0.5192302465438843
+      ]
+    },
+    {
+      "scale": 1.04,
+      "faces": 98,
+      "components": [
+        98
+      ],
+      "primary_faces": 98,
+      "boundary_edges": 44,
+      "boundary_vertices": 44,
+      "degree_histogram": {
+        "2": 44
+      },
+      "boundary_x_range": [
+        -0.09072583168745041,
+        0.09072577208280563
+      ],
+      "boundary_z_range": [
+        0.4322798252105713,
+        0.5192302465438843
+      ]
+    },
+    {
+      "scale": 1.08,
+      "faces": 118,
+      "components": [
+        118
+      ],
+      "primary_faces": 118,
+      "boundary_edges": 48,
+      "boundary_vertices": 48,
+      "degree_histogram": {
+        "2": 48
+      },
+      "boundary_x_range": [
+        -0.10202324390411377,
+        0.102023184299469
+      ],
+      "boundary_z_range": [
+        0.43030840158462524,
+        0.5192302465438843
+      ]
+    }
+  ]
+}

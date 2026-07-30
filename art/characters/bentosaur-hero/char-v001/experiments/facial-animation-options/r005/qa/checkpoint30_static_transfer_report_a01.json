@@ -1,0 +1,242 @@
+{
+  "status": "single_static_implementation_complete_pending_visual_review",
+  "inputs": {
+    "checkpoint_20": {
+      "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/subagents/checkpoint30_manual_retopo/work/20_source_mouth_region_extraction.blend",
+      "sha256": "9f9ca58f34dc46037e7c3bcadd2e8c399ba7e12f62a9551322c1a2c4dde3951f"
+    },
+    "body_object": "S40_R003_PRODUCTION_BODY_LOCKED",
+    "source_object": "TRIPO_VG06_OPEN_SOURCE_LOCKED"
+  },
+  "selection": {
+    "predicate": {
+      "center_z": 0.475,
+      "radius_x": 0.115,
+      "radius_z": 0.078,
+      "front_y_max": -0.22
+    },
+    "faces": 320,
+    "vertices_total": 364,
+    "interior_vertices_repositioned": 278,
+    "boundary_vertices_preserved": 86,
+    "boundary_x_range": [
+      -0.11797170341014862,
+      0.11797164380550385
+    ],
+    "boundary_z_range": [
+      0.39403989911079407,
+      0.5532764196395874
+    ]
+  },
+  "authored_transfer": {
+    "method": "topology-preserving localized quad-disk retopositioning into source-conformed lip and recessed welded bag",
+    "aperture_trace_xz_ccw": [
+      [
+        0.087,
+        0.4865
+      ],
+      [
+        0.0862,
+        0.4975
+      ],
+      [
+        0.082,
+        0.5075
+      ],
+      [
+        0.075,
+        0.5135
+      ],
+      [
+        0.064,
+        0.515
+      ],
+      [
+        0.052,
+        0.512
+      ],
+      [
+        0.04,
+        0.507
+      ],
+      [
+        0.027,
+        0.502
+      ],
+      [
+        0.014,
+        0.4985
+      ],
+      [
+        0.0,
+        0.4965
+      ],
+      [
+        -0.014,
+        0.4985
+      ],
+      [
+        -0.027,
+        0.502
+      ],
+      [
+        -0.04,
+        0.507
+      ],
+      [
+        -0.052,
+        0.512
+      ],
+      [
+        -0.064,
+        0.515
+      ],
+      [
+        -0.075,
+        0.5135
+      ],
+      [
+        -0.082,
+        0.5075
+      ],
+      [
+        -0.0862,
+        0.4975
+      ],
+      [
+        -0.087,
+        0.4865
+      ],
+      [
+        -0.0865,
+        0.475
+      ],
+      [
+        -0.0825,
+        0.462
+      ],
+      [
+        -0.074,
+        0.451
+      ],
+      [
+        -0.062,
+        0.443
+      ],
+      [
+        -0.047,
+        0.438
+      ],
+      [
+        -0.03,
+        0.435
+      ],
+      [
+        -0.015,
+        0.4335
+      ],
+      [
+        0.0,
+        0.433
+      ],
+      [
+        0.015,
+        0.4335
+      ],
+      [
+        0.03,
+        0.435
+      ],
+      [
+        0.047,
+        0.438
+      ],
+      [
+        0.062,
+        0.443
+      ],
+      [
+        0.074,
+        0.451
+      ],
+      [
+        0.0825,
+        0.462
+      ],
+      [
+        0.0865,
+        0.475
+      ]
+    ],
+    "lip_q": 0.6,
+    "support_bands_q": [
+      0.68,
+      0.76,
+      0.84,
+      0.92
+    ],
+    "cavity_back_y": -0.284,
+    "cavity_material_faces": 94,
+    "separate_tongue": "BENTOSAUR_TONGUE_SEPARATE_CLOSED_CP30",
+    "forbidden_methods_used": []
+  },
+  "integrity": {
+    "outside_coordinate_max_error": 0.0,
+    "boundary_coordinate_max_error": 0.0,
+    "body_vertices": 10050,
+    "body_edges": 20096,
+    "body_faces": 10048,
+    "body_all_quads": true,
+    "body_euler_characteristic": 2,
+    "body_face_components": [
+      10048
+    ],
+    "nonmanifold_edges": 0,
+    "boundary_edges": 0,
+    "overfull_edges": 0,
+    "loose_vertices": 0,
+    "tongue": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "overfull_edges": 0,
+      "loose_vertices": 0,
+      "connected_components": [
+        384
+      ],
+      "euler_characteristic": 2
+    },
+    "symmetry_max_error": 6.725774142068985e-07,
+    "symmetry_p95_error": 1.6049041562382627e-07
+  },
+  "topology_quality": {
+    "patch_aspect_mean": 7.781925323671311,
+    "patch_aspect_p95": 22.668386123067314,
+    "patch_aspect_max": 249.40546247128879,
+    "seam_normal_angle_mean_deg": 15.320872535034425,
+    "seam_normal_angle_p95_deg": 84.89493470370304,
+    "seam_normal_angle_max_deg": 122.46133030861002
+  },
+  "source_fit": {
+    "visible_skin_vertices": 174,
+    "mean": 0.0020441887981983253,
+    "p95": 0.0047405487857759,
+    "max": 0.00795276090502739,
+    "upper_lip_corner_vertices": 110,
+    "upper_lip_corner_mean": 0.001853138643458475,
+    "upper_lip_corner_max": 0.00795276090502739
+  },
+  "render_budget": {
+    "body_triangles": 20096,
+    "tongue_triangles": 704,
+    "candidate_triangles": 20800,
+    "limit": 24000
+  },
+  "scope": {
+    "rigging": false,
+    "shape_keys": false,
+    "animation": false,
+    "canonical_files_modified": false,
+    "paid_api_used": false,
+    "tripo_credits_spent": 0
+  }
+}

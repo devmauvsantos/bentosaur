@@ -1,5 +1,9 @@
 # Bentosaur Facial Surface Decision V1
 
+**Document state:** superseded on 2026-07-30 by
+[Faceit and AI Facial-Animation Pipeline V1](facial-animation-faceit-ai-pipeline-v1.md).
+This file remains as the historical rationale for r003 and r004.
+
 **Current decision:** continue with a physical 3D mouth through one bounded
 localized Blender retopology revision snapped directly to the original Tripo
 open-mouth geometry. Keep a 2D atlas/SDF face as the fallback, not as the

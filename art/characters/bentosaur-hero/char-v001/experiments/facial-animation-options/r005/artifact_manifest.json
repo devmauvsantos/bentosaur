@@ -1,0 +1,226 @@
+{
+  "candidate": "bentosaur-facial-experiment-r005-checkpoint30-static-tripo-mouth-transfer",
+  "status": "stopped_after_a02_not_production_approved",
+  "versioned_research_checkpoint": true,
+  "production_stage_modified": false,
+  "paid_api_used": false,
+  "tripo_credits_spent": 0,
+  "artifact_count": 43,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3702,
+      "sha256": "cf6c53bce2cfd30ba1f15a7dc6fc0489df2af924e58d86e72af395080d891c95"
+    },
+    {
+      "path": "evidence/a01/01_front.png",
+      "bytes": 497650,
+      "sha256": "f21277cd96bacf64af60b21090e4620ed74e45a25cb5455796d564d3880697e8"
+    },
+    {
+      "path": "evidence/a01/02_three_quarter.png",
+      "bytes": 477173,
+      "sha256": "4a55ef208a0ec7a90fd24835a3742b29e64179e5aeb047eec6302e8ca25ef629"
+    },
+    {
+      "path": "evidence/a01/03_profile.png",
+      "bytes": 463529,
+      "sha256": "746bf909cbe989a111e9078f9a1035d45e189a9953d8095c93bf79b2d85d4179"
+    },
+    {
+      "path": "evidence/a01/04_gameplay.png",
+      "bytes": 448482,
+      "sha256": "181d2525db617718dae7a045d276a4390efcb6b475730a76d773e969718a255f"
+    },
+    {
+      "path": "evidence/a01/05_front_mouth_close.png",
+      "bytes": 637879,
+      "sha256": "4f2dee9d6a7c8415ba1fa1248346cb8740186b4aaff3c721d38ca68e510a988c"
+    },
+    {
+      "path": "evidence/a01/06_wire_front_close.png",
+      "bytes": 887250,
+      "sha256": "ce656c3234e765684778b34db9ee64330497e164eb0bb2973b458a4648ca00b8"
+    },
+    {
+      "path": "evidence/a01/07_boundary_patch_wire.png",
+      "bytes": 699735,
+      "sha256": "2a0bd069ef13668acfcbc372b54b3397c040c9633717fdea10e059833ffcd75a"
+    },
+    {
+      "path": "evidence/a01/08_source_overlay.png",
+      "bytes": 864062,
+      "sha256": "e7e0b911b9a310324c66746589fe200be3ee2ba80aafa7185eafb25670d96481"
+    },
+    {
+      "path": "evidence/a01/09_deviation.png",
+      "bytes": 690090,
+      "sha256": "7c34b3319fe49e432eb40c2daf239e82b0ef76f5b4f16e9bbaa6b417ab322064"
+    },
+    {
+      "path": "evidence/a01/a01_evidence_board.png",
+      "bytes": 9199912,
+      "sha256": "96a326333eb56834cb6fa11c4a008dd9554227e67cc0d68d0334eaab2cd91815"
+    },
+    {
+      "path": "evidence/a01_vs_a02_stop_board.png",
+      "bytes": 8596072,
+      "sha256": "7e5e20533c71991f7c74d75ac45dc1d586b13e1f2582fd4d03fae5835ffa53c9"
+    },
+    {
+      "path": "evidence/a02/01_front.png",
+      "bytes": 499436,
+      "sha256": "de2e48a4ce659a31644d088c3846cdaf2d87187ccc6cfaf9f50bffc45b112b6f"
+    },
+    {
+      "path": "evidence/a02/02_three_quarter.png",
+      "bytes": 478551,
+      "sha256": "f3218b0862a4433253a62e463590b251ce6b9037db80a654df11b736ac333e7c"
+    },
+    {
+      "path": "evidence/a02/03_profile.png",
+      "bytes": 464143,
+      "sha256": "6c8bdcfa8474f4db8f322aee1cc92f0d6b13f9c6a4effe29341c4b3b54b402b6"
+    },
+    {
+      "path": "evidence/a02/04_gameplay.png",
+      "bytes": 448731,
+      "sha256": "50bd763a8457c9d0871ad4c8a137b71e0ae0087559657c7d82323ba303da6f46"
+    },
+    {
+      "path": "evidence/a02/05_front_mouth_close.png",
+      "bytes": 653709,
+      "sha256": "edb10f146f0700eb799df629c651f4c30a8d5de86552ef42de1cf45cb33e8aec"
+    },
+    {
+      "path": "evidence/a02/06_wire_front_close.png",
+      "bytes": 931219,
+      "sha256": "78ebef1064143b4af9012d2e9da76451e75b8b2b2cca4e96e100384f84804c0d"
+    },
+    {
+      "path": "evidence/a02/07_boundary_patch_wire.png",
+      "bytes": 734925,
+      "sha256": "34ae087d17cbeea2f98a4b33f62371e707a1c5446e83845ddf7a5f7cdb042cb9"
+    },
+    {
+      "path": "evidence/a02/08_source_overlay.png",
+      "bytes": 882385,
+      "sha256": "fb3876d6a9cd4ce3e044d0ec57717a4c632fbf1ad9f3070da6436e2dbac53239"
+    },
+    {
+      "path": "evidence/a02/09_deviation.png",
+      "bytes": 720817,
+      "sha256": "ef7daab8ee7af419820562ef30fc8b55ff666013f3c3affd269a66e6fb0359a6"
+    },
+    {
+      "path": "evidence/a02/a02_evidence_board.png",
+      "bytes": 9286108,
+      "sha256": "ceb5253f23f753bf3abab012ac5de813ca3bd3e3364f41ed82397f83d12ec117"
+    },
+    {
+      "path": "evidence/source_reference/01_front_head.png",
+      "bytes": 1131875,
+      "sha256": "482dccc9c27bf6f958bcd28c9a357b49cd5ba2fd601ca2da9486c7aabd83af13"
+    },
+    {
+      "path": "evidence/source_reference/02_front_mouth.png",
+      "bytes": 1165332,
+      "sha256": "8a785589b67396cda46d3ee8bb3b993bfd20a32b086cdcb81ee516a90b0b19ea"
+    },
+    {
+      "path": "evidence/source_reference/03_three_quarter_mouth.png",
+      "bytes": 1131533,
+      "sha256": "5e1497648a6c2fd9169429d28b20c700938cb2f63b4b5c83b4e5c68e6a25690a"
+    },
+    {
+      "path": "evidence/source_reference/04_profile_mouth.png",
+      "bytes": 1199031,
+      "sha256": "f36d7ea4e9142af0f1bf2a69712481401a749fb35377ddf33987da69b0888210"
+    },
+    {
+      "path": "qa/aperture_topology_probe.json",
+      "bytes": 2959,
+      "sha256": "b506a056c9d11ec890c839f5e65f064845e5dd7ff64085bae9ea230a6614ed66"
+    },
+    {
+      "path": "qa/body_patch_boundary_candidates.json",
+      "bytes": 108916,
+      "sha256": "42af5afad865ffeb6835d241da19f59a01fa496f4ae2abcf877c55b1b78ebd6a"
+    },
+    {
+      "path": "qa/body_patch_boundary_candidates.log",
+      "bytes": 88357,
+      "sha256": "6ffbe2b420a7a8f08f6a1fe01020d6620ff5eb564f02dafccbf0015539d6a465"
+    },
+    {
+      "path": "qa/checkpoint30_a02_readonly_integrity.json",
+      "bytes": 14080,
+      "sha256": "cf7595c21ab6147477673a3f71bc76442e0cc36ac9f3e8221089dc0febae4a06"
+    },
+    {
+      "path": "qa/checkpoint30_static_transfer_report.json",
+      "bytes": 10219,
+      "sha256": "c0639a33b46c13f0661b9ca21c4e8ad5575fa566f16efb720b457d9720fa177e"
+    },
+    {
+      "path": "qa/checkpoint30_static_transfer_report_a01.json",
+      "bytes": 4599,
+      "sha256": "04cd2494de7874cea94bda8d95d03291d1a891d37ea7fd2a1f9c321608fe495c"
+    },
+    {
+      "path": "qa/checkpoint30_static_transfer_report_a02.json",
+      "bytes": 10219,
+      "sha256": "c0639a33b46c13f0661b9ca21c4e8ad5575fa566f16efb720b457d9720fa177e"
+    },
+    {
+      "path": "recipes/analyze_aperture_topology.py",
+      "bytes": 4115,
+      "sha256": "f007d953cc1dcec53885a926e08a353fb33b43248839833d33fa6f7273a5aee2"
+    },
+    {
+      "path": "recipes/analyze_body_patch_boundaries.py",
+      "bytes": 7746,
+      "sha256": "a19eed2ecea08950b3bc73dec4934a81c27f36653133f90c210b231c840d586a"
+    },
+    {
+      "path": "recipes/build_artifact_manifest.mjs",
+      "bytes": 1616,
+      "sha256": "c601e55439b20e09a9b44076fec7345d1bea2b547fced7905ca579e5d41c1bb4"
+    },
+    {
+      "path": "recipes/build_checkpoint30_static_transfer.py",
+      "bytes": 25389,
+      "sha256": "5d8c79b304f4e40e4c1d158221fe0852cd0dd3f640111b3caa17c663c617326c"
+    },
+    {
+      "path": "recipes/build_checkpoint30_static_transfer_a02.py",
+      "bytes": 26833,
+      "sha256": "f0b95abfda329b92b9a1d8adee4d95b3937df8e349d470417987bfea3a46bdb1"
+    },
+    {
+      "path": "recipes/qa_checkpoint30_a02_readonly.py",
+      "bytes": 8721,
+      "sha256": "283b205a5d9b8e39b63048e231302a14889bfde45a9500d09e4714218288d652"
+    },
+    {
+      "path": "recipes/render_checkpoint30_evidence.py",
+      "bytes": 10178,
+      "sha256": "34655ab2da4e0e6154bd3fdd426c654f0f669a546580ae92240106e57dbd6005"
+    },
+    {
+      "path": "recipes/render_source_reference.py",
+      "bytes": 3733,
+      "sha256": "d2b3a8e7a2f911de91cd39b3543aee419e07fed100fdb1fc1660995dedf67993"
+    },
+    {
+      "path": "work/30a01_TRIPO_OPEN_MOUTH_TRANSFER_STATIC.blend",
+      "bytes": 85257985,
+      "sha256": "905639f487d8f73ddfe52a12e06b1e67d5650909b30716a78dec8943c028e041"
+    },
+    {
+      "path": "work/30a02_TRIPO_OPEN_MOUTH_TRANSFER_STATIC.blend",
+      "bytes": 85311123,
+      "sha256": "f3c5f8c843843015202e6e0fc6e5601d85b63aa946c3176a161050bf50601617"
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # Bentosaur Mobile Facial Animation Proof V1
 
+**Document state:** historical proof. Current facial direction and gates are
+tracked in
+[Faceit and AI Facial-Animation Pipeline V1](facial-animation-faceit-ai-pipeline-v1.md).
+
 **Decision status:** control architecture selected; r003 proved the cavity
 direction but failed its welded-surface visual gate. The procedural mouth
 branch is frozen. The original Tripo open-mouth mesh is now the required
