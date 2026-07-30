@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "bentosaur-hero-facial-animation-options-r003",
+  "status": "static_visual_gate_failed_stop_rule_reached",
+  "parent": {
+    "path": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r002/manifest.json",
+    "sha256": "bfaa0e84daada3620dbe19b880392a2240774ced59a1912780eda2259c6b16bd"
+  },
+  "visual_reference": {
+    "path": "art/characters/bentosaur-hero/char-v001/stages/s40-production-topology/r003/evidence/mouth-expression-contract-v1-notion.jpg"
+  },
+  "decision": {
+    "best_attempt": "attempts/a01-wide-window",
+    "best_attempt_production_approved": false,
+    "second_attempt": "attempts/a02-narrow-window-normal-transfer",
+    "second_attempt_rejected": true,
+    "third_automated_attempt_allowed": false,
+    "blender_gate_passed": false,
+    "godot_gate_run": false,
+    "morph_or_skinning_work_allowed_before_user_choice": false,
+    "next_options": [
+      "manual_localized_blender_retopology_and_welding",
+      "2d_atlas_or_sdf_facial_surface_on_reusable_3d_character"
+    ],
+    "visual_approval_owner": "Mau"
+  },
+  "paid_api_usage": {
+    "tripo_credits_spent": 0,
+    "recorded_tripo_balance": 4695
+  },
+  "artifacts": [
+    {
+      "path": "attempts/a01-wide-window/evidence/renders/01_front_close.png",
+      "bytes": 617084,
+      "sha256": "e51589e91544f6aaad807a4cf9adea5bd1fb6b55ba04ded4e3cacfbcd3b5a249"
+    },
+    {
+      "path": "attempts/a01-wide-window/evidence/renders/02_three_quarter_close.png",
+      "bytes": 622196,
+      "sha256": "ad0d0b5e0e91e709f47cc04bedf926673a0ebb18bd6e7372a461aa2261667ad5"
+    },
+    {
+      "path": "attempts/a01-wide-window/evidence/renders/03_profile_close.png",
+      "bytes": 590891,
+      "sha256": "3a7cd6c033978e3cd20e9797d1ee5f7abb1416395930e9c85007b724f7a5fb27"
+    },
+    {
+      "path": "attempts/a01-wide-window/evidence/renders/04_front_full.png",
+      "bytes": 593380,
+      "sha256": "06933649d56cdd9b9b4ae2caaa79fae5856efa3118fb910d4abfe38680f778d7"
+    },
+    {
+      "path": "attempts/a01-wide-window/evidence/renders/05_three_quarter_full.png",
+      "bytes": 598247,
+      "sha256": "3e5c9e3f49d594779a89ade883999f23a3a915e4f377938f9d3dc50c27c11ff0"
+    },
+    {
+      "path": "attempts/a01-wide-window/evidence/renders/06_profile_full.png",
+      "bytes": 582439,
+      "sha256": "4053ba8da6a1dc7612229bd2650ddb45ca3c8bd384d8067a904eca9761d3c36a"
+    },
+    {
+      "path": "attempts/a01-wide-window/exports/bentosaur_static_smooth_mouth_v003.glb",
+      "bytes": 462960,
+      "sha256": "ce68a265ff29a591aae6fd0436bb739c5c86587b8dc2214878eb82d2ebc6e323"
+    },
+    {
+      "path": "attempts/a01-wide-window/qa/60_static_glb_roundtrip.blend",
+      "bytes": 849339,
+      "sha256": "15fa587a000e9cd50a354893f74c1fd37345054d05ab9db0a6cc9cd0b75832e2"
+    },
+    {
+      "path": "attempts/a01-wide-window/qa/static_mouth_window_gate_report.json",
+      "bytes": 9000,
+      "sha256": "29817426dc65e06b644ba8c6dd41cddbea0e6515142bf27ce06d3edb50831d2a"
+    },
+    {
+      "path": "attempts/a01-wide-window/README.md",
+      "bytes": 861,
+      "sha256": "037c7f04c410200382a370b80eb42889863fd0ed1abf80c796306f9321d35d71"
+    },
+    {
+      "path": "attempts/a01-wide-window/recipes/build_static_mouth_window_gate.py",
+      "bytes": 23705,
+      "sha256": "146a689ec3cab784149183074687e4f3a3501f63e2862e4d0cd6df450894ad5a"
+    },
+    {
+      "path": "attempts/a01-wide-window/source/bentosaur_static_smooth_mouth_v003.blend",
+      "bytes": 505156,
+      "sha256": "4d21bff3344ad1ea36a0b904dc600c5b29ea0989bb59152d9d92dd7440c85a79"
+    },
+    {
+      "path": "attempts/a01-wide-window/work/00_r002_frozen_parent.blend",
+      "bytes": 473938,
+      "sha256": "33a3d4e9ebf63311adab8fe3854b4fb3fc950b55050546d168e62b70f98bb921"
+    },
+    {
+      "path": "attempts/a01-wide-window/work/10_mouth_window_cut.blend",
+      "bytes": 463571,
+      "sha256": "0e72bf7a8857724f313938bfad0ef4ccb0ec5b16cf7864dd2d19a3040960fb4c"
+    },
+    {
+      "path": "attempts/a01-wide-window/work/20_static_rounded_aperture.blend",
+      "bytes": 477316,
+      "sha256": "3e10c21abee6a1535db9d6d752b103d2133051394dd6d9103a884bac7702c65c"
+    },
+    {
+      "path": "attempts/a01-wide-window/work/30_static_cavity_and_tongue.blend",
+      "bytes": 505098,
+      "sha256": "0c13d18997258bf6d32962783bdd8ea0ead7e118f11dcf3c915a5b1a2a834d67"
+    },
+    {
+      "path": "attempts/a01-wide-window/work/40_render_ready.blend",
+      "bytes": 505105,
+      "sha256": "5a28b4c3545cd88ac8fc84cf7a2249d3678ca573517b7560cf14f229aa6e4f99"
+    },
+    {
+      "path": "attempts/a01-wide-window/work/50_static_glb_export.blend",
+      "bytes": 505156,
+      "sha256": "4d21bff3344ad1ea36a0b904dc600c5b29ea0989bb59152d9d92dd7440c85a79"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/evidence/renders/01_front_close.png",
+      "bytes": 621361,
+      "sha256": "0ae5855b9af4088cae24a7be02071999b0999de92c2ac10352107161690a88db"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/evidence/renders/02_three_quarter_close.png",
+      "bytes": 624772,
+      "sha256": "c2b05fe33c84446b94865b14ba6d60d669b8a36bbb9106b9b231cb2cb15ec3ce"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/evidence/renders/03_profile_close.png",
+      "bytes": 591309,
+      "sha256": "eb6172fe437f5afd65e22fca626675a28ccbddd60767602e0ba9902526bb0057"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/evidence/renders/04_front_full.png",
+      "bytes": 594663,
+      "sha256": "78ef44e20c3efefa7e15725280b396ecbb28ad212ca6ce52ed9c2a3199a8eef0"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/evidence/renders/05_three_quarter_full.png",
+      "bytes": 598943,
+      "sha256": "4750c71bc7290228c6fc574e1c4d73f5230a366a513d0fcf71c859ef8d547266"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/evidence/renders/06_profile_full.png",
+      "bytes": 582097,
+      "sha256": "2f6189ec9d29119ca1c606eb47ec659b7ea2b03f124c482298d6d06df2ac825e"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/exports/bentosaur_static_smooth_mouth_v003.glb",
+      "bytes": 463296,
+      "sha256": "724719d4aa637aeaf9567dded97a2308c15e5b377d905281afb855d9895a37e9"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/qa/60_static_glb_roundtrip.blend",
+      "bytes": 851616,
+      "sha256": "93c6fa013c3e3d9e8797da99fcd03c20e022b94d967577d456d9e976aacd46b1"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/qa/static_mouth_window_gate_report.json",
+      "bytes": 9270,
+      "sha256": "5b708279397195334e4c1fe2b1a03034a2e68018ad2771b8500b36416af5ad6f"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/README.md",
+      "bytes": 855,
+      "sha256": "0be10b5e6b3e457c8b346368391dbb8d628e3299924625bb4b9d6326ed00df46"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/recipes/build_static_mouth_window_gate.py",
+      "bytes": 24268,
+      "sha256": "5fd211644ba616499bc470e2664c98feafb9e2f677438c1d06d7cba266584552"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/source/bentosaur_static_smooth_mouth_v003.blend",
+      "bytes": 510859,
+      "sha256": "7f637fb7c66d15dec7a1e2971808bf1bdeeb9f27bd361ce93ca8519d57cb5689"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/work/00_r002_frozen_parent.blend",
+      "bytes": 473940,
+      "sha256": "6e22b7cfd469e21d6ebe41b2a5998c87f0bd99fde3e74a5a24acab403d229d8f"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/work/10_mouth_window_cut.blend",
+      "bytes": 464455,
+      "sha256": "affac2fbd16d5fe9d414b736b05d4851cdeeb88931f2d44663cc99789ae12fb0"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/work/20_static_rounded_aperture.blend",
+      "bytes": 480302,
+      "sha256": "13365c1506b0986fb897dd4b23e4cf2a8938073c41bfdc81fb4c8d4ba41e61f7"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/work/30_static_cavity_and_tongue.blend",
+      "bytes": 510765,
+      "sha256": "b0f4eeeebaa313c2d7b1363a23f77dc1012a7495dcd2fb79839fe6fdb3656374"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/work/40_render_ready.blend",
+      "bytes": 510775,
+      "sha256": "149e868e0a038908869911e1413f46e4ea2635c45e375c30c4cc03f1d1cdbda6"
+    },
+    {
+      "path": "attempts/a02-narrow-window-normal-transfer/work/50_static_glb_export.blend",
+      "bytes": 510859,
+      "sha256": "7f637fb7c66d15dec7a1e2971808bf1bdeeb9f27bd361ce93ca8519d57cb5689"
+    },
+    {
+      "path": "evidence/a01_static_mouth_angles.png",
+      "bytes": 1388341,
+      "sha256": "95c71206458c797a58d262b68fde35843b3d2322ce6c8286b077753e644c031f"
+    },
+    {
+      "path": "evidence/a01_vs_a02_static_gate.png",
+      "bytes": 2481926,
+      "sha256": "34846a0552b2476333566a4ee9d79b90124fd6e225ffe38fce06b92bc590d2ea"
+    },
+    {
+      "path": "evidence/a02_static_mouth_angles.png",
+      "bytes": 1395485,
+      "sha256": "538f62642077a745247df48c603d0c0c16ab09b96b863893fd811e86425f0b4b"
+    },
+    {
+      "path": "evidence/reference_open_target.png",
+      "bytes": 268505,
+      "sha256": "e19f3d3a18c71c1dda9e0629596807042291c92c4bbb682ca8325320ec7ea349"
+    },
+    {
+      "path": "evidence/reference_vs_a01_front.png",
+      "bytes": 830746,
+      "sha256": "72f39f980bd9b5fbd22d03f7ff4293b9eedcb7043f8993c0852ea764ae9285e6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3052,
+      "sha256": "f53ecefd5a20c5764d8e4d83e2f5f02aa7142a88d10009fb003bce321144c698"
+    },
+    {
+      "path": "recipes/build_manifest.mjs",
+      "bytes": 2448,
+      "sha256": "36f0a999a62b4b3f5cfaec168d94347b69dfed3ed11cdbae0cb44a7343d69799"
+    },
+    {
+      "path": "recipes/build_static_mouth_window_gate.py",
+      "bytes": 24268,
+      "sha256": "5fd211644ba616499bc470e2664c98feafb9e2f677438c1d06d7cba266584552"
+    }
+  ]
+}
