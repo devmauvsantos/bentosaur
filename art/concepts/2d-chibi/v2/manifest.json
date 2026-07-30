@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "pack": "bentosaur-flat-cel-direction-proof-v2",
+  "date": "2026-07-30",
+  "status": "founder-selected-leading-direction-production-proof-pending",
+  "generation_tool": "built-in-imagegen",
+  "engine_for_proof": "Godot 4.7.1 Standard",
+  "credits_used": 0,
+  "founder_signal": "flat cel 2d looks amazing; winner for now",
+  "production_notes": {
+    "generated_rasters_are_production_assets": false,
+    "expression_outputs_are_registered_cutout_layers": false,
+    "laugh_marks_are_independent_assets": true,
+    "page_turn_is_sprite_sequence": false,
+    "engine_lock_changed": false
+  },
+  "style_authority": "../v1/01_generated-exploration/bentosaur-gameplay-2d-flat-cel-v2.png",
+  "composition_authorities": [
+    "../../ui-3d-hybrid/bentosaur-stall-hub-ui-v1.png",
+    "../../ui-3d-hybrid/bentosaur-album-page-turn-ui-v1.png"
+  ],
+  "outputs": [
+    {
+      "path": "01_character-expression/source/bentosaur-expression-pair-chroma-v1.png",
+      "sha256": "b625e7832bf2dc0e2e25d51a4ddce3e26499f8a08166226f4ccb4dbdff02e619",
+      "role": "generated-source"
+    },
+    {
+      "path": "01_character-expression/exports/bentosaur-expression-pair-transparent-v1.png",
+      "sha256": "12df86f3379e31a4eba0d8b8cb666b6812574fb60d52e8f433de85dd85eacec4",
+      "role": "transparent-concept-pair"
+    },
+    {
+      "path": "01_character-expression/exports/bentosaur-neutral-fullbody-flat-cel-v1.png",
+      "sha256": "79bf73ac65eb3586d19623aef03ac06b4296d7572f6a4c8d1a08a6c3bb9058bd",
+      "role": "neutral-concept-proposal"
+    },
+    {
+      "path": "01_character-expression/exports/bentosaur-happy-fullbody-flat-cel-v1.png",
+      "sha256": "681c9561e394ddc8af73c1a5f02d0212cb2dd41edefa87c81063397d1866edee",
+      "role": "happy-concept-proposal"
+    },
+    {
+      "path": "02_screens/bentosaur-home-menu-flat-cel-v1.png",
+      "sha256": "64230a7209cb3239bdb5366e28f89428df04b9f4ac71eda5ae2777ec173f3c24",
+      "role": "home-menu-screen-target"
+    },
+    {
+      "path": "02_screens/bentosaur-regulars-book-flat-cel-v1.png",
+      "sha256": "b1a6c21a863dae3f93d6886795695631f5beeab1d55cfb493f099e2e903760d0",
+      "role": "regulars-book-screen-target"
+    },
+    {
+      "path": "03_animation/boards/bentosaur-neutral-to-happy-motion-board-v1.png",
+      "sha256": "12f812b0d64f9fd2668541afcf1bbd749e4f445226e9ad9a04d247a33ff0eb5e",
+      "role": "expression-motion-direction"
+    },
+    {
+      "path": "03_animation/boards/bentosaur-book-page-turn-key-poses-v1.png",
+      "sha256": "a73fa74f03258fcd009889a746c9e71abd9235b70ff32a353dd88dfa65d2b8d0",
+      "role": "generated-page-turn-key-poses"
+    },
+    {
+      "path": "03_animation/boards/bentosaur-book-page-turn-motion-board-v1.png",
+      "sha256": "5f0903e0cdb4125367be89fd9f82ddee63dc542d89360557dd6e8bf37435c2bd",
+      "role": "annotated-page-turn-motion-direction"
+    },
+    {
+      "path": "03_animation/laugh-lines/laugh-mark-01.svg",
+      "sha256": "47fe65ee8fbb4c0d63ed25fa394e18b8f444a64a0e2fd084491f402c86f5ac89",
+      "role": "independent-accent-sprite"
+    },
+    {
+      "path": "03_animation/laugh-lines/laugh-mark-02.svg",
+      "sha256": "7f9d7ecf10860aff0305370d1c0ef9071546f6b673b33f6a320f32eb143d4ba9",
+      "role": "independent-accent-sprite"
+    },
+    {
+      "path": "03_animation/laugh-lines/laugh-mark-03.svg",
+      "sha256": "3e566cf9c2b983dbf2fb0e4613bf46bf39e03bb4aa2969990cf894f980e0ffeb",
+      "role": "independent-accent-sprite"
+    },
+    {
+      "path": "03_animation/laugh-lines/laugh-mark-01.png",
+      "sha256": "d84d32ee959c385b75a45a7502f2f076e0d20b45bc66b488e7b866e01f7e8132",
+      "role": "runtime-accent-export"
+    },
+    {
+      "path": "03_animation/laugh-lines/laugh-mark-02.png",
+      "sha256": "870b77958725140105819faabfe4d7aecaa179884b08ceaad85dc580d1c84e2c",
+      "role": "runtime-accent-export"
+    },
+    {
+      "path": "03_animation/laugh-lines/laugh-mark-03.png",
+      "sha256": "e6620444231ee4ce94e46d9cc665fe99cb61e0d14203899d35b751908e04a1fd",
+      "role": "runtime-accent-export"
+    },
+    {
+      "path": "03_animation/laugh-lines/laugh-marks-preview.svg",
+      "sha256": "8f93c81e6117df57fdd48ad1143cc337e5ac3105714dc69d185ff7901c4a3bd0",
+      "role": "accent-preview"
+    }
+  ]
+}

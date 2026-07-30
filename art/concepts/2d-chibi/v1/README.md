@@ -1,12 +1,17 @@
 # Bentosaur 2D Chibi Exploration v1
 
-**Status:** Research  
+**Status:** Research; screen-generation gate superseded by v2
 **Founder signal:** the flat-cel gameplay candidate feels more production-feasible  
 **Production approval:** None  
 **Engine decision changed:** No
 
 This folder collects the existing Bentosaur game-screen concepts and a bounded
 2D translation study.
+
+On July 30, 2026, Mau selected flat-cel 2D as the leading direction for now
+and explicitly requested the matching expression, home/menu, and book proofs.
+Continue from `../v2/`. The historical restriction below is retained as the
+decision that applied at this checkpoint, not as the current instruction.
 
 ## Start here
 
@@ -56,4 +61,3 @@ passes.
 
 Exact reference provenance, output hashes, and approval state are recorded in
 `manifest.json`.
-

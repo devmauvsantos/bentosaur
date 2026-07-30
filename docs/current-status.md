@@ -6,17 +6,21 @@ Snapshot date: 2026-07-30
 
 ## Executive state
 
-The game engine and live-3D direction are locked. The hero character has
-approved visual sources, a bounded mobile topology scaffold, a production body
-candidate, and a functioning Godot facial-control lab. The project is blocked
-before rigging by one visual/technical requirement: a canonical, deformable
-face that can move between neutral, delighted-open, and chewing states without
-seams, folds, or topology changes.
+Mau selected flat-cel 2D as Bentosaur's leading visual direction for now. A
+matching expression proof, home/menu, regulars-book screen, independent laugh
+marks, and page-turn motion breakdown now exist. The immediate project gate is
+one real layered front character, one side-walk character, and one draggable
+book page running in Godot on a phone.
 
-No character is currently approved as production-ready, rig-ready, fully
-surfaced, or animation-ready.
+The former live-3D direction is preserved as the last locked production path,
+but it is paused while this decisive 2D proof runs. The visual selection does
+not make the generated rasters production assets and does not silently discard
+the 3D lineage.
 
-## Locked stack
+No character is currently approved as production-ready, rig-ready, or
+animation-ready in either route.
+
+## Preserved live-3D stack
 
 - Godot 4.7.1 Standard.
 - Mobile renderer and typed GDScript.
@@ -25,21 +29,27 @@ surfaced, or animation-ready.
 - Live 3D chibi diorama at runtime.
 - Screen-space 2D/2.5D HUD with a hybrid 3D book.
 
-## Bounded 2D contingency research
+## Active flat-cel 2D direction
 
-Mau identified the flat-cel gameplay study as more production-plausible than
-the dense painted-2D studies. One bounded front/side character-rig proof is
-authorized to test that route:
+The original selected style target remains:
 
 `art/concepts/2d-chibi/v1/01_generated-exploration/bentosaur-gameplay-2d-flat-cel-v2.png`
 
-This is not a production asset or an engine-decision change. No matching
-flat-cel hub, book, cast, or season set should be generated until one layered
-front rig and one layered side rig successfully idle, blink, delight, chew,
-walk, mirror, and use a separate prop socket in Godot.
+The expanded proof pack is:
+
+`art/concepts/2d-chibi/v2/`
+
+Mau explicitly requested the matching hub, book, expression, and page-turn
+exploration, superseding the earlier screen-generation restriction. The pack
+now establishes visual continuity, not production readiness.
+
+The first implementation remains bounded. One layered front rig and one
+layered side rig must successfully idle, blink, delight, chew, walk, mirror,
+and use a separate prop socket in Godot. The same proof adds one interactive
+book page with drag, commit, cancel, sound, haptic, and reduced motion.
 
 See
-[2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md).
+[2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md).
 
 ## Character lineage
 
@@ -141,6 +151,34 @@ It also does not authorize using the rejected r006 mesh.
 
 ## Immediate gates
 
+### 2D P0 — registered layer master
+
+- redraw the approved character into editable registered layers;
+- keep the head base free of eyes, mouth, and accents;
+- author open, blink, and happy eyes;
+- author soft smile, open smile, and two chew mouths;
+- keep all three laugh marks independently addressable;
+- add hidden color bleed and stable pivots under every joint.
+
+### 2D P1 — Godot character proof
+
+- front idle, blink, neutral-to-happy, and chew;
+- side walk east and mirrored west;
+- independent prop socket;
+- reversible reactions and reduced-motion endpoints;
+- phone-scale silhouette and frame-time approval.
+
+### 2D P2 — Godot book proof
+
+- one continuous deformable page rather than a sprite sequence;
+- touch drag, commit, cancel, and boundary handling;
+- distinct front, underside, fold shadow, and next-page reveal;
+- paper sound, optional haptic, visible buttons, and reduced motion;
+- physical-device touch and performance approval.
+
+The live-3D F0–F3 gates below remain preserved fallback work. Do not resume
+them during the bounded 2D proof unless Mau explicitly reopens that route.
+
 ### F0 — canonical face
 
 Mau receives front, three-quarter, profile, gameplay, wireframe, and shaded
@@ -184,6 +222,8 @@ Approve:
 
 ## Costs and external actions
 
+- The v2 flat-cel expression, hub, book, and key-pose concepts used built-in
+  ImageGen; no Tripo credits or paid external API were used.
 - Faceit `2.3.71` is installed locally; no license credential or transaction
   record is stored in the repository.
 - No paid API was called during r004, r005, or r006.

@@ -15,63 +15,64 @@ recorded in this repository before work is treated as durable.
 
 | Area | Locked or current state |
 |---|---|
-| Game | Cozy live-3D mobile bento-stall game populated by cute upright dinosaur characters |
+| Game | Cozy mobile bento-stall game populated by cute upright dinosaur characters |
 | Engine | Godot 4.7.1 Standard, Mobile renderer, typed GDScript |
-| DCC authority | Blender |
-| Engine boundary | Deterministic GLB |
-| Visual direction | Warm chibi diorama; Nintendo-like toy-box readability without copying protected characters or assets |
+| Active art authority | Editable registered 2D layer/vector masters; generated screens are targets only |
+| Preserved 3D authority | Blender and deterministic GLB |
+| Visual direction | Founder-selected flat-cel 2D; production lock pending one bounded Godot proof |
 | Hero source | H3.1 Extreme is the immutable appearance and silhouette authority |
-| Production stage | S40 production topology, in progress |
-| Current blocker | One clean canonical neutral face with deformable lips, oral cavity, tongue, and expression-supporting edge flow |
-| Facial direction | Faceit-style authoring and baked morph targets; Faceit 2.3 receives one bounded pilot after the topology gate |
+| Production stage | Flat-cel direction proof: registered character layers and interactive book pending |
+| Current blocker | One phone-ready front/side 2D rig and one tactile page-turn proof |
+| 3D fallback | S40 facial topology and Faceit research are preserved but paused |
 | Approval owner | Mau approves all visual character, material, expression, animation, and gameplay gates |
 
 ## Start here
 
 1. [Current project status](current-status.md)
-2. [Engine lock](engine-decision-live-3d-godot-v1.md)
-3. [Character production pipeline](character-production-pipeline-v1.md)
-4. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
-5. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
-6. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
-7. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
-
-Active visual contingency research:
-
-- [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
+2. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
+3. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
+4. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
+5. [Character production pipeline](character-production-pipeline-v1.md)
+6. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
+7. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
+8. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
+9. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
 
 ## Active work queue
 
-- [ ] Approve one canonical neutral production face before rigging.
-- [ ] Approve the maximum delighted-open expression on the same topology.
-- [x] Stop and preserve the rejected one-attempt r006 broad-face bridge.
-- [ ] Author the next F0 face with explicit lip, cheek, and chin topology.
+- [x] Select the flat-cel gameplay language as the leading direction for now.
+- [x] Prove visual continuity across neutral/happy, home/menu, and book.
+- [x] Separate the three laugh marks from the character face.
+- [ ] Redraw one front character into registered production layers.
+- [ ] Author open, blink, and happy eyes plus soft, open, and chew mouths.
+- [ ] Build front idle, blink, delight, and chew in Godot.
+- [ ] Build one side walk and mirror it for the opposite direction.
+- [ ] Validate a separate prop socket.
+- [ ] Build one draggable mesh/shader page turn with commit and cancel.
+- [ ] Add paper sound, optional haptic, buttons, and reduced motion.
+- [ ] Measure the character and book proof on physical phones.
+- [ ] Lock flat-cel 2D for production or reopen live 3D from preserved evidence.
+
+Paused fallback queue:
+
+- [x] Preserve the rejected r006 broad-face bridge and all 3D evidence.
 - [x] Install and smoke-test Faceit 2.3.71 in Blender 5.1.2.
-- [ ] Run one bounded Faceit pilot after F0 topology approval.
-- [ ] Validate blink, happy eyes, delight, and chew as combined controls.
-- [ ] Bake the approved controls to morph targets and deform bones.
-- [ ] Validate the GLB in the Godot mobile facial lab.
-- [ ] Complete S50 UV and bake.
-- [ ] Complete S60 final materials and appearance.
-- [ ] Complete S70 body/facial rig and skin.
-- [ ] Complete the S80 animation library.
-- [ ] Build the S90 mobile runtime slice and measure it on physical devices.
-- [ ] Run one bounded flat-cel front/side character-rig proof before generating
-      any additional 2D screens or reconsidering the engine lock.
+- [ ] Resume 3D facial topology, Faceit, S50–S90 only if Mau reopens live 3D.
 
 ## Decision register
 
 | Decision | Status | Document |
 |---|---|---|
-| Godot live-3D production stack | Locked | [Engine decision](engine-decision-live-3d-godot-v1.md) |
-| Blender owns meshes, materials, rigs, and clips | Locked | [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md) |
+| Flat-cel 2D visual direction | Founder-selected; production proof pending | [2D animation/screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md) |
+| Godot live-3D production stack | Preserved last lock; paused during 2D proof | [Engine decision](engine-decision-live-3d-godot-v1.md) |
+| Blender owns 3D meshes, materials, rigs, and clips | Preserved for fallback | [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md) |
 | Character binaries use Git LFS selectively | Active | [Storage policy](character-binary-storage-policy-v1.md) |
-| Physical 3D mouth, cavity, and tongue | Active; topology not yet approved | [Current status](current-status.md) |
-| Faceit-style facial authoring | Selected for bounded proof | [Faceit/AI strategy](facial-animation-faceit-ai-pipeline-v1.md) |
+| Physical 3D mouth, cavity, and tongue | Preserved fallback; topology not approved | [Current status](current-status.md) |
+| Faceit-style facial authoring | Preserved for a bounded pilot only if 3D reopens | [Faceit/AI strategy](facial-animation-faceit-ai-pipeline-v1.md) |
 | Full 52-shape ARKit face | Not required for the game | [Faceit/AI strategy](facial-animation-faceit-ai-pipeline-v1.md) |
 | Full custom Faceit clone | Rejected before the pilot | [Faceit/AI strategy](facial-animation-faceit-ai-pipeline-v1.md) |
 | Notion as canonical documentation | Retired | This page |
-| Flat-cel 2D contingency | Research; one rig proof authorized | [2D feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md) |
+| Flat-cel 2D contingency | Superseded by active visual direction | [2D feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md) |
 
 ## Document states
 

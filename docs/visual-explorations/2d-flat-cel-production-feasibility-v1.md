@@ -1,12 +1,18 @@
 # 2D Flat-Cel Production Feasibility 01
 
-**Status:** Research; bounded contingency proof  
+**Status:** Research; superseded by the active v2 visual proof
 **Date:** July 30, 2026  
 **Founder signal:** the flat-cel candidate feels more possible  
 **Production approval:** None  
 **Engine decision changed:** No  
 **Tripo credits used:** 0  
 **Generation tool:** built-in ImageGen
+
+> Historical checkpoint: Mau later selected flat-cel 2D as the leading
+> direction for now and explicitly requested the matching expression,
+> home/menu, and book proofs. The former "do not generate additional screens"
+> gate below no longer controls current work. Continue with
+> [2D flat-cel animation and screen proof v2](2d-flat-cel-animation-and-screen-proof-v2.md).
 
 ## Decision at this checkpoint
 
@@ -362,4 +368,3 @@ concept.
   https://help.scenario.com/articles/5151772792-basics-of-model-training
 - Rive game runtimes:
   https://rive.app/docs/game-runtimes/game-runtimes/game-runtimes
-
