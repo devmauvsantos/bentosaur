@@ -1,0 +1,146 @@
+{
+  "packId": "bentosaur-tripo-character-pack-v1",
+  "createdAt": "2026-07-30",
+  "purpose": "Curated handoff of the strongest Tripo multiview inputs, visual evidence, and closed/open source models.",
+  "canonicalSourcePolicy": "These are byte-identical curated copies. The original pipeline locations remain authoritative.",
+  "uploadOrder": [
+    "front",
+    "left",
+    "back",
+    "right"
+  ],
+  "imageSets": [
+    {
+      "id": "closed-mouth-v1",
+      "expression": "neutral closed mouth",
+      "destinationDirectory": "01_closed-mouth/01_multiview-inputs",
+      "sourceDirectory": "art/turnarounds/triceratops_master_v2/neutral-no-catchlight/inputs-v1",
+      "files": [
+        {
+          "view": "front",
+          "destination": "bentosaur_closed-mouth_v1_01_front.png",
+          "source": "bentosaur_front.png"
+        },
+        {
+          "view": "left",
+          "destination": "bentosaur_closed-mouth_v1_02_left.png",
+          "source": "bentosaur_left.png"
+        },
+        {
+          "view": "back",
+          "destination": "bentosaur_closed-mouth_v1_03_back.png",
+          "source": "bentosaur_back.png"
+        },
+        {
+          "view": "right",
+          "destination": "bentosaur_closed-mouth_v1_04_right.png",
+          "source": "bentosaur_right.png"
+        }
+      ]
+    },
+    {
+      "id": "open-mouth-delighted-v1",
+      "expression": "delighted open mouth",
+      "destinationDirectory": "02_open-mouth/01_multiview-inputs",
+      "sourceDirectory": "art/turnarounds/triceratops_master_v3/open-mouth-delighted/inputs-v1",
+      "files": [
+        {
+          "view": "front",
+          "destination": "bentosaur_open-mouth-delighted_v1_01_front.png",
+          "source": "bentosaur_front.png"
+        },
+        {
+          "view": "left",
+          "destination": "bentosaur_open-mouth-delighted_v1_02_left.png",
+          "source": "bentosaur_left.png"
+        },
+        {
+          "view": "back",
+          "destination": "bentosaur_open-mouth-delighted_v1_03_back.png",
+          "source": "bentosaur_back.png"
+        },
+        {
+          "view": "right",
+          "destination": "bentosaur_open-mouth-delighted_v1_04_right.png",
+          "source": "bentosaur_right.png"
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "closed-mouth-v1-h31-detailed-geometry",
+      "destination": "01_closed-mouth/02_models/bentosaur_closed-mouth_v1_h31-detailed_geometry.glb",
+      "source": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/tripo-out/model.glb",
+      "sha256": "4b9ad1cc5562986ff587718c0dbd1f00a5fdf99b33de3c905c3cc0e87ce69607",
+      "bytes": 47399240,
+      "vertices": 987461,
+      "triangles": 1974918,
+      "textured": false,
+      "productionReady": false
+    },
+    {
+      "id": "closed-mouth-v2-h31-extreme-textured",
+      "destination": "01_closed-mouth/02_models/bentosaur_closed-mouth_v2_h31-extreme-textured.glb",
+      "source": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/tripo-out/model.glb",
+      "canonicalPipelineCopy": "art/characters/bentosaur-hero/char-v001/stages/s20-high-visual-source/r001/source/bentosaur_hero_h31_extreme_visual_source_r001.glb",
+      "sha256": "40de6b43b0dc0313e084005b711cb549dfe6dfceeebe45c6275761c99b96dc79",
+      "bytes": 85259072,
+      "vertices": 1010650,
+      "triangles": 1974918,
+      "textured": true,
+      "productionReady": false
+    },
+    {
+      "id": "open-mouth-delighted-v1-h31-detailed-geometry",
+      "destination": "02_open-mouth/02_models/bentosaur_open-mouth-delighted_v1_h31-detailed_geometry.glb",
+      "source": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/tripo-out/model.glb",
+      "sha256": "7c0d7e2e1e4ee8fb4db320880f6f4b5c82c470bce37437ce28d26efa171b01d4",
+      "bytes": 46092344,
+      "vertices": 960234,
+      "triangles": 1920464,
+      "textured": false,
+      "productionReady": false
+    }
+  ],
+  "previews": [
+    {
+      "destination": "01_closed-mouth/03_previews/bentosaur_closed-mouth_v1_multiview-contact-sheet.png",
+      "role": "human overview generated from the four closed-mouth inputs"
+    },
+    {
+      "destination": "01_closed-mouth/03_previews/bentosaur_closed-mouth_v1_h31-detailed_clay-six-view.png",
+      "source": "art/candidates/tripo/visual-gate-03/h31-detailed-neutral/evaluation/boards/vg03_hd_clay_six_view.png"
+    },
+    {
+      "destination": "01_closed-mouth/03_previews/bentosaur_closed-mouth_v2_h31-extreme-textured_six-view.png",
+      "source": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/boards/vg04_basecolor_six_view.png"
+    },
+    {
+      "destination": "01_closed-mouth/03_previews/bentosaur_closed-mouth_v2_h31-extreme-textured_feature-closeups.png",
+      "source": "art/candidates/tripo/visual-gate-04/h31-extreme-texture/evaluation/boards/vg04_basecolor_feature_closeups.png"
+    },
+    {
+      "destination": "02_open-mouth/03_previews/bentosaur_open-mouth-delighted_v1_multiview-contact-sheet.png",
+      "role": "human overview generated from the four open-mouth inputs"
+    },
+    {
+      "destination": "02_open-mouth/03_previews/bentosaur_open-mouth-delighted_v1_h31-detailed_clay-six-view.png",
+      "source": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/evaluation/boards/vg03_hd_clay_six_view.png"
+    },
+    {
+      "destination": "02_open-mouth/03_previews/bentosaur_open-mouth-delighted_v1_h31-detailed_feature-closeups.png",
+      "source": "art/candidates/tripo/visual-gate-06/h31-detailed-open-mouth/evaluation/boards/vg03_hd_clay_feature_closeups.png"
+    }
+  ],
+  "sharedReference": [
+    {
+      "destination": "03_shared-reference/bentosaur_closed-vs-open_depth-comparison_v1.png",
+      "source": "art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r001/qa/source-probe/open_closed_front_depth_comparison.png"
+    },
+    {
+      "destination": "03_shared-reference/bentosaur_mouth-expression-reference_v1.png",
+      "source": "art/turnarounds/triceratops_master_v1/drafts/mouth-expression-addendum-v1.png"
+    }
+  ]
+}
