@@ -22,6 +22,7 @@ The project is in S40 Production Topology for
 - repaired Smart LowPoly: frozen scaffold only
 - S40 r003: active all-quad body bootstrap
 - r005: frozen rejected static Tripo-mouth transfer research
+- r006: frozen rejected one-attempt broad-face topology bridge
 - current blocker: one canonical neutral/deformable face
 - Faceit 2.3.71: installed and smoke-tested in Blender 5.1.2
 - facial direction: bounded Faceit authoring pilot after topology approval

@@ -52,6 +52,7 @@ The machine-readable pointer remains:
 | r003 | Physical aperture/cavity proof; separate transition ring visibly failed |
 | r004 | Exact Tripo alignment and mouth-region extraction; automatic contour stopped because the tongue hides the true lower lip |
 | r005 | Two bounded welded-retopology attempts; a02 improved the mouth but failed at the outer seam and was frozen |
+| r006 | One bounded broad-face bridge; mouth fit and mobile budget passed, but cheek flow folded and the attempt stopped before Faceit |
 
 The r005 research checkpoint is:
 
@@ -69,9 +70,25 @@ Its best candidate:
 The two-attempt stop condition was honored. r005 must not be rigged, exported,
 or promoted to S40.
 
+The r006 checkpoint is:
+
+`art/characters/bentosaur-hero/char-v001/experiments/facial-animation-options/r006/`
+
+It proved that enlarging the cut and keeping two transition rings on the
+original S40 surface does not repair a one-to-one radial bridge. The candidate
+is a closed all-quad shell, matches the Tripo aperture within `0.00253`, and
+fits the working mobile budget at `23,168` rendered triangles including the
+tongue. It nevertheless has seam-normal P95 `162.95°`, 117 overlap
+candidates, and visible folded lower cheeks.
+
+The one-attempt stop rule was honored. r006 did not proceed to neutral/open
+shape keys or Faceit. Automated concentric mouth bridging is now retired.
+See [F0 r006 stop report](facial-topology-f0-r006-stop-report.md).
+
 ## Facial direction now
 
-Use one canonical neutral topology and a Faceit-style authoring workflow:
+Use one manually authored canonical neutral topology and a Faceit-style
+authoring workflow:
 
 1. neutral closed-mouth basis with the complete oral cavity and tongue present;
 2. jaw/tongue controls plus a small set of Bentosaur-specific morph targets;
@@ -104,6 +121,7 @@ visible, modal 3D-view workflow and therefore requires an interactive
 checkpoint rather than unattended headless execution.
 
 Installation readiness does not authorize using the rejected r005 mesh.
+It also does not authorize using the rejected r006 mesh.
 
 ## Immediate gates
 
@@ -152,7 +170,7 @@ Approve:
 
 - Faceit `2.3.71` is installed locally; no license credential or transaction
   record is stored in the repository.
-- No paid API was called during r004 or r005.
-- Tripo credits spent by r004/r005: `0`.
+- No paid API was called during r004, r005, or r006.
+- Tripo credits spent by r004/r005/r006: `0`.
 - Recorded Tripo balance: `4,695`.
 - No repository push is authorized by this status document.

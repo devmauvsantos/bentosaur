@@ -1,0 +1,519 @@
+{
+  "status": "f0_open_topology_failed_frozen",
+  "attempt": "r006_f0_single_authorized_attempt",
+  "input": {
+    "path": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/root/f0_broad_face_r006/work/00_locked_inputs.blend",
+    "sha256": "9f9ca58f34dc46037e7c3bcadd2e8c399ba7e12f62a9551322c1a2c4dde3951f",
+    "locked_body": "S40_R003_PRODUCTION_BODY_LOCKED",
+    "locked_source": "TRIPO_VG06_OPEN_SOURCE_LOCKED"
+  },
+  "selection": {
+    "removed_faces": 496,
+    "preserved_boundary_vertices": 112,
+    "predicate": {
+      "abs_x_max": 0.135,
+      "z_min": 0.385,
+      "z_max": 0.555,
+      "front_y_max": -0.18
+    }
+  },
+  "topology": {
+    "skin_support_t": [
+      0.17,
+      0.36,
+      0.68,
+      1.0
+    ],
+    "skin_quads": 448,
+    "wall_segments": 4,
+    "wall_quads": 448,
+    "cap_grid": [
+      28,
+      28
+    ],
+    "cap_quads": 784,
+    "body_vertices": 11234,
+    "body_edges": 22464,
+    "body_faces": 11232,
+    "body_all_quads": true,
+    "body_euler_characteristic": 2,
+    "body_face_components": [
+      11232
+    ],
+    "nonmanifold_edges": 0,
+    "boundary_edges": 0,
+    "overfull_edges": 0,
+    "loose_vertices": 0,
+    "inconsistent_directed_edges": 0
+  },
+  "preservation": {
+    "outside_connectivity_exact": true,
+    "boundary_coordinate_max_error": 0.0
+  },
+  "quality": {
+    "patch_aspect_mean": 3.0789268205547926,
+    "patch_aspect_p95": 8.453313763215062,
+    "patch_aspect_max": 49.194706989541174,
+    "seam_edges": 112,
+    "seam_normal_mean_deg": 22.957208681919074,
+    "seam_normal_p95_deg": 162.9459788779183,
+    "seam_normal_max_deg": 177.18394533491676,
+    "patch_involved_vertex_disjoint_overlap_pairs": 117,
+    "overlap_examples": [
+      {
+        "triangles": [
+          14689,
+          14692
+        ],
+        "polygons": [
+          7344,
+          7346
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          15977,
+          15990
+        ],
+        "polygons": [
+          7988,
+          7995
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          13823,
+          17048
+        ],
+        "polygons": [
+          6911,
+          8524
+        ],
+        "roles": [
+          0,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16946,
+          17048
+        ],
+        "polygons": [
+          8473,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16944,
+          17048
+        ],
+        "polygons": [
+          8472,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16936,
+          17048
+        ],
+        "polygons": [
+          8468,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16948,
+          17049
+        ],
+        "polygons": [
+          8474,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16946,
+          17049
+        ],
+        "polygons": [
+          8473,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16947,
+          17049
+        ],
+        "polygons": [
+          8473,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16944,
+          17049
+        ],
+        "polygons": [
+          8472,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16936,
+          17049
+        ],
+        "polygons": [
+          8468,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16937,
+          17049
+        ],
+        "polygons": [
+          8468,
+          8524
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          13823,
+          16949
+        ],
+        "polygons": [
+          6911,
+          8474
+        ],
+        "roles": [
+          0,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16946,
+          16949
+        ],
+        "polygons": [
+          8473,
+          8474
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16944,
+          16949
+        ],
+        "polygons": [
+          8472,
+          8474
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16936,
+          16949
+        ],
+        "polygons": [
+          8468,
+          8474
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16937,
+          16949
+        ],
+        "polygons": [
+          8468,
+          8474
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16944,
+          16948
+        ],
+        "polygons": [
+          8472,
+          8474
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16937,
+          16948
+        ],
+        "polygons": [
+          8468,
+          8474
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          14630,
+          16948
+        ],
+        "polygons": [
+          7315,
+          8474
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16944,
+          16947
+        ],
+        "polygons": [
+          8472,
+          8473
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16936,
+          16947
+        ],
+        "polygons": [
+          8468,
+          8473
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16937,
+          16947
+        ],
+        "polygons": [
+          8468,
+          8473
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          14630,
+          16947
+        ],
+        "polygons": [
+          7315,
+          8473
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          14629,
+          16947
+        ],
+        "polygons": [
+          7314,
+          8473
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          14630,
+          16944
+        ],
+        "polygons": [
+          7315,
+          8472
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          16936,
+          16945
+        ],
+        "polygons": [
+          8468,
+          8472
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          14630,
+          16945
+        ],
+        "polygons": [
+          7315,
+          8472
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          14629,
+          16945
+        ],
+        "polygons": [
+          7314,
+          8472
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      },
+      {
+        "triangles": [
+          14628,
+          16945
+        ],
+        "polygons": [
+          7314,
+          8472
+        ],
+        "roles": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "source_fit": {
+    "aperture_vertices": 112,
+    "aperture_mean": 0.001427531238521494,
+    "aperture_p95": 0.002155811758711934,
+    "aperture_max": 0.002525394782423973
+  },
+  "render_budget": {
+    "body_triangles": 22464,
+    "tongue_triangles": 704,
+    "candidate_triangles": 23168,
+    "working_limit": 24000
+  },
+  "scope": {
+    "paid_api_used": false,
+    "tripo_credits_spent": 0,
+    "faceit_run": false,
+    "godot_work": false,
+    "canonical_files_modified": false,
+    "second_attempt_authorized": false
+  },
+  "verdict": {
+    "technical_gate": "fail",
+    "blockers": [
+      "seam normal P95 exceeds 30 degrees",
+      "seam normal max exceeds 60 degrees",
+      "patch aspect P95 exceeds 6",
+      "patch aspect max exceeds 30",
+      "patch has vertex-disjoint overlap candidates"
+    ],
+    "next_if_pass": "author same-topology neutral Basis and render expression sweep",
+    "next_if_fail": "freeze this attempt and stop before Faceit"
+  },
+  "final_output": null,
+  "open_output": "/Users/mauvsantos/Workspace/games/Bentosaur/.tmp/root/f0_broad_face_r006/work/10_broad_open_topology.blend"
+}

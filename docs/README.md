@@ -32,13 +32,16 @@ recorded in this repository before work is treated as durable.
 2. [Engine lock](engine-decision-live-3d-godot-v1.md)
 3. [Character production pipeline](character-production-pipeline-v1.md)
 4. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
-5. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
-6. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
+5. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
+6. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
+7. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
 
 ## Active work queue
 
 - [ ] Approve one canonical neutral production face before rigging.
 - [ ] Approve the maximum delighted-open expression on the same topology.
+- [x] Stop and preserve the rejected one-attempt r006 broad-face bridge.
+- [ ] Author the next F0 face with explicit lip, cheek, and chin topology.
 - [x] Install and smoke-test Faceit 2.3.71 in Blender 5.1.2.
 - [ ] Run one bounded Faceit pilot after F0 topology approval.
 - [ ] Validate blink, happy eyes, delight, and chew as combined controls.

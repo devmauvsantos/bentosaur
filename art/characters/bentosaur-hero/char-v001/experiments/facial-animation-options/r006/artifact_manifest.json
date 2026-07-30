@@ -1,0 +1,82 @@
+{
+  "candidate": "bentosaur-facial-experiment-r006-f0-broad-face",
+  "status": "stopped_after_single_attempt_not_production_approved",
+  "versioned_research_checkpoint": true,
+  "production_stage_modified": false,
+  "paid_api_used": false,
+  "tripo_credits_spent": 0,
+  "faceit_run": false,
+  "artifact_count": 14,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4141,
+      "sha256": "ab79f59a21d86cdfc2044b2f2f40c2e53ea602c3c46d6545084740e86c50d06d"
+    },
+    {
+      "path": "evidence/01_front_full.png",
+      "bytes": 517212,
+      "sha256": "2b9cee1991a4aae63e150e5537cf4255f895b97d39421b73392467bab75f84e9"
+    },
+    {
+      "path": "evidence/02_three_quarter_full.png",
+      "bytes": 497993,
+      "sha256": "6849d634dd001e7dbd18a7cc202569bffa55cff5f65f284f208f866dbe657e90"
+    },
+    {
+      "path": "evidence/03_front_mouth_close.png",
+      "bytes": 647641,
+      "sha256": "6ce01f5c080567547a5f046cb4a6413dfaf99e96f8cabdc71aeb74e2decd4123"
+    },
+    {
+      "path": "evidence/04_three_quarter_mouth_close.png",
+      "bytes": 631714,
+      "sha256": "cbb8a770b97688a4824a51469731b39db07280cbac1c5e12a44594402594903f"
+    },
+    {
+      "path": "evidence/05_front_mouth_wire.png",
+      "bytes": 880572,
+      "sha256": "c751d7573e41ad123978f98442e28c4cbeefcb76e93ac64d76405c9d97fd59b2"
+    },
+    {
+      "path": "evidence/f0_r006_stop_board.png",
+      "bytes": 5908583,
+      "sha256": "c4a74a42b2f44bb138c2ca2fd49663ca6e9ac236a418b9dcef58c37e4927b24e"
+    },
+    {
+      "path": "qa/a02_geometry_diagnostic.json",
+      "bytes": 26451,
+      "sha256": "bec7c6322bdc3e9260f51966fc0de497c56be671a935d9c11fca31f36b28c2fb"
+    },
+    {
+      "path": "qa/f0_single_attempt_report.json",
+      "bytes": 8886,
+      "sha256": "8a9c1e88e9e14ea417ca15a72c72f4118298b43434fca2277b6321fcc3ed5a92"
+    },
+    {
+      "path": "recipes/build_artifact_manifest.mjs",
+      "bytes": 1621,
+      "sha256": "c360d942a709681be3ec7178633363880e41c7425084e45ab3961c5191eb45ca"
+    },
+    {
+      "path": "recipes/build_f0_single_attempt.py",
+      "bytes": 31073,
+      "sha256": "1e9684c8ac204258e755e94c93f6e25c458330c743137af33166ad8b5dd0a9f4"
+    },
+    {
+      "path": "recipes/diagnose_a02.py",
+      "bytes": 5526,
+      "sha256": "eb698119c467a7d1ffc64f37fd64024dab841d022ab26057725ba15290b18cb7"
+    },
+    {
+      "path": "recipes/render_f0_failed_checkpoint.py",
+      "bytes": 5046,
+      "sha256": "f8361676dcf89799c3ba083fc9c794818733e6c4970c61b860ce15a2c2ccd42b"
+    },
+    {
+      "path": "work/10_F0_BROAD_OPEN_TOPOLOGY_FAILED_FROZEN.blend",
+      "bytes": 85321382,
+      "sha256": "b856ebd88d4c9eb625ed4c27766ae3b8be2425961d50c5fcce19f9e3b7dc985f"
+    }
+  ]
+}

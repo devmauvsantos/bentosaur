@@ -255,6 +255,11 @@ Before Faceit:
 - no seam, fold, intersection, or identity drift;
 - Mau approves clay, shaded, wireframe, source overlay, and gameplay views.
 
+The one-attempt r006 automated broad-face bridge failed this prerequisite and
+was frozen before Faceit. Radial/concentric loop bridging is retired; the next
+candidate requires explicit Poly Build or dedicated topology-transfer work.
+See [F0 r006 stop report](facial-topology-f0-r006-stop-report.md).
+
 ### F1 — Faceit setup
 
 - install the approved Faceit 2.3 version;
