@@ -1124,10 +1124,8 @@ def main() -> None:
         tongue,
         armature,
     )
-    glb_report = export_glb(
-        exports / "bentosaur_facial_mobile_proof_v002.glb",
-        export_objects,
-    )
+    glb_path = exports / "bentosaur_facial_mobile_proof_v002.glb"
+    glb_report = export_glb(glb_path, export_objects)
     upper_lip.hide_render = True
     lower_lip.hide_render = True
     checkpoints["50_export_ready"] = save_checkpoint(
@@ -1143,7 +1141,7 @@ def main() -> None:
         entry["triangles_after_export"] for entry in topology_report.values()
     )
     round_trip = audit_glb_round_trip(
-        Path(glb_report["path"]),
+        glb_path,
         qa / "60_glb_roundtrip_import.blend",
     )
     report = {

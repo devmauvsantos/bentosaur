@@ -154,8 +154,8 @@
     },
     {
       "path": "recipes/build_facial_rig_proof.py",
-      "bytes": 37606,
-      "sha256": "99f871239a39a1cb0a152d95dfc7f67a6f4e05b6216cb463f4e2c378d1bea92f"
+      "bytes": 37591,
+      "sha256": "3c7a5359edcac9d654da1c64dfd57e720cfe8d114a70b41a288ec653f5387f60"
     },
     {
       "path": "recipes/build_manifest.mjs",
