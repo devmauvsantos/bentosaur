@@ -290,7 +290,9 @@
       "Chew_Compress": true,
       "Blink_L": true,
       "Blink_R": true,
-      "HappyEyes": true
+      "HappyEyes": true,
+      "Tongue_Retract": true,
+      "Tongue_Chew": true
     },
     "required_bones_found": {
       "root": true,

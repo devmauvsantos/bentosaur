@@ -95,7 +95,9 @@
 		"Chew_Compress": 3,
 		"HappyEyes": 2,
 		"Mouth_CloseCorrective": 3,
-		"Mouth_DelightedOpen": 3
+		"Mouth_DelightedOpen": 3,
+		"Tongue_Chew": 1,
+		"Tongue_Retract": 1
 	},
 	"skeleton_count": 1,
 	"triangles": 21336

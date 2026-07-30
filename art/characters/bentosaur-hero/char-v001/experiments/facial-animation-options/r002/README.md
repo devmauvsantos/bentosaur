@@ -15,6 +15,12 @@ GLB export.
 numbered Blender checkpoints, render evidence, export, round-trip QA scene,
 Godot captures, and hashes.
 
+`work/10_small_face_modules.blend` and
+`work/20_named_morph_targets.blend` are intentionally preserved exactly as
+generated, even though they are byte-identical: the r002 recipe saved both
+labels after shape-key construction. The next authored-mouth recipe must move
+the `work/10` save before shape-key creation or collapse the redundant stage.
+
 ## Checkpoint result
 
 The repair improved the engine import but did not pass the visual gate:

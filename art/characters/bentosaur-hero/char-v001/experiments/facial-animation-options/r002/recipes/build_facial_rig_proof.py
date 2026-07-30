@@ -39,6 +39,7 @@ BLINK_R_KEY = "Blink_R"
 HAPPY_EYES_KEY = "HappyEyes"
 TONGUE_RETRACT_KEY = "Tongue_Retract"
 TONGUE_CHEW_KEY = "Tongue_Chew"
+REPORT_ROOT: Path | None = None
 
 # Canonical S40 space: +X character-left, -Y front, +Z up.
 MOUTH_CENTER_Z = 0.468
@@ -69,11 +70,28 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def find_repository_root(path: Path) -> Path:
+    for candidate in (path, *path.parents):
+        if (candidate / ".git").exists():
+            return candidate
+    return path
+
+
+def report_path(path: Path) -> str:
+    resolved = path.resolve()
+    if REPORT_ROOT is not None:
+        try:
+            return resolved.relative_to(REPORT_ROOT).as_posix()
+        except ValueError:
+            pass
+    return resolved.as_posix()
+
+
 def save_checkpoint(path: Path) -> dict[str, object]:
     path.parent.mkdir(parents=True, exist_ok=True)
     bpy.ops.wm.save_as_mainfile(filepath=str(path), copy=True)
     return {
-        "path": str(path),
+        "path": report_path(path),
         "bytes": path.stat().st_size,
         "sha256": sha256(path),
     }
@@ -800,7 +818,7 @@ def render(
     bpy.context.scene.render.filepath = str(path)
     bpy.ops.render.render(write_still=True)
     return {
-        "path": str(path),
+        "path": report_path(path),
         "bytes": path.stat().st_size,
         "sha256": sha256(path),
     }
@@ -845,7 +863,7 @@ def export_glb(
         export_apply=False,
     )
     return {
-        "path": str(path),
+        "path": report_path(path),
         "bytes": path.stat().st_size,
         "sha256": sha256(path),
     }
@@ -901,6 +919,14 @@ def audit_glb_round_trip(
                 HAPPY_EYES_KEY in entry["shape_keys"]
                 for entry in meshes.values()
             ),
+            TONGUE_RETRACT_KEY: any(
+                TONGUE_RETRACT_KEY in entry["shape_keys"]
+                for entry in meshes.values()
+            ),
+            TONGUE_CHEW_KEY: any(
+                TONGUE_CHEW_KEY in entry["shape_keys"]
+                for entry in meshes.values()
+            ),
         },
         "required_bones_found": {
             bone: any(
@@ -909,7 +935,7 @@ def audit_glb_round_trip(
             for bone in ("root", "jaw", "tongue")
         },
         "qa_blend": {
-            "path": str(qa_blend),
+            "path": report_path(qa_blend),
             "bytes": qa_blend.stat().st_size,
             "sha256": sha256(qa_blend),
         },
@@ -917,8 +943,10 @@ def audit_glb_round_trip(
 
 
 def main() -> None:
+    global REPORT_ROOT
     args = parse_args()
     output = args.output.resolve()
+    REPORT_ROOT = find_repository_root(output)
     work = output / "work"
     renders = output / "evidence" / "renders"
     exports = output / "exports"
@@ -1127,7 +1155,7 @@ def main() -> None:
             "credits_spent": 0,
         },
         "source": {
-            "path": str(source_path),
+            "path": report_path(source_path),
             "sha256": source_hash,
             "unchanged_after_run": source_unchanged,
             "body_object": BODY_OBJECT,
