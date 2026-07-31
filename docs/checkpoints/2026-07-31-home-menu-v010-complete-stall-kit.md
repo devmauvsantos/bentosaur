@@ -1,5 +1,9 @@
 # Home Menu V010 — Complete Modular Stall Kit
 
+> Historical integration checkpoint. Phone-scale crate, rank-star, and
+> stockpot-lid registration is superseded by
+> [Home Menu V011](2026-07-31-home-menu-v011-registration-corrections.md).
+
 **Status:** founder-approved V004 art promoted and integrated; 21/21 contracts
 pass and V010 is running on the personal iPhone; founder device review pending
 

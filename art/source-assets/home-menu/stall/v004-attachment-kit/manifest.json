@@ -16,7 +16,7 @@
   "runtime_promotion": {
     "builder": "tools/art/promote_stall_attachment_runtime_v004.py",
     "manifest": "game/assets/environments/home_village/v001/stall/attachments/v004/runtime_manifest.json",
-    "asset_count": 31,
+    "asset_count": 32,
     "font_bundled_in_attachment_pack": false,
     "steam_and_smoke": "procedural_runtime_effects"
   },
@@ -471,6 +471,8 @@
     "Founder approved all V001 components at registered sizes and proportions for this checkpoint.",
     "Rank plaque v001 is approved in clean brown for this checkpoint; generated/local recolor v002 remains rejected and must not ship.",
     "Counter lantern OFF honey-amber glass is approved for this checkpoint.",
+    "The static bottle crate uses the founder-approved assembled composition; independent pieces remain preserved for future variants.",
+    "Stockpot lid and rank stars use optical registration corrections recorded in the placement contract.",
     "Warm light spill across stall wood remains deferred."
   ],
   "files_sha256": {
@@ -516,7 +518,7 @@
     "counter-small/prompts/counter-oil-lantern-modular-kit-v001.md": "6ed1be4c3c436539721951d671f9cd2620cdd0d1866fedfd77b8816fd53f7198",
     "counter-small/prompts/grape-food-bowl-v001.md": "2d5057a28e594f0ca692a362de2db91768ebf138af68e9008c70a45568e20ec2",
     "counter-small/reviews/counter-small-category-review-board-v001.png": "98704a4c1d6e0168a5cb1b0052e0503dcbe5909076c8e384db222c42d94d0c3e",
-    "placement-and-motion-contract.json": "5757542ff949a77bd9dc296a18ff473a4f51d4658370fce1e7e14aeaff93dcd4",
+    "placement-and-motion-contract.json": "d02ebc1aa18732e0d784f6a97ccacb3a83d1cff2d062d8e67cda554e57a1c857",
     "registered/stall-attachment-full-context-candidate-v001.png": "5f826308ca1d38a8323f9f72328991c8c14a5c632f4d5f2263d9023acff1d312",
     "reviews/stall-attachment-full-context-approval-board-v001.png": "aae343b6990d2e0e130980a3d1dbaf48aae4130d70da371d8f7bdb6789910770",
     "stockpot/components/stall_stockpot_assembled_preview_candidate_v001.png": "ea2c03b072f27485fea56e459b788507d9b3a877231d2c318f005e781546882a",

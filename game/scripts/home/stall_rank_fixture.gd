@@ -10,9 +10,9 @@ const FILL_SECONDS := 0.180
 const FILLED_START_SCALE := Vector2(0.96, 0.96)
 const SHINE_START_SCALE := Vector2(0.90, 0.90)
 const STAR_POSITIONS: Array[Vector2] = [
-	Vector2(33.0, 9.0),
-	Vector2(93.0, 9.0),
-	Vector2(153.0, 9.0),
+	Vector2(29.0, 8.5),
+	Vector2(93.0, 8.5),
+	Vector2(158.0, 8.5),
 ]
 
 var _rank := 3
@@ -52,7 +52,7 @@ func _ready() -> void:
 		_star_slots.append(slot)
 		_filled_stars.append(filled)
 		_shine_stars.append(shine)
-		filled.pivot_offset = Vector2(21.0, 17.0)
+		filled.pivot_offset = Vector2(21.0, 17.5)
 		shine.pivot_offset = shine.size * 0.5
 	resized.connect(_layout_content)
 	_layout_content()

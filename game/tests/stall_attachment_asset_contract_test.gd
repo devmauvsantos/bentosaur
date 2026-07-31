@@ -7,9 +7,10 @@ const MANIFEST_PATH := RUNTIME_ROOT + "/runtime_manifest.json"
 const MANIFEST_OUTPUT_PREFIX := (
 	"game/assets/environments/home_village/v001/stall/attachments/v004/"
 )
-const EXPECTED_ASSET_COUNT := 31
+const EXPECTED_ASSET_COUNT := 32
 const EXPECTED_PNGS := [
 	"bottle_crate/bottle_brown_v001.png",
+	"bottle_crate/bottle_crate_assembled_v001.png",
 	"bottle_crate/bottle_crate_empty_v001.png",
 	"bottle_crate/bottle_cream_blue_cap_v001.png",
 	"bottle_crate/bottle_green_v001.png",
@@ -43,7 +44,6 @@ const EXPECTED_PNGS := [
 ]
 const FORBIDDEN_RUNTIME_PATHS := [
 	"stockpot/stall_stockpot_assembled_preview_v001.png",
-	"bottle_crate/bottle_crate_assembled_preview_v001.png",
 	"ui/rank/rank-plaque-empty-sockets-v002.png",
 	"ui/rank/rank-plaque-kit-v002.png",
 	"ui/rank/rank-plaque-face-recolor-mask-v002.png",
@@ -57,6 +57,7 @@ const EXPECTED_TEXTURE_SIZES := {
 	"food_bowl/grape-food-bowl-v001.png": Vector2i(132, 132),
 	"counter_plant/counter_plant_foliage_v001.png": Vector2i(122, 308),
 	"bottle_crate/bottle_crate_empty_v001.png": Vector2i(234, 177),
+	"bottle_crate/bottle_crate_assembled_v001.png": Vector2i(234, 202),
 	"counter_cloth/counter_cloth_red_draped_v001.png": Vector2i(194, 240),
 	"ui/rank/rank-plaque-empty-sockets-v001.png": Vector2i(456, 96),
 	"ui/buttons/menu-button-primary-normal-v001.png": Vector2i(692, 410),
@@ -104,13 +105,13 @@ func _validate_manifest(errors: PackedStringArray) -> void:
 	)
 	_expect(
 		int(manifest.get("asset_count", -1)) == EXPECTED_ASSET_COUNT,
-		"V004 runtime manifest must declare exactly 31 assets.",
+		"V004 runtime manifest must declare exactly 32 assets.",
 		errors
 	)
 	var asset_entries: Array = manifest.get("assets", [])
 	_expect(
 		asset_entries.size() == EXPECTED_ASSET_COUNT,
-		"V004 runtime manifest asset list must contain exactly 31 entries.",
+		"V004 runtime manifest asset list must contain exactly 32 entries.",
 		errors
 	)
 

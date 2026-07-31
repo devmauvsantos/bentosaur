@@ -1,7 +1,8 @@
 {
   "assembly_contract": {
     "bottle_crate": {
-      "assembly_registration": "deferred_to_prefab_integration",
+      "assembled_runtime_asset": "bottle_crate/bottle_crate_assembled_v001.png",
+      "assembly_registration": "approved_static_assembled_prefab",
       "box": [
         470,
         618,
@@ -9,6 +10,7 @@
         101
       ],
       "default_prefab": "assembled",
+      "modular_pieces_role": "reserved_for_future_variants",
       "motion": "none",
       "preferred_components": [
         "crate",
@@ -170,20 +172,20 @@
       "fill_transition_ms": 180,
       "star_boxes": [
         [
-          279,
-          381,
+          275,
+          380.5,
           42,
           34
         ],
         [
           339,
-          381,
+          380.5,
           42,
           34
         ],
         [
-          399,
-          381,
+          404,
+          380.5,
           42,
           34
         ]
@@ -240,17 +242,17 @@
       },
       "lid_box": [
         133,
-        589,
+        609,
         90,
         49
       ],
       "lid_pivot": [
         178,
-        625
+        645
       ],
       "steam_emitter": [
         197,
-        590
+        610
       ],
       "z_order": [
         "contact_shadow",
@@ -260,7 +262,7 @@
       ]
     }
   },
-  "asset_count": 31,
+  "asset_count": 32,
   "asset_id": "env.home_village.stall.attachments.runtime.v004",
   "assets": [
     {
@@ -311,13 +313,13 @@
       "metadata": {
         "logical_box": [
           133,
-          589,
+          609,
           90,
           49
         ],
         "logical_pivot": [
           178,
-          625
+          645
         ]
       },
       "operation": "resize_exact",
@@ -848,6 +850,50 @@
       "source_size_px": [
         184,
         306
+      ]
+    },
+    {
+      "asset_id": "bottle_crate.assembled",
+      "metadata": {
+        "logical_box": [
+          470,
+          618,
+          117,
+          101
+        ],
+        "runtime_role": "approved_static_first_playable_prefab"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/bottle_crate/bottle_crate_assembled_v001.png",
+      "output_sha256": "393952e3d739885fb9f3f76dda9e571e3ad9107868f7810f50dc68c61b2a58f4",
+      "qa": {
+        "alpha_bounds_px": [
+          1,
+          1,
+          233,
+          200
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 28343,
+        "partial_alpha_pixels": 2464,
+        "size_px": [
+          234,
+          202
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 16461
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-decor/components/bottle_crate_assembled_preview_candidate_v001.png",
+      "source_sha256": "7d7847b24d4ff5094e7c5a458d9fbf3e2136634033d8c83b1207fa13baeb3bff",
+      "source_size_px": [
+        482,
+        412
       ]
     },
     {
@@ -1575,8 +1621,8 @@
   },
   "excluded": [
     {
-      "pattern": "*assembled_preview*",
-      "reason": "review-only composites; runtime uses modular pieces"
+      "pattern": "stockpot/*assembled_preview*",
+      "reason": "stockpot preview is review-only; runtime keeps body and lid separate"
     },
     {
       "pattern": "ui/generated/rank-plaque-kit-chroma-v002.png",
@@ -1604,7 +1650,7 @@
     }
   ],
   "placement_contract": "art/source-assets/home-menu/stall/v004-attachment-kit/placement-and-motion-contract.json",
-  "placement_contract_sha256": "5757542ff949a77bd9dc296a18ff473a4f51d4658370fce1e7e14aeaff93dcd4",
+  "placement_contract_sha256": "d02ebc1aa18732e0d784f6a97ccacb3a83d1cff2d062d8e67cda554e57a1c857",
   "processing": {
     "alpha_resampling": "premultiplied RGBa",
     "buttons": {
@@ -1640,7 +1686,7 @@
   },
   "schema_version": 1,
   "source_gate": "G03_remaining_non_character_stall_attachments",
-  "source_manifest_sha256": "9f0a68f5db34104fa432786e46cb6174a9cca18551fef625f60024d8f2e4b527",
+  "source_manifest_sha256": "b4e5bf93e0f042dfc2bee11085d08992b6cce78a9c465890eb53b11d80dd3bd0",
   "source_pack": "art/source-assets/home-menu/stall/v004-attachment-kit",
   "status": "founder_approved_runtime_derivatives"
 }

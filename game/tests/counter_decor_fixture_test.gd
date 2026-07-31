@@ -7,18 +7,14 @@ const EXPECTED_BOXES := {
 	"FoodBowl": Rect2(157.0, 652.0, 66.0, 66.0),
 	"Plant/FoliagePivot/Foliage": Rect2(486.0, 500.0, 61.0, 154.0),
 	"Plant/Pot": Rect2(481.0, 644.0, 67.0, 75.0),
+	"BottleCrate/Assembled": Rect2(470.0, 618.0, 117.0, 101.0),
 	"CounterCloth": Rect2(517.0, 684.0, 97.0, 120.0),
 }
-const CRATE_GROUP_BOX := Rect2(470.0, 618.0, 117.0, 101.0)
 const EXPECTED_TEXTURE_SUFFIXES := {
 	"FoodBowl": "food_bowl/grape-food-bowl-v001.png",
 	"Plant/FoliagePivot/Foliage": "counter_plant/counter_plant_foliage_v001.png",
 	"Plant/Pot": "counter_plant/counter_plant_pot_v001.png",
-	"BottleCrate/BottleBrown": "bottle_crate/bottle_brown_v001.png",
-	"BottleCrate/BottleGreen": "bottle_crate/bottle_green_v001.png",
-	"BottleCrate/BottleCreamBlue": "bottle_crate/bottle_cream_blue_cap_v001.png",
-	"BottleCrate/EmptyCrate": "bottle_crate/bottle_crate_empty_v001.png",
-	"BottleCrate/FrontWallOverlay": "bottle_crate/bottle_crate_empty_v001.png",
+	"BottleCrate/Assembled": "bottle_crate/bottle_crate_assembled_v001.png",
 	"CounterCloth": "counter_cloth/counter_cloth_red_draped_v001.png",
 }
 const TEST_SEED := 24680
@@ -57,14 +53,17 @@ func _run() -> void:
 		errors
 	)
 	_expect(
+		fixture.get_node("BottleCrate").z_index == 1,
+		"Bottle crate must render in front of the plant pot and behind the cloth.",
+		errors
+	)
+	_expect(
 		fixture.get_node("Plant/FoliagePivot").position == Vector2(2.0, -65.0),
 		"Foliage pivot must remain at the stem base.",
 		errors
 	)
 	_validate_registered_sprites(fixture, errors)
-	_validate_crate_envelope(fixture, errors)
-	_validate_crate_seating(fixture, errors)
-	_validate_modular_texture_sources(fixture, errors)
+	_validate_texture_sources(fixture, errors)
 	_validate_no_forbidden_nodes(fixture, errors)
 
 	var samples: Array[Dictionary] = []
@@ -159,97 +158,7 @@ func _validate_registered_sprites(
 		)
 
 
-func _validate_crate_envelope(
-	fixture: CounterDecorFixture,
-	errors: PackedStringArray
-) -> void:
-	var paths := [
-		"BottleCrate/BottleBrown",
-		"BottleCrate/BottleGreen",
-		"BottleCrate/BottleCreamBlue",
-		"BottleCrate/EmptyCrate",
-		"BottleCrate/FrontWallOverlay",
-	]
-	var union_rect := Rect2()
-	var has_rect := false
-	for path: String in paths:
-		var sprite := fixture.get_node_or_null(path) as Sprite2D
-		_expect(sprite != null, "Missing modular crate sprite %s." % path, errors)
-		if sprite == null:
-			continue
-		_expect(
-			is_equal_approx(sprite.scale.x, sprite.scale.y),
-			"%s must use uniform scaling." % path,
-			errors
-		)
-		var actual := _sprite_rect_in_parent_space(sprite, fixture)
-		actual.position += ROOT_PARENT_POSITION
-		union_rect = actual if not has_rect else union_rect.merge(actual)
-		has_rect = true
-	if has_rect:
-		_expect(
-			_rect_encloses_with_epsilon(CRATE_GROUP_BOX, union_rect, 0.01),
-			"Modular bottle crate escaped its 117x101 registration: %s." % union_rect,
-			errors
-		)
-		_expect(
-			absf(union_rect.position.y - CRATE_GROUP_BOX.position.y) <= 0.01,
-			"Bottle caps must register to the approved crate envelope top.",
-			errors
-		)
-
-
-func _validate_crate_seating(
-	fixture: CounterDecorFixture,
-	errors: PackedStringArray
-) -> void:
-	var empty_crate := fixture.get_node_or_null("BottleCrate/EmptyCrate") as Sprite2D
-	var front_wall := fixture.get_node_or_null(
-		"BottleCrate/FrontWallOverlay"
-	) as Sprite2D
-	_expect(front_wall != null, "Modular crate requires a front-wall overlay.", errors)
-	if empty_crate == null or front_wall == null:
-		return
-	_expect(
-		front_wall.texture == empty_crate.texture,
-		"Front wall must reuse the independent empty-crate texture.",
-		errors
-	)
-	_expect(front_wall.region_enabled, "Front wall must be a cropped Sprite2D region.", errors)
-	_expect(
-		front_wall.region_rect == CounterDecorFixture.CRATE_FRONT_REGION_PIXELS,
-		"Front-wall crop changed.",
-		errors
-	)
-	_expect(empty_crate.z_index < 1, "Full crate must render behind bottles.", errors)
-	_expect(front_wall.z_index > 1, "Front wall must render above bottle bottoms.", errors)
-	var front_rect := _sprite_rect_in_parent_space(front_wall, fixture)
-	front_rect.position += ROOT_PARENT_POSITION
-	for path: String in [
-		"BottleCrate/BottleBrown",
-		"BottleCrate/BottleGreen",
-		"BottleCrate/BottleCreamBlue",
-	]:
-		var bottle := fixture.get_node_or_null(path) as Sprite2D
-		if bottle == null:
-			continue
-		_expect(bottle.z_index == 1, "%s must sit between crate layers." % path, errors)
-		var bottle_rect := _sprite_rect_in_parent_space(bottle, fixture)
-		bottle_rect.position += ROOT_PARENT_POSITION
-		var visible_height := front_rect.position.y - bottle_rect.position.y
-		_expect(
-			visible_height >= bottle_rect.size.y * 0.70,
-			"%s needs meaningful visible body area above the front lip." % path,
-			errors
-		)
-		_expect(
-			bottle_rect.end.y > front_rect.position.y,
-			"%s must overlap the front lip so it reads as seated." % path,
-			errors
-		)
-
-
-func _validate_modular_texture_sources(
+func _validate_texture_sources(
 	fixture: CounterDecorFixture,
 	errors: PackedStringArray
 ) -> void:
@@ -260,12 +169,7 @@ func _validate_modular_texture_sources(
 		var texture_path := sprite.texture.resource_path
 		_expect(
 			texture_path.ends_with(EXPECTED_TEXTURE_SUFFIXES[path]),
-			"%s must use its canonical independent component." % path,
-			errors
-		)
-		_expect(
-			not texture_path.to_lower().contains("assembled"),
-			"Runtime decor must never use an assembled preview.",
+			"%s must use its canonical approved runtime asset." % path,
 			errors
 		)
 
@@ -288,17 +192,6 @@ func _sprite_rect_in_parent_space(sprite: Sprite2D, parent: Node2D) -> Rect2:
 func _rect_is_approx(left: Rect2, right: Rect2, epsilon: float = 0.01) -> bool:
 	return left.position.distance_to(right.position) <= epsilon \
 		and left.size.distance_to(right.size) <= epsilon
-
-
-func _rect_encloses_with_epsilon(
-	outer: Rect2,
-	inner: Rect2,
-	epsilon: float
-) -> bool:
-	return inner.position.x >= outer.position.x - epsilon \
-		and inner.position.y >= outer.position.y - epsilon \
-		and inner.end.x <= outer.end.x + epsilon \
-		and inner.end.y <= outer.end.y + epsilon
 
 
 func _validate_no_forbidden_nodes(node: Node, errors: PackedStringArray) -> void:

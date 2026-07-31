@@ -17,10 +17,10 @@
   "attachments": {
     "stockpot": {
       "body_box": [136, 626, 86, 92],
-      "lid_box": [133, 589, 90, 49],
-      "lid_pivot": [178, 625],
+      "lid_box": [133, 609, 90, 49],
+      "lid_pivot": [178, 645],
       "contact_shadow_box": [132, 709, 94, 18],
-      "steam_emitter": [197, 590],
+      "steam_emitter": [197, 610],
       "z_order": ["contact_shadow", "body", "steam", "lid"],
       "idle_motion": {
         "lid_rotation_degrees": 0.7,
@@ -56,7 +56,7 @@
     },
     "rank_plaque": {
       "box": [246, 372, 228, 48],
-      "star_boxes": [[279, 381, 42, 34], [339, 381, 42, 34], [399, 381, 42, 34]],
+      "star_boxes": [[275, 380.5, 42, 34], [339, 380.5, 42, 34], [404, 380.5, 42, 34]],
       "states": ["empty", "filled", "shine"],
       "fill_transition_ms": 180
     },

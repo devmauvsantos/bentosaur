@@ -11,10 +11,12 @@ open-ended exploration phase. The Godot project now boots the production-shaped
 Home Village assembly: approved rainy street and registered light wake-up,
 uniformly scaled V002 stall, two approved modular hanging lanterns, the
 founder-approved V004 non-character attachment kit with live semantic
-controls, and the approved 1990s-anime transfer preset 3. The V010 integration,
-21-contract suite, normal/reduced Metal captures, personal signing, physical
-install, and launch are complete. Mau's phone-scale visual and interaction
-review remains open. The iOS build remains under the personal Apple team.
+controls, and the approved 1990s-anime transfer preset 3. V011 corrects the
+phone-scale crate perspective/layering, rank-star sockets, and stockpot-lid
+contact found during V010 review. Its 21-contract suite, normal/reduced Metal
+captures, personal signing, physical install, and launch are complete. Mau's
+phone-scale visual and interaction review remains open. The iOS build remains
+under the personal Apple team.
 
 The complete bounded first-playable loop remains preserved at
 `game/scenes/vertical_slice/first_playable.tscn`: classic-stall Home, three
@@ -94,6 +96,15 @@ Forward Mobile / Metal captures are recorded. The personal-team build is
 strictly signed, installed, and running on Mauricio's iPhone 17 Pro Max.
 Phone-scale visual/interaction approval remains pending.
 See [Home Menu V010 complete modular stall kit](checkpoints/2026-07-31-home-menu-v010-complete-stall-kit.md).
+
+V011 replaces only V010's failed prop registrations. It promotes the exact
+approved static bottle-crate composition, preserves the independent pieces for
+future variants, centers the stars on the plaque's measured nine-sliced
+sockets, and seats the still-independent lid at its optical contact point. All
+21 contracts pass and normal/reduced Forward Mobile / Metal captures are
+recorded. The personally signed build is installed and running on Mauricio's
+iPhone 17 Pro Max. Founder phone-scale approval remains pending.
+See [Home Menu V011 registration corrections](checkpoints/2026-07-31-home-menu-v011-registration-corrections.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`
@@ -253,15 +264,16 @@ It also does not authorize using the rejected r006 mesh.
 
 ## Immediate gates
 
-### Home Menu V010 — evidence and device gate
+### Home Menu V011 — corrected device gate
 
-- [x] run and record the final complete 21-contract Godot suite;
+- [x] correct crate perspective/layering, star sockets, and lid contact;
+- [x] run and record the complete 21-contract Godot suite;
 - [x] capture normal and reduced-motion Forward Mobile / Metal evidence;
 - [x] export with personal team `53RJ43876F`, strictly verify signing, install,
   and launch bundle `com.mauvsantos.bentosaur` on the physical iPhone;
 - [ ] verify aspect ratio, safe area, touch states, audio, rain, anime-filter
   coverage, and procedural motion on the phone;
-- [ ] obtain Mau's explicit phone-scale approval before calling V010 closed.
+- [ ] obtain Mau's explicit phone-scale approval before calling V011 closed.
 
 ### 2D P0 — registered layer master
 

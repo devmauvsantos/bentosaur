@@ -91,13 +91,18 @@ func _run() -> void:
 
 
 func _validate_star_slots(fixture: StallRankFixture, errors: PackedStringArray) -> void:
-	var expected := [Vector2(33.0, 9.0), Vector2(93.0, 9.0), Vector2(153.0, 9.0)]
+	var expected := [Vector2(29.0, 8.5), Vector2(93.0, 8.5), Vector2(158.0, 8.5)]
 	for index: int in range(3):
 		var slot := fixture.get_node("ContentRoot/Star%d" % (index + 1)) as Control
 		_expect(slot.position == expected[index], "Star %d registration changed." % index, errors)
 		_expect(slot.size == Vector2(42.0, 34.0), "Star %d logical size changed." % index, errors)
 		_expect(_empty(fixture, index).texture.get_size() == Vector2(84.0, 68.0), "Empty star runtime density changed.", errors)
 		_expect(_filled(fixture, index).texture.get_size() == Vector2(84.0, 68.0), "Filled star runtime density changed.", errors)
+		_expect(
+			_filled(fixture, index).pivot_offset == Vector2(21.0, 17.5),
+			"Filled star %d must scale around its optical center." % index,
+			errors
+		)
 
 
 func _empty(fixture: StallRankFixture, index: int) -> TextureRect:

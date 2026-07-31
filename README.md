@@ -23,6 +23,7 @@ The Godot project now boots the layered Home Village menu:
 - uniformly scaled V002 empty stall;
 - approved anime-transfer shader preset 3;
 - separate looping music and rain ambience;
+- V011-corrected crate perspective, rank sockets, and stockpot lid contact;
 - physical iPhone 17 Pro Max deployment under Mau's personal Apple team.
 
 The bounded first playable remains preserved as a separate scene with:

@@ -3,8 +3,10 @@
 
 The immutable source-art candidates remain untouched. Runtime derivatives are
 transparent RGBA PNGs sized for a 2x version of the 720 x 1280 logical canvas.
-Review-only assembled previews and the rejected green plaque experiment are
-intentionally absent from this builder.
+The founder-approved static bottle-crate composition is promoted as one
+first-playable prefab because the crate has no runtime state or motion. Its
+independent source pieces remain available for future variants. Other review
+previews and the rejected green plaque experiment stay out of runtime.
 """
 
 from __future__ import annotations
@@ -77,7 +79,7 @@ ASSETS: tuple[AssetSpec, ...] = (
         "stockpot/stall_stockpot_lid_v001.png",
         "resize_exact",
         _twice(90, 49),
-        {"logical_box": [133, 589, 90, 49], "logical_pivot": [178, 625]},
+        {"logical_box": [133, 609, 90, 49], "logical_pivot": [178, 645]},
     ),
     AssetSpec(
         "stockpot.contact_shadow",
@@ -186,6 +188,17 @@ ASSETS: tuple[AssetSpec, ...] = (
             round(306 * BOTTLE_KIT_SCALE),
         ),
         {"shared_kit_scale": BOTTLE_KIT_SCALE},
+    ),
+    AssetSpec(
+        "bottle_crate.assembled",
+        "counter-decor/components/bottle_crate_assembled_preview_candidate_v001.png",
+        "bottle_crate/bottle_crate_assembled_v001.png",
+        "resize_exact",
+        _twice(117, 101),
+        {
+            "logical_box": [470, 618, 117, 101],
+            "runtime_role": "approved_static_first_playable_prefab",
+        },
     ),
     AssetSpec(
         "counter_cloth.red_draped",
@@ -655,7 +668,11 @@ def main() -> None:
                 **placement_contract["attachments"]["bottle_crate"],
                 "shared_runtime_source_scale": BOTTLE_KIT_SCALE,
                 "runtime_group_envelope_px": list(_twice(117, 101)),
-                "assembly_registration": "deferred_to_prefab_integration",
+                "assembly_registration": "approved_static_assembled_prefab",
+                "assembled_runtime_asset": (
+                    "bottle_crate/bottle_crate_assembled_v001.png"
+                ),
+                "modular_pieces_role": "reserved_for_future_variants",
             },
             "counter_cloth": placement_contract["attachments"]["counter_cloth"],
             "rank_plaque": placement_contract["attachments"]["rank_plaque"],
@@ -664,8 +681,8 @@ def main() -> None:
         },
         "excluded": [
             {
-                "pattern": "*assembled_preview*",
-                "reason": "review-only composites; runtime uses modular pieces",
+                "pattern": "stockpot/*assembled_preview*",
+                "reason": "stockpot preview is review-only; runtime keeps body and lid separate",
             },
             {
                 "pattern": "ui/generated/rank-plaque-kit-chroma-v002.png",
