@@ -1,6 +1,6 @@
 # Home Menu Stall v001
 
-**Status:** Gate 1 candidate — awaiting visual approval
+**Status:** Gate 1 approved — 2026-07-31
 
 This package reconstructs the empty, completely unlit home-menu stall from:
 

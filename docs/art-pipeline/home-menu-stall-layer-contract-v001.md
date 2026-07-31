@@ -1,6 +1,6 @@
 # Home Menu Stall Layer Contract v001
 
-**Status:** Gate 1 candidate built — awaiting visual approval
+**Status:** Gate 1 approved — 2026-07-31
 
 **Reference:** `art/concepts/2d-chibi/v4/01_menu-refinement/`
 `bentosaur-home-menu-refined-classic-guestbook-v2.png`
