@@ -11,6 +11,8 @@ config_version=5
 [application]
 
 config/name="Bentosaur"
+config/version="0.1.0"
+config/icon="res://assets/branding/ios/bentosaur-ios-debug-icon-1024-v004.png"
 run/main_scene="res://scenes/vertical_slice/first_playable.tscn"
 run/max_fps=0
 config/features=PackedStringArray("4.7", "Mobile")
@@ -37,4 +39,5 @@ renderer/rendering_method="mobile"
 renderer/rendering_method.mobile="mobile"
 rendering_device/driver.ios="metal"
 textures/default_filters/use_nearest_mipmap_filter=false
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.035, 0.047, 0.063, 1)
