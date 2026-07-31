@@ -1,5 +1,8 @@
 extends Node2D
 
+signal rain_enabled_changed(enabled: bool)
+signal stall_roof_impact_requested
+
 const VIEWPORT_SIZE := Vector2(720.0, 1280.0)
 const LIGHT_UV_ASPECT_SCALE := Vector2(1.0, 1280.0 / 720.0)
 const COZY_LIGHT_MOTION := preload("res://scripts/vfx/cozy_light_motion.gd")
@@ -52,15 +55,19 @@ const RAIN_FRONT_TINT := Color(0.72, 0.82, 0.91, 1.0)
 const RAIN_SPLASH_TINT := Color(0.66, 0.78, 0.88, 0.50)
 const LIGHT_CORE_BASE_ALPHA := 0.99
 const LIGHT_HALO_BASE_ALPHA := 0.985
+const LIGHT_SPILL_PULSE_COUPLING := 0.65
+const LIGHT_HALO_FLICK_COUPLING := 0.85
+const LIGHT_SPILL_FLICK_COUPLING := 0.50
 const MUSIC_VOLUME_DB := -21.0
 const RAIN_AUDIO_VOLUME_DB := -22.0
 const RAIN_AUDIO_SILENT_DB := -60.0
 const RAIN_AUDIO_FADE_SECONDS := 0.24
 const ROOF_SPLASH_TINT := Color(0.66, 0.79, 0.90, 1.0)
 const ROOF_SPLASH_ALPHA_RANGE := Vector2(0.42, 0.54)
-const ROOF_SPLASH_INTERVAL := Vector2(0.62, 1.45)
-const ROOF_SPLASH_INTERVAL_REDUCED := Vector2(1.45, 3.20)
+const ROOF_SPLASH_INTERVAL := Vector2(0.26, 0.62)
+const ROOF_SPLASH_INTERVAL_REDUCED := Vector2(0.90, 1.80)
 const ROOF_SPLASH_FRAME_SECONDS := 0.036
+const STALL_ROOF_EVENT_CHANCE := 0.34
 const LIGHT_FLICK_CENTERS: Array[Vector2] = [
 	Vector2(93.0, 283.0),
 	Vector2(176.0, 256.0),
@@ -69,8 +76,6 @@ const LIGHT_FLICK_CENTERS: Array[Vector2] = [
 	Vector2(421.0, 306.0),
 	Vector2(306.0, 322.0),
 	Vector2(183.0, 383.0),
-	Vector2(281.0, 382.0),
-	Vector2(424.0, 382.0),
 	Vector2(650.0, 382.0),
 ]
 const ROOF_SPLASH_ANCHORS: Array[Vector3] = [
@@ -126,6 +131,7 @@ var _lights_wake_tween: Tween
 var _roof_drop_rng := RandomNumberGenerator.new()
 var _light_motion: RefCounted = COZY_LIGHT_MOTION.new()
 var _last_roof_anchor_index := -1
+var _stall_roof_receiver_registered := false
 
 
 func _ready() -> void:
@@ -158,8 +164,7 @@ func _process(delta: float) -> void:
 	if not _lights_awake:
 		return
 	_light_motion.advance(delta)
-	light_cores.modulate.a = LIGHT_CORE_BASE_ALPHA * _light_motion.core_level
-	light_halos.modulate.a = LIGHT_HALO_BASE_ALPHA * _light_motion.halo_level
+	_apply_global_light_breathing()
 	_apply_local_light_flick()
 
 
@@ -185,6 +190,15 @@ func set_rain_enabled(enabled: bool) -> void:
 	rain_splashes.visible = enabled
 	_set_roof_drops_enabled(enabled)
 	_set_rain_audio_enabled(enabled)
+	rain_enabled_changed.emit(enabled)
+
+
+func is_rain_enabled() -> bool:
+	return _rain_enabled
+
+
+func set_stall_roof_receiver_registered(registered: bool) -> void:
+	_stall_roof_receiver_registered = registered
 
 
 func set_lights_enabled(enabled: bool) -> void:
@@ -322,6 +336,7 @@ func _build_environment() -> void:
 		LIGHT_CORES_TEXTURE,
 		true
 	)
+	_set_local_light_motion_material(indirect_warm_spill, 0.145)
 	_set_local_light_motion_material(light_halos, 0.105)
 	_set_local_light_motion_material(light_cores, 0.060)
 	warm_reflections = _make_fullscreen_texture(
@@ -432,7 +447,13 @@ func _schedule_next_roof_drop() -> void:
 func _on_roof_drop_timeout() -> void:
 	if not _rain_enabled:
 		return
-	_spawn_roof_splash()
+	if (
+		_stall_roof_receiver_registered
+		and _roof_drop_rng.randf() < STALL_ROOF_EVENT_CHANCE
+	):
+		stall_roof_impact_requested.emit()
+	else:
+		_spawn_roof_splash()
 	_schedule_next_roof_drop()
 
 
@@ -472,7 +493,7 @@ func _spawn_roof_splash() -> void:
 	splash.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	roof_splash_layer.add_child(splash)
 
-	var splash_tween := create_tween()
+	var splash_tween := splash.create_tween()
 	for frame_index: int in range(8):
 		splash_tween.tween_callback(splash.set_frame.bind(frame_index))
 		splash_tween.tween_interval(ROOF_SPLASH_FRAME_SECONDS)
@@ -519,8 +540,34 @@ func _set_local_light_motion_material(layer: TextureRect, radius: float) -> void
 	material.shader = REGISTERED_LIGHT_MOTION_SHADER
 	material.set_shader_parameter("flick_radius", radius)
 	material.set_shader_parameter("flick_level", 1.0)
+	material.set_shader_parameter("global_intensity", 1.0)
 	material.set_shader_parameter("uv_aspect_scale", LIGHT_UV_ASPECT_SCALE)
 	layer.material = material
+
+
+func _apply_global_light_breathing() -> void:
+	var core_material := light_cores.material as ShaderMaterial
+	var halo_material := light_halos.material as ShaderMaterial
+	var spill_material := indirect_warm_spill.material as ShaderMaterial
+	if core_material != null:
+		core_material.set_shader_parameter(
+			"global_intensity",
+			_light_motion.core_level
+		)
+	if halo_material != null:
+		halo_material.set_shader_parameter(
+			"global_intensity",
+			_light_motion.halo_level
+		)
+	if spill_material != null:
+		spill_material.set_shader_parameter(
+			"global_intensity",
+			lerpf(
+				1.0,
+				_light_motion.core_level,
+				LIGHT_SPILL_PULSE_COUPLING
+			)
+		)
 
 
 func _apply_local_light_flick() -> void:
@@ -530,6 +577,7 @@ func _apply_local_light_flick() -> void:
 	)
 	var core_material := light_cores.material as ShaderMaterial
 	var halo_material := light_halos.material as ShaderMaterial
+	var spill_material := indirect_warm_spill.material as ShaderMaterial
 	if core_material != null:
 		core_material.set_shader_parameter("flick_center", center)
 		core_material.set_shader_parameter(
@@ -540,7 +588,21 @@ func _apply_local_light_flick() -> void:
 		halo_material.set_shader_parameter("flick_center", center)
 		halo_material.set_shader_parameter(
 			"flick_level",
-			lerpf(1.0, _light_motion.flick_level, 0.72)
+			lerpf(
+				1.0,
+				_light_motion.flick_level,
+				LIGHT_HALO_FLICK_COUPLING
+			)
+		)
+	if spill_material != null:
+		spill_material.set_shader_parameter("flick_center", center)
+		spill_material.set_shader_parameter(
+			"flick_level",
+			lerpf(
+				1.0,
+				_light_motion.flick_level,
+				LIGHT_SPILL_FLICK_COUPLING
+			)
 		)
 
 

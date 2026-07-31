@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/labs/home_village_rain_lab.tscn" id="1_home"]
 [ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/stall_structure_unlit_720x1280.png" id="2_stall"]
 [ext_resource type="Script" path="res://scripts/layout/aspect_contain_stage.gd" id="3_contain"]
 [ext_resource type="Material" path="res://assets/vfx/lighting/stall_depth_falloff_material.tres" id="4_depth_material"]
+[ext_resource type="Script" path="res://scripts/vfx/stall_roof_rain.gd" id="5_stall_roof_rain"]
 
 [node name="HomeMenuStallLab" type="Node2D"]
 
@@ -22,3 +23,7 @@ offset_bottom = 1280.0
 mouse_filter = 2
 texture = ExtResource("2_stall")
 expand_mode = 1
+
+[node name="StallRoofSplashes" type="Node2D" parent="StallStage"]
+z_index = 16
+script = ExtResource("5_stall_roof_rain")

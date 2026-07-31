@@ -40,12 +40,24 @@ white streaks over the scene. Music and rain ambience both play through
 separate buses at the device-tuned `-21 dB` music and `-22 dB` rain gains; iOS
 Silent Mode is respected.
 
-Atmosphere polish now adds irregular sub-one-percent core/halo breathing, a
-single-fixture flick every `60–105 s`, and a measured barely-there lower-stall
-depth falloff. Broad warm spill and pavement reflections remain stable. A
-controlled 90-second A/B proves anime preset 3 remains active; any perceived
-weakening on Retina is not a timed shader fade. See
+The calm V004 atmosphere baseline adds irregular sub-one-percent core/halo
+breathing, a single-fixture flick every `60–105 s`, and a measured barely-there
+lower-stall depth falloff. Broad warm spill and pavement reflections remain
+stable. A controlled 90-second A/B proves anime preset 3 remains active; any
+perceived weakening on Retina is not a timed shader fade. See
 [Home Menu V004 atmosphere checkpoint](checkpoints/2026-07-31-home-menu-v004-atmosphere-polish.md).
+
+V005's stronger randomized alpha motion was still completely imperceptible on
+the physical iPhone and is rejected. Its denser shared roof-impact scheduler
+and sixteen stall-local anchors remain active for device review. See
+[Home Menu V005 failed device test](checkpoints/2026-07-31-home-menu-v005-device-motion-test.md).
+
+The active iPhone build is now V006: one intentionally excessive, deterministic
+eight-second diagnostic that explicitly scales core, halo, and attenuated
+indirect-spill RGB, then double-flicks the brightest left lantern. It is
+installed under the personal Apple team and exists only to prove visibility
+before final irregular production motion is authored. See
+[Home Menu V006 guaranteed-light diagnostic](checkpoints/2026-07-31-home-menu-v006-guaranteed-light-diagnostic.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`

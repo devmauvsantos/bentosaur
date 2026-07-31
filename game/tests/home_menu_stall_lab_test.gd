@@ -7,6 +7,9 @@ const STALL_DEPTH_SHADER := preload(
 const STALL_DEPTH_MATERIAL_PATH := (
 	"res://assets/vfx/lighting/stall_depth_falloff_material.tres"
 )
+const STALL_ROOF_RAIN_SCRIPT := preload(
+	"res://scripts/vfx/stall_roof_rain.gd"
+)
 const COUNTER_OCCLUDER_PATH := (
 	"res://assets/environments/home_village/v001/stall/"
 	+ "stall_counter_occluder_720x1280.png"
@@ -14,6 +17,24 @@ const COUNTER_OCCLUDER_PATH := (
 const CANVAS_SIZE := Vector2(720.0, 1280.0)
 const APPROVED_VISIBLE_BOUNDS := Rect2i(77, 197, 566, 874)
 const SOURCE_VISIBLE_ASPECT := 862.0 / 1333.0
+const STALL_ROOF_ANCHORS: Array[Vector3] = [
+	Vector3(242.0, 211.0, 0.39),
+	Vector3(296.0, 211.0, 0.39),
+	Vector3(424.0, 211.0, 0.39),
+	Vector3(478.0, 211.0, 0.39),
+	Vector3(213.0, 249.0, 0.43),
+	Vector3(253.0, 251.0, 0.43),
+	Vector3(467.0, 251.0, 0.43),
+	Vector3(507.0, 249.0, 0.43),
+	Vector3(178.0, 269.0, 0.46),
+	Vector3(222.0, 269.0, 0.46),
+	Vector3(498.0, 269.0, 0.46),
+	Vector3(542.0, 269.0, 0.46),
+	Vector3(148.0, 327.0, 0.49),
+	Vector3(572.0, 327.0, 0.49),
+	Vector3(130.0, 359.0, 0.52),
+	Vector3(590.0, 359.0, 0.52),
+]
 
 
 func _initialize() -> void:
@@ -36,9 +57,34 @@ func _run() -> void:
 	var village := lab.get_node_or_null("HomeVillageRainLab") as Node2D
 	var stall_stage := lab.get_node_or_null("StallStage") as AspectContainStage
 	var stall := lab.get_node_or_null("StallStage/StallStructure") as TextureRect
+	var stall_roof_splashes := (
+		lab.get_node_or_null("StallStage/StallRoofSplashes") as Node2D
+	)
 	_expect(village != null, "Approved village lab must remain instanced.", errors)
 	_expect(stall_stage != null, "Missing responsive stall stage.", errors)
 	_expect(stall != null, "Missing registered empty stall.", errors)
+	_expect(
+		stall_roof_splashes != null,
+		"Stall-roof rain receiver must be a Node2D.",
+		errors
+	)
+
+	if stall_roof_splashes != null:
+		_expect(
+			stall_roof_splashes.get_script() == STALL_ROOF_RAIN_SCRIPT,
+			"Stall-roof receiver must use the registered rain script.",
+			errors
+		)
+		_expect(
+			stall_roof_splashes.get_parent() == stall_stage,
+			"Stall-roof rain must inherit the responsive StallStage.",
+			errors
+		)
+		_expect(
+			stall_roof_splashes.z_index == 16,
+			"Stall-roof rain must render immediately above the shell at z 16.",
+			errors
+		)
 
 	if stall != null:
 		_expect(stall.texture != null, "Stall texture must load.", errors)
@@ -123,6 +169,32 @@ func _run() -> void:
 		if weather != null:
 			_expect(weather.z_index > 15, "Existing weather must render above stall.", errors)
 
+	if village != null and stall_roof_splashes != null:
+		var roof_drop_timer := (
+			village.get_node_or_null("Weather/RoofDropTimer") as Timer
+		)
+		_expect(roof_drop_timer != null, "Missing shared roof-impact timer.", errors)
+		if roof_drop_timer != null:
+			roof_drop_timer.stop()
+
+		village.emit_signal("stall_roof_impact_requested")
+		var splash_sprites := _get_splash_sprites(stall_roof_splashes)
+		_expect(
+			splash_sprites.size() == 1,
+			"One shared-scheduler request must create exactly one stall-roof splash.",
+			errors
+		)
+		if splash_sprites.size() == 1:
+			_validate_stall_roof_splash(splash_sprites[0], errors)
+
+		village.call("set_rain_enabled", false)
+		await process_frame
+		_expect(
+			_get_splash_sprites(stall_roof_splashes).is_empty(),
+			"Disabling rain must clear every active stall-roof splash.",
+			errors
+		)
+
 	var counter_texture := load(COUNTER_OCCLUDER_PATH) as Texture2D
 	_expect(counter_texture != null, "Future-owner counter occluder must load.", errors)
 	if counter_texture != null:
@@ -136,6 +208,65 @@ func _run() -> void:
 	await process_frame
 	await create_timer(0.10).timeout
 	_finish(errors)
+
+
+func _get_splash_sprites(parent: Node) -> Array[Sprite2D]:
+	var sprites: Array[Sprite2D] = []
+	for child: Node in parent.get_children():
+		if child is Sprite2D:
+			sprites.append(child as Sprite2D)
+	return sprites
+
+
+func _validate_stall_roof_splash(
+	splash: Sprite2D,
+	errors: PackedStringArray
+) -> void:
+	_expect(splash.hframes == 8, "Stall-roof splash must use all 8 atlas frames.", errors)
+	_expect(splash.texture != null, "Stall-roof splash atlas must load.", errors)
+	_expect(
+		is_equal_approx(splash.scale.x, splash.scale.y),
+		"Stall-roof splash scale must remain uniform.",
+		errors
+	)
+	_expect(
+		absf(splash.rotation) <= 0.0501,
+		"Stall-roof splash rotation must stay restrained.",
+		errors
+	)
+	_expect(
+		splash.modulate.a >= 0.48 and splash.modulate.a <= 0.60,
+		"Stall-roof splash alpha must remain within the approved subtle range.",
+		errors
+	)
+	_expect(
+		Color(splash.modulate.r, splash.modulate.g, splash.modulate.b).is_equal_approx(
+			Color(0.66, 0.79, 0.90)
+		),
+		"Stall-roof splash must keep the approved cool rain tint.",
+		errors
+	)
+
+	var matching_anchor := Vector3.ZERO
+	var found_anchor := false
+	for anchor: Vector3 in STALL_ROOF_ANCHORS:
+		var offset := splash.position - Vector2(anchor.x, anchor.y)
+		if absf(offset.x) <= 4.001 and absf(offset.y) <= 1.501:
+			matching_anchor = anchor
+			found_anchor = true
+			break
+	_expect(
+		found_anchor,
+		"Stall-roof splash must remain within approved anchor jitter.",
+		errors
+	)
+	if found_anchor:
+		_expect(
+			splash.scale.x >= matching_anchor.z * 0.90
+				and splash.scale.x <= matching_anchor.z * 1.10,
+			"Stall-roof splash scale must follow its perspective anchor.",
+			errors
+		)
 
 
 func _expect(condition: bool, message: String, errors: PackedStringArray) -> void:

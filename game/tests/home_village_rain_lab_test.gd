@@ -79,7 +79,7 @@ func _run() -> void:
 			errors
 		)
 
-	for layer_name: String in ["IndirectWarmSpill", "WarmReflections"]:
+	for layer_name: String in ["WarmReflections"]:
 		var layer := lab.get_node_or_null("Lighting/%s" % layer_name) as TextureRect
 		_expect(layer != null, "Missing lighting layer %s." % layer_name, errors)
 		if layer != null:
@@ -91,7 +91,11 @@ func _run() -> void:
 				errors
 			)
 
-	for layer_name: String in ["LightHalos", "LightCores"]:
+	for layer_name: String in [
+		"IndirectWarmSpill",
+		"LightHalos",
+		"LightCores",
+	]:
 		var layer := lab.get_node_or_null("Lighting/%s" % layer_name) as TextureRect
 		_expect(layer != null, "Missing lighting layer %s." % layer_name, errors)
 		if layer != null:
@@ -113,16 +117,81 @@ func _run() -> void:
 				)
 
 	var spill := lab.get_node_or_null("Lighting/IndirectWarmSpill") as TextureRect
+	var halos := lab.get_node_or_null("Lighting/LightHalos") as TextureRect
+	var cores := lab.get_node_or_null("Lighting/LightCores") as TextureRect
 	var reflections := lab.get_node_or_null("Lighting/WarmReflections") as TextureRect
-	if spill != null and reflections != null:
+	if spill != null and halos != null and cores != null and reflections != null:
 		lab.set_lights_enabled(true)
-		var stable_spill_alpha := spill.modulate.a
 		var stable_reflection_alpha := reflections.modulate.a
-		lab.call("_process", 12.0)
+		lab.call("_process", 2.5)
+		var spill_material := spill.material as ShaderMaterial
+		var halo_material := halos.material as ShaderMaterial
+		var core_material := cores.material as ShaderMaterial
 		_expect(
-			is_equal_approx(spill.modulate.a, stable_spill_alpha)
-				and is_equal_approx(reflections.modulate.a, stable_reflection_alpha),
-			"Broad spill and pavement reflections must remain stable after wake.",
+			spill_material != null
+				and halo_material != null
+				and core_material != null,
+			"Every dynamic emission layer must expose explicit RGB intensity.",
+			errors
+		)
+		if (
+			spill_material != null
+			and halo_material != null
+			and core_material != null
+		):
+			_expect(
+				is_equal_approx(
+					float(core_material.get_shader_parameter("global_intensity")),
+					0.55
+				)
+					and is_equal_approx(
+						float(halo_material.get_shader_parameter("global_intensity")),
+						0.6175
+					)
+					and is_equal_approx(
+						float(spill_material.get_shader_parameter("global_intensity")),
+						0.7075
+					),
+				"The two-second hold must reach the guaranteed RGB minima.",
+				errors
+			)
+			lab.call("_process", 1.9)
+			_expect(
+				is_equal_approx(
+					float(core_material.get_shader_parameter("global_intensity")),
+					1.0
+				)
+					and is_equal_approx(
+						float(halo_material.get_shader_parameter("global_intensity")),
+						1.0
+					)
+					and is_equal_approx(
+						float(spill_material.get_shader_parameter("global_intensity")),
+						1.0
+					),
+				"The diagnostic breath must recover every emission layer fully.",
+				errors
+			)
+			lab.call("_process", 1.0)
+			_expect(
+				is_equal_approx(
+					float(core_material.get_shader_parameter("flick_level")),
+					0.12
+				)
+					and is_equal_approx(
+						float(halo_material.get_shader_parameter("flick_level")),
+						0.252
+					)
+					and is_equal_approx(
+						float(spill_material.get_shader_parameter("flick_level")),
+						0.56
+					),
+				"The 5.4-second frame must expose the fixed RGB double-flick dip.",
+				errors
+			)
+		_expect(
+			is_equal_approx(reflections.modulate.a, stable_reflection_alpha),
+			"Wet-pavement reflections must remain stable during diagnostics.",
 			errors
 		)
 
@@ -140,6 +209,9 @@ func _run() -> void:
 		"Weather/RoofDropTimer"
 	) as Timer
 	var reduced_weather := OS.get_cmdline_user_args().has("--reduced-weather")
+	var expected_roof_interval := (
+		Vector2(0.90, 1.80) if reduced_weather else Vector2(0.26, 0.62)
+	)
 	var expected_back := 48 if reduced_weather else 96
 	var expected_front := 24 if reduced_weather else 52
 	var expected_impact := 28 if reduced_weather else 54
@@ -194,8 +266,22 @@ func _run() -> void:
 	_expect(
 		roof_drop_timer != null
 			and roof_drop_timer.one_shot
-			and not roof_drop_timer.is_stopped(),
-		"Roof drops must use one sparse randomized one-shot timer.",
+			and not roof_drop_timer.is_stopped()
+			and roof_drop_timer.wait_time >= expected_roof_interval.x
+			and roof_drop_timer.wait_time <= expected_roof_interval.y,
+		"Roof drops must use the denser device-test one-shot timer.",
+		errors
+	)
+	_expect(
+		lab.has_signal("stall_roof_impact_requested")
+			and lab.has_signal("rain_enabled_changed"),
+		"The shared roof scheduler must expose stall routing and rain state.",
+		errors
+	)
+	lab.call("set_stall_roof_receiver_registered", true)
+	_expect(
+		bool(lab.get("_stall_roof_receiver_registered")),
+		"A responsive stall-roof receiver must register with the shared scheduler.",
 		errors
 	)
 	if roof_splash_layer != null:

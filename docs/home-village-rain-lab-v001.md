@@ -79,29 +79,40 @@ Particle ceilings at full density:
 
 ## Living-light motion
 
-- Light cores breathe between randomized targets over irregular `3.8–10.5 s`
-  segments; the motion is smoothly interpolated and never loops as a visible
-  sine wave.
-- Halos inherit only 55% of the cores' sub-one-percent breathing amplitude.
-  Indirect spill and wet-pavement reflections remain completely stable after
-  their wake fade, so the whole village never appears to dim in unison.
-- A brief dip-and-rebound flick may occur every `60–105 s`. It is spatially
-  masked to one randomly selected registered window or lantern; it never
-  brownouts the aggregate light map. The scheduler guarantees no more than one
-  flick per minute and produces the same event timeline at 30, 60, or 120 Hz.
-- Deterministic captures use a fixed light-motion seed; normal play randomizes
-  the sequence at launch.
+The V004 calm baseline uses `0.992–1.006` core targets over `3.8–10.5 s`, 55%
+halo inheritance, and one local flick every `60–105 s`.
+
+The V005 physical-device test widened the core range and accelerated the local
+flick, but its alpha-only core/halo output was still imperceptible on the
+reference iPhone. That lighting profile is rejected.
+
+The active V006 diagnostic repeats one fixed eight-second RGB-emission
+trajectory. Cores hold at 55%, halos at 61.75%, and the indirect spill at
+70.75% during the deliberately obvious minimum. At `5.3 s`, the brightest
+left lantern performs a fixed double-flick. This is a compositor proof, not
+final production motion; see the V006 checkpoint for exact timings.
+
+In both profiles:
+
+- smooth interpolation avoids a visible sine loop;
+- wet-pavement reflections remain completely stable;
+- a spatial mask limits every flick to one registered window or lantern;
+- the diagnostic produces the same timeline at 30, 60, and 120 Hz.
 
 ## Roof-impact detail
 
 - Tiny roof splashes reuse the authored eight-frame rain-impact atlas.
 - Twenty-six registered anchor points cover only the approved tile planes
   identified in the visual review.
-- One randomized one-shot timer emits a single impact every 0.62–1.45 seconds;
-  reduced weather slows this to 1.45–3.20 seconds.
+- One randomized one-shot timer emits an active V005 test impact every
+  `0.26–0.62 s`; reduced weather slows this to `0.90–1.80 s`.
 - Immediate anchor repetition is prevented.
 - Roof splashes use only 26–42% scale and 42–54% opacity, remaining smaller and
   dimmer than pavement splashes.
+- When the approved stall is present, the same scheduler routes 34% of events
+  to sixteen stall-local roof anchors. That receiver inherits `StallStage`,
+  renders at z-index 16, and uses 48–60% opacity so it stays registered on
+  ultratall phones without merging coordinate systems.
 - Disabling rain clears active roof impacts and stops their timer.
 
 The source tracks, checksums, attribution, and license references are recorded
