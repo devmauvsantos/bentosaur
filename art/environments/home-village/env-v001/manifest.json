@@ -1,0 +1,27 @@
+{
+  "asset_id": "env.home_village.v001",
+  "name": "Bentosaur Home Village",
+  "status": "approved_unlit_master",
+  "art_direction": "flat-cel 2D chibi storybook",
+  "canvas": {
+    "width": 941,
+    "height": 1672,
+    "orientation": "portrait"
+  },
+  "approved": {
+    "background_unlit": "source/bentosaur-home-village-background-unlit-approved-v001.png"
+  },
+  "provenance": {
+    "generator": "OpenAI built-in image generation",
+    "prompt": "prompts/background-unlit-v001.md",
+    "approved_on": "2026-07-30"
+  },
+  "pending": [
+    "registered lights-on composite",
+    "transparent light-core layers",
+    "transparent glow layers",
+    "transparent warm-reflection layers",
+    "Godot runtime derivatives"
+  ]
+}
+
