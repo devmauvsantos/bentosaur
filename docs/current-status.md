@@ -7,11 +7,17 @@ Snapshot date: 2026-07-31
 ## Executive state
 
 Mau selected flat-cel 2D as Bentosaur's leading visual direction and ended the
-open-ended exploration phase. A first playable now boots in Godot and executes
-the complete bounded loop: classic-stall Home, three ordered bento customers,
-correctable service, coins, first-try stars, local persistence, shift summary,
-and replay. The immediate gate is Mau playing that loop and deciding whether
-its core interaction is clear enough to keep developing.
+open-ended exploration phase. The Godot project now boots the production-shaped
+Home Village assembly: approved rainy street and registered light wake-up,
+uniformly scaled V002 empty stall, and the approved 1990s-anime transfer preset
+3. The same debug build is running on the physical iPhone 17 Pro Max under the
+personal Apple team.
+
+The complete bounded first-playable loop remains preserved at
+`game/scenes/vertical_slice/first_playable.tscn`: classic-stall Home, three
+ordered bento customers, correctable service, coins, first-try stars, local
+persistence, shift summary, and replay. It is no longer the boot scene while
+the real layered home menu is assembled.
 
 The current runtime uses the approved flattened concept screens as temporary
 backdrops. They preserve the intended atmosphere while the real gameplay model
@@ -30,7 +36,8 @@ animation-ready in either route.
 The Home Village lighting and rain proof is now a founder-approved visual
 checkpoint. Rain remains active from frame one, registered lights wake through
 it, and the weather uses a softer normal-alpha treatment instead of bright
-white streaks over the scene.
+white streaks over the scene. Music and rain ambience both play through
+separate buses at the device-tuned `-19 dB` gain; iOS Silent Mode is respected.
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`
@@ -69,9 +76,13 @@ The active implementation contract is:
 
 `docs/first-playable-v1.md`
 
-The current Godot main scene is:
+The preserved gameplay proof is:
 
 `game/scenes/vertical_slice/first_playable.tscn`
+
+The current Godot boot scene is:
+
+`game/scenes/home/home_menu.tscn`
 
 Mau explicitly requested the matching hub, book, expression, and page-turn
 exploration, superseding the earlier screen-generation restriction. The pack

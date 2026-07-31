@@ -47,8 +47,8 @@ func _run() -> void:
 		)
 		_expect(music.bus == "Music", "Music must use the Music bus.", errors)
 		_expect(
-			is_equal_approx(music.volume_db, -16.0),
-			"Music must use the gently lifted -16 dB balance.",
+			is_equal_approx(music.volume_db, -19.0),
+			"Music must use the device-tuned -19 dB balance.",
 			errors
 		)
 		_expect(
@@ -66,8 +66,8 @@ func _run() -> void:
 		)
 		_expect(rain_audio.bus == "Weather", "Rain ambience must use the Weather bus.", errors)
 		_expect(
-			is_equal_approx(rain_audio.volume_db, -14.0),
-			"Rain ambience must remain a quiet bed at -14 dB.",
+			is_equal_approx(rain_audio.volume_db, -19.0),
+			"Rain ambience must remain a quiet bed at -19 dB.",
 			errors
 		)
 		_expect(

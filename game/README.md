@@ -2,11 +2,23 @@
 
 Engine contract: Godot 4.7.1 Standard, typed GDScript, Mobile renderer.
 
-The current main scene is the flat-cel first playable:
+The current main scene is the layered Home Village menu:
+
+`res://scenes/home/home_menu.tscn`
+
+It currently proves:
+
+- the registered rainy street and animated light wake-up;
+- the uniformly scaled V002 empty stall;
+- the approved anime-transfer shader preset 3;
+- separate looping Music and Weather audio buses;
+- aspect-cover presentation on ultratall iPhones.
+
+The complete bounded gameplay loop remains available at:
 
 `res://scenes/vertical_slice/first_playable.tscn`
 
-It implements the complete bounded loop:
+That preserved slice implements:
 
 - classic-stall Home;
 - one three-customer shift;

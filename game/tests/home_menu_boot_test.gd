@@ -38,6 +38,36 @@ func _initialize() -> void:
 			"The registered world must use one native-resolution cover canvas.",
 			errors
 		)
+		var post_process := home_menu.get_node_or_null(
+			"Anime90sPostProcess"
+		) as CanvasLayer
+		var anime_filter := home_menu.get_node_or_null(
+			"Anime90sPostProcess/Filter"
+		) as ColorRect
+		_expect(
+			post_process != null and post_process.layer == 100,
+			"The approved anime transfer must render above the complete world.",
+			errors
+		)
+		_expect(anime_filter != null, "Missing approved preset 3 filter.", errors)
+		if post_process != null:
+			_expect(
+				post_process.get_meta("preset_number", -1) == 3,
+				"The home menu must identify the approved preset as number 3.",
+				errors
+			)
+		if anime_filter != null:
+			var shader_material := anime_filter.material as ShaderMaterial
+			_expect(shader_material != null, "Preset 3 must use its shader material.", errors)
+			if shader_material != null:
+				_expect(
+					is_equal_approx(
+						float(shader_material.get_shader_parameter("noise_intensity")),
+						0.085
+					),
+					"Preset 3 transfer grain must remain enabled.",
+					errors
+				)
 		home_menu.free()
 
 	_finish(errors)

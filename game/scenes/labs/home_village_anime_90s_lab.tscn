@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/labs/home_menu_stall_lab.tscn" id="1_home"]
+[ext_resource type="Shader" path="res://assets/vfx/post_process/anime_90s_transfer.gdshader" id="2_shader"]
+[ext_resource type="Script" path="res://scripts/labs/home_village_anime_90s_lab.gd" id="3_script"]
+
+[sub_resource type="Curve" id="Curve_anime"]
+_data = [Vector2(0, 0.02378583), 0.0, 0.0, 0, 0, Vector2(0.46564358, 0.33138227), 0.0, 0.0, 0, 0, Vector2(0.7691792, 0.7199252), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_anime"]
+curve = SubResource("Curve_anime")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_anime"]
+shader = ExtResource("2_shader")
+shader_parameter/curvature = 0.0
+shader_parameter/vignette_intensity = 0.0
+shader_parameter/scanline_opacity = 0.0
+shader_parameter/scanline_count = 0.0
+shader_parameter/noise_intensity = 0.085
+shader_parameter/aberration = 0.0013
+shader_parameter/brightness = 1.025
+shader_parameter/saturation = 0.92
+shader_parameter/glow_bleed = 0.28
+shader_parameter/temperature = 0.0
+shader_parameter/tint = 0.0
+shader_parameter/sharpen_amount = 0.0
+shader_parameter/highlights_sharpen = 0.0
+shader_parameter/luma_curve = SubResource("CurveTexture_anime")
+shader_parameter/curve_strength = 0.16
+
+[node name="HomeVillageAnime90sLab" type="Node2D"]
+script = ExtResource("3_script")
+
+[node name="HomeMenuStallLab" parent="." instance=ExtResource("1_home")]
+
+[node name="PostProcessing" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Anime90sFilter" type="ColorRect" parent="PostProcessing"]
+material = SubResource("ShaderMaterial_anime")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Shader" path="res://assets/vfx/post_process/anime_90s_transfer.gdshader" id="1_shader"]
+
+[sub_resource type="Curve" id="Curve_anime"]
+_data = [Vector2(0, 0.02378583), 0.0, 0.0, 0, 0, Vector2(0.46564358, 0.33138227), 0.0, 0.0, 0, 0, Vector2(0.7691792, 0.7199252), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_anime"]
+curve = SubResource("Curve_anime")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_anime"]
+resource_local_to_scene = true
+shader = ExtResource("1_shader")
+shader_parameter/curvature = 0.0
+shader_parameter/vignette_intensity = 0.0
+shader_parameter/scanline_opacity = 0.0
+shader_parameter/scanline_count = 0.0
+shader_parameter/noise_intensity = 0.085
+shader_parameter/aberration = 0.0013
+shader_parameter/brightness = 1.025
+shader_parameter/saturation = 0.92
+shader_parameter/glow_bleed = 0.28
+shader_parameter/temperature = 0.0
+shader_parameter/tint = 0.0
+shader_parameter/sharpen_amount = 0.0
+shader_parameter/highlights_sharpen = 0.0
+shader_parameter/luma_curve = SubResource("CurveTexture_anime")
+shader_parameter/curve_strength = 0.16
+
+[node name="Anime90sPostProcess" type="CanvasLayer"]
+layer = 100
+metadata/preset_name = "Heavy transfer"
+metadata/preset_number = 3
+
+[node name="Filter" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_anime")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

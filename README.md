@@ -17,7 +17,15 @@ fallback; it is not the active implementation path.
 
 ## Current build status
 
-The Godot project now boots a bounded first playable:
+The Godot project now boots the layered Home Village menu:
+
+- registered rainy street and animated warm lighting;
+- uniformly scaled V002 empty stall;
+- approved anime-transfer shader preset 3;
+- separate looping music and rain ambience;
+- physical iPhone 17 Pro Max deployment under Mau's personal Apple team.
+
+The bounded first playable remains preserved as a separate scene with:
 
 - classic text-stall Home;
 - three sequential bento orders;

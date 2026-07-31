@@ -6,6 +6,8 @@
   atmosphere checkpoint: rain from frame one, registered light wake-up, and a
   restrained normal-alpha weather composite.
 - `home-village-rain-v001/` preserves the brighter pre-restraint rain pass.
+- `home-menu-preset3-stall-v002/` proves the production preset-3 post-process,
+  corrected stall proportions, and physical-iPhone deployment checkpoint.
 
 ## Preserved facial lab
 

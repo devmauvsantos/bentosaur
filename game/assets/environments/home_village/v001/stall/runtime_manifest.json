@@ -1,6 +1,6 @@
 {
-  "asset_id": "env.home_village.stall.runtime.v001",
-  "status": "gate_1_approved",
+  "asset_id": "env.home_village.stall.runtime.v002",
+  "status": "aspect_repair_approved",
   "canvas": {
     "width": 720,
     "height": 1280
@@ -15,26 +15,26 @@
       1
     ],
     "visible_bounds": [
-      114,
+      77,
       197,
-      492,
-      875
+      566,
+      874
     ]
   },
   "source": {
-    "path": "art/source-assets/home-menu/stall/v001/generated/stall_structure_unlit_registered_1440x2560_v001.png",
-    "sha256": "12e57633afb69437675cad1763944be0ab9ea8b39f959c4ff87fe9b650d9218c"
+    "path": "art/source-assets/home-menu/stall/v002-aspect-repair/generated/stall_structure_unlit_registered_1440x2560_v002.png",
+    "sha256": "07a4350cd8b6e5a5274b4a723ac000978b31f851409be6e9d2ffe70b361875f9"
   },
   "assets": [
     {
       "role": "complete_empty_stall_behind_owner",
       "output": "game/assets/environments/home_village/v001/stall/stall_structure_unlit_720x1280.png",
-      "sha256": "f7ff775402605813639cfad2cd846c52996d2f59c036db712f9d0a33ff43e27c"
+      "sha256": "9704f4590d07e200e03722bbf1dc7371c6d249972536d297aef1af2149b77835"
     },
     {
       "role": "counter_and_facade_owner_occluder",
       "output": "game/assets/environments/home_village/v001/stall/stall_counter_occluder_720x1280.png",
-      "sha256": "a06180932f3b16441f8ec775188b269f33d0480205e8689511e56df6ce5b5cd5",
+      "sha256": "93776aaf124676e8723401567749b288a5e17bc3a62407ec92f764b827de16b7",
       "mask_region": [
         0,
         675,

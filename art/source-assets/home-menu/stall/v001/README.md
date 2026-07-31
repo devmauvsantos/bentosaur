@@ -1,6 +1,10 @@
 # Home Menu Stall v001
 
-**Status:** Gate 1 approved — 2026-07-31
+**Status:** Gate 1 art approved; runtime registration superseded by V002 — 2026-07-31
+
+The generated cutout remains the immutable stall source. Its original V001
+registration scaled X and Y independently and was replaced by the uniform-scale
+V002 aspect repair after physical-iPhone review.
 
 This package reconstructs the empty, completely unlit home-menu stall from:
 

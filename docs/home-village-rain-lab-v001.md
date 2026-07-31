@@ -68,8 +68,8 @@ Particle ceilings at full density:
 ## Audio trial contract
 
 - `Late Night Radio` by Kevin MacLeod loops continuously on the `Music` bus at
-  `-16 dB`.
-- `Gentle Rain 01` by DRAGON-STUDIO loops on the `Weather` bus at `-14 dB`.
+  `-19 dB`.
+- `Gentle Rain 01` by DRAGON-STUDIO loops on the `Weather` bus at `-19 dB`.
 - Rain audio starts whenever visible rain starts.
 - Pressing `R` fades the rain channel over 240 ms, pauses it, and hides the
   visual weather. Pressing `R` again resumes the same ambience position and

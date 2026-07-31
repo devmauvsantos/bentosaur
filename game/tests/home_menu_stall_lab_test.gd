@@ -6,6 +6,8 @@ const COUNTER_OCCLUDER_PATH := (
 	+ "stall_counter_occluder_720x1280.png"
 )
 const CANVAS_SIZE := Vector2(720.0, 1280.0)
+const APPROVED_VISIBLE_BOUNDS := Rect2i(77, 197, 566, 874)
+const SOURCE_VISIBLE_ASPECT := 862.0 / 1333.0
 
 
 func _initialize() -> void:
@@ -38,6 +40,23 @@ func _run() -> void:
 				"Stall texture must be exactly 720x1280.",
 				errors
 			)
+			var stall_image := stall.texture.get_image()
+			_expect(stall_image != null, "Stall texture must expose image data.", errors)
+			if stall_image != null:
+				var visible_bounds := stall_image.get_used_rect()
+				_expect(
+					visible_bounds == APPROVED_VISIBLE_BOUNDS,
+					"Stall visible bounds must keep the approved V002 registration.",
+					errors
+				)
+				var runtime_aspect := (
+					float(visible_bounds.size.x) / float(visible_bounds.size.y)
+				)
+				_expect(
+					absf(runtime_aspect - SOURCE_VISIBLE_ASPECT) < 0.002,
+					"Stall silhouette must preserve the immutable cutout aspect ratio.",
+					errors
+				)
 		_expect(stall.position == Vector2.ZERO, "Stall must stay at canvas origin.", errors)
 		_expect(stall.size == CANVAS_SIZE, "Stall must cover the registered canvas.", errors)
 		_expect(stall.scale == Vector2.ONE, "Stall must not be repositioned by scale.", errors)
