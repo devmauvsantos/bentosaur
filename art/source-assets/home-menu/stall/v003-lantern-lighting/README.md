@@ -2,7 +2,7 @@
 
 **Visual gate:** G02 — Stall lighting
 
-**Status:** candidate pending founder approval — 2026-07-31
+**Status:** founder approved for runtime promotion — 2026-07-31
 
 This source pack begins the non-character stall attachment pass. It keeps the
 approved empty stall immutable and introduces one reusable hanging-lantern kit
@@ -81,9 +81,9 @@ reviews, and hashes. The prompt is preserved under `prompts/`.
 There will be no physics joint, real-time `PointLight2D`, or animation sheet.
 The runtime fixture is transforms, alpha, and low-cost shader scalars.
 
-## Gate decision required
+## Gate decision
 
-Approve or reject:
+The founder approved the candidate on 2026-07-31, including:
 
 1. lantern design relative to the original concept;
 2. size and placement against the approved stall;
@@ -91,6 +91,6 @@ Approve or reject:
 4. amber ON intensity and halo;
 5. the anchor/ring connection.
 
-No pot, button, or remaining counter-prop generation advances until G02 is
-approved, per the locked stall layer contract.
-
+Warm light visibly spilling across the stall wood is intentionally deferred to
+a later atmosphere-polish pass. It is not part of the approved fixture-art
+lock and must not trigger a lantern redesign.

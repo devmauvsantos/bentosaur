@@ -1,0 +1,131 @@
+{
+  "asset_id": "env.home_village.stall.lantern.runtime.v001",
+  "status": "founder_approved",
+  "approval": {
+    "gate": "G02_STALL_LIGHTING",
+    "decided_at": "2026-07-31T16:24:27-04:00",
+    "evidence": "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-off-on-approval-board-v001.png"
+  },
+  "coordinate_contract": {
+    "canvas_px": [
+      720,
+      1280
+    ],
+    "stage_path": "StallStage",
+    "stage_scale": 0.86,
+    "stage_pivot_px": [
+      360,
+      634
+    ],
+    "fixture_pivots_px": [
+      [
+        134.5,
+        437.0
+      ],
+      [
+        583.5,
+        437.0
+      ]
+    ]
+  },
+  "assembly": {
+    "body_pivot_local_px": [
+      37.5,
+      12.0
+    ],
+    "body_top_left_from_pivot_px": [
+      -37.5,
+      -12.0
+    ],
+    "anchor_top_left_from_pivot_px": [
+      -21.5,
+      -45.0
+    ],
+    "core_top_left_in_body_px": [
+      9,
+      54
+    ],
+    "core_top_left_from_pivot_px": [
+      -28.5,
+      42.0
+    ],
+    "halo_top_left_from_pivot_px": [
+      -104.5,
+      -33.0
+    ],
+    "halo_center_from_pivot_px": [
+      -0.5,
+      79.0
+    ],
+    "off": [
+      "anchor",
+      "body_off"
+    ],
+    "on": [
+      "anchor",
+      "body_off",
+      "core_add",
+      "halo_add"
+    ],
+    "geometry_changes_on_toggle": false
+  },
+  "motion": {
+    "anchor": "fixed",
+    "body_core_halo": "shared restrained sway pivot",
+    "maximum_sway_degrees": 1.4,
+    "power_toggle_preserves_sway_phase": true
+  },
+  "deferred": [
+    "registered warm spill across stall wood",
+    "stall-specific wet reflection masks"
+  ],
+  "assets": [
+    {
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v001/lantern/stall_lantern_anchor_v001.png",
+      "output_sha256": "922b1784aaf38c4298719cb56209c9518e60b1e0731bf896aaf9bfaaa05d263c",
+      "output_size_px": [
+        43,
+        35
+      ],
+      "source": "art/source-assets/home-menu/stall/v003-lantern-lighting/components/stall_lantern_anchor_candidate_v001.png",
+      "source_sha256": "8d980fc51044a93f93baa6402fe849538e5d48e8a4900d53d4a93f404624306d"
+    },
+    {
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v001/lantern/stall_lantern_body_off_v001.png",
+      "output_sha256": "8bb6eb5d04a4a9b020bc61cded574ded7ec47bba8f48d1e8af5a59c95b6bd5f0",
+      "output_size_px": [
+        75,
+        175
+      ],
+      "source": "art/source-assets/home-menu/stall/v003-lantern-lighting/components/stall_lantern_body_off_candidate_v001.png",
+      "source_sha256": "dc25b05f662ca581d8ac9e8b25e66b7cc9d1ccb9146e1cf93078a3412709699e"
+    },
+    {
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v001/lantern/stall_lantern_core_add_v001.png",
+      "output_sha256": "273b08e0c26fe28068fdf5d4ecea2bf86f491255f50fa5265a7cc441dcc409de",
+      "output_size_px": [
+        57,
+        72
+      ],
+      "source": "art/source-assets/home-menu/stall/v003-lantern-lighting/components/stall_lantern_core_candidate_v001.png",
+      "source_sha256": "b1e695c4016cbb668ae1355f2b7f9f0e591bff65b4730352b61fb189d4d51949"
+    },
+    {
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v001/lantern/stall_lantern_halo_add_v001.png",
+      "output_sha256": "869db0f3daf9d7f6230ce2ba13502b59cb9349ce75c61354deb2067119d8853d",
+      "output_size_px": [
+        208,
+        224
+      ],
+      "source": "art/source-assets/home-menu/stall/v003-lantern-lighting/registered/stall_lantern_halos_add_registered_candidate_v001.png",
+      "source_sha256": "ebde8c17df9eab3e396a7470073c2f6d012b0836fa59afd3b73d7c3024209a6e",
+      "source_rect_px_720": [
+        30,
+        404,
+        208,
+        224
+      ]
+    }
+  ],
+  "builder": "tools/art/promote_stall_lantern_runtime_v001.py"
+}

@@ -8,8 +8,9 @@
     "stall-lantern-warm-spill-add"
   ],
   "technical_state": "pass",
-  "human_state": "pending",
-  "decided_at": null,
+  "human_state": "approved",
+  "decided_at": "2026-07-31T16:24:27-04:00",
+  "decision_note": "Approved as shown. Subtle warm spill across the stall itself is deferred for later polish.",
   "evidence": [
     "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-off-on-approval-board-v001.png",
     "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-off-registered-composite-v001.png",

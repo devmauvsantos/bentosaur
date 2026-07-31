@@ -32,6 +32,20 @@ func _initialize() -> void:
 		)
 		_expect(
 			home_menu.get_node_or_null(
+				"WorldCanvas/ApprovedStallComposition/StallStage/StallLanternLeft"
+			) is StallLanternFixture,
+			"The promoted home menu must contain the approved left stall lantern.",
+			errors
+		)
+		_expect(
+			home_menu.get_node_or_null(
+				"WorldCanvas/ApprovedStallComposition/StallStage/StallLanternRight"
+			) is StallLanternFixture,
+			"The promoted home menu must contain the approved right stall lantern.",
+			errors
+		)
+		_expect(
+			home_menu.get_node_or_null(
 				"WorldCanvas/ApprovedStallComposition/HomeVillageRainLab"
 			) != null,
 			"The promoted scene must retain the living rainy village.",

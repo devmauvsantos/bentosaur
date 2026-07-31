@@ -42,5 +42,13 @@
         605
       ]
     }
+  ],
+  "attachments": [
+    {
+      "role": "founder_approved_hanging_lantern_pair",
+      "manifest": "game/assets/environments/home_village/v001/stall/attachments/v001/lantern/runtime_manifest.json",
+      "approval_gate": "G02_STALL_LIGHTING",
+      "status": "runtime_promoted"
+    }
   ]
 }

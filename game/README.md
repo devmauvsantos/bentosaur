@@ -11,6 +11,7 @@ It currently proves:
 - the registered rainy street and animated light wake-up;
 - source-synchronized wet-pavement reflection breathing and flicks;
 - the uniformly scaled V002 empty stall;
+- the approved modular hanging lanterns with OFF/ON layers and restrained sway;
 - the approved anime-transfer shader preset 3 with full-viewport lifecycle
   coverage repair;
 - separate looping Music and Weather audio buses;
@@ -79,6 +80,11 @@ Validate headlessly:
   --headless \
   --path game \
   --script res://tests/anime_post_process_coverage_test.gd
+
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --headless \
+  --path game \
+  --script res://tests/stall_lantern_fixture_test.gd
 ```
 
 Capture a fixed fully-open comparison pose:

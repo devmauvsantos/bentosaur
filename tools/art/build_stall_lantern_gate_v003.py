@@ -328,7 +328,7 @@ def main() -> None:
 
     report = {
         "pack_id": "home-menu-stall-lantern-gate02-v003",
-        "status": "candidate_pending_founder_approval",
+        "status": "founder_approved_source_lock",
         "runtime_canvas": list(RUNTIME_SIZE),
         "body_runtime_width": BODY_RUNTIME_WIDTH,
         "body_top_lefts": [list(position) for position in BODY_TOPS],

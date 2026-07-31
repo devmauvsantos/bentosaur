@@ -10,6 +10,9 @@ const STALL_DEPTH_MATERIAL_PATH := (
 const STALL_ROOF_RAIN_SCRIPT := preload(
 	"res://scripts/vfx/stall_roof_rain.gd"
 )
+const STALL_LANTERN_SCRIPT := preload(
+	"res://scripts/home/stall_lantern_fixture.gd"
+)
 const COUNTER_OCCLUDER_PATH := (
 	"res://assets/environments/home_village/v001/stall/"
 	+ "stall_counter_occluder_720x1280.png"
@@ -17,6 +20,8 @@ const COUNTER_OCCLUDER_PATH := (
 const CANVAS_SIZE := Vector2(720.0, 1280.0)
 const APPROVED_VISIBLE_BOUNDS := Rect2i(77, 197, 566, 874)
 const SOURCE_VISIBLE_ASPECT := 862.0 / 1333.0
+const LANTERN_LEFT_PIVOT := Vector2(134.5, 437.0)
+const LANTERN_RIGHT_PIVOT := Vector2(583.5, 437.0)
 const STALL_ROOF_ANCHORS: Array[Vector3] = [
 	Vector3(242.0, 211.0, 0.39),
 	Vector3(296.0, 211.0, 0.39),
@@ -60,6 +65,12 @@ func _run() -> void:
 	var stall_roof_splashes := (
 		lab.get_node_or_null("StallStage/StallRoofSplashes") as Node2D
 	)
+	var lantern_left := (
+		lab.get_node_or_null("StallStage/StallLanternLeft") as Node2D
+	)
+	var lantern_right := (
+		lab.get_node_or_null("StallStage/StallLanternRight") as Node2D
+	)
 	_expect(village != null, "Approved village lab must remain instanced.", errors)
 	_expect(stall_stage != null, "Missing responsive stall stage.", errors)
 	_expect(stall != null, "Missing registered empty stall.", errors)
@@ -68,6 +79,29 @@ func _run() -> void:
 		"Stall-roof rain receiver must be a Node2D.",
 		errors
 	)
+	_expect(lantern_left != null, "Missing approved left stall lantern.", errors)
+	_expect(lantern_right != null, "Missing approved right stall lantern.", errors)
+	_validate_lantern(
+		lantern_left,
+		stall_stage,
+		LANTERN_LEFT_PIVOT,
+		"Left",
+		errors
+	)
+	_validate_lantern(
+		lantern_right,
+		stall_stage,
+		LANTERN_RIGHT_PIVOT,
+		"Right",
+		errors
+	)
+	if lantern_left != null and lantern_right != null:
+		_expect(
+			lantern_left.get_node("SwayPivot/BodyOff").get("texture")
+				== lantern_right.get_node("SwayPivot/BodyOff").get("texture"),
+			"Both fixtures must instance the same approved canonical shell.",
+			errors
+		)
 
 	if stall_roof_splashes != null:
 		_expect(
@@ -208,6 +242,52 @@ func _run() -> void:
 	await process_frame
 	await create_timer(0.10).timeout
 	_finish(errors)
+
+
+func _validate_lantern(
+	fixture: Node2D,
+	stall_stage: Node2D,
+	expected_position: Vector2,
+	label: String,
+	errors: PackedStringArray
+) -> void:
+	if fixture == null:
+		return
+	_expect(
+		fixture.get_script() == STALL_LANTERN_SCRIPT,
+		"%s stall lantern script mismatch." % label,
+		errors
+	)
+	_expect(
+		fixture.get_parent() == stall_stage,
+		"%s stall lantern must inherit StallStage." % label,
+		errors
+	)
+	_expect(
+		fixture.position == expected_position,
+		"%s stall lantern ring-center registration changed." % label,
+		errors
+	)
+	_expect(
+		fixture.scale == Vector2.ONE,
+		"%s stall lantern must inherit the shared stage scale." % label,
+		errors
+	)
+	_expect(
+		fixture.z_index == 17,
+		"%s stall lantern must render above roof splashes at z 17." % label,
+		errors
+	)
+	var anchor := fixture.get_node_or_null("Anchor") as Sprite2D
+	var pivot := fixture.get_node_or_null("SwayPivot") as Node2D
+	_expect(anchor != null, "%s stall lantern needs its fixed anchor." % label, errors)
+	_expect(pivot != null, "%s stall lantern needs its sway pivot." % label, errors)
+	if anchor != null:
+		_expect(
+			anchor.get_parent() == fixture,
+			"%s anchor must remain outside the sway pivot." % label,
+			errors
+		)
 
 
 func _get_splash_sprites(parent: Node) -> Array[Sprite2D]:

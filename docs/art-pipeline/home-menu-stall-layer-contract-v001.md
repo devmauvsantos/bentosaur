@@ -1,6 +1,6 @@
 # Home Menu Stall Layer Contract v001
 
-**Status:** Gate 1 approved — 2026-07-31
+**Status:** Gates 1–2 approved — 2026-07-31
 
 **Reference:** `art/concepts/2d-chibi/v4/01_menu-refinement/`
 `bentosaur-home-menu-refined-classic-guestbook-v2.png`
@@ -266,6 +266,12 @@ This is an integration task, not a Gate 1 image-generation task.
    audio and mobile performance.
 
 Do not advance to a later visual gate without approval of the current gate.
+
+Gate 2 was approved from
+`art/source-assets/home-menu/stall/v003-lantern-lighting/` on 2026-07-31.
+The fixture design, registration, OFF shell, ON core, and local halo are locked.
+A subtle registered warm spill across the stall wood remains a later polish
+task and does not block runtime promotion.
 
 ## Gate 1 acceptance criteria
 

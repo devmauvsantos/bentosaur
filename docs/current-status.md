@@ -9,8 +9,8 @@ Snapshot date: 2026-07-31
 Mau selected flat-cel 2D as Bentosaur's leading visual direction and ended the
 open-ended exploration phase. The Godot project now boots the production-shaped
 Home Village assembly: approved rainy street and registered light wake-up,
-uniformly scaled V002 empty stall, and the approved 1990s-anime transfer preset
-3. The same debug build is running on the physical iPhone 17 Pro Max under the
+uniformly scaled V002 stall, two approved modular hanging lanterns, and the
+approved 1990s-anime transfer preset 3. The iOS build remains under the
 personal Apple team.
 
 The complete bounded first-playable loop remains preserved at
@@ -68,6 +68,15 @@ band. All 14 executed Godot contracts and a 390-frame Forward Mobile / Metal
 capture pass. A personally signed V008 device build is ready; physical install
 and confirmation of the original slide-away report wait for the iPhone to
 reconnect. See [Home Menu V008 linked reflections and stable anime coverage](checkpoints/2026-07-31-home-menu-v008-linked-reflections-and-filter-coverage.md).
+
+V009 promotes the founder-approved hanging lantern as a reusable Godot
+fixture. Each side shares one canonical OFF shell; ON adds separate additive
+core and halo layers without changing geometry. Fixed anchors remain outside
+the ring-center sway pivots, and both fixtures inherit the responsive
+`StallStage`. All 13 current Godot contracts pass. Warm spill across the stall
+wood, fixture-specific pavement reflections, neighborhood pulse/flick
+coupling, and physical-iPhone tuning remain explicitly deferred. See
+[Home Menu V009 approved modular stall lanterns](checkpoints/2026-07-31-home-menu-v009-approved-stall-lanterns.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`
