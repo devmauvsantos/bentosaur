@@ -1,9 +1,13 @@
 # Home Menu V007 — Random Living Light
 
-Status: implemented, verified, installed, and launched on the reference iPhone;
-founder aesthetic review pending
+Status: superseded by V008; retained as the physical-device proof of the
+explicit-RGB motion path
 
 Date: 2026-07-31
+
+V008 replaces this checkpoint's fixed reflections, six-source registry, and
+`60–105 s` cadence. See
+[Home Menu V008 linked reflections and stable anime coverage](2026-07-31-home-menu-v008-linked-reflections-and-filter-coverage.md).
 
 ## Outcome
 

@@ -47,6 +47,9 @@ const GENTLE_RAIN_STREAM: AudioStreamMP3 = preload(
 const REGISTERED_LIGHT_MOTION_SHADER: Shader = preload(
 	"res://assets/vfx/lighting/registered_light_motion.gdshader"
 )
+const REGISTERED_REFLECTION_FLICK_SHADER: Shader = preload(
+	"res://assets/vfx/lighting/registered_reflection_flick.gdshader"
+)
 
 const RAIN_BACK_ALPHA := 0.23
 const RAIN_FRONT_ALPHA := 0.37
@@ -56,8 +59,10 @@ const RAIN_SPLASH_TINT := Color(0.66, 0.78, 0.88, 0.50)
 const LIGHT_CORE_BASE_ALPHA := 0.99
 const LIGHT_HALO_BASE_ALPHA := 0.985
 const LIGHT_SPILL_PULSE_COUPLING := 0.42
+const LIGHT_REFLECTION_PULSE_COUPLING := 0.36
 const LIGHT_HALO_FLICK_COUPLING := 0.78
 const LIGHT_SPILL_FLICK_COUPLING := 0.38
+const LIGHT_REFLECTION_FLICK_COUPLING := 0.62
 const MUSIC_VOLUME_DB := -21.0
 const RAIN_AUDIO_VOLUME_DB := -22.0
 const RAIN_AUDIO_SILENT_DB := -60.0
@@ -69,12 +74,89 @@ const ROOF_SPLASH_INTERVAL_REDUCED := Vector2(0.90, 1.80)
 const ROOF_SPLASH_FRAME_SECONDS := 0.036
 const STALL_ROOF_EVENT_CHANCE := 0.34
 const LIGHT_FLICK_CENTERS: Array[Vector2] = [
-	Vector2(93.0, 283.0),
-	Vector2(176.0, 256.0),
-	Vector2(184.0, 176.0),
-	Vector2(421.0, 306.0),
-	Vector2(306.0, 322.0),
-	Vector2(183.0, 383.0),
+	# The first window is intentionally clipped by the approved composition.
+	# It is still a visible source, but its reflection falls outside the canvas.
+	Vector2(7.0, 377.0),
+	Vector2(91.0, 281.0),
+	Vector2(166.0, 253.0),
+	Vector2(182.0, 177.0),
+	Vector2(177.0, 368.0),
+	Vector2(198.0, 385.0),
+	Vector2(276.0, 386.0),
+	Vector2(304.0, 322.0),
+	Vector2(340.0, 327.0),
+	Vector2(337.0, 384.0),
+	Vector2(379.0, 385.0),
+	Vector2(414.0, 299.0),
+	Vector2(433.0, 381.0),
+	Vector2(474.0, 384.0),
+	Vector2(594.0, 375.0),
+	Vector2(642.0, 395.0),
+	Vector2(664.0, 214.0),
+	Vector2(677.0, 381.0),
+]
+const LIGHT_REFLECTION_RECTS: Array[Rect2] = [
+	Rect2(),
+	Rect2(70.0, 507.0, 66.0, 308.0),
+	Rect2(161.0, 471.0, 78.0, 503.0),
+	Rect2(161.0, 471.0, 78.0, 503.0),
+	Rect2(161.0, 471.0, 78.0, 503.0),
+	Rect2(161.0, 471.0, 78.0, 503.0),
+	Rect2(256.0, 458.0, 39.0, 115.0),
+	Rect2(321.0, 420.0, 34.0, 57.0),
+	Rect2(321.0, 420.0, 34.0, 57.0),
+	Rect2(321.0, 420.0, 34.0, 57.0),
+	Rect2(355.0, 431.0, 43.0, 166.0),
+	Rect2(398.0, 433.0, 57.0, 401.0),
+	Rect2(398.0, 433.0, 57.0, 401.0),
+	Rect2(455.0, 478.0, 36.0, 159.0),
+	Rect2(552.0, 504.0, 75.0, 461.0),
+	Rect2(627.0, 514.0, 83.0, 387.0),
+	Rect2(627.0, 514.0, 83.0, 387.0),
+	Rect2(627.0, 514.0, 83.0, 387.0),
+]
+const LIGHT_REFLECTION_WEIGHTS: Array[float] = [
+	0.0,
+	1.0,
+	0.20,
+	0.10,
+	0.30,
+	0.40,
+	1.0,
+	0.35,
+	0.20,
+	0.45,
+	1.0,
+	0.35,
+	0.65,
+	1.0,
+	1.0,
+	0.20,
+	0.25,
+	0.55,
+]
+# Each core mask ends before the nearest other registered center. Halos and
+# spill remain deliberately broader, but one selected source cannot dim a
+# neighboring source core.
+const LIGHT_CORE_FLICK_RADII: Array[float] = [
+	0.06000,
+	0.06000,
+	0.06000,
+	0.06000,
+	0.03077,
+	0.03077,
+	0.06000,
+	0.04139,
+	0.04139,
+	0.04785,
+	0.04785,
+	0.06000,
+	0.04682,
+	0.04682,
+	0.05922,
+	0.04293,
+	0.06000,
+	0.04293,
 ]
 const ROOF_SPLASH_ANCHORS: Array[Vector3] = [
 	Vector3(79.0, 126.0, 0.30),
@@ -344,6 +426,7 @@ func _build_environment() -> void:
 		WARM_REFLECTIONS_TEXTURE,
 		true
 	)
+	_set_reflection_flick_material(warm_reflections)
 
 	for layer: TextureRect in [
 		indirect_warm_spill,
@@ -545,10 +628,19 @@ func _set_local_light_motion_material(layer: TextureRect, radius: float) -> void
 	layer.material = material
 
 
+func _set_reflection_flick_material(layer: TextureRect) -> void:
+	var material := ShaderMaterial.new()
+	material.shader = REGISTERED_REFLECTION_FLICK_SHADER
+	material.set_shader_parameter("reflection_level", 1.0)
+	material.set_shader_parameter("global_intensity", 1.0)
+	layer.material = material
+
+
 func _apply_global_light_breathing() -> void:
 	var core_material := light_cores.material as ShaderMaterial
 	var halo_material := light_halos.material as ShaderMaterial
 	var spill_material := indirect_warm_spill.material as ShaderMaterial
+	var reflection_material := warm_reflections.material as ShaderMaterial
 	if core_material != null:
 		core_material.set_shader_parameter(
 			"global_intensity",
@@ -568,6 +660,15 @@ func _apply_global_light_breathing() -> void:
 				LIGHT_SPILL_PULSE_COUPLING
 			)
 		)
+	if reflection_material != null:
+		reflection_material.set_shader_parameter(
+			"global_intensity",
+			lerpf(
+				1.0,
+				_light_motion.core_level,
+				LIGHT_REFLECTION_PULSE_COUPLING
+			)
+		)
 
 
 func _apply_local_light_flick() -> void:
@@ -578,8 +679,13 @@ func _apply_local_light_flick() -> void:
 	var core_material := light_cores.material as ShaderMaterial
 	var halo_material := light_halos.material as ShaderMaterial
 	var spill_material := indirect_warm_spill.material as ShaderMaterial
+	var reflection_material := warm_reflections.material as ShaderMaterial
 	if core_material != null:
 		core_material.set_shader_parameter("flick_center", center)
+		core_material.set_shader_parameter(
+			"flick_radius",
+			LIGHT_CORE_FLICK_RADII[_light_motion.flick_target_index]
+		)
 		core_material.set_shader_parameter(
 			"flick_level",
 			_light_motion.flick_level
@@ -603,6 +709,32 @@ func _apply_local_light_flick() -> void:
 				_light_motion.flick_level,
 				LIGHT_SPILL_FLICK_COUPLING
 			)
+		)
+	if reflection_material != null:
+		var reflection_rect := LIGHT_REFLECTION_RECTS[
+			_light_motion.flick_target_index
+		]
+		var reflection_center := (
+			reflection_rect.position + reflection_rect.size * 0.5
+		) / VIEWPORT_SIZE
+		var reflection_half_size := (
+			reflection_rect.size * 0.5 / VIEWPORT_SIZE
+		)
+		var reflection_coupling := (
+			LIGHT_REFLECTION_FLICK_COUPLING
+			* LIGHT_REFLECTION_WEIGHTS[_light_motion.flick_target_index]
+		)
+		reflection_material.set_shader_parameter(
+			"reflection_center",
+			reflection_center
+		)
+		reflection_material.set_shader_parameter(
+			"reflection_half_size",
+			reflection_half_size
+		)
+		reflection_material.set_shader_parameter(
+			"reflection_level",
+			lerpf(1.0, _light_motion.flick_level, reflection_coupling)
 		)
 
 

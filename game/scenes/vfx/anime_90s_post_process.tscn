@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Shader" path="res://assets/vfx/post_process/anime_90s_transfer.gdshader" id="1_shader"]
+[ext_resource type="Script" path="res://scripts/vfx/anime_post_process_controller.gd" id="2_controller"]
 
 [sub_resource type="Curve" id="Curve_anime"]
 _data = [Vector2(0, 0.02378583), 0.0, 0.0, 0, 0, Vector2(0.46564358, 0.33138227), 0.0, 0.0, 0, 0, Vector2(0.7691792, 0.7199252), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -29,15 +30,17 @@ shader_parameter/luma_curve = SubResource("CurveTexture_anime")
 shader_parameter/curve_strength = 0.16
 
 [node name="Anime90sPostProcess" type="CanvasLayer"]
+process_mode = 3
 layer = 100
+script = ExtResource("2_controller")
 metadata/preset_name = "Heavy transfer"
 metadata/preset_number = 3
 
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
 [node name="Filter" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_anime")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 720.0
+offset_bottom = 1280.0
 mouse_filter = 2

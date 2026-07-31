@@ -40,12 +40,11 @@ white streaks over the scene. Music and rain ambience both play through
 separate buses at the device-tuned `-21 dB` music and `-22 dB` rain gains; iOS
 Silent Mode is respected.
 
-The calm V004 atmosphere baseline adds irregular sub-one-percent core/halo
-breathing, a single-fixture flick every `60–105 s`, and a measured barely-there
-lower-stall depth falloff. Broad warm spill and pavement reflections remain
-stable. A controlled 90-second A/B proves anime preset 3 remains active; any
-perceived weakening on Retina is not a timed shader fade. See
-[Home Menu V004 atmosphere checkpoint](checkpoints/2026-07-31-home-menu-v004-atmosphere-polish.md).
+The V004 atmosphere baseline first introduced breathing, local flicks, and a
+measured lower-stall depth falloff. Its motion assumptions are historical. Mau
+later observed the anime treatment visibly sliding upward on the physical
+iPhone, proving that the prior static A/B did not cover iOS surface/lifecycle
+changes. See [Home Menu V004 atmosphere checkpoint](checkpoints/2026-07-31-home-menu-v004-atmosphere-polish.md).
 
 V005's stronger randomized alpha motion was still completely imperceptible on
 the physical iPhone and is rejected. Its denser shared roof-impact scheduler
@@ -53,14 +52,22 @@ and sixteen stall-local anchors remain active for device review. See
 [Home Menu V005 failed device test](checkpoints/2026-07-31-home-menu-v005-device-motion-test.md).
 
 Mau confirmed V006's intentionally excessive breath and fixed double-flick were
-both visible on the physical iPhone. V007 therefore keeps the proven explicit
-RGB compositor path and replaces the diagnostic with irregular production
-motion: separated slow low/high bands, attenuated halo and spill inheritance,
-and rare randomized fixture events. Every event chooses one, two, or three
-flicks, waits at least one minute, selects only certainly visible fixtures, and
-cannot repeat the previous fixture. Reflections remain fixed. This V007 build
-is installed and running under the personal Apple team. See
-[Home Menu V007 random living light](checkpoints/2026-07-31-home-menu-v007-random-living-light.md).
+both visible on the physical iPhone. V007 then established the irregular
+explicit-RGB production motion, but its six-source, one-minute cadence and
+fixed reflections are now superseded.
+
+V008 registers all 18 painted windows and lanterns, including the complete
+right side, and maps them to nine wet-pavement reflection bands. A source and
+its reflection now breathe and flick from the same frame-level motion state;
+reflections are only attenuated, never delayed or independently randomized.
+The first event begins after `6–12 s`, later events recur after `14–28 s`, and
+each still contains one, two, or three irregular dips. The anime pass now owns
+an explicit full-viewport back-buffer copy and an always-active coverage
+controller so an iOS resize or lifecycle transition cannot expose an untreated
+band. All 14 executed Godot contracts and a 390-frame Forward Mobile / Metal
+capture pass. A personally signed V008 device build is ready; physical install
+and confirmation of the original slide-away report wait for the iPhone to
+reconnect. See [Home Menu V008 linked reflections and stable anime coverage](checkpoints/2026-07-31-home-menu-v008-linked-reflections-and-filter-coverage.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`

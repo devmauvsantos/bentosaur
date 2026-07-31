@@ -43,8 +43,8 @@ the depth of the wet square. It does not alter the approved background pixels.
 
 ## Motion contract
 
-- Indirect warm spill and pavement reflections fade on once, then remain
-  stable.
+- Indirect warm spill and pavement reflections fade on once, then inherit
+  attenuated versions of the living-light motion.
 - Lantern/window cores receive only a very small continuous luminance drift.
 - Halos inherit a lower-amplitude version of the same drift.
 - Rain is already established on the first rendered frame; the village lights
@@ -90,20 +90,34 @@ V006 then proved the corrected RGB-emission path on the reference iPhone. Mau
 confirmed its deliberately obvious slow breath and fixed double-flick were both
 visible through the final composite.
 
-The active V007 production profile alternates randomized `0.78–0.86` low core
-targets with `0.94–1.00` highs over uneven `4.8–11.5 s` journeys. Halos inherit
-72% of the excursion and indirect spill 42%. One certainly visible fixture
-receives a rare event no more than once per minute; each event independently
-chooses one, two, or three flicks and cannot repeat the previous fixture.
+V007 then replaced the diagnostic with randomized `0.78–0.86` low core
+targets and `0.94–1.00` highs over uneven `4.8–11.5 s` journeys. Halos inherited
+72% of the excursion and indirect spill 42%, but reflections stayed fixed and
+the six-source, one-minute cadence was too sparse on the physical phone.
 
-In both profiles:
+V008 is active. It preserves the core motion but registers all 18 painted
+sources: 17 complete fixtures plus the clipped far-left window. Nine
+wet-pavement reflection bands are mapped back to those sources. Reflections
+inherit 36% of the global pulse in phase with the source. During a local event,
+the corresponding reflection receives the exact same one-to-three-dip timing
+at 62% strength, multiplied by its source weight when several fixtures share
+one painted band. There is no reflection delay or independent motion.
+
+The first event begins after `6–12 s`; later events wait `14–28 s` after the
+previous burst ends. Every lantern and window, including the full right side,
+is registered. The immediately previous source cannot be selected again.
+
+In the active profile:
 
 - smooth interpolation avoids a visible sine loop;
-- wet-pavement reflections remain completely stable;
-- a spatial mask limits every flick to one registered window or lantern;
-- seeded random schedules produce the same event times, targets, and burst
+- per-source core masks end before the nearest neighboring core, while broader
+  halo/spill masks retain a natural shared-light edge;
+- broad layer alpha stays fixed while explicit RGB intensity survives the
+  Retina/Metal composite;
+- seeded random schedules produce identical event times, targets, and burst
   counts at 30, 60, and 120 Hz;
-- `--reduced-motion` holds emission steady after the normal light wake.
+- `--reduced-motion` holds source, halo, spill, and reflection emission steady
+  after the normal light wake.
 
 ## Roof-impact detail
 
@@ -132,8 +146,8 @@ in `game/assets/audio/README.md`.
   with distance.
 - The approved background and four independently controllable light layers cost
   five full-screen passes. That is appropriate for this visual gate; profile on
-  target phones before integration, then consider merging the stable spill and
-  reflection layers while retaining separate animated cores and halos.
+  target phones before integration. Do not merge spill or reflections without
+  preserving their distinct pulse and registered local-reflection response.
 - The display-space lighting transcode is validated on Forward Mobile / Metal.
   Verify its output on Android Vulkan hardware before the production lock.
 - The approved motion checkpoint remains a visual contract, not a native-device

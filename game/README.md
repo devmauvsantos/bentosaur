@@ -9,8 +9,10 @@ The current main scene is the layered Home Village menu:
 It currently proves:
 
 - the registered rainy street and animated light wake-up;
+- source-synchronized wet-pavement reflection breathing and flicks;
 - the uniformly scaled V002 empty stall;
-- the approved anime-transfer shader preset 3;
+- the approved anime-transfer shader preset 3 with full-viewport lifecycle
+  coverage repair;
 - separate looping Music and Weather audio buses;
 - aspect-cover presentation on ultratall iPhones.
 
@@ -66,6 +68,17 @@ Validate headlessly:
   --headless \
   --path game \
   --script res://tests/facial_rig_contract_test.gd
+
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --headless \
+  --path game \
+  --script res://tests/home_village_rain_lab_test.gd \
+  -- --deterministic-capture --audio-off
+
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --headless \
+  --path game \
+  --script res://tests/anime_post_process_coverage_test.gd
 ```
 
 Capture a fixed fully-open comparison pose:

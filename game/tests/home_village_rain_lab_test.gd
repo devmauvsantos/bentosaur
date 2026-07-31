@@ -4,6 +4,9 @@ const LAB_PATH := "res://scenes/labs/home_village_rain_lab.tscn"
 const REGISTERED_LIGHT_MOTION_SHADER := preload(
 	"res://assets/vfx/lighting/registered_light_motion.gdshader"
 )
+const REGISTERED_REFLECTION_FLICK_SHADER := preload(
+	"res://assets/vfx/lighting/registered_reflection_flick.gdshader"
+)
 
 
 func _initialize() -> void:
@@ -79,15 +82,125 @@ func _run() -> void:
 			errors
 		)
 
-	for layer_name: String in ["WarmReflections"]:
-		var layer := lab.get_node_or_null("Lighting/%s" % layer_name) as TextureRect
-		_expect(layer != null, "Missing lighting layer %s." % layer_name, errors)
-		if layer != null:
-			var layer_material := layer.material as CanvasItemMaterial
+	var reflections := lab.get_node_or_null(
+		"Lighting/WarmReflections"
+	) as TextureRect
+	_expect(reflections != null, "Missing lighting layer WarmReflections.", errors)
+	var reflection_material: ShaderMaterial = null
+	if reflections != null:
+		reflection_material = reflections.material as ShaderMaterial
+	_expect(
+		reflection_material != null,
+		"WarmReflections must expose a reflection-flick ShaderMaterial.",
+		errors
+	)
+	if reflection_material != null:
+		_expect(
+			reflection_material.shader == REGISTERED_REFLECTION_FLICK_SHADER,
+			"WarmReflections must use registered_reflection_flick.gdshader.",
+			errors
+		)
+
+	var lab_script := lab.get_script() as Script
+	_expect(lab_script != null, "Rain lab must retain its runtime script.", errors)
+	var constants := {} if lab_script == null else lab_script.get_script_constant_map()
+	var fixture_centers: Array = constants.get("LIGHT_FLICK_CENTERS", [])
+	var reflection_rects: Array = constants.get("LIGHT_REFLECTION_RECTS", [])
+	var reflection_weights: Array = constants.get("LIGHT_REFLECTION_WEIGHTS", [])
+	var core_flick_radii: Array = constants.get("LIGHT_CORE_FLICK_RADII", [])
+	var unique_reflection_rects := {}
+	var reflection_weight_sums := {}
+	for index: int in range(reflection_rects.size()):
+		var reflection_rect: Rect2 = reflection_rects[index]
+		if reflection_rect.has_area():
+			unique_reflection_rects[reflection_rect] = true
+			reflection_weight_sums[reflection_rect] = (
+				float(reflection_weight_sums.get(reflection_rect, 0.0))
+				+ float(reflection_weights[index])
+			)
+	_expect(
+		fixture_centers.size() == 18
+			and reflection_rects.size() == 18
+			and reflection_weights.size() == 18
+			and core_flick_radii.size() == 18,
+		"All 18 fixtures need a reflection record, including the clipped no-band source.",
+		errors
+	)
+	if fixture_centers.size() == 18 and core_flick_radii.size() == 18:
+		for fixture_index: int in range(fixture_centers.size()):
+			for neighbor_index: int in range(fixture_centers.size()):
+				if fixture_index == neighbor_index:
+					continue
+				var normalized_delta := (
+					(Vector2(fixture_centers[fixture_index])
+						- Vector2(fixture_centers[neighbor_index]))
+					/ Vector2(720.0, 1280.0)
+					* Vector2(1.0, 1280.0 / 720.0)
+				)
+				_expect(
+					float(core_flick_radii[fixture_index])
+						<= normalized_delta.length() * 0.85,
+					"A selected fixture core mask must end before every neighboring core.",
+					errors
+				)
+	_expect(
+		unique_reflection_rects.size() == 9,
+		"The fixture registry must resolve to exactly nine painted reflection bands.",
+		errors
+	)
+	for reflection_rect: Rect2 in reflection_weight_sums:
+		_expect(
+			is_equal_approx(float(reflection_weight_sums[reflection_rect]), 1.0),
+			"Every shared reflection band must have normalized source weights.",
+			errors
+		)
+	if fixture_centers.size() == 18:
+		_expect(
+			Vector2(fixture_centers[0]) == Vector2(7.0, 377.0)
+				and not Rect2(reflection_rects[0]).has_area()
+				and is_zero_approx(float(reflection_weights[0])),
+			"Clipped S00 must remain registered without an on-canvas reflection.",
+			errors
+		)
+		var expected_right_centers: Array[Vector2] = [
+			Vector2(414.0, 299.0),
+			Vector2(433.0, 381.0),
+			Vector2(474.0, 384.0),
+			Vector2(594.0, 375.0),
+			Vector2(642.0, 395.0),
+			Vector2(664.0, 214.0),
+			Vector2(677.0, 381.0),
+		]
+		var expected_right_rects: Array[Rect2] = [
+			Rect2(398.0, 433.0, 57.0, 401.0),
+			Rect2(398.0, 433.0, 57.0, 401.0),
+			Rect2(455.0, 478.0, 36.0, 159.0),
+			Rect2(552.0, 504.0, 75.0, 461.0),
+			Rect2(627.0, 514.0, 83.0, 387.0),
+			Rect2(627.0, 514.0, 83.0, 387.0),
+			Rect2(627.0, 514.0, 83.0, 387.0),
+		]
+		var expected_right_weights: Array[float] = [
+			0.35,
+			0.65,
+			1.0,
+			1.0,
+			0.20,
+			0.25,
+			0.55,
+		]
+		for right_offset: int in range(expected_right_centers.size()):
+			var registry_index := 11 + right_offset
 			_expect(
-				layer_material != null
-				and layer_material.blend_mode == CanvasItemMaterial.BLEND_MODE_ADD,
-				"%s must use additive blending." % layer_name,
+				Vector2(fixture_centers[registry_index])
+					== expected_right_centers[right_offset]
+					and Rect2(reflection_rects[registry_index])
+						== expected_right_rects[right_offset]
+					and is_equal_approx(
+						float(reflection_weights[registry_index]),
+						expected_right_weights[right_offset]
+					),
+				"Every right-side source must keep its exact reflection mapping.",
 				errors
 			)
 
@@ -119,32 +232,46 @@ func _run() -> void:
 	var spill := lab.get_node_or_null("Lighting/IndirectWarmSpill") as TextureRect
 	var halos := lab.get_node_or_null("Lighting/LightHalos") as TextureRect
 	var cores := lab.get_node_or_null("Lighting/LightCores") as TextureRect
-	var reflections := lab.get_node_or_null("Lighting/WarmReflections") as TextureRect
+	_expect(spill != null, "Missing dynamic layer IndirectWarmSpill.", errors)
+	_expect(halos != null, "Missing dynamic layer LightHalos.", errors)
+	_expect(cores != null, "Missing dynamic layer LightCores.", errors)
 	if spill != null and halos != null and cores != null and reflections != null:
 		lab.set_lights_enabled(true)
 		var stable_spill_alpha := spill.modulate.a
+		var stable_halo_alpha := halos.modulate.a
+		var stable_core_alpha := cores.modulate.a
 		var stable_reflection_alpha := reflections.modulate.a
-		lab.call("_process", 8.0)
+		# Stay below the six-second minimum first-flick delay so this assertion
+		# never depends on which random production schedule was selected.
+		lab.call("_process", 2.0)
 		var spill_material := spill.material as ShaderMaterial
 		var halo_material := halos.material as ShaderMaterial
 		var core_material := cores.material as ShaderMaterial
 		_expect(
 			spill_material != null
 				and halo_material != null
-				and core_material != null,
-			"Every dynamic emission layer must expose explicit RGB intensity.",
+				and core_material != null
+				and reflection_material != null,
+			"Every dynamic emission and reflection layer must expose explicit RGB intensity.",
 			errors
 		)
 		if (
 			spill_material != null
 			and halo_material != null
 			and core_material != null
+			and reflection_material != null
+			and reflection_material.shader == REGISTERED_REFLECTION_FLICK_SHADER
 		):
 			var reduced_motion := OS.get_cmdline_user_args().has("--reduced-motion")
 			var motion: RefCounted = lab.get("_light_motion")
+			_expect(motion != null, "Living-light state must be available.", errors)
+			if motion == null:
+				_finish(errors)
+				return
 			var expected_core := 1.0 if reduced_motion else float(motion.get("core_level"))
 			var expected_halo := 1.0 if reduced_motion else float(motion.get("halo_level"))
 			var expected_spill := lerpf(1.0, expected_core, 0.42)
+			var expected_reflection := lerpf(1.0, expected_core, 0.36)
 			_expect(
 				is_equal_approx(
 					float(core_material.get_shader_parameter("global_intensity")),
@@ -157,8 +284,12 @@ func _run() -> void:
 					and is_equal_approx(
 						float(spill_material.get_shader_parameter("global_intensity")),
 						expected_spill
+					)
+					and is_equal_approx(
+						float(reflection_material.get_shader_parameter("global_intensity")),
+						expected_reflection
 					),
-				"Dynamic RGB layers must follow the production coupling formulas.",
+				"Dynamic RGB layers and reflections must follow the production coupling formulas.",
 				errors
 			)
 			_expect(
@@ -181,14 +312,88 @@ func _run() -> void:
 					and is_equal_approx(
 						float(spill_material.get_shader_parameter("flick_level")),
 						1.0
+					)
+					and is_equal_approx(
+						float(reflection_material.get_shader_parameter("reflection_level")),
+						1.0
 					),
-				"No local fixture may flick during the first minute.",
+				"No fixture or reflection may flick before the six-second minimum delay.",
 				errors
 			)
+
+			if reduced_motion:
+				_expect(
+					is_equal_approx(expected_core, 1.0)
+						and is_equal_approx(expected_halo, 1.0)
+						and is_equal_approx(expected_spill, 1.0)
+						and is_equal_approx(expected_reflection, 1.0),
+					"Reduced motion must leave every light and reflection intensity static.",
+					errors
+				)
+			elif motion != null and reflection_rects.size() == 18:
+				# Force source 17, the far-right lantern, rather than waiting for a
+				# random event. It owns 55% of the shared rightmost R8 band.
+				motion.set("flick_target_index", 17)
+				motion.set("flick_level", 0.40)
+				lab.call("_apply_local_light_flick")
+				var rightmost_rect: Rect2 = reflection_rects[17]
+				var expected_center := (
+					rightmost_rect.position + rightmost_rect.size * 0.5
+				) / Vector2(720.0, 1280.0)
+				var expected_half_size := (
+					rightmost_rect.size * 0.5 / Vector2(720.0, 1280.0)
+				)
+				var expected_reflection_flick := lerpf(
+					1.0,
+					0.40,
+					0.62 * 0.55
+				)
+				var expected_source_center := (
+					Vector2(fixture_centers[17]) / Vector2(720.0, 1280.0)
+				)
+				var actual_source_center: Vector2 = core_material.get_shader_parameter(
+					"flick_center"
+				)
+				var actual_center: Vector2 = reflection_material.get_shader_parameter(
+					"reflection_center"
+				)
+				var actual_half_size: Vector2 = reflection_material.get_shader_parameter(
+					"reflection_half_size"
+				)
+				_expect(
+					rightmost_rect.is_equal_approx(
+						Rect2(627.0, 514.0, 83.0, 387.0)
+					)
+						and actual_source_center.is_equal_approx(
+							expected_source_center
+						)
+						and is_equal_approx(
+							float(core_material.get_shader_parameter("flick_level")),
+							0.40
+						)
+						and is_equal_approx(
+							float(core_material.get_shader_parameter("flick_radius")),
+							float(core_flick_radii[17])
+						)
+						and actual_center.is_equal_approx(expected_center)
+						and actual_half_size.is_equal_approx(expected_half_size)
+						and is_equal_approx(
+							float(
+								reflection_material.get_shader_parameter(
+									"reflection_level"
+								)
+							),
+							expected_reflection_flick
+						),
+					"The far-right lantern must drive normalized R8 at 0.62 * 0.55 coupling.",
+					errors
+				)
 		_expect(
 			is_equal_approx(spill.modulate.a, stable_spill_alpha)
+				and is_equal_approx(halos.modulate.a, stable_halo_alpha)
+				and is_equal_approx(cores.modulate.a, stable_core_alpha)
 				and is_equal_approx(reflections.modulate.a, stable_reflection_alpha),
-			"Layer alpha and wet-pavement reflections must remain stable.",
+			"Every lighting layer alpha must remain stable while RGB intensity moves.",
 			errors
 		)
 

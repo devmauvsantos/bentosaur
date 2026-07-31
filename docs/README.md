@@ -33,18 +33,19 @@ recorded in this repository before work is treated as durable.
 3. [Mobile display quality contract](mobile-display-quality-contract-v001.md)
 4. [Home Village rain lab](home-village-rain-lab-v001.md)
 5. [Home Village Rain V002 checkpoint](checkpoints/2026-07-31-home-village-rain-v002.md)
-6. [Home Menu V007 random living light](checkpoints/2026-07-31-home-menu-v007-random-living-light.md)
-7. [Home Menu V006 guaranteed-light diagnostic](checkpoints/2026-07-31-home-menu-v006-guaranteed-light-diagnostic.md)
-8. [Home Menu V005 failed device test](checkpoints/2026-07-31-home-menu-v005-device-motion-test.md)
-9. [2D menu alternatives and idle proof](visual-explorations/2d-menu-alternatives-and-idle-proof-v3.md)
-10. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
-11. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
-12. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
-13. [Character production pipeline](character-production-pipeline-v1.md)
-14. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
-15. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
-16. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
-17. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
+6. [Home Menu V008 linked reflections and stable anime coverage](checkpoints/2026-07-31-home-menu-v008-linked-reflections-and-filter-coverage.md)
+7. [Home Menu V007 random living light](checkpoints/2026-07-31-home-menu-v007-random-living-light.md)
+8. [Home Menu V006 guaranteed-light diagnostic](checkpoints/2026-07-31-home-menu-v006-guaranteed-light-diagnostic.md)
+9. [Home Menu V005 failed device test](checkpoints/2026-07-31-home-menu-v005-device-motion-test.md)
+10. [2D menu alternatives and idle proof](visual-explorations/2d-menu-alternatives-and-idle-proof-v3.md)
+11. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
+12. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
+13. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
+14. [Character production pipeline](character-production-pipeline-v1.md)
+15. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
+16. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
+17. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
+18. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
 
 ## Active work queue
 
@@ -61,6 +62,11 @@ recorded in this repository before work is treated as durable.
 - [x] Lock native-resolution canvas, ultratall expansion, Metal, and ProMotion
   project settings.
 - [x] Add an automated mobile display-quality contract.
+- [x] Register every village light and synchronize its painted floor
+  reflection with the same pulse/flick state.
+- [x] Harden the anime post-process against iOS viewport and lifecycle drift.
+- [ ] Confirm V008 reflection motion and stable anime coverage on the physical
+  iPhone after it reconnects.
 - [ ] Outpaint and upscale the approved Home Village to its production
   `1440 × 3200` layered ultratall master.
 - [ ] Mau plays and approves or rejects the core loop.

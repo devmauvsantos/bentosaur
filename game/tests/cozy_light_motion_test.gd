@@ -2,7 +2,7 @@ extends SceneTree
 
 const MOTION := preload("res://scripts/vfx/cozy_light_motion.gd")
 const TEST_SECONDS := 360.0
-const TARGET_COUNT := 6
+const TARGET_COUNT := 18
 const TEST_SEED := 771901
 
 
@@ -50,15 +50,18 @@ func _assert_production_constants(errors: PackedStringArray) -> void:
 		errors
 	)
 	_expect(
-		MOTION.FIRST_FLICK_DELAY_RANGE == Vector2(60.0, 105.0)
-			and MOTION.FLICK_INTERVAL_RANGE == Vector2(60.0, 105.0),
-		"Fixture flicks must never be scheduled more than once per minute.",
+		MOTION.FIRST_FLICK_DELAY_RANGE == Vector2(6.0, 12.0)
+			and MOTION.FLICK_INTERVAL_RANGE == Vector2(14.0, 28.0),
+		(
+			"Fixture flicks must begin promptly, then recur at an irregular "
+			+ "cozy cadence."
+		),
 		errors
 	)
 	_expect(
 		MOTION.FLICK_COUNT_RANGE == Vector2i(1, 3)
 			and MOTION.FLICK_DIP_LEVEL_RANGE == Vector2(0.36, 0.56),
-		"Each rare event must choose one, two, or three readable flicks.",
+		"Each event must choose one, two, or three readable dips.",
 		errors
 	)
 
@@ -122,22 +125,22 @@ func _sample_motion(frame_rate: int, errors: PackedStringArray) -> Dictionary:
 		errors
 	)
 	_expect(
-		flick_times.size() >= 3 and flick_times.size() <= 6,
-		"Six minutes should contain only a small number of rare flick events.",
+		flick_times.size() >= 15 and flick_times.size() <= 19,
+		"Six minutes should contain a restrained but visibly living event cadence.",
 		errors
 	)
 	if not flick_times.is_empty():
 		_expect(
 			flick_times[0] >= MOTION.FIRST_FLICK_DELAY_RANGE.x
 				and flick_times[0] <= MOTION.FIRST_FLICK_DELAY_RANGE.y,
-			"The first fixture flick must wait at least one minute.",
+			"The first fixture flick must begin within the production wake-up window.",
 			errors
 		)
 	for event_index: int in range(flick_times.size()):
 		_expect(
 			flick_targets[event_index] >= 0
 				and flick_targets[event_index] < TARGET_COUNT,
-			"Every rare flick must target a known visible fixture.",
+			"Every flick must target one of the registered visible fixtures.",
 			errors
 		)
 		_expect(
@@ -157,7 +160,7 @@ func _sample_motion(frame_rate: int, errors: PackedStringArray) -> Dictionary:
 		_expect(
 			start_gap >= MOTION.FLICK_INTERVAL_RANGE.x
 				and start_gap <= MOTION.FLICK_INTERVAL_RANGE.y + 1.6,
-			"Flick starts must preserve the rare one-minute-plus cadence.",
+			"Flick starts must preserve the configured irregular cadence.",
 			errors
 		)
 

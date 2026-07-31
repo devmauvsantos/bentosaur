@@ -4,6 +4,7 @@
 // Preset 3 (Heavy transfer) approved for the home menu on 2026-07-31.
 
 shader_type canvas_item;
+render_mode blend_disabled, unshaded;
 
 uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap, repeat_disable;
 
