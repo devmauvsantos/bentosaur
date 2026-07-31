@@ -122,8 +122,9 @@ func _run() -> void:
 	var reflections := lab.get_node_or_null("Lighting/WarmReflections") as TextureRect
 	if spill != null and halos != null and cores != null and reflections != null:
 		lab.set_lights_enabled(true)
+		var stable_spill_alpha := spill.modulate.a
 		var stable_reflection_alpha := reflections.modulate.a
-		lab.call("_process", 2.5)
+		lab.call("_process", 8.0)
 		var spill_material := spill.material as ShaderMaterial
 		var halo_material := halos.material as ShaderMaterial
 		var core_material := cores.material as ShaderMaterial
@@ -139,59 +140,55 @@ func _run() -> void:
 			and halo_material != null
 			and core_material != null
 		):
+			var reduced_motion := OS.get_cmdline_user_args().has("--reduced-motion")
+			var motion: RefCounted = lab.get("_light_motion")
+			var expected_core := 1.0 if reduced_motion else float(motion.get("core_level"))
+			var expected_halo := 1.0 if reduced_motion else float(motion.get("halo_level"))
+			var expected_spill := lerpf(1.0, expected_core, 0.42)
 			_expect(
 				is_equal_approx(
 					float(core_material.get_shader_parameter("global_intensity")),
-					0.55
+					expected_core
 				)
 					and is_equal_approx(
 						float(halo_material.get_shader_parameter("global_intensity")),
-						0.6175
+						expected_halo
 					)
 					and is_equal_approx(
 						float(spill_material.get_shader_parameter("global_intensity")),
-						0.7075
+						expected_spill
 					),
-				"The two-second hold must reach the guaranteed RGB minima.",
+				"Dynamic RGB layers must follow the production coupling formulas.",
 				errors
 			)
-			lab.call("_process", 1.9)
 			_expect(
-				is_equal_approx(
-					float(core_material.get_shader_parameter("global_intensity")),
-					1.0
-				)
-					and is_equal_approx(
-						float(halo_material.get_shader_parameter("global_intensity")),
-						1.0
-					)
-					and is_equal_approx(
-						float(spill_material.get_shader_parameter("global_intensity")),
-						1.0
-					),
-				"The diagnostic breath must recover every emission layer fully.",
+				expected_core >= 0.78
+					and expected_core <= 1.0
+					and expected_halo >= expected_core
+					and expected_spill >= expected_halo,
+				"Light hierarchy must attenuate motion from core through broad spill.",
 				errors
 			)
-			lab.call("_process", 1.0)
 			_expect(
 				is_equal_approx(
 					float(core_material.get_shader_parameter("flick_level")),
-					0.12
+					1.0
 				)
 					and is_equal_approx(
 						float(halo_material.get_shader_parameter("flick_level")),
-						0.252
+						1.0
 					)
 					and is_equal_approx(
 						float(spill_material.get_shader_parameter("flick_level")),
-						0.56
+						1.0
 					),
-				"The 5.4-second frame must expose the fixed RGB double-flick dip.",
+				"No local fixture may flick during the first minute.",
 				errors
 			)
 		_expect(
-			is_equal_approx(reflections.modulate.a, stable_reflection_alpha),
-			"Wet-pavement reflections must remain stable during diagnostics.",
+			is_equal_approx(spill.modulate.a, stable_spill_alpha)
+				and is_equal_approx(reflections.modulate.a, stable_reflection_alpha),
+			"Layer alpha and wet-pavement reflections must remain stable.",
 			errors
 		)
 

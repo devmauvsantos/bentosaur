@@ -1,7 +1,6 @@
 # Home Menu V006 — Guaranteed Light Diagnostic
 
-Status: implemented, verified, installed, and launched on the reference iPhone;
-founder visibility confirmation pending
+Status: founder-confirmed compositor proof; superseded by V007 production motion
 
 Date: 2026-07-31
 
@@ -80,10 +79,10 @@ obvious in the integrated render rather than only in internal uniforms.
 - Strict code-sign verification passes.
 - The diagnostic installs and launches on Mauricio's iPhone 17 Pro Max.
 
-## Stop condition
+## Founder result
 
-Do not tune another number before Mau answers whether both the slow breath and
-the fixed double-flick are visible on this build. If either remains invisible,
-stop this shader path and inspect the physical-device render/lifecycle directly.
-If both are visible, remove the fixed diagnostic timeline and design the final
-irregular production profile using these proven RGB layer relationships.
+Mau confirmed that both the slow breath and the fixed double-flick were visible
+on the reference iPhone. The diagnostic therefore succeeded. Its fixed
+eight-second timeline is removed from the active build; V007 keeps the proven
+RGB compositor path and replaces the test motion with rare randomized living
+light.

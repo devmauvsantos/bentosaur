@@ -52,12 +52,15 @@ the physical iPhone and is rejected. Its denser shared roof-impact scheduler
 and sixteen stall-local anchors remain active for device review. See
 [Home Menu V005 failed device test](checkpoints/2026-07-31-home-menu-v005-device-motion-test.md).
 
-The active iPhone build is now V006: one intentionally excessive, deterministic
-eight-second diagnostic that explicitly scales core, halo, and attenuated
-indirect-spill RGB, then double-flicks the brightest left lantern. It is
-installed under the personal Apple team and exists only to prove visibility
-before final irregular production motion is authored. See
-[Home Menu V006 guaranteed-light diagnostic](checkpoints/2026-07-31-home-menu-v006-guaranteed-light-diagnostic.md).
+Mau confirmed V006's intentionally excessive breath and fixed double-flick were
+both visible on the physical iPhone. V007 therefore keeps the proven explicit
+RGB compositor path and replaces the diagnostic with irregular production
+motion: separated slow low/high bands, attenuated halo and spill inheritance,
+and rare randomized fixture events. Every event chooses one, two, or three
+flicks, waits at least one minute, selects only certainly visible fixtures, and
+cannot repeat the previous fixture. Reflections remain fixed. This V007 build
+is installed and running under the personal Apple team. See
+[Home Menu V007 random living light](checkpoints/2026-07-31-home-menu-v007-random-living-light.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`

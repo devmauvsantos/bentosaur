@@ -86,18 +86,24 @@ The V005 physical-device test widened the core range and accelerated the local
 flick, but its alpha-only core/halo output was still imperceptible on the
 reference iPhone. That lighting profile is rejected.
 
-The active V006 diagnostic repeats one fixed eight-second RGB-emission
-trajectory. Cores hold at 55%, halos at 61.75%, and the indirect spill at
-70.75% during the deliberately obvious minimum. At `5.3 s`, the brightest
-left lantern performs a fixed double-flick. This is a compositor proof, not
-final production motion; see the V006 checkpoint for exact timings.
+V006 then proved the corrected RGB-emission path on the reference iPhone. Mau
+confirmed its deliberately obvious slow breath and fixed double-flick were both
+visible through the final composite.
+
+The active V007 production profile alternates randomized `0.78–0.86` low core
+targets with `0.94–1.00` highs over uneven `4.8–11.5 s` journeys. Halos inherit
+72% of the excursion and indirect spill 42%. One certainly visible fixture
+receives a rare event no more than once per minute; each event independently
+chooses one, two, or three flicks and cannot repeat the previous fixture.
 
 In both profiles:
 
 - smooth interpolation avoids a visible sine loop;
 - wet-pavement reflections remain completely stable;
 - a spatial mask limits every flick to one registered window or lantern;
-- the diagnostic produces the same timeline at 30, 60, and 120 Hz.
+- seeded random schedules produce the same event times, targets, and burst
+  counts at 30, 60, and 120 Hz;
+- `--reduced-motion` holds emission steady after the normal light wake.
 
 ## Roof-impact detail
 
@@ -166,6 +172,15 @@ Reduced weather:
   --path game \
   res://scenes/labs/home_village_rain_lab.tscn \
   -- --reduced-weather
+```
+
+Reduced light motion:
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --path game \
+  res://scenes/labs/home_village_rain_lab.tscn \
+  -- --reduced-motion
 ```
 
 Silent visual capture:

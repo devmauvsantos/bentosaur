@@ -1,83 +1,89 @@
 extends SceneTree
 
 const MOTION := preload("res://scripts/vfx/cozy_light_motion.gd")
-const TEST_SECONDS := 16.0
-const TARGET_COUNT := 8
+const TEST_SECONDS := 360.0
+const TARGET_COUNT := 6
+const TEST_SEED := 771901
 
 
 func _initialize() -> void:
 	var errors := PackedStringArray()
-	_assert_diagnostic_constants(errors)
-	var reference := _sample_motion(60, errors)
+	_assert_production_constants(errors)
 	var at_30_hz := _sample_motion(30, errors)
+	var reference := _sample_motion(60, errors)
 	var at_120_hz := _sample_motion(120, errors)
 
 	_expect(
 		reference["flick_times"] == at_30_hz["flick_times"]
 			and reference["flick_times"] == at_120_hz["flick_times"],
-		"Diagnostic flick timing must be frame-rate independent.",
+		"Rare flick timing must be frame-rate independent.",
 		errors
 	)
 	_expect(
 		reference["flick_targets"] == at_30_hz["flick_targets"]
 			and reference["flick_targets"] == at_120_hz["flick_targets"],
-		"Every frame rate must use the same fixed visible lantern.",
+		"Every frame rate must select the same seeded fixture sequence.",
+		errors
+	)
+	_expect(
+		reference["flick_counts"] == at_30_hz["flick_counts"]
+			and reference["flick_counts"] == at_120_hz["flick_counts"],
+		"Every frame rate must select the same seeded 1-3 flick bursts.",
 		errors
 	)
 
 	_finish(errors)
 
 
-func _assert_diagnostic_constants(errors: PackedStringArray) -> void:
+func _assert_production_constants(errors: PackedStringArray) -> void:
 	_expect(
-		is_equal_approx(MOTION.CYCLE_SECONDS, 8.0)
-			and is_equal_approx(MOTION.FULL_HOLD_END, 0.80)
-			and is_equal_approx(MOTION.BREATHE_DOWN_END, 2.20)
-			and is_equal_approx(MOTION.LOW_HOLD_END, 3.00)
-			and is_equal_approx(MOTION.BREATHE_RECOVERY_END, 4.40),
-		"The diagnostic breath must keep its guaranteed eight-second trajectory.",
+		MOTION.PULSE_LOW_LEVEL_RANGE == Vector2(0.78, 0.86)
+			and MOTION.PULSE_HIGH_LEVEL_RANGE == Vector2(0.94, 1.0)
+			and MOTION.PULSE_LOW_DURATION_RANGE == Vector2(4.8, 8.6)
+			and MOTION.PULSE_HIGH_DURATION_RANGE == Vector2(5.4, 11.5),
+		"Living light must alternate visibly separated low and high bands.",
 		errors
 	)
 	_expect(
-		is_equal_approx(MOTION.CORE_MIN_LEVEL, 0.55)
-			and is_equal_approx(MOTION.HALO_PULSE_COUPLING, 0.85),
-		"The diagnostic breath minimum must remain unmistakable but unclipped.",
+		is_equal_approx(MOTION.HALO_PULSE_COUPLING, 0.72),
+		"Halos must inherit 72 percent of the core breathing trajectory.",
 		errors
 	)
 	_expect(
-		is_equal_approx(MOTION.FLICK_START, 5.30)
-			and is_equal_approx(MOTION.FLICK_END, 5.85)
-			and is_equal_approx(MOTION.FLICK_FIRST_DIP_LEVEL, 0.12)
-			and is_equal_approx(MOTION.FLICK_REBOUND_LEVEL, 0.55)
-			and is_equal_approx(MOTION.FLICK_SECOND_DIP_LEVEL, 0.20)
-			and MOTION.FIXED_FLICK_TARGET_INDEX == 0,
-		"The diagnostic must use the fixed double flick on the visible lantern.",
+		MOTION.FIRST_FLICK_DELAY_RANGE == Vector2(60.0, 105.0)
+			and MOTION.FLICK_INTERVAL_RANGE == Vector2(60.0, 105.0),
+		"Fixture flicks must never be scheduled more than once per minute.",
+		errors
+	)
+	_expect(
+		MOTION.FLICK_COUNT_RANGE == Vector2i(1, 3)
+			and MOTION.FLICK_DIP_LEVEL_RANGE == Vector2(0.36, 0.56),
+		"Each rare event must choose one, two, or three readable flicks.",
 		errors
 	)
 
 
 func _sample_motion(frame_rate: int, errors: PackedStringArray) -> Dictionary:
 	var motion := MOTION.new()
-	motion.reset(771901, TARGET_COUNT)
+	motion.reset(TEST_SEED, TARGET_COUNT)
 	var frame_delta := 1.0 / float(frame_rate)
 	var sample_count := int(TEST_SECONDS * frame_rate)
 	var flick_times := PackedFloat32Array()
 	var flick_targets := PackedInt32Array()
+	var flick_counts := PackedInt32Array()
 	var core_min := INF
 	var core_max := -INF
 	var halo_min := INF
 	var halo_max := -INF
 	var local_flick_min := 1.0
-	var local_flick_max := 1.0
 	var halo_coupling_error := 0.0
-	for frame: int in range(sample_count):
+	for _frame: int in range(sample_count):
 		motion.advance(frame_delta)
 		core_min = minf(core_min, motion.core_level)
 		core_max = maxf(core_max, motion.core_level)
 		halo_min = minf(halo_min, motion.halo_level)
 		halo_max = maxf(halo_max, motion.halo_level)
 		local_flick_min = minf(local_flick_min, motion.flick_level)
-		local_flick_max = maxf(local_flick_max, motion.flick_level)
 		halo_coupling_error = maxf(
 			halo_coupling_error,
 			absf(
@@ -92,40 +98,73 @@ func _sample_motion(frame_rate: int, errors: PackedStringArray) -> Dictionary:
 		if motion.flick_started_this_step:
 			flick_times.append(motion.last_flick_started_at)
 			flick_targets.append(motion.flick_target_index)
+			flick_counts.append(motion.flick_pulse_count)
 
 	_expect(
-		is_equal_approx(core_min, 0.55) and is_equal_approx(core_max, 1.0),
-		"Every diagnostic cycle must reach full and the 55-percent hold.",
+		core_min >= MOTION.PULSE_LOW_LEVEL_RANGE.x - 0.0001
+			and core_min <= MOTION.PULSE_LOW_LEVEL_RANGE.y + 0.0001
+			and core_max <= 1.0001
+			and core_max >= 0.99,
+		"Core RGB must visit the production low band without overshooting one.",
 		errors
 	)
 	_expect(
-		is_equal_approx(halo_min, 0.6175)
-			and is_equal_approx(halo_max, 1.0)
+		halo_min >= 0.8415
+			and halo_max <= 1.0001
 			and halo_coupling_error <= 0.000001,
-		"Halo RGB must inherit exactly 85 percent of the core trajectory.",
+		"Halo RGB must follow its attenuated, unclipped breathing formula.",
 		errors
 	)
 	_expect(
-		local_flick_min >= 0.1199
-			and local_flick_min <= 0.1201
-			and is_equal_approx(local_flick_max, 1.0),
-		"The fixed fixture must visibly hold at the 12-percent first dip.",
+		local_flick_min >= MOTION.FLICK_DIP_LEVEL_RANGE.x - 0.0001
+			and local_flick_min < 0.70,
+		"The sampled local RGB flick must remain bounded and readable.",
 		errors
 	)
 	_expect(
-		flick_times == PackedFloat32Array([5.3, 13.3]),
-		"Two cycles must report fixed flick starts at 5.3 and 13.3 seconds.",
+		flick_times.size() >= 3 and flick_times.size() <= 6,
+		"Six minutes should contain only a small number of rare flick events.",
 		errors
 	)
-	_expect(
-		flick_targets == PackedInt32Array([0, 0]),
-		"Both diagnostic flicks must target the brightest visible lantern.",
-		errors
-	)
+	if not flick_times.is_empty():
+		_expect(
+			flick_times[0] >= MOTION.FIRST_FLICK_DELAY_RANGE.x
+				and flick_times[0] <= MOTION.FIRST_FLICK_DELAY_RANGE.y,
+			"The first fixture flick must wait at least one minute.",
+			errors
+		)
+	for event_index: int in range(flick_times.size()):
+		_expect(
+			flick_targets[event_index] >= 0
+				and flick_targets[event_index] < TARGET_COUNT,
+			"Every rare flick must target a known visible fixture.",
+			errors
+		)
+		_expect(
+			flick_counts[event_index] >= MOTION.FLICK_COUNT_RANGE.x
+				and flick_counts[event_index] <= MOTION.FLICK_COUNT_RANGE.y,
+			"Every event must contain between one and three flicks.",
+			errors
+		)
+		if event_index == 0:
+			continue
+		_expect(
+			flick_targets[event_index] != flick_targets[event_index - 1],
+			"The same visible fixture must not flick twice in succession.",
+			errors
+		)
+		var start_gap := flick_times[event_index] - flick_times[event_index - 1]
+		_expect(
+			start_gap >= MOTION.FLICK_INTERVAL_RANGE.x
+				and start_gap <= MOTION.FLICK_INTERVAL_RANGE.y + 1.6,
+			"Flick starts must preserve the rare one-minute-plus cadence.",
+			errors
+		)
 
 	return {
 		"flick_times": flick_times,
 		"flick_targets": flick_targets,
+		"flick_counts": flick_counts,
 	}
 
 
@@ -136,7 +175,7 @@ func _expect(condition: bool, message: String, errors: PackedStringArray) -> voi
 
 func _finish(errors: PackedStringArray) -> void:
 	if errors.is_empty():
-		print("Device light diagnostic contract: PASS")
+		print("Production living-light motion contract: PASS")
 	else:
 		for error: String in errors:
 			push_error(error)

@@ -55,9 +55,9 @@ const RAIN_FRONT_TINT := Color(0.72, 0.82, 0.91, 1.0)
 const RAIN_SPLASH_TINT := Color(0.66, 0.78, 0.88, 0.50)
 const LIGHT_CORE_BASE_ALPHA := 0.99
 const LIGHT_HALO_BASE_ALPHA := 0.985
-const LIGHT_SPILL_PULSE_COUPLING := 0.65
-const LIGHT_HALO_FLICK_COUPLING := 0.85
-const LIGHT_SPILL_FLICK_COUPLING := 0.50
+const LIGHT_SPILL_PULSE_COUPLING := 0.42
+const LIGHT_HALO_FLICK_COUPLING := 0.78
+const LIGHT_SPILL_FLICK_COUPLING := 0.38
 const MUSIC_VOLUME_DB := -21.0
 const RAIN_AUDIO_VOLUME_DB := -22.0
 const RAIN_AUDIO_SILENT_DB := -60.0
@@ -72,11 +72,9 @@ const LIGHT_FLICK_CENTERS: Array[Vector2] = [
 	Vector2(93.0, 283.0),
 	Vector2(176.0, 256.0),
 	Vector2(184.0, 176.0),
-	Vector2(666.0, 222.0),
 	Vector2(421.0, 306.0),
 	Vector2(306.0, 322.0),
 	Vector2(183.0, 383.0),
-	Vector2(650.0, 382.0),
 ]
 const ROOF_SPLASH_ANCHORS: Array[Vector3] = [
 	Vector3(79.0, 126.0, 0.30),
@@ -124,6 +122,7 @@ var rain_audio_player: AudioStreamPlayer
 var _lights_awake := false
 var _rain_enabled := true
 var _reduced_weather := false
+var _reduced_motion := false
 var _deterministic_capture := false
 var _audio_enabled := true
 var _rain_audio_tween: Tween
@@ -161,7 +160,7 @@ func _exit_tree() -> void:
 
 
 func _process(delta: float) -> void:
-	if not _lights_awake:
+	if not _lights_awake or _reduced_motion:
 		return
 	_light_motion.advance(delta)
 	_apply_global_light_breathing()
@@ -215,6 +214,7 @@ func set_lights_enabled(enabled: bool) -> void:
 func _read_runtime_options() -> void:
 	var args := OS.get_cmdline_user_args()
 	_reduced_weather = args.has("--reduced-weather")
+	_reduced_motion = args.has("--reduced-motion")
 	_rain_enabled = not args.has("--rain-off")
 	_deterministic_capture = args.has("--deterministic-capture")
 	_audio_enabled = not args.has("--audio-off")
