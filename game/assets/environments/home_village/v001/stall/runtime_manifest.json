@@ -1,0 +1,46 @@
+{
+  "asset_id": "env.home_village.stall.runtime.v001",
+  "status": "gate_1_candidate",
+  "canvas": {
+    "width": 720,
+    "height": 1280
+  },
+  "registration": {
+    "position": [
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1
+    ],
+    "visible_bounds": [
+      114,
+      197,
+      492,
+      875
+    ]
+  },
+  "source": {
+    "path": "art/source-assets/home-menu/stall/v001/generated/stall_structure_unlit_registered_1440x2560_v001.png",
+    "sha256": "12e57633afb69437675cad1763944be0ab9ea8b39f959c4ff87fe9b650d9218c"
+  },
+  "assets": [
+    {
+      "role": "complete_empty_stall_behind_owner",
+      "output": "game/assets/environments/home_village/v001/stall/stall_structure_unlit_720x1280.png",
+      "sha256": "f7ff775402605813639cfad2cd846c52996d2f59c036db712f9d0a33ff43e27c"
+    },
+    {
+      "role": "counter_and_facade_owner_occluder",
+      "output": "game/assets/environments/home_village/v001/stall/stall_counter_occluder_720x1280.png",
+      "sha256": "a06180932f3b16441f8ec775188b269f33d0480205e8689511e56df6ce5b5cd5",
+      "mask_region": [
+        0,
+        675,
+        720,
+        605
+      ]
+    }
+  ]
+}

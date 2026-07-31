@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/labs/home_village_rain_lab.tscn" id="1_home"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/stall_structure_unlit_720x1280.png" id="2_stall"]
+
+[node name="HomeMenuStallLab" type="Node2D"]
+
+[node name="HomeVillageRainLab" parent="." instance=ExtResource("1_home")]
+
+[node name="StallStructure" type="TextureRect" parent="."]
+z_index = 15
+offset_right = 720.0
+offset_bottom = 1280.0
+mouse_filter = 2
+texture = ExtResource("2_stall")
+expand_mode = 1
