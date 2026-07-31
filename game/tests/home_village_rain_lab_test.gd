@@ -66,16 +66,18 @@ func _run() -> void:
 		rain_back != null
 			and rain_back.amount == expected_back
 			and rain_back.texture != null
-			and rain_back.emitting,
-		"Back-rain field must be visible and match its density contract.",
+			and rain_back.emitting
+			and rain_back.modulate.a > 0.30,
+		"Back rain must be visible from frame one and match its density contract.",
 		errors
 	)
 	_expect(
 		rain_front != null
 			and rain_front.amount == expected_front
 			and rain_front.texture != null
-			and rain_front.emitting,
-		"Front-rain field must be visible and match its density contract.",
+			and rain_front.emitting
+			and rain_front.modulate.a > 0.50,
+		"Front rain must be visible from frame one and match its density contract.",
 		errors
 	)
 	_expect(

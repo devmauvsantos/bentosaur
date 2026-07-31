@@ -10,6 +10,7 @@ Captured from the isolated Godot lab scene on 2026-07-31.
 - Fixed particle seeds: enabled for reproducible review
 - Scene: `res://scenes/labs/home_village_rain_lab.tscn`
 - State: full rain density, registered lights awake
+- Opening contract: rain present from frame one; only lighting fades in
 
 Files:
 

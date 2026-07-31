@@ -236,23 +236,6 @@ func _begin_wake_sequence() -> void:
 	).set_delay(0.32).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	lights_tween.finished.connect(func() -> void: _lights_awake = true)
 
-	if _rain_enabled:
-		rain_back.modulate.a = 0.0
-		rain_front.modulate.a = 0.0
-		var rain_tween := create_tween().set_parallel(true)
-		rain_tween.tween_property(
-			rain_back,
-			"modulate:a",
-			RAIN_BACK_ALPHA,
-			0.78
-		).set_delay(0.34).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-		rain_tween.tween_property(
-			rain_front,
-			"modulate:a",
-			RAIN_FRONT_ALPHA,
-			0.92
-		).set_delay(0.48).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-
 
 func _make_fullscreen_texture(
 	node_name: String,

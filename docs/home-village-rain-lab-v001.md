@@ -47,7 +47,8 @@ the depth of the wet square. It does not alter the approved background pixels.
   stable.
 - Lantern/window cores receive only a very small continuous luminance drift.
 - Halos inherit a lower-amplitude version of the same drift.
-- Rain fades in after the village lights begin waking.
+- Rain is already established on the first rendered frame; the village lights
+  wake through the rainfall.
 - `--reduced-weather` halves the active rain budget.
 - `--deterministic-capture` fixes particle seeds for reproducible visual QA.
 - `R` toggles rain in the desktop lab; `L` toggles registered lighting.
