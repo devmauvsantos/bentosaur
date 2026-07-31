@@ -1,0 +1,87 @@
+{
+  "pack_id": "home-menu-stall-lantern-gate02-v003",
+  "status": "candidate_pending_founder_approval",
+  "approval_gate": "G02_STALL_LIGHTING",
+  "coordinate_contract": {
+    "source_canvas_px": [1440, 2560],
+    "runtime_canvas_px": [720, 1280],
+    "origin": "top_left_x_right_y_down",
+    "stage_path": "StallStage",
+    "stage_scale": 0.86,
+    "stage_pivot_px": [360, 634]
+  },
+  "references": [
+    {
+      "path": "art/concepts/2d-chibi/v4/01_menu-refinement/bentosaur-home-menu-refined-classic-guestbook-v2.png",
+      "sha256": "03f1ab3a7b5d11cca1bfd077e6be27bc4008aff64e940a2fa5b31e9cca7f52b9",
+      "size_px": [941, 1672]
+    }
+  ],
+  "provenance": {
+    "tool": "OpenAI built-in image generation",
+    "operation": "reference-guided generate, chroma extraction, deterministic component assembly",
+    "prompt": "art/source-assets/home-menu/stall/v003-lantern-lighting/prompts/hanging-lantern-layers-v001.md",
+    "chroma_key": "#ff00ff",
+    "builder": "tools/art/build_stall_lantern_gate_v003.py",
+    "generated_at": "2026-07-31"
+  },
+  "generated_sources": [
+    {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/generated/lantern-modular-sheet-chroma-candidate-v001.png",
+      "sha256": "45734109562420d5baaa47f57e0dd66fa87cbd4d802c0d75466cd4daa6b0bb62",
+      "size_px": [1774, 887]
+    },
+    {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/generated/lantern-modular-sheet-cutout-candidate-v001.png",
+      "sha256": "cf66d6b009ffa5a434afdb8194f92c2f1b4c838807989bd0c8653a4d2f9ae229",
+      "size_px": [1774, 887]
+    }
+  ],
+  "components": [
+    {
+      "id": "stall-lantern-anchor",
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/components/stall_lantern_anchor_candidate_v001.png",
+      "sha256": "8d980fc51044a93f93baa6402fe849538e5d48e8a4900d53d4a93f404624306d",
+      "size_px": [160, 131],
+      "motion": "fixed"
+    },
+    {
+      "id": "stall-lantern-body-off",
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/components/stall_lantern_body_off_candidate_v001.png",
+      "sha256": "dc25b05f662ca581d8ac9e8b25e66b7cc9d1ccb9146e1cf93078a3412709699e",
+      "size_px": [282, 657],
+      "motion": "sway-from-top-ring"
+    },
+    {
+      "id": "stall-lantern-core-add",
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/components/stall_lantern_core_candidate_v001.png",
+      "sha256": "b1e695c4016cbb668ae1355f2b7f9f0e591bff65b4730352b61fb189d4d51949",
+      "size_px": [215, 270],
+      "motion": "follows-body"
+    }
+  ],
+  "registration": {
+    "body_width_px_720": 75,
+    "body_top_left_px_720": [[97, 425], [546, 425]],
+    "anchor_top_y_px_720": 392
+  },
+  "state_set": {
+    "off": ["stall-lantern-anchor", "stall-lantern-body-off"],
+    "on": [
+      "stall-lantern-anchor",
+      "stall-lantern-body-off",
+      "stall-lantern-core-add",
+      "stall-lantern-halo-add",
+      "stall-lantern-warm-spill-add"
+    ],
+    "geometry_changes_on_toggle": false
+  },
+  "pending": [
+    "founder visual approval",
+    "runtime trimmed derivatives",
+    "Godot fixture scene and controller",
+    "final registered wet-reflection masks",
+    "physical iPhone review"
+  ]
+}
+

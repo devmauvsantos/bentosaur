@@ -1,0 +1,68 @@
+{
+  "pack_id": "home-menu-stall-lantern-gate02-v003",
+  "status": "candidate_pending_founder_approval",
+  "runtime_canvas": [
+    720,
+    1280
+  ],
+  "body_runtime_width": 75,
+  "body_top_lefts": [
+    [
+      97,
+      425
+    ],
+    [
+      546,
+      425
+    ]
+  ],
+  "anchor_top_y": 392,
+  "state_contract": {
+    "off": [
+      "anchors",
+      "bodies_off"
+    ],
+    "on": [
+      "anchors",
+      "bodies_off",
+      "cores_add",
+      "halos_add",
+      "warm_spill_add"
+    ],
+    "geometry_changes_on_power_toggle": false
+  },
+  "outputs": {
+    "anchors": {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/registered/stall_lantern_anchors_registered_candidate_v001.png",
+      "sha256": "2bbe3eeadce7c5cd5ecab52ba535e7b9e259ab30c6d12da7c816455f45314317"
+    },
+    "bodies_off": {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/registered/stall_lantern_bodies_off_registered_candidate_v001.png",
+      "sha256": "4b3881fe77108f483e875d4465e379a76984618c6e2897ff1f2d70857e665825"
+    },
+    "cores_add": {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/registered/stall_lantern_cores_add_registered_candidate_v001.png",
+      "sha256": "d3d5670c1280366fc02ca138653834f1715f0bd5653b53856728191c41307aeb"
+    },
+    "halos_add": {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/registered/stall_lantern_halos_add_registered_candidate_v001.png",
+      "sha256": "ebde8c17df9eab3e396a7470073c2f6d012b0836fa59afd3b73d7c3024209a6e"
+    },
+    "warm_spill_add": {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/registered/stall_lantern_warm_spill_add_registered_candidate_v001.png",
+      "sha256": "ac5a0e86a84b93cc5f792ccc9751ecdcc898a78092dbd9765b95d73066751470"
+    },
+    "off_review": {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-off-registered-composite-v001.png",
+      "sha256": "d0b50b0b00cfe64b432497ed31cae43c290e42ba7bc1865a07ea8d9e8e61c02f"
+    },
+    "on_review": {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-on-registered-composite-v001.png",
+      "sha256": "a11ad3ee8689ca72ea473f85545390f425b096aa74542638c96a0fdc56d19519"
+    },
+    "approval_board": {
+      "path": "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-off-on-approval-board-v001.png",
+      "sha256": "5c3f1ed8a8453527cea82aa6df63b65ad0342c15d636715d84a87635a7d092ac"
+    }
+  }
+}

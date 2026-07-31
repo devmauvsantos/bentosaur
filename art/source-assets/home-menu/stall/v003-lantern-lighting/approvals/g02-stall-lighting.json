@@ -1,0 +1,18 @@
+{
+  "gate_id": "G02_STALL_LIGHTING",
+  "scope": [
+    "stall-lantern-anchor",
+    "stall-lantern-body-off",
+    "stall-lantern-core-add",
+    "stall-lantern-halo-add",
+    "stall-lantern-warm-spill-add"
+  ],
+  "technical_state": "pass",
+  "human_state": "pending",
+  "decided_at": null,
+  "evidence": [
+    "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-off-on-approval-board-v001.png",
+    "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-off-registered-composite-v001.png",
+    "art/source-assets/home-menu/stall/v003-lantern-lighting/reviews/stall-lantern-on-registered-composite-v001.png"
+  ]
+}
