@@ -68,14 +68,29 @@ Particle ceilings at full density:
 ## Audio trial contract
 
 - `Late Night Radio` by Kevin MacLeod loops continuously on the `Music` bus at
-  `-19 dB`.
-- `Gentle Rain 01` by DRAGON-STUDIO loops on the `Weather` bus at `-19 dB`.
+  `-21 dB`.
+- `Gentle Rain 01` by DRAGON-STUDIO loops on the `Weather` bus at `-22 dB`.
 - Rain audio starts whenever visible rain starts.
 - Pressing `R` fades the rain channel over 240 ms, pauses it, and hides the
   visual weather. Pressing `R` again resumes the same ambience position and
   fades it back in with the weather.
 - Music continues when rain is disabled.
 - `--audio-off` disables both channels for silent automated captures.
+
+## Living-light motion
+
+- Light cores breathe between randomized targets over irregular `3.8–10.5 s`
+  segments; the motion is smoothly interpolated and never loops as a visible
+  sine wave.
+- Halos inherit only 55% of the cores' sub-one-percent breathing amplitude.
+  Indirect spill and wet-pavement reflections remain completely stable after
+  their wake fade, so the whole village never appears to dim in unison.
+- A brief dip-and-rebound flick may occur every `60–105 s`. It is spatially
+  masked to one randomly selected registered window or lantern; it never
+  brownouts the aggregate light map. The scheduler guarantees no more than one
+  flick per minute and produces the same event timeline at 30, 60, or 120 Hz.
+- Deterministic captures use a fixed light-motion seed; normal play randomizes
+  the sequence at launch.
 
 ## Roof-impact detail
 

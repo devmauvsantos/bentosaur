@@ -1,6 +1,12 @@
 extends SceneTree
 
 const LAB_PATH := "res://scenes/labs/home_menu_stall_lab.tscn"
+const STALL_DEPTH_SHADER := preload(
+	"res://assets/vfx/lighting/stall_depth_falloff.gdshader"
+)
+const STALL_DEPTH_MATERIAL_PATH := (
+	"res://assets/vfx/lighting/stall_depth_falloff_material.tres"
+)
 const COUNTER_OCCLUDER_PATH := (
 	"res://assets/environments/home_village/v001/stall/"
 	+ "stall_counter_occluder_720x1280.png"
@@ -63,6 +69,45 @@ func _run() -> void:
 		_expect(stall.size == CANVAS_SIZE, "Stall must cover the registered canvas.", errors)
 		_expect(stall.scale == Vector2.ONE, "Stall must not be repositioned by scale.", errors)
 		_expect(stall.z_index == 15, "Stall must render at global z 15.", errors)
+		var depth_material := stall.material as ShaderMaterial
+		_expect(depth_material != null, "Stall must have its subtle depth material.", errors)
+		if depth_material != null:
+			_expect(
+				depth_material.resource_path == STALL_DEPTH_MATERIAL_PATH,
+				"Stall depth must come from the reusable shared material.",
+				errors
+			)
+			_expect(
+				depth_material.shader == STALL_DEPTH_SHADER,
+				"Stall must use the approved depth-falloff shader.",
+				errors
+			)
+			_expect(
+				is_equal_approx(
+					float(depth_material.get_shader_parameter("shadow_strength")),
+					0.075
+				),
+				"Lower-stall shadow must remain below an 8% influence.",
+				errors
+			)
+			_expect(
+				is_equal_approx(
+					float(depth_material.get_shader_parameter("shadow_start")),
+					0.52
+				)
+					and is_equal_approx(
+						float(depth_material.get_shader_parameter("shadow_end")),
+						0.88
+					),
+				"Stall depth must affect only the lower authored surface.",
+				errors
+			)
+			var shadow_tint: Color = depth_material.get_shader_parameter("shadow_tint")
+			_expect(
+				shadow_tint.is_equal_approx(Color(0.64, 0.72, 0.84, 1.0)),
+				"Stall depth tint must remain a cool scene-derived blue.",
+				errors
+			)
 
 	if village != null:
 		var background := village.get_node_or_null("BackgroundUnlit") as TextureRect
@@ -87,6 +132,9 @@ func _run() -> void:
 			errors
 		)
 
+	lab.queue_free()
+	await process_frame
+	await create_timer(0.10).timeout
 	_finish(errors)
 
 

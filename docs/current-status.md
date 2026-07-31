@@ -37,7 +37,15 @@ The Home Village lighting and rain proof is now a founder-approved visual
 checkpoint. Rain remains active from frame one, registered lights wake through
 it, and the weather uses a softer normal-alpha treatment instead of bright
 white streaks over the scene. Music and rain ambience both play through
-separate buses at the device-tuned `-19 dB` gain; iOS Silent Mode is respected.
+separate buses at the device-tuned `-21 dB` music and `-22 dB` rain gains; iOS
+Silent Mode is respected.
+
+Atmosphere polish now adds irregular sub-one-percent core/halo breathing, a
+single-fixture flick every `60–105 s`, and a measured barely-there lower-stall
+depth falloff. Broad warm spill and pavement reflections remain stable. A
+controlled 90-second A/B proves anime preset 3 remains active; any perceived
+weakening on Retina is not a timed shader fade. See
+[Home Menu V004 atmosphere checkpoint](checkpoints/2026-07-31-home-menu-v004-atmosphere-polish.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`

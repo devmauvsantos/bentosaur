@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/labs/home_village_rain_lab.tscn" id="1_home"]
 [ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/stall_structure_unlit_720x1280.png" id="2_stall"]
 [ext_resource type="Script" path="res://scripts/layout/aspect_contain_stage.gd" id="3_contain"]
+[ext_resource type="Material" path="res://assets/vfx/lighting/stall_depth_falloff_material.tres" id="4_depth_material"]
 
 [node name="HomeMenuStallLab" type="Node2D"]
 
@@ -14,6 +15,7 @@ framing_scale = 0.86
 framing_pivot = Vector2(360, 634)
 
 [node name="StallStructure" type="TextureRect" parent="StallStage"]
+material = ExtResource("4_depth_material")
 z_index = 15
 offset_right = 720.0
 offset_bottom = 1280.0

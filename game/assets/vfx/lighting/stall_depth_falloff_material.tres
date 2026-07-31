@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://assets/vfx/lighting/stall_depth_falloff.gdshader" id="1_depth"]
+
+[resource]
+shader = ExtResource("1_depth")
+shader_parameter/shadow_strength = 0.075
+shader_parameter/shadow_start = 0.52
+shader_parameter/shadow_end = 0.88
+shader_parameter/shadow_tint = Color(0.64, 0.72, 0.84, 1)

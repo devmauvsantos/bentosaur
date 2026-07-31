@@ -1,6 +1,9 @@
 extends SceneTree
 
 const LAB_PATH := "res://scenes/labs/home_village_rain_lab.tscn"
+const REGISTERED_LIGHT_MOTION_SHADER := preload(
+	"res://assets/vfx/lighting/registered_light_motion.gdshader"
+)
 
 
 func _initialize() -> void:
@@ -47,8 +50,8 @@ func _run() -> void:
 		)
 		_expect(music.bus == "Music", "Music must use the Music bus.", errors)
 		_expect(
-			is_equal_approx(music.volume_db, -19.0),
-			"Music must use the device-tuned -19 dB balance.",
+			is_equal_approx(music.volume_db, -21.0),
+			"Music must use the device-tuned -21 dB balance.",
 			errors
 		)
 		_expect(
@@ -66,8 +69,8 @@ func _run() -> void:
 		)
 		_expect(rain_audio.bus == "Weather", "Rain ambience must use the Weather bus.", errors)
 		_expect(
-			is_equal_approx(rain_audio.volume_db, -19.0),
-			"Rain ambience must remain a quiet bed at -19 dB.",
+			is_equal_approx(rain_audio.volume_db, -22.0),
+			"Rain ambience must remain a quiet bed at -22 dB.",
 			errors
 		)
 		_expect(
@@ -76,12 +79,7 @@ func _run() -> void:
 			errors
 		)
 
-	for layer_name: String in [
-		"IndirectWarmSpill",
-		"LightHalos",
-		"LightCores",
-		"WarmReflections",
-	]:
+	for layer_name: String in ["IndirectWarmSpill", "WarmReflections"]:
 		var layer := lab.get_node_or_null("Lighting/%s" % layer_name) as TextureRect
 		_expect(layer != null, "Missing lighting layer %s." % layer_name, errors)
 		if layer != null:
@@ -92,6 +90,41 @@ func _run() -> void:
 				"%s must use additive blending." % layer_name,
 				errors
 			)
+
+	for layer_name: String in ["LightHalos", "LightCores"]:
+		var layer := lab.get_node_or_null("Lighting/%s" % layer_name) as TextureRect
+		_expect(layer != null, "Missing lighting layer %s." % layer_name, errors)
+		if layer != null:
+			var layer_material := layer.material as ShaderMaterial
+			_expect(
+				layer_material != null
+					and layer_material.shader == REGISTERED_LIGHT_MOTION_SHADER,
+				"%s must use the localized additive light-motion shader." % layer_name,
+				errors
+			)
+			if layer_material != null:
+				var aspect_scale: Vector2 = layer_material.get_shader_parameter(
+					"uv_aspect_scale"
+				)
+				_expect(
+					aspect_scale.is_equal_approx(Vector2(1.0, 1280.0 / 720.0)),
+					"%s flick mask must stay circular in artwork pixels." % layer_name,
+					errors
+				)
+
+	var spill := lab.get_node_or_null("Lighting/IndirectWarmSpill") as TextureRect
+	var reflections := lab.get_node_or_null("Lighting/WarmReflections") as TextureRect
+	if spill != null and reflections != null:
+		lab.set_lights_enabled(true)
+		var stable_spill_alpha := spill.modulate.a
+		var stable_reflection_alpha := reflections.modulate.a
+		lab.call("_process", 12.0)
+		_expect(
+			is_equal_approx(spill.modulate.a, stable_spill_alpha)
+				and is_equal_approx(reflections.modulate.a, stable_reflection_alpha),
+			"Broad spill and pavement reflections must remain stable after wake.",
+			errors
+		)
 
 	var rain_back := lab.get_node_or_null("Weather/RainBack") as GPUParticles2D
 	var rain_front := lab.get_node_or_null("Weather/RainFront") as GPUParticles2D

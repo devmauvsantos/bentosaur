@@ -1,6 +1,8 @@
 extends Node2D
 
 const VIEWPORT_SIZE := Vector2(720.0, 1280.0)
+const LIGHT_UV_ASPECT_SCALE := Vector2(1.0, 1280.0 / 720.0)
+const COZY_LIGHT_MOTION := preload("res://scripts/vfx/cozy_light_motion.gd")
 
 const BACKGROUND_TEXTURE: Texture2D = preload(
 	"res://assets/environments/home_village/v001/background_unlit_720x1280.png"
@@ -39,6 +41,9 @@ const LATE_NIGHT_RADIO_STREAM: AudioStreamMP3 = preload(
 const GENTLE_RAIN_STREAM: AudioStreamMP3 = preload(
 	"res://assets/audio/ambience/gentle_rain_01_dragon_studio.mp3"
 )
+const REGISTERED_LIGHT_MOTION_SHADER: Shader = preload(
+	"res://assets/vfx/lighting/registered_light_motion.gdshader"
+)
 
 const RAIN_BACK_ALPHA := 0.23
 const RAIN_FRONT_ALPHA := 0.37
@@ -47,8 +52,8 @@ const RAIN_FRONT_TINT := Color(0.72, 0.82, 0.91, 1.0)
 const RAIN_SPLASH_TINT := Color(0.66, 0.78, 0.88, 0.50)
 const LIGHT_CORE_BASE_ALPHA := 0.99
 const LIGHT_HALO_BASE_ALPHA := 0.985
-const MUSIC_VOLUME_DB := -19.0
-const RAIN_AUDIO_VOLUME_DB := -19.0
+const MUSIC_VOLUME_DB := -21.0
+const RAIN_AUDIO_VOLUME_DB := -22.0
 const RAIN_AUDIO_SILENT_DB := -60.0
 const RAIN_AUDIO_FADE_SECONDS := 0.24
 const ROOF_SPLASH_TINT := Color(0.66, 0.79, 0.90, 1.0)
@@ -56,6 +61,18 @@ const ROOF_SPLASH_ALPHA_RANGE := Vector2(0.42, 0.54)
 const ROOF_SPLASH_INTERVAL := Vector2(0.62, 1.45)
 const ROOF_SPLASH_INTERVAL_REDUCED := Vector2(1.45, 3.20)
 const ROOF_SPLASH_FRAME_SECONDS := 0.036
+const LIGHT_FLICK_CENTERS: Array[Vector2] = [
+	Vector2(93.0, 283.0),
+	Vector2(176.0, 256.0),
+	Vector2(184.0, 176.0),
+	Vector2(666.0, 222.0),
+	Vector2(421.0, 306.0),
+	Vector2(306.0, 322.0),
+	Vector2(183.0, 383.0),
+	Vector2(281.0, 382.0),
+	Vector2(424.0, 382.0),
+	Vector2(650.0, 382.0),
+]
 const ROOF_SPLASH_ANCHORS: Array[Vector3] = [
 	Vector3(79.0, 126.0, 0.30),
 	Vector3(121.0, 115.0, 0.32),
@@ -99,14 +116,15 @@ var roof_drop_timer: Timer
 var music_player: AudioStreamPlayer
 var rain_audio_player: AudioStreamPlayer
 
-var _elapsed := 0.0
 var _lights_awake := false
 var _rain_enabled := true
 var _reduced_weather := false
 var _deterministic_capture := false
 var _audio_enabled := true
 var _rain_audio_tween: Tween
+var _lights_wake_tween: Tween
 var _roof_drop_rng := RandomNumberGenerator.new()
+var _light_motion: RefCounted = COZY_LIGHT_MOTION.new()
 var _last_roof_anchor_index := -1
 
 
@@ -114,8 +132,10 @@ func _ready() -> void:
 	_read_runtime_options()
 	if _deterministic_capture:
 		_roof_drop_rng.seed = 93011
+		_light_motion.reset(93012, LIGHT_FLICK_CENTERS.size())
 	else:
 		_roof_drop_rng.randomize()
+		_light_motion.reset(-1, LIGHT_FLICK_CENTERS.size())
 	_build_audio()
 	_build_environment()
 	_build_weather()
@@ -125,6 +145,8 @@ func _ready() -> void:
 func _exit_tree() -> void:
 	if _rain_audio_tween != null and _rain_audio_tween.is_valid():
 		_rain_audio_tween.kill()
+	if _lights_wake_tween != null and _lights_wake_tween.is_valid():
+		_lights_wake_tween.kill()
 	for player: AudioStreamPlayer in [music_player, rain_audio_player]:
 		if player == null:
 			continue
@@ -133,17 +155,12 @@ func _exit_tree() -> void:
 
 
 func _process(delta: float) -> void:
-	_elapsed += delta
 	if not _lights_awake:
 		return
-	var core_flicker := (
-		1.0
-		+ 0.008 * sin(_elapsed * 2.1)
-		+ 0.004 * sin(_elapsed * 5.7 + 1.2)
-	)
-	var halo_flicker := 1.0 + 0.004 * sin(_elapsed * 2.1 + 0.35)
-	light_cores.modulate.a = LIGHT_CORE_BASE_ALPHA * core_flicker
-	light_halos.modulate.a = LIGHT_HALO_BASE_ALPHA * halo_flicker
+	_light_motion.advance(delta)
+	light_cores.modulate.a = LIGHT_CORE_BASE_ALPHA * _light_motion.core_level
+	light_halos.modulate.a = LIGHT_HALO_BASE_ALPHA * _light_motion.halo_level
+	_apply_local_light_flick()
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -171,6 +188,9 @@ func set_rain_enabled(enabled: bool) -> void:
 
 
 func set_lights_enabled(enabled: bool) -> void:
+	if _lights_wake_tween != null and _lights_wake_tween.is_valid():
+		_lights_wake_tween.kill()
+	_lights_wake_tween = null
 	_lights_awake = enabled
 	indirect_warm_spill.modulate.a = 1.0 if enabled else 0.0
 	light_halos.modulate.a = LIGHT_HALO_BASE_ALPHA if enabled else 0.0
@@ -302,6 +322,8 @@ func _build_environment() -> void:
 		LIGHT_CORES_TEXTURE,
 		true
 	)
+	_set_local_light_motion_material(light_halos, 0.105)
+	_set_local_light_motion_material(light_cores, 0.060)
 	warm_reflections = _make_fullscreen_texture(
 		"WarmReflections",
 		WARM_REFLECTIONS_TEXTURE,
@@ -458,32 +480,68 @@ func _spawn_roof_splash() -> void:
 
 
 func _begin_wake_sequence() -> void:
-	var lights_tween := create_tween().set_parallel(true)
-	lights_tween.tween_property(
+	if _lights_wake_tween != null and _lights_wake_tween.is_valid():
+		_lights_wake_tween.kill()
+	_lights_wake_tween = create_tween().set_parallel(true)
+	_lights_wake_tween.tween_property(
 		indirect_warm_spill,
 		"modulate:a",
 		1.0,
 		1.15
 	).set_delay(0.08).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	lights_tween.tween_property(
+	_lights_wake_tween.tween_property(
 		warm_reflections,
 		"modulate:a",
 		1.0,
 		1.25
 	).set_delay(0.16).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	lights_tween.tween_property(
+	_lights_wake_tween.tween_property(
 		light_halos,
 		"modulate:a",
 		LIGHT_HALO_BASE_ALPHA,
 		0.82
 	).set_delay(0.24).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	lights_tween.tween_property(
+	_lights_wake_tween.tween_property(
 		light_cores,
 		"modulate:a",
 		LIGHT_CORE_BASE_ALPHA,
 		0.66
 	).set_delay(0.32).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	lights_tween.finished.connect(func() -> void: _lights_awake = true)
+	_lights_wake_tween.finished.connect(
+		func() -> void:
+			_lights_awake = true
+			_lights_wake_tween = null
+	)
+
+
+func _set_local_light_motion_material(layer: TextureRect, radius: float) -> void:
+	var material := ShaderMaterial.new()
+	material.shader = REGISTERED_LIGHT_MOTION_SHADER
+	material.set_shader_parameter("flick_radius", radius)
+	material.set_shader_parameter("flick_level", 1.0)
+	material.set_shader_parameter("uv_aspect_scale", LIGHT_UV_ASPECT_SCALE)
+	layer.material = material
+
+
+func _apply_local_light_flick() -> void:
+	var center := (
+		LIGHT_FLICK_CENTERS[_light_motion.flick_target_index]
+		/ VIEWPORT_SIZE
+	)
+	var core_material := light_cores.material as ShaderMaterial
+	var halo_material := light_halos.material as ShaderMaterial
+	if core_material != null:
+		core_material.set_shader_parameter("flick_center", center)
+		core_material.set_shader_parameter(
+			"flick_level",
+			_light_motion.flick_level
+		)
+	if halo_material != null:
+		halo_material.set_shader_parameter("flick_center", center)
+		halo_material.set_shader_parameter(
+			"flick_level",
+			lerpf(1.0, _light_motion.flick_level, 0.72)
+		)
 
 
 func _make_fullscreen_texture(

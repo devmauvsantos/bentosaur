@@ -125,6 +125,14 @@ Before the environment ships:
 7. Reapprove both 9:16 and ultratall captures before replacing the current
    visual checkpoint.
 
+This is a vertical-canvas problem, not a request for additional side scenery.
+For the current composition, widening the raster while retaining aspect-cover
+would still scale it to the phone's height and crop the sides. The practical
+master is `1440 × 3200`: preserve the approved `1440 × 2560` region at the top,
+add `640 px` of wet pavement below it, and transparently pad all registered
+lighting maps to the identical canvas. The unlit extended master remains the
+first founder approval gate; lighting cannot be promoted ahead of it.
+
 This is an asset-resolution gate, not a reason to reject the approved image.
 The current image remains the composition and color authority.
 

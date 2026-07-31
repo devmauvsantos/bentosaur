@@ -64,13 +64,13 @@ The source tracks have very different measured loudness:
 
 | Source | Integrated loudness | Runtime player gain |
 |---|---:|---:|
-| Late Night Radio | -13.18 LUFS | -19 dB |
-| Gentle Rain 01 | -27.43 LUFS | -19 dB |
+| Late Night Radio | -13.18 LUFS | -21 dB |
+| Gentle Rain 01 | -27.43 LUFS | -22 dB |
 
 This intentionally keeps the rain as a quiet bed behind the radio instead of
 letting the broad-band ambience dominate the village. Both channels were
-lowered after the first physical iPhone 17 Pro Max listening pass. These gains
-remain an in-engine listening balance, not the final mix.
+lowered again after the second physical iPhone 17 Pro Max listening pass.
+These gains remain an in-engine listening balance, not the final mix.
 
 On iOS, Godot's default `Ambient` audio-session category respects Silent Mode.
 The first physical-device check therefore produced silence until Silent Mode
