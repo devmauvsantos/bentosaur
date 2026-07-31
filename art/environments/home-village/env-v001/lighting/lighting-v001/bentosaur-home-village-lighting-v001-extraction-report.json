@@ -1,0 +1,33 @@
+{
+  "base": "art/environments/home-village/env-v001/source/bentosaur-home-village-background-unlit-approved-v001.png",
+  "look_target": "art/environments/home-village/env-v001/source/look-targets/bentosaur-home-village-lights-on-look-target-v001.png",
+  "width": 941,
+  "height": 1672,
+  "blend_mode": "add",
+  "layer_order": [
+    "bentosaur-home-village-lighting-v001-indirect-warm-spill.png",
+    "bentosaur-home-village-lighting-v001-light-halos.png",
+    "bentosaur-home-village-lighting-v001-light-cores.png",
+    "bentosaur-home-village-lighting-v001-warm-reflections.png"
+  ],
+  "motion_policy": {
+    "light-cores": "eligible for subtle procedural flicker",
+    "light-halos": "eligible for lower-amplitude synchronized flicker",
+    "indirect-warm-spill": "fade on once, then remain stable",
+    "warm-reflections": "fade on once; only a future isolated shimmer subset should flicker"
+  },
+  "floor_boundary": "0:650,75:657,165:648,255:628,330:596,395:566,450:548,500:548,555:568,610:604,680:632,760:651,850:660,940:666",
+  "coverage": {
+    "light-cores": 0.008832734187899465,
+    "light-halos": 0.04190035033482654,
+    "indirect-warm-spill": 0.11386326772394226,
+    "warm-reflections": 0.1294465574137256
+  },
+  "notes": [
+    "All outputs are pixel-registered to the approved unlit master.",
+    "RGBA layers encode straight-alpha additive contributions.",
+    "Use an additive canvas blend mode; do not normal-alpha composite them.",
+    "The generative look target remains review-only and is not used as a base.",
+    "Do not continuously flicker broad spill or reflection layers."
+  ]
+}
