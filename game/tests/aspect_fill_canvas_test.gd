@@ -3,7 +3,7 @@ extends SceneTree
 const ASPECT_FILL := preload("res://scripts/layout/aspect_fill_canvas.gd")
 const DESIGN_SIZE := Vector2(720.0, 1280.0)
 const IPHONE_NATIVE_SIZE := Vector2(1320.0, 2868.0)
-const STALL_ALPHA_BOUNDS := Rect2(114.0, 204.0, 492.0, 886.0)
+const STALL_ALPHA_BOUNDS := Rect2(77.0, 197.0, 566.0, 874.0)
 
 
 func _initialize() -> void:

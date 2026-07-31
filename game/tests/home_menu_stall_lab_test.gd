@@ -28,8 +28,10 @@ func _run() -> void:
 	await process_frame
 
 	var village := lab.get_node_or_null("HomeVillageRainLab") as Node2D
-	var stall := lab.get_node_or_null("StallStructure") as TextureRect
+	var stall_stage := lab.get_node_or_null("StallStage") as AspectContainStage
+	var stall := lab.get_node_or_null("StallStage/StallStructure") as TextureRect
 	_expect(village != null, "Approved village lab must remain instanced.", errors)
+	_expect(stall_stage != null, "Missing responsive stall stage.", errors)
 	_expect(stall != null, "Missing registered empty stall.", errors)
 
 	if stall != null:

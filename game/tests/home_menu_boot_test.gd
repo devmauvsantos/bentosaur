@@ -18,9 +18,16 @@ func _initialize() -> void:
 		root.add_child(home_menu)
 		_expect(
 			home_menu.get_node_or_null(
-				"WorldCanvas/ApprovedStallComposition/StallStructure"
+				"WorldCanvas/ApprovedStallComposition/StallStage/StallStructure"
 			) != null,
 			"The promoted scene must contain the approved empty stall.",
+			errors
+		)
+		_expect(
+			home_menu.get_node_or_null(
+				"WorldCanvas/ApprovedStallComposition/StallStage"
+			) is AspectContainStage,
+			"The stall must preserve its authored distance on ultratall displays.",
 			errors
 		)
 		_expect(

@@ -28,6 +28,19 @@ included in that gate.
   metadata into `home_menu_layers.json`.
 - Do not independently eyeball placement after trimming.
 
+## Responsive framing lock
+
+The approved concept places the stall at approximately `67.7%` of the canvas
+width. The current structural cutout occupies `78.6%` of its registered
+`720 × 1280` plate, so it is presented through one `StallStage` at a uniform
+`0.86` framing scale around the visible-center pivot `(360, 634)`.
+
+The environment remains aspect-cover and full-bleed on ultratall phones. The
+stall stage independently counters that cover zoom, centers the base 9:16
+composition in the expanded viewport, and preserves the locked distance. Do
+not resize the structural PNG, proprietor, counter front, props, lanterns, or
+effects independently. They all inherit the same stage transform.
+
 ## World layer tree
 
 ```text
@@ -36,15 +49,16 @@ HomeMenuWorld
 ├── ambient background dinosaurs
 ├── rain: back field
 ├── stall: ground contact shadow and registered wet reflection
-├── stall: rear shell, roof, brand sign and awning
-├── proprietor: body behind counter
-├── stall: counter-front occluder
-├── proprietor: left and right foreground hands
-├── rank plaque and stars
-├── counter props
-├── hanging lantern shells
-├── lantern cores, halos and registered warm spill
-├── steam and other prop VFX
+├── responsive StallStage (0.86 founder framing)
+│   ├── stall: rear shell, roof, brand sign and awning
+│   ├── proprietor: body behind counter
+│   ├── stall: counter-front occluder
+│   ├── proprietor: left and right foreground hands
+│   ├── rank plaque and stars
+│   ├── counter props
+│   ├── hanging lantern shells
+│   ├── lantern cores, halos and registered warm spill
+│   └── steam and other stall-local VFX
 ├── rain: foreground field with stall/interior exclusion
 └── 90s world post-process
 

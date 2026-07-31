@@ -76,14 +76,22 @@ inside the runtime safe area.
 - The central 9:16 composition remains a cross-device safe region.
 - Tall and tablet variants expose or extend scenery; they never squash it.
 
-The current approved `720 × 1280` world is presented through one
+The current approved `720 × 1280` environment is presented through one
 native-main-viewport `CanvasLayer` cover transform. Background, registered
-lighting, stall, rain, roof splashes, and pavement collisions share that
-single transform so they cannot drift apart. On the iPhone 17 Pro Max, the
-expanded logical canvas is approximately `720 × 1564`; the temporary cover
-bridge scales the world uniformly by about `1.222` and crops about `65.4`
-design pixels from each side. The stall remains fully visible and no uncovered
-band is exposed.
+lighting, rain, roof splashes, and pavement collisions share that transform so
+they cannot drift apart. On the iPhone 17 Pro Max, the expanded logical canvas
+is approximately `720 × 1564`; the temporary cover bridge scales the scenery
+uniformly by about `1.222` and crops about `65.4` design pixels from each side.
+No uncovered band is exposed.
+
+The foreground stall uses a nested responsive `StallStage`. It cancels the
+environment's cover zoom, centers the authored 9:16 composition inside the
+expanded viewport, then applies the locked `0.86` founder-framing scale around
+the stall's visible center. This keeps the village full-bleed while the stall
+occupies about `67.6%` of the display width, matching the approved menu concept
+instead of growing to about `96%` on the Pro Max. Every future proprietor,
+counter occluder, prop, lantern, and stall-local effect must be a descendant of
+that single stage so the assembly cannot drift or scale inconsistently.
 
 This centered crop is the prototype bridge, not the final environment-master
 strategy. The final layered outpaint described below should replace the crop
