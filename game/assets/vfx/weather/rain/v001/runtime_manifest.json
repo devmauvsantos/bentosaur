@@ -1,0 +1,48 @@
+{
+  "asset_id": "vfx.weather.rain.v001",
+  "style": "soft flat-cel storybook rain",
+  "splash_atlas": {
+    "frames": 8,
+    "layout": "8x1",
+    "cell_size": [
+      64,
+      32
+    ],
+    "duration_seconds": 0.34
+  },
+  "assets": [
+    {
+      "output": "game/assets/vfx/weather/rain/v001/rain_streak_back.png",
+      "output_sha256": "b62f94bb1408aff10a9af5876bc95aa29ea6a4125a081c85a99554862379dbc5",
+      "size": [
+        10,
+        42
+      ]
+    },
+    {
+      "output": "game/assets/vfx/weather/rain/v001/rain_streak_front.png",
+      "output_sha256": "0a6e84e44da5edce7d9b90a990ecaf9330c7cd9737db5632b7c6448f19f5d1b3",
+      "size": [
+        16,
+        72
+      ]
+    },
+    {
+      "output": "game/assets/vfx/weather/rain/v001/rain_impact_seed_transparent.png",
+      "output_sha256": "f2bb5bbaca678ecad746b1fa5ecfa2c8a81dd18817be19f0187c036d25326317",
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "output": "game/assets/vfx/weather/rain/v001/rain_splash_8x1.png",
+      "output_sha256": "51cf1d6bf66dedead90d8a084b28e1c674367bbe867f11c2816623ceecb19ca4",
+      "size": [
+        512,
+        32
+      ]
+    }
+  ],
+  "builder": "tools/art/build_home_village_runtime_assets.py"
+}

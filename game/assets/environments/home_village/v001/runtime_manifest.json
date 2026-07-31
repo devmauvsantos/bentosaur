@@ -1,0 +1,70 @@
+{
+  "asset_id": "env.home_village.runtime.v001",
+  "canvas": {
+    "width": 720,
+    "height": 1280
+  },
+  "source_package": "art/environments/home-village/env-v001",
+  "lighting_blend_mode": "additive",
+  "lighting_source_space": "linear-light straight-alpha contribution",
+  "lighting_runtime_space": "Godot Forward Mobile canvas sRGB additive delta",
+  "lighting_order": [
+    "indirect_warm_spill",
+    "light_halos",
+    "light_cores",
+    "warm_reflections"
+  ],
+  "assets": [
+    {
+      "output": "game/assets/environments/home_village/v001/background_unlit_720x1280.png",
+      "output_sha256": "592ada198267f928f56f80f2d6b8e94e68d95f6da9eedb0aa5917263d70dba89",
+      "source": "art/environments/home-village/env-v001/source/bentosaur-home-village-background-unlit-approved-v001.png",
+      "source_sha256": "67a3b3209edfc1f95a1ab243184778c394472de2f83b450b55901d108ae0c161",
+      "size": [
+        720,
+        1280
+      ]
+    },
+    {
+      "output": "game/assets/environments/home_village/v001/lighting/indirect_warm_spill_720x1280.png",
+      "output_sha256": "993847795f64f0786982a7bc4ed482512feb5c1f1bfd280645075fc5fa4b3705",
+      "source": "art/environments/home-village/env-v001/lighting/lighting-v001/bentosaur-home-village-lighting-v001-indirect-warm-spill.png",
+      "source_sha256": "34060212f9057b71b3fbb211cde80c1e062016858ee81bfbfdb78f8dfebb743a",
+      "size": [
+        720,
+        1280
+      ]
+    },
+    {
+      "output": "game/assets/environments/home_village/v001/lighting/light_halos_720x1280.png",
+      "output_sha256": "ec405de231ca9b02a1b640ee13a7e3ac64fa75515476d9e6caa7eb65a23cd64d",
+      "source": "art/environments/home-village/env-v001/lighting/lighting-v001/bentosaur-home-village-lighting-v001-light-halos.png",
+      "source_sha256": "3f0fccbf5821b184594ab0e101a3c158b3bf906636014fb1f117854c871e3af6",
+      "size": [
+        720,
+        1280
+      ]
+    },
+    {
+      "output": "game/assets/environments/home_village/v001/lighting/light_cores_720x1280.png",
+      "output_sha256": "33999d2c50dd54aaefc2a9b4010119642f3f77d7936d1c8f326e89ed0f50f6f1",
+      "source": "art/environments/home-village/env-v001/lighting/lighting-v001/bentosaur-home-village-lighting-v001-light-cores.png",
+      "source_sha256": "cc25744bf3e2110af5fe265724dea3dd4b139386b1fcb890aeacdc01ba8adfda",
+      "size": [
+        720,
+        1280
+      ]
+    },
+    {
+      "output": "game/assets/environments/home_village/v001/lighting/warm_reflections_720x1280.png",
+      "output_sha256": "8945ab0703ae6fb900f9895c3dd12a06cb32e3c8b747268af9552c22a2fabb85",
+      "source": "art/environments/home-village/env-v001/lighting/lighting-v001/bentosaur-home-village-lighting-v001-warm-reflections.png",
+      "source_sha256": "4c084896e062c63afae8a8cfcf164314422a1ec50bee46e348207707ac3f5c66",
+      "size": [
+        720,
+        1280
+      ]
+    }
+  ],
+  "builder": "tools/art/build_home_village_runtime_assets.py"
+}
