@@ -8,9 +8,10 @@ Snapshot date: 2026-07-30
 
 Mau selected flat-cel 2D as Bentosaur's leading visual direction for now. A
 matching expression proof, home/menu, regulars-book screen, independent laugh
-marks, and page-turn motion breakdown now exist. The immediate project gate is
-one real layered front character, one side-walk character, and one draggable
-book page running in Godot on a phone.
+marks, page-turn motion breakdown, four menu structures, four mascot source
+states, and a rendered breathing/blink idle now exist. The immediate project
+gate is one real layered front character, one side-walk character, and one
+draggable book page running in Godot on a phone.
 
 The former live-3D direction is preserved as the last locked production path,
 but it is paused while this decisive 2D proof runs. The visual selection does
@@ -39,9 +40,14 @@ The expanded proof pack is:
 
 `art/concepts/2d-chibi/v2/`
 
+The current menu and idle expansion is:
+
+`art/concepts/2d-chibi/v3/`
+
 Mau explicitly requested the matching hub, book, expression, and page-turn
 exploration, superseding the earlier screen-generation restriction. The pack
-now establishes visual continuity, not production readiness.
+now establishes visual continuity, menu alternatives, and prototype idle
+feasibility, not production readiness.
 
 The first implementation remains bounded. One layered front rig and one
 layered side rig must successfully idle, blink, delight, chew, walk, mirror,
@@ -222,8 +228,9 @@ Approve:
 
 ## Costs and external actions
 
-- The v2 flat-cel expression, hub, book, and key-pose concepts used built-in
-  ImageGen; no Tripo credits or paid external API were used.
+- The v2/v3 flat-cel expressions, screens, menu alternatives, and sprite-state
+  concepts used built-in ImageGen; no Tripo credits or paid external API were
+  used.
 - Faceit `2.3.71` is installed locally; no license credential or transaction
   record is stored in the repository.
 - No paid API was called during r004, r005, or r006.

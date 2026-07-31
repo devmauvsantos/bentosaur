@@ -15,6 +15,10 @@ Mau selected the flat-cel 2D direction after seeing the gameplay study. This
 pack tests whether the same language survives a character expression change,
 the between-days home/menu, and the physical regulars book.
 
+Continue with `../v3/` for the classic text menu, diegetic and dock
+alternatives, registered mascot source states, and the first rendered idle
+proof.
+
 ## Start here
 
 | Purpose | File |

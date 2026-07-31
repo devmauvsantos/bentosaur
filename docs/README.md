@@ -29,20 +29,24 @@ recorded in this repository before work is treated as durable.
 ## Start here
 
 1. [Current project status](current-status.md)
-2. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
-3. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
-4. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
-5. [Character production pipeline](character-production-pipeline-v1.md)
-6. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
-7. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
-8. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
-9. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
+2. [2D menu alternatives and idle proof](visual-explorations/2d-menu-alternatives-and-idle-proof-v3.md)
+3. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
+4. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
+5. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
+6. [Character production pipeline](character-production-pipeline-v1.md)
+7. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
+8. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
+9. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
+10. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
 
 ## Active work queue
 
 - [x] Select the flat-cel gameplay language as the leading direction for now.
 - [x] Prove visual continuity across neutral/happy, home/menu, and book.
 - [x] Separate the three laugh marks from the character face.
+- [x] Compare icon-grid, diegetic, dock, and classic text home menus.
+- [x] Generate neutral, blink, wave, and delighted mascot source states.
+- [x] Render one grounded breathing-and-blink idle prototype.
 - [ ] Redraw one front character into registered production layers.
 - [ ] Author open, blink, and happy eyes plus soft, open, and chew mouths.
 - [ ] Build front idle, blink, delight, and chew in Godot.

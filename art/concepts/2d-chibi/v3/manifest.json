@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "pack": "bentosaur-menu-alternatives-and-idle-proof-v3",
+  "date": "2026-07-30",
+  "status": "active-visual-exploration-production-layers-pending",
+  "generation_tool": "built-in-imagegen",
+  "engine_for_proof": "Godot 4.7.1 Standard",
+  "credits_used": 0,
+  "production_notes": {
+    "menu_images_are_runtime_ui": false,
+    "state_sheet_is_final_cutout_layers": false,
+    "registered_states_are_prototype_usable": true,
+    "idle_preview_is_runtime_capture": false,
+    "shipping_idle_uses_cutout_layers": true
+  },
+  "outputs": [
+    {
+      "path": "01_menu-alternatives/bentosaur-home-menu-classic-stall-text-v1.png",
+      "sha256": "4ffbb82a6d786762dbbbe86ee92d37d0ca6bbe0d74fc733f03c199586ec0a142",
+      "role": "classic-text-menu-target"
+    },
+    {
+      "path": "01_menu-alternatives/bentosaur-home-menu-diegetic-hotspots-v1.png",
+      "sha256": "5c2802eaedde1520a5f0dcff55fa61f7496b7188b028a7587dede75fb5761fa1",
+      "role": "diegetic-hotspot-menu-target"
+    },
+    {
+      "path": "01_menu-alternatives/bentosaur-home-menu-threshold-dock-v1.png",
+      "sha256": "1a34c4974704bea72a017cea5b77234563d8849e9f12323443318215aa0a9c5e",
+      "role": "threshold-dock-menu-target"
+    },
+    {
+      "path": "02_main-character-idle/source/bentosaur-core-state-sheet-chroma-v1.png",
+      "sha256": "ab78e92dc2bf76d3b1b7d974d0c877c0c5a7f6daddee4fd4c760f5e7cbfab343",
+      "role": "generated-chroma-source"
+    },
+    {
+      "path": "02_main-character-idle/exports/bentosaur-core-state-sheet-transparent-v1.png",
+      "sha256": "44eee2f1f2df18a907ae8f9cdc3eee30113192cd38db0db993b61ad2f8a904ad",
+      "role": "transparent-core-state-sheet"
+    },
+    {
+      "path": "02_main-character-idle/exports/bentosaur-neutral-open-v1.png",
+      "sha256": "45f1d973c74212ee4e7fe15d9b2829e23547705665a3423f3a90824e1f6750a1",
+      "role": "quadrant-source-neutral"
+    },
+    {
+      "path": "02_main-character-idle/exports/bentosaur-blink-v1.png",
+      "sha256": "c807e1cc99f67ee4b44f85f84824b98f50b8f6f723884c1dfba37dfc1d230ffc",
+      "role": "quadrant-source-blink"
+    },
+    {
+      "path": "02_main-character-idle/exports/bentosaur-gentle-wave-v1.png",
+      "sha256": "21294fbc262d55a1589d2d1e11fd9ddb85e5c20dada15f8086d6bd40c9e13376",
+      "role": "quadrant-source-wave"
+    },
+    {
+      "path": "02_main-character-idle/exports/bentosaur-delighted-v1.png",
+      "sha256": "e69ce71f430b16a9ab6924d5650454cb85ce9abf1dd2dfe67eb64d8d4739c022",
+      "role": "quadrant-source-delighted"
+    },
+    {
+      "path": "02_main-character-idle/registered/bentosaur-neutral-open-registered-v1.png",
+      "sha256": "6cca483f6a57e30166552d5c2d74aee01e0a0918b313bd8828bb1877bf4d6cac",
+      "role": "registered-prototype-neutral"
+    },
+    {
+      "path": "02_main-character-idle/registered/bentosaur-blink-registered-v1.png",
+      "sha256": "d2cda4a65f91d64586ac1a5a23467bafb68e8c7eda1a76586ea018eab1e603b7",
+      "role": "registered-prototype-blink"
+    },
+    {
+      "path": "02_main-character-idle/registered/bentosaur-gentle-wave-registered-v1.png",
+      "sha256": "3eae6f9a8d349fbc7b141943fd83c6eb00c32e1111195c19b0dd180a244c04fc",
+      "role": "registered-prototype-wave"
+    },
+    {
+      "path": "02_main-character-idle/registered/bentosaur-delighted-registered-v1.png",
+      "sha256": "3a27a59d4263544fcd190174d2b80de96d51e19282caba1b9f2b71630c9b7ba3",
+      "role": "registered-prototype-delighted"
+    },
+    {
+      "path": "02_main-character-idle/bentosaur-idle-prototype-v1.gif",
+      "sha256": "cf4b043938fbd4442631ac0f16a3f816fe28ce597dba64392e1bd20013e899b8",
+      "role": "looping-idle-preview"
+    },
+    {
+      "path": "02_main-character-idle/bentosaur-idle-prototype-v1.mp4",
+      "sha256": "7a865122cf3bb8921bc92bf2c28607af9ddad7b04209a7f826f6dd5505c95811",
+      "role": "idle-preview-video"
+    },
+    {
+      "path": "03_boards/bentosaur-home-menu-alternatives-board-v1.png",
+      "sha256": "04c3b2f8575ecbb0cd7883572b1b6c3edd568ac58b0bebb7eccd589c97060bc3",
+      "role": "menu-comparison-board"
+    },
+    {
+      "path": "03_boards/bentosaur-idle-prototype-sampled-frames-v1.png",
+      "sha256": "f19bac77b009dbacf98f56d2443555061f8bbc070c64983e0bea1a4630f0659c",
+      "role": "idle-sampled-evidence"
+    }
+  ]
+}
