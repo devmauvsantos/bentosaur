@@ -1,0 +1,155 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/home/stall_rank_fixture.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/ui/rank/rank-plaque-empty-sockets-v001.png" id="2_plaque"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/ui/rank/rank-star-empty-v001.png" id="3_empty"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/ui/rank/rank-star-filled-v001.png" id="4_filled"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/ui/rank/rank-star-shine-v001.png" id="5_shine"]
+
+[node name="StallRankFixture" type="Control"]
+custom_minimum_size = Vector2(228, 48)
+offset_right = 228.0
+offset_bottom = 48.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="ContentRoot" type="Control" parent="."]
+layout_mode = 0
+offset_right = 228.0
+offset_bottom = 48.0
+mouse_filter = 2
+
+[node name="Plaque" type="TextureRect" parent="ContentRoot"]
+layout_mode = 0
+offset_right = 456.0
+offset_bottom = 96.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("2_plaque")
+expand_mode = 1
+
+[node name="Star1" type="Control" parent="ContentRoot"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 9.0
+offset_right = 75.0
+offset_bottom = 43.0
+mouse_filter = 2
+
+[node name="Empty" type="TextureRect" parent="ContentRoot/Star1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_empty")
+expand_mode = 1
+
+[node name="Filled" type="TextureRect" parent="ContentRoot/Star1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_filled")
+expand_mode = 1
+
+[node name="Shine" type="TextureRect" parent="ContentRoot/Star1"]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = -5.0
+offset_right = 45.0
+offset_bottom = 15.0
+mouse_filter = 2
+texture = ExtResource("5_shine")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Star2" type="Control" parent="ContentRoot"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 9.0
+offset_right = 135.0
+offset_bottom = 43.0
+mouse_filter = 2
+
+[node name="Empty" type="TextureRect" parent="ContentRoot/Star2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_empty")
+expand_mode = 1
+
+[node name="Filled" type="TextureRect" parent="ContentRoot/Star2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_filled")
+expand_mode = 1
+
+[node name="Shine" type="TextureRect" parent="ContentRoot/Star2"]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = -5.0
+offset_right = 45.0
+offset_bottom = 15.0
+mouse_filter = 2
+texture = ExtResource("5_shine")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Star3" type="Control" parent="ContentRoot"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 9.0
+offset_right = 195.0
+offset_bottom = 43.0
+mouse_filter = 2
+
+[node name="Empty" type="TextureRect" parent="ContentRoot/Star3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_empty")
+expand_mode = 1
+
+[node name="Filled" type="TextureRect" parent="ContentRoot/Star3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_filled")
+expand_mode = 1
+
+[node name="Shine" type="TextureRect" parent="ContentRoot/Star3"]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = -5.0
+offset_right = 45.0
+offset_bottom = 15.0
+mouse_filter = 2
+texture = ExtResource("5_shine")
+expand_mode = 1
+stretch_mode = 5

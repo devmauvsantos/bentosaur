@@ -9,9 +9,12 @@ Snapshot date: 2026-07-31
 Mau selected flat-cel 2D as Bentosaur's leading visual direction and ended the
 open-ended exploration phase. The Godot project now boots the production-shaped
 Home Village assembly: approved rainy street and registered light wake-up,
-uniformly scaled V002 stall, two approved modular hanging lanterns, and the
-approved 1990s-anime transfer preset 3. The iOS build remains under the
-personal Apple team.
+uniformly scaled V002 stall, two approved modular hanging lanterns, the
+founder-approved V004 non-character attachment kit with live semantic
+controls, and the approved 1990s-anime transfer preset 3. The V010 integration,
+21-contract suite, normal/reduced Metal captures, personal signing, physical
+install, and launch are complete. Mau's phone-scale visual and interaction
+review remains open. The iOS build remains under the personal Apple team.
 
 The complete bounded first-playable loop remains preserved at
 `game/scenes/vertical_slice/first_playable.tscn`: classic-stall Home, three
@@ -77,6 +80,20 @@ the ring-center sway pivots, and both fixtures inherit the responsive
 wood, fixture-specific pavement reflections, neighborhood pulse/flick
 coupling, and physical-iPhone tuning remain explicitly deferred. See
 [Home Menu V009 approved modular stall lanterns](checkpoints/2026-07-31-home-menu-v009-approved-stall-lanterns.md).
+
+V010 promotes and integrates the founder-approved V004 complete stall
+attachment kit. Thirty-one registered runtime textures now compose reusable
+stockpot, counter-lantern, counter-decor, three-star rank, menu-button, and
+settings fixtures. The stockpot steam and lid, plant foliage, practical light,
+rank fill, and control feedback are procedural and share one reduced-motion
+boundary. The four menu entries and settings cog are real semantic Godot
+buttons with live Lilita One labels; they emit navigation intent only, because
+their destination screens are outside V010. The main character is also
+deliberately excluded. All 21 Godot contracts pass; normal and reduced-motion
+Forward Mobile / Metal captures are recorded. The personal-team build is
+strictly signed, installed, and running on Mauricio's iPhone 17 Pro Max.
+Phone-scale visual/interaction approval remains pending.
+See [Home Menu V010 complete modular stall kit](checkpoints/2026-07-31-home-menu-v010-complete-stall-kit.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`
@@ -235,6 +252,16 @@ Installation readiness does not authorize using the rejected r005 mesh.
 It also does not authorize using the rejected r006 mesh.
 
 ## Immediate gates
+
+### Home Menu V010 — evidence and device gate
+
+- [x] run and record the final complete 21-contract Godot suite;
+- [x] capture normal and reduced-motion Forward Mobile / Metal evidence;
+- [x] export with personal team `53RJ43876F`, strictly verify signing, install,
+  and launch bundle `com.mauvsantos.bentosaur` on the physical iPhone;
+- [ ] verify aspect ratio, safe area, touch states, audio, rain, anime-filter
+  coverage, and procedural motion on the phone;
+- [ ] obtain Mau's explicit phone-scale approval before calling V010 closed.
 
 ### 2D P0 — registered layer master
 

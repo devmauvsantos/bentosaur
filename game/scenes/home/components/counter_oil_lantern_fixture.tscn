@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/home/counter_oil_lantern_fixture.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/counter_lantern/counter-oil-lantern-contact-shadow-v001.png" id="2_shadow"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/counter_lantern/counter-oil-lantern-halo-add-v001.png" id="3_halo"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/counter_lantern/counter-oil-lantern-body-off-v001.png" id="4_body"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/counter_lantern/counter-oil-lantern-core-add-v001.png" id="5_core"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_additive"]
+blend_mode = 1
+light_mode = 1
+
+[node name="CounterOilLanternFixture" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="ContactShadow" type="Sprite2D" parent="."]
+position = Vector2(0.5, -9)
+z_index = 0
+texture = ExtResource("2_shadow")
+
+[node name="LocalHalo" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_additive")
+position = Vector2(0.5, -68)
+z_index = 1
+texture = ExtResource("3_halo")
+
+[node name="BodyOff" type="Sprite2D" parent="."]
+position = Vector2(0, -60.5)
+z_index = 2
+texture = ExtResource("4_body")
+
+[node name="Core" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_additive")
+position = Vector2(0, -47)
+z_index = 3
+texture = ExtResource("5_core")

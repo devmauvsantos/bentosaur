@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/home/stall_menu_button.gd" id="1_script"]
+[ext_resource type="Shader" path="res://assets/vfx/stall_ui_canonical_mask.gdshader" id="2_shader"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-primary-normal-v001.png" id="3_normal"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-leaf-left-v001.png" id="4_leaf_left"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-leaf-right-v001.png" id="5_leaf_right"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_state"]
+resource_local_to_scene = true
+shader = ExtResource("2_shader")
+shader_parameter/state_texture = ExtResource("3_normal")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_button"]
+
+[node name="StallMenuButton" type="Button"]
+custom_minimum_size = Vector2(292, 72)
+offset_right = 292.0
+offset_bottom = 72.0
+mouse_default_cursor_shape = 2
+focus_mode = 2
+action_mode = 1
+flat = true
+theme_override_colors/font_color = Color(1, 1, 1, 0)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_button")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_button")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_button")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_button")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_button")
+script = ExtResource("1_script")
+
+[node name="VisualRoot" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Frame" type="NinePatchRect" parent="VisualRoot"]
+material = SubResource("ShaderMaterial_state")
+layout_mode = 0
+offset_right = 1664.0
+offset_bottom = 410.0
+mouse_filter = 2
+texture = ExtResource("3_normal")
+patch_margin_left = 144
+patch_margin_right = 144
+
+[node name="LeafLeft" type="TextureRect" parent="VisualRoot"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("4_leaf_left")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LeafRight" type="TextureRect" parent="VisualRoot"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("5_leaf_right")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LiveLabel" type="Label" parent="VisualRoot"]
+layout_mode = 0
+offset_right = 292.0
+offset_bottom = 72.0
+mouse_filter = 2
+text = "Open Stall"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/labs/home_village_rain_lab.tscn" id="1_home"]
 [ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/stall_structure_unlit_720x1280.png" id="2_stall"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" path="res://assets/vfx/lighting/stall_depth_falloff_material.tres" id="4_depth_material"]
 [ext_resource type="Script" path="res://scripts/vfx/stall_roof_rain.gd" id="5_stall_roof_rain"]
 [ext_resource type="PackedScene" path="res://scenes/home/components/stall_lantern_fixture.tscn" id="6_lantern"]
+[ext_resource type="PackedScene" path="res://scenes/home/components/stall_attachment_kit.tscn" id="7_attachments"]
 
 [node name="HomeMenuStallLab" type="Node2D"]
 
@@ -42,3 +43,5 @@ z_index = 17
 sway_amplitude_degrees = 0.74
 sway_period_seconds = 7.0
 phase_offset_radians = 0.18
+
+[node name="StallAttachmentKit" parent="StallStage" instance=ExtResource("7_attachments")]

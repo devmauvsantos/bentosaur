@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/home/stall_attachment_kit.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/home/components/stockpot_fixture.tscn" id="2_stockpot"]
+[ext_resource type="PackedScene" path="res://scenes/home/components/counter_oil_lantern_fixture.tscn" id="3_counter_lantern"]
+[ext_resource type="PackedScene" path="res://scenes/home/components/counter_decor_fixture.tscn" id="4_decor"]
+[ext_resource type="PackedScene" path="res://scenes/home/components/stall_rank_fixture.tscn" id="5_rank"]
+[ext_resource type="PackedScene" path="res://scenes/home/components/stall_menu_button.tscn" id="6_button"]
+[ext_resource type="PackedScene" path="res://scenes/home/components/stall_settings_button.tscn" id="7_settings"]
+[ext_resource type="FontFile" path="res://assets/fonts/lilita_one/LilitaOne-Regular.ttf" id="8_font"]
+
+[node name="StallAttachmentKit" type="Node2D"]
+z_index = 16
+script = ExtResource("1_script")
+
+[node name="RankFixture" parent="." instance=ExtResource("5_rank")]
+z_index = 1
+offset_left = 246.0
+offset_top = 372.0
+offset_right = 474.0
+offset_bottom = 420.0
+
+[node name="Stockpot" parent="." instance=ExtResource("2_stockpot")]
+position = Vector2(179, 727)
+
+[node name="CounterOilLantern" parent="." instance=ExtResource("3_counter_lantern")]
+position = Vector2(240.5, 722)
+
+[node name="CounterDecor" parent="." instance=ExtResource("4_decor")]
+position = Vector2(360, 640)
+z_index = 1
+
+[node name="OpenStallButton" parent="." instance=ExtResource("6_button")]
+z_index = 2
+offset_left = 222.0
+offset_top = 770.0
+offset_right = 514.0
+offset_bottom = 842.0
+label_text = "Open Stall"
+label_font = ExtResource("8_font")
+focus_neighbor_bottom = NodePath("../GuestbookButton")
+
+[node name="GuestbookButton" parent="." instance=ExtResource("6_button")]
+z_index = 2
+offset_left = 223.0
+offset_top = 852.0
+offset_right = 513.0
+offset_bottom = 916.0
+button_kind = 1
+label_text = "Guestbook"
+label_font = ExtResource("8_font")
+focus_neighbor_top = NodePath("../OpenStallButton")
+focus_neighbor_bottom = NodePath("../DecorationsButton")
+
+[node name="DecorationsButton" parent="." instance=ExtResource("6_button")]
+z_index = 2
+offset_left = 223.0
+offset_top = 926.0
+offset_right = 513.0
+offset_bottom = 990.0
+button_kind = 1
+label_text = "Decorations"
+label_font = ExtResource("8_font")
+focus_neighbor_top = NodePath("../GuestbookButton")
+focus_neighbor_bottom = NodePath("../PantryButton")
+
+[node name="PantryButton" parent="." instance=ExtResource("6_button")]
+z_index = 2
+offset_left = 223.0
+offset_top = 1000.0
+offset_right = 513.0
+offset_bottom = 1064.0
+button_kind = 1
+label_text = "Pantry"
+label_font = ExtResource("8_font")
+focus_neighbor_top = NodePath("../DecorationsButton")
+focus_neighbor_bottom = NodePath("../SettingsButton")
+
+[node name="SettingsButton" parent="." instance=ExtResource("7_settings")]
+z_index = 2
+offset_left = 515.0
+offset_top = 1033.0
+offset_right = 590.0
+offset_bottom = 1117.0
+focus_neighbor_top = NodePath("../PantryButton")

@@ -71,6 +71,9 @@ func _run() -> void:
 	var lantern_right := (
 		lab.get_node_or_null("StallStage/StallLanternRight") as Node2D
 	)
+	var attachment_kit := lab.get_node_or_null(
+		"StallStage/StallAttachmentKit"
+	) as StallAttachmentKit
 	_expect(village != null, "Approved village lab must remain instanced.", errors)
 	_expect(stall_stage != null, "Missing responsive stall stage.", errors)
 	_expect(stall != null, "Missing registered empty stall.", errors)
@@ -81,6 +84,18 @@ func _run() -> void:
 	)
 	_expect(lantern_left != null, "Missing approved left stall lantern.", errors)
 	_expect(lantern_right != null, "Missing approved right stall lantern.", errors)
+	_expect(attachment_kit != null, "Missing approved V004 attachment kit.", errors)
+	if attachment_kit != null:
+		_expect(
+			attachment_kit.get_parent() == stall_stage,
+			"Every V004 attachment must inherit the responsive StallStage.",
+			errors
+		)
+		_expect(
+			attachment_kit.z_index == 16,
+			"V004 must remain between the stall shell and global weather.",
+			errors
+		)
 	_validate_lantern(
 		lantern_left,
 		stall_stage,

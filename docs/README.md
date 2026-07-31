@@ -21,8 +21,8 @@ recorded in this repository before work is treated as durable.
 | Preserved 3D authority | Blender and deterministic GLB |
 | Visual direction | Founder-selected flat-cel 2D; production lock pending one bounded Godot proof |
 | Hero source | H3.1 Extreme is the immutable appearance and silhouette authority |
-| Production stage | First playable v1: complete one-shift loop in Godot |
-| Current blocker | Founder playtest of the functional serving loop |
+| Production stage | First playable loop complete; Home Menu V010 integrated, tested, captured, and running on the personal iPhone |
+| Current blocker | Mau's V010 phone-scale visual/interaction approval, then founder playtest of the serving loop |
 | 3D fallback | S40 facial topology and Faceit research are preserved but paused |
 | Approval owner | Mau approves all visual character, material, expression, animation, and gameplay gates |
 
@@ -33,20 +33,21 @@ recorded in this repository before work is treated as durable.
 3. [Mobile display quality contract](mobile-display-quality-contract-v001.md)
 4. [Home Village rain lab](home-village-rain-lab-v001.md)
 5. [Home Village Rain V002 checkpoint](checkpoints/2026-07-31-home-village-rain-v002.md)
-6. [Home Menu V009 approved modular stall lanterns](checkpoints/2026-07-31-home-menu-v009-approved-stall-lanterns.md)
-7. [Home Menu V008 linked reflections and stable anime coverage](checkpoints/2026-07-31-home-menu-v008-linked-reflections-and-filter-coverage.md)
-8. [Home Menu V007 random living light](checkpoints/2026-07-31-home-menu-v007-random-living-light.md)
-9. [Home Menu V006 guaranteed-light diagnostic](checkpoints/2026-07-31-home-menu-v006-guaranteed-light-diagnostic.md)
-10. [Home Menu V005 failed device test](checkpoints/2026-07-31-home-menu-v005-device-motion-test.md)
-11. [2D menu alternatives and idle proof](visual-explorations/2d-menu-alternatives-and-idle-proof-v3.md)
-12. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
-13. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
-14. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
-15. [Character production pipeline](character-production-pipeline-v1.md)
-16. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
-17. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
-18. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
-19. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
+6. [Home Menu V010 complete modular stall kit](checkpoints/2026-07-31-home-menu-v010-complete-stall-kit.md)
+7. [Home Menu V009 approved modular stall lanterns](checkpoints/2026-07-31-home-menu-v009-approved-stall-lanterns.md)
+8. [Home Menu V008 linked reflections and stable anime coverage](checkpoints/2026-07-31-home-menu-v008-linked-reflections-and-filter-coverage.md)
+9. [Home Menu V007 random living light](checkpoints/2026-07-31-home-menu-v007-random-living-light.md)
+10. [Home Menu V006 guaranteed-light diagnostic](checkpoints/2026-07-31-home-menu-v006-guaranteed-light-diagnostic.md)
+11. [Home Menu V005 failed device test](checkpoints/2026-07-31-home-menu-v005-device-motion-test.md)
+12. [2D menu alternatives and idle proof](visual-explorations/2d-menu-alternatives-and-idle-proof-v3.md)
+13. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
+14. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
+15. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
+16. [Character production pipeline](character-production-pipeline-v1.md)
+17. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
+18. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
+19. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
+20. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
 
 ## Active work queue
 
@@ -67,6 +68,17 @@ recorded in this repository before work is treated as durable.
   reflection with the same pulse/flick state.
 - [x] Harden the anime post-process against iOS viewport and lifecycle drift.
 - [x] Approve and promote modular OFF/ON hanging lanterns with restrained sway.
+- [x] Approve and promote the complete 31-texture V004 non-character stall
+  attachment kit.
+- [x] Integrate reusable stockpot, counter-lantern, counter-decor, rank,
+  semantic menu-button, and settings fixtures with reduced-motion support.
+- [x] Vendor Lilita One with its SIL Open Font License 1.1 and use live menu
+  labels instead of baked text.
+- [x] Record the final 21/21 V010 suite and normal/reduced Forward Mobile /
+  Metal captures in the runtime-evidence directory.
+- [x] Export V010 with the personal Apple team and install/launch it on the
+  physical iPhone.
+- [ ] Obtain Mau's phone-scale aspect, touch, audio, shader, and motion approval.
 - [ ] Add subtle registered lantern spill across the stall wood and synchronized
   wet-pavement reflection masks during a later polish pass.
 - [ ] Confirm V008 reflection motion and stable anime coverage on the physical
@@ -97,6 +109,8 @@ Paused fallback queue:
 |---|---|---|
 | Flat-cel 2D visual direction | Founder-selected; production proof pending | [2D animation/screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md) |
 | Mobile display baseline | Locked: 720 × 1280 logical canvas, native target rendering, ultratall expand, safe-area UI | [Display quality contract](mobile-display-quality-contract-v001.md) |
+| Complete non-character stall kit | Founder-approved V004 art promoted; V010 integration complete, capture/device evidence pending | [Home Menu V010 checkpoint](checkpoints/2026-07-31-home-menu-v010-complete-stall-kit.md) |
+| Stall menu typography | Lilita One, live labels, unmodified font under SIL OFL 1.1 | [Home Menu V010 checkpoint](checkpoints/2026-07-31-home-menu-v010-complete-stall-kit.md) |
 | Godot live-3D production stack | Preserved last lock; paused during 2D proof | [Engine decision](engine-decision-live-3d-godot-v1.md) |
 | Blender owns 3D meshes, materials, rigs, and clips | Preserved for fallback | [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md) |
 | Character binaries use Git LFS selectively | Active | [Storage policy](character-binary-storage-policy-v1.md) |

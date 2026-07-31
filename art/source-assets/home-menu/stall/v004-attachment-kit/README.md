@@ -2,7 +2,7 @@
 
 **Visual gate:** G03 — Remaining non-character stall attachments
 
-**Status:** complete source-art candidate gate; founder approval required before runtime promotion
+**Status:** founder approved; deterministic runtime derivatives promoted
 
 This pack contains every remaining physical and interactive attachment for the
 approved empty stall. The main Bentosaur character is explicitly out of scope.
@@ -42,8 +42,8 @@ approved empty stall. The main Bentosaur character is explicitly out of scope.
   lettering in a production component.
 - Preserve every immutable generation result, prompt, extracted component, and
   registered review image.
-- Nothing in this pack enters `game/assets` until the founder approves the
-  registered visual approval board.
+- Runtime promotion may use only the founder-approved V001 component set. The
+  rejected green plaque V002 remains source provenance and must never ship.
 
 ## Runtime behavior destination
 
@@ -64,10 +64,12 @@ approved empty stall. The main Bentosaur character is explicitly out of scope.
 - `ui/` — rank plaque, stars, button system, and settings control;
 - `reviews/` — final registered approval board, assembled only after extraction.
 
-## Candidate result
+## Approved result
 
 The full candidate kit is now generated, extracted, alpha-validated, and
-registered against the approved V009 stall. It remains source art only.
+registered against the approved V009 stall. The founder approved the complete
+V001 component set at the registered scale for this checkpoint, including the
+clean brown rank plaque and the counter lantern's honey-amber OFF shell.
 
 Primary review evidence:
 
@@ -91,14 +93,31 @@ pixels are not baked into any component.
 - prompts and immutable chroma outputs are retained beside every category;
 - `manifest.json` records hashes and current review flags.
 
-## Founder decisions still required
+## Founder decisions
 
-1. approve or revise the stockpot body/lid and registered scale;
-2. decide whether the counter lantern's honey glass reads acceptably OFF;
-3. approve plant, crate/bottles, bowl, and cloth at registered scale;
-4. approve button visual states and settings control;
-5. decide whether the clean brown rank plaque is acceptable or requires a
-   controlled muted-green face paint pass.
+1. stockpot body, separate lid, contact shadow, and registered scale: approved;
+2. counter lantern OFF shell, additive core/halo, and contact shadow: approved;
+3. plant, modular crate/bottles, bowl, and cloth: approved;
+4. blank button states, detached leaves, rank stars, and settings states:
+   approved;
+5. clean brown rank plaque V001: approved for this checkpoint.
 
 The attempted plaque recolor V002 is retained only as rejected provenance. It
 must not enter runtime assets.
+
+## Runtime promotion
+
+The deterministic builder is:
+
+`tools/art/promote_stall_attachment_runtime_v004.py`
+
+It promotes 31 transparent RGBA PNGs plus one machine-readable manifest to:
+
+`game/assets/environments/home_village/v001/stall/attachments/v004/`
+
+The runtime pack uses lossless optimized PNGs, premultiplied-alpha LANCZOS
+resampling, 2× logical sizing for registered pieces, normalized button-state
+canvases, native text, and no font binary of its own. Lilita One is vendored
+and licensed separately under `game/assets/fonts/lilita_one/`. Procedural steam,
+smoke, runtime behavior, and the main Bentosaur character remain outside this
+asset-promotion checkpoint.

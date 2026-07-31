@@ -1,0 +1,1646 @@
+{
+  "assembly_contract": {
+    "bottle_crate": {
+      "assembly_registration": "deferred_to_prefab_integration",
+      "box": [
+        470,
+        618,
+        117,
+        101
+      ],
+      "default_prefab": "assembled",
+      "motion": "none",
+      "preferred_components": [
+        "crate",
+        "bottle_brown",
+        "bottle_green",
+        "bottle_cream_blue"
+      ],
+      "runtime_group_envelope_px": [
+        234,
+        202
+      ],
+      "shared_runtime_source_scale": 0.46706586826347307
+    },
+    "counter_cloth": {
+      "box": [
+        517,
+        684,
+        97,
+        120
+      ],
+      "motion": "none in first playable; optional restrained lower-corner drift later"
+    },
+    "counter_lantern": {
+      "box": [
+        209,
+        604,
+        63,
+        115
+      ],
+      "component_logical_boxes": {
+        "body_off": [
+          209,
+          604,
+          63,
+          115
+        ],
+        "contact_shadow": [
+          205,
+          704,
+          72,
+          18
+        ],
+        "core_add": [
+          225,
+          646,
+          31,
+          58
+        ],
+        "halo_add": [
+          186,
+          581,
+          110,
+          146
+        ]
+      },
+      "motion": "light pulse and rare flick only; no wind sway",
+      "states": [
+        "off_shell",
+        "on_core",
+        "on_halo",
+        "contact_shadow"
+      ]
+    },
+    "counter_plant": {
+      "box": [
+        481,
+        499,
+        67,
+        220
+      ],
+      "component_logical_boxes": {
+        "foliage": [
+          486,
+          500,
+          61,
+          154
+        ],
+        "pot": [
+          481,
+          644,
+          67,
+          75
+        ]
+      },
+      "foliage_cycle_seconds_range": [
+        4.5,
+        8.0
+      ],
+      "foliage_rotation_degrees": 0.35,
+      "preferred_components": [
+        "pot",
+        "foliage"
+      ]
+    },
+    "food_bowl": {
+      "box": [
+        157,
+        652,
+        66,
+        66
+      ],
+      "motion": "none"
+    },
+    "menu_buttons": {
+      "labels": [
+        "Open Stall",
+        "Guestbook",
+        "Decorations",
+        "Pantry"
+      ],
+      "layout_note": "Final vertical registration may compress to the approved shorter facade without changing frame aspect ratio.",
+      "press": {
+        "down_ms": 70,
+        "easing": "ease_out_no_bounce",
+        "scale": 0.985,
+        "translation_y_px": 2,
+        "up_ms": 90
+      },
+      "primary_box": [
+        222,
+        770,
+        292,
+        72
+      ],
+      "secondary_boxes": [
+        [
+          223,
+          852,
+          290,
+          64
+        ],
+        [
+          223,
+          926,
+          290,
+          64
+        ],
+        [
+          223,
+          1000,
+          290,
+          64
+        ]
+      ],
+      "states": [
+        "normal",
+        "focused",
+        "pressed",
+        "disabled"
+      ]
+    },
+    "rank_plaque": {
+      "box": [
+        246,
+        372,
+        228,
+        48
+      ],
+      "fill_transition_ms": 180,
+      "star_boxes": [
+        [
+          279,
+          381,
+          42,
+          34
+        ],
+        [
+          339,
+          381,
+          42,
+          34
+        ],
+        [
+          399,
+          381,
+          42,
+          34
+        ]
+      ],
+      "states": [
+        "empty",
+        "filled",
+        "shine"
+      ]
+    },
+    "settings_control": {
+      "press": {
+        "down_ms": 70,
+        "easing": "ease_out_no_bounce",
+        "rotation_degrees": 5,
+        "scale": 0.97,
+        "up_ms": 90
+      },
+      "source_concept_box": [
+        515,
+        1033,
+        75,
+        84
+      ],
+      "states": [
+        "normal",
+        "pressed"
+      ]
+    },
+    "stockpot": {
+      "body_box": [
+        136,
+        626,
+        86,
+        92
+      ],
+      "contact_shadow_box": [
+        132,
+        709,
+        94,
+        18
+      ],
+      "idle_motion": {
+        "cycle_seconds_range": [
+          2.8,
+          5.2
+        ],
+        "lid_rotation_degrees": 0.7,
+        "lid_translation_y_px": 1.0,
+        "occasional_rattle_count_range": [
+          1,
+          2
+        ]
+      },
+      "lid_box": [
+        133,
+        589,
+        90,
+        49
+      ],
+      "lid_pivot": [
+        178,
+        625
+      ],
+      "steam_emitter": [
+        197,
+        590
+      ],
+      "z_order": [
+        "contact_shadow",
+        "body",
+        "steam",
+        "lid"
+      ]
+    }
+  },
+  "asset_count": 31,
+  "asset_id": "env.home_village.stall.attachments.runtime.v004",
+  "assets": [
+    {
+      "asset_id": "stockpot.body_open",
+      "metadata": {
+        "logical_box": [
+          136,
+          626,
+          86,
+          92
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/stockpot/stall_stockpot_body_open_v001.png",
+      "output_sha256": "5271ce6770f6c3cf89f1fc14dd37a0c1043bd232717a9a67e2b70be9a4b7a1da",
+      "qa": {
+        "alpha_bounds_px": [
+          1,
+          2,
+          171,
+          182
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 19718,
+        "partial_alpha_pixels": 2197,
+        "size_px": [
+          172,
+          184
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 9733
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/stockpot/components/stall_stockpot_body_open_candidate_v001.png",
+      "source_sha256": "1347095a8f25f6edbafa9f325d8f773a247eb005aa411f07726aea003be075b1",
+      "source_size_px": [
+        524,
+        391
+      ]
+    },
+    {
+      "asset_id": "stockpot.lid",
+      "metadata": {
+        "logical_box": [
+          133,
+          589,
+          90,
+          49
+        ],
+        "logical_pivot": [
+          178,
+          625
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/stockpot/stall_stockpot_lid_v001.png",
+      "output_sha256": "cd62418768b6b2ed541e03ecd47005af99e072c3f9bc5e2ae0f6fceab0d9b4ee",
+      "qa": {
+        "alpha_bounds_px": [
+          2,
+          2,
+          178,
+          97
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 10123,
+        "partial_alpha_pixels": 1465,
+        "size_px": [
+          180,
+          98
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 6052
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/stockpot/components/stall_stockpot_lid_candidate_v001.png",
+      "source_sha256": "77c3ad75e71640563f3f3663e62fa3b1a6a37a9f99ddc496b55e64967b3819cd",
+      "source_size_px": [
+        385,
+        241
+      ]
+    },
+    {
+      "asset_id": "stockpot.contact_shadow",
+      "metadata": {
+        "logical_box": [
+          132,
+          709,
+          94,
+          18
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/stockpot/stall_stockpot_contact_shadow_v001.png",
+      "output_sha256": "bfcfeebbe639069a06535d6be7656c0373c73905b7e622d986bd4cd7e1549e63",
+      "qa": {
+        "alpha_bounds_px": [
+          4,
+          3,
+          184,
+          33
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 0,
+        "partial_alpha_pixels": 4266,
+        "size_px": [
+          188,
+          36
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 2502
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/stockpot/components/stall_stockpot_contact_shadow_candidate_v001.png",
+      "source_sha256": "7e78bc761fed01ce671c776ba8d025e5cd7cfb138fc436232d196cb7a8b76b41",
+      "source_size_px": [
+        383,
+        88
+      ]
+    },
+    {
+      "asset_id": "counter_lantern.body_off",
+      "metadata": {
+        "logical_box": [
+          209,
+          604,
+          63,
+          115
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/counter_lantern/counter-oil-lantern-body-off-v001.png",
+      "output_sha256": "82757d5773ce540f1cb0e0b587592f70bffa7108f13d0e9e99d0e04aa525b65e",
+      "qa": {
+        "alpha_bounds_px": [
+          2,
+          1,
+          124,
+          229
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 17920,
+        "partial_alpha_pixels": 3422,
+        "size_px": [
+          126,
+          230
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 7638
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/counter-oil-lantern-body-off-candidate-v001.png",
+      "source_sha256": "2c72012048b8fa28813ad1391cd9adcbf513ba513c893852116dd78ef3804c87",
+      "source_size_px": [
+        257,
+        539
+      ]
+    },
+    {
+      "asset_id": "counter_lantern.core_add",
+      "metadata": {
+        "logical_box": [
+          225,
+          646,
+          31,
+          58
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/counter_lantern/counter-oil-lantern-core-add-v001.png",
+      "output_sha256": "b8bc637bc53bad14f304b88f465b85ac24f5eee7ca3af0f460d91305f746aa0b",
+      "qa": {
+        "alpha_bounds_px": [
+          3,
+          2,
+          59,
+          114
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 3525,
+        "partial_alpha_pixels": 917,
+        "size_px": [
+          62,
+          116
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 2750
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/counter-oil-lantern-core-add-candidate-v001.png",
+      "source_sha256": "0fe785347733106fd12e6e4a8275b90e8efe1f1b15ffeea19ce1eea9547502d3",
+      "source_size_px": [
+        94,
+        201
+      ]
+    },
+    {
+      "asset_id": "counter_lantern.halo_add",
+      "metadata": {
+        "logical_box": [
+          186,
+          581,
+          110,
+          146
+        ],
+        "registered_alpha": 0.55
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/counter_lantern/counter-oil-lantern-halo-add-v001.png",
+      "output_sha256": "a02ff4a778b9840ac4a9df3f4f6c53832c0fb4cf2379faa458e745d85ded8a35",
+      "qa": {
+        "alpha_bounds_px": [
+          3,
+          3,
+          217,
+          289
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 0,
+        "partial_alpha_pixels": 48769,
+        "size_px": [
+          220,
+          292
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 15471
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/counter-oil-lantern-halo-add-candidate-v001.png",
+      "source_sha256": "dc36532b08da02eb747c47a6c706540604f2a55c6885249ce40cc399443d2bd0",
+      "source_size_px": [
+        334,
+        426
+      ]
+    },
+    {
+      "asset_id": "counter_lantern.contact_shadow",
+      "metadata": {
+        "logical_box": [
+          205,
+          704,
+          72,
+          18
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/counter_lantern/counter-oil-lantern-contact-shadow-v001.png",
+      "output_sha256": "d3156aa16565ae995015166ed495ed281429451233848a58637eb05e5228c707",
+      "qa": {
+        "alpha_bounds_px": [
+          3,
+          4,
+          141,
+          32
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 0,
+        "partial_alpha_pixels": 3000,
+        "size_px": [
+          144,
+          36
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 2184
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/counter-oil-lantern-contact-shadow-candidate-v001.png",
+      "source_sha256": "0198c1444147ddbdc1fd5f557eae79fbc82a84847f6b47f9ad38051abee39eb5",
+      "source_size_px": [
+        304,
+        64
+      ]
+    },
+    {
+      "asset_id": "food_bowl.grape",
+      "metadata": {
+        "logical_box": [
+          157,
+          652,
+          66,
+          66
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/food_bowl/grape-food-bowl-v001.png",
+      "output_sha256": "7e62ed5744677debb6efa1a8681085200108ce87647af245f5a8fd8c695c34fa",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          132,
+          132
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 11825,
+        "partial_alpha_pixels": 1394,
+        "size_px": [
+          132,
+          132
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 4205
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/grape-food-bowl-candidate-v001.png",
+      "source_sha256": "1fe0ab337a82e8c55937cefed0e907d81b6c28fdaae956a5aa7ae596df6f2640",
+      "source_size_px": [
+        457,
+        498
+      ]
+    },
+    {
+      "asset_id": "counter_plant.pot",
+      "metadata": {
+        "logical_box": [
+          481,
+          644,
+          67,
+          75
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/counter_plant/counter_plant_pot_v001.png",
+      "output_sha256": "d9233593c7dc09465cb361dc15724ceb1d5b70021a31e6d6a278f19ee22b780b",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          134,
+          150
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 14951,
+        "partial_alpha_pixels": 1472,
+        "size_px": [
+          134,
+          150
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 3677
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-decor/components/counter_plant_pot_candidate_v001.png",
+      "source_sha256": "e5862fb45f4a85d73a5c9c0ef37abf45db5c2cfef7ae81fd59cfefc7d6da7a0c",
+      "source_size_px": [
+        497,
+        487
+      ]
+    },
+    {
+      "asset_id": "counter_plant.foliage",
+      "metadata": {
+        "logical_box": [
+          486,
+          500,
+          61,
+          154
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/counter_plant/counter_plant_foliage_v001.png",
+      "output_sha256": "52ea8833b4c5c80e8cd43616ae1deba53a2c02c26e10fbb087d0b1bfd7d0a4f6",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          1,
+          122,
+          307
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 14090,
+        "partial_alpha_pixels": 5087,
+        "size_px": [
+          122,
+          308
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 18399
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-decor/components/counter_plant_foliage_candidate_v001.png",
+      "source_sha256": "0ae340659c946803ba3e353364e7b3f4227da4762ea21b01dd05c1e8f77e292a",
+      "source_size_px": [
+        527,
+        723
+      ]
+    },
+    {
+      "asset_id": "bottle_crate.empty",
+      "metadata": {
+        "shared_kit_scale": 0.46706586826347307
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/bottle_crate/bottle_crate_empty_v001.png",
+      "output_sha256": "16e061a7e89870f30d0ca2ac068a8b86beb80840448a123fd14e6e594f4ef165",
+      "qa": {
+        "alpha_bounds_px": [
+          1,
+          1,
+          233,
+          176
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 25428,
+        "partial_alpha_pixels": 2067,
+        "size_px": [
+          234,
+          177
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 13923
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-decor/components/bottle_crate_empty_candidate_v001.png",
+      "source_sha256": "c5ac20e8796931fe7bdaf799575fa7696d2559c5fea0d64f534d537d95135a68",
+      "source_size_px": [
+        501,
+        379
+      ]
+    },
+    {
+      "asset_id": "bottle_crate.bottle_brown",
+      "metadata": {
+        "shared_kit_scale": 0.46706586826347307
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/bottle_crate/bottle_brown_v001.png",
+      "output_sha256": "ca8e3c5b1baa05e00e4832dba6b80eba1380b1f847a79dbb9fa9e168ac3c1b73",
+      "qa": {
+        "alpha_bounds_px": [
+          1,
+          2,
+          76,
+          141
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 7118,
+        "partial_alpha_pixels": 1195,
+        "size_px": [
+          77,
+          142
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 2621
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-decor/components/bottle_brown_candidate_v001.png",
+      "source_sha256": "3d6cf3e701098434de44aa75ae305fdc4ba9c17726c264cc523cfec43ba6fadf",
+      "source_size_px": [
+        164,
+        303
+      ]
+    },
+    {
+      "asset_id": "bottle_crate.bottle_green",
+      "metadata": {
+        "shared_kit_scale": 0.46706586826347307
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/bottle_crate/bottle_green_v001.png",
+      "output_sha256": "88e49fbf5ac03a9fd97486e46850a0139e27570805fdf864efee582d991ecc95",
+      "qa": {
+        "alpha_bounds_px": [
+          1,
+          1,
+          80,
+          154
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 8367,
+        "partial_alpha_pixels": 1260,
+        "size_px": [
+          82,
+          155
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 3083
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-decor/components/bottle_green_candidate_v001.png",
+      "source_sha256": "c83d152e630db1509d0ed55a4198cd63ac2b6cbec1ad4c3aedefa6e0f886f3c0",
+      "source_size_px": [
+        175,
+        332
+      ]
+    },
+    {
+      "asset_id": "bottle_crate.bottle_cream_blue_cap",
+      "metadata": {
+        "shared_kit_scale": 0.46706586826347307
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/bottle_crate/bottle_cream_blue_cap_v001.png",
+      "output_sha256": "88fcf66ac09a91228934481b79b293d39e3120ed2750e734cfd3a9fe2bfa751b",
+      "qa": {
+        "alpha_bounds_px": [
+          1,
+          1,
+          85,
+          142
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 7868,
+        "partial_alpha_pixels": 1304,
+        "size_px": [
+          86,
+          143
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 3126
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-decor/components/bottle_cream_blue_cap_candidate_v001.png",
+      "source_sha256": "423232dad4cd3d7fb43be6ec9cff445b3be2668260b22e47f34321d3a1ece5c8",
+      "source_size_px": [
+        184,
+        306
+      ]
+    },
+    {
+      "asset_id": "counter_cloth.red_draped",
+      "metadata": {
+        "logical_box": [
+          517,
+          684,
+          97,
+          120
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/counter_cloth/counter_cloth_red_draped_v001.png",
+      "output_sha256": "88cf2c9c53c6456d960ed4691d6dc70f62dc87f49d591a854b9cb498206e837c",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          194,
+          240
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 28650,
+        "partial_alpha_pixels": 2225,
+        "size_px": [
+          194,
+          240
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 15685
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-decor/components/counter_cloth_red_draped_candidate_v001.png",
+      "source_sha256": "2f221e47152e91c7901c453ebcb14e738fe067bb64dd6bc65ca533a8dd018fbc",
+      "source_size_px": [
+        912,
+        984
+      ]
+    },
+    {
+      "asset_id": "rank.plaque_empty_sockets",
+      "metadata": {
+        "logical_box": [
+          246,
+          372,
+          228,
+          48
+        ],
+        "runtime_horizontal_caps_px": [
+          42,
+          42
+        ],
+        "source_caps_px": [
+          185,
+          185
+        ]
+      },
+      "operation": "horizontal_nine_slice",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/rank/rank-plaque-empty-sockets-v001.png",
+      "output_sha256": "0c2aaa325b42cc9c1c8a2e9ece4fe37d87fcb8b8c965a090681f209f1c265594",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          456,
+          96
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 39461,
+        "partial_alpha_pixels": 2285,
+        "size_px": [
+          456,
+          96
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 2030
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/rank/rank-plaque-empty-sockets-v001.png",
+      "source_sha256": "33518363dc3d6ad709fd33546be4c736a50a8511e758144f3b319b9e69fe9f47",
+      "source_size_px": [
+        1539,
+        425
+      ]
+    },
+    {
+      "asset_id": "rank.star_empty",
+      "metadata": {
+        "logical_size": [
+          42,
+          34
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/rank/rank-star-empty-v001.png",
+      "output_sha256": "1e452f0bde8145e3603f8d014a9760b10dfa389e7332d7848f76a5d0711869db",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          84,
+          68
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 3322,
+        "partial_alpha_pixels": 724,
+        "size_px": [
+          84,
+          68
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 1666
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/rank/rank-star-empty-v001.png",
+      "source_sha256": "83baf70e911eb06c2f7d3424fe3468fc965416089e965f118e94b60007db87cd",
+      "source_size_px": [
+        259,
+        249
+      ]
+    },
+    {
+      "asset_id": "rank.star_filled",
+      "metadata": {
+        "logical_size": [
+          42,
+          34
+        ]
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/rank/rank-star-filled-v001.png",
+      "output_sha256": "47ec23c71bd42a3e93c58c2f7d556bd89aaee652dc342a11087da67b2eaf441a",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          84,
+          68
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 3299,
+        "partial_alpha_pixels": 735,
+        "size_px": [
+          84,
+          68
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 1678
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/rank/rank-star-filled-v001.png",
+      "source_sha256": "a3adeed7adc792419e410b2f51399d50906b55fd30d4e73d48ca9d91b3c5f7f6",
+      "source_size_px": [
+        259,
+        249
+      ]
+    },
+    {
+      "asset_id": "rank.star_shine",
+      "metadata": {
+        "sized_relative_to_runtime_star": true
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/rank/rank-star-shine-v001.png",
+      "output_sha256": "6d7bcfcf14bfcc0d2d7e801de65d25b61fd12cab0797302c32cde08ac1338297",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          42,
+          40
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 260,
+        "partial_alpha_pixels": 354,
+        "size_px": [
+          42,
+          40
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 1066
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/rank/rank-star-shine-v001.png",
+      "source_sha256": "fdf210b7170831fcb95a23efa3b59aab89106bf55b0fb9e2ccd450e33305f8e2",
+      "source_size_px": [
+        130,
+        147
+      ]
+    },
+    {
+      "asset_id": "button.primary_normal",
+      "metadata": {
+        "role": "primary",
+        "state": "normal"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-primary-normal-v001.png",
+      "output_sha256": "57b50123c89fe0beafc37bcc6ce90652491013d5e2089c08b3a74c828891c752",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          692,
+          410
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 258875,
+        "partial_alpha_pixels": 10237,
+        "size_px": [
+          692,
+          410
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 14608
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-primary-normal-v001.png",
+      "source_sha256": "6292d50fc091d5076eed21471227f9938cfcfcfd0f9710aae17ad3d25b1b5f1b",
+      "source_size_px": [
+        346,
+        205
+      ]
+    },
+    {
+      "asset_id": "button.primary_selected",
+      "metadata": {
+        "role": "primary",
+        "state": "selected"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-primary-selected-v001.png",
+      "output_sha256": "961bd698ebc2f6861a45c60d1fe8808b8a8b2415fdc3c4392b56596869de13cd",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          692,
+          410
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 258707,
+        "partial_alpha_pixels": 10281,
+        "size_px": [
+          692,
+          410
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 14732
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-primary-selected-v001.png",
+      "source_sha256": "10697497cc54969aa0e1a08545564f880f99fe583bd5fedaeb0b64f5247d37a7",
+      "source_size_px": [
+        346,
+        205
+      ]
+    },
+    {
+      "asset_id": "button.primary_pressed",
+      "metadata": {
+        "role": "primary",
+        "state": "pressed"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-primary-pressed-v001.png",
+      "output_sha256": "d623a2ff920501155623a33d976de5b4ac0dfbe8efb9dbe9f7fed2fd67478b72",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          692,
+          410
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 258249,
+        "partial_alpha_pixels": 10253,
+        "size_px": [
+          692,
+          410
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 15218
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-primary-pressed-v001.png",
+      "source_sha256": "09282c7e58cbf99501debab1cbdf2bb0a40c9c3fb85c7c538b3bc46fd601a8aa",
+      "source_size_px": [
+        346,
+        205
+      ]
+    },
+    {
+      "asset_id": "button.primary_disabled",
+      "metadata": {
+        "role": "primary",
+        "state": "disabled"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-primary-disabled-v001.png",
+      "output_sha256": "fa1fc7e242bfca01adc9cfb6c73f7830a2fe547d3d867feeae943e0ea4d075e0",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          692,
+          410
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 258755,
+        "partial_alpha_pixels": 10250,
+        "size_px": [
+          692,
+          410
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 14715
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-primary-disabled-v001.png",
+      "source_sha256": "28183a69494f473a2d7282445be596d3daf81c180e390490736d4c329ae4199d",
+      "source_size_px": [
+        346,
+        205
+      ]
+    },
+    {
+      "asset_id": "button.secondary_normal",
+      "metadata": {
+        "role": "secondary",
+        "state": "normal"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-secondary-normal-v001.png",
+      "output_sha256": "008e95fe82b8b59944dff8a9ce66fb9b2b240c941918095bf5c617efad6520b7",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          692,
+          410
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 259667,
+        "partial_alpha_pixels": 10493,
+        "size_px": [
+          692,
+          410
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 13560
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-secondary-normal-v001.png",
+      "source_sha256": "5fdae88309df0866931a6dcef517eaebcd749092cb7e80c60a5404867f7c80af",
+      "source_size_px": [
+        346,
+        205
+      ]
+    },
+    {
+      "asset_id": "button.secondary_selected",
+      "metadata": {
+        "role": "secondary",
+        "state": "selected"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-secondary-selected-v001.png",
+      "output_sha256": "a74186ed655a49ea5ea7007bf6434915b0b8636380b881a3a886649049dc0fd9",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          692,
+          410
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 259519,
+        "partial_alpha_pixels": 10498,
+        "size_px": [
+          692,
+          410
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 13703
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-secondary-selected-v001.png",
+      "source_sha256": "34b4c2ddc3f547064748c0ae2d45b0f72c40dd0eb912cc0fa7d9c828d142f3c6",
+      "source_size_px": [
+        346,
+        205
+      ]
+    },
+    {
+      "asset_id": "button.secondary_pressed",
+      "metadata": {
+        "role": "secondary",
+        "state": "pressed"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-secondary-pressed-v001.png",
+      "output_sha256": "194c97da26aa54d7a478b8c00c7dcf42e6d72449a4a0b57c64a4cccbb7e94918",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          692,
+          410
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 258958,
+        "partial_alpha_pixels": 10624,
+        "size_px": [
+          692,
+          410
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 14138
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-secondary-pressed-v001.png",
+      "source_sha256": "c149d723b01d0810464a1cf26f99d40595f05b853100b88255b8e509786534b9",
+      "source_size_px": [
+        346,
+        205
+      ]
+    },
+    {
+      "asset_id": "button.secondary_disabled",
+      "metadata": {
+        "role": "secondary",
+        "state": "disabled"
+      },
+      "operation": "resize_exact",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-secondary-disabled-v001.png",
+      "output_sha256": "da7763e19f62a2283f68815229a2dcb7d57ff9d2b6896fdade3354f978231fbb",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          692,
+          410
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 259475,
+        "partial_alpha_pixels": 10572,
+        "size_px": [
+          692,
+          410
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 13673
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-secondary-disabled-v001.png",
+      "source_sha256": "85c29b6da08bba3378dcb453d95b7de75c407dadfe2fbd62eaa21a1873d6176c",
+      "source_size_px": [
+        346,
+        205
+      ]
+    },
+    {
+      "asset_id": "button.leaf_left",
+      "metadata": {
+        "detached_ornament": true
+      },
+      "operation": "copy_lossless",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-leaf-left-v001.png",
+      "output_sha256": "c2ceb39b2e13ba0e08ed6d1613fd6ed7a8294fc3fc997fefc38e996fafc9d49b",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          206,
+          207
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 25078,
+        "partial_alpha_pixels": 779,
+        "size_px": [
+          206,
+          207
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 16785
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-leaf-left-v001.png",
+      "source_sha256": "c2ceb39b2e13ba0e08ed6d1613fd6ed7a8294fc3fc997fefc38e996fafc9d49b",
+      "source_size_px": [
+        206,
+        207
+      ]
+    },
+    {
+      "asset_id": "button.leaf_right",
+      "metadata": {
+        "detached_ornament": true
+      },
+      "operation": "copy_lossless",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/buttons/menu-button-leaf-right-v001.png",
+      "output_sha256": "88d1f720ce4e5fc5921267c5516247a9d57182ee0aa02a7be2deb234978ab6b0",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          206,
+          208
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 25099,
+        "partial_alpha_pixels": 762,
+        "size_px": [
+          206,
+          208
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 16987
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/buttons/menu-button-leaf-right-v001.png",
+      "source_sha256": "88d1f720ce4e5fc5921267c5516247a9d57182ee0aa02a7be2deb234978ab6b0",
+      "source_size_px": [
+        206,
+        208
+      ]
+    },
+    {
+      "asset_id": "settings.normal",
+      "metadata": {
+        "contained_alpha_bounds_px": [
+          0,
+          13,
+          150,
+          168
+        ],
+        "logical_box": [
+          515,
+          1033,
+          75,
+          84
+        ],
+        "state": "normal"
+      },
+      "operation": "contain_bottom",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/settings/settings-cog-normal-v001.png",
+      "output_sha256": "8d37d38ceb4ec561ccca4331a613457df79566b0489287733e25b64cc2b13082",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          13,
+          150,
+          168
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 17616,
+        "partial_alpha_pixels": 1405,
+        "size_px": [
+          150,
+          168
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 6179
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/settings/settings-cog-normal-v001.png",
+      "source_sha256": "be02c9dbcc429a3ee830369d37063cc84c436c1efc6448b5cfc662bdbcafd8d2",
+      "source_size_px": [
+        563,
+        583
+      ]
+    },
+    {
+      "asset_id": "settings.pressed",
+      "metadata": {
+        "contained_alpha_bounds_px": [
+          0,
+          13,
+          150,
+          168
+        ],
+        "logical_box": [
+          515,
+          1033,
+          75,
+          84
+        ],
+        "state": "pressed"
+      },
+      "operation": "contain_bottom",
+      "output": "game/assets/environments/home_village/v001/stall/attachments/v004/ui/settings/settings-cog-pressed-v001.png",
+      "output_sha256": "34653c09a0f37bc46d6283bf05c8e82d420ee4d6f2677db9f5c9223a8c3a07d6",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          13,
+          150,
+          168
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "magenta_fringe_pixels": 0,
+        "opaque_pixels": 17609,
+        "partial_alpha_pixels": 1408,
+        "size_px": [
+          150,
+          168
+        ],
+        "stored_mode": "RGBA",
+        "transparent_pixels": 6183
+      },
+      "source": "art/source-assets/home-menu/stall/v004-attachment-kit/ui/components/settings/settings-cog-pressed-v001.png",
+      "source_sha256": "99752da6a341db92715a6f7d64ea0434a12238b676afeef9d882e73abb0f521b",
+      "source_size_px": [
+        563,
+        583
+      ]
+    }
+  ],
+  "builder": "tools/art/promote_stall_attachment_runtime_v004.py",
+  "coordinate_contract": {
+    "coordinate_space": "StallStage before shared framing transform",
+    "logical_canvas_px": [
+      720,
+      1280
+    ],
+    "runtime_canvas_px": [
+      1440,
+      2560
+    ],
+    "runtime_resolution_scale": 2,
+    "shared_stage": {
+      "pivot": [
+        360,
+        634
+      ],
+      "scale": 0.86
+    }
+  },
+  "excluded": [
+    {
+      "pattern": "*assembled_preview*",
+      "reason": "review-only composites; runtime uses modular pieces"
+    },
+    {
+      "pattern": "ui/generated/rank-plaque-kit-chroma-v002.png",
+      "reason": "rejected green plaque recolor"
+    },
+    {
+      "pattern": "ui/transparent/rank-plaque-kit-cutout-v002.png",
+      "reason": "rejected green plaque recolor derivative"
+    },
+    {
+      "pattern": "ui/masks/rank-plaque-face-recolor-mask-v002.png",
+      "reason": "rejected green plaque recolor mask"
+    },
+    {
+      "pattern": "fonts/*",
+      "reason": "labels remain native Godot text; this promotion adds no font"
+    },
+    {
+      "pattern": "steam_or_smoke_raster_art",
+      "reason": "steam and smoke remain procedural runtime effects"
+    },
+    {
+      "pattern": "main_character/*",
+      "reason": "main Bentosaur character is outside V004 scope"
+    }
+  ],
+  "placement_contract": "art/source-assets/home-menu/stall/v004-attachment-kit/placement-and-motion-contract.json",
+  "placement_contract_sha256": "5757542ff949a77bd9dc296a18ff473a4f51d4658370fce1e7e14aeaff93dcd4",
+  "processing": {
+    "alpha_resampling": "premultiplied RGBa",
+    "buttons": {
+      "labels_baked_into_art": false,
+      "normalized_intermediate_px": [
+        692,
+        410
+      ],
+      "recommended_nine_patch_insets_px": {
+        "bottom": 104,
+        "left": 144,
+        "right": 144,
+        "top": 104
+      }
+    },
+    "color_mode": "RGBA",
+    "png": {
+      "compress_level": 9,
+      "lossless": true,
+      "optimize": true
+    },
+    "rank_plaque": {
+      "horizontal_nine_slice_source_caps_px": [
+        185,
+        185
+      ],
+      "runtime_size_px": [
+        456,
+        96
+      ]
+    },
+    "resampler": "Pillow Image.Resampling.LANCZOS"
+  },
+  "schema_version": 1,
+  "source_gate": "G03_remaining_non_character_stall_attachments",
+  "source_manifest_sha256": "9f0a68f5db34104fa432786e46cb6174a9cca18551fef625f60024d8f2e4b527",
+  "source_pack": "art/source-assets/home-menu/stall/v004-attachment-kit",
+  "status": "founder_approved_runtime_derivatives"
+}

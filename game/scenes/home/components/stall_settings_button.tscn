@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/home/stall_settings_button.gd" id="1_script"]
+[ext_resource type="Shader" path="res://assets/vfx/stall_ui_canonical_mask.gdshader" id="2_shader"]
+[ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v004/ui/settings/settings-cog-normal-v001.png" id="3_normal"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_state"]
+resource_local_to_scene = true
+shader = ExtResource("2_shader")
+shader_parameter/state_texture = ExtResource("3_normal")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_button"]
+
+[node name="StallSettingsButton" type="Button"]
+custom_minimum_size = Vector2(75, 84)
+offset_right = 75.0
+offset_bottom = 84.0
+mouse_default_cursor_shape = 2
+focus_mode = 2
+action_mode = 1
+flat = true
+theme_override_colors/font_color = Color(1, 1, 1, 0)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_button")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_button")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_button")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_button")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_button")
+script = ExtResource("1_script")
+
+[node name="VisualRoot" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="VisualRoot"]
+material = SubResource("ShaderMaterial_state")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_normal")
+expand_mode = 1
+stretch_mode = 5

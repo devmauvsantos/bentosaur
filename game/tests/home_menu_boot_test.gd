@@ -17,6 +17,11 @@ func _initialize() -> void:
 		var home_menu := packed_scene.instantiate()
 		root.add_child(home_menu)
 		_expect(
+			home_menu is BentosaurHomeMenu,
+			"The production home menu must own typed request signals.",
+			errors
+		)
+		_expect(
 			home_menu.get_node_or_null(
 				"WorldCanvas/ApprovedStallComposition/StallStage/StallStructure"
 			) != null,
@@ -44,6 +49,27 @@ func _initialize() -> void:
 			"The promoted home menu must contain the approved right stall lantern.",
 			errors
 		)
+		var attachment_kit := home_menu.get_node_or_null(
+			"WorldCanvas/ApprovedStallComposition/StallStage/StallAttachmentKit"
+		) as StallAttachmentKit
+		_expect(
+			attachment_kit != null,
+			"The promoted menu must contain the founder-approved V004 kit.",
+			errors
+		)
+		if attachment_kit != null:
+			var open_button := attachment_kit.get_node("OpenStallButton") as StallMenuButton
+			var guestbook_button := attachment_kit.get_node("GuestbookButton") as StallMenuButton
+			var decorations_button := attachment_kit.get_node("DecorationsButton") as StallMenuButton
+			var pantry_button := attachment_kit.get_node("PantryButton") as StallMenuButton
+			_expect(
+				open_button.label_text == "Open Stall"
+					and guestbook_button.label_text == "Guestbook"
+					and decorations_button.label_text == "Decorations"
+					and pantry_button.label_text == "Pantry",
+				"The four approved live menu labels must survive promotion.",
+				errors
+			)
 		_expect(
 			home_menu.get_node_or_null(
 				"WorldCanvas/ApprovedStallComposition/HomeVillageRainLab"
