@@ -21,15 +21,58 @@ func _run() -> void:
 	await process_frame
 
 	var background := lab.get_node_or_null("BackgroundUnlit") as TextureRect
+	var music := lab.get_node_or_null("Audio/LateNightRadio") as AudioStreamPlayer
+	var rain_audio := lab.get_node_or_null("Audio/GentleRain") as AudioStreamPlayer
 	var lighting := lab.get_node_or_null("Lighting") as Node2D
 	var weather := lab.get_node_or_null("Weather") as Node2D
+	var audio_off := OS.get_cmdline_user_args().has("--audio-off")
 	_expect(background != null, "Missing immutable unlit background.", errors)
+	_expect(music != null, "Missing Late Night Radio music channel.", errors)
+	_expect(rain_audio != null, "Missing synchronized rain-audio channel.", errors)
 	_expect(lighting != null, "Missing registered lighting group.", errors)
 	_expect(weather != null, "Missing weather group.", errors)
 	if background != null:
 		_expect(
 			background.texture.get_size() == Vector2(720.0, 1280.0),
 			"Runtime background must be exactly 720x1280.",
+			errors
+		)
+
+	if music != null:
+		_expect(music.stream is AudioStreamMP3, "Music must load as MP3.", errors)
+		_expect(
+			(music.stream as AudioStreamMP3).loop,
+			"Late Night Radio must loop.",
+			errors
+		)
+		_expect(music.bus == "Music", "Music must use the Music bus.", errors)
+		_expect(
+			is_equal_approx(music.volume_db, -16.0),
+			"Music must use the gently lifted -16 dB balance.",
+			errors
+		)
+		_expect(
+			music.playing == not audio_off,
+			"Music playback must follow the audio-off runtime option.",
+			errors
+		)
+
+	if rain_audio != null:
+		_expect(rain_audio.stream is AudioStreamMP3, "Rain ambience must load as MP3.", errors)
+		_expect(
+			(rain_audio.stream as AudioStreamMP3).loop,
+			"Rain ambience must loop.",
+			errors
+		)
+		_expect(rain_audio.bus == "Weather", "Rain ambience must use the Weather bus.", errors)
+		_expect(
+			is_equal_approx(rain_audio.volume_db, -14.0),
+			"Rain ambience must remain a quiet bed at -14 dB.",
+			errors
+		)
+		_expect(
+			rain_audio.playing == not audio_off,
+			"Rain playback must follow the audio-off runtime option.",
 			errors
 		)
 
@@ -57,6 +100,12 @@ func _run() -> void:
 	var surface := lab.get_node_or_null(
 		"Weather/PavementImpactSurface"
 	) as LightOccluder2D
+	var roof_splash_layer := lab.get_node_or_null(
+		"Weather/RoofSplashes"
+	) as Node2D
+	var roof_drop_timer := lab.get_node_or_null(
+		"Weather/RoofDropTimer"
+	) as Timer
 	var reduced_weather := OS.get_cmdline_user_args().has("--reduced-weather")
 	var expected_back := 48 if reduced_weather else 96
 	var expected_front := 24 if reduced_weather else 52
@@ -108,6 +157,72 @@ func _run() -> void:
 		errors
 	)
 	_expect(surface != null and surface.sdf_collision, "Missing SDF pavement surface.", errors)
+	_expect(roof_splash_layer != null, "Missing sparse roof-splash layer.", errors)
+	_expect(
+		roof_drop_timer != null
+			and roof_drop_timer.one_shot
+			and not roof_drop_timer.is_stopped(),
+		"Roof drops must use one sparse randomized one-shot timer.",
+		errors
+	)
+	if roof_splash_layer != null:
+		lab.call("_spawn_roof_splash")
+		await process_frame
+		_expect(
+			roof_splash_layer.get_child_count() == 1,
+			"A requested roof impact must create exactly one splash.",
+			errors
+		)
+		if roof_splash_layer.get_child_count() == 1:
+			var roof_splash := roof_splash_layer.get_child(0) as Sprite2D
+			_expect(roof_splash != null, "Roof impact must be a sprite.", errors)
+			if roof_splash != null:
+				_expect(
+					roof_splash.hframes == 8,
+					"Roof impact must use the 8-frame splash atlas.",
+					errors
+				)
+				_expect(
+					roof_splash.scale.x <= 0.47
+						and roof_splash.modulate.a <= 0.54,
+					"Roof impacts must remain smaller and dimmer than pavement splashes.",
+					errors
+				)
+
+	if rain_audio != null and not audio_off:
+		lab.set_rain_enabled(false)
+		await create_timer(0.30).timeout
+		_expect(
+			rain_audio.stream_paused,
+			"Turning rain off must pause its audio channel after the short fade.",
+			errors
+		)
+		if roof_splash_layer != null and roof_drop_timer != null:
+			_expect(
+				roof_drop_timer.is_stopped()
+					and roof_splash_layer.get_child_count() == 0,
+				"Turning rain off must stop and clear roof impacts.",
+				errors
+			)
+		lab.set_rain_enabled(true)
+		await create_timer(0.30).timeout
+		_expect(
+			rain_audio.playing and not rain_audio.stream_paused,
+			"Turning rain on must resume its audio channel.",
+			errors
+		)
+		if roof_drop_timer != null:
+			_expect(
+				not roof_drop_timer.is_stopped(),
+				"Turning rain on must resume sparse roof impacts.",
+				errors
+			)
+	elif rain_audio != null:
+		_expect(
+			not rain_audio.playing,
+			"Silent captures must keep the rain channel stopped.",
+			errors
+		)
 
 	if OS.get_cmdline_user_args().has("--deterministic-capture"):
 		for particles: GPUParticles2D in [
@@ -177,6 +292,15 @@ func _run() -> void:
 		"Rain sub-emitters require the locked Mobile renderer.",
 		errors
 	)
+	if music != null:
+		music.stop()
+		music.stream = null
+	if rain_audio != null:
+		rain_audio.stop()
+		rain_audio.stream = null
+	lab.queue_free()
+	await process_frame
+	await create_timer(0.10).timeout
 	_finish(errors)
 
 

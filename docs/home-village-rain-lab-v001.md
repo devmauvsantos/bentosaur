@@ -65,6 +65,33 @@ Particle ceilings at full density:
 | Invisible collision seeds | 54 |
 | Splash sub-emitter | 192 |
 
+## Audio trial contract
+
+- `Late Night Radio` by Kevin MacLeod loops continuously on the `Music` bus at
+  `-16 dB`.
+- `Gentle Rain 01` by DRAGON-STUDIO loops on the `Weather` bus at `-14 dB`.
+- Rain audio starts whenever visible rain starts.
+- Pressing `R` fades the rain channel over 240 ms, pauses it, and hides the
+  visual weather. Pressing `R` again resumes the same ambience position and
+  fades it back in with the weather.
+- Music continues when rain is disabled.
+- `--audio-off` disables both channels for silent automated captures.
+
+## Roof-impact detail
+
+- Tiny roof splashes reuse the authored eight-frame rain-impact atlas.
+- Twenty-six registered anchor points cover only the approved tile planes
+  identified in the visual review.
+- One randomized one-shot timer emits a single impact every 0.62–1.45 seconds;
+  reduced weather slows this to 1.45–3.20 seconds.
+- Immediate anchor repetition is prevented.
+- Roof splashes use only 26–42% scale and 42–54% opacity, remaining smaller and
+  dimmer than pavement splashes.
+- Disabling rain clears active roof impacts and stops their timer.
+
+The source tracks, checksums, attribution, and license references are recorded
+in `game/assets/audio/README.md`.
+
 ## Known lab boundaries
 
 - The collision proof distributes splashes along one hidden perspective contour,
@@ -113,6 +140,15 @@ Reduced weather:
   --path game \
   res://scenes/labs/home_village_rain_lab.tscn \
   -- --reduced-weather
+```
+
+Silent visual capture:
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --path game \
+  res://scenes/labs/home_village_rain_lab.tscn \
+  -- --deterministic-capture --audio-off
 ```
 
 Contract test:

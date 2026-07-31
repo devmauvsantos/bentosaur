@@ -33,6 +33,12 @@ const RAIN_IMPACT_SEED_TEXTURE: Texture2D = preload(
 const RAIN_SPLASH_TEXTURE: Texture2D = preload(
 	"res://assets/vfx/weather/rain/v001/rain_splash_8x1.png"
 )
+const LATE_NIGHT_RADIO_STREAM: AudioStreamMP3 = preload(
+	"res://assets/audio/music/late_night_radio_kevin_macleod.mp3"
+)
+const GENTLE_RAIN_STREAM: AudioStreamMP3 = preload(
+	"res://assets/audio/ambience/gentle_rain_01_dragon_studio.mp3"
+)
 
 const RAIN_BACK_ALPHA := 0.23
 const RAIN_FRONT_ALPHA := 0.37
@@ -41,6 +47,43 @@ const RAIN_FRONT_TINT := Color(0.72, 0.82, 0.91, 1.0)
 const RAIN_SPLASH_TINT := Color(0.66, 0.78, 0.88, 0.50)
 const LIGHT_CORE_BASE_ALPHA := 0.99
 const LIGHT_HALO_BASE_ALPHA := 0.985
+const MUSIC_VOLUME_DB := -16.0
+const RAIN_AUDIO_VOLUME_DB := -14.0
+const RAIN_AUDIO_SILENT_DB := -60.0
+const RAIN_AUDIO_FADE_SECONDS := 0.24
+const ROOF_SPLASH_TINT := Color(0.66, 0.79, 0.90, 1.0)
+const ROOF_SPLASH_ALPHA_RANGE := Vector2(0.42, 0.54)
+const ROOF_SPLASH_INTERVAL := Vector2(0.62, 1.45)
+const ROOF_SPLASH_INTERVAL_REDUCED := Vector2(1.45, 3.20)
+const ROOF_SPLASH_FRAME_SECONDS := 0.036
+const ROOF_SPLASH_ANCHORS: Array[Vector3] = [
+	Vector3(79.0, 126.0, 0.30),
+	Vector3(121.0, 115.0, 0.32),
+	Vector3(160.0, 124.0, 0.30),
+	Vector3(170.0, 183.0, 0.32),
+	Vector3(205.0, 172.0, 0.34),
+	Vector3(233.0, 192.0, 0.32),
+	Vector3(18.0, 225.0, 0.36),
+	Vector3(46.0, 238.0, 0.36),
+	Vector3(70.0, 246.0, 0.36),
+	Vector3(151.0, 271.0, 0.38),
+	Vector3(199.0, 280.0, 0.42),
+	Vector3(252.0, 292.0, 0.40),
+	Vector3(262.0, 305.0, 0.30),
+	Vector3(291.0, 318.0, 0.32),
+	Vector3(398.0, 239.0, 0.26),
+	Vector3(430.0, 218.0, 0.30),
+	Vector3(458.0, 235.0, 0.27),
+	Vector3(371.0, 298.0, 0.30),
+	Vector3(404.0, 291.0, 0.32),
+	Vector3(441.0, 306.0, 0.30),
+	Vector3(592.0, 101.0, 0.30),
+	Vector3(638.0, 83.0, 0.32),
+	Vector3(686.0, 91.0, 0.30),
+	Vector3(556.0, 234.0, 0.36),
+	Vector3(611.0, 218.0, 0.38),
+	Vector3(670.0, 232.0, 0.36),
+]
 
 var indirect_warm_spill: TextureRect
 var light_halos: TextureRect
@@ -51,19 +94,42 @@ var rain_front: GPUParticles2D
 var rain_impact_seeds: GPUParticles2D
 var rain_splashes: GPUParticles2D
 var pavement_impact_surface: LightOccluder2D
+var roof_splash_layer: Node2D
+var roof_drop_timer: Timer
+var music_player: AudioStreamPlayer
+var rain_audio_player: AudioStreamPlayer
 
 var _elapsed := 0.0
 var _lights_awake := false
 var _rain_enabled := true
 var _reduced_weather := false
 var _deterministic_capture := false
+var _audio_enabled := true
+var _rain_audio_tween: Tween
+var _roof_drop_rng := RandomNumberGenerator.new()
+var _last_roof_anchor_index := -1
 
 
 func _ready() -> void:
 	_read_runtime_options()
+	if _deterministic_capture:
+		_roof_drop_rng.seed = 93011
+	else:
+		_roof_drop_rng.randomize()
+	_build_audio()
 	_build_environment()
 	_build_weather()
 	_begin_wake_sequence()
+
+
+func _exit_tree() -> void:
+	if _rain_audio_tween != null and _rain_audio_tween.is_valid():
+		_rain_audio_tween.kill()
+	for player: AudioStreamPlayer in [music_player, rain_audio_player]:
+		if player == null:
+			continue
+		player.stop()
+		player.stream = null
 
 
 func _process(delta: float) -> void:
@@ -100,6 +166,8 @@ func set_rain_enabled(enabled: bool) -> void:
 	rain_back.visible = enabled
 	rain_front.visible = enabled
 	rain_splashes.visible = enabled
+	_set_roof_drops_enabled(enabled)
+	_set_rain_audio_enabled(enabled)
 
 
 func set_lights_enabled(enabled: bool) -> void:
@@ -115,6 +183,94 @@ func _read_runtime_options() -> void:
 	_reduced_weather = args.has("--reduced-weather")
 	_rain_enabled = not args.has("--rain-off")
 	_deterministic_capture = args.has("--deterministic-capture")
+	_audio_enabled = not args.has("--audio-off")
+
+
+func _build_audio() -> void:
+	var audio := Node.new()
+	audio.name = "Audio"
+	add_child(audio)
+
+	music_player = _make_looped_player(
+		"LateNightRadio",
+		LATE_NIGHT_RADIO_STREAM,
+		"Music",
+		MUSIC_VOLUME_DB
+	)
+	audio.add_child(music_player)
+
+	rain_audio_player = _make_looped_player(
+		"GentleRain",
+		GENTLE_RAIN_STREAM,
+		"Weather",
+		RAIN_AUDIO_VOLUME_DB
+	)
+	audio.add_child(rain_audio_player)
+
+	if not _audio_enabled:
+		return
+	music_player.play()
+	if _rain_enabled:
+		rain_audio_player.play()
+
+
+func _make_looped_player(
+	node_name: String,
+	source_stream: AudioStreamMP3,
+	bus_name: String,
+	volume_db: float
+) -> AudioStreamPlayer:
+	var stream := source_stream.duplicate() as AudioStreamMP3
+	stream.loop = true
+
+	var player := AudioStreamPlayer.new()
+	player.name = node_name
+	player.stream = stream
+	player.bus = bus_name
+	player.volume_db = volume_db
+	return player
+
+
+func _set_rain_audio_enabled(enabled: bool) -> void:
+	if rain_audio_player == null:
+		return
+	if _rain_audio_tween != null and _rain_audio_tween.is_valid():
+		_rain_audio_tween.kill()
+
+	if not _audio_enabled:
+		rain_audio_player.stop()
+		rain_audio_player.volume_db = RAIN_AUDIO_VOLUME_DB
+		return
+
+	if enabled:
+		if not rain_audio_player.playing:
+			rain_audio_player.volume_db = RAIN_AUDIO_SILENT_DB
+			rain_audio_player.play()
+		else:
+			rain_audio_player.stream_paused = false
+		_rain_audio_tween = create_tween()
+		_rain_audio_tween.tween_property(
+			rain_audio_player,
+			"volume_db",
+			RAIN_AUDIO_VOLUME_DB,
+			RAIN_AUDIO_FADE_SECONDS
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		return
+
+	if not rain_audio_player.playing:
+		return
+	_rain_audio_tween = create_tween()
+	_rain_audio_tween.tween_property(
+		rain_audio_player,
+		"volume_db",
+		RAIN_AUDIO_SILENT_DB,
+		RAIN_AUDIO_FADE_SECONDS
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+	_rain_audio_tween.tween_callback(
+		func() -> void:
+			rain_audio_player.stream_paused = true
+			rain_audio_player.volume_db = RAIN_AUDIO_VOLUME_DB
+	)
 
 
 func _build_environment() -> void:
@@ -209,8 +365,96 @@ func _build_weather() -> void:
 	pavement_impact_surface = _make_pavement_impact_surface()
 	weather.add_child(pavement_impact_surface)
 
-	if not _rain_enabled:
+	roof_splash_layer = Node2D.new()
+	roof_splash_layer.name = "RoofSplashes"
+	roof_splash_layer.z_index = 4
+	weather.add_child(roof_splash_layer)
+
+	roof_drop_timer = Timer.new()
+	roof_drop_timer.name = "RoofDropTimer"
+	roof_drop_timer.one_shot = true
+	roof_drop_timer.timeout.connect(_on_roof_drop_timeout)
+	weather.add_child(roof_drop_timer)
+
+	if _rain_enabled:
+		_set_roof_drops_enabled(true)
+	else:
 		set_rain_enabled(false)
+
+
+func _set_roof_drops_enabled(enabled: bool) -> void:
+	if roof_drop_timer == null:
+		return
+	if enabled:
+		if roof_drop_timer.is_stopped():
+			_schedule_next_roof_drop()
+		return
+	roof_drop_timer.stop()
+	if roof_splash_layer == null:
+		return
+	for splash: Node in roof_splash_layer.get_children():
+		splash.queue_free()
+
+
+func _schedule_next_roof_drop() -> void:
+	if roof_drop_timer == null or not _rain_enabled:
+		return
+	var interval := (
+		ROOF_SPLASH_INTERVAL_REDUCED
+		if _reduced_weather
+		else ROOF_SPLASH_INTERVAL
+	)
+	roof_drop_timer.start(_roof_drop_rng.randf_range(interval.x, interval.y))
+
+
+func _on_roof_drop_timeout() -> void:
+	if not _rain_enabled:
+		return
+	_spawn_roof_splash()
+	_schedule_next_roof_drop()
+
+
+func _spawn_roof_splash() -> void:
+	if roof_splash_layer == null or ROOF_SPLASH_ANCHORS.is_empty():
+		return
+	var anchor_index := _roof_drop_rng.randi_range(
+		0,
+		ROOF_SPLASH_ANCHORS.size() - 1
+	)
+	if anchor_index == _last_roof_anchor_index:
+		anchor_index = (anchor_index + 1) % ROOF_SPLASH_ANCHORS.size()
+	_last_roof_anchor_index = anchor_index
+	var anchor := ROOF_SPLASH_ANCHORS[anchor_index]
+
+	var splash := Sprite2D.new()
+	splash.name = "RoofSplash%04d" % _roof_drop_rng.randi_range(0, 9999)
+	splash.texture = RAIN_SPLASH_TEXTURE
+	splash.hframes = 8
+	splash.frame = 0
+	splash.position = Vector2(anchor.x, anchor.y) + Vector2(
+		_roof_drop_rng.randf_range(-4.0, 4.0),
+		_roof_drop_rng.randf_range(-1.5, 1.5)
+	)
+	var splash_scale := anchor.z * _roof_drop_rng.randf_range(0.90, 1.10)
+	splash.scale = Vector2.ONE * splash_scale
+	splash.rotation = _roof_drop_rng.randf_range(-0.07, 0.07)
+	splash.modulate = Color(
+		ROOF_SPLASH_TINT.r,
+		ROOF_SPLASH_TINT.g,
+		ROOF_SPLASH_TINT.b,
+		_roof_drop_rng.randf_range(
+			ROOF_SPLASH_ALPHA_RANGE.x,
+			ROOF_SPLASH_ALPHA_RANGE.y
+		)
+	)
+	splash.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	roof_splash_layer.add_child(splash)
+
+	var splash_tween := create_tween()
+	for frame_index: int in range(8):
+		splash_tween.tween_callback(splash.set_frame.bind(frame_index))
+		splash_tween.tween_interval(ROOF_SPLASH_FRAME_SECONDS)
+	splash_tween.tween_callback(splash.queue_free)
 
 
 func _begin_wake_sequence() -> void:
