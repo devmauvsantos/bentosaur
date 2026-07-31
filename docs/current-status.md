@@ -2,16 +2,22 @@
 
 Status: active
 
-Snapshot date: 2026-07-30
+Snapshot date: 2026-07-31
 
 ## Executive state
 
-Mau selected flat-cel 2D as Bentosaur's leading visual direction for now. A
-matching expression proof, home/menu, regulars-book screen, independent laugh
-marks, page-turn motion breakdown, four menu structures, four mascot source
-states, and a rendered breathing/blink idle now exist. The immediate project
-gate is one real layered front character, one side-walk character, and one
-draggable book page running in Godot on a phone.
+Mau selected flat-cel 2D as Bentosaur's leading visual direction and ended the
+open-ended exploration phase. A first playable now boots in Godot and executes
+the complete bounded loop: classic-stall Home, three ordered bento customers,
+correctable service, coins, first-try stars, local persistence, shift summary,
+and replay. The immediate gate is Mau playing that loop and deciding whether
+its core interaction is clear enough to keep developing.
+
+The current runtime uses the approved flattened concept screens as temporary
+backdrops. They preserve the intended atmosphere while the real gameplay model
+and UI are tested, but they are not production assets. If the loop passes, the
+next implementation milestone is one registered front customer that idles,
+blinks, receives the bento, chews, and delights.
 
 The former live-3D direction is preserved as the last locked production path,
 but it is paused while this decisive 2D proof runs. The visual selection does
@@ -20,6 +26,21 @@ the 3D lineage.
 
 No character is currently approved as production-ready, rig-ready, or
 animation-ready in either route.
+
+The Home Village lighting and rain proof is now a founder-approved visual
+checkpoint. Rain remains active from frame one, registered lights wake through
+it, and the weather uses a softer normal-alpha treatment instead of bright
+white streaks over the scene.
+
+The mobile display baseline is also locked: `720 × 1280` is the stable logical
+design grid, `canvas_items` renders at the target device resolution, `expand`
+supports ultratall displays, and iOS uses Metal with ProMotion permitted. The
+approved `941 × 1672` Home Village remains the visual authority but requires a
+separate `1440 × 3200` layered outpaint/upscale gate before shipping on the
+`1320 × 2868` iPhone 17 Pro Max display.
+
+See [Mobile display quality contract](mobile-display-quality-contract-v001.md)
+and [Home Village rain lab](home-village-rain-lab-v001.md).
 
 ## Preserved live-3D stack
 
@@ -43,6 +64,14 @@ The expanded proof pack is:
 The current menu and idle expansion is:
 
 `art/concepts/2d-chibi/v3/`
+
+The active implementation contract is:
+
+`docs/first-playable-v1.md`
+
+The current Godot main scene is:
+
+`game/scenes/vertical_slice/first_playable.tscn`
 
 Mau explicitly requested the matching hub, book, expression, and page-turn
 exploration, superseding the earlier screen-generation restriction. The pack

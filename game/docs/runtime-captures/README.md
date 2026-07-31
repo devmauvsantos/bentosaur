@@ -1,4 +1,13 @@
-# Facial Lab Runtime Captures
+# Bentosaur Runtime Captures
+
+- `first-playable-v1/` contains the current Home, Service, and Summary evidence
+  from the flat-cel gameplay slice.
+- `home-village-rain-v002-soft-blend/` is the founder-approved Home Village
+  atmosphere checkpoint: rain from frame one, registered light wake-up, and a
+  restrained normal-alpha weather composite.
+- `home-village-rain-v001/` preserves the brighter pre-restraint rain pass.
+
+## Preserved facial lab
 
 These are fixed-camera Godot Mobile-renderer captures, grouped by imported
 character revision.

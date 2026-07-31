@@ -21,23 +21,27 @@ recorded in this repository before work is treated as durable.
 | Preserved 3D authority | Blender and deterministic GLB |
 | Visual direction | Founder-selected flat-cel 2D; production lock pending one bounded Godot proof |
 | Hero source | H3.1 Extreme is the immutable appearance and silhouette authority |
-| Production stage | Flat-cel direction proof: registered character layers and interactive book pending |
-| Current blocker | One phone-ready front/side 2D rig and one tactile page-turn proof |
+| Production stage | First playable v1: complete one-shift loop in Godot |
+| Current blocker | Founder playtest of the functional serving loop |
 | 3D fallback | S40 facial topology and Faceit research are preserved but paused |
 | Approval owner | Mau approves all visual character, material, expression, animation, and gameplay gates |
 
 ## Start here
 
 1. [Current project status](current-status.md)
-2. [2D menu alternatives and idle proof](visual-explorations/2d-menu-alternatives-and-idle-proof-v3.md)
-3. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
-4. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
-5. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
-6. [Character production pipeline](character-production-pipeline-v1.md)
-7. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
-8. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
-9. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
-10. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
+2. [First playable v1](first-playable-v1.md)
+3. [Mobile display quality contract](mobile-display-quality-contract-v001.md)
+4. [Home Village rain lab](home-village-rain-lab-v001.md)
+5. [Home Village Rain V002 checkpoint](checkpoints/2026-07-31-home-village-rain-v002.md)
+6. [2D menu alternatives and idle proof](visual-explorations/2d-menu-alternatives-and-idle-proof-v3.md)
+7. [2D flat-cel animation and screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md)
+8. [2D flat-cel production feasibility](visual-explorations/2d-flat-cel-production-feasibility-v1.md)
+9. [Preserved live-3D engine lock](engine-decision-live-3d-godot-v1.md)
+10. [Character production pipeline](character-production-pipeline-v1.md)
+11. [Faceit and AI facial-animation strategy](facial-animation-faceit-ai-pipeline-v1.md)
+12. [F0 r006 topology stop report](facial-topology-f0-r006-stop-report.md)
+13. [Binary storage and recovery policy](character-binary-storage-policy-v1.md)
+14. [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md)
 
 ## Active work queue
 
@@ -47,6 +51,17 @@ recorded in this repository before work is treated as durable.
 - [x] Compare icon-grid, diegetic, dock, and classic text home menus.
 - [x] Generate neutral, blink, wave, and delighted mascot source states.
 - [x] Render one grounded breathing-and-blink idle prototype.
+- [x] Freeze the first-playable scope.
+- [x] Implement the Home → three customers → Summary loop in Godot.
+- [x] Move order content into a validated JSON contract.
+- [x] Add local coin saving and deterministic model coverage.
+- [x] Lock native-resolution canvas, ultratall expansion, Metal, and ProMotion
+  project settings.
+- [x] Add an automated mobile display-quality contract.
+- [ ] Outpaint and upscale the approved Home Village to its production
+  `1440 × 3200` layered ultratall master.
+- [ ] Mau plays and approves or rejects the core loop.
+- [ ] Replace the baked counter customer with one registered animated character.
 - [ ] Redraw one front character into registered production layers.
 - [ ] Author open, blink, and happy eyes plus soft, open, and chew mouths.
 - [ ] Build front idle, blink, delight, and chew in Godot.
@@ -68,6 +83,7 @@ Paused fallback queue:
 | Decision | Status | Document |
 |---|---|---|
 | Flat-cel 2D visual direction | Founder-selected; production proof pending | [2D animation/screen proof](visual-explorations/2d-flat-cel-animation-and-screen-proof-v2.md) |
+| Mobile display baseline | Locked: 720 × 1280 logical canvas, native target rendering, ultratall expand, safe-area UI | [Display quality contract](mobile-display-quality-contract-v001.md) |
 | Godot live-3D production stack | Preserved last lock; paused during 2D proof | [Engine decision](engine-decision-live-3d-godot-v1.md) |
 | Blender owns 3D meshes, materials, rigs, and clips | Preserved for fallback | [3D/UI/animation ownership](hybrid-3d-ui-and-animation-ownership-v1.md) |
 | Character binaries use Git LFS selectively | Active | [Storage policy](character-binary-storage-policy-v1.md) |

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "shift_id": "rainy_welcome",
+  "selection_size": 3,
+  "wrong_order_reward": 0,
+  "ingredients": [
+    {
+      "id": "rice",
+      "display_name": "Rice",
+      "color": "#F4E4BC"
+    },
+    {
+      "id": "berry",
+      "display_name": "Berry",
+      "color": "#D95C75"
+    },
+    {
+      "id": "leaf",
+      "display_name": "Leaf",
+      "color": "#6D9B4B"
+    },
+    {
+      "id": "tofu",
+      "display_name": "Tofu",
+      "color": "#D9873F"
+    }
+  ],
+  "customers": [
+    {
+      "id": "nori",
+      "display_name": "Nori",
+      "species": "Triceratops",
+      "order": ["rice", "berry", "leaf"],
+      "reward": 10
+    },
+    {
+      "id": "momo",
+      "display_name": "Momo",
+      "species": "Stegosaurus",
+      "order": ["leaf", "tofu", "rice"],
+      "reward": 10
+    },
+    {
+      "id": "kumo",
+      "display_name": "Kumo",
+      "species": "Apatosaurus",
+      "order": ["berry", "rice", "tofu"],
+      "reward": 10
+    }
+  ]
+}

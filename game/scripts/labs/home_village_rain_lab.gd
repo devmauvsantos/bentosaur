@@ -34,8 +34,11 @@ const RAIN_SPLASH_TEXTURE: Texture2D = preload(
 	"res://assets/vfx/weather/rain/v001/rain_splash_8x1.png"
 )
 
-const RAIN_BACK_ALPHA := 0.34
-const RAIN_FRONT_ALPHA := 0.54
+const RAIN_BACK_ALPHA := 0.23
+const RAIN_FRONT_ALPHA := 0.37
+const RAIN_BACK_TINT := Color(0.64, 0.74, 0.84, 1.0)
+const RAIN_FRONT_TINT := Color(0.72, 0.82, 0.91, 1.0)
+const RAIN_SPLASH_TINT := Color(0.66, 0.78, 0.88, 0.50)
 const LIGHT_CORE_BASE_ALPHA := 0.99
 const LIGHT_HALO_BASE_ALPHA := 0.985
 
@@ -172,7 +175,8 @@ func _build_weather() -> void:
 		1.95,
 		Vector2(600.0, 745.0),
 		Vector2(0.48, 0.76),
-		RAIN_BACK_ALPHA
+		RAIN_BACK_ALPHA,
+		RAIN_BACK_TINT
 	)
 	weather.add_child(rain_back)
 
@@ -183,7 +187,8 @@ func _build_weather() -> void:
 		1.48,
 		Vector2(900.0, 1080.0),
 		Vector2(0.62, 0.96),
-		RAIN_FRONT_ALPHA
+		RAIN_FRONT_ALPHA,
+		RAIN_FRONT_TINT
 	)
 	rain_front.z_index = 2
 	weather.add_child(rain_front)
@@ -266,7 +271,8 @@ func _make_rain_field(
 	particle_lifetime: float,
 	velocity_range: Vector2,
 	scale_range: Vector2,
-	alpha: float
+	alpha: float,
+	tint: Color
 ) -> GPUParticles2D:
 	var particles := GPUParticles2D.new()
 	particles.name = node_name
@@ -281,9 +287,10 @@ func _make_rain_field(
 	particles.seed = 41017 if node_name == "RainBack" else 88421
 	particles.local_coords = false
 	particles.visibility_rect = Rect2(-460.0, -170.0, 920.0, 1580.0)
-	particles.modulate = Color(0.88, 0.95, 1.0, alpha)
+	particles.modulate = Color(tint.r, tint.g, tint.b, alpha)
 
 	var display_material := CanvasItemMaterial.new()
+	display_material.blend_mode = CanvasItemMaterial.BLEND_MODE_MIX
 	display_material.light_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
 	particles.material = display_material
 
@@ -314,9 +321,10 @@ func _make_splash_field() -> GPUParticles2D:
 	particles.seed = 52103
 	particles.local_coords = false
 	particles.visibility_rect = Rect2(0.0, 380.0, 720.0, 900.0)
-	particles.modulate = Color(0.84, 0.94, 1.0, 0.68)
+	particles.modulate = RAIN_SPLASH_TINT
 
 	var flipbook := CanvasItemMaterial.new()
+	flipbook.blend_mode = CanvasItemMaterial.BLEND_MODE_MIX
 	flipbook.light_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
 	flipbook.particles_animation = true
 	flipbook.particles_anim_h_frames = 8

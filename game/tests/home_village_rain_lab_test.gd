@@ -67,8 +67,9 @@ func _run() -> void:
 			and rain_back.amount == expected_back
 			and rain_back.texture != null
 			and rain_back.emitting
-			and rain_back.modulate.a > 0.30,
-		"Back rain must be visible from frame one and match its density contract.",
+			and rain_back.modulate.a >= 0.20
+			and rain_back.modulate.a <= 0.26,
+		"Back rain must be softly blended from frame one.",
 		errors
 	)
 	_expect(
@@ -76,10 +77,21 @@ func _run() -> void:
 			and rain_front.amount == expected_front
 			and rain_front.texture != null
 			and rain_front.emitting
-			and rain_front.modulate.a > 0.50,
-		"Front rain must be visible from frame one and match its density contract.",
+			and rain_front.modulate.a >= 0.34
+			and rain_front.modulate.a <= 0.40,
+		"Front rain must remain readable without glowing over the village.",
 		errors
 	)
+	for rain_layer: GPUParticles2D in [rain_back, rain_front]:
+		if rain_layer == null:
+			continue
+		var rain_material := rain_layer.material as CanvasItemMaterial
+		_expect(
+			rain_material != null
+				and rain_material.blend_mode == CanvasItemMaterial.BLEND_MODE_MIX,
+			"%s must use normal alpha blending." % rain_layer.name,
+			errors
+		)
 	_expect(
 		impact != null
 			and impact.amount == expected_impact
@@ -141,6 +153,11 @@ func _run() -> void:
 		var flipbook := splashes.material as CanvasItemMaterial
 		_expect(flipbook != null, "Splash particles need a flipbook material.", errors)
 		if flipbook != null:
+			_expect(
+				flipbook.blend_mode == CanvasItemMaterial.BLEND_MODE_MIX,
+				"Splash particles must use normal alpha blending.",
+				errors
+			)
 			_expect(flipbook.particles_animation, "Splash animation must be enabled.", errors)
 			_expect(
 				flipbook.particles_anim_h_frames == 8

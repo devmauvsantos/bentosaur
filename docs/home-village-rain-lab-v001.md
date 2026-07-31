@@ -1,6 +1,6 @@
 # Home Village Rain Lab V001
 
-Status: implementation checkpoint, pending visual approval.
+Status: founder-approved visual checkpoint; production integration pending.
 
 This lab places only the approved empty Home Village, its registered additive
 lighting, and a first production-shaped rain treatment in Godot. It does not
@@ -33,7 +33,7 @@ off rain over most of the pavement.
 V001 therefore separates:
 
 - atmospheric back rain;
-- a smaller, brighter front rain field;
+- a smaller foreground rain field;
 - invisible impact seeds that collide with one static, pavement-only SDF
   surface;
 - an eight-frame soft flat-cel splash atlas triggered by those collisions.
@@ -49,6 +49,9 @@ the depth of the wet square. It does not alter the approved background pixels.
 - Halos inherit a lower-amplitude version of the same drift.
 - Rain is already established on the first rendered frame; the village lights
   wake through the rainfall.
+- Both visible rain layers and the splash atlas use normal alpha blending,
+  cooler scene-derived tints, and restrained opacity. Rain reads as atmosphere
+  instead of an emissive white overlay.
 - `--reduced-weather` halves the active rain budget.
 - `--deterministic-capture` fixes particle seeds for reproducible visual QA.
 - `R` toggles rain in the desktop lab; `L` toggles registered lighting.
@@ -74,8 +77,9 @@ Particle ceilings at full density:
   reflection layers while retaining separate animated cores and halos.
 - The display-space lighting transcode is validated on Forward Mobile / Metal.
   Verify its output on Android Vulkan hardware before the production lock.
-- Rain density, splash readability, and the lights-to-rain timing remain pending
-  the user's visual approval.
+- The approved motion checkpoint remains a visual contract, not a native-device
+  performance approval. Physical iPhone testing and the production ultratall
+  environment master remain open.
 
 ## Rebuild
 

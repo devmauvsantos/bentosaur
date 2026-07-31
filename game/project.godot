@@ -1,12 +1,18 @@
 ; Engine configuration file.
-; Edit in Godot where possible; this proof keeps the file intentionally small.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
 
 config_version=5
 
 [application]
 
 config/name="Bentosaur"
-run/main_scene="res://scenes/labs/facial_animation_options_lab.tscn"
+run/main_scene="res://scenes/vertical_slice/first_playable.tscn"
+run/max_fps=0
 config/features=PackedStringArray("4.7", "Mobile")
 
 [display]
@@ -16,11 +22,19 @@ window/size/viewport_height=1280
 window/size/window_width_override=540
 window/size/window_height_override=960
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/stretch/scale_mode="fractional"
 window/handheld/orientation=1
+window/dpi/allow_hidpi=true
+window/ios/allow_high_refresh_rate=true
+window/ios/hide_home_indicator=true
+window/ios/hide_status_bar=true
+window/vsync/vsync_mode=1
 
 [rendering]
 
 renderer/rendering_method="mobile"
 renderer/rendering_method.mobile="mobile"
+rendering_device/driver.ios="metal"
 textures/default_filters/use_nearest_mipmap_filter=false
 environment/defaults/default_clear_color=Color(0.035, 0.047, 0.063, 1)

@@ -1,34 +1,40 @@
 # Bentosaur
 
-Bentosaur is a cozy live-3D chibi-diorama mobile game about serving tiny
-bentos to a living street of upright dinosaur neighbors.
+Bentosaur is a cozy mobile game about serving tiny bentos to a living street
+of upright dinosaur neighbors.
 
-## Locked production direction
+## Active development direction
 
 - Engine: Godot 4.7.x, Mobile renderer, typed GDScript
-- DCC authority: Blender
-- Runtime boundary: deterministic GLB
-- World: live 3D
-- UI: screen-space 2D/2.5D over the 3D diorama
-- Character props and accessories: always separate assets
+- Visual direction: flat-cel 2D
+- Runtime: registered 2D character parts plus authored full-pose sequences
+- UI: screen-space Godot controls
+- Props, food, effects, and accessories remain separate assets
 - Human approval owner: Mau
+
+The former live-3D Blender/GLB direction remains preserved as a paused
+fallback; it is not the active implementation path.
 
 ## Current build status
 
-The project is in S40 Production Topology for
-`bentosaur-hero/char-v001`.
+The Godot project now boots a bounded first playable:
 
-- H3.1 Extreme: frozen visual/high source
-- repaired Smart LowPoly: frozen scaffold only
-- S40 r003: active all-quad body bootstrap
-- r005: frozen rejected static Tripo-mouth transfer research
-- r006: frozen rejected one-attempt broad-face topology bridge
-- current blocker: one canonical neutral/deformable face
-- Faceit 2.3.71: installed and smoke-tested in Blender 5.1.2
-- facial direction: bounded Faceit authoring pilot after topology approval
-- Godot mobile facial-control lab: functional proof, not final art
-- UVs, final materials, production rig, animation, and Godot runtime: blocked
-  until G40 passes and Mau approves it
+- classic text-stall Home;
+- three sequential bento orders;
+- four ingredients and three ordered compartments;
+- correctable submissions with no timer or dead end;
+- local coins, first-try stars, shift summary, and replay;
+- JSON-authored shift content and a passing headless model test.
+
+The concept screens are temporary backdrops. The next gate is founder playtest,
+followed by replacing the baked customer with one registered animated 2D
+character.
+
+Run the current build:
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot --path game
+```
 
 ## Documentation and character pipeline
 
@@ -36,6 +42,7 @@ Start here:
 
 - `docs/README.md`
 - `docs/current-status.md`
+- `docs/first-playable-v1.md`
 - `docs/facial-animation-faceit-ai-pipeline-v1.md`
 - `docs/character-production-pipeline-v1.md`
 - `docs/character-binary-storage-policy-v1.md`
