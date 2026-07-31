@@ -76,6 +76,20 @@ inside the runtime safe area.
 - The central 9:16 composition remains a cross-device safe region.
 - Tall and tablet variants expose or extend scenery; they never squash it.
 
+The current approved `720 × 1280` world is presented through one
+native-main-viewport `CanvasLayer` cover transform. Background, registered
+lighting, stall, rain, roof splashes, and pavement collisions share that
+single transform so they cannot drift apart. On the iPhone 17 Pro Max, the
+expanded logical canvas is approximately `720 × 1564`; the temporary cover
+bridge scales the world uniformly by about `1.222` and crops about `65.4`
+design pixels from each side. The stall remains fully visible and no uncovered
+band is exposed.
+
+This centered crop is the prototype bridge, not the final environment-master
+strategy. The final layered outpaint described below should replace the crop
+when the ultratall source art is ready. Responsive UI must remain in a
+separate, unscaled `CanvasLayer`.
+
 Apple's layout guidance requires interfaces to account for device shape and
 safe areas. Godot exposes the unobscured interactive region on both iOS and
 Android:

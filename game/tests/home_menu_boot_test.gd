@@ -18,16 +18,24 @@ func _initialize() -> void:
 		root.add_child(home_menu)
 		_expect(
 			home_menu.get_node_or_null(
-				"ApprovedStallComposition/StallStructure"
+				"WorldCanvas/ApprovedStallComposition/StallStructure"
 			) != null,
 			"The promoted scene must contain the approved empty stall.",
 			errors
 		)
 		_expect(
 			home_menu.get_node_or_null(
-				"ApprovedStallComposition/HomeVillageRainLab"
+				"WorldCanvas/ApprovedStallComposition/HomeVillageRainLab"
 			) != null,
 			"The promoted scene must retain the living rainy village.",
+			errors
+		)
+		var world_canvas := home_menu.get_node_or_null(
+			"WorldCanvas"
+		) as CanvasLayer
+		_expect(
+			world_canvas != null,
+			"The registered world must use one native-resolution cover canvas.",
 			errors
 		)
 		home_menu.free()
