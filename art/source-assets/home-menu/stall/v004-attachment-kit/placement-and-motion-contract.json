@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "candidate_until_founder_approval",
+  "logical_canvas": [720, 1280],
+  "coordinate_space": "StallStage before shared framing transform",
+  "shared_stage": {
+    "scale": 0.86,
+    "pivot": [360, 634]
+  },
+  "rules": {
+    "main_character_in_scope": false,
+    "baked_text_allowed": false,
+    "procedural_steam": true,
+    "runtime_point_lights": false,
+    "reduced_motion_supported": true
+  },
+  "attachments": {
+    "stockpot": {
+      "body_box": [136, 626, 86, 92],
+      "lid_box": [133, 589, 90, 49],
+      "lid_pivot": [178, 625],
+      "contact_shadow_box": [132, 709, 94, 18],
+      "steam_emitter": [197, 590],
+      "z_order": ["contact_shadow", "body", "steam", "lid"],
+      "idle_motion": {
+        "lid_rotation_degrees": 0.7,
+        "lid_translation_y_px": 1.0,
+        "cycle_seconds_range": [2.8, 5.2],
+        "occasional_rattle_count_range": [1, 2]
+      }
+    },
+    "food_bowl": {
+      "box": [157, 652, 66, 66],
+      "motion": "none"
+    },
+    "counter_lantern": {
+      "box": [209, 604, 63, 115],
+      "states": ["off_shell", "on_core", "on_halo", "contact_shadow"],
+      "motion": "light pulse and rare flick only; no wind sway"
+    },
+    "counter_plant": {
+      "box": [481, 499, 67, 220],
+      "preferred_components": ["pot", "foliage"],
+      "foliage_rotation_degrees": 0.35,
+      "foliage_cycle_seconds_range": [4.5, 8.0]
+    },
+    "bottle_crate": {
+      "box": [470, 618, 117, 101],
+      "preferred_components": ["crate", "bottle_brown", "bottle_green", "bottle_cream_blue"],
+      "default_prefab": "assembled",
+      "motion": "none"
+    },
+    "counter_cloth": {
+      "box": [517, 684, 97, 120],
+      "motion": "none in first playable; optional restrained lower-corner drift later"
+    },
+    "rank_plaque": {
+      "box": [246, 372, 228, 48],
+      "star_boxes": [[279, 381, 42, 34], [339, 381, 42, 34], [399, 381, 42, 34]],
+      "states": ["empty", "filled", "shine"],
+      "fill_transition_ms": 180
+    },
+    "menu_buttons": {
+      "layout_note": "Final vertical registration may compress to the approved shorter facade without changing frame aspect ratio.",
+      "primary_box": [222, 770, 292, 72],
+      "secondary_boxes": [[223, 852, 290, 64], [223, 926, 290, 64], [223, 1000, 290, 64]],
+      "labels": ["Open Stall", "Guestbook", "Decorations", "Pantry"],
+      "states": ["normal", "focused", "pressed", "disabled"],
+      "press": {
+        "down_ms": 70,
+        "up_ms": 90,
+        "translation_y_px": 2,
+        "scale": 0.985,
+        "easing": "ease_out_no_bounce"
+      }
+    },
+    "settings_control": {
+      "source_concept_box": [515, 1033, 75, 84],
+      "states": ["normal", "pressed"],
+      "press": {
+        "down_ms": 70,
+        "up_ms": 90,
+        "rotation_degrees": 5,
+        "scale": 0.97,
+        "easing": "ease_out_no_bounce"
+      }
+    }
+  }
+}

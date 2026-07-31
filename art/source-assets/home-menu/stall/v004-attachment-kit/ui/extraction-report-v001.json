@@ -1,0 +1,376 @@
+{
+  "scope": "UI candidate art only; no runtime promotion",
+  "generation_calls": 3,
+  "approved_reference": "art/concepts/2d-chibi/v4/01_menu-refinement/bentosaur-home-menu-refined-classic-guestbook-v2.png",
+  "rank_candidate": "components/rank/rank-plaque-empty-sockets-v001.png",
+  "rank_v002_status": "rejected local recolor provenance; not shown on category board",
+  "candidate_nine_patch_insets_px": {
+    "left": 72,
+    "right": 72,
+    "top": 52,
+    "bottom": 52
+  },
+  "geometry_alpha_iou": {
+    "buttons_vs_primary_normal": {
+      "primary_normal": 1.0,
+      "primary_selected": 0.996813,
+      "primary_pressed": 0.995132,
+      "primary_disabled": 0.998169,
+      "secondary_normal": 0.99823,
+      "secondary_selected": 0.996475,
+      "secondary_pressed": 0.994973,
+      "secondary_disabled": 0.997933
+    },
+    "settings_normal_vs_pressed": 0.998862,
+    "rank_empty_vs_filled_star": 0.992638,
+    "rank_v001_vs_v002_recolor": 1.0
+  },
+  "qa": {
+    "rank_plaque_empty_sockets_v001": {
+      "size": [
+        1539,
+        425
+      ],
+      "transparent_pixels": 45751,
+      "partial_alpha_pixels": 3929,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rank_star_empty_v001": {
+      "size": [
+        259,
+        249
+      ],
+      "transparent_pixels": 22131,
+      "partial_alpha_pixels": 1052,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rank_star_filled_v001": {
+      "size": [
+        259,
+        249
+      ],
+      "transparent_pixels": 22403,
+      "partial_alpha_pixels": 1015,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rank_star_shine_v001": {
+      "size": [
+        130,
+        147
+      ],
+      "transparent_pixels": 14142,
+      "partial_alpha_pixels": 597,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_primary_normal_v001": {
+      "size": [
+        346,
+        205
+      ],
+      "transparent_pixels": 3824,
+      "partial_alpha_pixels": 1002,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_primary_selected_v001": {
+      "size": [
+        346,
+        205
+      ],
+      "transparent_pixels": 3934,
+      "partial_alpha_pixels": 994,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_primary_pressed_v001": {
+      "size": [
+        346,
+        205
+      ],
+      "transparent_pixels": 4007,
+      "partial_alpha_pixels": 980,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_primary_disabled_v001": {
+      "size": [
+        346,
+        205
+      ],
+      "transparent_pixels": 3819,
+      "partial_alpha_pixels": 1533,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_secondary_normal_v001": {
+      "size": [
+        346,
+        205
+      ],
+      "transparent_pixels": 3707,
+      "partial_alpha_pixels": 1037,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_secondary_selected_v001": {
+      "size": [
+        346,
+        205
+      ],
+      "transparent_pixels": 3817,
+      "partial_alpha_pixels": 1037,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_secondary_pressed_v001": {
+      "size": [
+        346,
+        205
+      ],
+      "transparent_pixels": 3908,
+      "partial_alpha_pixels": 1027,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_secondary_disabled_v001": {
+      "size": [
+        346,
+        205
+      ],
+      "transparent_pixels": 3703,
+      "partial_alpha_pixels": 1188,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_leaf_left_v001": {
+      "size": [
+        206,
+        207
+      ],
+      "transparent_pixels": 16785,
+      "partial_alpha_pixels": 779,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "button_leaf_right_v001": {
+      "size": [
+        206,
+        208
+      ],
+      "transparent_pixels": 16987,
+      "partial_alpha_pixels": 762,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "settings_normal_v001": {
+      "size": [
+        563,
+        583
+      ],
+      "transparent_pixels": 67427,
+      "partial_alpha_pixels": 2257,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "settings_pressed_v001": {
+      "size": [
+        563,
+        583
+      ],
+      "transparent_pixels": 67564,
+      "partial_alpha_pixels": 2234,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rank_sheet_v001": {
+      "size": [
+        1672,
+        941
+      ],
+      "transparent_pixels": 875612,
+      "partial_alpha_pixels": 6593,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rank_sheet_v002_rejected": {
+      "size": [
+        1672,
+        941
+      ],
+      "transparent_pixels": 875612,
+      "partial_alpha_pixels": 6593,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "buttons_sheet_v001": {
+      "size": [
+        1536,
+        1024
+      ],
+      "transparent_pixels": 984422,
+      "partial_alpha_pixels": 10342,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "settings_sheet_v001": {
+      "size": [
+        1672,
+        941
+      ],
+      "transparent_pixels": 1051879,
+      "partial_alpha_pixels": 4497,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "category_board_v001": {
+      "size": [
+        1800,
+        1600
+      ],
+      "transparent_pixels": 0,
+      "partial_alpha_pixels": 0,
+      "magenta_fringe_pixels": 0,
+      "corner_alpha": [
+        255,
+        255,
+        255,
+        255
+      ]
+    }
+  },
+  "sha256": {
+    "components/buttons/menu-button-leaf-left-v001.png": "c2ceb39b2e13ba0e08ed6d1613fd6ed7a8294fc3fc997fefc38e996fafc9d49b",
+    "components/buttons/menu-button-leaf-right-v001.png": "88d1f720ce4e5fc5921267c5516247a9d57182ee0aa02a7be2deb234978ab6b0",
+    "components/buttons/menu-button-primary-disabled-v001.png": "28183a69494f473a2d7282445be596d3daf81c180e390490736d4c329ae4199d",
+    "components/buttons/menu-button-primary-normal-v001.png": "6292d50fc091d5076eed21471227f9938cfcfcfd0f9710aae17ad3d25b1b5f1b",
+    "components/buttons/menu-button-primary-pressed-v001.png": "09282c7e58cbf99501debab1cbdf2bb0a40c9c3fb85c7c538b3bc46fd601a8aa",
+    "components/buttons/menu-button-primary-selected-v001.png": "10697497cc54969aa0e1a08545564f880f99fe583bd5fedaeb0b64f5247d37a7",
+    "components/buttons/menu-button-secondary-disabled-v001.png": "85c29b6da08bba3378dcb453d95b7de75c407dadfe2fbd62eaa21a1873d6176c",
+    "components/buttons/menu-button-secondary-normal-v001.png": "5fdae88309df0866931a6dcef517eaebcd749092cb7e80c60a5404867f7c80af",
+    "components/buttons/menu-button-secondary-pressed-v001.png": "c149d723b01d0810464a1cf26f99d40595f05b853100b88255b8e509786534b9",
+    "components/buttons/menu-button-secondary-selected-v001.png": "34b4c2ddc3f547064748c0ae2d45b0f72c40dd0eb912cc0fa7d9c828d142f3c6",
+    "components/rank/rank-plaque-empty-sockets-v001.png": "33518363dc3d6ad709fd33546be4c736a50a8511e758144f3b319b9e69fe9f47",
+    "components/rank/rank-star-empty-v001.png": "83baf70e911eb06c2f7d3424fe3468fc965416089e965f118e94b60007db87cd",
+    "components/rank/rank-star-filled-v001.png": "a3adeed7adc792419e410b2f51399d50906b55fd30d4e73d48ca9d91b3c5f7f6",
+    "components/rank/rank-star-shine-v001.png": "fdf210b7170831fcb95a23efa3b59aab89106bf55b0fb9e2ccd450e33305f8e2",
+    "components/settings/settings-cog-normal-v001.png": "be02c9dbcc429a3ee830369d37063cc84c436c1efc6448b5cfc662bdbcafd8d2",
+    "components/settings/settings-cog-pressed-v001.png": "99752da6a341db92715a6f7d64ea0434a12238b676afeef9d882e73abb0f521b",
+    "generated/menu-button-system-chroma-v001.png": "9a5266d95c92796cd864044134353395a9dc900e0df592f9daa85f49fe9bbf85",
+    "generated/rank-plaque-kit-chroma-v001.png": "7faffaf561ff517feffb56b51259f6fa0923841df829afb1ce58e77c51332b71",
+    "generated/rank-plaque-kit-chroma-v002.png": "d8d05565a83cf2a091710b9cc021bc91606e023ac603733d62a92b8ed3be67a8",
+    "generated/settings-control-chroma-v001.png": "1ad694c5de7f22aca6e1d09147d8e718ffbf951ba6dfe0960c90252c22d72958",
+    "masks/rank-plaque-face-recolor-mask-v002.png": "f32251a8431dd2cabb4e22902808d31a32c7c93a3a3cea498ac569a1a0656440",
+    "prompts/menu-button-system-v001.md": "9cb2ddd29d53a53692cb68c0605b6452645916c975073f298cc5006f98806393",
+    "prompts/rank-plaque-kit-v001.md": "4323228c4e14743a5f855d294c7dfb52977ebbc968c7f397d0728ef4d57d1a22",
+    "prompts/settings-control-v001.md": "ca37639b10ab2f7f410ce9b37f2f6721eb76bfa3d63e8b4daa120a5075e31e1b",
+    "reviews/ui-attachment-kit-category-board-v001.png": "de8dcc123e3f0b6334ac1856f253eef04d588588da7d90ccdd145f36d16fc3a2",
+    "transparent/menu-button-system-cutout-v001.png": "852c53abc868d97c7825083b4bddf3750b39a5056e7196ca092e45fd3b446c96",
+    "transparent/rank-plaque-kit-cutout-v001.png": "63023da6766e2fca5b294688a135642682a5b791f409737220142f27e9ba7318",
+    "transparent/rank-plaque-kit-cutout-v002.png": "116c64f292544afa68795d875ef5422f9b85df8885a925c755a68d3700e13030",
+    "transparent/settings-control-cutout-v001.png": "3f34b63ffedac63a3b2a1e6cc79066234a14112557d7f0c7f819e98a076779e9"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "category": "counter-small",
+  "status": "candidate_pending_founder_approval",
+  "reference": {
+    "path": "art/concepts/2d-chibi/v4/01_menu-refinement/bentosaur-home-menu-refined-classic-guestbook-v2.png",
+    "sha256": "03f1ab3a7b5d11cca1bfd077e6be27bc4008aff64e940a2fa5b31e9cca7f52b9"
+  },
+  "generation": {
+    "tool": "OpenAI built-in image generation",
+    "call_count": 2,
+    "prompts": [
+      "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/prompts/counter-oil-lantern-modular-kit-v001.md",
+      "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/prompts/grape-food-bowl-v001.md"
+    ]
+  },
+  "immutable_sources": [
+    {
+      "path": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/generated/counter-oil-lantern-modular-sheet-chroma-candidate-v001.png",
+      "size_px": [1672, 941],
+      "sha256": "029ca37b9e701b97505f1319ee993cde8698986a87db13fcb63c6512b9d3b058",
+      "sampled_key": "#FA03F3",
+      "border_distance_p95": 3.0
+    },
+    {
+      "path": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/generated/grape-food-bowl-chroma-candidate-v001.png",
+      "size_px": [1254, 1254],
+      "sha256": "0d693b09fca54e54013bf99de9d2f72757c66e9fdef7b3421779d74eb2d56667",
+      "sampled_key": "#FB03F9",
+      "border_distance_p95": 2.828
+    }
+  ],
+  "components": [
+    {
+      "id": "counter-oil-lantern-body-off",
+      "path": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/counter-oil-lantern-body-off-candidate-v001.png",
+      "size_px": [257, 539],
+      "visible_bounds": [8, 8, 241, 523],
+      "sha256": "2c72012048b8fa28813ad1391cd9adcbf513ba513c893852116dd78ef3804c87"
+    },
+    {
+      "id": "counter-oil-lantern-core-add",
+      "path": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/counter-oil-lantern-core-add-candidate-v001.png",
+      "size_px": [94, 201],
+      "visible_bounds": [8, 8, 78, 185],
+      "sha256": "0fe785347733106fd12e6e4a8275b90e8efe1f1b15ffeea19ce1eea9547502d3"
+    },
+    {
+      "id": "counter-oil-lantern-halo-add",
+      "path": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/counter-oil-lantern-halo-add-candidate-v001.png",
+      "size_px": [334, 426],
+      "visible_bounds": [4, 5, 325, 417],
+      "sha256": "dc36532b08da02eb747c47a6c706540604f2a55c6885249ce40cc399443d2bd0",
+      "alpha_max": 0.360784,
+      "translucent_rgb_reconstruction": true
+    },
+    {
+      "id": "counter-oil-lantern-contact-shadow",
+      "path": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/counter-oil-lantern-contact-shadow-candidate-v001.png",
+      "size_px": [304, 64],
+      "visible_bounds": [8, 8, 288, 48],
+      "sha256": "0198c1444147ddbdc1fd5f557eae79fbc82a84847f6b47f9ad38051abee39eb5"
+    },
+    {
+      "id": "green-grape-food-bowl",
+      "path": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/cutouts/grape-food-bowl-candidate-v001.png",
+      "size_px": [457, 498],
+      "visible_bounds": [8, 8, 441, 482],
+      "sha256": "1fe0ab337a82e8c55937cefed0e907d81b6c28fdaae956a5aa7ae596df6f2640"
+    }
+  ],
+  "validation": {
+    "all_rgba": true,
+    "all_corners_transparent": true,
+    "magenta_fringe_pixels": 0,
+    "character_or_scenery_contamination": false
+  },
+  "review": {
+    "path": "art/source-assets/home-menu/stall/v004-attachment-kit/counter-small/reviews/counter-small-category-review-board-v001.png",
+    "sha256": "98704a4c1d6e0168a5cb1b0052e0503dcbe5909076c8e384db222c42d94d0c3e"
+  }
+}

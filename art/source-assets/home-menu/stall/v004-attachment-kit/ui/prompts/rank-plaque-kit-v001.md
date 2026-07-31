@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: modular mobile-game UI source sheet for Bentosaur rank display
+Input images: Image 1 is the approved Bentosaur home-menu style, palette, material, outline, and perspective reference only; do not reproduce the complete scene.
+Primary request: create exactly one coherent rank-plaque asset kit: one blank horizontal wooden plaque with three evenly spaced recessed star-shaped sockets, one separate empty-star piece, one separate filled-star piece, and one separate small shine/glint overlay piece. The plaque itself must contain empty sockets only. Every piece must be isolated and non-overlapping.
+Scene/backdrop: perfectly flat solid #FF00FF chroma-key background for local removal, one uniform color across the entire canvas.
+Style/medium: premium flat-cel 2D storybook game art matching Image 1; rounded handmade shapes, refined dark brown outlines, restrained softly painted grain, warm carved wood, muted moss green, and amber-gold accents; slight top-down front perspective consistent with the approved stall.
+Composition/framing: landscape source sheet with the plaque large and centered in the upper half; empty star, filled star, and shine laid out separately in one lower row with generous clear gaps and padding. Straight-on UI readability, no labels or panel captions.
+Geometry contract: the empty and filled stars must have the exact same outer silhouette, dimensions, orientation, outline width, and center point. The shine is an independent overlay smaller than a star. Three plaque sockets are identical copies and sized to receive the separate star pieces.
+Constraints: exactly the requested five isolated pieces; crisp complete silhouettes; no cropping; no overlap; no cast shadows; no floor plane; no reflections; no halos; no watermark. The #FF00FF background must have no gradients, texture, lighting variation, or shadows. Do not use #FF00FF anywhere in the assets.
+Avoid: all text, letters, numbers, glyphs, characters, dinosaurs, scenery, stall structure, rain, smoke, steam, food, lanterns, buttons, extra badges, extra stars, perspective mockups, and presentation-board decoration.

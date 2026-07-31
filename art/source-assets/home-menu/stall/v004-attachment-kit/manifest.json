@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "gate": "G03_remaining_non_character_stall_attachments",
+  "status": "candidate_pending_founder_approval",
+  "runtime_promoted": false,
+  "main_character_in_scope": false,
+  "generation": {
+    "preserved_usable_outputs": 9,
+    "built_in_imagegen_invocations": 10,
+    "delivery_failures": 1,
+    "note": "The first stockpot call completed but returned no surfaced image payload; the exact request was retried once and only the surfaced result is preserved."
+  },
+  "qa": {
+    "expected_components": 31,
+    "transparent_corner_failures": 0,
+    "magenta_fringe_failures": 0,
+    "components": {
+      "stockpot/components/stall_stockpot_body_open_candidate_v001.png": {
+        "size": [
+          524,
+          391
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 7948,
+        "magenta_fringe_pixels": 0
+      },
+      "stockpot/components/stall_stockpot_lid_candidate_v001.png": {
+        "size": [
+          385,
+          241
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 4398,
+        "magenta_fringe_pixels": 0
+      },
+      "stockpot/components/stall_stockpot_contact_shadow_candidate_v001.png": {
+        "size": [
+          383,
+          88
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 20982,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-small/cutouts/counter-oil-lantern-body-off-candidate-v001.png": {
+        "size": [
+          257,
+          539
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 2902,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-small/cutouts/counter-oil-lantern-core-add-candidate-v001.png": {
+        "size": [
+          94,
+          201
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 407,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-small/cutouts/counter-oil-lantern-halo-add-candidate-v001.png": {
+        "size": [
+          334,
+          426
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 107985,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-small/cutouts/counter-oil-lantern-contact-shadow-candidate-v001.png": {
+        "size": [
+          304,
+          64
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 10805,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-small/cutouts/grape-food-bowl-candidate-v001.png": {
+        "size": [
+          457,
+          498
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1734,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-decor/components/counter_plant_pot_candidate_v001.png": {
+        "size": [
+          497,
+          487
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1549,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-decor/components/counter_plant_foliage_candidate_v001.png": {
+        "size": [
+          527,
+          723
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 5526,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-decor/components/bottle_crate_empty_candidate_v001.png": {
+        "size": [
+          501,
+          379
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1535,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-decor/components/bottle_brown_candidate_v001.png": {
+        "size": [
+          164,
+          303
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 967,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-decor/components/bottle_green_candidate_v001.png": {
+        "size": [
+          175,
+          332
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1094,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-decor/components/bottle_cream_blue_cap_candidate_v001.png": {
+        "size": [
+          184,
+          306
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 936,
+        "magenta_fringe_pixels": 0
+      },
+      "counter-decor/components/counter_cloth_red_draped_candidate_v001.png": {
+        "size": [
+          912,
+          984
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 3935,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/rank/rank-plaque-empty-sockets-v001.png": {
+        "size": [
+          1539,
+          425
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 3929,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/rank/rank-star-empty-v001.png": {
+        "size": [
+          259,
+          249
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1052,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/rank/rank-star-filled-v001.png": {
+        "size": [
+          259,
+          249
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1015,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/rank/rank-star-shine-v001.png": {
+        "size": [
+          130,
+          147
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 597,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-primary-normal-v001.png": {
+        "size": [
+          346,
+          205
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1002,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-primary-selected-v001.png": {
+        "size": [
+          346,
+          205
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 994,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-primary-pressed-v001.png": {
+        "size": [
+          346,
+          205
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 980,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-primary-disabled-v001.png": {
+        "size": [
+          346,
+          205
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1533,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-secondary-normal-v001.png": {
+        "size": [
+          346,
+          205
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1037,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-secondary-selected-v001.png": {
+        "size": [
+          346,
+          205
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1037,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-secondary-pressed-v001.png": {
+        "size": [
+          346,
+          205
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1027,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-secondary-disabled-v001.png": {
+        "size": [
+          346,
+          205
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 1188,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-leaf-left-v001.png": {
+        "size": [
+          206,
+          207
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 779,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/buttons/menu-button-leaf-right-v001.png": {
+        "size": [
+          206,
+          208
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 762,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/settings/settings-cog-normal-v001.png": {
+        "size": [
+          563,
+          583
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 2257,
+        "magenta_fringe_pixels": 0
+      },
+      "ui/components/settings/settings-cog-pressed-v001.png": {
+        "size": [
+          563,
+          583
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "partial_alpha_pixels": 2234,
+        "magenta_fringe_pixels": 0
+      }
+    }
+  },
+  "known_review_flags": [
+    "Founder must judge all registered sizes and proportions.",
+    "Rank plaque v001 is clean but brown; generated/local recolor v002 is rejected and must not ship.",
+    "Counter lantern OFF glass is honey-amber and may read faintly luminous.",
+    "Warm light spill across stall wood remains deferred."
+  ],
+  "files_sha256": {
+    "README.md": "6282b6d130376f35a1a1be7db1d470723f286f9a4a72e9b4e441bff78f92c0cd",
+    "counter-decor/components/bottle_brown_candidate_v001.png": "3d6cf3e701098434de44aa75ae305fdc4ba9c17726c264cc523cfec43ba6fadf",
+    "counter-decor/components/bottle_crate_assembled_preview_candidate_v001.png": "7d7847b24d4ff5094e7c5a458d9fbf3e2136634033d8c83b1207fa13baeb3bff",
+    "counter-decor/components/bottle_crate_empty_candidate_v001.png": "c5ac20e8796931fe7bdaf799575fa7696d2559c5fea0d64f534d537d95135a68",
+    "counter-decor/components/bottle_cream_blue_cap_candidate_v001.png": "423232dad4cd3d7fb43be6ec9cff445b3be2668260b22e47f34321d3a1ece5c8",
+    "counter-decor/components/bottle_green_candidate_v001.png": "c83d152e630db1509d0ed55a4198cd63ac2b6cbec1ad4c3aedefa6e0f886f3c0",
+    "counter-decor/components/counter_cloth_red_draped_candidate_v001.png": "2f221e47152e91c7901c453ebcb14e738fe067bb64dd6bc65ca533a8dd018fbc",
+    "counter-decor/components/counter_plant_foliage_candidate_v001.png": "0ae340659c946803ba3e353364e7b3f4227da4762ea21b01dd05c1e8f77e292a",
+    "counter-decor/components/counter_plant_pot_candidate_v001.png": "e5862fb45f4a85d73a5c9c0ef37abf45db5c2cfef7ae81fd59cfefc7d6da7a0c",
+    "counter-decor/extraction-notes.md": "f1c3b9cec73706c4cbd17c13625adcf0557c29b2a2103223a759ce7d5eb145b0",
+    "counter-decor/generated/bottle-crate-modular-sheet-chroma-candidate-v001.png": "70e1d40040412253a43d7979cb2041bcd8e49b3712adb38050d47d19123f26df",
+    "counter-decor/generated/bottle-crate-modular-sheet-cutout-candidate-v001.png": "213c062df675cced8ef1a2af382ffc3e615fc92ac128afffa246f89ee2454fe7",
+    "counter-decor/generated/counter-plant-modular-sheet-chroma-candidate-v001.png": "e411acebe4474e1f302cda41b82336f4db57e090c8590eb62cdda22413cfa627",
+    "counter-decor/generated/counter-plant-modular-sheet-cutout-candidate-v001.png": "f623863840a065bf9d53207525634471f413993273cbcea0404fae60314fbc88",
+    "counter-decor/generated/red-counter-cloth-chroma-candidate-v001.png": "4098cbb2e01f4ed56a9970f57737b69c9e8ce0b8bf670f226c1261172939dde9",
+    "counter-decor/generated/red-counter-cloth-cutout-candidate-v001.png": "ce61e44309b73f452abc0816f9dfa87bee7df0f8fafed0ccda89341f44a52119",
+    "counter-decor/prompts/bottle-crate-modular-kit-v001.md": "cca01331fc6e54a61b2916d01cf0d2111743e1162e0a120028841522ce8e4de7",
+    "counter-decor/prompts/counter-plant-modular-kit-v001.md": "b0871759a6439b5107326ad26b3c757166c84a36a789fbb9b4ab9f174ead962d",
+    "counter-decor/prompts/red-counter-cloth-v001.md": "30553681fec86abd2852f8f69a8c8d49ca2602561cc56be868799dcea8e7d3cc",
+    "counter-decor/reviews/counter-decor-category-review-board-v001.png": "7b1452ccb28678eb83b3d2c7f9ccd507f6e3f1b29e05f8b436e420617fbbfbfc",
+    "counter-small/cutouts/counter-oil-lantern-body-off-candidate-v001.png": "2c72012048b8fa28813ad1391cd9adcbf513ba513c893852116dd78ef3804c87",
+    "counter-small/cutouts/counter-oil-lantern-contact-shadow-candidate-v001.png": "0198c1444147ddbdc1fd5f557eae79fbc82a84847f6b47f9ad38051abee39eb5",
+    "counter-small/cutouts/counter-oil-lantern-core-add-candidate-v001.png": "0fe785347733106fd12e6e4a8275b90e8efe1f1b15ffeea19ce1eea9547502d3",
+    "counter-small/cutouts/counter-oil-lantern-halo-add-candidate-v001.png": "dc36532b08da02eb747c47a6c706540604f2a55c6885249ce40cc399443d2bd0",
+    "counter-small/cutouts/counter-oil-lantern-modular-sheet-transparent-candidate-v001.png": "8fef4e2815bd82ddc71f05f3d9e472b1ac1f255cd7169f40fedae30e226c3695",
+    "counter-small/cutouts/grape-food-bowl-candidate-v001.png": "1fe0ab337a82e8c55937cefed0e907d81b6c28fdaae956a5aa7ae596df6f2640",
+    "counter-small/cutouts/grape-food-bowl-transparent-candidate-v001.png": "96ac4bf9184f5eb2bbebe9db41e6c9de46b766846d1db2d1535d16adf6f5270f",
+    "counter-small/extraction/counter-oil-lantern-halo-alpha-candidate-v001.png": "bd665987ceb1db71dd447cc302a18e677dd1a0e930e69eb1f1683797dc8a9d56",
+    "counter-small/extraction/counter-oil-lantern-halo-alpha-soft-candidate-v001.png": "ab211210089704f417878e2c890b4dc455a830a8713dfbd0dc1e8fdd04973673",
+    "counter-small/extraction/counter-oil-lantern-halo-dark-preview-v001.png": "f2501154800efc199a594a8f8a3fddd2c66aed504dd4f7641cbc1c57b764f775",
+    "counter-small/extraction/counter-oil-lantern-halo-raw-transparent-candidate-v001.png": "1519136b3bfd7d41409902036f0005ebbfefa214216e879da2bd877928ebb999",
+    "counter-small/extraction/counter-oil-lantern-off-dark-preview-v001.png": "73095a9e4d367708581f4eb888dc63f43a293f8980fe7eb59d9b47cc909ad146",
+    "counter-small/extraction/counter-oil-lantern-on-dark-preview-v001.png": "dfa4a4b55e44846587572b550ed2fa9df20c53dfdbfdff31c8970427de9bab76",
+    "counter-small/extraction/counter-oil-lantern-shadow-dark-preview-v001.png": "ea16d064be52f6f0f4e8fa7c7640292755e8310b6daee6c3c61abc6b0cdbd0f3",
+    "counter-small/extraction/extraction-notes-v001.md": "b44234d00fa318b22f6a4307fc58c07b31b3b3f2bb5c18022965c58e8766d81c",
+    "counter-small/extraction/extraction-report-v001.json": "5cf73b253e749a60d96917509ff5bcabb8ab983e6979e01d71f1035b6b211e87",
+    "counter-small/extraction/grape-food-bowl-dark-preview-v001.png": "66649a376273d37758a987930ab2f6b08cb88544b073090ab85aa8327cbce523",
+    "counter-small/generated/counter-oil-lantern-modular-sheet-chroma-candidate-v001.png": "029ca37b9e701b97505f1319ee993cde8698986a87db13fcb63c6512b9d3b058",
+    "counter-small/generated/grape-food-bowl-chroma-candidate-v001.png": "0d693b09fca54e54013bf99de9d2f72757c66e9fdef7b3421779d74eb2d56667",
+    "counter-small/prompts/counter-oil-lantern-modular-kit-v001.md": "0523175c9663f54bebc0dd2fb3adffef0e93b3c2d98265071309cf6ef22558d8",
+    "counter-small/prompts/grape-food-bowl-v001.md": "820146ef997d02b8cd5bf9c1521f461248be375da41d9d4700dcbba23d08302e",
+    "counter-small/reviews/counter-small-category-review-board-v001.png": "98704a4c1d6e0168a5cb1b0052e0503dcbe5909076c8e384db222c42d94d0c3e",
+    "placement-and-motion-contract.json": "5757542ff949a77bd9dc296a18ff473a4f51d4658370fce1e7e14aeaff93dcd4",
+    "registered/stall-attachment-full-context-candidate-v001.png": "5f826308ca1d38a8323f9f72328991c8c14a5c632f4d5f2263d9023acff1d312",
+    "reviews/stall-attachment-full-context-approval-board-v001.png": "aae343b6990d2e0e130980a3d1dbaf48aae4130d70da371d8f7bdb6789910770",
+    "stockpot/components/stall_stockpot_assembled_preview_candidate_v001.png": "ea2c03b072f27485fea56e459b788507d9b3a877231d2c318f005e781546882a",
+    "stockpot/components/stall_stockpot_body_open_candidate_v001.png": "1347095a8f25f6edbafa9f325d8f773a247eb005aa411f07726aea003be075b1",
+    "stockpot/components/stall_stockpot_contact_shadow_candidate_v001.png": "7e78bc761fed01ce671c776ba8d025e5cd7cfb138fc436232d196cb7a8b76b41",
+    "stockpot/components/stall_stockpot_lid_candidate_v001.png": "77c3ad75e71640563f3f3663e62fa3b1a6a37a9f99ddc496b55e64967b3819cd",
+    "stockpot/generated/stockpot-modular-sheet-chroma-candidate-v001.png": "240eb687ed52a112c3f95afb0fd34600fc2219f73d94bf20f699ff0c785a9b9a",
+    "stockpot/generated/stockpot-modular-sheet-cutout-candidate-v001.png": "63923b2a5adefe9edb632e0fd3a137d66e1a2f69d50c7260b71a976d99a88856",
+    "stockpot/prompts/stockpot-modular-kit-v001.md": "ca159b1f2311df080225efa01099344373d1bc4f3249c0f4092b8d9146493bdf",
+    "stockpot/reviews/stockpot-category-review-board-v001.png": "5f2a13f0905997c1e1ac4681ddc949d29c4e8342ca95dfda0ab35792dbbc274d",
+    "ui/components/buttons/menu-button-leaf-left-v001.png": "c2ceb39b2e13ba0e08ed6d1613fd6ed7a8294fc3fc997fefc38e996fafc9d49b",
+    "ui/components/buttons/menu-button-leaf-right-v001.png": "88d1f720ce4e5fc5921267c5516247a9d57182ee0aa02a7be2deb234978ab6b0",
+    "ui/components/buttons/menu-button-primary-disabled-v001.png": "28183a69494f473a2d7282445be596d3daf81c180e390490736d4c329ae4199d",
+    "ui/components/buttons/menu-button-primary-normal-v001.png": "6292d50fc091d5076eed21471227f9938cfcfcfd0f9710aae17ad3d25b1b5f1b",
+    "ui/components/buttons/menu-button-primary-pressed-v001.png": "09282c7e58cbf99501debab1cbdf2bb0a40c9c3fb85c7c538b3bc46fd601a8aa",
+    "ui/components/buttons/menu-button-primary-selected-v001.png": "10697497cc54969aa0e1a08545564f880f99fe583bd5fedaeb0b64f5247d37a7",
+    "ui/components/buttons/menu-button-secondary-disabled-v001.png": "85c29b6da08bba3378dcb453d95b7de75c407dadfe2fbd62eaa21a1873d6176c",
+    "ui/components/buttons/menu-button-secondary-normal-v001.png": "5fdae88309df0866931a6dcef517eaebcd749092cb7e80c60a5404867f7c80af",
+    "ui/components/buttons/menu-button-secondary-pressed-v001.png": "c149d723b01d0810464a1cf26f99d40595f05b853100b88255b8e509786534b9",
+    "ui/components/buttons/menu-button-secondary-selected-v001.png": "34b4c2ddc3f547064748c0ae2d45b0f72c40dd0eb912cc0fa7d9c828d142f3c6",
+    "ui/components/rank/rank-plaque-empty-sockets-v001.png": "33518363dc3d6ad709fd33546be4c736a50a8511e758144f3b319b9e69fe9f47",
+    "ui/components/rank/rank-star-empty-v001.png": "83baf70e911eb06c2f7d3424fe3468fc965416089e965f118e94b60007db87cd",
+    "ui/components/rank/rank-star-filled-v001.png": "a3adeed7adc792419e410b2f51399d50906b55fd30d4e73d48ca9d91b3c5f7f6",
+    "ui/components/rank/rank-star-shine-v001.png": "fdf210b7170831fcb95a23efa3b59aab89106bf55b0fb9e2ccd450e33305f8e2",
+    "ui/components/settings/settings-cog-normal-v001.png": "be02c9dbcc429a3ee830369d37063cc84c436c1efc6448b5cfc662bdbcafd8d2",
+    "ui/components/settings/settings-cog-pressed-v001.png": "99752da6a341db92715a6f7d64ea0434a12238b676afeef9d882e73abb0f521b",
+    "ui/extraction-notes-v001.md": "d8317cfcd11668131b3dff866e757897bccf3b8345ac229b4327f2da5fd10856",
+    "ui/extraction-report-v001.json": "865abafa7bb683d2a5dede103d6ca2188e549432dc0a12418a10660b726be232",
+    "ui/generated/menu-button-system-chroma-v001.png": "9a5266d95c92796cd864044134353395a9dc900e0df592f9daa85f49fe9bbf85",
+    "ui/generated/rank-plaque-kit-chroma-v001.png": "7faffaf561ff517feffb56b51259f6fa0923841df829afb1ce58e77c51332b71",
+    "ui/generated/rank-plaque-kit-chroma-v002.png": "d8d05565a83cf2a091710b9cc021bc91606e023ac603733d62a92b8ed3be67a8",
+    "ui/generated/settings-control-chroma-v001.png": "1ad694c5de7f22aca6e1d09147d8e718ffbf951ba6dfe0960c90252c22d72958",
+    "ui/masks/rank-plaque-face-recolor-mask-v002.png": "f32251a8431dd2cabb4e22902808d31a32c7c93a3a3cea498ac569a1a0656440",
+    "ui/prompts/menu-button-system-v001.md": "9cb2ddd29d53a53692cb68c0605b6452645916c975073f298cc5006f98806393",
+    "ui/prompts/rank-plaque-kit-v001.md": "4323228c4e14743a5f855d294c7dfb52977ebbc968c7f397d0728ef4d57d1a22",
+    "ui/prompts/settings-control-v001.md": "ca37639b10ab2f7f410ce9b37f2f6721eb76bfa3d63e8b4daa120a5075e31e1b",
+    "ui/reviews/ui-attachment-kit-category-board-v001.png": "de8dcc123e3f0b6334ac1856f253eef04d588588da7d90ccdd145f36d16fc3a2",
+    "ui/transparent/menu-button-system-cutout-v001.png": "852c53abc868d97c7825083b4bddf3750b39a5056e7196ca092e45fd3b446c96",
+    "ui/transparent/rank-plaque-kit-cutout-v001.png": "63023da6766e2fca5b294688a135642682a5b791f409737220142f27e9ba7318",
+    "ui/transparent/rank-plaque-kit-cutout-v002.png": "116c64f292544afa68795d875ef5422f9b85df8885a925c755a68d3700e13030",
+    "ui/transparent/settings-control-cutout-v001.png": "3f34b63ffedac63a3b2a1e6cc79066234a14112557d7f0c7f819e98a076779e9"
+  }
+}

@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: compact circular mobile-game settings control state sheet
+Input images: Image 1 is the approved Bentosaur home-menu style, palette, material, outline, and settings-control reference only; do not reproduce the complete scene.
+Primary request: create exactly two isolated circular settings/cog controls: normal state on the left and pressed state on the right. Each is a compact round carved-wood button with one centered simple amber-gold cog symbol and the same small muted-green two-leaf accent tucked at the lower-right edge.
+Scene/backdrop: perfectly flat solid #FF00FF chroma-key background for local removal, one uniform color across the entire canvas.
+Style/medium: premium flat-cel 2D storybook game UI matching Image 1; rounded handmade circular wood bezel, refined dark-brown outline, restrained softly painted grain, amber edge highlights, readable simple cog, muted moss-green leaves; slight top-down front perspective.
+Composition/framing: two large states side by side, equal scale, equal padding, centered vertically, fully visible and widely separated. No captions or labels.
+State geometry contract: normal and pressed must have the exact same outer silhouette, diameter, cog geometry, leaf geometry, center point, outline width, and camera angle. Pressed changes only inner shading: slightly darker/recessed face and compressed highlight. Do not move, squash, rotate, or resize the outer circle, cog, or leaves.
+Constraints: exactly two controls; isolated non-overlapping assets; crisp complete silhouettes; no cropping; no cast shadows; no floor plane; no reflections; no watermark. The #FF00FF background must have no gradients, texture, lighting variation, or shadows. Do not use #FF00FF anywhere in either control.
+Avoid: all letters, words, numbers, pseudo-writing, additional icons, characters, dinosaurs, scenery, stall structure, rain, smoke, steam, buttons of other shapes, plaques, stars, extra leaves, presentation-board decoration, glossy generic mobile-game treatment, neon, and photorealism.
