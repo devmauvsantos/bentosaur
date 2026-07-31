@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Bentosaur"
 config/version="0.1.0"
-run/main_scene="res://scenes/vertical_slice/first_playable.tscn"
+run/main_scene="res://scenes/home/home_menu.tscn"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://assets/branding/ios/bentosaur-ios-debug-icon-1024-v004.png"
 

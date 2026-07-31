@@ -46,6 +46,19 @@ the checked-in Godot export settings.
 
 ## First device build
 
+The first personal-team device gate passed on July 31, 2026:
+
+- Godot exported the promoted home-menu scene into the Xcode project.
+- The generated project passed `tools/ios/verify_personal_signing.sh`.
+- Xcode built with Team `53RJ43876F`, certificate
+  `Apple Development: Mauricio Vargas (CRAZV8U43J)`, and the installed
+  personal wildcard development profile.
+- The signed entitlements resolved to
+  `53RJ43876F.com.mauvsantos.bentosaur`.
+- Bentosaur installed and launched successfully on Mauricio's iPhone.
+
+For subsequent device builds:
+
 1. Export the `iOS` preset from Godot.
 2. Verify the generated project before opening Xcode:
 
@@ -60,8 +73,9 @@ the checked-in Godot export settings.
    - Automatically manage signing is enabled;
    - bundle identifier is `com.mauvsantos.bentosaur`.
 5. Keep the iPhone unlocked and select it as the run destination.
-6. Build and run once in Xcode.
-7. Return to Godot for runnable one-click device deployment.
+6. Build and run in Xcode, or use the equivalent `xcodebuild` and
+   `devicectl` flow.
+7. Godot's runnable iOS preset can be used for later one-click deployment.
 
 Stop if Xcode displays either forbidden Team ID or a Mellow identity. Do not
 let Xcode "fix" signing by switching teams.
