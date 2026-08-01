@@ -20,6 +20,8 @@ const EXPECTED_TEXTURE_SIZE := Vector2(865.0, 1024.0)
 const EXPECTED_VISUAL_SCALE := Vector2(0.2, 0.2)
 const EXPECTED_SPRITE_OFFSET := Vector2(0.0, -512.0)
 const TEST_SEED := 48043
+const MAX_HEAD_SHIFT_DEGREES := 0.51
+const MIN_VISIBLE_HEAD_SHIFT_DEGREES := 0.15
 
 
 func _initialize() -> void:
@@ -52,6 +54,23 @@ func _run() -> void:
 		"Prototype scale must preserve the approved registered framing.",
 		errors
 	)
+	_expect(
+		character.body_motion_root != null
+			and character.body_motion_root.get_parent() == character.visual_root,
+		"Body motion needs its own bottom-center pivot under VisualRoot.",
+		errors
+	)
+	_expect(
+		character.neutral_sprite.get_parent() == character.body_motion_root
+			and character.blink_sprite.get_parent() == character.body_motion_root,
+		"Only the body and expression sprites may inherit the micro-lean.",
+		errors
+	)
+	_expect(
+		character.foreground_hands_sprite.get_parent() == character.visual_root,
+		"Foreground hands must stay outside the moving body pivot.",
+		errors
+	)
 	_validate_sprite(
 		character.neutral_sprite,
 		NEUTRAL_TEXTURE_PATH,
@@ -81,12 +100,15 @@ func _run() -> void:
 		character.set_reduced_motion(false)
 		character.set_active(true)
 		character.set_deterministic_test_mode(true, TEST_SEED)
-		for frame: int in range(rate * 12):
+		for frame: int in range(rate * 24):
 			character.step_motion(1.0 / float(rate))
 		samples.append({
 			"scale": character.get_visual_scale(),
 			"blink_count": character.get_blink_count(),
 			"blinking": character.is_blinking(),
+			"head_rotation": character.get_head_rotation_radians(),
+			"head_shift_count": character.get_head_shift_count(),
+			"head_shifting": character.is_head_shifting(),
 			"breath_speed": character.get_breath_speed(),
 			"breath_phase": character.get_breath_phase_offset(),
 		})
@@ -94,7 +116,12 @@ func _run() -> void:
 	var reference: Dictionary = samples[0]
 	_expect(
 		int(reference["blink_count"]) > 0,
-		"Twelve deterministic seconds must contain at least one blink.",
+		"Twenty-four deterministic seconds must contain at least one blink.",
+		errors
+	)
+	_expect(
+		int(reference["head_shift_count"]) > 0,
+		"Twenty-four deterministic seconds must contain a micro-lean.",
 		errors
 	)
 	for sample: Dictionary in samples.slice(1):
@@ -109,6 +136,18 @@ func _run() -> void:
 			int(sample["blink_count"]) == int(reference["blink_count"])
 				and bool(sample["blinking"]) == bool(reference["blinking"]),
 			"Blink scheduling must be frame-rate independent.",
+			errors
+		)
+		_expect(
+			is_equal_approx(
+				float(sample["head_rotation"]),
+				float(reference["head_rotation"])
+			)
+				and int(sample["head_shift_count"])
+					== int(reference["head_shift_count"])
+				and bool(sample["head_shifting"])
+					== bool(reference["head_shifting"]),
+			"Micro-lean scheduling must be frame-rate independent.",
 			errors
 		)
 		_expect(
@@ -131,13 +170,30 @@ func _run() -> void:
 	character.set_deterministic_test_mode(true, TEST_SEED)
 	var minimum_scale := EXPECTED_VISUAL_SCALE
 	var maximum_scale := EXPECTED_VISUAL_SCALE
-	for frame: int in range(3 * 120 + 1):
+	var hands_baseline := character.foreground_hands_sprite.global_transform
+	var maximum_head_rotation_degrees := 0.0
+	var observed_head_shift := false
+	var observed_rest_after_shift := false
+	var hands_stayed_planted := true
+	for frame: int in range(30 * 120 + 1):
 		character.step_motion(1.0 / 120.0)
 		var value := character.get_visual_scale()
 		minimum_scale.x = minf(minimum_scale.x, value.x)
 		minimum_scale.y = minf(minimum_scale.y, value.y)
 		maximum_scale.x = maxf(maximum_scale.x, value.x)
 		maximum_scale.y = maxf(maximum_scale.y, value.y)
+		maximum_head_rotation_degrees = maxf(
+			maximum_head_rotation_degrees,
+			absf(rad_to_deg(character.get_head_rotation_radians()))
+		)
+		if character.get_head_shift_count() > 0:
+			observed_head_shift = true
+			if not character.is_head_shifting():
+				observed_rest_after_shift = true
+		if not character.foreground_hands_sprite.global_transform.is_equal_approx(
+			hands_baseline
+		):
+			hands_stayed_planted = false
 	_expect(
 		minimum_scale.x >= EXPECTED_VISUAL_SCALE.x * 0.99749
 			and maximum_scale.x <= EXPECTED_VISUAL_SCALE.x,
@@ -148,6 +204,22 @@ func _run() -> void:
 		minimum_scale.y >= EXPECTED_VISUAL_SCALE.y
 			and maximum_scale.y <= EXPECTED_VISUAL_SCALE.y * 1.00501,
 		"Breathing must stay within the 0.5% vertical budget.",
+		errors
+	)
+	_expect(
+		observed_head_shift and observed_rest_after_shift,
+		"The idle must alternate rare micro-leans with genuine stillness.",
+		errors
+	)
+	_expect(
+		maximum_head_rotation_degrees >= MIN_VISIBLE_HEAD_SHIFT_DEGREES
+			and maximum_head_rotation_degrees <= MAX_HEAD_SHIFT_DEGREES,
+		"The head-led lean must remain subtle but visible on the phone.",
+		errors
+	)
+	_expect(
+		hands_stayed_planted,
+		"Foreground hands must remain planted throughout body motion.",
 		errors
 	)
 
@@ -200,10 +272,22 @@ func _run() -> void:
 		"Reduced motion must stop breathing at the registered baseline.",
 		errors
 	)
+	_expect(
+		is_zero_approx(character.get_head_rotation_radians())
+			and not character.is_head_shifting(),
+		"Reduced motion must stop the micro-lean at its baseline.",
+		errors
+	)
 	character.set_active(false)
 	_expect(
 		character.neutral_sprite.visible and not character.blink_sprite.visible,
 		"An inactive proprietor must settle into the neutral state.",
+		errors
+	)
+	_expect(
+		character.get_visual_scale() == EXPECTED_VISUAL_SCALE
+			and is_zero_approx(character.get_head_rotation_radians()),
+		"An inactive proprietor must settle at the registered transform.",
 		errors
 	)
 

@@ -2,7 +2,7 @@
 
 Status: active
 
-Snapshot date: 2026-07-31
+Snapshot date: 2026-08-01
 
 ## Executive state
 
@@ -11,14 +11,13 @@ open-ended exploration phase. The Godot project now boots the production-shaped
 Home Village assembly: approved rainy street and registered light wake-up,
 uniformly scaled V002 stall, two approved modular hanging lanterns, the
 founder-approved V004 non-character attachment kit with live semantic
-controls, and the approved 1990s-anime transfer preset 3. V011 corrects the
-phone-scale crate perspective/layering, rank-star sockets, and stockpot-lid
-contact found during V010 review. V012 now adds the first live flat-cel
-proprietor proof behind that stall: bottom-anchored breathing, randomized
-blink/double-blink timing, and a reduced-motion endpoint. Its complete
-22-contract suite and normal/reduced Metal captures pass. Mau's visual review
-of the in-stall character remains open. The iOS build remains under the
-personal Apple team.
+controls, and the approved 1990s-anime transfer preset 3. V015 now gives the
+counter proprietor a dedicated body-motion pivot: the existing restrained
+breath and a rare sub-degree head-led lean affect the body, while the foreground
+hands remain planted on the counter. Its complete 23-contract suite, Metal
+capture, personal signing, physical install, and launch pass. Mau's phone-scale
+motion approval remains open. The iOS build remains under the personal Apple
+team.
 
 The complete bounded first-playable loop remains preserved at
 `game/scenes/vertical_slice/first_playable.tscn`: classic-stall Home, three
@@ -143,6 +142,17 @@ All 23 contracts and a Forward Mobile / Metal A/B capture pass. Physical-iPhone
 build/sign/install/launch also pass under personal team `53RJ43876F`; visual
 approval remains open before any pulse/flick coupling.
 See [Home Menu V014 static foreground relight](checkpoints/2026-07-31-home-menu-v014-static-relight.md).
+
+V015 preserves V014 exactly at commit `d7a8e4a` and was deployed once before
+motion work began. The proprietor now separates `BodyMotionRoot` from the fixed
+foreground hands. The unchanged 3.4-second breath and a rare signed
+`0.35–0.50°` micro-lean operate only on that bottom-center body pivot. Rest,
+lean, hold, and return are elapsed-time based and use a separate seeded RNG, so
+blink cadence remains unchanged and 30/60/120 FPS results agree. Reduced Motion
+removes both spatial motions but preserves blinking. All 23 contracts pass, and
+the personally signed build is installed and running on Mauricio's iPhone 17
+Pro Max. Founder phone-scale motion approval remains pending.
+See [Home Menu V015 proprietor micro-idle](checkpoints/2026-08-01-home-menu-v015-proprietor-micro-idle.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`
@@ -301,6 +311,16 @@ Installation readiness does not authorize using the rejected r005 mesh.
 It also does not authorize using the rejected r006 mesh.
 
 ## Immediate gates
+
+### Home Menu V015 — proprietor micro-idle gate
+
+- [x] deploy the untouched V014 checkpoint before editing motion;
+- [x] separate the body-motion pivot from the planted foreground hands;
+- [x] preserve the existing breath and add rare deterministic micro-leans;
+- [x] retain exact reduced-motion and inactive endpoints;
+- [x] pass all 23 Godot contracts and the Forward Mobile / Metal capture;
+- [x] export, personally sign, install, and launch the V015 build on iPhone;
+- [ ] obtain Mau's phone-scale approval of angle and cadence.
 
 ### Home Menu V012 — proprietor idle visual gate
 

@@ -11,11 +11,13 @@ script = ExtResource("1_script")
 [node name="VisualRoot" type="Node2D" parent="."]
 scale = Vector2(0.2, 0.2)
 
-[node name="Neutral" type="Sprite2D" parent="VisualRoot"]
+[node name="BodyMotionRoot" type="Node2D" parent="VisualRoot"]
+
+[node name="Neutral" type="Sprite2D" parent="VisualRoot/BodyMotionRoot"]
 position = Vector2(0, -512)
 texture = ExtResource("2_neutral")
 
-[node name="Blink" type="Sprite2D" parent="VisualRoot"]
+[node name="Blink" type="Sprite2D" parent="VisualRoot/BodyMotionRoot"]
 visible = false
 position = Vector2(0, -512)
 texture = ExtResource("3_blink")

@@ -62,8 +62,8 @@ const RECEIVER_COLORS: Array[Color] = [
 
 const LIGHT_RECEIVER_PATHS: Array[NodePath] = [
 	NodePath("../StallStructure"),
-	NodePath("../MainCharacter/VisualRoot/Neutral"),
-	NodePath("../MainCharacter/VisualRoot/Blink"),
+	NodePath("../MainCharacter/VisualRoot/BodyMotionRoot/Neutral"),
+	NodePath("../MainCharacter/VisualRoot/BodyMotionRoot/Blink"),
 	NodePath("../MainCharacter/VisualRoot/ForegroundHands"),
 	NodePath("../StallLanternLeft/Anchor"),
 	NodePath("../StallLanternLeft/SwayPivot/BodyOff"),
