@@ -6,7 +6,7 @@ const ROOT_PARENT_POSITION := Vector2(179.0, 727.0)
 const EXPECTED_BOXES := {
 	"ContactShadow": Rect2(132.0, 709.0, 94.0, 18.0),
 	"Body": Rect2(136.0, 626.0, 86.0, 92.0),
-	"LidPivot/Lid": Rect2(133.0, 609.0, 90.0, 49.0),
+	"LidPivot/Lid": Rect2(133.0, 617.0, 90.0, 49.0),
 }
 const TEST_SEED := 13579
 const TEST_DURATION_SECONDS := 20.0
@@ -45,8 +45,8 @@ func _run() -> void:
 		errors
 	)
 	_expect(
-		fixture.get_node("LidPivot").position == Vector2(-1.0, -82.0),
-		"Lid pivot must register at optical contact point (178, 645).",
+		fixture.get_node("LidPivot").position == Vector2(-1.0, -74.0),
+		"Lid pivot must register at optical contact point (178, 653).",
 		errors
 	)
 	_expect(fixture.get_node("ContactShadow").z_index == 0, "Shadow z-order changed.", errors)

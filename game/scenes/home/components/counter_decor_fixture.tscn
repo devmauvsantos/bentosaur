@@ -11,7 +11,7 @@
 script = ExtResource("1_script")
 
 [node name="FoodBowl" type="Sprite2D" parent="."]
-position = Vector2(-170, 45)
+position = Vector2(-178, 53)
 texture = ExtResource("2_bowl")
 
 [node name="Plant" type="Node2D" parent="."]
@@ -30,7 +30,7 @@ z_index = 1
 texture = ExtResource("4_pot")
 
 [node name="BottleCrate" type="Node2D" parent="."]
-position = Vector2(168.5, 28.5)
+position = Vector2(168.5, 36.5)
 z_index = 1
 
 [node name="Assembled" type="Sprite2D" parent="BottleCrate"]

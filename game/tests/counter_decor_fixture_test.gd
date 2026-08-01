@@ -4,10 +4,10 @@ const FIXTURE_PATH := "res://scenes/home/components/counter_decor_fixture.tscn"
 const FIXTURE_SCRIPT := preload("res://scripts/home/counter_decor_fixture.gd")
 const ROOT_PARENT_POSITION := Vector2(360.0, 640.0)
 const EXPECTED_BOXES := {
-	"FoodBowl": Rect2(157.0, 652.0, 66.0, 66.0),
+	"FoodBowl": Rect2(149.0, 660.0, 66.0, 66.0),
 	"Plant/FoliagePivot/Foliage": Rect2(486.0, 500.0, 61.0, 154.0),
 	"Plant/Pot": Rect2(481.0, 644.0, 67.0, 75.0),
-	"BottleCrate/Assembled": Rect2(470.0, 618.0, 117.0, 101.0),
+	"BottleCrate/Assembled": Rect2(470.0, 626.0, 117.0, 101.0),
 	"CounterCloth": Rect2(517.0, 684.0, 97.0, 120.0),
 }
 const EXPECTED_TEXTURE_SUFFIXES := {
@@ -48,7 +48,7 @@ func _run() -> void:
 		errors
 	)
 	_expect(
-		fixture.get_node("BottleCrate").position == Vector2(168.5, 28.5),
+		fixture.get_node("BottleCrate").position == Vector2(168.5, 36.5),
 		"Bottle-crate root must stay at its approved envelope center.",
 		errors
 	)

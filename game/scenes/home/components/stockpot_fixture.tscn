@@ -108,7 +108,7 @@ antialiased = true
 z_index = 0
 
 [node name="LidPivot" type="Node2D" parent="."]
-position = Vector2(-1, -82)
+position = Vector2(-1, -74)
 z_index = 3
 
 [node name="Lid" type="Sprite2D" parent="LidPivot"]
