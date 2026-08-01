@@ -19,7 +19,7 @@ framing_scale = 0.86
 framing_pivot = Vector2(360, 634)
 
 [node name="MainCharacter" parent="StallStage" instance=ExtResource("8_proprietor")]
-position = Vector2(360, 758)
+position = Vector2(360, 699)
 z_index = 14
 
 [node name="StallStructure" type="TextureRect" parent="StallStage"]

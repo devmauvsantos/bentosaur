@@ -96,8 +96,8 @@ func _run() -> void:
 			errors
 		)
 		_expect(
-			main_character.position == Vector2(360.0, 758.0),
-			"Proprietor bottom-center registration changed.",
+			main_character.position == Vector2(360.0, 699.0),
+			"Proprietor counter-contact registration changed.",
 			errors
 		)
 		_expect(
@@ -106,8 +106,14 @@ func _run() -> void:
 			errors
 		)
 		_expect(
-			main_character.get_base_visual_scale() == Vector2(0.52, 0.52),
-			"Proprietor prototype scale changed without a visual gate.",
+			main_character.get_base_visual_scale() == Vector2(0.2, 0.2),
+			"Proprietor counter-pose scale changed without a visual gate.",
+			errors
+		)
+		_expect(
+			main_character.foreground_hands_sprite.z_index
+				+ main_character.z_index == 16,
+			"Proprietor fingers must render immediately above the stall shell.",
 			errors
 		)
 	if attachment_kit != null:

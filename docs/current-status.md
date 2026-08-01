@@ -119,6 +119,19 @@ explicit whole-sprite proof, not the final separated body/face/hands rig.
 Founder visual approval is pending.
 See [Home Menu V012 proprietor idle proof](checkpoints/2026-07-31-home-menu-v012-proprietor-idle-proof.md).
 
+V013 replaces V012's arms-down motion proof with the authored counter pose.
+The neutral source is the registration authority; only two feathered eye
+patches change for the blink. A source-identical foreground arm/hand layer now
+creates the runtime order body `z14` → stall `z15` → fingers `z16`, while one
+bottom-anchored breathing root keeps hand contact stable. V013's leading
+diagnosis for the five-minute iPhone filter artifact is the old unbounded sine
+grain hash: the visible `-0.16` boundary slope matches its constant-phase slope.
+The shader now uses a controller-owned 256-frame bounded ring and a bounded
+no-sine hash. A six-simulated-minute Forward Mobile / Metal capture stays
+coherent. Founder character approval and an 8–10 minute physical-iPhone
+longevity/resume gate remain pending before causality is considered proven.
+See [Home Menu V013 counter proprietor and bounded filter](checkpoints/2026-07-31-home-menu-v013-counter-proprietor-bounded-filter.md).
+
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`
 supports ultratall displays, and iOS uses Metal with ProMotion permitted. The

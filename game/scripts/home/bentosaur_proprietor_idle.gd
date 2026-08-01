@@ -30,6 +30,7 @@ enum BlinkState {
 @onready var visual_root: Node2D = $VisualRoot
 @onready var neutral_sprite: Sprite2D = $VisualRoot/Neutral
 @onready var blink_sprite: Sprite2D = $VisualRoot/Blink
+@onready var foreground_hands_sprite: Sprite2D = $VisualRoot/ForegroundHands
 
 var _rng := RandomNumberGenerator.new()
 var _active := true

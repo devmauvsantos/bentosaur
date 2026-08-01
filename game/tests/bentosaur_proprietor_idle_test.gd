@@ -5,16 +5,20 @@ const CHARACTER_PATH := (
 )
 const SCRIPT_PATH := "res://scripts/home/bentosaur_proprietor_idle.gd"
 const NEUTRAL_TEXTURE_PATH := (
-	"res://assets/characters/bentosaur_proprietor/v001/"
-	+ "bentosaur_proprietor_neutral_v001.png"
+	"res://assets/characters/bentosaur_proprietor/v002/"
+	+ "bentosaur_proprietor_counter_neutral_v002.png"
 )
 const BLINK_TEXTURE_PATH := (
-	"res://assets/characters/bentosaur_proprietor/v001/"
-	+ "bentosaur_proprietor_blink_v001.png"
+	"res://assets/characters/bentosaur_proprietor/v002/"
+	+ "bentosaur_proprietor_counter_blink_v002.png"
 )
-const EXPECTED_TEXTURE_SIZE := Vector2(374.0, 490.0)
-const EXPECTED_VISUAL_SCALE := Vector2(0.52, 0.52)
-const EXPECTED_SPRITE_OFFSET := Vector2(0.0, -269.0)
+const HANDS_TEXTURE_PATH := (
+	"res://assets/characters/bentosaur_proprietor/v002/"
+	+ "bentosaur_proprietor_counter_hands_v002.png"
+)
+const EXPECTED_TEXTURE_SIZE := Vector2(865.0, 1024.0)
+const EXPECTED_VISUAL_SCALE := Vector2(0.2, 0.2)
+const EXPECTED_SPRITE_OFFSET := Vector2(0.0, -512.0)
 const TEST_SEED := 48043
 
 
@@ -58,6 +62,17 @@ func _run() -> void:
 		character.blink_sprite,
 		BLINK_TEXTURE_PATH,
 		"Blink",
+		errors
+	)
+	_validate_sprite(
+		character.foreground_hands_sprite,
+		HANDS_TEXTURE_PATH,
+		"Foreground hands",
+		errors
+	)
+	_expect(
+		character.foreground_hands_sprite.z_index == 2,
+		"Foreground hands must render two levels above the body.",
 		errors
 	)
 
@@ -240,7 +255,7 @@ func _validate_sprite(
 		)
 		_expect(
 			sprite.texture.get_size() == EXPECTED_TEXTURE_SIZE,
-			"%s texture must preserve the shared 374x490 crop." % label,
+			"%s texture must preserve the shared 865x1024 crop." % label,
 			errors
 		)
 

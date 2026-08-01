@@ -55,6 +55,31 @@ func _run() -> void:
 	)
 
 	if back_buffer != null and filter != null:
+		var shader_material := filter.material as ShaderMaterial
+		_expect(
+			shader_material != null,
+			"Post-process filter must retain its local shader material.",
+			errors
+		)
+		if shader_material != null:
+			_expect(
+				not shader_material.shader.code.contains("TIME"),
+				"Mobile grain must not use an unbounded TIME hash.",
+				errors
+			)
+			_expect(
+				not shader_material.shader.code.contains("12.9898")
+					and not shader_material.shader.code.contains("78.233"),
+				"Mobile grain must not restore the failing sine-hash coefficients.",
+				errors
+			)
+			_validate_long_horizon_grain(
+				post_process,
+				filter,
+				viewport,
+				shader_material,
+				errors
+			)
 		_expect(
 			back_buffer.get_index() < filter.get_index(),
 			"BackBufferCopy must render before the screen-reading Filter.",
@@ -131,6 +156,59 @@ func _run() -> void:
 	await process_frame
 	await create_timer(0.05).timeout
 	_finish(errors)
+
+
+func _validate_long_horizon_grain(
+	post_process: CanvasLayer,
+	filter: ColorRect,
+	viewport: Viewport,
+	shader_material: ShaderMaterial,
+	errors: PackedStringArray
+) -> void:
+	# This contract validates bounded controller state and viewport coverage. The
+	# reported fragment-precision artifact still requires the documented physical
+	# iPhone longevity gate because a headless geometry test cannot inspect pixels.
+	post_process.set_process(false)
+	var cross_rate_frames: Array[int] = []
+	for rate: int in [30, 60, 120]:
+		post_process.call("reset_grain_clock", 0.0)
+		for frame: int in range(rate * 360):
+			post_process.call("step_grain_clock", 1.0 / float(rate))
+		cross_rate_frames.append(int(post_process.call("get_grain_frame")))
+	_expect(
+		cross_rate_frames[0] == cross_rate_frames[1]
+			and cross_rate_frames[1] == cross_rate_frames[2],
+		"Six-minute grain clocks must agree at 30, 60, and 120 FPS.",
+		errors
+	)
+	var grain_frame := int(post_process.call("get_grain_frame"))
+	var elapsed := float(post_process.call("get_grain_elapsed_seconds"))
+	_expect(
+		grain_frame >= 0 and grain_frame < 256,
+		"Six-minute grain simulation must remain inside its bounded frame ring.",
+		errors
+	)
+	_expect(
+		elapsed >= 0.0 and elapsed < 256.0 / 12.0,
+		"Six-minute grain simulation must keep elapsed shader time bounded.",
+		errors
+	)
+	_expect(
+		is_equal_approx(
+			float(shader_material.get_shader_parameter("grain_frame")),
+			float(grain_frame)
+		),
+		"The shader must receive the controller's bounded grain frame.",
+		errors
+	)
+	_expect_filter_covers_viewport(
+		post_process,
+		filter,
+		viewport,
+		"after a simulated six-minute grain lifetime",
+		errors
+	)
+	post_process.set_process(true)
 
 
 func _expect_filter_covers_viewport(

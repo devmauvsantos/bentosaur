@@ -19,6 +19,7 @@ shader_parameter/scanline_opacity = 0.0
 shader_parameter/scanline_count = 0.0
 shader_parameter/noise_intensity = 0.085
 shader_parameter/aberration = 0.0013
+shader_parameter/grain_frame = 0.0
 shader_parameter/brightness = 1.025
 shader_parameter/saturation = 0.92
 shader_parameter/glow_bleed = 0.28

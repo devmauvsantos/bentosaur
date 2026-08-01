@@ -27,6 +27,7 @@ uniform float scanline_opacity : hint_range(0.0, 1.0)    = 0.15;
 uniform float scanline_count   : hint_range(0.0, 1080.0) = 540.0;
 uniform float noise_intensity  : hint_range(0.0, 1.0)    = 0.08;
 uniform float aberration       : hint_range(0.0, 0.1)    = 0.003;
+uniform float grain_frame      : hint_range(0.0, 255.0)  = 0.0;
 
 
 // ─────────────────────────────────────────────
@@ -77,15 +78,23 @@ vec2 curve_uv(vec2 uv) {
 	return uv * 0.5 + 0.5;
 }
 
-float random(vec2 uv) {
-	return fract(sin(dot(uv.xy, vec2(12.9898, 78.233))) * 43758.5453123);
+float stable_random(vec2 cell) {
+	// Keep every intermediate bounded for mobile fragment precision. The old
+	// engine-time sine hash grew without limit and collapsed into correlated
+	// diagonal bands on the iPhone after several minutes.
+	vec3 cell3 = fract(vec3(cell.xyx) * 0.1031);
+	cell3 += dot(cell3, cell3.yzx + 33.33);
+	return fract((cell3.x + cell3.y) * cell3.z);
 }
 
 float transfer_grain(vec2 uv, float luma) {
-	float transfer_frame = floor(TIME * 12.0);
 	vec2 screen_pixel_size = 1.0 / vec2(textureSize(screen_texture, 0));
 	vec2 pixel = floor((uv / screen_pixel_size) / 1.25);
-	float fine_grain = random(pixel + vec2(transfer_frame * 17.0, transfer_frame * 31.0));
+	vec2 grain_cell = mod(
+		pixel + vec2(grain_frame * 17.0, grain_frame * 31.0),
+		vec2(4096.0)
+	);
+	float fine_grain = stable_random(grain_cell);
 	float grain_mask = smoothstep(0.025, 0.16, luma);
 	grain_mask *= 1.0 - 0.32 * smoothstep(0.72, 1.0, luma);
 	return (fine_grain - 0.5) * grain_mask;

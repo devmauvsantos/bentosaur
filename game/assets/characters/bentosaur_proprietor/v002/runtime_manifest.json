@@ -1,0 +1,222 @@
+{
+  "approval_boundary": "pose and runtime layering candidate; founder owns visual approval",
+  "asset_count": 3,
+  "asset_id": "character.bentosaur_proprietor.runtime.v002",
+  "assets": [
+    {
+      "asset_id": "character.bentosaur_proprietor.counter.neutral",
+      "decoded_rgba_sha256": "96427d6be56fa7602c2e86e721a27856b187ee8fb7e306cb2b7a8297adc56b30",
+      "output": "game/assets/characters/bentosaur_proprietor/v002/bentosaur_proprietor_counter_neutral_v002.png",
+      "output_sha256": "a4cde397f77b3caab3c818dc9834803cd7537b13b9375f984af13ef6a5e2ed9a",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          865,
+          1024
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      }
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.counter.blink",
+      "decoded_rgba_sha256": "0783fd21498fa00181a59c0111b39850b9696b72a7bb43c2d804cb5f29f05020",
+      "output": "game/assets/characters/bentosaur_proprietor/v002/bentosaur_proprietor_counter_blink_v002.png",
+      "output_sha256": "9a78c052cf3f026040eb840f5d0ab0fa0d809a3a06511c7d80ddc820420b4aa4",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          865,
+          1024
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      }
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.counter.hands",
+      "decoded_rgba_sha256": "3e37e994b32aae7fca84ab7a76eb5496d7e5c3ecc22c889402740842349f3d6f",
+      "output": "game/assets/characters/bentosaur_proprietor/v002/bentosaur_proprietor_counter_hands_v002.png",
+      "output_sha256": "e0bb42f189297414e01af5d44ec4d2cdebd18a09bc04c6110a5c3aa9c7b27a4d",
+      "qa": {
+        "alpha_bounds_px": [
+          82,
+          778,
+          787,
+          1024
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      }
+    }
+  ],
+  "builder": "tools/art/promote_bentosaur_proprietor_counter_v002.py",
+  "builder_runtime": {
+    "integrity_contract": "decoded_rgba_sha256 is cross-encoder authority; output_sha256 records the committed PNG bytes",
+    "pillow_version": "12.3.0"
+  },
+  "registration": {
+    "body_effective_z": 14,
+    "common_crop_xyxy_px": [
+      192,
+      102,
+      1057,
+      1126
+    ],
+    "foreground_hands_effective_z": 16,
+    "logical_scale": 0.2,
+    "runtime_size_px": [
+      865,
+      1024
+    ],
+    "scene_root_position": [
+      360.0,
+      699.0
+    ],
+    "shared_origin": "counter_contact_bottom_center",
+    "source_canvas_px": [
+      1254,
+      1254
+    ],
+    "sprite_center_from_counter_px": [
+      0.0,
+      -512.0
+    ],
+    "stall_effective_z": 15
+  },
+  "schema_version": 1,
+  "separation": {
+    "blink_difference_bounds_source_px": [
+      366,
+      503,
+      881,
+      735
+    ],
+    "blink_patch_ellipses_source_px": [
+      [
+        390,
+        525,
+        555,
+        710
+      ],
+      [
+        690,
+        525,
+        855,
+        710
+      ]
+    ],
+    "blink_patch_feather_px": 16.0,
+    "foreground_left_polygon_source_px": [
+      [
+        180,
+        880
+      ],
+      [
+        420,
+        880
+      ],
+      [
+        430,
+        940
+      ],
+      [
+        470,
+        975
+      ],
+      [
+        515,
+        1010
+      ],
+      [
+        552,
+        1050
+      ],
+      [
+        570,
+        1126
+      ],
+      [
+        180,
+        1126
+      ]
+    ],
+    "foreground_right_polygon_source_px": [
+      [
+        1074,
+        880
+      ],
+      [
+        834,
+        880
+      ],
+      [
+        824,
+        940
+      ],
+      [
+        784,
+        975
+      ],
+      [
+        739,
+        1010
+      ],
+      [
+        702,
+        1050
+      ],
+      [
+        684,
+        1126
+      ],
+      [
+        1074,
+        1126
+      ]
+    ]
+  },
+  "source_assets": [
+    {
+      "path": "art/candidates/2d/proprietor-counter-pose-v001/exports/bentosaur-proprietor-counter-neutral-transparent-v001.png",
+      "role": "immutable registration and appearance authority",
+      "sha256": "07968f5530707c6af00682af8ad4ad73890439cb63c950995e046269057f9024"
+    },
+    {
+      "path": "art/candidates/2d/proprietor-counter-pose-v001/exports/bentosaur-proprietor-counter-blink-transparent-v001.png",
+      "role": "eye-patch pixels only",
+      "sha256": "7115ac4d5fb891f5e8d84b80bba26490e1bc99548e4c4f25ccbc06b7e87e28f9"
+    }
+  ],
+  "source_candidate": "art/candidates/2d/proprietor-counter-pose-v001",
+  "status": "founder_visual_approval_pending"
+}
