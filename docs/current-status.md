@@ -132,6 +132,15 @@ coherent. Founder character approval and an 8–10 minute physical-iPhone
 longevity/resume gate remain pending before causality is considered proven.
 See [Home Menu V013 counter proprietor and bounded filter](checkpoints/2026-07-31-home-menu-v013-counter-proprietor-bounded-filter.md).
 
+V014 is an open visual-only lighting gate. The current V013 iPhone build is
+preserved and pushed at tag
+`checkpoint/home-flat-light-approved-2026-07-31`. Research and scene auditing
+confirm that the foreground mismatch comes from uniformly lit stall/character
+sprites sitting above the village's baked light layers. No runtime change has
+been made. The proposed direction is a cool foreground night base plus three
+soft lantern-motivated warm pools, with normal maps and cast shadows deferred.
+See [Home Menu V014 lantern-motivated lighting study](../game/docs/visual-gates/home-menu-v014-lighting-study/README.md).
+
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`
 supports ultratall displays, and iOS uses Metal with ProMotion permitted. The
