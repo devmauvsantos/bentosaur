@@ -1,6 +1,6 @@
 # Home Menu V014 — Lantern-Motivated Lighting Study
 
-Status: **visual approval pending; no runtime lighting changes**
+Status: **approved with brighter buttons; static runtime proof implemented**
 
 Snapshot date: 2026-07-31
 
@@ -48,7 +48,7 @@ asset and is not pixel-identical source authority. It demonstrates four goals:
 The individual concept is stored at
 `home-menu-v014-lantern-motivated-lighting-concept-v001.png`.
 
-## Recommended first implementation after approval
+## Approved first implementation
 
 Use a non-destructive, art-directed foreground relight. Do not use a global
 `CanvasModulate`, because the village already has approved baked night lighting
@@ -73,9 +73,13 @@ Starting values for the balanced target:
 - Derive runtime light centers from the stall canvas transform so ultratall and
   iPhone layouts remain registered.
 
-The first runtime version must ship behind an on/off comparison flag. It should
-use static light energy first. Only after the static iPhone comparison is
-approved should the warm pools share the existing lantern pulse/flick state.
+The first runtime version now ships behind an on/off comparison API and launch
+flag. It uses static light energy. Only after the static iPhone comparison is
+approved will the warm pools share the existing lantern pulse/flick state.
+
+Mau requested one change to the study: the four buttons should remain slightly
+brighter. Runtime button frames therefore use a `0.90` base rather than the
+study's `0.80`, with a separate small live-label lift.
 
 ## Explicitly deferred
 
@@ -100,8 +104,9 @@ Approve the **lighting relationship**, not exact AI-rendered pixels:
 - Is the lower stall darker without losing button readability?
 - Is the overall result still cozy rather than gloomy?
 
-After approval, implement the balanced static treatment, capture it in Forward
-Mobile/Metal, install it on the iPhone, and compare it against the checkpoint.
+The balanced static treatment and deterministic Forward Mobile/Metal A/B are
+complete. See [V014 runtime evidence](../../runtime-captures/home-menu-v014-static-relight/README.md).
+The remaining gate is physical-iPhone comparison against the checkpoint.
 
 ## Research references
 

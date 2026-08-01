@@ -57,6 +57,18 @@ func _initialize() -> void:
 			"The promoted home menu must contain the approved right stall lantern.",
 			errors
 		)
+		_expect(
+			home_menu.get_node_or_null(
+				"WorldCanvas/ApprovedStallComposition/StallStage/ForegroundRelight"
+			) is StallForegroundRelight,
+			"The promoted home menu must contain the reversible foreground relight.",
+			errors
+		)
+		_expect(
+			home_menu.has_method("set_foreground_relight_enabled"),
+			"The production home menu must expose its relight A/B API.",
+			errors
+		)
 		var attachment_kit := home_menu.get_node_or_null(
 			"WorldCanvas/ApprovedStallComposition/StallStage/StallAttachmentKit"
 		) as StallAttachmentKit

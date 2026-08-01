@@ -92,6 +92,11 @@ Validate headlessly:
   --headless \
   --path game \
   --script res://tests/stall_lantern_fixture_test.gd
+
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --headless \
+  --path game \
+  --script res://tests/stall_foreground_relight_test.gd
 ```
 
 Capture a fixed fully-open comparison pose:

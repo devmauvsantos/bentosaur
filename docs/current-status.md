@@ -132,14 +132,17 @@ coherent. Founder character approval and an 8–10 minute physical-iPhone
 longevity/resume gate remain pending before causality is considered proven.
 See [Home Menu V013 counter proprietor and bounded filter](checkpoints/2026-07-31-home-menu-v013-counter-proprietor-bounded-filter.md).
 
-V014 is an open visual-only lighting gate. The current V013 iPhone build is
-preserved and pushed at tag
-`checkpoint/home-flat-light-approved-2026-07-31`. Research and scene auditing
-confirm that the foreground mismatch comes from uniformly lit stall/character
-sprites sitting above the village's baked light layers. No runtime change has
-been made. The proposed direction is a cool foreground night base plus three
-soft lantern-motivated warm pools, with normal maps and cast shadows deferred.
-See [Home Menu V014 lantern-motivated lighting study](../game/docs/visual-gates/home-menu-v014-lighting-study/README.md).
+V014 implements the approved foreground-lighting relationship with Mau's
+follow-up button lift. The V013 iPhone build remains preserved and pushed at
+tag `checkpoint/home-flat-light-approved-2026-07-31`. A reversible controller
+now grades only non-emissive stall/character/prop surfaces, while three static
+masked lantern pools restore local warmth. Button frames remain brighter than
+the cabinet and labels receive a separate readability lift. The village, rain,
+anime pass, lantern cores/halos, steam, and existing flick system are unchanged.
+All 23 contracts and a Forward Mobile / Metal A/B capture pass. Physical-iPhone
+build/sign/install/launch also pass under personal team `53RJ43876F`; visual
+approval remains open before any pulse/flick coupling.
+See [Home Menu V014 static foreground relight](checkpoints/2026-07-31-home-menu-v014-static-relight.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`

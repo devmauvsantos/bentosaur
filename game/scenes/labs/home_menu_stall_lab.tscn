@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=12 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/labs/home_village_rain_lab.tscn" id="1_home"]
 [ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/stall_structure_unlit_720x1280.png" id="2_stall"]
@@ -8,6 +8,19 @@
 [ext_resource type="PackedScene" path="res://scenes/home/components/stall_lantern_fixture.tscn" id="6_lantern"]
 [ext_resource type="PackedScene" path="res://scenes/home/components/stall_attachment_kit.tscn" id="7_attachments"]
 [ext_resource type="PackedScene" path="res://scenes/home/components/bentosaur_proprietor_idle.tscn" id="8_proprietor"]
+[ext_resource type="Script" path="res://scripts/home/stall_foreground_relight.gd" id="9_relight"]
+
+[sub_resource type="Gradient" id="Gradient_foreground_warm"]
+offsets = PackedFloat32Array(0, 0.4, 0.78, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.68, 0.68, 0.68, 1, 0.16, 0.16, 0.16, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_foreground_warm"]
+gradient = SubResource("Gradient_foreground_warm")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
 
 [node name="HomeMenuStallLab" type="Node2D"]
 
@@ -50,3 +63,44 @@ sway_period_seconds = 7.0
 phase_offset_radians = 0.18
 
 [node name="StallAttachmentKit" parent="StallStage" instance=ExtResource("7_attachments")]
+
+[node name="ForegroundLights" type="Node2D" parent="StallStage"]
+
+[node name="HangingLeft" type="PointLight2D" parent="StallStage/ForegroundLights"]
+position = Vector2(134.5, 515)
+scale = Vector2(2.10938, 1.875)
+texture = SubResource("GradientTexture2D_foreground_warm")
+color = Color(1, 0.74, 0.42, 1)
+energy = 0.34
+range_z_min = 14
+range_z_max = 19
+range_layer_min = 0
+range_layer_max = 1
+range_item_cull_mask = 2
+
+[node name="HangingRight" type="PointLight2D" parent="StallStage/ForegroundLights"]
+position = Vector2(583.5, 515)
+scale = Vector2(2.10938, 1.875)
+texture = SubResource("GradientTexture2D_foreground_warm")
+color = Color(1, 0.74, 0.42, 1)
+energy = 0.34
+range_z_min = 14
+range_z_max = 19
+range_layer_min = 0
+range_layer_max = 1
+range_item_cull_mask = 2
+
+[node name="Counter" type="PointLight2D" parent="StallStage/ForegroundLights"]
+position = Vector2(240.5, 675)
+scale = Vector2(0.97656, 1.05469)
+texture = SubResource("GradientTexture2D_foreground_warm")
+color = Color(1, 0.69, 0.36, 1)
+energy = 0.3
+range_z_min = 14
+range_z_max = 19
+range_layer_min = 0
+range_layer_max = 1
+range_item_cull_mask = 2
+
+[node name="ForegroundRelight" type="Node" parent="StallStage"]
+script = ExtResource("9_relight")

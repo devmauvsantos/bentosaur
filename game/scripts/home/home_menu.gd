@@ -13,6 +13,9 @@ signal settings_requested
 @onready var main_character: BentosaurProprietorIdle = (
 	$WorldCanvas/ApprovedStallComposition/StallStage/MainCharacter
 )
+@onready var foreground_relight: StallForegroundRelight = (
+	$WorldCanvas/ApprovedStallComposition/StallStage/ForegroundRelight
+)
 
 
 func _ready() -> void:
@@ -34,6 +37,14 @@ func set_rank(value: int, animate: bool = true) -> void:
 
 func set_stockpot_active(enabled: bool) -> void:
 	attachment_kit.set_stockpot_active(enabled)
+
+
+func set_foreground_relight_enabled(enabled: bool) -> void:
+	foreground_relight.set_enabled(enabled)
+
+
+func is_foreground_relight_enabled() -> bool:
+	return foreground_relight.is_enabled()
 
 
 func set_practical_lights_powered(
