@@ -62,6 +62,9 @@ func _run() -> void:
 	var village := lab.get_node_or_null("HomeVillageRainLab") as Node2D
 	var stall_stage := lab.get_node_or_null("StallStage") as AspectContainStage
 	var stall := lab.get_node_or_null("StallStage/StallStructure") as TextureRect
+	var main_character := lab.get_node_or_null(
+		"StallStage/MainCharacter"
+	) as BentosaurProprietorIdle
 	var stall_roof_splashes := (
 		lab.get_node_or_null("StallStage/StallRoofSplashes") as Node2D
 	)
@@ -77,6 +80,7 @@ func _run() -> void:
 	_expect(village != null, "Approved village lab must remain instanced.", errors)
 	_expect(stall_stage != null, "Missing responsive stall stage.", errors)
 	_expect(stall != null, "Missing registered empty stall.", errors)
+	_expect(main_character != null, "Missing Bentosaur proprietor idle proof.", errors)
 	_expect(
 		stall_roof_splashes != null,
 		"Stall-roof rain receiver must be a Node2D.",
@@ -85,6 +89,27 @@ func _run() -> void:
 	_expect(lantern_left != null, "Missing approved left stall lantern.", errors)
 	_expect(lantern_right != null, "Missing approved right stall lantern.", errors)
 	_expect(attachment_kit != null, "Missing approved V004 attachment kit.", errors)
+	if main_character != null:
+		_expect(
+			main_character.get_parent() == stall_stage,
+			"Proprietor must inherit the responsive StallStage.",
+			errors
+		)
+		_expect(
+			main_character.position == Vector2(360.0, 758.0),
+			"Proprietor bottom-center registration changed.",
+			errors
+		)
+		_expect(
+			main_character.z_index == 14,
+			"Proprietor must remain behind the complete stall shell.",
+			errors
+		)
+		_expect(
+			main_character.get_base_visual_scale() == Vector2(0.52, 0.52),
+			"Proprietor prototype scale changed without a visual gate.",
+			errors
+		)
 	if attachment_kit != null:
 		_expect(
 			attachment_kit.get_parent() == stall_stage,
@@ -164,6 +189,12 @@ func _run() -> void:
 		_expect(stall.size == CANVAS_SIZE, "Stall must cover the registered canvas.", errors)
 		_expect(stall.scale == Vector2.ONE, "Stall must not be repositioned by scale.", errors)
 		_expect(stall.z_index == 15, "Stall must render at global z 15.", errors)
+		if main_character != null:
+			_expect(
+				main_character.z_index < stall.z_index,
+				"The shell must occlude the proprietor below the counter.",
+				errors
+			)
 		var depth_material := stall.material as ShaderMaterial
 		_expect(depth_material != null, "Stall must have its subtle depth material.", errors)
 		if depth_material != null:

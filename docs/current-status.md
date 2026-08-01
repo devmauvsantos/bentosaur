@@ -13,10 +13,12 @@ uniformly scaled V002 stall, two approved modular hanging lanterns, the
 founder-approved V004 non-character attachment kit with live semantic
 controls, and the approved 1990s-anime transfer preset 3. V011 corrects the
 phone-scale crate perspective/layering, rank-star sockets, and stockpot-lid
-contact found during V010 review. Its 21-contract suite, normal/reduced Metal
-captures, personal signing, physical install, and launch are complete. Mau's
-phone-scale visual and interaction review remains open. The iOS build remains
-under the personal Apple team.
+contact found during V010 review. V012 now adds the first live flat-cel
+proprietor proof behind that stall: bottom-anchored breathing, randomized
+blink/double-blink timing, and a reduced-motion endpoint. Its complete
+22-contract suite and normal/reduced Metal captures pass. Mau's visual review
+of the in-stall character remains open. The iOS build remains under the
+personal Apple team.
 
 The complete bounded first-playable loop remains preserved at
 `game/scenes/vertical_slice/first_playable.tscn`: classic-stall Home, three
@@ -105,6 +107,17 @@ sockets, and seats the still-independent lid at its optical contact point. All
 recorded. The personally signed build is installed and running on Mauricio's
 iPhone 17 Pro Max. Founder phone-scale approval remains pending.
 See [Home Menu V011 registration corrections](checkpoints/2026-07-31-home-menu-v011-registration-corrections.md).
+
+V012 promotes the registered V3 neutral and blink states into one reusable
+Godot proprietor controller. The complete stall shell occludes the prototype
+body at `z15`; the character remains behind it at `z14`, existing foreground
+attachments stay at `z16+`, and weather stays at `z20`. A seeded elapsed-time
+controller provides a 3.4-second breath, randomized session phase/speed,
+randomized blinks and occasional double blinks. All 22 contracts pass at the
+suite level, including deterministic equivalence at 30/60/120 FPS. This is an
+explicit whole-sprite proof, not the final separated body/face/hands rig.
+Founder visual approval is pending.
+See [Home Menu V012 proprietor idle proof](checkpoints/2026-07-31-home-menu-v012-proprietor-idle-proof.md).
 
 The mobile display baseline is also locked: `720 × 1280` is the stable logical
 design grid, `canvas_items` renders at the target device resolution, `expand`
@@ -263,6 +276,18 @@ Installation readiness does not authorize using the rejected r005 mesh.
 It also does not authorize using the rejected r006 mesh.
 
 ## Immediate gates
+
+### Home Menu V012 — proprietor idle visual gate
+
+- [x] hash-verify and promote the registered neutral/blink pair;
+- [x] integrate the proprietor behind the complete stall shell;
+- [x] implement deterministic breath, blink, occasional double blink, and
+  reduced motion;
+- [x] run and record the complete 22-contract Godot suite;
+- [x] capture normal, blink, and reduced-motion Forward Mobile / Metal evidence;
+- [ ] obtain Mau's approval of identity, scale, placement, and idle feeling;
+- [ ] after approval, reconstruct the shared production body, separate face,
+  and continuous foreground counter hands.
 
 ### Home Menu V011 — corrected device gate
 

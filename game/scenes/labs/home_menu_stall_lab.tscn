@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/labs/home_village_rain_lab.tscn" id="1_home"]
 [ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/stall_structure_unlit_720x1280.png" id="2_stall"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/vfx/stall_roof_rain.gd" id="5_stall_roof_rain"]
 [ext_resource type="PackedScene" path="res://scenes/home/components/stall_lantern_fixture.tscn" id="6_lantern"]
 [ext_resource type="PackedScene" path="res://scenes/home/components/stall_attachment_kit.tscn" id="7_attachments"]
+[ext_resource type="PackedScene" path="res://scenes/home/components/bentosaur_proprietor_idle.tscn" id="8_proprietor"]
 
 [node name="HomeMenuStallLab" type="Node2D"]
 
@@ -16,6 +17,10 @@
 script = ExtResource("3_contain")
 framing_scale = 0.86
 framing_pivot = Vector2(360, 634)
+
+[node name="MainCharacter" parent="StallStage" instance=ExtResource("8_proprietor")]
+position = Vector2(360, 758)
+z_index = 14
 
 [node name="StallStructure" type="TextureRect" parent="StallStage"]
 material = ExtResource("4_depth_material")

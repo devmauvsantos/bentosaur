@@ -1,0 +1,105 @@
+{
+  "approval_boundary": "identity-approved source states; shipping separated layer rig pending",
+  "asset_count": 2,
+  "asset_id": "character.bentosaur_proprietor.runtime.v001",
+  "assets": [
+    {
+      "asset_id": "character.bentosaur_proprietor.neutral",
+      "operation": "lossless_common_crop",
+      "output": "game/assets/characters/bentosaur_proprietor/v001/bentosaur_proprietor_neutral_v001.png",
+      "output_sha256": "2f3fc69a01d46d6f3606413536c5774d0c4f6f5fb99a70372938b3cc00f262cd",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          374,
+          490
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          374,
+          490
+        ],
+        "stored_mode": "RGBA"
+      },
+      "source": "art/concepts/2d-chibi/v3/02_main-character-idle/registered/bentosaur-neutral-open-registered-v1.png",
+      "source_sha256": "6cca483f6a57e30166552d5c2d74aee01e0a0918b313bd8828bb1877bf4d6cac"
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.blink",
+      "operation": "lossless_common_crop",
+      "output": "game/assets/characters/bentosaur_proprietor/v001/bentosaur_proprietor_blink_v001.png",
+      "output_sha256": "cf522454c0958bff8ac4a213894070fcae676fb302dd3dda40b4bce505b3f47e",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          1,
+          374,
+          490
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          374,
+          490
+        ],
+        "stored_mode": "RGBA"
+      },
+      "source": "art/concepts/2d-chibi/v3/02_main-character-idle/registered/bentosaur-blink-registered-v1.png",
+      "source_sha256": "d2cda4a65f91d64586ac1a5a23467bafb68e8c7eda1a76586ea018eab1e603b7"
+    }
+  ],
+  "builder": "tools/art/promote_bentosaur_proprietor_v001.py",
+  "motion_contract": {
+    "blink_interval_seconds": [
+      2.3,
+      5.4
+    ],
+    "blink_seconds": 0.18,
+    "breath_horizontal_contraction": 0.0025,
+    "breath_period_seconds": 3.4,
+    "breath_speed_range": [
+      0.94,
+      1.06
+    ],
+    "breath_vertical_expansion": 0.005,
+    "double_blink_chance": 0.12,
+    "double_blink_gap_seconds": 0.14,
+    "randomized_start_phase": true
+  },
+  "registration": {
+    "common_crop_xyxy_px": [
+      69,
+      62,
+      443,
+      552
+    ],
+    "logical_scale": 0.52,
+    "runtime_size_px": [
+      374,
+      490
+    ],
+    "shared_origin": "bottom_center",
+    "source_canvas_px": [
+      512,
+      576
+    ],
+    "sprite_center_from_baseline_px": [
+      0.0,
+      -269.0
+    ]
+  },
+  "schema_version": 1,
+  "source_manifest_sha256": "d20a0a002aca5b605aabe76efd34995d51b182d0ec85070eb074d283235579bc",
+  "source_pack": "art/concepts/2d-chibi/v3",
+  "status": "first_playable_whole_sprite_proof"
+}

@@ -28,6 +28,14 @@ func _initialize() -> void:
 			"The promoted scene must contain the approved empty stall.",
 			errors
 		)
+		var main_character := home_menu.get_node_or_null(
+			"WorldCanvas/ApprovedStallComposition/StallStage/MainCharacter"
+		) as BentosaurProprietorIdle
+		_expect(
+			main_character != null,
+			"The promoted home menu must contain the proprietor idle proof.",
+			errors
+		)
 		_expect(
 			home_menu.get_node_or_null(
 				"WorldCanvas/ApprovedStallComposition/StallStage"

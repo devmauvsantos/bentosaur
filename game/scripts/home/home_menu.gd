@@ -10,6 +10,9 @@ signal settings_requested
 @onready var attachment_kit: StallAttachmentKit = (
 	$WorldCanvas/ApprovedStallComposition/StallStage/StallAttachmentKit
 )
+@onready var main_character: BentosaurProprietorIdle = (
+	$WorldCanvas/ApprovedStallComposition/StallStage/MainCharacter
+)
 
 
 func _ready() -> void:
@@ -22,6 +25,7 @@ func _ready() -> void:
 
 func set_reduced_motion(enabled: bool) -> void:
 	attachment_kit.set_reduced_motion(enabled)
+	main_character.set_reduced_motion(enabled)
 
 
 func set_rank(value: int, animate: bool = true) -> void:

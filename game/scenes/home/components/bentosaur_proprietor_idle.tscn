@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/home/bentosaur_proprietor_idle.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/characters/bentosaur_proprietor/v001/bentosaur_proprietor_neutral_v001.png" id="2_neutral"]
+[ext_resource type="Texture2D" path="res://assets/characters/bentosaur_proprietor/v001/bentosaur_proprietor_blink_v001.png" id="3_blink"]
+
+[node name="BentosaurProprietorIdle" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="VisualRoot" type="Node2D" parent="."]
+scale = Vector2(0.52, 0.52)
+
+[node name="Neutral" type="Sprite2D" parent="VisualRoot"]
+position = Vector2(0, -269)
+texture = ExtResource("2_neutral")
+
+[node name="Blink" type="Sprite2D" parent="VisualRoot"]
+visible = false
+position = Vector2(0, -269)
+texture = ExtResource("3_blink")
