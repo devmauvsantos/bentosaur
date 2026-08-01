@@ -16,6 +16,12 @@ signal settings_requested
 @onready var foreground_relight: StallForegroundRelight = (
 	$WorldCanvas/ApprovedStallComposition/StallStage/ForegroundRelight
 )
+@onready var stall_lantern_left: StallLanternFixture = (
+	$WorldCanvas/ApprovedStallComposition/StallStage/StallLanternLeft
+)
+@onready var stall_lantern_right: StallLanternFixture = (
+	$WorldCanvas/ApprovedStallComposition/StallStage/StallLanternRight
+)
 
 
 func _ready() -> void:
@@ -24,6 +30,8 @@ func _ready() -> void:
 	attachment_kit.decorations_requested.connect(decorations_requested.emit)
 	attachment_kit.pantry_requested.connect(pantry_requested.emit)
 	attachment_kit.settings_requested.connect(settings_requested.emit)
+	if OS.get_cmdline_user_args().has("--lantern-tap-proof"):
+		call_deferred("_run_lantern_tap_proof")
 
 
 func set_reduced_motion(enabled: bool) -> void:
@@ -52,3 +60,13 @@ func set_practical_lights_powered(
 	immediate: bool = false
 ) -> void:
 	attachment_kit.set_all_practical_lights_powered(enabled, immediate)
+
+
+func _run_lantern_tap_proof() -> void:
+	# Capture-only choreography; production interaction remains touch-driven.
+	await get_tree().create_timer(0.75).timeout
+	stall_lantern_left.try_tap_interaction()
+	await get_tree().create_timer(1.75).timeout
+	stall_lantern_right.try_tap_interaction()
+	await get_tree().create_timer(1.75).timeout
+	stall_lantern_left.try_tap_interaction()

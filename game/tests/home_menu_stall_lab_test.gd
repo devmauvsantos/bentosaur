@@ -332,12 +332,20 @@ func _validate_lantern(
 	)
 	var anchor := fixture.get_node_or_null("Anchor") as Sprite2D
 	var pivot := fixture.get_node_or_null("SwayPivot") as Node2D
+	var tap_target := fixture.get_node_or_null("SwayPivot/TapTarget") as Area2D
 	_expect(anchor != null, "%s stall lantern needs its fixed anchor." % label, errors)
 	_expect(pivot != null, "%s stall lantern needs its sway pivot." % label, errors)
+	_expect(tap_target != null, "%s stall lantern needs its touch target." % label, errors)
 	if anchor != null:
 		_expect(
 			anchor.get_parent() == fixture,
 			"%s anchor must remain outside the sway pivot." % label,
+			errors
+		)
+	if tap_target != null and pivot != null:
+		_expect(
+			tap_target.get_parent() == pivot,
+			"%s tap target must follow the hanging bell body." % label,
 			errors
 		)
 

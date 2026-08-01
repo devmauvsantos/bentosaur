@@ -156,6 +156,28 @@ func _run() -> void:
 			errors
 		)
 
+	var left_fixture := stage.get_node(
+		"StallLanternLeft"
+	) as StallLanternFixture
+	left_fixture.set_deterministic_test_mode(true)
+	_expect(left_fixture.try_tap_interaction(), "Left lantern tap must be accepted.", errors)
+	_expect(
+		lights[0].energy < LIGHT_ENERGIES[0],
+		"Tapped lantern must dim its matching foreground light pool.",
+		errors
+	)
+	_expect(
+		is_equal_approx(lights[1].energy, LIGHT_ENERGIES[1]),
+		"Left lantern tap must not dim the right light pool.",
+		errors
+	)
+	left_fixture.advance_tap_interaction_for_test(1.10)
+	_expect(
+		is_equal_approx(lights[0].energy, LIGHT_ENERGIES[0]),
+		"Foreground light pool must fully recover with the lantern.",
+		errors
+	)
+
 	lab.queue_free()
 	await process_frame
 	_finish(errors)

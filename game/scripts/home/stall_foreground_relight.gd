@@ -97,6 +97,11 @@ const LIGHT_PATHS: Array[NodePath] = [
 	NodePath("../ForegroundLights/Counter"),
 ]
 
+const INTERACTIVE_FIXTURE_PATHS: Array[NodePath] = [
+	NodePath("../StallLanternLeft"),
+	NodePath("../StallLanternRight"),
+]
+
 @export var enabled_on_ready := true
 
 var _enabled := false
@@ -105,6 +110,8 @@ var _original_receiver_modulates: Array[Color] = []
 var _light_receivers: Array[CanvasItem] = []
 var _original_light_masks: Array[int] = []
 var _lights: Array[PointLight2D] = []
+var _base_light_energies: Array[float] = []
+var _interactive_light_levels: Array[float] = [1.0, 1.0]
 
 
 func _ready() -> void:
@@ -126,6 +133,7 @@ func set_enabled(enabled: bool) -> void:
 			_receivers[index].modulate = RECEIVER_COLORS[index]
 		for light: PointLight2D in _lights:
 			light.enabled = true
+		_apply_interactive_light_energies()
 	else:
 		for light: PointLight2D in _lights:
 			light.enabled = false
@@ -162,6 +170,7 @@ func _cache_nodes() -> void:
 	_light_receivers.clear()
 	_original_light_masks.clear()
 	_lights.clear()
+	_base_light_energies.clear()
 	for path: NodePath in RECEIVER_PATHS:
 		var receiver := get_node_or_null(path) as CanvasItem
 		assert(receiver != null, "Missing foreground relight receiver: %s" % path)
@@ -179,3 +188,28 @@ func _cache_nodes() -> void:
 		assert(light != null, "Missing foreground practical light: %s" % path)
 		if light != null:
 			_lights.append(light)
+			_base_light_energies.append(light.energy)
+	for index: int in INTERACTIVE_FIXTURE_PATHS.size():
+		var fixture := get_node_or_null(
+			INTERACTIVE_FIXTURE_PATHS[index]
+		) as StallLanternFixture
+		assert(fixture != null, "Missing interactive lantern fixture.")
+		if fixture == null:
+			continue
+		var callback := _on_interaction_light_level_changed.bind(index)
+		if not fixture.interaction_light_level_changed.is_connected(callback):
+			fixture.interaction_light_level_changed.connect(callback)
+
+
+func _on_interaction_light_level_changed(level: float, index: int) -> void:
+	if index < 0 or index >= _interactive_light_levels.size():
+		return
+	_interactive_light_levels[index] = clampf(level, 0.0, 1.0)
+	_apply_interactive_light_energies()
+
+
+func _apply_interactive_light_energies() -> void:
+	for index: int in min(_interactive_light_levels.size(), _lights.size()):
+		_lights[index].energy = (
+			_base_light_energies[index] * _interactive_light_levels[index]
+		)

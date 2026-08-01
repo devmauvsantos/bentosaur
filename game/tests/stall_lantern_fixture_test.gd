@@ -50,12 +50,18 @@ func _run() -> void:
 	var body := fixture.get_node_or_null("SwayPivot/BodyOff") as Sprite2D
 	var core := fixture.get_node_or_null("SwayPivot/Core") as Sprite2D
 	var halo := fixture.get_node_or_null("SwayPivot/LocalHalo") as Sprite2D
+	var tap_target := fixture.get_node_or_null("SwayPivot/TapTarget") as Area2D
+	var tap_shape := fixture.get_node_or_null(
+		"SwayPivot/TapTarget/CollisionShape2D"
+	) as CollisionShape2D
 	_expect(fixture.get_script() == FIXTURE_SCRIPT, "Fixture script mismatch.", errors)
 	_expect(anchor != null, "Fixture requires a static Anchor sprite.", errors)
 	_expect(sway_pivot != null, "Fixture requires a SwayPivot.", errors)
 	_expect(body != null, "Fixture requires BodyOff inside SwayPivot.", errors)
 	_expect(core != null, "Fixture requires Core inside SwayPivot.", errors)
 	_expect(halo != null, "Fixture requires LocalHalo inside SwayPivot.", errors)
+	_expect(tap_target != null, "Fixture requires a phone-sized TapTarget.", errors)
+	_expect(tap_shape != null, "TapTarget requires a collision shape.", errors)
 
 	if anchor != null and sway_pivot != null:
 		_expect(anchor.get_parent() == fixture, "Anchor must remain outside SwayPivot.", errors)
@@ -69,6 +75,19 @@ func _run() -> void:
 	if halo != null and sway_pivot != null:
 		_expect(halo.get_parent() == sway_pivot, "LocalHalo must follow the shell.", errors)
 		_expect(halo.position == Vector2(-0.5, 79.0), "Halo registration changed.", errors)
+	if tap_target != null and sway_pivot != null:
+		_expect(tap_target.get_parent() == sway_pivot, "TapTarget must follow the bell body.", errors)
+		_expect(tap_target.position == Vector2(0.0, 75.0), "Tap target registration changed.", errors)
+		_expect(tap_target.input_pickable, "TapTarget must accept touch input.", errors)
+	if tap_shape != null:
+		var rectangle := tap_shape.shape as RectangleShape2D
+		_expect(rectangle != null, "TapTarget must use a rectangle.", errors)
+		if rectangle != null:
+			_expect(
+				rectangle.size == Vector2(104.0, 190.0),
+				"TapTarget must remain generous enough for a phone.",
+				errors
+			)
 
 	_validate_texture(anchor, "Anchor", errors)
 	_validate_texture(body, "BodyOff", errors)
@@ -147,6 +166,50 @@ func _run() -> void:
 	_expect(core.modulate.a < CORE_BASE_ALPHA, "Core must respond to pulse/flick.", errors)
 	_expect(halo.modulate.a < HALO_BASE_ALPHA, "Halo must respond at lower coupling.", errors)
 	_expect(halo.modulate.a > core.modulate.a, "Halo response must remain attenuated.", errors)
+
+	fixture.apply_light_motion(1.0, 1.0)
+	fixture.set_deterministic_test_mode(true)
+	var tap_count := [0]
+	fixture.tapped.connect(func() -> void: tap_count[0] += 1)
+	_expect(fixture.try_tap_interaction(), "First tap must be accepted.", errors)
+	_expect(tap_count[0] == 1, "Accepted tap must emit exactly once.", errors)
+	_expect(fixture.is_tap_cooling_down(), "Accepted tap must start cooldown.", errors)
+	_expect(
+		fixture.get_tap_cooldown_remaining() <= 1.5,
+		"Tap cooldown must not exceed 1.5 seconds.",
+		errors
+	)
+	_expect(
+		fixture.get_interaction_light_level() < 0.70,
+		"Tap must produce an immediate local light dip.",
+		errors
+	)
+	_expect(not fixture.try_tap_interaction(), "Immediate repeat tap must be ignored.", errors)
+	_expect(tap_count[0] == 1, "Ignored taps must not emit or queue.", errors)
+	fixture.advance_tap_interaction_for_test(0.08)
+	_expect(
+		absf(fixture.get_interaction_swing_rotation()) > 0.0001,
+		"Accepted tap must create a restrained bell swing.",
+		errors
+	)
+	_expect(is_zero_approx(anchor.rotation), "Tap swing must never rotate the fixed anchor.", errors)
+	_expect(
+		absf(fixture.get_sway_rotation()) <= HARD_MAX_RADIANS + 0.000001,
+		"Tap and wind composition must respect the 1.4-degree hard cap.",
+		errors
+	)
+	fixture.advance_tap_interaction_for_test(1.02)
+	_expect(not fixture.is_tap_interaction_active(), "Tap swing must settle after 1.1 seconds.", errors)
+	_expect(is_zero_approx(fixture.get_interaction_swing_rotation()), "Settled tap swing must return to zero.", errors)
+	_expect(is_equal_approx(fixture.get_interaction_light_level(), 1.0), "Tap light must fully recover.", errors)
+	_expect(not fixture.try_tap_interaction(), "Cooldown must outlive the visible response.", errors)
+	fixture.advance_tap_interaction_for_test(0.41)
+	_expect(fixture.try_tap_interaction(), "Tap must become available after 1.5 seconds.", errors)
+	_expect(tap_count[0] == 2, "Post-cooldown tap must emit once.", errors)
+	fixture.set_reduced_motion(true)
+	_expect(not fixture.try_tap_interaction(), "Reduced motion must suppress flick and swing interaction.", errors)
+	_expect(is_zero_approx(sway_pivot.rotation), "Reduced motion must keep the bell neutral.", errors)
+	fixture.set_reduced_motion(false)
 
 	var phase_before_fade := float(fixture.get_sway_phase_seconds())
 	var rotation_before_fade := float(fixture.get_sway_rotation())

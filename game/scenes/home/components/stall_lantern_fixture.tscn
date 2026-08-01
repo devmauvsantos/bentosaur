@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://scripts/home/stall_lantern_fixture.gd" id="1_script"]
 [ext_resource type="Texture2D" path="res://assets/environments/home_village/v001/stall/attachments/v001/lantern/stall_lantern_anchor_v001.png" id="2_anchor"]
@@ -9,6 +9,9 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_additive"]
 blend_mode = 1
 light_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tap_target"]
+size = Vector2(104, 190)
 
 [node name="StallLanternFixture" type="Node2D"]
 script = ExtResource("1_script")
@@ -32,3 +35,10 @@ texture = ExtResource("3_body")
 material = SubResource("CanvasItemMaterial_additive")
 position = Vector2(0, 78)
 texture = ExtResource("4_core")
+
+[node name="TapTarget" type="Area2D" parent="SwayPivot"]
+position = Vector2(0, 75)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwayPivot/TapTarget"]
+shape = SubResource("RectangleShape2D_tap_target")
