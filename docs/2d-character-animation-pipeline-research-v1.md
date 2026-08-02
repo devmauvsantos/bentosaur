@@ -1,6 +1,7 @@
 # Bentosaur 2D Character Animation Pipeline Research V1
 
-**Status:** recommendation complete; technical pilot not yet run
+**Status:** official desktop runtime pilot passed; Bentosaur integration awaits
+Spine Professional licensing and physical-iPhone availability
 
 **Date:** 2026-08-02
 
@@ -21,9 +22,14 @@ Use a hybrid Spine pipeline:
 5. **Moho Pro 14.4** is the only fallback worth testing if Spine cannot preserve
    the approved soft silhouette.
 
-Do not purchase Spine until its official Godot 4.7 sample runtime has been
-deployed to the connected iPhone and profiled with the existing rain, lighting,
-and post-process shader.
+The original plan was to complete a no-purchase runtime pilot first. Spine's
+current license does not permit Trial users to integrate the Spine Runtimes
+into a product, so the official sample was evaluated outside the Bentosaur
+project. A valid Spine Professional license is required before the runtime is
+copied into this repository or exported in a Bentosaur iOS build.
+
+See
+[the desktop runtime checkpoint](checkpoints/2026-08-02-spine-runtime-desktop-pilot-v001.md).
 
 ## Why this solves the actual failure
 
@@ -66,9 +72,11 @@ it requires the compositing and mobile testing that Spine avoids.
 
 ## Confirmed Godot 4.7 and iOS support
 
-The official Spine runtime repository's current build matrix explicitly includes
-`4.7-stable`. Its workflow builds and packages macOS, iOS, Android, Windows,
-Linux, and web GDExtension artifacts.
+The official stable Spine 4.3 runtime build matrix currently includes Godot
+`4.7.1-stable`. Its package contains macOS, iOS, Android, Windows, Linux, and
+web GDExtension artifacts. The exact pinned artifact and matching sample commit
+also pass with Bentosaur's installed Godot `4.7.0-stable`. Spine 4.4 exists as
+a source-only pre-release branch; no official 4.4 binary package is published.
 
 Use the GDExtension route, not Spine's custom Godot editor/module:
 
@@ -86,8 +94,127 @@ Primary references:
 
 - [Official spine-godot guide and samples](https://esotericsoftware.com/spine-godot)
 - [Official Spine runtime repository](https://github.com/EsotericSoftware/spine-runtimes)
-- [Official Godot 4.7 build matrix](https://github.com/EsotericSoftware/spine-runtimes/blob/4.4/.github/workflows/spine-godot-extension-v4-all.yml)
-- [Official multi-platform GDExtension build workflow](https://github.com/EsotericSoftware/spine-runtimes/blob/4.4/.github/workflows/spine-godot-extension-v4.yml)
+- [Official stable Godot build matrix](https://github.com/EsotericSoftware/spine-runtimes/blob/4.3/.github/workflows/spine-godot-extension-v4-all.yml)
+- [Official stable multi-platform GDExtension workflow](https://github.com/EsotericSoftware/spine-runtimes/blob/4.3/.github/workflows/spine-godot-extension-v4.yml)
+
+## Completed runtime pilot
+
+On 2026-08-02 the untouched official Spine 4.3 samples were run against the
+official prebuilt GDExtension and both Godot 4.7.0 and 4.7.1:
+
+```text
+Spine runtime: 4.3 stable
+GDExtension target: Godot 4.7.1-stable
+Pinned source commit: 4be2da7d25fdf046bddaf1633d6bde73e25cce81
+Godot editors: 4.7.stable.official.5b4e0cb0f and 4.7.1.stable.official.a13da4feb
+Desktop renderer: Metal 4.0 / Apple M5
+Result: import PASS; SpineBoy PASS; weighted Raptor PASS; 145 FPS cap
+```
+
+The first attempt combined the published runtime artifact with the latest 4.3
+branch sample instead of the artifact's exact source commit. Its asset import
+was incomplete and produced a null animation state. The pinned sample then ran
+cleanly with both editors. Runtime binary, sample/export schema, and later
+Bentosaur exports must be versioned as one unit.
+
+Godot 4.7.1 is still the recommended maintenance upgrade before production
+integration, but the pilot does not require it to prove compatibility with the
+current project.
+
+Pinned official archive:
+
+`https://spine-godot.s3.eu-central-1.amazonaws.com/4.3/4.7.1-stable/`
+`spine-godot-extension-4.3-4.7.1-stable.zip`
+
+Locally verified SHA-256:
+
+`0bfd296040d2a28bea9031df1edbd2591201ede54199335bf21e8f9d225b6cda`
+
+No Spine runtime, example data, or third-party sample artwork was added to the
+repository. Local render evidence is retained only in ignored build output at:
+
+`build/spine-evaluation/official-spineboy-godot-4.7.1-proof.png`
+
+`build/spine-evaluation/official-spineboy-godot-4.7.1-proof.avi`
+
+`build/spine-evaluation/official-raptor-godot-4.7.0-proof.png`
+
+`build/spine-evaluation/official-raptor-godot-4.7.0-proof.avi`
+
+The remaining gates are:
+
+1. obtain a valid Spine Professional license;
+2. pin runtime, sample/export schema, and future Spine editor to version 4.3;
+3. preferably update the working editor and iOS export templates together to
+   Godot 4.7.1 before production integration;
+4. integrate only the pinned macOS and iOS GDExtension artifacts with the
+   required Spine license notice;
+5. run the official weighted raptor at 0, 1, 10, and 20 instances in an
+   isolated lab that reuses the village, rain, lighting, and anime filter;
+6. run an eight-minute 20-instance soak to cover the historical filter issue;
+7. connect and unlock Mauricio's iPhone 17 Pro Max, then build, inspect signing,
+   install, launch, and profile under personal team `53RJ43876F`;
+8. only after runtime performance passes, prepare and rig the approved
+   Bentosaur layered source.
+
+Licensing references:
+
+- [Spine Runtimes License](https://esotericsoftware.com/spine-runtimes-license)
+- [Spine Editor License, Trial restriction and runtime integration](https://esotericsoftware.com/spine-editor-license)
+- [Godot 4.7.1 maintenance release](https://godotengine.org/article/maintenance-release-godot-4-7-1/)
+
+## Production authoring recipe
+
+The approved silhouette—not the skeleton—is the authority. Bones deform inside
+the compact chibi shapes and must never invent humanoid anatomy.
+
+1. Cut or redraw one layered master with `frill`, `head`, `body`, `tail`,
+   `arm_back`, `arm_front`, `leg_back`, `leg_front`, `eye`, and `mouth`.
+   Preserve claws within the limb art and draw only the concealed overlap
+   needed beneath joints.
+2. Reassemble the layers and require no visible difference from the approved
+   flattened source at close-up or intended background scale before rigging.
+3. Use a compact hierarchy rooted at the hips, two leg IK targets outside the
+   hip chain for planted feet, FK arms, and a three- or four-bone tail.
+4. Keep each arm and leg as one whole weighted mesh. Two internal bones may
+   bend that mesh, but there must be no visible upper/lower-limb seam.
+5. Start with automatic weights, then hand-correct. Prefer one or two bone
+   influences per vertex, use three only near broad bends, and cap at four.
+   Avoid direct keyed mesh-deform timelines unless a reviewed exception needs
+   one.
+6. Build the walk pose-to-pose: contact, down, passing, up, opposite contact.
+   Verify planted feet using temporary container travel, then export an
+   in-place cycle.
+7. Keep `idle/base` restrained. Schedule blink, look, happy, and other overlays
+   from Godot on higher tracks so the character does not repeat one canned
+   super-loop.
+8. Use attachment swaps for `eye_open`, `eye_half`, `eye_closed`,
+   `mouth_closed`, `mouth_smile`, and `mouth_open`. Laugh accent lines remain a
+   separate hidden slot.
+9. Export Spine 4.3 binary `.skel`, `.atlas`, and one straight-alpha PNG atlas
+   page. Share one `SpineSkeletonDataResource` across matching instances.
+
+First-rig working limits:
+
+- 22–30 bones;
+- two leg IK constraints and no arm IK initially;
+- three or four tail bones;
+- at most roughly 300 visible mesh vertices and 600 vertex transforms;
+- no clipping, one atlas page, and no direct deform timelines;
+- one live right-facing side rig mirrored by Godot for screen-left travel.
+
+Useful official tutorials:
+
+- [How to cut assets for animation](https://esotericsoftware.com/blog/How-to-cut-your-assets-for-animation)
+- [Import PSD and layer tags](https://esotericsoftware.com/spine-import-psd)
+- [Chibi Stickers example](https://esotericsoftware.com/spine-examples-chibi-stickers)
+- [Raptor example](https://esotericsoftware.com/spine-examples-raptor)
+- [Spineboy biped and IK example](https://esotericsoftware.com/spine-examples-spineboy)
+- [Walk-cycle tutorial](https://www.youtube.com/watch?v=Giuanw16gyY)
+- [Mesh attachments](https://esotericsoftware.com/spine-meshes)
+- [Weights](https://esotericsoftware.com/spine-weights)
+- [Metrics](https://esotericsoftware.com/spine-metrics)
+- [Applying layered animations](https://esotericsoftware.com/spine-applying-animations)
 
 ## Approved-art preparation contract
 

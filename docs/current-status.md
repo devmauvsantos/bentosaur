@@ -2,9 +2,23 @@
 
 Status: active
 
-Snapshot date: 2026-08-01
+Snapshot date: 2026-08-02
 
 ## Executive state
+
+Mau approved the V002 full-body side-view Bentosaur silhouette as the visual
+source for the first locomotion rig. The approved source is not yet layered,
+rigged, weighted, or animated. Spine Professional is the selected authoring
+tool, with live foreground rigs delivered through the official spine-godot
+GDExtension and background crowds baked from the same source to sprite sheets.
+
+The official Spine 4.3 desktop runtime gate now passes on the installed Godot
+4.7.0 and temporary Godot 4.7.1 when the binary and sample are pinned to commit
+`4be2da7d25fdf046bddaf1633d6bde73e25cce81`. No Spine runtime was copied into
+Bentosaur: the current Trial terms prohibit product integration without a valid
+Spine Editor license. Spine Professional purchase, the isolated 0/1/10/20 rig
+benchmark, and physical-iPhone profiling remain open. See
+[Spine runtime desktop pilot V001](checkpoints/2026-08-02-spine-runtime-desktop-pilot-v001.md).
 
 Mau selected flat-cel 2D as Bentosaur's leading visual direction and ended the
 open-ended exploration phase. The Godot project now boots the production-shaped
@@ -36,8 +50,9 @@ but it is paused while this decisive 2D proof runs. The visual selection does
 not make the generated rasters production assets and does not silently discard
 the 3D lineage.
 
-No character is currently approved as production-ready, rig-ready, or
-animation-ready in either route.
+The V002 side walker is approved as a visual source only. No character is
+currently approved as layered, rig-ready, animation-ready, or production-ready
+in either route.
 
 The Home Village lighting and rain proof is now a founder-approved visual
 checkpoint. Rain remains active from frame one, registered lights wake through
