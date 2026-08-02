@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "character": "bentosaur_walker",
+  "version": "v001",
+  "view": "side_facing_screen_right",
+  "purpose": "native Godot Skeleton2D full-body locomotion feasibility gate",
+  "source_master": {
+    "path": "art/characters/bentosaur-walker/char-v001/source/bentosaur_walker_side_master_transparent_v001.png",
+    "sha256": "987c3236275b88c8960256997652c584bf6eb0a7e955d6be0c28122cd0711297"
+  },
+  "source_sheet": {
+    "path": "art/characters/bentosaur-walker/char-v001/source/bentosaur_walker_side_puppet_sheet_transparent_v001.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "sha256": "5020053edbb8c7063e3ee7af052255d7ae70427a09c0e78f88e15f2761bd0521"
+  },
+  "padding_px": 8,
+  "parts": {
+    "head": {
+      "file": "walker_head_v001.png",
+      "source_bounds": [
+        57,
+        48,
+        607,
+        613
+      ],
+      "size": [
+        566,
+        581
+      ],
+      "sha256": "ca2959c8316c5c36d6f7e16f26da9044cfe27d367ce247a38d60360afae86f6a"
+    },
+    "torso": {
+      "file": "walker_torso_v001.png",
+      "source_bounds": [
+        629,
+        236,
+        908,
+        660
+      ],
+      "size": [
+        295,
+        440
+      ],
+      "sha256": "a7c85c129bb8b3b5fc96d83e67e47da35d7881e3af1a7aebe67b27a1a4882aee"
+    },
+    "upper_arm_shared": {
+      "file": "walker_upper_arm_shared_v001.png",
+      "source_bounds": [
+        67,
+        669,
+        247,
+        915
+      ],
+      "size": [
+        196,
+        262
+      ],
+      "sha256": "5fa4c58d8821def7d9c72b811874ba4517605827a5c1d7743ef8c5dccd9a87d1"
+    },
+    "lower_arm_far": {
+      "file": "walker_lower_arm_far_v001.png",
+      "source_bounds": [
+        293,
+        690,
+        422,
+        911
+      ],
+      "size": [
+        145,
+        237
+      ],
+      "sha256": "e7bb6d7d33ef98a64037fc55a3c6c449fb8e7cff423abb70eb8d87ad618495fc"
+    },
+    "lower_arm_near": {
+      "file": "walker_lower_arm_near_v001.png",
+      "source_bounds": [
+        477,
+        689,
+        601,
+        911
+      ],
+      "size": [
+        140,
+        238
+      ],
+      "sha256": "726fca2679e73ef7551ec49167d9ab58688236228f23315181f5e3b6415e439a"
+    },
+    "thigh_far": {
+      "file": "walker_thigh_far_v001.png",
+      "source_bounds": [
+        110,
+        972,
+        283,
+        1173
+      ],
+      "size": [
+        189,
+        217
+      ],
+      "sha256": "451be44c2c3f76907d21aa46e920235e7d8761d065263905fd08cd6f43ea9703"
+    },
+    "thigh_near": {
+      "file": "walker_thigh_near_v001.png",
+      "source_bounds": [
+        361,
+        982,
+        507,
+        1159
+      ],
+      "size": [
+        162,
+        193
+      ],
+      "sha256": "d7eba42847233342fc5f7ad4fbdb8feaa6afe50433eef9346c4878651529db61"
+    },
+    "lower_leg_far": {
+      "file": "walker_lower_leg_far_v001.png",
+      "source_bounds": [
+        109,
+        1203,
+        257,
+        1417
+      ],
+      "size": [
+        164,
+        230
+      ],
+      "sha256": "6edb13fb612778efc0893a07f0bb293bc6c212c6f90d59a64fffbfde87563dc1"
+    },
+    "lower_leg_near": {
+      "file": "walker_lower_leg_near_v001.png",
+      "source_bounds": [
+        361,
+        1199,
+        505,
+        1416
+      ],
+      "size": [
+        160,
+        233
+      ],
+      "sha256": "aaf6ae81beea434453d1948c6f5e77aad4cde8e960278954f3749df389e5da8e"
+    },
+    "tail_base": {
+      "file": "walker_tail_base_v001.png",
+      "source_bounds": [
+        660,
+        881,
+        967,
+        1070
+      ],
+      "size": [
+        323,
+        205
+      ],
+      "sha256": "1d89eace3072944db8471cb4b14ded45f0a48446e239078f6eb9f9568a11e259"
+    },
+    "tail_mid": {
+      "file": "walker_tail_mid_v001.png",
+      "source_bounds": [
+        667,
+        1104,
+        921,
+        1246
+      ],
+      "size": [
+        270,
+        158
+      ],
+      "sha256": "72e7aeac8fc7f5d31c6ab6c1b01a5b0b3c4647fb983b1aee4b1a85d9e13b1d7f"
+    },
+    "tail_tip": {
+      "file": "walker_tail_tip_v001.png",
+      "source_bounds": [
+        675,
+        1284,
+        872,
+        1389
+      ],
+      "size": [
+        213,
+        121
+      ],
+      "sha256": "f622537ab790708c72933be2da06237519ccf2564bcb490c6e9e5305aa268d8b"
+    }
+  },
+  "known_compromises": [
+    "The far upper arm reuses the shared upper-arm art in this feasibility rig.",
+    "Joint rings are intentionally hidden by draw order and overlap; production art should remove interior seam outlines.",
+    "One side-view rig supports horizontal mirroring only, not front/back walking."
+  ]
+}

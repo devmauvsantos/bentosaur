@@ -1,0 +1,267 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/labs/bentosaur_fullbody_walk_lab.gd" id="1_lab"]
+[ext_resource type="PackedScene" path="res://scenes/characters/bentosaur_fullbody_walker.tscn" id="2_walker"]
+
+[sub_resource type="StyleBoxFlat" id="Style_status"]
+bg_color = Color(0.035, 0.057, 0.078, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.28, 0.4, 0.43, 0.9)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="Style_controls"]
+bg_color = Color(0.046, 0.064, 0.078, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.42, 0.31, 0.17, 0.95)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="Theme" id="Theme_lab"]
+default_font_size = 17
+Button/colors/font_color = Color(0.95, 0.9, 0.8, 1)
+Button/colors/font_hover_color = Color(1, 0.79, 0.4, 1)
+Button/colors/font_pressed_color = Color(1, 0.7, 0.27, 1)
+CheckButton/colors/font_color = Color(0.84, 0.88, 0.84, 1)
+Label/colors/font_color = Color(0.91, 0.91, 0.86, 1)
+
+[sub_resource type="Gradient" id="Gradient_stage"]
+colors = PackedColorArray(0.018, 0.041, 0.071, 1, 0.058, 0.105, 0.12, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_stage"]
+gradient = SubResource("Gradient_stage")
+width = 720
+height = 900
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[node name="BentosaurFullBodyWalkLab" type="Node2D"]
+script = ExtResource("1_lab")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(360, 450)
+texture = SubResource("GradientTexture_stage")
+
+[node name="Stage" type="Node2D" parent="."]
+
+[node name="MoonWash" type="Polygon2D" parent="Stage"]
+position = Vector2(360, 640)
+polygon = PackedVector2Array(-330, 0, -305, -54, -242, -92, -150, -114, 0, -122, 150, -114, 242, -92, 305, -54, 330, 0, 305, 54, 242, 92, 150, 114, 0, 122, -150, 114, -242, 92, -305, 54)
+color = Color(0.11, 0.24, 0.25, 0.32)
+
+[node name="Path" type="Polygon2D" parent="Stage"]
+position = Vector2(360, 811)
+polygon = PackedVector2Array(-360, -42, 360, -42, 360, 70, -360, 70)
+color = Color(0.055, 0.093, 0.103, 1)
+
+[node name="PathLine" type="Line2D" parent="Stage"]
+points = PackedVector2Array(20, 820, 700, 820)
+width = 2.0
+default_color = Color(0.78, 0.54, 0.22, 0.32)
+
+[node name="LanternLeft" type="Polygon2D" parent="Stage"]
+position = Vector2(76, 169)
+polygon = PackedVector2Array(-22, 0, -17, -14, 0, -23, 17, -14, 22, 0, 17, 14, 0, 23, -17, 14)
+color = Color(1, 0.63, 0.2, 0.24)
+
+[node name="LanternRight" type="Polygon2D" parent="Stage"]
+position = Vector2(644, 214)
+polygon = PackedVector2Array(-18, 0, -14, -12, 0, -19, 14, -12, 18, 0, 14, 12, 0, 19, -14, 12)
+color = Color(1, 0.63, 0.2, 0.2)
+
+[node name="CrowdWalkerA" parent="Stage" instance=ExtResource("2_walker")]
+position = Vector2(84, 345)
+scale = Vector2(0.19, 0.19)
+motion_on_ready = &"walk"
+motion_seed = 1101
+
+[node name="CrowdWalkerB" parent="Stage" instance=ExtResource("2_walker")]
+position = Vector2(574, 392)
+scale = Vector2(0.15, 0.15)
+motion_on_ready = &"walk"
+motion_seed = 2202
+
+[node name="CrowdWalkerC" parent="Stage" instance=ExtResource("2_walker")]
+position = Vector2(254, 449)
+scale = Vector2(0.12, 0.12)
+motion_on_ready = &"walk"
+motion_seed = 3303
+
+[node name="MainWalker" parent="Stage" instance=ExtResource("2_walker")]
+position = Vector2(385, 628)
+scale = Vector2(0.54, 0.54)
+auto_mode_on_ready = true
+motion_seed = 4404
+patrol_enabled = true
+patrol_min_x = 270.0
+patrol_max_x = 510.0
+
+[node name="Caption" type="Label" parent="Stage"]
+offset_left = 32.0
+offset_top = 840.0
+offset_right = 688.0
+offset_bottom = 875.0
+theme_override_colors/font_color = Color(0.6, 0.71, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "SIDE WALKER • HIPS + KNEES + FEET • ARMS • HEAD • THREE-BONE TAIL"
+horizontal_alignment = 1
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="SafeArea" type="MarginContainer" parent="Interface"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_lab")
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Layout" type="Control" parent="Interface/SafeArea"]
+layout_mode = 2
+
+[node name="StatusPanel" type="PanelContainer" parent="Interface/SafeArea/Layout"]
+layout_mode = 0
+offset_right = 672.0
+offset_bottom = 86.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Style_status")
+
+[node name="StatusMargin" type="MarginContainer" parent="Interface/SafeArea/Layout/StatusPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 11
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 10
+
+[node name="Rows" type="VBoxContainer" parent="Interface/SafeArea/Layout/StatusPanel/StatusMargin"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="StateLabel" type="Label" parent="Interface/SafeArea/Layout/StatusPanel/StatusMargin/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.77, 0.36, 1)
+theme_override_font_sizes/font_size = 20
+text = "IDLE • AUTO • 17 BONES"
+
+[node name="ProofLabel" type="Label" parent="Interface/SafeArea/Layout/StatusPanel/StatusMargin/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.61, 0.71, 0.72, 1)
+theme_override_font_sizes/font_size = 13
+text = "FULL-BODY CUTOUT LOCOMOTION FEASIBILITY — NOT FINAL CHARACTER ART"
+
+[node name="ControlPanel" type="PanelContainer" parent="Interface/SafeArea/Layout"]
+layout_mode = 0
+offset_top = 890.0
+offset_right = 672.0
+offset_bottom = 1234.0
+theme_override_styles/panel = SubResource("Style_controls")
+
+[node name="ControlMargin" type="MarginContainer" parent="Interface/SafeArea/Layout/ControlPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 17
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 17
+theme_override_constants/margin_bottom = 13
+
+[node name="Rows" type="VBoxContainer" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.89, 0.76, 1)
+theme_override_font_sizes/font_size = 21
+text = "BENTOSAUR • FULL-BODY WALK LAB"
+
+[node name="SystemRow" type="HBoxContainer" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="BonesToggle" type="CheckButton" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/SystemRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bones"
+
+[node name="AutoToggle" type="CheckButton" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/SystemRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Auto"
+
+[node name="StillToggle" type="CheckButton" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/SystemRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Still"
+
+[node name="CrowdToggle" type="CheckButton" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/SystemRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Crowd"
+
+[node name="ResetButton" type="Button" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/SystemRow"]
+custom_minimum_size = Vector2(94, 46)
+layout_mode = 2
+text = "Reset"
+
+[node name="MotionRow" type="HBoxContainer" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="IdleButton" type="Button" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/MotionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Idle"
+
+[node name="WalkButton" type="Button" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/MotionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Walk"
+
+[node name="WaveButton" type="Button" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/MotionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Wave"
+
+[node name="MotionRowTwo" type="HBoxContainer" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LookButton" type="Button" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/MotionRowTwo"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Look"
+
+[node name="HopButton" type="Button" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/MotionRowTwo"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hop"
+
+[node name="RandomButton" type="Button" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows/MotionRowTwo"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Random"
+
+[node name="Hint" type="Label" parent="Interface/SafeArea/Layout/ControlPanel/ControlMargin/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.58, 0.67, 0.66, 1)
+theme_override_font_sizes/font_size = 13
+text = "The small dinosaurs traverse the lane. Toggle Bones to inspect the complete rig."
+autowrap_mode = 2

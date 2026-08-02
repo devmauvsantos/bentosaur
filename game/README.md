@@ -60,6 +60,25 @@ randomized gestures, or trigger Nod, Look, Hands, Chew, and Delight manually.
 The mouth actions intentionally demonstrate bone motion only until an authored
 mouthless face plate and registered mouth swaps exist.
 
+The complete side-facing locomotion proof is available at:
+
+`res://scenes/labs/bentosaur_fullbody_walk_lab.tscn`
+
+Run it directly:
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --path game \
+  res://scenes/labs/bentosaur_fullbody_walk_lab.tscn
+```
+
+This lab uses a reusable 17-bone `Skeleton2D` with articulated head, torso,
+upper/lower arms, upper/lower legs, feet, and a tail chain. It shows one large
+inspection puppet plus three smaller walking NPCs. Toggle **Bones** to inspect
+the hierarchy; use **Auto** for randomized walk, wave, look and hop behavior.
+The experiment is isolated and does not modify the approved Home or gameplay
+scenes.
+
 Run:
 
 ```sh
@@ -110,6 +129,11 @@ Validate headlessly:
   --headless \
   --path game \
   --script res://tests/bentosaur_skeleton_animation_lab_test.gd
+
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --headless \
+  --path game \
+  --script res://tests/bentosaur_fullbody_walker_test.gd
 
 /Applications/Godot.app/Contents/MacOS/Godot \
   --headless \
