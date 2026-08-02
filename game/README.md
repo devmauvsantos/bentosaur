@@ -42,6 +42,24 @@ The older 3D facial-animation lab remains available at:
 
 `res://scenes/labs/facial_animation_options_lab.tscn`
 
+The isolated native-2D skeleton proof is available at:
+
+`res://scenes/labs/bentosaur_skeleton_animation_lab.tscn`
+
+Run it directly:
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --path game \
+  res://scenes/labs/bentosaur_skeleton_animation_lab.tscn
+```
+
+The lab uses a real `Skeleton2D` with torso, head, and two arm `Bone2D`
+pivots. Toggle **Bones** to reveal the rig, leave **Auto** enabled for quiet
+randomized gestures, or trigger Nod, Look, Hands, Chew, and Delight manually.
+The mouth actions intentionally demonstrate bone motion only until an authored
+mouthless face plate and registered mouth swaps exist.
+
 Run:
 
 ```sh
@@ -87,6 +105,11 @@ Validate headlessly:
   --headless \
   --path game \
   --script res://tests/bentosaur_proprietor_idle_test.gd
+
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --headless \
+  --path game \
+  --script res://tests/bentosaur_skeleton_animation_lab_test.gd
 
 /Applications/Godot.app/Contents/MacOS/Godot \
   --headless \

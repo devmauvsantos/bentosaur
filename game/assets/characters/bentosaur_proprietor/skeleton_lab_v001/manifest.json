@@ -1,0 +1,378 @@
+{
+  "asset_count": 7,
+  "asset_id": "character.bentosaur_proprietor.skeleton_lab.v001",
+  "assets": [
+    {
+      "asset_id": "character.bentosaur_proprietor.skeleton_lab.full_reference",
+      "decoded_rgba_sha256": "96427d6be56fa7602c2e86e721a27856b187ee8fb7e306cb2b7a8297adc56b30",
+      "output": "game/assets/characters/bentosaur_proprietor/skeleton_lab_v001/proprietor_full_reference_neutral_v001.png",
+      "output_sha256": "a4cde397f77b3caab3c818dc9834803cd7537b13b9375f984af13ef6a5e2ed9a",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          865,
+          1024
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      },
+      "role": "immutable neutral visual reference"
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.skeleton_lab.head.neutral",
+      "decoded_rgba_sha256": "7c0199fe8ab705928b2dde1efad34cd4d34b7eb05efa1e002daa648a5b1208d6",
+      "output": "game/assets/characters/bentosaur_proprietor/skeleton_lab_v001/proprietor_head_neutral_v001.png",
+      "output_sha256": "9b88f628c6f5c96c7010567b79d0db39cbbb98e0ea922a43f41c00b41fe204b7",
+      "pivot_px": [
+        432,
+        704
+      ],
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          865,
+          751
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      },
+      "role": "riggable head; neutral eyes"
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.skeleton_lab.head.blink",
+      "decoded_rgba_sha256": "6330194300b90471b46f2d3546ab113ec8929713baadd2bcf93bbe0f61a445ad",
+      "output": "game/assets/characters/bentosaur_proprietor/skeleton_lab_v001/proprietor_head_blink_v001.png",
+      "output_sha256": "27c11b5af6b47425f0c173c081c6f2b99bf9e5b4a9f48320e669b1afc37c7007",
+      "pivot_px": [
+        432,
+        704
+      ],
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          865,
+          751
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      },
+      "role": "riggable head; registered blink swap"
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.skeleton_lab.torso",
+      "decoded_rgba_sha256": "d53dd613c59f216d8800e7520cb827fedb8988c276c061622388ec42d05097c1",
+      "output": "game/assets/characters/bentosaur_proprietor/skeleton_lab_v001/proprietor_torso_central_v001.png",
+      "output_sha256": "0aa5d2e37b884adc4dc61a895ff84ce68190c319abf90e10dc155c7c67a3dcf3",
+      "pivot_px": [
+        432,
+        790
+      ],
+      "qa": {
+        "alpha_bounds_px": [
+          136,
+          674,
+          736,
+          986
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      },
+      "role": "central torso plus provisional hidden-neck backing"
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.skeleton_lab.arm_hand.screen_left",
+      "decoded_rgba_sha256": "6db44bae3076f4695c5a5f0409489c7363fd44357484a559c3bff088b35c590e",
+      "output": "game/assets/characters/bentosaur_proprietor/skeleton_lab_v001/proprietor_arm_hand_screen_left_v001.png",
+      "output_sha256": "4162fbb494e57f6112c0a8a1ed88e81c54e422d954f71ea6f5efa368bd53749b",
+      "pivot_px": [
+        220,
+        790
+      ],
+      "qa": {
+        "alpha_bounds_px": [
+          82,
+          778,
+          370,
+          1024
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      },
+      "role": "screen-left foreground arm and hand"
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.skeleton_lab.arm_hand.screen_right",
+      "decoded_rgba_sha256": "21c98987cc4f75cbe887661980c2028ac27295d735e30ca706f28eaa8665285d",
+      "output": "game/assets/characters/bentosaur_proprietor/skeleton_lab_v001/proprietor_arm_hand_screen_right_v001.png",
+      "output_sha256": "a80a2aab1f67a263c820cf57e4924aebe43115cf1355cabd4b18bd3803828575",
+      "pivot_px": [
+        645,
+        790
+      ],
+      "qa": {
+        "alpha_bounds_px": [
+          502,
+          778,
+          787,
+          1024
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      },
+      "role": "screen-right foreground arm and hand"
+    },
+    {
+      "asset_id": "character.bentosaur_proprietor.skeleton_lab.preview.rest",
+      "decoded_rgba_sha256": "6475fa2f5094ba215121a859b3d89d20428c29e6fce4f9a836e267c6d8e16a1e",
+      "output": "game/assets/characters/bentosaur_proprietor/skeleton_lab_v001/proprietor_rig_rest_preview_v001.png",
+      "output_sha256": "77635b6ab5824286f11cfe25d60a67eccea8a1b67c9ba5a7f9a40f92250d96cd",
+      "qa": {
+        "alpha_bounds_px": [
+          0,
+          0,
+          865,
+          1024
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size_px": [
+          865,
+          1024
+        ],
+        "stored_mode": "RGBA"
+      },
+      "role": "QA composite of the generated layers at rest"
+    }
+  ],
+  "builder": "tools/art/build_bentosaur_skeleton_lab_assets.py",
+  "builder_runtime": {
+    "integrity_contract": "decoded_rgba_sha256 is the cross-encoder authority; output_sha256 records exact PNG bytes",
+    "pillow_version": "12.3.0"
+  },
+  "known_compromises": [
+    "The flattened source has no painted geometry behind the head; the torso contains a resampled provisional under-neck backing.",
+    "Arm layers retain generous shoulder overlap from the v002 foreground-hands mask; keep rotation subtle to avoid exposing the original flattened shoulder contour.",
+    "No mouth overlay was emitted: the neutral mouth is baked into the head, and a safe expression swap requires an authored mouthless face plate rather than destructive inpainting.",
+    "This lab validates cutout motion and blink swaps only; it is not founder-approved final animation production art."
+  ],
+  "registration": {
+    "canvas_center_px": [
+      432.5,
+      512.0
+    ],
+    "canvas_size_px": [
+      865,
+      1024
+    ],
+    "coordinate_convention": "screen-left/screen-right; origin at full-canvas top-left",
+    "pivots_px": {
+      "arm_hand_screen_left": [
+        220,
+        790
+      ],
+      "arm_hand_screen_right": [
+        645,
+        790
+      ],
+      "head_neck": [
+        432,
+        704
+      ],
+      "torso": [
+        432,
+        790
+      ]
+    },
+    "shared_origin": "all layers retain full v002 canvas registration"
+  },
+  "rest_reconstruction_qa": {
+    "changed_visible_pixels": 1781,
+    "difference_bounds_px": [
+      196,
+      698,
+      653,
+      751
+    ],
+    "expected_difference_gate_px": [
+      180,
+      680,
+      680,
+      780
+    ],
+    "note": "Differences are expected only where the provisional hidden neck overlaps antialiased cut boundaries.",
+    "total_canvas_pixels": 885760
+  },
+  "schema_version": 1,
+  "separation": {
+    "head_mask_feather_px": 0.75,
+    "head_mask_polygon_px": [
+      [
+        0,
+        0
+      ],
+      [
+        865,
+        0
+      ],
+      [
+        865,
+        610
+      ],
+      [
+        780,
+        646
+      ],
+      [
+        700,
+        682
+      ],
+      [
+        650,
+        700
+      ],
+      [
+        610,
+        716
+      ],
+      [
+        545,
+        736
+      ],
+      [
+        500,
+        743
+      ],
+      [
+        432,
+        748
+      ],
+      [
+        365,
+        743
+      ],
+      [
+        320,
+        736
+      ],
+      [
+        255,
+        716
+      ],
+      [
+        215,
+        700
+      ],
+      [
+        165,
+        682
+      ],
+      [
+        85,
+        646
+      ],
+      [
+        0,
+        610
+      ]
+    ],
+    "neck_sample_box_xyxy_px": [
+      190,
+      754,
+      675,
+      834
+    ],
+    "neck_underlay_box_xyxy_px": [
+      190,
+      674,
+      675,
+      806
+    ],
+    "neck_underlay_ellipse_xyxy_px": [
+      205,
+      674,
+      660,
+      836
+    ],
+    "neck_underlay_feather_px": 10.0,
+    "screen_arm_split_x_px": 432
+  },
+  "source_assets": [
+    {
+      "path": "game/assets/characters/bentosaur_proprietor/v002/bentosaur_proprietor_counter_neutral_v002.png",
+      "role": "neutral appearance and registration authority",
+      "sha256": "a4cde397f77b3caab3c818dc9834803cd7537b13b9375f984af13ef6a5e2ed9a"
+    },
+    {
+      "path": "game/assets/characters/bentosaur_proprietor/v002/bentosaur_proprietor_counter_blink_v002.png",
+      "role": "registered blink appearance authority",
+      "sha256": "9a78c052cf3f026040eb840f5d0ab0fa0d809a3a06511c7d80ddc820420b4aa4"
+    },
+    {
+      "path": "game/assets/characters/bentosaur_proprietor/v002/bentosaur_proprietor_counter_hands_v002.png",
+      "role": "foreground arm/hand separation authority",
+      "sha256": "e0bb42f189297414e01af5d44ec4d2cdebd18a09bc04c6110a5c3aa9c7b27a4d"
+    }
+  ],
+  "status": "prototype_not_visual_approval"
+}
